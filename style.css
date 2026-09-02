@@ -435,6 +435,13 @@ footer h2 {
   font-size: 27px;
 }
 
+.activity-icon-img {
+  width: 92px;
+  height: 92px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 16px;
+}
 .activity h3 {
   font-family: "Marcellus SC", serif;
   font-size: 15px;

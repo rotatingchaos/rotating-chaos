@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 :root {
   --black-green: #071411;
   --deep-emerald: #073d32;
@@ -220,12 +221,11 @@ body {
 }
 
 .welcome {
-  margin: 0 0 28px;
-  color: var(--light-gold);
-  font-family: "Marcellus SC", serif;
-  font-weight: 700;
-  font-size: clamp(15px, 1.5vw, 22px);
-  letter-spacing: 0.42em;
+ font-family: "Zeyada", cursive;
+ font-size: 2.6rem;
+ font-weight: 400;
+ text-transform: none;
+ letter-spacing: 0.03em;
 }
 
 .hero h1 {

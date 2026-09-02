@@ -1,15 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Zeyada&display=swap');
+
+
+/* =========================================================
+   ROTATING CHAOS
+   Emerald + Antique Gold Guild Website
+   ========================================================= */
+
+
+/* =========================
+   COLOURS
+   ========================= */
+
 :root {
   --black-green: #071411;
   --deep-emerald: #073d32;
   --emerald: #087f5b;
   --bright-emerald: #10a878;
+
   --gold: #c49a3a;
   --light-gold: #e2c36b;
+
   --parchment: #f1ebdd;
+  --parchment-light: #fffdf6;
+
   --ink: #1c211d;
+  --brown: #4a361a;
 }
+
+
+/* =========================
+   BASIC PAGE SETUP
+   ========================= */
 
 * {
   box-sizing: border-box;
@@ -26,57 +47,81 @@ body {
   font-family: "Marcellus SC", serif;
 }
 
+img {
+  max-width: 100%;
+}
 
-/* HEADER */
+
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 .site-header {
   min-height: 92px;
   padding: 16px 4vw;
+
   display: flex;
   align-items: center;
   gap: 28px;
+
   position: relative;
-  z-index: 20;
+  z-index: 50;
 
   background:
-    linear-gradient(rgba(5, 18, 15, 0.94), rgba(5, 18, 15, 0.94)),
-    radial-gradient(circle at center, #0b4938 0%, #071411 70%);
+    linear-gradient(
+      rgba(5, 18, 15, 0.96),
+      rgba(5, 18, 15, 0.96)
+    ),
+    radial-gradient(
+      circle at center,
+      #0b4938 0%,
+      #071411 70%
+    );
 
   border-top: 1px solid rgba(226, 195, 107, 0.65);
   border-bottom: 1px solid rgba(226, 195, 107, 0.28);
 }
 
+
+/* Small decorative gold line inside header */
+
 .site-header::before {
   content: "";
+
   position: absolute;
   top: 7px;
   left: 3%;
   right: 3%;
+
   border-top: 1px solid rgba(226, 195, 107, 0.45);
 }
+
+
+/* =========================
+   BRAND / LOGO
+   ========================= */
 
 .brand {
   display: flex;
   align-items: center;
   gap: 12px;
+
+  flex-shrink: 0;
+
   color: var(--light-gold);
   text-decoration: none;
-  flex-shrink: 0;
 }
 
-.brand-emblem {
-  width: 54px;
-  height: 54px;
-  border: 2px solid var(--gold);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-family: "Marcellus SC", serif;
-  font-size: 32px;
-  color: var(--light-gold);
-  box-shadow:
-    inset 0 0 15px rgba(16, 168, 120, 0.18),
-    0 0 14px rgba(196, 154, 58, 0.12);
+.brand-logo {
+  width: 58px;
+  height: 58px;
+
+  object-fit: contain;
+  flex-shrink: 0;
+
+  filter:
+    drop-shadow(0 0 8px rgba(16, 168, 120, 0.28))
+    drop-shadow(0 0 4px rgba(226, 195, 107, 0.25));
 }
 
 .brand-text {
@@ -85,97 +130,170 @@ body {
 }
 
 .brand-name {
-  font-family: "Cinzel", serif;
+  font-family: "Marcellus SC", serif;
+
   font-size: clamp(17px, 1.7vw, 26px);
-  font-weight: 800;
+  font-weight: 400;
+
   letter-spacing: 0.12em;
+
+  color: var(--light-gold);
 }
 
 .brand-subtitle {
-  font-family: "Marcellus SC", serif;
   margin-top: 4px;
+
+  font-family: "Marcellus SC", serif;
+
   font-size: 9px;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.35em;
+
   color: rgba(241, 235, 221, 0.55);
 }
 
+
+/* =========================
+   DESKTOP NAVIGATION
+   ========================= */
+
 .desktop-nav {
   margin-left: auto;
+
   display: flex;
   align-items: center;
+
   gap: clamp(12px, 1.5vw, 26px);
 }
 
 .desktop-nav a {
   color: rgba(241, 235, 221, 0.82);
   text-decoration: none;
+
   font-family: "Marcellus SC", serif;
   font-size: 11px;
+
   letter-spacing: 0.13em;
-  transition: 0.2s ease;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .desktop-nav a:hover {
   color: var(--light-gold);
+  transform: translateY(-1px);
 }
+
+
+/* =========================
+   BUTTONS
+   ========================= */
 
 .discord-button,
 .gold-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+
   text-decoration: none;
+
   font-family: "Marcellus SC", serif;
   letter-spacing: 0.12em;
-  font-weight: 700;
+
+  border: 1px solid var(--gold);
+
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 .discord-button {
-  color: var(--light-gold);
-  border: 1px solid var(--gold);
   padding: 13px 18px;
+
+  color: var(--light-gold);
+
   font-size: 11px;
+
   white-space: nowrap;
 }
 
 .discord-button:hover,
 .gold-button:hover {
   background: rgba(196, 154, 58, 0.12);
+
+  box-shadow:
+    0 0 16px rgba(196, 154, 58, 0.13),
+    inset 0 0 14px rgba(16, 168, 120, 0.08);
+
+  transform: translateY(-2px);
 }
 
 
-/* HERO */
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .hero {
   min-height: 690px;
+
   position: relative;
+  isolation: isolate;
+
   overflow: hidden;
+
   display: grid;
   place-items: center;
+
   text-align: center;
+
   padding: 90px 20px;
 
   background:
-    radial-gradient(circle at 17% 55%, rgba(16, 168, 120, 0.36), transparent 30%),
-    radial-gradient(circle at 83% 52%, rgba(16, 168, 120, 0.32), transparent 30%),
-    radial-gradient(circle at center, rgba(8, 127, 91, 0.2), transparent 48%),
-    linear-gradient(rgba(5, 17, 14, 0.68), rgba(7, 20, 17, 0.97)),
-    url("images/herobg.jpg");
+    radial-gradient(
+      circle at 17% 55%,
+      rgba(16, 168, 120, 0.32),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 83% 52%,
+      rgba(16, 168, 120, 0.28),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at center,
+      rgba(8, 127, 91, 0.20),
+      transparent 48%
+    ),
+    linear-gradient(
+      150deg,
+      #061a16 0%,
+      #073329 46%,
+      #071411 100%
+    );
 
-  background-size: cover;
-  background-position: center;
+  border-bottom: 1px solid rgba(226, 195, 107, 0.25);
 }
+
+
+/* Soft emerald glow behind hero */
 
 .hero::before,
 .hero::after {
   content: "";
+
   position: absolute;
   top: 15%;
+
   width: 35%;
   height: 65%;
+
   border-radius: 50%;
-  filter: blur(40px);
-  opacity: 0.25;
+
+  filter: blur(45px);
+
+  opacity: 0.20;
+
   pointer-events: none;
 }
 
@@ -189,50 +307,180 @@ body {
   background: var(--bright-emerald);
 }
 
+
+/* =========================
+   HERO DECORATIVE ASSETS
+   ========================= */
+
+.hero-decor,
+.hero-magic,
+.hero-overlay {
+  position: absolute;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+
+/* Antique-gold decorative corner pieces */
+
+.hero-decor {
+  width: clamp(180px, 24vw, 360px);
+
+  top: 47%;
+
+  transform: translateY(-50%);
+
+  z-index: 3;
+
+  opacity: 0.82;
+
+  filter:
+    drop-shadow(0 0 10px rgba(226, 195, 107, 0.18))
+    drop-shadow(0 0 18px rgba(16, 168, 120, 0.18));
+}
+
+.hero-decor-left {
+  left: -3%;
+}
+
+.hero-decor-right {
+  right: -3%;
+}
+
+
+/* Emerald magical swirls */
+
+.hero-magic {
+  width: clamp(280px, 40vw, 620px);
+
+  bottom: -4%;
+
+  z-index: 2;
+
+  opacity: 0.52;
+
+  mix-blend-mode: screen;
+}
+
+.hero-magic-left {
+  left: -10%;
+}
+
+.hero-magic-right {
+  right: -10%;
+}
+
+
+/* Central optional overlay artwork */
+
+.hero-overlay {
+  width: min(72vw, 760px);
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 1;
+
+  opacity: 0.25;
+
+  filter:
+    drop-shadow(0 0 12px rgba(226, 195, 107, 0.10))
+    drop-shadow(0 0 20px rgba(16, 168, 120, 0.12));
+}
+
+
+/* =========================
+   ARCANE CIRCLE
+   ========================= */
+
 .arcane-circle {
   position: absolute;
+
   width: min(72vw, 690px);
+
   aspect-ratio: 1;
-  border: 1px solid rgba(226, 195, 107, 0.17);
+
+  border: 1px solid rgba(226, 195, 107, 0.14);
+
   border-radius: 50%;
+
+  opacity: 0.45;
+
   box-shadow:
-    0 0 0 32px rgba(226, 195, 107, 0.025),
-    0 0 0 90px rgba(226, 195, 107, 0.018);
+    0 0 0 32px rgba(226, 195, 107, 0.020),
+    0 0 0 90px rgba(226, 195, 107, 0.012);
+
+  pointer-events: none;
 }
 
 .arcane-circle::before,
 .arcane-circle::after {
   content: "";
+
   position: absolute;
+
+  border: 1px solid rgba(226, 195, 107, 0.08);
+}
+
+.arcane-circle::before {
   inset: 11%;
-  border: 1px solid rgba(226, 195, 107, 0.09);
   transform: rotate(45deg);
 }
 
 .arcane-circle::after {
   inset: 26%;
-  transform: rotate(0deg);
+
   border-radius: 50%;
 }
 
+
+/* =========================
+   HERO TEXT
+   ========================= */
+
 .hero-content {
   position: relative;
-  z-index: 2;
+
+  z-index: 10;
+
+  width: min(1100px, 94vw);
 }
+
+
+/* Handwritten accent font */
 
 .welcome {
- font-family: "Zeyada", cursive;
- font-size: 2.6rem;
- font-weight: 400;
- text-transform: none;
- letter-spacing: 0.03em;
+  margin: 0 0 12px;
+
+  font-family: "Zeyada", cursive;
+
+  font-size: 2.6rem;
+  font-weight: 400;
+
+  text-transform: none;
+
+  letter-spacing: 0.03em;
+
+  color: var(--parchment);
 }
 
+
+/* Main ROTATING CHAOS title */
+
 .hero h1 {
+  margin: 0;
+
   font-family: "Marcellus SC", serif;
+
   font-weight: 400;
-  line-height: 0.9;
+
+  line-height: 0.90;
+
   font-size: clamp(65px, 9vw, 145px);
+
   letter-spacing: -0.035em;
 
   color: #d7ad4f;
@@ -241,117 +489,202 @@ body {
     0 1px 0 #f0d17a,
     0 3px 0 #a77926,
     0 7px 0 #694514,
-    0 10px 16px rgba(0, 0, 0, 0.7),
-    0 0 22px rgba(16, 168, 120, 0.2);
+    0 10px 16px rgba(0, 0, 0, 0.70),
+    0 0 22px rgba(16, 168, 120, 0.20);
 }
+
+
+/* Temporary rotating O symbols */
 
 .rotating-o {
   display: inline-block;
+
   font-size: 0.82em;
+
   color: var(--light-gold);
+
   transform: translateY(-0.03em);
 }
 
+
+/* =========================
+   HERO DIVIDER / TAGLINE
+   ========================= */
+
 .guild-divider {
+  width: min(760px, 90%);
+
   margin: 42px auto 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   gap: 18px;
-  max-width: 760px;
 }
 
 .guild-divider span {
   height: 1px;
+
   flex: 1;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(226, 195, 107, 0.8)
-  );
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(226, 195, 107, 0.80)
+    );
 }
 
 .guild-divider span:last-child {
-  background: linear-gradient(
-    to left,
-    transparent,
-    rgba(226, 195, 107, 0.8)
-  );
+  background:
+    linear-gradient(
+      to left,
+      transparent,
+      rgba(226, 195, 107, 0.80)
+    );
 }
 
 .guild-divider p,
 .hero-tagline {
   margin: 0;
+
   font-family: "Marcellus SC", serif;
+
   letter-spacing: 0.28em;
 }
 
 .guild-divider p {
   color: var(--parchment);
+
   font-size: 12px;
+
   white-space: nowrap;
 }
 
 .hero-tagline {
   margin-top: 32px;
+
   color: var(--light-gold);
+
   font-size: clamp(11px, 1.4vw, 17px);
 }
 
 
-/* WHO WE ARE / WHAT WE DO */
+/* =========================================================
+   WHO WE ARE / WHAT WE DO
+   ========================================================= */
 
 .intro-grid {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
 }
 
 .who-we-are,
 .what-we-do {
-  min-height: 500px;
+  min-height: 520px;
+
   padding: 70px clamp(35px, 6vw, 90px);
 }
 
+
+/* =========================
+   WHO WE ARE
+   ========================= */
+
 .who-we-are {
   position: relative;
+
   overflow: hidden;
+
+  text-align: center;
+
   background:
-    radial-gradient(circle at 80% 30%, rgba(16, 168, 120, 0.2), transparent 38%),
-    linear-gradient(140deg, #06251f, #073d32);
+    radial-gradient(
+      circle at 50% 38%,
+      rgba(16, 168, 120, 0.18),
+      transparent 42%
+    ),
+    linear-gradient(
+      140deg,
+      #06251f,
+      #073d32
+    );
+
   border-top: 1px solid rgba(226, 195, 107, 0.42);
 }
 
+
+/* Inner antique gold frame */
+
 .who-we-are::after {
   content: "";
+
   position: absolute;
+
   inset: 18px;
-  border: 1px solid rgba(226, 195, 107, 0.3);
+
+  border: 1px solid rgba(226, 195, 107, 0.30);
+
   pointer-events: none;
 }
 
-.what-we-do {
-  background:
-    radial-gradient(circle at 40% 25%, #fffdf6, transparent 50%),
-    var(--parchment);
-  color: var(--ink);
-  border-top: 1px solid var(--gold);
+
+/* Ensure contents sit above border decoration */
+
+.who-we-are > * {
+  position: relative;
+
+  z-index: 2;
 }
+
+
+/* New real guild emblem */
+
+.who-emblem {
+  display: block;
+
+  width: min(220px, 60%);
+
+  height: auto;
+
+  margin: 20px auto 28px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 7px 14px rgba(0, 0, 0, 0.45))
+    drop-shadow(0 0 12px rgba(16, 168, 120, 0.20))
+    drop-shadow(0 0 7px rgba(226, 195, 107, 0.14));
+}
+
+
+/* =========================
+   SECTION HEADINGS
+   ========================= */
 
 .section-eyebrow {
   margin: 0 0 7px;
+
   font-family: "Marcellus SC", serif;
+
   color: var(--gold);
+
   letter-spacing: 0.23em;
+
   font-size: 10px;
-  font-weight: 700;
 }
 
 .who-we-are h2,
 .what-we-do h2,
 footer h2 {
   margin: 0 0 28px;
+
   font-family: "Marcellus SC", serif;
+
   font-size: clamp(27px, 3vw, 42px);
+
   letter-spacing: 0.08em;
 }
 
@@ -359,168 +692,234 @@ footer h2 {
   color: var(--light-gold);
 }
 
-.what-we-do h2 {
-  color: #4a361a;
-}
-
-.guild-banner {
-  width: min(360px, 90%);
-  height: 130px;
-  margin: 28px 0;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  position: relative;
-
-  background:
-    linear-gradient(rgba(6, 47, 38, 0.93), rgba(3, 29, 23, 0.95)),
-    url("images/banner.png");
-
-  background-size: cover;
-  border: 1px solid var(--gold);
-  color: var(--light-gold);
-  font-family: "Marcellus SC", serif;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-}
-
-.banner-emblem {
-  width: 70px;
-  height: 70px;
-  border: 2px solid var(--gold);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 38px;
-}
-
 .who-we-are > p:not(.section-eyebrow) {
-  max-width: 600px;
-  font-size: 19px;
-  line-height: 1.6;
+  max-width: 610px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
   color: rgba(241, 235, 221, 0.85);
 }
 
 .gold-button {
   margin-top: 20px;
-  border: 1px solid var(--gold);
-  color: var(--light-gold);
+
   padding: 14px 20px;
+
+  color: var(--light-gold);
+
   font-size: 11px;
 }
 
+
+/* =========================
+   WHAT WE DO
+   ========================= */
+
+.what-we-do {
+  text-align: center;
+
+  color: var(--ink);
+
+  background:
+    radial-gradient(
+      circle at 40% 25%,
+      #fffdf6,
+      transparent 52%
+    ),
+    var(--parchment);
+
+  border-top: 1px solid var(--gold);
+}
+
+.what-we-do h2 {
+  color: var(--brown);
+}
+
+
+/* =========================
+   ACTIVITY ICON GRID
+   ========================= */
+
 .activity-grid {
   display: grid;
+
   grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin-top: 45px;
+
+  gap: 22px;
+
+  margin-top: 42px;
 }
 
 .activity {
   text-align: center;
-}
 
-.activity-icon {
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  margin: 0 auto 15px;
-  display: grid;
-  place-items: center;
-
-  background: #344b46;
-  border: 1px solid var(--gold);
-  color: var(--light-gold);
-  font-size: 27px;
+  min-width: 0;
 }
 
 .activity-icon-img {
-  width: 92px;
-  height: 92px;
-  object-fit: contain;
   display: block;
-  margin: 0 auto 16px;
+
+  width: 105px;
+  height: 105px;
+
+  object-fit: contain;
+
+  margin: 0 auto 17px;
+
+  filter:
+    drop-shadow(0 5px 8px rgba(0, 0, 0, 0.20))
+    drop-shadow(0 0 5px rgba(196, 154, 58, 0.12));
 }
+
 .activity h3 {
+  margin: 0 0 8px;
+
   font-family: "Marcellus SC", serif;
+
   font-size: 15px;
+
   letter-spacing: 0.07em;
+
   color: #594323;
 }
 
 .activity p {
-  font-size: 15px;
-  line-height: 1.4;
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
   color: #5d5b53;
 }
 
 
-/* QUICK LINKS */
+/* =========================================================
+   QUICK LINKS
+   ========================================================= */
 
 .quick-links {
   padding: 55px 4vw 70px;
+
   display: grid;
+
   grid-template-columns: repeat(4, 1fr);
+
   gap: 18px;
 
   background:
-    radial-gradient(circle at 20% 40%, rgba(16, 168, 120, 0.17), transparent 30%),
-    radial-gradient(circle at 80% 40%, rgba(16, 168, 120, 0.13), transparent 30%),
-    linear-gradient(#071b17, #062e26);
+    radial-gradient(
+      circle at 20% 40%,
+      rgba(16, 168, 120, 0.17),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 40%,
+      rgba(16, 168, 120, 0.13),
+      transparent 30%
+    ),
+    linear-gradient(
+      #071b17,
+      #062e26
+    );
 }
 
 .feature-card {
   min-height: 175px;
+
   padding: 28px 26px;
+
   position: relative;
+
   text-decoration: none;
+
   color: var(--parchment);
-  border: 1px solid rgba(226, 195, 107, 0.75);
-  transition: transform 0.2s ease, background 0.2s ease;
+
+  border: 1px solid rgba(226, 195, 107, 0.72);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.015),
+      rgba(16, 168, 120, 0.025)
+    );
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-4px);
+
   background: rgba(16, 168, 120, 0.08);
+
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.22),
+    0 0 15px rgba(196, 154, 58, 0.08);
 }
 
 .feature-icon {
-  color: var(--light-gold);
-  font-size: 30px;
   margin-bottom: 16px;
+
+  color: var(--light-gold);
+
+  font-size: 30px;
 }
 
 .feature-card h3 {
   margin: 0 0 8px;
-  font-family: "Cinzel", serif;
+
+  font-family: "Marcellus SC", serif;
+
   color: var(--light-gold);
+
   letter-spacing: 0.07em;
 }
 
 .feature-card p {
   margin: 0;
-  color: rgba(241, 235, 221, 0.8);
+
+  color: rgba(241, 235, 221, 0.80);
+
   font-size: 16px;
 }
 
 .arrow {
   position: absolute;
+
   top: 50%;
   right: 22px;
+
+  transform: translateY(-50%);
+
   color: var(--light-gold);
+
   font-size: 25px;
 }
 
 
-/* FOOTER */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer {
   padding: 60px 20px 35px;
+
   text-align: center;
 
   background:
-    radial-gradient(circle at center, rgba(8, 127, 91, 0.13), transparent 40%),
+    radial-gradient(
+      circle at center,
+      rgba(8, 127, 91, 0.13),
+      transparent 40%
+    ),
     #050f0d;
 
   border-top: 1px solid rgba(226, 195, 107, 0.35);
@@ -528,38 +927,56 @@ footer {
 
 footer h2 {
   color: var(--light-gold);
+
   font-size: 24px;
 }
 
 .footer-tagline {
   font-family: "Marcellus SC", serif;
+
   letter-spacing: 0.28em;
-  color: rgba(241, 235, 221, 0.5);
+
+  color: rgba(241, 235, 221, 0.50);
+
   font-size: 10px;
 }
 
 .footer-links {
   margin-top: 25px;
+
   display: flex;
   justify-content: center;
+
   gap: 28px;
 }
 
 .footer-links a {
   color: var(--light-gold);
+
   text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--parchment);
 }
 
 .copyright {
   margin-top: 35px;
+
   color: rgba(241, 235, 221, 0.35);
+
   font-size: 13px;
 }
 
 
-/* RESPONSIVE */
+/* =========================================================
+   TABLET
+   ========================================================= */
 
 @media (max-width: 1100px) {
+
   .desktop-nav {
     display: none;
   }
@@ -579,30 +996,54 @@ footer h2 {
   .quick-links {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .hero-decor {
+    width: clamp(150px, 22vw, 250px);
+
+    opacity: 0.65;
+  }
+
+  .hero-magic {
+    width: clamp(220px, 38vw, 420px);
+  }
 }
 
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 700px) {
+
   .site-header {
     padding: 14px 18px;
+  }
+
+  .brand-logo {
+    width: 44px;
+    height: 44px;
   }
 
   .brand-subtitle {
     display: none;
   }
 
-  .brand-emblem {
-    width: 42px;
-    height: 42px;
-    font-size: 26px;
+  .brand-name {
+    font-size: 15px;
   }
 
   .discord-button {
     padding: 10px 12px;
+
     font-size: 9px;
   }
 
+
+  /* Hero */
+
   .hero {
     min-height: 570px;
+
     padding: 70px 14px;
   }
 
@@ -611,7 +1052,7 @@ footer h2 {
   }
 
   .welcome {
-    letter-spacing: 0.28em;
+    font-size: 2rem;
   }
 
   .guild-divider {
@@ -620,128 +1061,23 @@ footer h2 {
 
   .guild-divider p {
     font-size: 8px;
+
     letter-spacing: 0.17em;
   }
 
   .hero-tagline {
     line-height: 1.8;
+
     letter-spacing: 0.14em;
   }
 
-  .who-we-are,
-  .what-we-do {
-    padding: 55px 26px;
-  }
 
-  .activity-grid,
-  .quick-links {
-    grid-template-columns: 1fr;
-  }
-
-  .quick-links {
-    padding: 35px 20px 50px;
-  }
-}
-/* ===== ROTATING CHAOS REAL ASSETS ===== */
-
-.brand-logo {
-  width: 58px;
-  height: 58px;
-  object-fit: contain;
-  flex-shrink: 0;
-  filter:
-    drop-shadow(0 0 8px rgba(16, 168, 120, 0.25))
-    drop-shadow(0 0 4px rgba(226, 195, 107, 0.25));
-}
-
-.hero {
-  isolation: isolate;
-}
-
-.hero-content {
-  z-index: 5;
-}
-
-.hero-decor,
-.hero-magic,
-.hero-overlay {
-  position: absolute;
-  pointer-events: none;
-  user-select: none;
-}
-
-.hero-decor {
-  width: clamp(180px, 24vw, 360px);
-  top: 45%;
-  transform: translateY(-50%);
-  z-index: 3;
-  opacity: 0.92;
-  filter:
-    drop-shadow(0 0 10px rgba(226, 195, 107, 0.18))
-    drop-shadow(0 0 18px rgba(16, 168, 120, 0.18));
-}
-
-.hero-decor-left {
-  left: -3%;
-}
-
-.hero-decor-right {
-  right: -3%;
-}
-
-.hero-magic {
-  width: clamp(280px, 40vw, 620px);
-  bottom: -4%;
-  z-index: 2;
-  opacity: 0.7;
-  mix-blend-mode: screen;
-  filter: blur(0.2px);
-}
-
-.hero-magic-left {
-  left: -10%;
-}
-
-.hero-magic-right {
-  right: -10%;
-}
-
-.hero-overlay {
-  width: min(72vw, 760px);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  opacity: 0.38;
-  filter:
-    drop-shadow(0 0 12px rgba(226, 195, 107, 0.1))
-    drop-shadow(0 0 20px rgba(16, 168, 120, 0.12));
-}
-
-.arcane-circle {
-  opacity: 0.18;
-}
-
-@media (max-width: 1100px) {
-  .hero-decor {
-    width: clamp(150px, 22vw, 250px);
-    opacity: 0.7;
-  }
-
-  .hero-magic {
-    width: clamp(220px, 38vw, 420px);
-  }
-}
-
-@media (max-width: 700px) {
-  .brand-logo {
-    width: 44px;
-    height: 44px;
-  }
+  /* Decorative hero artwork */
 
   .hero-decor {
     width: 135px;
-    opacity: 0.48;
+
+    opacity: 0.42;
   }
 
   .hero-decor-left {
@@ -754,11 +1090,56 @@ footer h2 {
 
   .hero-magic {
     width: 240px;
-    opacity: 0.5;
+
+    opacity: 0.38;
   }
 
   .hero-overlay {
     width: 95vw;
-    opacity: 0.24;
+
+    opacity: 0.18;
+  }
+
+
+  /* Content */
+
+  .who-we-are,
+  .what-we-do {
+    padding: 55px 26px;
+  }
+
+  .who-emblem {
+    width: 180px;
+  }
+
+  .activity-grid {
+    grid-template-columns: 1fr;
+
+    gap: 34px;
+  }
+
+  .activity-icon-img {
+    width: 115px;
+    height: 115px;
+  }
+
+
+  /* Quick links */
+
+  .quick-links {
+    padding: 35px 20px 50px;
+
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    min-height: 150px;
+  }
+
+
+  /* Footer */
+
+  .footer-links {
+    flex-wrap: wrap;
   }
 }

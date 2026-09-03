@@ -449,6 +449,18 @@ img {
   width: min(1100px, 94vw);
 }
 
+.hero-title-image {
+  display: block;
+  width: min(1050px, 92vw);
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 10px 18px rgba(0, 0, 0, 0.55))
+    drop-shadow(0 0 18px rgba(16, 168, 120, 0.18))
+    drop-shadow(0 0 8px rgba(226, 195, 107, 0.18));
+}
 
 /* Handwritten accent font */
 
@@ -977,6 +989,9 @@ footer h2 {
 
 @media (max-width: 1100px) {
 
+   .hero-title-image {
+  width: 96vw;
+}
   .desktop-nav {
     display: none;
   }

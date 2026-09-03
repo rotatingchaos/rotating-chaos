@@ -1175,65 +1175,62 @@ footer h2 {
 }
 
 
-/* Both animated O emblems */
+/* O POSITIONING WRAPPERS */
 
 .animated-o {
   position: absolute;
   display: block;
+
+  width: 13%;
   height: auto;
 
-  z-index: 5;
-
-  transform-origin: 50% 50%;
-
-  filter:
-    drop-shadow(0 0 8px rgba(16, 168, 120, 0.45))
-    drop-shadow(0 0 5px rgba(226, 195, 107, 0.35));
-
-  animation: chaos-spin 14s linear infinite;
+  z-index: 20;
 
   pointer-events: none;
+
+  transform-origin: center center;
+
+  animation-name: chaos-spin;
+  animation-duration: 14s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 
-/* O in ROTATING */
+/* O IN ROTATING */
 
 .animated-o-one {
-  width: 18.5%;
-
-  left: 17.2%;
-  top: 31.5%;
+  left: 20.5%;
+  top: 34%;
 }
 
 
-/* O in CHAOS */
+/* O IN CHAOS */
 
 .animated-o-two {
-  width: 18.5%;
-
-  left: 54.8%;
-  top: 58.5%;
+  left: 56.5%;
+  top: 61%;
 
   animation-direction: reverse;
 }
 
 
-/* THE WITCHCRAFT */
+/* ROTATION */
 
 @keyframes chaos-spin {
 
-  from {
+  0% {
     transform: rotate(0deg);
   }
 
-  to {
+  100% {
     transform: rotate(360deg);
   }
 
 }
 
 
-/* Tablet */
+/* TABLET */
 
 @media (max-width: 1100px) {
 
@@ -1244,7 +1241,7 @@ footer h2 {
 }
 
 
-/* Mobile */
+/* MOBILE */
 
 @media (max-width: 700px) {
 
@@ -1255,7 +1252,7 @@ footer h2 {
 }
 
 
-/* Accessibility - stop animation if user requests reduced motion */
+/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -1263,5 +1260,4 @@ footer h2 {
     animation: none;
   }
 
-}
 }

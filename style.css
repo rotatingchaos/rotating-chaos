@@ -469,7 +469,7 @@ img {
 .hero-title-stage {
   position: relative;
 
-  width: min(940px, 88vw);
+  width: min(900px, 86vw);
 
   aspect-ratio: 1.45 / 1;
 
@@ -497,12 +497,12 @@ img {
 
   position: absolute;
 
-  width: 122%;
+  width: 119%;
   max-width: none;
 
   height: auto;
 
-  left: 0;
+  left: -1%;
   top: 0;
 
   filter:

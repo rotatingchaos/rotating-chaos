@@ -449,6 +449,61 @@ img {
   width: min(1100px, 94vw);
 }
 
+ /* =========================================================
+   ANIMATED ROTATING CHAOS HERO TITLE
+   ========================================================= */
+
+.hero-title-wrap {
+  position: relative;
+  width: min(1050px, 92vw);
+  margin: 0 auto;
+}
+
+.hero-title-wrap .hero-title-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.animated-o {
+  position: absolute;
+  display: block;
+  width: 13%;
+  height: auto;
+  z-index: 20;
+  pointer-events: none;
+  transform-origin: 50% 50%;
+
+  animation: chaos-spin 14s linear infinite;
+}
+
+.animated-o-one {
+  left: 20.5%;
+  top: 34%;
+}
+
+.animated-o-two {
+  left: 56.5%;
+  top: 61%;
+  animation-direction: reverse;
+}
+
+@keyframes chaos-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-o {
+    animation: none;
+  }
+}
 .hero-title-image {
   display: block;
   width: min(1050px, 92vw);
@@ -1160,107 +1215,3 @@ footer h2 {
 
 }
 
-/* =========================================================
-   ANIMATED ROTATING CHAOS HERO TITLE
-   ========================================================= */
-
-.hero-title-wrap {
-  position: relative;
-  width: min(1050px, 92vw);
-  margin: 0 auto;
-}
-
-.hero-title-wrap .hero-title-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-}
-
-
-/* O POSITIONING WRAPPERS */
-
-.animated-o {
-  position: absolute;
-  display: block;
-
-  width: 13%;
-  height: auto;
-
-  z-index: 20;
-
-  pointer-events: none;
-
-  transform-origin: center center;
-
-  animation-name: chaos-spin;
-  animation-duration: 14s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-
-/* O IN ROTATING */
-
-.animated-o-one {
-  left: 20.5%;
-  top: 34%;
-}
-
-
-/* O IN CHAOS */
-
-.animated-o-two {
-  left: 56.5%;
-  top: 61%;
-
-  animation-direction: reverse;
-}
-
-
-/* ROTATION */
-
-@keyframes chaos-spin {
-
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-
-}
-
-
-/* TABLET */
-
-@media (max-width: 1100px) {
-
-  .hero-title-wrap {
-    width: 96vw;
-  }
-
-}
-
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-  .hero-title-wrap {
-    width: 96vw;
-  }
-
-}
-
-
-/* REDUCED MOTION */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .animated-o {
-    animation: none;
-  }
-
-}

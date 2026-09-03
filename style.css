@@ -7,9 +7,9 @@
    ========================================================= */
 
 
-/* =========================
+/* =========================================================
    COLOURS
-   ========================= */
+   ========================================================= */
 
 :root {
   --black-green: #071411;
@@ -28,9 +28,9 @@
 }
 
 
-/* =========================
+/* =========================================================
    BASIC PAGE SETUP
-   ========================= */
+   ========================================================= */
 
 * {
   box-sizing: border-box;
@@ -82,9 +82,6 @@ img {
   border-bottom: 1px solid rgba(226, 195, 107, 0.28);
 }
 
-
-/* Small decorative gold line inside header */
-
 .site-header::before {
   content: "";
 
@@ -97,9 +94,9 @@ img {
 }
 
 
-/* =========================
+/* =========================================================
    BRAND / LOGO
-   ========================= */
+   ========================================================= */
 
 .brand {
   display: flex;
@@ -152,9 +149,9 @@ img {
 }
 
 
-/* =========================
+/* =========================================================
    DESKTOP NAVIGATION
-   ========================= */
+   ========================================================= */
 
 .desktop-nav {
   margin-left: auto;
@@ -185,9 +182,9 @@ img {
 }
 
 
-/* =========================
+/* =========================================================
    BUTTONS
-   ========================= */
+   ========================================================= */
 
 .discord-button,
 .gold-button {
@@ -276,7 +273,7 @@ img {
 }
 
 
-/* Soft emerald glow behind hero */
+/* Soft emerald glow */
 
 .hero::before,
 .hero::after {
@@ -308,9 +305,9 @@ img {
 }
 
 
-/* =========================
+/* =========================================================
    HERO DECORATIVE ASSETS
-   ========================= */
+   ========================================================= */
 
 .hero-decor,
 .hero-magic,
@@ -322,7 +319,7 @@ img {
 }
 
 
-/* Antique-gold decorative corner pieces */
+/* Gold side decorations */
 
 .hero-decor {
   width: clamp(180px, 24vw, 360px);
@@ -372,7 +369,7 @@ img {
 }
 
 
-/* Central optional overlay artwork */
+/* Central overlay */
 
 .hero-overlay {
   width: min(72vw, 760px);
@@ -392,9 +389,9 @@ img {
 }
 
 
-/* =========================
+/* =========================================================
    ARCANE CIRCLE
-   ========================= */
+   ========================================================= */
 
 .arcane-circle {
   position: absolute;
@@ -427,6 +424,7 @@ img {
 
 .arcane-circle::before {
   inset: 11%;
+
   transform: rotate(45deg);
 }
 
@@ -437,9 +435,9 @@ img {
 }
 
 
-/* =========================
-   HERO TEXT
-   ========================= */
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
 
 .hero-content {
   position: relative;
@@ -449,67 +447,63 @@ img {
   width: min(1100px, 94vw);
 }
 
- /* =========================================================
-   ANIMATED ROTATING CHAOS HERO TITLE
+
+/* =========================================================
+   ANIMATED ROTATING CHAOS TITLE
    ========================================================= */
 
-.hero-title-wrap {
+/*
+   hero-title-stage controls the whole title area.
+
+   hero-title-crop hides the unwanted extra emblem
+   that exists on the far right of hero-title-base.png.
+
+   Each O has a stationary POSITION wrapper.
+
+   The image INSIDE that wrapper rotates.
+
+   This means positioning and rotation cannot fight
+   over the same transform property.
+*/
+
+.hero-title-stage {
   position: relative;
-  width: min(1050px, 92vw);
+
+  width: min(940px, 88vw);
+
+  aspect-ratio: 1.45 / 1;
+
   margin: 0 auto;
 }
 
-.hero-title-wrap .hero-title-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-}
 
-.animated-o {
+/* Crop the base artwork */
+
+.hero-title-crop {
   position: absolute;
-  display: block;
-  width: 13%;
-  height: auto;
-  z-index: 20;
+
+  inset: 0;
+
+  overflow: hidden;
+
   pointer-events: none;
-  transform-origin: 50% 50%;
-
-  animation: chaos-spin 14s linear infinite;
 }
 
-.animated-o-one {
-  left: 20.5%;
-  top: 34%;
-}
 
-.animated-o-two {
-  left: 56.5%;
-  top: 61%;
-  animation-direction: reverse;
-}
+/* Main title artwork */
 
-@keyframes chaos-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animated-o {
-    animation: none;
-  }
-}
-.hero-title-image {
+.hero-title-base {
   display: block;
-  width: min(1050px, 92vw);
+
+  position: absolute;
+
+  width: 122%;
+  max-width: none;
+
   height: auto;
-  margin: 0 auto;
-  object-fit: contain;
+
+  left: 0;
+  top: 0;
 
   filter:
     drop-shadow(0 10px 18px rgba(0, 0, 0, 0.55))
@@ -517,71 +511,122 @@ img {
     drop-shadow(0 0 8px rgba(226, 195, 107, 0.18));
 }
 
-/* Handwritten accent font */
 
-.welcome {
-  margin: 0 0 12px;
+/* =========================================================
+   O POSITIONING
+   ========================================================= */
 
-  font-family: "Zeyada", cursive;
+.hero-o-position {
+  position: absolute;
 
-  font-size: 2.6rem;
-  font-weight: 400;
+  z-index: 20;
 
-  text-transform: none;
-
-  letter-spacing: 0.03em;
-
-  color: var(--parchment);
+  pointer-events: none;
 }
 
 
-/* Main ROTATING CHAOS title */
+/* O inside ROTATING */
 
-.hero h1 {
-  margin: 0;
+.hero-o-position-one {
+  width: 14.5%;
 
-  font-family: "Marcellus SC", serif;
-
-  font-weight: 400;
-
-  line-height: 0.90;
-
-  font-size: clamp(65px, 9vw, 145px);
-
-  letter-spacing: -0.035em;
-
-  color: #d7ad4f;
-
-  text-shadow:
-    0 1px 0 #f0d17a,
-    0 3px 0 #a77926,
-    0 7px 0 #694514,
-    0 10px 16px rgba(0, 0, 0, 0.70),
-    0 0 22px rgba(16, 168, 120, 0.20);
+  left: 18.2%;
+  top: 33.6%;
 }
 
 
-/* Temporary rotating O symbols */
+/* O inside CHAOS */
 
-.rotating-o {
-  display: inline-block;
+.hero-o-position-two {
+  width: 14.5%;
 
-  font-size: 0.82em;
-
-  color: var(--light-gold);
-
-  transform: translateY(-0.03em);
+  left: 55.5%;
+  top: 61.1%;
 }
 
 
-/* =========================
+/* =========================================================
+   ROTATING O IMAGES
+   ========================================================= */
+
+.hero-o {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  transform-origin: 50% 50%;
+
+  filter:
+    drop-shadow(0 0 8px rgba(16, 168, 120, 0.48))
+    drop-shadow(0 0 5px rgba(226, 195, 107, 0.30));
+}
+
+
+/* First O clockwise */
+
+.hero-o-one {
+  animation: chaos-spin 14s linear infinite;
+}
+
+
+/* Second O anticlockwise */
+
+.hero-o-two {
+  animation: chaos-spin-reverse 14s linear infinite;
+}
+
+
+/* Clockwise animation */
+
+@keyframes chaos-spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* Anticlockwise animation */
+
+@keyframes chaos-spin-reverse {
+
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+
+}
+
+
+/* Stop movement for reduced-motion users */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-o-one,
+  .hero-o-two {
+    animation: none;
+  }
+
+}
+
+
+/* =========================================================
    HERO DIVIDER / TAGLINE
-   ========================= */
+   ========================================================= */
 
 .guild-divider {
   width: min(760px, 90%);
 
-  margin: 42px auto 0;
+  margin: 20px auto 0;
 
   display: flex;
   align-items: center;
@@ -656,9 +701,9 @@ img {
 }
 
 
-/* =========================
+/* =========================================================
    WHO WE ARE
-   ========================= */
+   ========================================================= */
 
 .who-we-are {
   position: relative;
@@ -683,7 +728,7 @@ img {
 }
 
 
-/* Inner antique gold frame */
+/* Inner antique-gold frame */
 
 .who-we-are::after {
   content: "";
@@ -697,9 +742,6 @@ img {
   pointer-events: none;
 }
 
-
-/* Ensure contents sit above border decoration */
-
 .who-we-are > * {
   position: relative;
 
@@ -707,7 +749,7 @@ img {
 }
 
 
-/* New real guild emblem */
+/* Guild emblem */
 
 .who-emblem {
   display: block;
@@ -727,9 +769,9 @@ img {
 }
 
 
-/* =========================
+/* =========================================================
    SECTION HEADINGS
-   ========================= */
+   ========================================================= */
 
 .section-eyebrow {
   margin: 0 0 7px;
@@ -783,9 +825,9 @@ footer h2 {
 }
 
 
-/* =========================
+/* =========================================================
    WHAT WE DO
-   ========================= */
+   ========================================================= */
 
 .what-we-do {
   text-align: center;
@@ -808,9 +850,9 @@ footer h2 {
 }
 
 
-/* =========================
+/* =========================================================
    ACTIVITY ICON GRID
-   ========================= */
+   ========================================================= */
 
 .activity-grid {
   display: grid;
@@ -1044,9 +1086,6 @@ footer h2 {
 
 @media (max-width: 1100px) {
 
-   .hero-title-image {
-  width: 96vw;
-}
   .desktop-nav {
     display: none;
   }
@@ -1069,13 +1108,13 @@ footer h2 {
 
   .hero-decor {
     width: clamp(150px, 22vw, 250px);
-
     opacity: 0.65;
   }
 
   .hero-magic {
     width: clamp(220px, 38vw, 420px);
   }
+
 }
 
 
@@ -1104,25 +1143,19 @@ footer h2 {
 
   .discord-button {
     padding: 10px 12px;
-
     font-size: 9px;
   }
 
 
-  /* Hero */
+  /* HERO */
 
   .hero {
     min-height: 570px;
-
     padding: 70px 14px;
   }
 
-  .hero h1 {
-    font-size: clamp(50px, 17vw, 84px);
-  }
-
-  .welcome {
-    font-size: 2rem;
+  .hero-title-stage {
+    width: 94vw;
   }
 
   .guild-divider {
@@ -1131,22 +1164,19 @@ footer h2 {
 
   .guild-divider p {
     font-size: 8px;
-
     letter-spacing: 0.17em;
   }
 
   .hero-tagline {
     line-height: 1.8;
-
     letter-spacing: 0.14em;
   }
 
 
-  /* Decorative hero artwork */
+  /* HERO DECORATIVE ART */
 
   .hero-decor {
     width: 135px;
-
     opacity: 0.42;
   }
 
@@ -1160,18 +1190,16 @@ footer h2 {
 
   .hero-magic {
     width: 240px;
-
     opacity: 0.38;
   }
 
   .hero-overlay {
     width: 95vw;
-
     opacity: 0.18;
   }
 
 
-  /* Content */
+  /* CONTENT */
 
   .who-we-are,
   .what-we-do {
@@ -1184,7 +1212,6 @@ footer h2 {
 
   .activity-grid {
     grid-template-columns: 1fr;
-
     gap: 34px;
   }
 
@@ -1194,7 +1221,7 @@ footer h2 {
   }
 
 
-  /* Quick links */
+  /* QUICK LINKS */
 
   .quick-links {
     padding: 35px 20px 50px;
@@ -1207,11 +1234,10 @@ footer h2 {
   }
 
 
-/* Footer */
+  /* FOOTER */
 
-.footer-links {
-  flex-wrap: wrap;
+  .footer-links {
+    flex-wrap: wrap;
+  }
+
 }
-
-}
-

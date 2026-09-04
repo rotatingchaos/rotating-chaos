@@ -539,7 +539,23 @@ img {
 
   transform: translateX(-12px);
 }
+.hero-o-mask {
+  width: 100%;
+  aspect-ratio: 1 / 1;
 
+  position: relative;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle,
+      #087f5b 0%,
+      #073d32 72%,
+      #071411 100%
+    );
+}
 
 /* =========================================================
    ROTATING O IMAGES
@@ -548,10 +564,19 @@ img {
 .hero-o {
   display: block;
 
-  width: 100%;
+  position: absolute;
+
+  width: 116%;
+  max-width: none;
   height: auto;
 
+  left: 50%;
+  top: 50%;
+
   transform-origin: 50% 50%;
+
+  margin-left: -58%;
+  margin-top: -58%;
 
   filter:
     drop-shadow(0 0 8px rgba(16, 168, 120, 0.48))

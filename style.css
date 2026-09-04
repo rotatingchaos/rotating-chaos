@@ -50,7 +50,7 @@ body {
 img {
   max-width: 100%;
 }
-
+      
 
 /* =========================================================
    HEADER
@@ -1259,6 +1259,326 @@ footer h2 {
 
   .footer-links {
     flex-wrap: wrap;
+  }
+
+}
+/* =========================================================
+   BUILD GUIDES PAGE
+   ========================================================= */
+
+
+/* BUILD GUIDES HERO */
+
+.guides-hero {
+  position: relative;
+
+  padding: 90px 20px 80px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(16, 168, 120, 0.22),
+      transparent 45%
+    ),
+    linear-gradient(
+      150deg,
+      #061a16 0%,
+      #073d32 50%,
+      #071411 100%
+    );
+
+  border-bottom: 1px solid rgba(226, 195, 107, 0.35);
+}
+
+
+.guides-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(226, 195, 107, 0.10);
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 45px rgba(226, 195, 107, 0.018),
+    0 0 0 100px rgba(226, 195, 107, 0.010);
+
+  pointer-events: none;
+}
+
+
+.guides-hero-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.guides-hero h1 {
+  margin: 8px 0 16px;
+
+  font-family: "Marcellus SC", serif;
+
+  font-size: clamp(42px, 6vw, 72px);
+
+  font-weight: 400;
+
+  letter-spacing: 0.08em;
+
+  color: var(--light-gold);
+
+  text-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.55),
+    0 0 18px rgba(16, 168, 120, 0.20);
+}
+
+
+.guides-intro {
+  margin: 0 auto;
+
+  max-width: 700px;
+
+  color: rgba(241, 235, 221, 0.82);
+
+  font-size: 18px;
+
+  line-height: 1.6;
+
+  letter-spacing: 0.04em;
+}
+
+
+
+/* =========================================================
+   BUILD GUIDES SECTION
+   ========================================================= */
+
+.build-guides-section {
+  padding: 70px 5vw 85px;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(16, 168, 120, 0.10),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(16, 168, 120, 0.08),
+      transparent 28%
+    ),
+    #071411;
+}
+
+
+.build-guides-grid {
+  width: min(1200px, 100%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+
+
+/* =========================================================
+   CLASS CARDS
+   ========================================================= */
+
+.build-class-card {
+  position: relative;
+
+  min-height: 220px;
+
+  padding: 34px 28px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(226, 195, 107, 0.60);
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(16, 168, 120, 0.13),
+      transparent 55%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(7, 61, 50, 0.72),
+      rgba(5, 20, 17, 0.96)
+    );
+
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.25),
+    inset 0 0 25px rgba(16, 168, 120, 0.025);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.build-class-card::before {
+  content: "◆";
+
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: var(--gold);
+
+  font-size: 13px;
+}
+
+
+.build-class-card:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--light-gold);
+
+  box-shadow:
+    0 16px 30px rgba(0, 0, 0, 0.34),
+    0 0 18px rgba(16, 168, 120, 0.10);
+}
+
+
+.build-class-card h2 {
+  margin: 0 0 24px;
+
+  color: var(--light-gold);
+
+  font-family: "Marcellus SC", serif;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.10em;
+}
+
+
+
+/* =========================================================
+   PARAGON PATH LINKS
+   ========================================================= */
+
+.paragon-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+.paragon-links a {
+  display: block;
+
+  padding: 11px 14px;
+
+  color: rgba(241, 235, 221, 0.88);
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  letter-spacing: 0.05em;
+
+  border-top: 1px solid rgba(226, 195, 107, 0.16);
+  border-bottom: 1px solid rgba(226, 195, 107, 0.16);
+
+  background: rgba(255, 255, 255, 0.015);
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.paragon-links a:hover {
+  color: var(--light-gold);
+
+  background: rgba(16, 168, 120, 0.10);
+
+  border-color: rgba(226, 195, 107, 0.42);
+
+  transform: translateX(3px);
+}
+
+
+
+/* =========================================================
+   BUILD GUIDES TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+  .build-guides-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+
+/* =========================================================
+   BUILD GUIDES MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .guides-hero {
+    padding: 70px 18px 60px;
+  }
+
+
+  .guides-hero h1 {
+    font-size: 38px;
+  }
+
+
+  .guides-intro {
+    font-size: 16px;
+  }
+
+
+  .build-guides-section {
+    padding: 45px 20px 60px;
+  }
+
+
+  .build-guides-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .build-class-card {
+    min-height: 0;
+
+    padding: 28px 22px;
   }
 
 }

@@ -531,8 +531,9 @@ img {
 
 .hero-o-position-one {
   width: 15.5%;
-  left: 18.9%;
+  left: 18.7%;
   top: 35.2%;
+  transform: translateX(10px);
 }
 
 
@@ -541,8 +542,9 @@ img {
 
 .hero-o-position-two {
   width: 15.5%;
-  left: 54.2%;
+  left: 54.5%;
   top: 58.7%;
+  transform: translateX(-12px);
 }
 
 

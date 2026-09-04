@@ -84,12 +84,10 @@ img {
 
 .site-header::before {
   content: "";
-
   position: absolute;
   top: 7px;
   left: 3%;
   right: 3%;
-
   border-top: 1px solid rgba(226, 195, 107, 0.45);
 }
 
@@ -424,13 +422,11 @@ img {
 
 .arcane-circle::before {
   inset: 11%;
-
   transform: rotate(45deg);
 }
 
 .arcane-circle::after {
   inset: 26%;
-
   border-radius: 50%;
 }
 
@@ -451,20 +447,6 @@ img {
 /* =========================================================
    ANIMATED ROTATING CHAOS TITLE
    ========================================================= */
-
-/*
-   hero-title-stage controls the whole title area.
-
-   hero-title-crop hides the unwanted extra emblem
-   that exists on the far right of hero-title-base.png.
-
-   Each O has a stationary POSITION wrapper.
-
-   The image INSIDE that wrapper rotates.
-
-   This means positioning and rotation cannot fight
-   over the same transform property.
-*/
 
 .hero-title-stage {
   position: relative;
@@ -518,12 +500,20 @@ img {
    O POSITIONING
    ========================================================= */
 
-..hero-o-position {
-  position: absolute;
-  z-index: 20;
-  pointer-events: none;
+/*
+   IMPORTANT:
+   This wrapper controls WHERE each O lives.
 
-  
+   Do not put the rotation animation on this wrapper.
+   The inner image rotates separately.
+*/
+
+.hero-o-position {
+  position: absolute;
+
+  z-index: 20;
+
+  pointer-events: none;
 }
 
 
@@ -531,19 +521,22 @@ img {
 
 .hero-o-position-one {
   width: 15.5%;
+
   left: 18.7%;
   top: 35.2%;
+
   transform: translateX(10px);
 }
-
 
 
 /* O inside CHAOS */
 
 .hero-o-position-two {
   width: 15.5%;
+
   left: 54.5%;
   top: 58.7%;
+
   transform: translateX(-12px);
 }
 
@@ -580,7 +573,7 @@ img {
 }
 
 
-/* Clockwise animation */
+/* Clockwise */
 
 @keyframes chaos-spin {
 
@@ -595,7 +588,7 @@ img {
 }
 
 
-/* Anticlockwise animation */
+/* Anticlockwise */
 
 @keyframes chaos-spin-reverse {
 
@@ -610,7 +603,7 @@ img {
 }
 
 
-/* Stop movement for reduced-motion users */
+/* Reduced motion */
 
 @media (prefers-reduced-motion: reduce) {
 

@@ -518,12 +518,16 @@ img {
    O POSITIONING
    ========================================================= */
 
-.hero-o-position {
+..hero-o-position {
   position: absolute;
-
   z-index: 20;
-
   pointer-events: none;
+
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+
+  background: #073d32;
 }
 
 

@@ -1832,4 +1832,182 @@ footer h2 {
     saturate(1.06)
     contrast(1.06)
     brightness(1);
+
+   /* =========================================================
+   SHARED MAGICAL PAGE HERO
+   Use this on all secondary pages
+   ========================================================= */
+
+.magic-page-hero {
+  position: relative;
+  isolation: isolate;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+
+    /* emerald glow left */
+    radial-gradient(
+      ellipse at 15% 50%,
+      rgba(16, 168, 120, 0.30),
+      transparent 34%
+    ),
+
+    /* emerald glow right */
+    radial-gradient(
+      ellipse at 85% 48%,
+      rgba(16, 168, 120, 0.26),
+      transparent 34%
+    ),
+
+    /* central magical glow */
+    radial-gradient(
+      ellipse at center,
+      rgba(20, 140, 110, 0.22),
+      transparent 46%
+    ),
+
+    /* darker worn patches */
+    radial-gradient(
+      ellipse at 25% 18%,
+      rgba(0, 0, 0, 0.38),
+      transparent 42%
+    ),
+
+    radial-gradient(
+      ellipse at 75% 80%,
+      rgba(0, 0, 0, 0.32),
+      transparent 40%
+    ),
+
+    /* old emerald surface */
+    linear-gradient(
+      140deg,
+      #03130f 0%,
+      #062a23 22%,
+      #0a4d40 46%,
+      #0b5f50 52%,
+      #073a31 72%,
+      #03130f 100%
+    );
+
+  border-bottom: 1px solid rgba(226, 195, 107, 0.35);
+}
+
+
+/* Magical flecks + mottled texture */
+
+.magic-page-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  opacity: 0.85;
+
+  background:
+
+    radial-gradient(
+      circle at 12% 20%,
+      rgba(226, 195, 107, 0.28) 0 1px,
+      transparent 1.8px
+    ),
+
+    radial-gradient(
+      circle at 32% 68%,
+      rgba(76, 255, 200, 0.22) 0 1px,
+      transparent 1.8px
+    ),
+
+    radial-gradient(
+      circle at 68% 16%,
+      rgba(226, 195, 107, 0.22) 0 1px,
+      transparent 1.8px
+    ),
+
+    radial-gradient(
+      circle at 88% 70%,
+      rgba(76, 255, 200, 0.18) 0 1px,
+      transparent 1.8px
+    ),
+
+    radial-gradient(
+      ellipse at 20% 38%,
+      rgba(255, 255, 255, 0.035),
+      transparent 24%
+    ),
+
+    radial-gradient(
+      ellipse at 68% 30%,
+      rgba(255, 255, 255, 0.028),
+      transparent 22%
+    );
+
+  background-size:
+    130px 130px,
+    170px 170px,
+    150px 150px,
+    190px 190px,
+    100% 100%,
+    100% 100%;
+
+  mix-blend-mode: screen;
+}
+
+
+/* Arcane rings + aged surface lines */
+
+.magic-page-hero::after {
+  content: "";
+
+  position: absolute;
+  inset: -8%;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  opacity: 0.62;
+
+  background:
+
+    radial-gradient(
+      circle at center,
+      transparent 0 24%,
+      rgba(226, 195, 107, 0.065) 24.2% 24.5%,
+      transparent 24.8% 34%,
+      rgba(16, 168, 120, 0.05) 34.2% 34.6%,
+      transparent 35% 44%,
+      rgba(226, 195, 107, 0.035) 44.2% 44.5%,
+      transparent 44.8%
+    ),
+
+    repeating-linear-gradient(
+      115deg,
+      transparent 0 28px,
+      rgba(255, 255, 255, 0.012) 29px,
+      transparent 30px 58px
+    ),
+
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 9px,
+      rgba(0, 0, 0, 0.025) 10px,
+      transparent 11px 21px
+    );
+}
+
+
+/* Keep actual hero content above magic layers */
+
+.magic-page-hero > * {
+  position: relative;
+  z-index: 2;
+}
 }

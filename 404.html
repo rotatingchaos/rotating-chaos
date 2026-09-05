@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lost in the Chaos | Rotating Chaos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Crimson+Pro:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(67,214,186,0.10),
+          transparent 40%
+        ),
+        #0d0c0b;
+    }
+
+    .error-panel {
+      width: min(760px, 100%);
+      text-align: center;
+      padding: 45px 30px;
+
+      border: 1px solid rgba(218,165,32,0.28);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(67,214,186,0.07),
+          rgba(218,165,32,0.05)
+        );
+    }
+
+    .error-panel img {
+      width: min(180px, 50%);
+      margin-bottom: 20px;
+    }
+
+    .error-code {
+      font-family: "Cinzel", serif;
+      font-size: clamp(4rem, 15vw, 8rem);
+      line-height: 1;
+      color: #d7aa42;
+    }
+
+    .error-panel h1 {
+      font-family: "Cinzel", serif;
+      margin: 10px 0;
+    }
+
+    .error-panel p {
+      font-family: "Crimson Pro", serif;
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+
+    .error-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .error-links a {
+      padding: 10px 14px;
+      text-decoration: none;
+      border: 1px solid rgba(67,214,186,0.3);
+      background: rgba(67,214,186,0.06);
+      color: #9ae8d8;
+      font-family: "Cinzel", serif;
+      font-size: 0.76rem;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <main class="error-page">
+
+    <section class="error-panel">
+
+      <img
+        src="images/logo.png"
+        alt="Rotating Chaos guild emblem"
+      >
+
+      <div class="error-code">
+        404
+      </div>
+
+      <h1>
+        YOU HAVE WANDERED OFF INTO THE CHAOS
+      </h1>
+
+      <p>
+        This page either moved, never existed, or somebody pulled
+        before the rest of the website was ready. 😂
+      </p>
+
+      <div class="error-links">
+
+        <a href="index.html">
+          BACK HOME
+        </a>
+
+        <a href="community.html">
+          COMMUNITY
+        </a>
+
+        <a href="events.html">
+          EVENTS
+        </a>
+
+        <a href="chaos-chat.html">
+          CHAOS CHAT
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+
+</html>

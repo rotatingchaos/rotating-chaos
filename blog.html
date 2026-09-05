@@ -1,0 +1,3351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="From the Chaos - Rotating Chaos Guild News, Stories and Updates"
+  >
+
+  <title>From the Chaos | Rotating Chaos</title>
+
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Crimson+Pro:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+
+  <style>
+
+    /* ======================================================
+       PAGE
+       ====================================================== */
+
+    .chaos-blog-page {
+      min-height: 100vh;
+      padding: 70px 20px 100px;
+
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(15, 130, 105, 0.10),
+          transparent 35%
+        ),
+        #0d0c0b;
+    }
+
+
+    .chaos-blog-shell {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+    }
+
+
+
+    /* ======================================================
+       HERO
+       ====================================================== */
+
+    .chaos-blog-hero {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(260px, 0.8fr);
+
+      gap: 40px;
+
+      align-items: center;
+
+      margin-bottom: 45px;
+
+      padding: 35px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.28);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(67, 214, 186, 0.08),
+          rgba(218, 165, 32, 0.05)
+        );
+    }
+
+
+    .chaos-blog-hero h1 {
+      margin:
+        5px 0 12px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        clamp(
+          2.4rem,
+          6vw,
+          4.8rem
+        );
+    }
+
+
+    .chaos-blog-hero p {
+      font-family:
+        "Crimson Pro",
+        serif;
+
+      font-size:
+        1.2rem;
+
+      line-height:
+        1.6;
+    }
+
+
+    .chaos-blog-hero-image {
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+    }
+
+
+    .chaos-blog-hero-image img {
+      width:
+        min(
+          360px,
+          100%
+        );
+
+      display: block;
+
+      filter:
+        drop-shadow(
+          0 15px 35px rgba(0, 0, 0, 0.45)
+        );
+    }
+
+
+
+    /* ======================================================
+       LOGIN
+       ====================================================== */
+
+    .blog-login {
+      width:
+        min(
+          520px,
+          100%
+        );
+
+      margin:
+        0 auto;
+
+      padding:
+        30px;
+
+      background:
+        #151310;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.35);
+    }
+
+
+    .blog-login h2 {
+      margin-top:
+        0;
+
+      text-align:
+        center;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .blog-login p {
+      text-align:
+        center;
+    }
+
+
+    .blog-field {
+      margin-top:
+        18px;
+    }
+
+
+    .blog-field label {
+      display:
+        block;
+
+      margin-bottom:
+        6px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        0.8rem;
+
+      letter-spacing:
+        1px;
+    }
+
+
+    .blog-field input,
+    .blog-field textarea,
+    .blog-field select {
+      width:
+        100%;
+
+      box-sizing:
+        border-box;
+
+      padding:
+        12px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.35);
+
+      background:
+        #11100f;
+
+      color:
+        #f6efe2;
+
+      font:
+        inherit;
+
+      outline:
+        none;
+    }
+
+
+    .blog-field textarea {
+      min-height:
+        170px;
+
+      resize:
+        vertical;
+    }
+
+
+    .blog-primary-button {
+      border:
+        1px solid #d7aa42;
+
+      background:
+        #d7aa42;
+
+      color:
+        #111;
+
+      padding:
+        11px 16px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-weight:
+        800;
+
+      cursor:
+        pointer;
+    }
+
+
+    .blog-secondary-button {
+      border:
+        1px solid rgba(218, 165, 32, 0.4);
+
+      background:
+        #171513;
+
+      color:
+        #f6efe2;
+
+      padding:
+        9px 13px;
+
+      cursor:
+        pointer;
+    }
+
+
+    .blog-danger-button {
+      border:
+        1px solid rgba(210, 80, 80, 0.5);
+
+      background:
+        rgba(130, 30, 30, 0.15);
+
+      color:
+        #ffbaba;
+
+      padding:
+        8px 11px;
+
+      cursor:
+        pointer;
+    }
+
+
+    .blog-login-button {
+      width:
+        100%;
+
+      margin-top:
+        22px;
+    }
+
+
+    .blog-login-error {
+      display:
+        none;
+
+      margin-top:
+        14px;
+
+      text-align:
+        center;
+
+      color:
+        #ff9999;
+    }
+
+
+
+    /* ======================================================
+       APP
+       ====================================================== */
+
+    .blog-app {
+      display:
+        none;
+    }
+
+
+    .blog-topbar {
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      align-items:
+        center;
+
+      gap:
+        14px;
+
+      margin-bottom:
+        24px;
+    }
+
+
+    .blog-user {
+      opacity:
+        0.7;
+    }
+
+
+    .blog-actions {
+      display:
+        flex;
+
+      gap:
+        9px;
+
+      flex-wrap:
+        wrap;
+    }
+
+
+
+    /* ======================================================
+       FILTERS
+       ====================================================== */
+
+    .blog-filters {
+      display:
+        flex;
+
+      flex-wrap:
+        wrap;
+
+      gap:
+        8px;
+
+      margin-bottom:
+        25px;
+    }
+
+
+    .blog-filter {
+      border:
+        1px solid rgba(218, 165, 32, 0.28);
+
+      background:
+        #151310;
+
+      color:
+        #f6efe2;
+
+      padding:
+        8px 12px;
+
+      cursor:
+        pointer;
+
+      border-radius:
+        999px;
+    }
+
+
+    .blog-filter.active {
+      border-color:
+        #43d6ba;
+
+      background:
+        rgba(67, 214, 186, 0.08);
+
+      color:
+        #8be5d2;
+    }
+
+
+
+    /* ======================================================
+       FEATURED POST
+       ====================================================== */
+
+    .featured-post {
+      display:
+        none;
+
+      margin-bottom:
+        28px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.32);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(67, 214, 186, 0.06),
+          rgba(218, 165, 32, 0.04)
+        );
+
+      overflow:
+        hidden;
+    }
+
+
+    .featured-post.show {
+      display:
+        grid;
+
+      grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(0, 1fr);
+    }
+
+
+    .featured-image-wrap {
+      min-height:
+        360px;
+
+      background:
+        #090807;
+
+      cursor:
+        pointer;
+    }
+
+
+    .featured-image-wrap img {
+      width:
+        100%;
+
+      height:
+        100%;
+
+      object-fit:
+        cover;
+
+      display:
+        block;
+    }
+
+
+    .featured-content {
+      padding:
+        30px;
+    }
+
+
+    .featured-label {
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        0.7rem;
+
+      letter-spacing:
+        1.5px;
+
+      color:
+        #43d6ba;
+    }
+
+
+    .featured-content h2 {
+      margin:
+        8px 0 12px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        clamp(
+          1.8rem,
+          4vw,
+          3rem
+        );
+    }
+
+
+    .featured-excerpt {
+      line-height:
+        1.6;
+
+      opacity:
+        0.85;
+    }
+
+
+    .featured-meta {
+      margin-top:
+        16px;
+
+      font-size:
+        0.84rem;
+
+      opacity:
+        0.58;
+    }
+
+
+
+    /* ======================================================
+       POST GRID
+       ====================================================== */
+
+    .blog-grid {
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          1fr
+        );
+
+      gap:
+        18px;
+    }
+
+
+    .blog-card {
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.22);
+
+      background:
+        #151310;
+
+      overflow:
+        hidden;
+    }
+
+
+    .blog-card-image {
+      aspect-ratio:
+        16 / 9;
+
+      background:
+        #090807;
+
+      overflow:
+        hidden;
+
+      cursor:
+        pointer;
+    }
+
+
+    .blog-card-image img {
+      width:
+        100%;
+
+      height:
+        100%;
+
+      object-fit:
+        cover;
+
+      display:
+        block;
+
+      transition:
+        transform 0.25s ease;
+    }
+
+
+    .blog-card-image:hover img {
+      transform:
+        scale(1.03);
+    }
+
+
+    .blog-card-body {
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+      flex:
+        1;
+
+      padding:
+        16px;
+    }
+
+
+    .blog-card-category {
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        0.68rem;
+
+      letter-spacing:
+        1px;
+
+      color:
+        #43d6ba;
+    }
+
+
+    .blog-card h3 {
+      margin:
+        7px 0 9px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        1.2rem;
+    }
+
+
+    .blog-card-excerpt {
+      line-height:
+        1.5;
+
+      opacity:
+        0.8;
+
+      flex:
+        1;
+    }
+
+
+    .blog-card-meta {
+      margin-top:
+        14px;
+
+      font-size:
+        0.78rem;
+
+      opacity:
+        0.55;
+    }
+
+
+    .blog-card-actions {
+      display:
+        flex;
+
+      gap:
+        7px;
+
+      margin-top:
+        12px;
+
+      flex-wrap:
+        wrap;
+    }
+
+
+    .blog-read-button {
+      border:
+        1px solid rgba(67, 214, 186, 0.3);
+
+      background:
+        rgba(67, 214, 186, 0.06);
+
+      color:
+        #9ae8d8;
+
+      padding:
+        8px 11px;
+
+      cursor:
+        pointer;
+    }
+
+
+    .blog-empty {
+      grid-column:
+        1 / -1;
+
+      padding:
+        45px 20px;
+
+      text-align:
+        center;
+
+      border:
+        1px dashed rgba(218, 165, 32, 0.2);
+
+      opacity:
+        0.6;
+    }
+
+
+
+    /* ======================================================
+       MODALS
+       ====================================================== */
+
+    .blog-modal-backdrop {
+      display:
+        none;
+
+      position:
+        fixed;
+
+      inset:
+        0;
+
+      z-index:
+        400;
+
+      padding:
+        25px 15px;
+
+      overflow-y:
+        auto;
+
+      background:
+        rgba(0, 0, 0, 0.86);
+    }
+
+
+    .blog-modal-backdrop.open {
+      display:
+        block;
+    }
+
+
+    .blog-modal {
+      width:
+        min(
+          760px,
+          100%
+        );
+
+      margin:
+        35px auto;
+
+      padding:
+        26px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.4);
+
+      background:
+        #141210;
+    }
+
+
+    .blog-modal-header {
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      align-items:
+        flex-start;
+
+      gap:
+        12px;
+    }
+
+
+    .blog-modal-header h2 {
+      margin-top:
+        0;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .blog-modal-close {
+      border:
+        0;
+
+      background:
+        transparent;
+
+      color:
+        white;
+
+      font-size:
+        1.5rem;
+
+      cursor:
+        pointer;
+    }
+
+
+
+    /* ======================================================
+       IMAGE PREVIEW
+       ====================================================== */
+
+    .blog-image-preview {
+      display:
+        none;
+
+      margin-top:
+        16px;
+
+      padding:
+        10px;
+
+      border:
+        1px solid rgba(67, 214, 186, 0.25);
+
+      background:
+        #090807;
+    }
+
+
+    .blog-image-preview img {
+      width:
+        100%;
+
+      max-height:
+        380px;
+
+      object-fit:
+        contain;
+
+      display:
+        block;
+    }
+
+
+
+    /* ======================================================
+       FULL POST
+       ====================================================== */
+
+    .full-post {
+      width:
+        min(
+          900px,
+          100%
+        );
+
+      margin:
+        35px auto;
+
+      padding:
+        0;
+
+      overflow:
+        hidden;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.4);
+
+      background:
+        #141210;
+    }
+
+
+    .full-post-image-wrap {
+      display:
+        none;
+
+      width:
+        100%;
+
+      max-height:
+        520px;
+
+      overflow:
+        hidden;
+
+      background:
+        #080706;
+    }
+
+
+    .full-post-image-wrap.show {
+      display:
+        block;
+    }
+
+
+    .full-post-image-wrap img {
+      width:
+        100%;
+
+      max-height:
+        520px;
+
+      object-fit:
+        cover;
+
+      display:
+        block;
+    }
+
+
+    .full-post-content {
+      padding:
+        30px;
+    }
+
+
+    .full-post-category {
+      font-family:
+        "Cinzel",
+        serif;
+
+      color:
+        #43d6ba;
+
+      font-size:
+        0.72rem;
+
+      letter-spacing:
+        1.3px;
+    }
+
+
+    .full-post-title {
+      margin:
+        8px 0 10px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        clamp(
+          2rem,
+          5vw,
+          3.8rem
+        );
+    }
+
+
+    .full-post-meta {
+      margin-bottom:
+        22px;
+
+      opacity:
+        0.55;
+
+      font-size:
+        0.85rem;
+    }
+
+
+    .full-post-body {
+      white-space:
+        pre-wrap;
+
+      font-family:
+        "Crimson Pro",
+        serif;
+
+      font-size:
+        1.15rem;
+
+      line-height:
+        1.7;
+    }
+
+
+
+    /* ======================================================
+       MOBILE
+       ====================================================== */
+
+    @media
+    (max-width: 900px) {
+
+      .chaos-blog-hero {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .chaos-blog-hero-image {
+        order:
+          -1;
+      }
+
+
+      .featured-post.show {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .featured-image-wrap {
+        min-height:
+          300px;
+      }
+
+
+      .blog-grid {
+        grid-template-columns:
+          repeat(
+            2,
+            1fr
+          );
+      }
+
+    }
+
+
+    @media
+    (max-width: 620px) {
+
+      .blog-topbar {
+        flex-direction:
+          column;
+
+        align-items:
+          flex-start;
+      }
+
+
+      .blog-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .featured-content {
+        padding:
+          20px;
+      }
+
+
+      .full-post-content {
+        padding:
+          20px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
+
+  <header class="site-header">
+
+    <a
+      href="index.html"
+      class="brand"
+    >
+
+      <img
+        src="images/logo.png"
+        alt="Rotating Chaos guild emblem"
+        class="brand-logo"
+      >
+
+      <div class="brand-text">
+
+        <span class="brand-name">
+          ROTATING CHAOS
+        </span>
+
+        <span class="brand-subtitle">
+          GUILD ◆ FAMILY ◆ CHAOS
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+      <a href="index.html">
+        HOME
+      </a>
+
+      <a href="community.html">
+        COMMUNITY
+      </a>
+
+      <a href="build-guides.html">
+        CHAOS GUIDES
+      </a>
+
+      <a href="events.html">
+        EVENTS
+      </a>
+
+      <a href="merch.html">
+        MERCH
+      </a>
+
+      <a href="index.html#contact">
+        CONTACT
+      </a>
+
+    </nav>
+
+
+    <a
+      href="https://discord.gg/UhJndyjYWr"
+      class="discord-button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      JOIN DISCORD
+    </a>
+
+  </header>
+
+
+
+  <main class="chaos-blog-page">
+
+    <div class="chaos-blog-shell">
+
+
+      <!-- ==================================================
+           HERO
+           ================================================== -->
+
+      <section class="chaos-blog-hero">
+
+
+        <div>
+
+          <p class="section-eyebrow">
+            STORIES ◆ NEWS ◆ GUILD NONSENSE
+          </p>
+
+          <h1>
+            FROM THE CHAOS
+          </h1>
+
+          <p>
+            Guild updates, victories, disasters, useful information
+            and whatever else escaped the group chat long enough to
+            become a proper post.
+          </p>
+
+        </div>
+
+
+
+        <div class="chaos-blog-hero-image">
+
+          <img
+            src="images/from.png"
+            alt="From the Chaos"
+          >
+
+        </div>
+
+
+      </section>
+
+
+
+      <!-- ==================================================
+           LOGIN
+           ================================================== -->
+
+      <section
+        class="blog-login"
+        id="blogLogin"
+      >
+
+        <h2>
+          GUILD MEMBERS ONLY
+        </h2>
+
+        <p>
+          Same Chaos login. Because one password is already enough chaos. 😂
+        </p>
+
+
+        <form id="blogLoginForm">
+
+
+          <div class="blog-field">
+
+            <label for="blogGuildName">
+              GUILD NAME
+            </label>
+
+            <input
+              id="blogGuildName"
+              type="text"
+              required
+            >
+
+          </div>
+
+
+          <div class="blog-field">
+
+            <label for="blogAccessCode">
+              ACCESS CODE
+            </label>
+
+            <input
+              id="blogAccessCode"
+              type="password"
+              required
+            >
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="blog-primary-button blog-login-button"
+          >
+            ENTER FROM THE CHAOS
+          </button>
+
+
+          <p
+            class="blog-login-error"
+            id="blogLoginError"
+          >
+            Nope. Chaos does not recognise you. 😂
+          </p>
+
+
+        </form>
+
+      </section>
+
+
+
+      <!-- ==================================================
+           BLOG APP
+           ================================================== -->
+
+      <section
+        class="blog-app"
+        id="blogApp"
+      >
+
+
+        <div class="blog-topbar">
+
+          <div>
+
+            <strong
+              id="blogLoggedInUser"
+            ></strong>
+
+            <div class="blog-user">
+              Guild journal
+            </div>
+
+          </div>
+
+
+          <div class="blog-actions">
+
+            <button
+              type="button"
+              class="blog-primary-button"
+              id="openPostModal"
+            >
+              + CREATE POST
+            </button>
+
+
+            <button
+              type="button"
+              class="blog-secondary-button"
+              id="blogSignOut"
+            >
+              SIGN OUT
+            </button>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- FILTERS -->
+
+        <div class="blog-filters">
+
+          <button
+            type="button"
+            class="blog-filter active"
+            data-category="All"
+          >
+            ALL
+          </button>
+
+          <button
+            type="button"
+            class="blog-filter"
+            data-category="Guild News"
+          >
+            GUILD NEWS
+          </button>
+
+          <button
+            type="button"
+            class="blog-filter"
+            data-category="Neverwinter News"
+          >
+            NEVERWINTER NEWS
+          </button>
+
+          <button
+            type="button"
+            class="blog-filter"
+            data-category="Achievements"
+          >
+            ACHIEVEMENTS
+          </button>
+
+          <button
+            type="button"
+            class="blog-filter"
+            data-category="Guides & Tips"
+          >
+            GUIDES & TIPS
+          </button>
+
+          <button
+            type="button"
+            class="blog-filter"
+            data-category="Absolute Chaos"
+          >
+            ABSOLUTE CHAOS
+          </button>
+
+        </div>
+
+
+
+        <!-- FEATURED -->
+
+        <article
+          class="featured-post"
+          id="featuredPost"
+        >
+
+          <div
+            class="featured-image-wrap"
+            id="featuredImageWrap"
+          >
+
+            <img
+              id="featuredImage"
+              alt="Featured post"
+            >
+
+          </div>
+
+
+          <div class="featured-content">
+
+            <div
+              class="featured-label"
+              id="featuredCategory"
+            ></div>
+
+            <h2
+              id="featuredTitle"
+            ></h2>
+
+            <p
+              class="featured-excerpt"
+              id="featuredExcerpt"
+            ></p>
+
+            <div
+              class="featured-meta"
+              id="featuredMeta"
+            ></div>
+
+            <button
+              type="button"
+              class="blog-read-button"
+              id="featuredReadButton"
+              style="margin-top:16px;"
+            >
+              READ POST
+            </button>
+
+          </div>
+
+
+        </article>
+
+
+
+        <!-- POST GRID -->
+
+        <div
+          class="blog-grid"
+          id="blogGrid"
+        ></div>
+
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+
+  <!-- ======================================================
+       CREATE / EDIT POST MODAL
+       ====================================================== -->
+
+  <div
+    class="blog-modal-backdrop"
+    id="postModalBackdrop"
+  >
+
+    <div class="blog-modal">
+
+
+      <div class="blog-modal-header">
+
+        <div>
+
+          <p class="section-eyebrow">
+            SHARE THE CHAOS
+          </p>
+
+          <h2
+            id="postModalTitle"
+          >
+            CREATE POST
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="blog-modal-close"
+          id="closePostModal"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+
+      <form id="postForm">
+
+
+        <div class="blog-field">
+
+          <label for="postTitle">
+            TITLE
+          </label>
+
+          <input
+            id="postTitle"
+            type="text"
+            maxlength="120"
+            required
+          >
+
+        </div>
+
+
+
+        <div class="blog-field">
+
+          <label for="postCategory">
+            CATEGORY
+          </label>
+
+          <select id="postCategory">
+
+            <option value="Guild News">
+              Guild News
+            </option>
+
+            <option value="Neverwinter News">
+              Neverwinter News
+            </option>
+
+            <option value="Achievements">
+              Achievements
+            </option>
+
+            <option value="Guides & Tips">
+              Guides & Tips
+            </option>
+
+            <option value="Absolute Chaos">
+              Absolute Chaos
+            </option>
+
+          </select>
+
+        </div>
+
+
+
+        <div class="blog-field">
+
+          <label for="postImageUrl">
+            OPTIONAL IMAGE / GIF URL
+          </label>
+
+          <input
+            id="postImageUrl"
+            type="url"
+            placeholder="https://..."
+          >
+
+        </div>
+
+
+
+        <div
+          class="blog-image-preview"
+          id="postImagePreview"
+        >
+
+          <img
+            id="postImagePreviewImage"
+            alt="Post preview"
+          >
+
+        </div>
+
+
+
+        <div class="blog-field">
+
+          <label for="postBody">
+            POST
+          </label>
+
+          <textarea
+            id="postBody"
+            maxlength="8000"
+            placeholder="Tell the guild what happened..."
+            required
+          ></textarea>
+
+        </div>
+
+
+
+        <div style="margin-top:20px;">
+
+          <button
+            type="submit"
+            class="blog-primary-button"
+            id="savePostButton"
+          >
+            PUBLISH POST
+          </button>
+
+        </div>
+
+
+      </form>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ======================================================
+       FULL POST MODAL
+       ====================================================== -->
+
+  <div
+    class="blog-modal-backdrop"
+    id="fullPostBackdrop"
+  >
+
+    <article class="full-post">
+
+
+      <div
+        class="full-post-image-wrap"
+        id="fullPostImageWrap"
+      >
+
+        <img
+          id="fullPostImage"
+          alt="Post image"
+        >
+
+      </div>
+
+
+
+      <div class="full-post-content">
+
+
+        <div class="blog-modal-header">
+
+          <div>
+
+            <div
+              class="full-post-category"
+              id="fullPostCategory"
+            ></div>
+
+            <h2
+              class="full-post-title"
+              id="fullPostTitle"
+            ></h2>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="blog-modal-close"
+            id="closeFullPost"
+          >
+            ×
+          </button>
+
+        </div>
+
+
+
+        <div
+          class="full-post-meta"
+          id="fullPostMeta"
+        ></div>
+
+
+        <div
+          class="full-post-body"
+          id="fullPostBody"
+        ></div>
+
+
+      </div>
+
+
+    </article>
+
+  </div>
+
+
+
+  <!-- ======================================================
+       FIREBASE
+       ====================================================== -->
+
+  <script type="module">
+
+    import {
+      initializeApp
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+
+
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+      signOut,
+      onAuthStateChanged
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+
+
+    import {
+      getFirestore,
+      collection,
+      addDoc,
+      doc,
+      updateDoc,
+      deleteDoc,
+      serverTimestamp,
+      query,
+      orderBy,
+      onSnapshot
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+
+
+    /* ======================================================
+       FIREBASE CONFIG
+       ====================================================== */
+
+    const firebaseConfig = {
+
+      apiKey:
+        "AIzaSyDQjutG0oa4v8dpI3i3UlgsFC9EmWsX4kI",
+
+      authDomain:
+        "rotating-chaos-chat.firebaseapp.com",
+
+      projectId:
+        "rotating-chaos-chat",
+
+      storageBucket:
+        "rotating-chaos-chat.firebasestorage.app",
+
+      messagingSenderId:
+        "337862334710",
+
+      appId:
+        "1:337862334710:web:92e38dd0646dd9bec474d7",
+
+      measurementId:
+        "G-7M761SJ4CJ"
+
+    };
+
+
+    const app =
+      initializeApp(
+        firebaseConfig
+      );
+
+
+    const auth =
+      getAuth(
+        app
+      );
+
+
+    const db =
+      getFirestore(
+        app
+      );
+
+
+
+    /* ======================================================
+       ELEMENTS
+       ====================================================== */
+
+    const blogLogin =
+      document.getElementById(
+        "blogLogin"
+      );
+
+    const blogApp =
+      document.getElementById(
+        "blogApp"
+      );
+
+    const blogLoginForm =
+      document.getElementById(
+        "blogLoginForm"
+      );
+
+    const blogGuildName =
+      document.getElementById(
+        "blogGuildName"
+      );
+
+    const blogAccessCode =
+      document.getElementById(
+        "blogAccessCode"
+      );
+
+    const blogLoginError =
+      document.getElementById(
+        "blogLoginError"
+      );
+
+    const blogLoggedInUser =
+      document.getElementById(
+        "blogLoggedInUser"
+      );
+
+    const blogSignOut =
+      document.getElementById(
+        "blogSignOut"
+      );
+
+    const openPostModal =
+      document.getElementById(
+        "openPostModal"
+      );
+
+    const postModalBackdrop =
+      document.getElementById(
+        "postModalBackdrop"
+      );
+
+    const closePostModal =
+      document.getElementById(
+        "closePostModal"
+      );
+
+    const postForm =
+      document.getElementById(
+        "postForm"
+      );
+
+    const postModalTitle =
+      document.getElementById(
+        "postModalTitle"
+      );
+
+    const postTitle =
+      document.getElementById(
+        "postTitle"
+      );
+
+    const postCategory =
+      document.getElementById(
+        "postCategory"
+      );
+
+    const postImageUrl =
+      document.getElementById(
+        "postImageUrl"
+      );
+
+    const postBody =
+      document.getElementById(
+        "postBody"
+      );
+
+    const savePostButton =
+      document.getElementById(
+        "savePostButton"
+      );
+
+    const postImagePreview =
+      document.getElementById(
+        "postImagePreview"
+      );
+
+    const postImagePreviewImage =
+      document.getElementById(
+        "postImagePreviewImage"
+      );
+
+    const blogGrid =
+      document.getElementById(
+        "blogGrid"
+      );
+
+    const blogFilters =
+      document.querySelectorAll(
+        ".blog-filter"
+      );
+
+    const featuredPost =
+      document.getElementById(
+        "featuredPost"
+      );
+
+    const featuredImageWrap =
+      document.getElementById(
+        "featuredImageWrap"
+      );
+
+    const featuredImage =
+      document.getElementById(
+        "featuredImage"
+      );
+
+    const featuredCategory =
+      document.getElementById(
+        "featuredCategory"
+      );
+
+    const featuredTitle =
+      document.getElementById(
+        "featuredTitle"
+      );
+
+    const featuredExcerpt =
+      document.getElementById(
+        "featuredExcerpt"
+      );
+
+    const featuredMeta =
+      document.getElementById(
+        "featuredMeta"
+      );
+
+    const featuredReadButton =
+      document.getElementById(
+        "featuredReadButton"
+      );
+
+    const fullPostBackdrop =
+      document.getElementById(
+        "fullPostBackdrop"
+      );
+
+    const closeFullPost =
+      document.getElementById(
+        "closeFullPost"
+      );
+
+    const fullPostImageWrap =
+      document.getElementById(
+        "fullPostImageWrap"
+      );
+
+    const fullPostImage =
+      document.getElementById(
+        "fullPostImage"
+      );
+
+    const fullPostCategory =
+      document.getElementById(
+        "fullPostCategory"
+      );
+
+    const fullPostTitle =
+      document.getElementById(
+        "fullPostTitle"
+      );
+
+    const fullPostMeta =
+      document.getElementById(
+        "fullPostMeta"
+      );
+
+    const fullPostBody =
+      document.getElementById(
+        "fullPostBody"
+      );
+
+
+
+    /* ======================================================
+       STATE
+       ====================================================== */
+
+    let currentGuildName =
+      "";
+
+    let allPosts =
+      [];
+
+    let activeCategory =
+      "All";
+
+    let editingPostId =
+      null;
+
+    let currentFeaturedPost =
+      null;
+
+    let unsubscribePosts =
+      null;
+
+
+
+    /* ======================================================
+       ACCOUNT EMAIL
+       ====================================================== */
+
+    function makeAccountEmail(
+      name
+    ) {
+
+      const cleaned =
+        name
+          .trim()
+          .toLowerCase()
+          .replace(
+            /[^a-z0-9]/g,
+            ""
+          );
+
+
+      return (
+        `${cleaned}@rotatingchaos.local`
+      );
+
+    }
+
+
+
+    function prettyNameFromEmail(
+      email
+    ) {
+
+      const raw =
+        email.split(
+          "@"
+        )[0];
+
+
+      return (
+        raw.charAt(0).toUpperCase()
+        + raw.slice(1)
+      );
+
+    }
+
+
+
+    /* ======================================================
+       LOGIN
+       ====================================================== */
+
+    blogLoginForm.addEventListener(
+      "submit",
+      async (
+        event
+      ) => {
+
+        event.preventDefault();
+
+
+        blogLoginError.style.display =
+          "none";
+
+
+        const name =
+          blogGuildName.value.trim();
+
+
+        const password =
+          blogAccessCode.value;
+
+
+        try {
+
+          await signInWithEmailAndPassword(
+            auth,
+            makeAccountEmail(
+              name
+            ),
+            password
+          );
+
+
+          currentGuildName =
+            name;
+
+
+          sessionStorage.setItem(
+            "chaosNickname",
+            name
+          );
+
+
+          blogAccessCode.value =
+            "";
+
+        }
+
+
+        catch (
+          error
+        ) {
+
+          console.error(
+            error
+          );
+
+
+          blogLoginError.style.display =
+            "block";
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       AUTH
+       ====================================================== */
+
+    onAuthStateChanged(
+      auth,
+      (
+        user
+      ) => {
+
+        if (
+          user
+        ) {
+
+          currentGuildName =
+            sessionStorage.getItem(
+              "chaosNickname"
+            )
+            ||
+            prettyNameFromEmail(
+              user.email
+            );
+
+
+          blogLoggedInUser.textContent =
+            `Signed in as ${currentGuildName}`;
+
+
+          blogLogin.style.display =
+            "none";
+
+
+          blogApp.style.display =
+            "block";
+
+
+          startPostsListener();
+
+        }
+
+
+        else {
+
+          blogLogin.style.display =
+            "block";
+
+
+          blogApp.style.display =
+            "none";
+
+
+          if (
+            unsubscribePosts
+          ) {
+
+            unsubscribePosts();
+
+
+            unsubscribePosts =
+              null;
+
+          }
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       SIGN OUT
+       ====================================================== */
+
+    blogSignOut.addEventListener(
+      "click",
+      async () => {
+
+        sessionStorage.removeItem(
+          "chaosNickname"
+        );
+
+
+        await signOut(
+          auth
+        );
+
+      }
+    );
+
+
+
+    /* ======================================================
+       CREATE MODAL
+       ====================================================== */
+
+    openPostModal.addEventListener(
+      "click",
+      () => {
+
+        editingPostId =
+          null;
+
+
+        postModalTitle.textContent =
+          "CREATE POST";
+
+
+        savePostButton.textContent =
+          "PUBLISH POST";
+
+
+        postForm.reset();
+
+
+        postImagePreview.style.display =
+          "none";
+
+
+        postModalBackdrop.classList.add(
+          "open"
+        );
+
+      }
+    );
+
+
+
+    closePostModal.addEventListener(
+      "click",
+      closePostModalFunction
+    );
+
+
+    postModalBackdrop.addEventListener(
+      "click",
+      (
+        event
+      ) => {
+
+        if (
+          event.target
+          === postModalBackdrop
+        ) {
+
+          closePostModalFunction();
+
+        }
+
+      }
+    );
+
+
+    function closePostModalFunction() {
+
+      postModalBackdrop.classList.remove(
+        "open"
+      );
+
+
+      postImagePreview.style.display =
+        "none";
+
+
+      editingPostId =
+        null;
+
+    }
+
+
+
+    /* ======================================================
+       IMAGE PREVIEW
+       ====================================================== */
+
+    postImageUrl.addEventListener(
+      "input",
+      () => {
+
+        const url =
+          postImageUrl.value.trim();
+
+
+        if (
+          !url
+        ) {
+
+          postImagePreview.style.display =
+            "none";
+
+
+          return;
+
+        }
+
+
+        postImagePreviewImage.src =
+          url;
+
+
+        postImagePreview.style.display =
+          "block";
+
+      }
+    );
+
+
+    postImagePreviewImage.addEventListener(
+      "error",
+      () => {
+
+        postImagePreview.style.display =
+          "none";
+
+      }
+    );
+
+
+
+    /* ======================================================
+       CREATE / EDIT POST
+       ====================================================== */
+
+    postForm.addEventListener(
+      "submit",
+      async (
+        event
+      ) => {
+
+        event.preventDefault();
+
+
+        const user =
+          auth.currentUser;
+
+
+        if (
+          !user
+        ) {
+          return;
+        }
+
+
+        const imageUrl =
+          postImageUrl.value.trim();
+
+
+        const payload = {
+
+          title:
+            postTitle.value.trim(),
+
+          category:
+            postCategory.value,
+
+          imageUrl:
+            imageUrl,
+
+          body:
+            postBody.value.trim(),
+
+          authorUid:
+            user.uid,
+
+          authorName:
+            currentGuildName
+
+        };
+
+
+        try {
+
+          if (
+            editingPostId
+          ) {
+
+            await updateDoc(
+              doc(
+                db,
+                "posts",
+                editingPostId
+              ),
+              {
+                ...payload,
+
+                updatedAt:
+                  serverTimestamp()
+              }
+            );
+
+          }
+
+
+          else {
+
+            await addDoc(
+              collection(
+                db,
+                "posts"
+              ),
+              {
+                ...payload,
+
+                createdAt:
+                  serverTimestamp(),
+
+                updatedAt:
+                  serverTimestamp()
+              }
+            );
+
+          }
+
+
+          postForm.reset();
+
+
+          postImagePreview.style.display =
+            "none";
+
+
+          closePostModalFunction();
+
+        }
+
+
+        catch (
+          error
+        ) {
+
+          console.error(
+            "Could not save post:",
+            error
+          );
+
+
+          window.alert(
+            "The Chaos rejected your literary masterpiece. Rude."
+          );
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       LIVE POSTS
+       ====================================================== */
+
+    function startPostsListener() {
+
+      if (
+        unsubscribePosts
+      ) {
+
+        unsubscribePosts();
+
+      }
+
+
+      const postsQuery =
+        query(
+          collection(
+            db,
+            "posts"
+          ),
+          orderBy(
+            "createdAt",
+            "desc"
+          )
+        );
+
+
+      unsubscribePosts =
+        onSnapshot(
+          postsQuery,
+          (
+            snapshot
+          ) => {
+
+            allPosts =
+              [];
+
+
+            snapshot.forEach(
+              item => {
+
+                allPosts.push(
+                  {
+                    id:
+                      item.id,
+
+                    ...item.data()
+                  }
+                );
+
+              }
+            );
+
+
+            renderPosts();
+
+          }
+        );
+
+    }
+
+
+
+    /* ======================================================
+       FILTERS
+       ====================================================== */
+
+    blogFilters.forEach(
+      button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            activeCategory =
+              button.dataset.category;
+
+
+            blogFilters.forEach(
+              item => {
+
+                item.classList.remove(
+                  "active"
+                );
+
+              }
+            );
+
+
+            button.classList.add(
+              "active"
+            );
+
+
+            renderPosts();
+
+          }
+        );
+
+      }
+    );
+
+
+
+    /* ======================================================
+       RENDER POSTS
+       ====================================================== */
+
+    function renderPosts() {
+
+      blogGrid.innerHTML =
+        "";
+
+
+      const filtered =
+        activeCategory
+        === "All"
+          ? allPosts
+          : allPosts.filter(
+              post =>
+                post.category
+                === activeCategory
+            );
+
+
+      if (
+        filtered.length
+        === 0
+      ) {
+
+        featuredPost.classList.remove(
+          "show"
+        );
+
+
+        const empty =
+          document.createElement(
+            "div"
+          );
+
+
+        empty.className =
+          "blog-empty";
+
+
+        empty.textContent =
+          activeCategory === "All"
+            ? "No posts yet. Apparently everyone is behaving, which seems suspicious. 😂"
+            : "Nothing in this category yet.";
+
+
+        blogGrid.appendChild(
+          empty
+        );
+
+
+        return;
+
+      }
+
+
+
+      /* FEATURED = NEWEST POST */
+
+      currentFeaturedPost =
+        filtered[0];
+
+
+      renderFeaturedPost(
+        currentFeaturedPost
+      );
+
+
+
+      /* REST OF POSTS */
+
+      filtered
+        .slice(1)
+        .forEach(
+          post => {
+
+            const card =
+              createPostCard(
+                post
+              );
+
+
+            blogGrid.appendChild(
+              card
+            );
+
+          }
+        );
+
+    }
+
+
+
+    /* ======================================================
+       FEATURED
+       ====================================================== */
+
+    function renderFeaturedPost(
+      post
+    ) {
+
+      featuredPost.classList.add(
+        "show"
+      );
+
+
+      featuredCategory.textContent =
+        post.category.toUpperCase();
+
+
+      featuredTitle.textContent =
+        post.title;
+
+
+      featuredExcerpt.textContent =
+        makeExcerpt(
+          post.body,
+          320
+        );
+
+
+      featuredMeta.textContent =
+        formatMeta(
+          post
+        );
+
+
+      if (
+        post.imageUrl
+      ) {
+
+        featuredImageWrap.style.display =
+          "block";
+
+
+        featuredImage.src =
+          post.imageUrl;
+
+      }
+
+
+      else {
+
+        featuredImageWrap.style.display =
+          "none";
+
+      }
+
+
+      featuredReadButton.onclick =
+        () => {
+
+          openFullPost(
+            post
+          );
+
+        };
+
+
+      featuredImageWrap.onclick =
+        () => {
+
+          openFullPost(
+            post
+          );
+
+        };
+
+    }
+
+
+
+    /* ======================================================
+       POST CARD
+       ====================================================== */
+
+    function createPostCard(
+      post
+    ) {
+
+      const card =
+        document.createElement(
+          "article"
+        );
+
+
+      card.className =
+        "blog-card";
+
+
+
+      if (
+        post.imageUrl
+      ) {
+
+        const imageWrap =
+          document.createElement(
+            "div"
+          );
+
+
+        imageWrap.className =
+          "blog-card-image";
+
+
+        const image =
+          document.createElement(
+            "img"
+          );
+
+
+        image.src =
+          post.imageUrl;
+
+
+        image.alt =
+          post.title;
+
+
+        image.loading =
+          "lazy";
+
+
+        imageWrap.appendChild(
+          image
+        );
+
+
+        imageWrap.addEventListener(
+          "click",
+          () => {
+
+            openFullPost(
+              post
+            );
+
+          }
+        );
+
+
+        card.appendChild(
+          imageWrap
+        );
+
+      }
+
+
+
+      const body =
+        document.createElement(
+          "div"
+        );
+
+
+      body.className =
+        "blog-card-body";
+
+
+      const category =
+        document.createElement(
+          "div"
+        );
+
+
+      category.className =
+        "blog-card-category";
+
+
+      category.textContent =
+        post.category.toUpperCase();
+
+
+      const title =
+        document.createElement(
+          "h3"
+        );
+
+
+      title.textContent =
+        post.title;
+
+
+      const excerpt =
+        document.createElement(
+          "div"
+        );
+
+
+      excerpt.className =
+        "blog-card-excerpt";
+
+
+      excerpt.textContent =
+        makeExcerpt(
+          post.body,
+          180
+        );
+
+
+      const meta =
+        document.createElement(
+          "div"
+        );
+
+
+      meta.className =
+        "blog-card-meta";
+
+
+      meta.textContent =
+        formatMeta(
+          post
+        );
+
+
+      const actions =
+        document.createElement(
+          "div"
+        );
+
+
+      actions.className =
+        "blog-card-actions";
+
+
+      const read =
+        document.createElement(
+          "button"
+        );
+
+
+      read.type =
+        "button";
+
+
+      read.className =
+        "blog-read-button";
+
+
+      read.textContent =
+        "READ POST";
+
+
+      read.addEventListener(
+        "click",
+        () => {
+
+          openFullPost(
+            post
+          );
+
+        }
+      );
+
+
+      actions.appendChild(
+        read
+      );
+
+
+
+      if (
+        auth.currentUser
+        &&
+        post.authorUid
+        === auth.currentUser.uid
+      ) {
+
+        const edit =
+          document.createElement(
+            "button"
+          );
+
+
+        edit.type =
+          "button";
+
+
+        edit.className =
+          "blog-secondary-button";
+
+
+        edit.textContent =
+          "EDIT";
+
+
+        edit.addEventListener(
+          "click",
+          () => {
+
+            openEditPost(
+              post
+            );
+
+          }
+        );
+
+
+        const remove =
+          document.createElement(
+            "button"
+          );
+
+
+        remove.type =
+          "button";
+
+
+        remove.className =
+          "blog-danger-button";
+
+
+        remove.textContent =
+          "DELETE";
+
+
+        remove.addEventListener(
+          "click",
+          async () => {
+
+            const confirmed =
+              window.confirm(
+                "Delete this post completely?"
+              );
+
+
+            if (
+              !confirmed
+            ) {
+              return;
+            }
+
+
+            await deleteDoc(
+              doc(
+                db,
+                "posts",
+                post.id
+              )
+            );
+
+          }
+        );
+
+
+        actions.appendChild(
+          edit
+        );
+
+
+        actions.appendChild(
+          remove
+        );
+
+      }
+
+
+      body.appendChild(
+        category
+      );
+
+
+      body.appendChild(
+        title
+      );
+
+
+      body.appendChild(
+        excerpt
+      );
+
+
+      body.appendChild(
+        meta
+      );
+
+
+      body.appendChild(
+        actions
+      );
+
+
+      card.appendChild(
+        body
+      );
+
+
+      return card;
+
+    }
+
+
+
+    /* ======================================================
+       EDIT POST
+       ====================================================== */
+
+    function openEditPost(
+      post
+    ) {
+
+      editingPostId =
+        post.id;
+
+
+      postModalTitle.textContent =
+        "EDIT POST";
+
+
+      savePostButton.textContent =
+        "SAVE CHANGES";
+
+
+      postTitle.value =
+        post.title;
+
+
+      postCategory.value =
+        post.category;
+
+
+      postImageUrl.value =
+        post.imageUrl || "";
+
+
+      postBody.value =
+        post.body;
+
+
+      if (
+        post.imageUrl
+      ) {
+
+        postImagePreviewImage.src =
+          post.imageUrl;
+
+
+        postImagePreview.style.display =
+          "block";
+
+      }
+
+
+      else {
+
+        postImagePreview.style.display =
+          "none";
+
+      }
+
+
+      postModalBackdrop.classList.add(
+        "open"
+      );
+
+    }
+
+
+
+    /* ======================================================
+       FULL POST
+       ====================================================== */
+
+    function openFullPost(
+      post
+    ) {
+
+      fullPostCategory.textContent =
+        post.category.toUpperCase();
+
+
+      fullPostTitle.textContent =
+        post.title;
+
+
+      fullPostMeta.textContent =
+        formatMeta(
+          post
+        );
+
+
+      fullPostBody.textContent =
+        post.body;
+
+
+      if (
+        post.imageUrl
+      ) {
+
+        fullPostImage.src =
+          post.imageUrl;
+
+
+        fullPostImageWrap.classList.add(
+          "show"
+        );
+
+      }
+
+
+      else {
+
+        fullPostImageWrap.classList.remove(
+          "show"
+        );
+
+      }
+
+
+      fullPostBackdrop.classList.add(
+        "open"
+      );
+
+    }
+
+
+
+    closeFullPost.addEventListener(
+      "click",
+      () => {
+
+        fullPostBackdrop.classList.remove(
+          "open"
+        );
+
+      }
+    );
+
+
+    fullPostBackdrop.addEventListener(
+      "click",
+      (
+        event
+      ) => {
+
+        if (
+          event.target
+          === fullPostBackdrop
+        ) {
+
+          fullPostBackdrop.classList.remove(
+            "open"
+          );
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       HELPERS
+       ====================================================== */
+
+    function makeExcerpt(
+      text,
+      length
+    ) {
+
+      if (
+        !text
+      ) {
+        return "";
+      }
+
+
+      if (
+        text.length
+        <= length
+      ) {
+
+        return text;
+
+      }
+
+
+      return (
+        text.slice(
+          0,
+          length
+        )
+        + "..."
+      );
+
+    }
+
+
+
+    function formatMeta(
+      post
+    ) {
+
+      let dateText =
+        "";
+
+
+      if (
+        post.createdAt?.toDate
+      ) {
+
+        dateText =
+          post.createdAt
+            .toDate()
+            .toLocaleDateString(
+              "en-GB",
+              {
+                day:
+                  "numeric",
+
+                month:
+                  "long",
+
+                year:
+                  "numeric"
+              }
+            );
+
+      }
+
+
+      return (
+        `By ${
+          post.authorName
+          || "Chaos Member"
+        }${
+          dateText
+          ? ` ◆ ${dateText}`
+          : ""
+        }`
+      );
+
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>

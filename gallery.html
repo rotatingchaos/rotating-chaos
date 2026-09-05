@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Rotating Chaos Guild Gallery"
+  >
+
+  <title>Chaos Gallery | Rotating Chaos</title>
+
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Crimson+Pro:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+
+  <style>
+
+    /* ======================================================
+       PAGE
+       ====================================================== */
+
+    .gallery-page {
+      min-height: 100vh;
+      padding: 70px 20px 100px;
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(15, 130, 105, 0.10),
+          transparent 35%
+        ),
+        #0d0c0b;
+    }
+
+
+    .gallery-shell {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+    }
+
+
+    .gallery-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+
+    .gallery-heading h1 {
+      font-family: "Cinzel", serif;
+      font-size: clamp(2.4rem, 6vw, 4.6rem);
+      margin: 5px 0 10px;
+    }
+
+
+    .gallery-heading p {
+      font-family: "Crimson Pro", serif;
+      font-size: 1.2rem;
+    }
+
+
+
+    /* ======================================================
+       LOGIN
+       ====================================================== */
+
+    .gallery-login {
+      width: min(520px, 100%);
+      margin: 0 auto;
+      padding: 30px;
+      background: #151310;
+      border: 1px solid rgba(218, 165, 32, 0.35);
+    }
+
+
+    .gallery-login h2 {
+      margin-top: 0;
+      text-align: center;
+      font-family: "Cinzel", serif;
+    }
+
+
+    .gallery-login p {
+      text-align: center;
+    }
+
+
+    .gallery-field {
+      margin-top: 18px;
+    }
+
+
+    .gallery-field label {
+      display: block;
+      margin-bottom: 6px;
+      font-family: "Cinzel", serif;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+
+
+    .gallery-field input,
+    .gallery-field textarea,
+    .gallery-field select {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px;
+      border: 1px solid rgba(218, 165, 32, 0.35);
+      background: #11100f;
+      color: #f6efe2;
+      font: inherit;
+    }
+
+
+    .gallery-field textarea {
+      min-height: 95px;
+      resize: vertical;
+    }
+
+
+    .gallery-login-button,
+    .gallery-primary-button {
+      border: 1px solid #d7aa42;
+      background: #d7aa42;
+      color: #111;
+      padding: 11px 16px;
+      font-family: "Cinzel", serif;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+
+    .gallery-login-button {
+      width: 100%;
+      margin-top: 22px;
+    }
+
+
+    .gallery-secondary-button {
+      border: 1px solid rgba(218, 165, 32, 0.4);
+      background: #171513;
+      color: #f6efe2;
+      padding: 9px 13px;
+      cursor: pointer;
+    }
+
+
+    .gallery-danger-button {
+      border: 1px solid rgba(210, 80, 80, 0.5);
+      background: rgba(130, 30, 30, 0.15);
+      color: #ffbaba;
+      padding: 7px 10px;
+      cursor: pointer;
+    }
+
+
+    .gallery-login-error {
+      display: none;
+      margin-top: 14px;
+      text-align: center;
+      color: #ff9999;
+    }
+
+
+
+    /* ======================================================
+       APP
+       ====================================================== */
+
+    .gallery-app {
+      display: none;
+    }
+
+
+    .gallery-topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+
+
+    .gallery-user {
+      opacity: 0.7;
+    }
+
+
+    .gallery-actions {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+    }
+
+
+
+    /* ======================================================
+       FILTERS
+       ====================================================== */
+
+    .gallery-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+
+    .gallery-filter {
+      border: 1px solid rgba(218, 165, 32, 0.28);
+      background: #151310;
+      color: #f6efe2;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 999px;
+    }
+
+
+    .gallery-filter.active {
+      border-color: #43d6ba;
+      background: rgba(67, 214, 186, 0.08);
+      color: #8be5d2;
+    }
+
+
+
+    /* ======================================================
+       GRID
+       ====================================================== */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+
+    .gallery-card {
+      border: 1px solid rgba(218, 165, 32, 0.22);
+      background: #151310;
+      overflow: hidden;
+    }
+
+
+    .gallery-image-wrap {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      background: #090807;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+
+    .gallery-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.25s ease;
+    }
+
+
+    .gallery-image-wrap:hover .gallery-image {
+      transform: scale(1.03);
+    }
+
+
+    .gallery-card-body {
+      padding: 13px;
+    }
+
+
+    .gallery-category {
+      font-family: "Cinzel", serif;
+      font-size: 0.66rem;
+      letter-spacing: 1px;
+      color: #43d6ba;
+    }
+
+
+    .gallery-caption {
+      margin-top: 6px;
+      line-height: 1.45;
+    }
+
+
+    .gallery-meta {
+      margin-top: 9px;
+      font-size: 0.78rem;
+      opacity: 0.58;
+    }
+
+
+    .gallery-card-actions {
+      margin-top: 10px;
+    }
+
+
+    .gallery-empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 45px 20px;
+      border: 1px dashed rgba(218, 165, 32, 0.2);
+      opacity: 0.6;
+    }
+
+
+
+    /* ======================================================
+       ADD MODAL
+       ====================================================== */
+
+    .gallery-modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      padding: 25px 15px;
+      overflow-y: auto;
+      background: rgba(0, 0, 0, 0.82);
+    }
+
+
+    .gallery-modal-backdrop.open {
+      display: block;
+    }
+
+
+    .gallery-modal {
+      width: min(650px, 100%);
+      margin: 35px auto;
+      padding: 24px;
+      border: 1px solid rgba(218, 165, 32, 0.4);
+      background: #141210;
+    }
+
+
+    .gallery-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+
+    .gallery-modal h2 {
+      margin-top: 0;
+      font-family: "Cinzel", serif;
+    }
+
+
+    .gallery-modal-close {
+      border: 0;
+      background: transparent;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+
+    .gallery-preview {
+      margin-top: 16px;
+      display: none;
+      border: 1px solid rgba(67, 214, 186, 0.25);
+      background: #090807;
+      padding: 10px;
+    }
+
+
+    .gallery-preview img {
+      width: 100%;
+      max-height: 360px;
+      object-fit: contain;
+      display: block;
+    }
+
+
+
+    /* ======================================================
+       LIGHTBOX
+       ====================================================== */
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 500;
+      background: rgba(0, 0, 0, 0.92);
+      padding: 25px;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    .lightbox.open {
+      display: flex;
+    }
+
+
+    .lightbox-inner {
+      width: min(1100px, 100%);
+      position: relative;
+      text-align: center;
+    }
+
+
+    .lightbox img {
+      max-width: 100%;
+      max-height: 78vh;
+      object-fit: contain;
+      border: 1px solid rgba(218, 165, 32, 0.35);
+      background: #060606;
+    }
+
+
+    .lightbox-caption {
+      margin-top: 12px;
+      font-family: "Crimson Pro", serif;
+      font-size: 1.1rem;
+    }
+
+
+    .lightbox-close {
+      position: absolute;
+      top: -12px;
+      right: -5px;
+      border: 1px solid rgba(255,255,255,0.3);
+      background: #111;
+      color: white;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+
+
+    /* ======================================================
+       MOBILE
+       ====================================================== */
+
+    @media (max-width: 900px) {
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 620px) {
+
+      .gallery-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
+
+  <header class="site-header">
+
+    <a href="index.html" class="brand">
+
+      <img
+        src="images/logo.png"
+        alt="Rotating Chaos guild emblem"
+        class="brand-logo"
+      >
+
+      <div class="brand-text">
+
+        <span class="brand-name">
+          ROTATING CHAOS
+        </span>
+
+        <span class="brand-subtitle">
+          GUILD ◆ FAMILY ◆ CHAOS
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+      <a href="index.html">HOME</a>
+
+      <a href="community.html">
+        COMMUNITY
+      </a>
+
+      <a href="build-guides.html">
+        CHAOS GUIDES
+      </a>
+
+      <a href="events.html">
+        EVENTS
+      </a>
+
+      <a href="merch.html">
+        MERCH
+      </a>
+
+      <a href="index.html#contact">
+        CONTACT
+      </a>
+
+    </nav>
+
+
+    <a
+      href="https://discord.gg/UhJndyjYWr"
+      class="discord-button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      JOIN DISCORD
+    </a>
+
+  </header>
+
+
+
+  <main class="gallery-page">
+
+    <div class="gallery-shell">
+
+
+      <!-- HERO -->
+
+      <div class="gallery-heading">
+
+        <p class="section-eyebrow">
+          MEMORIES ◆ WINS ◆ ABSOLUTE NONSENSE
+        </p>
+
+        <h1>
+          CHAOS GALLERY
+        </h1>
+
+        <p>
+          Screenshots, victories, disasters and moments that deserved to survive the group chat.
+        </p>
+
+      </div>
+
+
+
+      <!-- LOGIN -->
+
+      <section
+        class="gallery-login"
+        id="galleryLogin"
+      >
+
+        <h2>
+          GUILD MEMBERS ONLY
+        </h2>
+
+        <p>
+          Same Chaos login. We are not collecting another bloody password. 😂
+        </p>
+
+
+        <form id="galleryLoginForm">
+
+
+          <div class="gallery-field">
+
+            <label for="galleryGuildName">
+              GUILD NAME
+            </label>
+
+            <input
+              id="galleryGuildName"
+              type="text"
+              required
+            >
+
+          </div>
+
+
+          <div class="gallery-field">
+
+            <label for="galleryAccessCode">
+              ACCESS CODE
+            </label>
+
+            <input
+              id="galleryAccessCode"
+              type="password"
+              required
+            >
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="gallery-login-button"
+          >
+            ENTER GALLERY
+          </button>
+
+
+          <p
+            class="gallery-login-error"
+            id="galleryLoginError"
+          >
+            Nope. Chaos doesn't recognise you. 😂
+          </p>
+
+
+        </form>
+
+      </section>
+
+
+
+      <!-- APP -->
+
+      <section
+        class="gallery-app"
+        id="galleryApp"
+      >
+
+
+        <div class="gallery-topbar">
+
+          <div>
+
+            <strong
+              id="galleryLoggedInUser"
+            ></strong>
+
+            <div class="gallery-user">
+              Chaos memory vault
+            </div>
+
+          </div>
+
+
+          <div class="gallery-actions">
+
+            <button
+              type="button"
+              class="gallery-primary-button"
+              id="openGalleryModal"
+            >
+              + ADD TO GALLERY
+            </button>
+
+
+            <button
+              type="button"
+              class="gallery-secondary-button"
+              id="gallerySignOut"
+            >
+              SIGN OUT
+            </button>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- FILTERS -->
+
+        <div
+          class="gallery-filters"
+          id="galleryFilters"
+        >
+
+          <button
+            type="button"
+            class="gallery-filter active"
+            data-category="All"
+          >
+            ALL
+          </button>
+
+          <button
+            type="button"
+            class="gallery-filter"
+            data-category="Runs"
+          >
+            RUNS
+          </button>
+
+          <button
+            type="button"
+            class="gallery-filter"
+            data-category="Wins"
+          >
+            WINS
+          </button>
+
+          <button
+            type="button"
+            class="gallery-filter"
+            data-category="Fails"
+          >
+            FAILS 😂
+          </button>
+
+          <button
+            type="button"
+            class="gallery-filter"
+            data-category="Guild Nights"
+          >
+            GUILD NIGHTS
+          </button>
+
+          <button
+            type="button"
+            class="gallery-filter"
+            data-category="Random Chaos"
+          >
+            RANDOM CHAOS
+          </button>
+
+        </div>
+
+
+
+        <div
+          class="gallery-grid"
+          id="galleryGrid"
+        ></div>
+
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+
+  <!-- ======================================================
+       ADD IMAGE MODAL
+       ====================================================== -->
+
+  <div
+    class="gallery-modal-backdrop"
+    id="galleryModalBackdrop"
+  >
+
+    <div class="gallery-modal">
+
+
+      <div class="gallery-modal-header">
+
+        <div>
+
+          <p class="section-eyebrow">
+            ADD TO THE MEMORY VAULT
+          </p>
+
+          <h2>
+            ADD TO GALLERY
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="gallery-modal-close"
+          id="closeGalleryModal"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+
+      <form id="galleryForm">
+
+
+        <div class="gallery-field">
+
+          <label for="galleryImageUrl">
+            IMAGE URL
+          </label>
+
+          <input
+            id="galleryImageUrl"
+            type="url"
+            placeholder="https://..."
+            required
+          >
+
+        </div>
+
+
+
+        <div class="gallery-field">
+
+          <label for="galleryCategory">
+            CATEGORY
+          </label>
+
+          <select id="galleryCategory">
+
+            <option value="Runs">
+              Runs
+            </option>
+
+            <option value="Wins">
+              Wins
+            </option>
+
+            <option value="Fails">
+              Fails 😂
+            </option>
+
+            <option value="Guild Nights">
+              Guild Nights
+            </option>
+
+            <option value="Random Chaos">
+              Random Chaos
+            </option>
+
+          </select>
+
+        </div>
+
+
+
+        <div class="gallery-field">
+
+          <label for="galleryCaption">
+            CAPTION
+          </label>
+
+          <textarea
+            id="galleryCaption"
+            maxlength="300"
+            placeholder="What fresh nonsense is happening here?"
+          ></textarea>
+
+        </div>
+
+
+
+        <div
+          class="gallery-preview"
+          id="galleryPreview"
+        >
+
+          <img
+            id="galleryPreviewImage"
+            alt="Gallery preview"
+          >
+
+        </div>
+
+
+
+        <div style="margin-top:20px;">
+
+          <button
+            type="submit"
+            class="gallery-primary-button"
+          >
+            ADD TO GALLERY
+          </button>
+
+        </div>
+
+
+      </form>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ======================================================
+       LIGHTBOX
+       ====================================================== -->
+
+  <div
+    class="lightbox"
+    id="lightbox"
+  >
+
+    <div class="lightbox-inner">
+
+      <button
+        type="button"
+        class="lightbox-close"
+        id="lightboxClose"
+      >
+        ×
+      </button>
+
+      <img
+        id="lightboxImage"
+        alt="Gallery image"
+      >
+
+      <div
+        class="lightbox-caption"
+        id="lightboxCaption"
+      ></div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ======================================================
+       FIREBASE
+       ====================================================== -->
+
+  <script type="module">
+
+
+    import {
+      initializeApp
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+
+
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+      signOut,
+      onAuthStateChanged
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+
+
+    import {
+      getFirestore,
+      collection,
+      addDoc,
+      deleteDoc,
+      doc,
+      serverTimestamp,
+      query,
+      orderBy,
+      onSnapshot
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+
+
+    /* ======================================================
+       FIREBASE CONFIG
+       ====================================================== */
+
+    const firebaseConfig = {
+
+      apiKey:
+        "AIzaSyDQjutG0oa4v8dpI3i3UlgsFC9EmWsX4kI",
+
+      authDomain:
+        "rotating-chaos-chat.firebaseapp.com",
+
+      projectId:
+        "rotating-chaos-chat",
+
+      storageBucket:
+        "rotating-chaos-chat.firebasestorage.app",
+
+      messagingSenderId:
+        "337862334710",
+
+      appId:
+        "1:337862334710:web:92e38dd0646dd9bec474d7",
+
+      measurementId:
+        "G-7M761SJ4CJ"
+
+    };
+
+
+    const app =
+      initializeApp(firebaseConfig);
+
+
+    const auth =
+      getAuth(app);
+
+
+    const db =
+      getFirestore(app);
+
+
+
+    /* ======================================================
+       ELEMENTS
+       ====================================================== */
+
+    const galleryLogin =
+      document.getElementById("galleryLogin");
+
+    const galleryApp =
+      document.getElementById("galleryApp");
+
+    const galleryLoginForm =
+      document.getElementById("galleryLoginForm");
+
+    const galleryGuildName =
+      document.getElementById("galleryGuildName");
+
+    const galleryAccessCode =
+      document.getElementById("galleryAccessCode");
+
+    const galleryLoginError =
+      document.getElementById("galleryLoginError");
+
+    const galleryLoggedInUser =
+      document.getElementById("galleryLoggedInUser");
+
+    const gallerySignOut =
+      document.getElementById("gallerySignOut");
+
+    const openGalleryModal =
+      document.getElementById("openGalleryModal");
+
+    const closeGalleryModal =
+      document.getElementById("closeGalleryModal");
+
+    const galleryModalBackdrop =
+      document.getElementById("galleryModalBackdrop");
+
+    const galleryForm =
+      document.getElementById("galleryForm");
+
+    const galleryImageUrl =
+      document.getElementById("galleryImageUrl");
+
+    const galleryCategory =
+      document.getElementById("galleryCategory");
+
+    const galleryCaption =
+      document.getElementById("galleryCaption");
+
+    const galleryPreview =
+      document.getElementById("galleryPreview");
+
+    const galleryPreviewImage =
+      document.getElementById("galleryPreviewImage");
+
+    const galleryGrid =
+      document.getElementById("galleryGrid");
+
+    const galleryFilters =
+      document.querySelectorAll(".gallery-filter");
+
+    const lightbox =
+      document.getElementById("lightbox");
+
+    const lightboxImage =
+      document.getElementById("lightboxImage");
+
+    const lightboxCaption =
+      document.getElementById("lightboxCaption");
+
+    const lightboxClose =
+      document.getElementById("lightboxClose");
+
+
+
+    /* ======================================================
+       STATE
+       ====================================================== */
+
+    let currentGuildName =
+      "";
+
+    let galleryItems =
+      [];
+
+    let activeCategory =
+      "All";
+
+    let unsubscribeGallery =
+      null;
+
+
+
+    /* ======================================================
+       ACCOUNT EMAIL
+       ====================================================== */
+
+    function makeAccountEmail(name) {
+
+      const cleaned =
+        name
+          .trim()
+          .toLowerCase()
+          .replace(/[^a-z0-9]/g, "");
+
+
+      return `${cleaned}@rotatingchaos.local`;
+
+    }
+
+
+
+    function prettyNameFromEmail(email) {
+
+      const raw =
+        email.split("@")[0];
+
+
+      return raw.charAt(0).toUpperCase()
+        + raw.slice(1);
+
+    }
+
+
+
+    /* ======================================================
+       LOGIN
+       ====================================================== */
+
+    galleryLoginForm.addEventListener(
+      "submit",
+      async (event) => {
+
+        event.preventDefault();
+
+
+        galleryLoginError.style.display =
+          "none";
+
+
+        const name =
+          galleryGuildName.value.trim();
+
+
+        const password =
+          galleryAccessCode.value;
+
+
+        try {
+
+          await signInWithEmailAndPassword(
+            auth,
+            makeAccountEmail(name),
+            password
+          );
+
+
+          currentGuildName =
+            name;
+
+
+          sessionStorage.setItem(
+            "chaosNickname",
+            name
+          );
+
+
+          galleryAccessCode.value =
+            "";
+
+        }
+
+
+        catch (error) {
+
+          console.error(error);
+
+
+          galleryLoginError.style.display =
+            "block";
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       AUTH
+       ====================================================== */
+
+    onAuthStateChanged(
+      auth,
+      (user) => {
+
+        if (user) {
+
+          currentGuildName =
+            sessionStorage.getItem(
+              "chaosNickname"
+            )
+            || prettyNameFromEmail(
+              user.email
+            );
+
+
+          galleryLoggedInUser.textContent =
+            `Signed in as ${currentGuildName}`;
+
+
+          galleryLogin.style.display =
+            "none";
+
+
+          galleryApp.style.display =
+            "block";
+
+
+          startGalleryListener();
+
+        }
+
+
+        else {
+
+          galleryLogin.style.display =
+            "block";
+
+
+          galleryApp.style.display =
+            "none";
+
+
+          if (unsubscribeGallery) {
+
+            unsubscribeGallery();
+
+            unsubscribeGallery =
+              null;
+
+          }
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       SIGN OUT
+       ====================================================== */
+
+    gallerySignOut.addEventListener(
+      "click",
+      async () => {
+
+        sessionStorage.removeItem(
+          "chaosNickname"
+        );
+
+
+        await signOut(auth);
+
+      }
+    );
+
+
+
+    /* ======================================================
+       MODAL
+       ====================================================== */
+
+    openGalleryModal.addEventListener(
+      "click",
+      () => {
+
+        galleryModalBackdrop.classList.add(
+          "open"
+        );
+
+      }
+    );
+
+
+    closeGalleryModal.addEventListener(
+      "click",
+      closeGalleryModalFunction
+    );
+
+
+    galleryModalBackdrop.addEventListener(
+      "click",
+      (event) => {
+
+        if (
+          event.target
+          === galleryModalBackdrop
+        ) {
+
+          closeGalleryModalFunction();
+
+        }
+
+      }
+    );
+
+
+    function closeGalleryModalFunction() {
+
+      galleryModalBackdrop.classList.remove(
+        "open"
+      );
+
+
+      galleryPreview.style.display =
+        "none";
+
+    }
+
+
+
+    /* ======================================================
+       PREVIEW
+       ====================================================== */
+
+    galleryImageUrl.addEventListener(
+      "input",
+      () => {
+
+        const url =
+          galleryImageUrl.value.trim();
+
+
+        if (!url) {
+
+          galleryPreview.style.display =
+            "none";
+
+
+          return;
+
+        }
+
+
+        galleryPreviewImage.src =
+          url;
+
+
+        galleryPreview.style.display =
+          "block";
+
+      }
+    );
+
+
+    galleryPreviewImage.addEventListener(
+      "error",
+      () => {
+
+        galleryPreview.style.display =
+          "none";
+
+      }
+    );
+
+
+
+    /* ======================================================
+       ADD ITEM
+       ====================================================== */
+
+    galleryForm.addEventListener(
+      "submit",
+      async (event) => {
+
+        event.preventDefault();
+
+
+        const user =
+          auth.currentUser;
+
+
+        if (!user) {
+          return;
+        }
+
+
+        const imageUrl =
+          galleryImageUrl.value.trim();
+
+
+        if (
+          !imageUrl.startsWith("https://")
+          && !imageUrl.startsWith("http://")
+        ) {
+
+          window.alert(
+            "That doesn't look like an image link."
+          );
+
+
+          return;
+
+        }
+
+
+        try {
+
+          await addDoc(
+            collection(
+              db,
+              "gallery"
+            ),
+            {
+
+              imageUrl:
+                imageUrl,
+
+              category:
+                galleryCategory.value,
+
+              caption:
+                galleryCaption.value.trim(),
+
+              uploadedByUid:
+                user.uid,
+
+              uploadedByName:
+                currentGuildName,
+
+              createdAt:
+                serverTimestamp()
+
+            }
+          );
+
+
+          galleryForm.reset();
+
+
+          galleryPreview.style.display =
+            "none";
+
+
+          closeGalleryModalFunction();
+
+        }
+
+
+        catch (error) {
+
+          console.error(
+            "Could not add gallery item:",
+            error
+          );
+
+
+          window.alert(
+            "The gallery rejected the chaos. Rude."
+          );
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       LIVE GALLERY
+       ====================================================== */
+
+    function startGalleryListener() {
+
+      if (unsubscribeGallery) {
+
+        unsubscribeGallery();
+
+      }
+
+
+      const galleryQuery =
+        query(
+          collection(
+            db,
+            "gallery"
+          ),
+          orderBy(
+            "createdAt",
+            "desc"
+          )
+        );
+
+
+      unsubscribeGallery =
+        onSnapshot(
+          galleryQuery,
+          (snapshot) => {
+
+            galleryItems =
+              [];
+
+
+            snapshot.forEach(
+              item => {
+
+                galleryItems.push({
+                  id:
+                    item.id,
+
+                  ...item.data()
+                });
+
+              }
+            );
+
+
+            renderGallery();
+
+          }
+        );
+
+    }
+
+
+
+    /* ======================================================
+       FILTERS
+       ====================================================== */
+
+    galleryFilters.forEach(
+      button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            activeCategory =
+              button.dataset.category;
+
+
+            galleryFilters.forEach(
+              item => {
+
+                item.classList.remove(
+                  "active"
+                );
+
+              }
+            );
+
+
+            button.classList.add(
+              "active"
+            );
+
+
+            renderGallery();
+
+          }
+        );
+
+      }
+    );
+
+
+
+    /* ======================================================
+       RENDER
+       ====================================================== */
+
+    function renderGallery() {
+
+      galleryGrid.innerHTML =
+        "";
+
+
+      const filtered =
+        activeCategory === "All"
+          ? galleryItems
+          : galleryItems.filter(
+              item =>
+                item.category
+                === activeCategory
+            );
+
+
+      if (
+        filtered.length === 0
+      ) {
+
+        const empty =
+          document.createElement(
+            "div"
+          );
+
+
+        empty.className =
+          "gallery-empty";
+
+
+        empty.textContent =
+          activeCategory === "All"
+            ? "Nothing here yet. Someone go cause a memorable incident. 😂"
+            : "No chaos in this category yet.";
+
+
+        galleryGrid.appendChild(
+          empty
+        );
+
+
+        return;
+
+      }
+
+
+      filtered.forEach(
+        item => {
+
+          const card =
+            document.createElement(
+              "article"
+            );
+
+
+          card.className =
+            "gallery-card";
+
+
+          const imageWrap =
+            document.createElement(
+              "div"
+            );
+
+
+          imageWrap.className =
+            "gallery-image-wrap";
+
+
+          const image =
+            document.createElement(
+              "img"
+            );
+
+
+          image.className =
+            "gallery-image";
+
+
+          image.src =
+            item.imageUrl;
+
+
+          image.alt =
+            item.caption
+            || "Rotating Chaos gallery image";
+
+
+          image.loading =
+            "lazy";
+
+
+          imageWrap.appendChild(
+            image
+          );
+
+
+          imageWrap.addEventListener(
+            "click",
+            () => {
+
+              openLightbox(
+                item
+              );
+
+            }
+          );
+
+
+          const body =
+            document.createElement(
+              "div"
+            );
+
+
+          body.className =
+            "gallery-card-body";
+
+
+          const category =
+            document.createElement(
+              "div"
+            );
+
+
+          category.className =
+            "gallery-category";
+
+
+          category.textContent =
+            item.category
+              .toUpperCase();
+
+
+          body.appendChild(
+            category
+          );
+
+
+          if (
+            item.caption
+          ) {
+
+            const caption =
+              document.createElement(
+                "div"
+              );
+
+
+            caption.className =
+              "gallery-caption";
+
+
+            caption.textContent =
+              item.caption;
+
+
+            body.appendChild(
+              caption
+            );
+
+          }
+
+
+          const meta =
+            document.createElement(
+              "div"
+            );
+
+
+          meta.className =
+            "gallery-meta";
+
+
+          meta.textContent =
+            `Added by ${item.uploadedByName || "Chaos Member"}`;
+
+
+          body.appendChild(
+            meta
+          );
+
+
+          if (
+            auth.currentUser
+            && item.uploadedByUid
+            === auth.currentUser.uid
+          ) {
+
+            const actions =
+              document.createElement(
+                "div"
+              );
+
+
+            actions.className =
+              "gallery-card-actions";
+
+
+            const remove =
+              document.createElement(
+                "button"
+              );
+
+
+            remove.type =
+              "button";
+
+
+            remove.className =
+              "gallery-danger-button";
+
+
+            remove.textContent =
+              "DELETE";
+
+
+            remove.addEventListener(
+              "click",
+              async () => {
+
+                const confirmed =
+                  window.confirm(
+                    "Delete this from the gallery?"
+                  );
+
+
+                if (!confirmed) {
+                  return;
+                }
+
+
+                await deleteDoc(
+                  doc(
+                    db,
+                    "gallery",
+                    item.id
+                  )
+                );
+
+              }
+            );
+
+
+            actions.appendChild(
+              remove
+            );
+
+
+            body.appendChild(
+              actions
+            );
+
+          }
+
+
+          card.appendChild(
+            imageWrap
+          );
+
+
+          card.appendChild(
+            body
+          );
+
+
+          galleryGrid.appendChild(
+            card
+          );
+
+        }
+      );
+
+    }
+
+
+
+    /* ======================================================
+       LIGHTBOX
+       ====================================================== */
+
+    function openLightbox(item) {
+
+      lightboxImage.src =
+        item.imageUrl;
+
+
+      lightboxCaption.textContent =
+        item.caption || "";
+
+
+      lightbox.classList.add(
+        "open"
+      );
+
+    }
+
+
+
+    lightboxClose.addEventListener(
+      "click",
+      () => {
+
+        lightbox.classList.remove(
+          "open"
+        );
+
+      }
+    );
+
+
+    lightbox.addEventListener(
+      "click",
+      (event) => {
+
+        if (
+          event.target
+          === lightbox
+        ) {
+
+          lightbox.classList.remove(
+            "open"
+          );
+
+        }
+
+      }
+    );
+
+
+  </script>
+
+
+</body>
+
+</html>

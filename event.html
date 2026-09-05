@@ -49,7 +49,6 @@
     .event-page {
       min-height: 100vh;
       padding: 70px 20px 100px;
-
       background:
         radial-gradient(
           circle at top,
@@ -75,216 +74,165 @@
       width: min(520px, 100%);
       margin: 50px auto;
       padding: 30px;
-
-      border:
-        1px solid rgba(218, 165, 32, 0.35);
-
-      background:
-        #151310;
+      border: 1px solid rgba(218, 165, 32, 0.35);
+      background: #151310;
     }
 
 
     .event-login-panel h2 {
       margin-top: 0;
-
-      text-align:
-        center;
-
-      font-family:
-        "Cinzel",
-        serif;
+      text-align: center;
+      font-family: "Cinzel", serif;
     }
 
 
     .event-login-panel p {
-      text-align:
-        center;
+      text-align: center;
     }
 
 
     .field {
-      margin-top:
-        17px;
+      margin-top: 17px;
     }
 
 
     .field label {
-      display:
-        block;
-
-      margin-bottom:
-        6px;
-
-      font-family:
-        "Cinzel",
-        serif;
-
-      font-size:
-        0.78rem;
-
-      letter-spacing:
-        1px;
+      display: block;
+      margin-bottom: 6px;
+      font-family: "Cinzel", serif;
+      font-size: 0.78rem;
+      letter-spacing: 1px;
     }
 
 
     .field input,
     .field select,
     .field textarea {
-      width:
-        100%;
-
-      box-sizing:
-        border-box;
-
-      padding:
-        11px 12px;
-
-      border:
-        1px solid rgba(218, 165, 32, 0.35);
-
-      background:
-        #11100f;
-
-      color:
-        #f6efe2;
-
-      font:
-        inherit;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 11px 12px;
+      border: 1px solid rgba(218, 165, 32, 0.35);
+      background: #11100f;
+      color: #f6efe2;
+      font: inherit;
     }
 
 
     .field textarea {
-      min-height:
-        95px;
-
-      resize:
-        vertical;
-    }
-
-
-    .primary-button {
-      border:
-        1px solid #d7aa42;
-
-      background:
-        #d7aa42;
-
-      color:
-        #111;
-
-      padding:
-        11px 16px;
-
-      font-family:
-        "Cinzel",
-        serif;
-
-      font-weight:
-        800;
-
-      cursor:
-        pointer;
-    }
-
-
-    .secondary-button {
-      border:
-        1px solid rgba(218, 165, 32, 0.4);
-
-      background:
-        #171513;
-
-      color:
-        #f6efe2;
-
-      padding:
-        9px 13px;
-
-      cursor:
-        pointer;
-    }
-
-
-    .danger-button {
-      border:
-        1px solid rgba(210, 80, 80, 0.5);
-
-      background:
-        rgba(130, 30, 30, 0.15);
-
-      color:
-        #ffbaba;
-
-      padding:
-        8px 12px;
-
-      cursor:
-        pointer;
-    }
-
-
-    .login-submit {
-      width:
-        100%;
-
-      margin-top:
-        22px;
-    }
-
-
-    .login-error {
-      display:
-        none;
-
-      margin-top:
-        14px;
-
-      color:
-        #ff9999;
-
-      text-align:
-        center;
+      min-height: 95px;
+      resize: vertical;
     }
 
 
 
     /* ======================================================
-       MAIN APP
+       BUTTONS
+       ====================================================== */
+
+    .primary-button,
+    .secondary-button,
+    .danger-button,
+    .warning-button {
+      cursor: pointer;
+    }
+
+
+    .primary-button {
+      border: 1px solid #d7aa42;
+      background: #d7aa42;
+      color: #111;
+      padding: 11px 16px;
+      font-family: "Cinzel", serif;
+      font-weight: 800;
+    }
+
+
+    .secondary-button {
+      border: 1px solid rgba(218, 165, 32, 0.4);
+      background: #171513;
+      color: #f6efe2;
+      padding: 9px 13px;
+    }
+
+
+    .warning-button {
+      border: 1px solid rgba(230, 170, 45, 0.6);
+      background: rgba(180, 115, 10, 0.13);
+      color: #f0c56a;
+      padding: 9px 13px;
+    }
+
+
+    .danger-button {
+      border: 1px solid rgba(210, 80, 80, 0.5);
+      background: rgba(130, 30, 30, 0.15);
+      color: #ffbaba;
+      padding: 8px 12px;
+    }
+
+
+    .login-submit {
+      width: 100%;
+      margin-top: 22px;
+    }
+
+
+    .login-error {
+      display: none;
+      margin-top: 14px;
+      color: #ff9999;
+      text-align: center;
+    }
+
+
+
+    /* ======================================================
+       APP
        ====================================================== */
 
     .event-app {
-      display:
-        none;
+      display: none;
     }
 
 
     .event-top-actions {
-      display:
-        flex;
-
-      justify-content:
-        space-between;
-
-      gap:
-        15px;
-
-      align-items:
-        center;
-
-      margin-bottom:
-        20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      align-items: center;
+      margin-bottom: 20px;
     }
 
 
     .event-top-actions-right {
-      display:
-        flex;
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
 
-      gap:
-        9px;
 
-      flex-wrap:
-        wrap;
+
+    /* ======================================================
+       CANCELLED BANNER
+       ====================================================== */
+
+    .cancelled-banner {
+      display: none;
+      margin-bottom: 18px;
+      padding: 14px 18px;
+      text-align: center;
+      font-family: "Cinzel", serif;
+      font-weight: 800;
+      letter-spacing: 1px;
+      border: 1px solid rgba(210, 80, 80, 0.55);
+      background: rgba(130, 30, 30, 0.18);
+      color: #ffbaba;
+    }
+
+
+    .cancelled-banner.show {
+      display: block;
     }
 
 
@@ -294,12 +242,8 @@
        ====================================================== */
 
     .event-hero {
-      padding:
-        30px;
-
-      border:
-        1px solid rgba(218, 165, 32, 0.34);
-
+      padding: 30px;
+      border: 1px solid rgba(218, 165, 32, 0.34);
       background:
         linear-gradient(
           135deg,
@@ -310,193 +254,131 @@
 
 
     .event-type {
-      font-family:
-        "Cinzel",
-        serif;
-
-      color:
-        #43d6ba;
-
-      font-size:
-        0.76rem;
-
-      letter-spacing:
-        2px;
+      font-family: "Cinzel", serif;
+      color: #43d6ba;
+      font-size: 0.76rem;
+      letter-spacing: 2px;
     }
 
 
     .event-hero h1 {
-      margin:
-        6px 0 12px;
+      margin: 6px 0 12px;
+      font-family: "Cinzel", serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+    }
 
-      font-family:
-        "Cinzel",
-        serif;
 
-      font-size:
-        clamp(
-          2rem,
-          5vw,
-          3.5rem
-        );
+    .event-created {
+      opacity: 0.7;
     }
 
 
     .event-meta-grid {
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(
-          4,
-          1fr
-        );
-
-      gap:
-        12px;
-
-      margin-top:
-        20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 20px;
     }
 
 
     .event-meta-box {
-      padding:
-        13px;
-
-      background:
-        rgba(
-          0,
-          0,
-          0,
-          0.2
-        );
-
-      border:
-        1px solid rgba(218, 165, 32, 0.14);
+      padding: 13px;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(218, 165, 32, 0.14);
     }
 
 
     .event-meta-label {
-      font-family:
-        "Cinzel",
-        serif;
-
-      font-size:
-        0.68rem;
-
-      opacity:
-        0.55;
-
-      letter-spacing:
-        1px;
+      font-family: "Cinzel", serif;
+      font-size: 0.68rem;
+      opacity: 0.55;
+      letter-spacing: 1px;
     }
 
 
     .event-meta-value {
-      margin-top:
-        5px;
-
-      font-size:
-        1rem;
+      margin-top: 5px;
+      font-size: 1rem;
     }
 
 
     .event-notes {
-      margin-top:
-        18px;
-
-      line-height:
-        1.6;
+      margin-top: 18px;
+      line-height: 1.6;
     }
 
 
 
     /* ======================================================
-       DISCORD TIMESTAMP
+       RUN STATUS
+       ====================================================== */
+
+    .run-status-box {
+      display: none;
+      margin-top: 18px;
+      padding: 14px;
+      border: 1px solid rgba(67, 214, 186, 0.28);
+      background: rgba(67, 214, 186, 0.06);
+      font-family: "Cinzel", serif;
+      font-weight: 700;
+    }
+
+
+    .run-status-box.full {
+      border-color: rgba(218, 165, 32, 0.35);
+      background: rgba(218, 165, 32, 0.08);
+      color: #e5c26b;
+    }
+
+
+
+    /* ======================================================
+       DISCORD
        ====================================================== */
 
     .discord-box {
-      margin-top:
-        18px;
-
-      padding:
-        13px;
-
-      background:
-        rgba(67, 214, 186, 0.06);
-
-      border:
-        1px solid rgba(67, 214, 186, 0.22);
+      margin-top: 18px;
+      padding: 13px;
+      background: rgba(67, 214, 186, 0.06);
+      border: 1px solid rgba(67, 214, 186, 0.22);
     }
 
 
     .discord-code {
-      display:
-        block;
-
-      margin-top:
-        7px;
-
-      padding:
-        9px;
-
-      background:
-        #090807;
-
-      font-family:
-        monospace;
-
-      word-break:
-        break-all;
+      display: block;
+      margin-top: 7px;
+      padding: 9px;
+      background: #090807;
+      font-family: monospace;
+      word-break: break-all;
     }
 
 
 
     /* ======================================================
-       SECTION PANELS
+       PANELS
        ====================================================== */
 
     .event-panel {
-      margin-top:
-        24px;
-
-      padding:
-        22px;
-
-      border:
-        1px solid rgba(218, 165, 32, 0.28);
-
-      background:
-        #121110;
+      margin-top: 24px;
+      padding: 22px;
+      border: 1px solid rgba(218, 165, 32, 0.28);
+      background: #121110;
     }
 
 
     .panel-heading {
-      display:
-        flex;
-
-      justify-content:
-        space-between;
-
-      align-items:
-        center;
-
-      gap:
-        10px;
-
-      margin-bottom:
-        16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
     }
 
 
     .panel-heading h2 {
-      margin:
-        0;
-
-      font-family:
-        "Cinzel",
-        serif;
+      margin: 0;
+      font-family: "Cinzel", serif;
     }
 
 
@@ -506,137 +388,85 @@
        ====================================================== */
 
     .signup-layout {
-      display:
-        grid;
-
-      grid-template-columns:
-        minmax(
-          260px,
-          0.8fr
-        )
-        minmax(
-          0,
-          1.3fr
-        );
-
-      gap:
-        20px;
+      display: grid;
+      grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.3fr);
+      gap: 20px;
     }
 
 
     .signup-form {
-      padding:
-        16px;
-
-      background:
-        #171513;
-
-      border:
-        1px solid rgba(218, 165, 32, 0.15);
+      padding: 16px;
+      background: #171513;
+      border: 1px solid rgba(218, 165, 32, 0.15);
     }
 
 
     .signup-list {
-      display:
-        grid;
-
-      gap:
-        9px;
+      display: grid;
+      gap: 9px;
     }
 
 
     .signup-person {
-      display:
-        grid;
-
-      grid-template-columns:
-        1fr auto;
-
-      gap:
-        10px;
-
-      padding:
-        11px 13px;
-
-      background:
-        #171513;
-
-      border:
-        1px solid rgba(218, 165, 32, 0.14);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      padding: 11px 13px;
+      background: #171513;
+      border: 1px solid rgba(218, 165, 32, 0.14);
     }
 
 
     .signup-person-name {
-      font-family:
-        "Cinzel",
-        serif;
-
-      font-weight:
-        700;
+      font-family: "Cinzel", serif;
+      font-weight: 700;
     }
 
 
     .signup-person-note {
-      margin-top:
-        3px;
+      margin-top: 3px;
+      opacity: 0.65;
+      font-size: 0.88rem;
+    }
 
-      opacity:
-        0.65;
 
-      font-size:
-        0.88rem;
+    .signup-person-status {
+      margin-top: 4px;
+      font-size: 0.75rem;
+      opacity: 0.8;
     }
 
 
     .signup-role {
-      padding:
-        5px 8px;
-
-      border-radius:
-        999px;
-
-      font-size:
-        0.72rem;
-
-      align-self:
-        start;
+      padding: 5px 8px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      align-self: start;
     }
 
 
     .role-tank {
-      background:
-        rgba(60, 140, 220, 0.15);
-
-      color:
-        #8ecbff;
+      background: rgba(60, 140, 220, 0.15);
+      color: #8ecbff;
     }
 
 
     .role-healer {
-      background:
-        rgba(50, 190, 140, 0.14);
-
-      color:
-        #80e8bd;
+      background: rgba(50, 190, 140, 0.14);
+      color: #80e8bd;
     }
 
 
     .role-dps {
-      background:
-        rgba(220, 80, 80, 0.14);
-
-      color:
-        #ffaaaa;
+      background: rgba(220, 80, 80, 0.14);
+      color: #ffaaaa;
     }
 
 
     .role-filler,
     .role-any {
-      background:
-        rgba(218, 165, 32, 0.13);
-
-      color:
-        #e5c26b;
+      background: rgba(218, 165, 32, 0.13);
+      color: #e5c26b;
     }
 
 
@@ -646,356 +476,205 @@
        ====================================================== */
 
     .run-group {
-      margin-top:
-        15px;
-
-      border:
-        1px solid rgba(67, 214, 186, 0.20);
-
-      background:
-        #151310;
+      margin-top: 15px;
+      border: 1px solid rgba(67, 214, 186, 0.20);
+      background: #151310;
     }
 
 
     .run-group-header {
-      display:
-        flex;
-
-      justify-content:
-        space-between;
-
-      align-items:
-        center;
-
-      gap:
-        12px;
-
-      padding:
-        13px 15px;
-
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 15px;
       background:
         linear-gradient(
           90deg,
           rgba(67, 214, 186, 0.09),
           rgba(218, 165, 32, 0.04)
         );
-
-      border-bottom:
-        1px solid rgba(67, 214, 186, 0.15);
+      border-bottom: 1px solid rgba(67, 214, 186, 0.15);
     }
 
 
     .run-group-header h3 {
-      margin:
-        0;
-
-      font-family:
-        "Cinzel",
-        serif;
+      margin: 0;
+      font-family: "Cinzel", serif;
     }
 
 
     .run-group-actions {
-      display:
-        flex;
-
-      gap:
-        7px;
-
-      flex-wrap:
-        wrap;
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
     }
 
 
     .run-slots {
-      padding:
-        10px 14px 14px;
+      padding: 10px 14px 14px;
     }
 
 
     .run-slot {
-      display:
-        grid;
-
-      grid-template-columns:
-        120px
-        minmax(140px, 0.8fr)
-        minmax(180px, 1.4fr);
-
-      gap:
-        10px;
-
-      padding:
-        10px 0;
-
-      border-bottom:
-        1px solid rgba(255, 255, 255, 0.05);
+      display: grid;
+      grid-template-columns: 120px minmax(140px, 0.8fr) minmax(180px, 1.4fr);
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
 
     .run-slot:last-child {
-      border-bottom:
-        0;
+      border-bottom: 0;
     }
 
 
     .slot-role {
-      font-family:
-        "Cinzel",
-        serif;
-
-      font-size:
-        0.8rem;
-
-      font-weight:
-        700;
+      font-family: "Cinzel", serif;
+      font-size: 0.8rem;
+      font-weight: 700;
     }
 
 
     .slot-player {
-      color:
-        #ddb45d;
-
-      font-weight:
-        600;
+      color: #ddb45d;
+      font-weight: 600;
     }
 
 
     .slot-requirements {
-      opacity:
-        0.75;
+      opacity: 0.75;
     }
 
 
     .open-slot {
-      opacity:
-        0.45;
-
-      font-style:
-        italic;
+      opacity: 0.45;
+      font-style: italic;
     }
 
 
 
     /* ======================================================
-       ORGANISER EDITOR
+       ORGANISER
        ====================================================== */
 
     .organiser-tools {
-      display:
-        none;
+      display: none;
     }
 
 
     .organiser-tools.active {
-      display:
-        block;
+      display: inline-block;
     }
 
 
     .group-editor {
-      padding:
-        16px;
-
-      background:
-        #0e0d0c;
-
-      border-top:
-        1px solid rgba(218, 165, 32, 0.15);
+      padding: 16px;
+      background: #0e0d0c;
+      border-top: 1px solid rgba(218, 165, 32, 0.15);
     }
 
 
     .editor-slot {
-      display:
-        grid;
-
-      grid-template-columns:
-        130px
-        1fr
-        1.4fr
-        auto;
-
-      gap:
-        8px;
-
-      margin-top:
-        9px;
-
-      align-items:
-        end;
+      display: grid;
+      grid-template-columns: 130px 1fr 1.4fr auto;
+      gap: 8px;
+      margin-top: 9px;
+      align-items: end;
     }
 
 
     .editor-slot select,
     .editor-slot input {
-      width:
-        100%;
-
-      box-sizing:
-        border-box;
-
-      padding:
-        9px;
-
-      border:
-        1px solid rgba(218, 165, 32, 0.25);
-
-      background:
-        #161412;
-
-      color:
-        white;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 9px;
+      border: 1px solid rgba(218, 165, 32, 0.25);
+      background: #161412;
+      color: white;
     }
 
 
 
     /* ======================================================
-       ADD GROUP MODAL
+       MODALS
        ====================================================== */
 
     .modal-backdrop {
-      display:
-        none;
-
-      position:
-        fixed;
-
-      inset:
-        0;
-
-      z-index:
-        300;
-
-      padding:
-        25px 15px;
-
-      overflow-y:
-        auto;
-
-      background:
-        rgba(0, 0, 0, 0.82);
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      padding: 25px 15px;
+      overflow-y: auto;
+      background: rgba(0, 0, 0, 0.82);
     }
 
 
     .modal-backdrop.open {
-      display:
-        block;
+      display: block;
     }
 
 
     .modal {
-      width:
-        min(600px, 100%);
-
-      margin:
-        40px auto;
-
-      padding:
-        24px;
-
-      border:
-        1px solid rgba(218, 165, 32, 0.4);
-
-      background:
-        #141210;
+      width: min(620px, 100%);
+      margin: 40px auto;
+      padding: 24px;
+      border: 1px solid rgba(218, 165, 32, 0.4);
+      background: #141210;
     }
 
 
     .modal h2 {
-      margin-top:
-        0;
-
-      font-family:
-        "Cinzel",
-        serif;
+      margin-top: 0;
+      font-family: "Cinzel", serif;
     }
 
 
     .template-grid {
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap:
-        10px;
-
-      margin-top:
-        15px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 15px;
     }
 
 
     .template-option {
-      padding:
-        12px;
-
-      border:
-        1px solid rgba(218, 165, 32, 0.25);
-
-      background:
-        #171513;
-
-      cursor:
-        pointer;
-
-      color:
-        white;
+      padding: 12px;
+      border: 1px solid rgba(218, 165, 32, 0.25);
+      background: #171513;
+      cursor: pointer;
+      color: white;
     }
 
 
     .template-option.active {
-      border-color:
-        #43d6ba;
-
-      background:
-        rgba(67, 214, 186, 0.08);
+      border-color: #43d6ba;
+      background: rgba(67, 214, 186, 0.08);
     }
 
 
 
     /* ======================================================
-       DISCORD ANNOUNCEMENT
+       ANNOUNCEMENT
        ====================================================== */
 
     .announcement-preview {
-      white-space:
-        pre-wrap;
-
-      padding:
-        15px;
-
-      background:
-        #090807;
-
-      border:
-        1px solid rgba(218, 165, 32, 0.18);
-
-      font-family:
-        monospace;
-
-      line-height:
-        1.55;
-
-      max-height:
-        430px;
-
-      overflow-y:
-        auto;
+      white-space: pre-wrap;
+      padding: 15px;
+      background: #090807;
+      border: 1px solid rgba(218, 165, 32, 0.18);
+      font-family: monospace;
+      line-height: 1.55;
+      max-height: 430px;
+      overflow-y: auto;
     }
 
 
-
-    /* ======================================================
-       EMPTY
-       ====================================================== */
-
     .empty-state {
-      opacity:
-        0.55;
-
-      font-style:
-        italic;
+      opacity: 0.55;
+      font-style: italic;
     }
 
 
@@ -1004,56 +683,45 @@
        MOBILE
        ====================================================== */
 
-    @media
-    (max-width: 800px) {
+    @media (max-width: 800px) {
 
       .event-meta-grid {
-        grid-template-columns:
-          repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
 
 
       .signup-layout {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
 
 
       .run-slot {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
 
 
       .editor-slot {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
 
 
       .template-grid {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
 
     }
 
 
-    @media
-    (max-width: 500px) {
+    @media (max-width: 500px) {
 
       .event-top-actions {
-        flex-direction:
-          column;
-
-        align-items:
-          flex-start;
+        flex-direction: column;
+        align-items: flex-start;
       }
 
 
       .event-meta-grid {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
 
     }
@@ -1072,10 +740,7 @@
 
   <header class="site-header">
 
-    <a
-      href="index.html"
-      class="brand"
-    >
+    <a href="index.html" class="brand">
 
       <img
         src="images/logo.png"
@@ -1100,29 +765,12 @@
 
     <nav class="desktop-nav">
 
-      <a href="index.html">
-        HOME
-      </a>
-
-      <a href="community.html">
-        COMMUNITY
-      </a>
-
-      <a href="build-guides.html">
-        CHAOS GUIDES
-      </a>
-
-      <a href="events.html">
-        EVENTS
-      </a>
-
-      <a href="merch.html">
-        MERCH
-      </a>
-
-      <a href="index.html#contact">
-        CONTACT
-      </a>
+      <a href="index.html">HOME</a>
+      <a href="community.html">COMMUNITY</a>
+      <a href="build-guides.html">CHAOS GUIDES</a>
+      <a href="events.html">EVENTS</a>
+      <a href="merch.html">MERCH</a>
+      <a href="index.html#contact">CONTACT</a>
 
     </nav>
 
@@ -1145,7 +793,9 @@
     <div class="event-shell">
 
 
-      <!-- LOGIN -->
+      <!-- ==================================================
+           LOGIN
+           ================================================== -->
 
       <section
         class="event-login-panel"
@@ -1163,12 +813,9 @@
 
         <form id="eventLoginForm">
 
-
           <div class="field">
 
-            <label
-              for="guildName"
-            >
+            <label for="guildName">
               GUILD NAME
             </label>
 
@@ -1183,9 +830,7 @@
 
           <div class="field">
 
-            <label
-              for="accessCode"
-            >
+            <label for="accessCode">
               ACCESS CODE
             </label>
 
@@ -1213,14 +858,15 @@
             Chaos has no idea who you are. 😂
           </p>
 
-
         </form>
 
       </section>
 
 
 
-      <!-- EVENT APP -->
+      <!-- ==================================================
+           APP
+           ================================================== -->
 
       <section
         class="event-app"
@@ -1230,7 +876,6 @@
 
         <div class="event-top-actions">
 
-
           <a
             href="events.html"
             class="secondary-button"
@@ -1239,13 +884,36 @@
           </a>
 
 
-          <div
-            class="event-top-actions-right"
-          >
+          <div class="event-top-actions-right">
 
-            <span
-              id="loggedInName"
-            ></span>
+            <span id="loggedInName"></span>
+
+
+            <button
+              type="button"
+              class="secondary-button organiser-tools"
+              id="editEventButton"
+            >
+              EDIT EVENT
+            </button>
+
+
+            <button
+              type="button"
+              class="warning-button organiser-tools"
+              id="cancelEventButton"
+            >
+              CANCEL EVENT
+            </button>
+
+
+            <button
+              type="button"
+              class="danger-button organiser-tools"
+              id="deleteEventButton"
+            >
+              DELETE
+            </button>
 
 
             <button
@@ -1258,16 +926,24 @@
 
           </div>
 
-
         </div>
 
 
 
-        <!-- EVENT DETAILS -->
-
-        <section
-          class="event-hero"
+        <div
+          class="cancelled-banner"
+          id="cancelledBanner"
         >
+          THIS EVENT HAS BEEN CANCELLED
+        </div>
+
+
+
+        <!-- ==================================================
+             EVENT HERO
+             ================================================== -->
+
+        <section class="event-hero">
 
 
           <div
@@ -1276,31 +952,24 @@
           ></div>
 
 
-          <h1
-            id="eventTitle"
-          >
+          <h1 id="eventTitle">
             LOADING CHAOS...
           </h1>
 
 
           <div
+            class="event-created"
             id="eventCreatedBy"
           ></div>
 
 
 
-          <div
-            class="event-meta-grid"
-          >
+          <div class="event-meta-grid">
 
 
-            <div
-              class="event-meta-box"
-            >
+            <div class="event-meta-box">
 
-              <div
-                class="event-meta-label"
-              >
+              <div class="event-meta-label">
                 DATE
               </div>
 
@@ -1313,13 +982,9 @@
 
 
 
-            <div
-              class="event-meta-box"
-            >
+            <div class="event-meta-box">
 
-              <div
-                class="event-meta-label"
-              >
+              <div class="event-meta-label">
                 START TIME
               </div>
 
@@ -1332,13 +997,9 @@
 
 
 
-            <div
-              class="event-meta-box"
-            >
+            <div class="event-meta-box">
 
-              <div
-                class="event-meta-label"
-              >
+              <div class="event-meta-label">
                 MEET TIME
               </div>
 
@@ -1351,13 +1012,9 @@
 
 
 
-            <div
-              class="event-meta-box"
-            >
+            <div class="event-meta-box">
 
-              <div
-                class="event-meta-label"
-              >
+              <div class="event-meta-label">
                 MEET LOCATION
               </div>
 
@@ -1373,6 +1030,13 @@
 
 
 
+          <div
+            class="run-status-box"
+            id="runStatus"
+          ></div>
+
+
+
           <p
             class="event-notes"
             id="eventNotes"
@@ -1380,9 +1044,7 @@
 
 
 
-          <div
-            class="discord-box"
-          >
+          <div class="discord-box">
 
             <strong>
               DISCORD TIME
@@ -1410,16 +1072,14 @@
 
 
 
-        <!-- SIGNUPS -->
+        <!-- ==================================================
+             SIGNUPS
+             ================================================== -->
 
-        <section
-          class="event-panel"
-        >
+        <section class="event-panel">
 
 
-          <div
-            class="panel-heading"
-          >
+          <div class="panel-heading">
 
             <h2>
               SIGN UPS
@@ -1429,9 +1089,7 @@
 
 
 
-          <div
-            class="signup-layout"
-          >
+          <div class="signup-layout">
 
 
             <form
@@ -1445,19 +1103,40 @@
               </h3>
 
 
-              <div
-                class="field"
-              >
 
-                <label
-                  for="signupRole"
-                >
+              <div class="field">
+
+                <label for="signupStatus">
+                  ATTENDANCE
+                </label>
+
+                <select id="signupStatus">
+
+                  <option value="Going">
+                    ✅ Going
+                  </option>
+
+                  <option value="Reserve">
+                    🟡 Reserve
+                  </option>
+
+                  <option value="Maybe">
+                    ❔ Maybe
+                  </option>
+
+                </select>
+
+              </div>
+
+
+
+              <div class="field">
+
+                <label for="signupRole">
                   PREFERRED ROLE
                 </label>
 
-                <select
-                  id="signupRole"
-                >
+                <select id="signupRole">
 
                   <option value="Tank">
                     🛡️ Tank
@@ -1485,13 +1164,9 @@
 
 
 
-              <div
-                class="field"
-              >
+              <div class="field">
 
-                <label
-                  for="signupNote"
-                >
+                <label for="signupNote">
                   NOTES
                 </label>
 
@@ -1501,6 +1176,7 @@
                 ></textarea>
 
               </div>
+
 
 
               <button
@@ -1547,7 +1223,9 @@
 
 
 
-        <!-- RUN SHEET -->
+        <!-- ==================================================
+             RUN SHEET
+             ================================================== -->
 
         <section
           class="event-panel"
@@ -1555,9 +1233,7 @@
         >
 
 
-          <div
-            class="panel-heading"
-          >
+          <div class="panel-heading">
 
             <h2>
               RUN SHEET
@@ -1576,25 +1252,21 @@
 
 
 
-          <div
-            id="runGroups"
-          ></div>
+          <div id="runGroups"></div>
 
 
         </section>
 
 
 
-        <!-- DISCORD COPY -->
+        <!-- ==================================================
+             DISCORD
+             ================================================== -->
 
-        <section
-          class="event-panel"
-        >
+        <section class="event-panel">
 
 
-          <div
-            class="panel-heading"
-          >
+          <div class="panel-heading">
 
             <h2>
               DISCORD ANNOUNCEMENT
@@ -1639,29 +1311,19 @@
     id="groupModal"
   >
 
-
-    <div
-      class="modal"
-    >
-
+    <div class="modal">
 
       <h2>
         ADD RUN GROUP
       </h2>
 
 
-      <form
-        id="groupForm"
-      >
+      <form id="groupForm">
 
 
-        <div
-          class="field"
-        >
+        <div class="field">
 
-          <label
-            for="groupName"
-          >
+          <label for="groupName">
             GROUP / PHASE NAME
           </label>
 
@@ -1676,16 +1338,12 @@
         </div>
 
 
-
         <p>
           Starting layout:
         </p>
 
 
-        <div
-          class="template-grid"
-        >
-
+        <div class="template-grid">
 
           <button
             type="button"
@@ -1719,14 +1377,10 @@
             BUILD IT YOURSELF
           </button>
 
-
         </div>
 
 
-
-        <div
-          style="margin-top:20px;"
-        >
+        <div style="margin-top:20px;">
 
           <button
             type="submit"
@@ -1752,6 +1406,149 @@
 
     </div>
 
+  </div>
+
+
+
+  <!-- ======================================================
+       EDIT EVENT MODAL
+       ====================================================== -->
+
+  <div
+    class="modal-backdrop"
+    id="editEventModal"
+  >
+
+    <div class="modal">
+
+      <h2>
+        EDIT EVENT
+      </h2>
+
+
+      <form id="editEventForm">
+
+
+        <div class="field">
+
+          <label for="editTitle">
+            EVENT NAME
+          </label>
+
+          <input
+            id="editTitle"
+            type="text"
+            maxlength="80"
+            required
+          >
+
+        </div>
+
+
+
+        <div class="field">
+
+          <label for="editDate">
+            DATE
+          </label>
+
+          <input
+            id="editDate"
+            type="date"
+            required
+          >
+
+        </div>
+
+
+
+        <div class="field">
+
+          <label for="editStartTime">
+            START TIME
+          </label>
+
+          <input
+            id="editStartTime"
+            type="time"
+            required
+          >
+
+        </div>
+
+
+
+        <div class="field">
+
+          <label for="editMeetTime">
+            MEET TIME
+          </label>
+
+          <input
+            id="editMeetTime"
+            type="time"
+          >
+
+        </div>
+
+
+
+        <div class="field">
+
+          <label for="editMeetLocation">
+            MEET LOCATION
+          </label>
+
+          <input
+            id="editMeetLocation"
+            type="text"
+            maxlength="80"
+          >
+
+        </div>
+
+
+
+        <div class="field">
+
+          <label for="editNotes">
+            NOTES
+          </label>
+
+          <textarea
+            id="editNotes"
+            maxlength="1000"
+          ></textarea>
+
+        </div>
+
+
+
+        <div style="margin-top:20px;">
+
+          <button
+            type="submit"
+            class="primary-button"
+          >
+            SAVE CHANGES
+          </button>
+
+
+          <button
+            type="button"
+            class="secondary-button"
+            id="closeEditModal"
+          >
+            CANCEL
+          </button>
+
+        </div>
+
+
+      </form>
+
+
+    </div>
 
   </div>
 
@@ -1766,9 +1563,7 @@
 
     import {
       initializeApp
-    }
-    from
-    "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
 
 
     import {
@@ -1776,9 +1571,7 @@
       signInWithEmailAndPassword,
       signOut,
       onAuthStateChanged
-    }
-    from
-    "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 
 
     import {
@@ -1794,58 +1587,41 @@
       query,
       orderBy,
       onSnapshot
-    }
-    from
-    "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
 
 
     /* ======================================================
-       FIREBASE
+       FIREBASE CONFIG
        ====================================================== */
 
     const firebaseConfig = {
 
-      apiKey:
-        "AIzaSyDQjutG0oa4v8dpI3i3UlgsFC9EmWsX4kI",
+      apiKey: "AIzaSyDQjutG0oa4v8dpI3i3UlgsFC9EmWsX4kI",
 
-      authDomain:
-        "rotating-chaos-chat.firebaseapp.com",
+      authDomain: "rotating-chaos-chat.firebaseapp.com",
 
-      projectId:
-        "rotating-chaos-chat",
+      projectId: "rotating-chaos-chat",
 
-      storageBucket:
-        "rotating-chaos-chat.firebasestorage.app",
+      storageBucket: "rotating-chaos-chat.firebasestorage.app",
 
-      messagingSenderId:
-        "337862334710",
+      messagingSenderId: "337862334710",
 
-      appId:
-        "1:337862334710:web:92e38dd0646dd9bec474d7",
+      appId: "1:337862334710:web:92e38dd0646dd9bec474d7",
 
-      measurementId:
-        "G-7M761SJ4CJ"
+      measurementId: "G-7M761SJ4CJ"
 
     };
 
 
     const app =
-      initializeApp(
-        firebaseConfig
-      );
-
+      initializeApp(firebaseConfig);
 
     const auth =
-      getAuth(
-        app
-      );
-
+      getAuth(app);
 
     const db =
-      getFirestore(
-        app
-      );
+      getFirestore(app);
 
 
 
@@ -1860,16 +1636,12 @@
 
 
     const eventId =
-      params.get(
-        "id"
-      );
+      params.get("id");
 
 
     if (!eventId) {
-
       window.location.href =
         "events.html";
-
     }
 
 
@@ -1881,29 +1653,26 @@
     let eventData =
       null;
 
-
     let currentGuildName =
       "";
-
 
     let organiser =
       false;
 
-
     let currentSignups =
       [];
-
 
     let currentGroups =
       [];
 
-
     let unsubscribeSignups =
       null;
 
-
     let unsubscribeGroups =
       null;
+
+    let selectedTemplate =
+      "five";
 
 
 
@@ -1912,145 +1681,118 @@
        ====================================================== */
 
     const eventLoginPanel =
-      document.getElementById(
-        "eventLoginPanel"
-      );
-
+      document.getElementById("eventLoginPanel");
 
     const eventApp =
-      document.getElementById(
-        "eventApp"
-      );
-
+      document.getElementById("eventApp");
 
     const eventLoginForm =
-      document.getElementById(
-        "eventLoginForm"
-      );
-
+      document.getElementById("eventLoginForm");
 
     const guildName =
-      document.getElementById(
-        "guildName"
-      );
-
+      document.getElementById("guildName");
 
     const accessCode =
-      document.getElementById(
-        "accessCode"
-      );
-
+      document.getElementById("accessCode");
 
     const loginError =
-      document.getElementById(
-        "loginError"
-      );
-
+      document.getElementById("loginError");
 
     const loggedInName =
-      document.getElementById(
-        "loggedInName"
-      );
-
+      document.getElementById("loggedInName");
 
     const signOutButton =
-      document.getElementById(
-        "signOutButton"
-      );
-
+      document.getElementById("signOutButton");
 
     const signupForm =
-      document.getElementById(
-        "signupForm"
-      );
+      document.getElementById("signupForm");
 
+    const signupStatus =
+      document.getElementById("signupStatus");
 
     const signupRole =
-      document.getElementById(
-        "signupRole"
-      );
-
+      document.getElementById("signupRole");
 
     const signupNote =
-      document.getElementById(
-        "signupNote"
-      );
-
+      document.getElementById("signupNote");
 
     const removeSignup =
-      document.getElementById(
-        "removeSignup"
-      );
-
+      document.getElementById("removeSignup");
 
     const signupList =
-      document.getElementById(
-        "signupList"
-      );
-
+      document.getElementById("signupList");
 
     const runGroups =
-      document.getElementById(
-        "runGroups"
-      );
-
+      document.getElementById("runGroups");
 
     const runSheetPanel =
-      document.getElementById(
-        "runSheetPanel"
-      );
-
+      document.getElementById("runSheetPanel");
 
     const openGroupModal =
-      document.getElementById(
-        "openGroupModal"
-      );
-
+      document.getElementById("openGroupModal");
 
     const groupModal =
-      document.getElementById(
-        "groupModal"
-      );
-
+      document.getElementById("groupModal");
 
     const closeGroupModal =
-      document.getElementById(
-        "closeGroupModal"
-      );
-
+      document.getElementById("closeGroupModal");
 
     const groupForm =
-      document.getElementById(
-        "groupForm"
-      );
-
+      document.getElementById("groupForm");
 
     const groupName =
-      document.getElementById(
-        "groupName"
-      );
-
+      document.getElementById("groupName");
 
     const copyAnnouncement =
-      document.getElementById(
-        "copyAnnouncement"
-      );
-
+      document.getElementById("copyAnnouncement");
 
     const announcementPreview =
-      document.getElementById(
-        "announcementPreview"
-      );
-
+      document.getElementById("announcementPreview");
 
     const copyTimestamp =
-      document.getElementById(
-        "copyTimestamp"
-      );
+      document.getElementById("copyTimestamp");
 
+    const cancelledBanner =
+      document.getElementById("cancelledBanner");
 
-    let selectedTemplate =
-      "five";
+    const runStatus =
+      document.getElementById("runStatus");
+
+    const editEventButton =
+      document.getElementById("editEventButton");
+
+    const cancelEventButton =
+      document.getElementById("cancelEventButton");
+
+    const deleteEventButton =
+      document.getElementById("deleteEventButton");
+
+    const editEventModal =
+      document.getElementById("editEventModal");
+
+    const editEventForm =
+      document.getElementById("editEventForm");
+
+    const editTitle =
+      document.getElementById("editTitle");
+
+    const editDate =
+      document.getElementById("editDate");
+
+    const editStartTime =
+      document.getElementById("editStartTime");
+
+    const editMeetTime =
+      document.getElementById("editMeetTime");
+
+    const editMeetLocation =
+      document.getElementById("editMeetLocation");
+
+    const editNotes =
+      document.getElementById("editNotes");
+
+    const closeEditModal =
+      document.getElementById("closeEditModal");
 
 
 
@@ -2058,42 +1800,29 @@
        ACCOUNT EMAIL
        ====================================================== */
 
-    function makeAccountEmail(
-      name
-    ) {
+    function makeAccountEmail(name) {
 
       const cleaned =
         name
           .trim()
           .toLowerCase()
-          .replace(
-            /[^a-z0-9]/g,
-            ""
-          );
+          .replace(/[^a-z0-9]/g, "");
 
 
-      return (
-        `${cleaned}@rotatingchaos.local`
-      );
+      return `${cleaned}@rotatingchaos.local`;
 
     }
 
 
 
-    function prettyNameFromEmail(
-      email
-    ) {
+    function prettyNameFromEmail(email) {
 
       const raw =
-        email.split(
-          "@"
-        )[0];
+        email.split("@")[0];
 
 
-      return (
-        raw.charAt(0).toUpperCase()
-        + raw.slice(1)
-      );
+      return raw.charAt(0).toUpperCase()
+        + raw.slice(1);
 
     }
 
@@ -2105,12 +1834,9 @@
 
     eventLoginForm.addEventListener(
       "submit",
-      async (
-        event
-      ) => {
+      async (event) => {
 
         event.preventDefault();
-
 
         loginError.style.display =
           "none";
@@ -2118,7 +1844,6 @@
 
         const name =
           guildName.value.trim();
-
 
         const password =
           accessCode.value;
@@ -2128,9 +1853,7 @@
 
           await signInWithEmailAndPassword(
             auth,
-            makeAccountEmail(
-              name
-            ),
+            makeAccountEmail(name),
             password
           );
 
@@ -2151,14 +1874,9 @@
         }
 
 
-        catch (
-          error
-        ) {
+        catch (error) {
 
-          console.error(
-            error
-          );
-
+          console.error(error);
 
           loginError.style.display =
             "block";
@@ -2176,9 +1894,7 @@
 
     onAuthStateChanged(
       auth,
-      async (
-        user
-      ) => {
+      async (user) => {
 
         if (user) {
 
@@ -2186,8 +1902,7 @@
             sessionStorage.getItem(
               "chaosNickname"
             )
-            ||
-            prettyNameFromEmail(
+            || prettyNameFromEmail(
               user.email
             );
 
@@ -2205,7 +1920,6 @@
 
 
           await loadEvent();
-
 
         }
 
@@ -2235,9 +1949,7 @@
         );
 
 
-        await signOut(
-          auth
-        );
+        await signOut(auth);
 
       }
     );
@@ -2284,6 +1996,10 @@
         snapshot.data();
 
 
+      eventData.cancelled =
+        eventData.cancelled || false;
+
+
       organiser =
         auth.currentUser.uid
         === eventData.createdByUid;
@@ -2292,10 +2008,7 @@
       renderEventDetails();
 
 
-      if (
-        eventData.type
-        === "quick"
-      ) {
+      if (eventData.type === "quick") {
 
         runSheetPanel.style.display =
           "none";
@@ -2311,9 +2024,7 @@
       }
 
 
-      if (
-        organiser
-      ) {
+      if (organiser) {
 
         document
           .querySelectorAll(
@@ -2360,8 +2071,7 @@
       document.getElementById(
         "eventType"
       ).textContent =
-        eventData.type
-        === "organised"
+        eventData.type === "organised"
           ? "ORGANISED RUN"
           : "QUICK EVENT";
 
@@ -2389,53 +2099,301 @@
       document.getElementById(
         "eventStart"
       ).textContent =
-        eventData.startTime
-        || "—";
+        eventData.startTime || "—";
 
 
       document.getElementById(
         "eventMeetTime"
       ).textContent =
-        eventData.meetTime
-        || "—";
+        eventData.meetTime || "—";
 
 
       document.getElementById(
         "eventMeetLocation"
       ).textContent =
-        eventData.meetLocation
-        || "TBC";
+        eventData.meetLocation || "TBC";
 
 
       document.getElementById(
         "eventNotes"
       ).textContent =
-        eventData.notes
-        || "";
+        eventData.notes || "";
 
 
       document.getElementById(
         "discordTimestamp"
       ).textContent =
-        eventData.discordTimestamp
-        || "";
+        eventData.discordTimestamp || "";
+
+
+      if (eventData.cancelled) {
+
+        cancelledBanner.classList.add(
+          "show"
+        );
+
+
+        cancelEventButton.textContent =
+          "RESTORE EVENT";
+
+      }
+
+
+      else {
+
+        cancelledBanner.classList.remove(
+          "show"
+        );
+
+
+        cancelEventButton.textContent =
+          "CANCEL EVENT";
+
+      }
+
+
+      updateRunStatus();
 
     }
 
 
 
     /* ======================================================
-       SIGN UPS
+       EDIT EVENT
+       ====================================================== */
+
+    editEventButton.addEventListener(
+      "click",
+      () => {
+
+        editTitle.value =
+          eventData.title || "";
+
+        editDate.value =
+          eventData.eventDate || "";
+
+        editStartTime.value =
+          eventData.startTime || "";
+
+        editMeetTime.value =
+          eventData.meetTime || "";
+
+        editMeetLocation.value =
+          eventData.meetLocation || "";
+
+        editNotes.value =
+          eventData.notes || "";
+
+
+        editEventModal.classList.add(
+          "open"
+        );
+
+      }
+    );
+
+
+
+    closeEditModal.addEventListener(
+      "click",
+      () => {
+
+        editEventModal.classList.remove(
+          "open"
+        );
+
+      }
+    );
+
+
+
+    editEventForm.addEventListener(
+      "submit",
+      async (event) => {
+
+        event.preventDefault();
+
+
+        const startDateTime =
+          new Date(
+            `${editDate.value}T${editStartTime.value}:00`
+          );
+
+
+        const unix =
+          Math.floor(
+            startDateTime.getTime()
+            / 1000
+          );
+
+
+        const discordCode =
+          `<t:${unix}:F>  •  <t:${unix}:R>`;
+
+
+        await updateDoc(
+          doc(
+            db,
+            "events",
+            eventId
+          ),
+          {
+
+            title:
+              editTitle.value.trim(),
+
+            eventDate:
+              editDate.value,
+
+            startTime:
+              editStartTime.value,
+
+            startTimestamp:
+              unix,
+
+            meetTime:
+              editMeetTime.value || "",
+
+            meetLocation:
+              editMeetLocation.value.trim(),
+
+            notes:
+              editNotes.value.trim(),
+
+            discordTimestamp:
+              discordCode
+
+          }
+        );
+
+
+        eventData = {
+
+          ...eventData,
+
+          title:
+            editTitle.value.trim(),
+
+          eventDate:
+            editDate.value,
+
+          startTime:
+            editStartTime.value,
+
+          startTimestamp:
+            unix,
+
+          meetTime:
+            editMeetTime.value || "",
+
+          meetLocation:
+            editMeetLocation.value.trim(),
+
+          notes:
+            editNotes.value.trim(),
+
+          discordTimestamp:
+            discordCode
+
+        };
+
+
+        editEventModal.classList.remove(
+          "open"
+        );
+
+
+        renderEventDetails();
+
+        generateAnnouncement();
+
+      }
+    );
+
+
+
+    /* ======================================================
+       CANCEL / RESTORE
+       ====================================================== */
+
+    cancelEventButton.addEventListener(
+      "click",
+      async () => {
+
+        const newStatus =
+          !eventData.cancelled;
+
+
+        await updateDoc(
+          doc(
+            db,
+            "events",
+            eventId
+          ),
+          {
+            cancelled:
+              newStatus
+          }
+        );
+
+
+        eventData.cancelled =
+          newStatus;
+
+
+        renderEventDetails();
+
+        generateAnnouncement();
+
+      }
+    );
+
+
+
+    /* ======================================================
+       DELETE
+       ====================================================== */
+
+    deleteEventButton.addEventListener(
+      "click",
+      async () => {
+
+        const confirmed =
+          window.confirm(
+            "Delete this event completely? This one really does go into the void. 😂"
+          );
+
+
+        if (!confirmed) {
+          return;
+        }
+
+
+        await deleteDoc(
+          doc(
+            db,
+            "events",
+            eventId
+          )
+        );
+
+
+        window.location.href =
+          "events.html";
+
+      }
+    );
+
+
+
+    /* ======================================================
+       SIGNUPS
        ====================================================== */
 
     function startSignupListener() {
 
-      if (
-        unsubscribeSignups
-      ) {
-
+      if (unsubscribeSignups) {
         unsubscribeSignups();
-
       }
 
 
@@ -2461,9 +2419,7 @@
               item => {
 
                 currentSignups.push({
-                  uid:
-                    item.id,
-
+                  uid: item.id,
                   ...item.data()
                 });
 
@@ -2472,10 +2428,7 @@
 
 
             currentSignups.sort(
-              (
-                a,
-                b
-              ) =>
+              (a, b) =>
                 a.name.localeCompare(
                   b.name
                 )
@@ -2484,12 +2437,9 @@
 
             renderSignups();
 
-
             loadMySignup();
 
-
             renderGroups();
-
 
             generateAnnouncement();
 
@@ -2502,9 +2452,7 @@
 
     signupForm.addEventListener(
       "submit",
-      async (
-        event
-      ) => {
+      async (event) => {
 
         event.preventDefault();
 
@@ -2531,6 +2479,9 @@
             name:
               currentGuildName,
 
+            status:
+              signupStatus.value,
+
             role:
               signupRole.value,
 
@@ -2543,7 +2494,8 @@
           }
         );
 
-    });
+      }
+    );
 
 
 
@@ -2570,7 +2522,8 @@
           )
         );
 
-    });
+      }
+    );
 
 
 
@@ -2588,27 +2541,31 @@
       const mine =
         currentSignups.find(
           signup =>
-            signup.uid
-            === user.uid
+            signup.uid === user.uid
         );
 
 
-      if (
-        mine
-      ) {
+      if (mine) {
+
+        signupStatus.value =
+          mine.status || "Going";
+
 
         signupRole.value =
           mine.role;
 
 
         signupNote.value =
-          mine.note
-          || "";
+          mine.note || "";
 
       }
 
 
       else {
+
+        signupStatus.value =
+          "Going";
+
 
         signupRole.value =
           "DPS";
@@ -2630,8 +2587,7 @@
 
 
       if (
-        currentSignups.length
-        === 0
+        currentSignups.length === 0
       ) {
 
         signupList.innerHTML =
@@ -2676,14 +2632,31 @@
             signup.name;
 
 
-          left.appendChild(
-            name
-          );
+          left.appendChild(name);
 
 
-          if (
-            signup.note
-          ) {
+          const status =
+            document.createElement(
+              "div"
+            );
+
+
+          status.className =
+            "signup-person-status";
+
+
+          status.textContent =
+            `${statusIcon(
+              signup.status || "Going"
+            )} ${
+              signup.status || "Going"
+            }`;
+
+
+          left.appendChild(status);
+
+
+          if (signup.note) {
 
             const note =
               document.createElement(
@@ -2699,9 +2672,7 @@
               signup.note;
 
 
-            left.appendChild(
-              note
-            );
+            left.appendChild(note);
 
           }
 
@@ -2717,26 +2688,16 @@
 
 
           role.textContent =
-            roleIcon(
-              signup.role
-            )
+            roleIcon(signup.role)
             + " "
             + signup.role;
 
 
-          card.appendChild(
-            left
-          );
+          card.appendChild(left);
 
+          card.appendChild(role);
 
-          card.appendChild(
-            role
-          );
-
-
-          signupList.appendChild(
-            card
-          );
+          signupList.appendChild(card);
 
         }
       );
@@ -2751,12 +2712,8 @@
 
     function startGroupsListener() {
 
-      if (
-        unsubscribeGroups
-      ) {
-
+      if (unsubscribeGroups) {
         unsubscribeGroups();
-
       }
 
 
@@ -2788,9 +2745,7 @@
               item => {
 
                 currentGroups.push({
-                  id:
-                    item.id,
-
+                  id: item.id,
                   ...item.data()
                 });
 
@@ -2800,11 +2755,105 @@
 
             renderGroups();
 
+            updateRunStatus();
 
             generateAnnouncement();
 
           }
         );
+
+    }
+
+
+
+    function updateRunStatus() {
+
+      if (
+        !eventData
+        || eventData.type !== "organised"
+      ) {
+
+        runStatus.style.display =
+          "none";
+
+
+        return;
+
+      }
+
+
+      let total =
+        0;
+
+
+      let filled =
+        0;
+
+
+      currentGroups.forEach(
+        group => {
+
+          (group.slots || [])
+            .forEach(
+              slot => {
+
+                total++;
+
+
+                if (slot.assignedUid) {
+                  filled++;
+                }
+
+              }
+            );
+
+        }
+      );
+
+
+      if (total === 0) {
+
+        runStatus.style.display =
+          "none";
+
+
+        return;
+
+      }
+
+
+      const open =
+        total - filled;
+
+
+      runStatus.style.display =
+        "block";
+
+
+      runStatus.classList.remove(
+        "full"
+      );
+
+
+      if (open === 0) {
+
+        runStatus.textContent =
+          `RUN FULL ◆ ${filled}/${total} SLOTS FILLED`;
+
+
+        runStatus.classList.add(
+          "full"
+        );
+
+      }
+
+
+      else {
+
+        runStatus.textContent =
+          `${open} SPOT${open === 1 ? "" : "S"} OPEN ◆ ${filled}/${total} FILLED`;
+
+      }
 
     }
 
@@ -2817,12 +2866,14 @@
 
 
       if (
-        currentGroups.length
-        === 0
+        currentGroups.length === 0
       ) {
 
         runGroups.innerHTML =
           '<p class="empty-state">No groups have been built yet.</p>';
+
+
+        updateRunStatus();
 
 
         return;
@@ -2863,14 +2914,10 @@
             group.name;
 
 
-          header.appendChild(
-            title
-          );
+          header.appendChild(title);
 
 
-          if (
-            organiser
-          ) {
+          if (organiser) {
 
             const actions =
               document.createElement(
@@ -2918,19 +2965,11 @@
               "DELETE";
 
 
-            actions.appendChild(
-              edit
-            );
+            actions.appendChild(edit);
 
+            actions.appendChild(remove);
 
-            actions.appendChild(
-              remove
-            );
-
-
-            header.appendChild(
-              actions
-            );
+            header.appendChild(actions);
 
 
             edit.addEventListener(
@@ -2975,9 +3014,7 @@
           }
 
 
-          wrapper.appendChild(
-            header
-          );
+          wrapper.appendChild(header);
 
 
           const slots =
@@ -2991,13 +3028,11 @@
 
 
           const groupSlots =
-            group.slots
-            || [];
+            group.slots || [];
 
 
           if (
-            groupSlots.length
-            === 0
+            groupSlots.length === 0
           ) {
 
             slots.innerHTML =
@@ -3030,9 +3065,7 @@
 
 
               role.textContent =
-                roleIcon(
-                  slot.role
-                )
+                roleIcon(slot.role)
                 + " "
                 + slot.role;
 
@@ -3065,44 +3098,30 @@
 
 
               requirements.textContent =
-                slot.requirements
-                || "";
+                slot.requirements || "";
 
 
-              row.appendChild(
-                role
-              );
+              row.appendChild(role);
 
+              row.appendChild(player);
 
-              row.appendChild(
-                player
-              );
+              row.appendChild(requirements);
 
-
-              row.appendChild(
-                requirements
-              );
-
-
-              slots.appendChild(
-                row
-              );
+              slots.appendChild(row);
 
             }
           );
 
 
-          wrapper.appendChild(
-            slots
-          );
+          wrapper.appendChild(slots);
 
-
-          runGroups.appendChild(
-            wrapper
-          );
+          runGroups.appendChild(wrapper);
 
         }
       );
+
+
+      updateRunStatus();
 
     }
 
@@ -3123,12 +3142,9 @@
         );
 
 
-      if (
-        existing
-      ) {
+      if (existing) {
 
         existing.remove();
-
 
         return;
 
@@ -3148,8 +3164,7 @@
       let slots =
         JSON.parse(
           JSON.stringify(
-            group.slots
-            || []
+            group.slots || []
           )
         );
 
@@ -3167,10 +3182,7 @@
 
 
         slots.forEach(
-          (
-            slot,
-            index
-          ) => {
+          (slot, index) => {
 
             const row =
               document.createElement(
@@ -3212,8 +3224,7 @@
 
 
                 if (
-                  slot.role
-                  === role
+                  slot.role === role
                 ) {
 
                   option.selected =
@@ -3222,9 +3233,7 @@
                 }
 
 
-                roleSelect.appendChild(
-                  option
-                );
+                roleSelect.appendChild(option);
 
               }
             );
@@ -3250,45 +3259,47 @@
               "[ OPEN ]";
 
 
-            playerSelect.appendChild(
-              empty
-            );
+            playerSelect.appendChild(empty);
 
 
-            currentSignups.forEach(
-              signup => {
+            currentSignups
+              .filter(
+                signup =>
+                  (signup.status || "Going")
+                  !== "Maybe"
+              )
+              .forEach(
+                signup => {
 
-                const option =
-                  document.createElement(
-                    "option"
-                  );
-
-
-                option.value =
-                  signup.uid;
-
-
-                option.textContent =
-                  `${signup.name} (${signup.role})`;
+                  const option =
+                    document.createElement(
+                      "option"
+                    );
 
 
-                if (
-                  slot.assignedUid
-                  === signup.uid
-                ) {
+                  option.value =
+                    signup.uid;
 
-                  option.selected =
-                    true;
+
+                  option.textContent =
+                    `${signup.name} (${signup.role} / ${signup.status || "Going"})`;
+
+
+                  if (
+                    slot.assignedUid
+                    === signup.uid
+                  ) {
+
+                    option.selected =
+                      true;
+
+                  }
+
+
+                  playerSelect.appendChild(option);
 
                 }
-
-
-                playerSelect.appendChild(
-                  option
-                );
-
-              }
-            );
+              );
 
 
             const requirements =
@@ -3306,8 +3317,7 @@
 
 
             requirements.value =
-              slot.requirements
-              || "";
+              slot.requirements || "";
 
 
             const remove =
@@ -3393,29 +3403,15 @@
             );
 
 
-            row.appendChild(
-              roleSelect
-            );
+            row.appendChild(roleSelect);
 
+            row.appendChild(playerSelect);
 
-            row.appendChild(
-              playerSelect
-            );
+            row.appendChild(requirements);
 
+            row.appendChild(remove);
 
-            row.appendChild(
-              requirements
-            );
-
-
-            row.appendChild(
-              remove
-            );
-
-
-            slotContainer.appendChild(
-              row
-            );
+            slotContainer.appendChild(row);
 
           }
         );
@@ -3496,8 +3492,7 @@
               group.id
             ),
             {
-              slots:
-                slots
+              slots: slots
             }
           );
 
@@ -3505,24 +3500,13 @@
       );
 
 
-      editor.appendChild(
-        slotContainer
-      );
+      editor.appendChild(slotContainer);
 
+      editor.appendChild(addSlot);
 
-      editor.appendChild(
-        addSlot
-      );
+      editor.appendChild(save);
 
-
-      editor.appendChild(
-        save
-      );
-
-
-      wrapper.appendChild(
-        editor
-      );
+      wrapper.appendChild(editor);
 
     }
 
@@ -3600,9 +3584,7 @@
 
     groupForm.addEventListener(
       "submit",
-      async (
-        event
-      ) => {
+      async (event) => {
 
         event.preventDefault();
 
@@ -3658,66 +3640,31 @@
        TEMPLATES
        ====================================================== */
 
-    function buildTemplate(
-      template
-    ) {
+    function buildTemplate(template) {
 
-      if (
-        template
-        === "blank"
-      ) {
+      if (template === "blank") {
 
         return [];
 
       }
 
 
-      if (
-        template
-        === "ten"
-      ) {
+      if (template === "ten") {
 
         return [
 
-          createEmptySlot(
-            "Tank"
-          ),
+          createEmptySlot("Tank"),
+          createEmptySlot("Tank"),
 
-          createEmptySlot(
-            "Tank"
-          ),
+          createEmptySlot("Healer"),
+          createEmptySlot("Healer"),
 
-          createEmptySlot(
-            "Healer"
-          ),
-
-          createEmptySlot(
-            "Healer"
-          ),
-
-          createEmptySlot(
-            "DPS"
-          ),
-
-          createEmptySlot(
-            "DPS"
-          ),
-
-          createEmptySlot(
-            "DPS"
-          ),
-
-          createEmptySlot(
-            "DPS"
-          ),
-
-          createEmptySlot(
-            "DPS"
-          ),
-
-          createEmptySlot(
-            "DPS"
-          )
+          createEmptySlot("DPS"),
+          createEmptySlot("DPS"),
+          createEmptySlot("DPS"),
+          createEmptySlot("DPS"),
+          createEmptySlot("DPS"),
+          createEmptySlot("DPS")
 
         ];
 
@@ -3726,25 +3673,12 @@
 
       return [
 
-        createEmptySlot(
-          "Tank"
-        ),
+        createEmptySlot("Tank"),
+        createEmptySlot("Healer"),
 
-        createEmptySlot(
-          "Healer"
-        ),
-
-        createEmptySlot(
-          "DPS"
-        ),
-
-        createEmptySlot(
-          "DPS"
-        ),
-
-        createEmptySlot(
-          "DPS"
-        )
+        createEmptySlot("DPS"),
+        createEmptySlot("DPS"),
+        createEmptySlot("DPS")
 
       ];
 
@@ -3752,9 +3686,7 @@
 
 
 
-    function createEmptySlot(
-      role
-    ) {
+    function createEmptySlot(role) {
 
       return {
 
@@ -3785,20 +3717,28 @@
 
     function generateAnnouncement() {
 
-      if (
-        !eventData
-      ) {
+      if (!eventData) {
         return;
       }
 
 
       let text =
+        "";
+
+
+      if (eventData.cancelled) {
+
+        text +=
+          `🚨 **CANCELLED** 🚨\n\n`;
+
+      }
+
+
+      text +=
         `🔥 **${eventData.title.toUpperCase()}** 🔥\n\n`;
 
 
-      if (
-        eventData.discordTimestamp
-      ) {
+      if (eventData.discordTimestamp) {
 
         text +=
           `🕒 ${eventData.discordTimestamp}\n`;
@@ -3806,17 +3746,13 @@
       }
 
 
-      if (
-        eventData.meetLocation
-      ) {
+      if (eventData.meetLocation) {
 
         text +=
           `📍 **MEET UP:** ${eventData.meetLocation}`;
 
 
-        if (
-          eventData.meetTime
-        ) {
+        if (eventData.meetTime) {
 
           text +=
             ` at ${eventData.meetTime}`;
@@ -3830,14 +3766,13 @@
       }
 
 
-      if (
-        eventData.notes
-      ) {
+      if (eventData.notes) {
 
         text +=
           `\n${eventData.notes}\n`;
 
       }
+
 
 
       if (
@@ -3855,37 +3790,32 @@
               `**${group.name.toUpperCase()}**\n\n`;
 
 
-            (
-              group.slots
-              || []
-            )
-            .forEach(
-              slot => {
-
-                text +=
-                  `${roleIcon(slot.role)} **${slot.role}:** `;
-
-
-                text +=
-                  slot.assignedName
-                  || "[ OPEN ]";
-
-
-                if (
-                  slot.requirements
-                ) {
+            (group.slots || [])
+              .forEach(
+                slot => {
 
                   text +=
-                    ` ➡️ ${slot.requirements}`;
+                    `${roleIcon(slot.role)} **${slot.role}:** `;
+
+
+                  text +=
+                    slot.assignedName
+                    || "[ OPEN ]";
+
+
+                  if (slot.requirements) {
+
+                    text +=
+                      ` ➡️ ${slot.requirements}`;
+
+                  }
+
+
+                  text +=
+                    `\n`;
 
                 }
-
-
-                text +=
-                  `\n`;
-
-              }
-            );
+              );
 
           }
         );
@@ -3893,40 +3823,102 @@
       }
 
 
+
       if (
-        currentSignups.length
-        > 0
+        currentSignups.length > 0
       ) {
 
-        text +=
-          `\n━━━━━━━━━━━━━━\n`;
-
-        text +=
-          `**SIGNED UP:**\n`;
-
-
-        currentSignups.forEach(
-          signup => {
-
-            text +=
-              `${roleIcon(signup.role)} ${signup.name} — ${signup.role}`;
+        const going =
+          currentSignups.filter(
+            signup =>
+              (signup.status || "Going")
+              === "Going"
+          );
 
 
-            if (
-              signup.note
-            ) {
+        const reserves =
+          currentSignups.filter(
+            signup =>
+              signup.status
+              === "Reserve"
+          );
+
+
+        const maybes =
+          currentSignups.filter(
+            signup =>
+              signup.status
+              === "Maybe"
+          );
+
+
+        if (going.length > 0) {
+
+          text +=
+            `\n━━━━━━━━━━━━━━\n`;
+
+          text +=
+            `**GOING:**\n`;
+
+
+          going.forEach(
+            signup => {
 
               text +=
-                ` (${signup.note})`;
+                `${roleIcon(signup.role)} ${signup.name} — ${signup.role}`;
+
+
+              if (signup.note) {
+
+                text +=
+                  ` (${signup.note})`;
+
+              }
+
+
+              text +=
+                `\n`;
 
             }
+          );
+
+        }
 
 
-            text +=
-              `\n`;
+        if (reserves.length > 0) {
 
-          }
-        );
+          text +=
+            `\n**RESERVES:**\n`;
+
+
+          reserves.forEach(
+            signup => {
+
+              text +=
+                `🟡 ${signup.name} — ${signup.role}\n`;
+
+            }
+          );
+
+        }
+
+
+        if (maybes.length > 0) {
+
+          text +=
+            `\n**MAYBE:**\n`;
+
+
+          maybes.forEach(
+            signup => {
+
+              text +=
+                `❔ ${signup.name} — ${signup.role}\n`;
+
+            }
+          );
+
+        }
 
       }
 
@@ -3976,8 +3968,7 @@
 
         if (
           !eventData
-          ||
-          !eventData.discordTimestamp
+          || !eventData.discordTimestamp
         ) {
           return;
         }
@@ -4011,29 +4002,21 @@
        HELPERS
        ====================================================== */
 
-    function roleIcon(
-      role
-    ) {
+    function roleIcon(role) {
 
-      switch (
-        role
-      ) {
+      switch (role) {
 
         case "Tank":
           return "🛡️";
 
-
         case "Healer":
           return "💙";
-
 
         case "DPS":
           return "⚔️";
 
-
         case "Filler":
           return "⭐";
-
 
         default:
           return "🎲";
@@ -4044,9 +4027,26 @@
 
 
 
-    function formatDate(
-      dateString
-    ) {
+    function statusIcon(status) {
+
+      switch (status) {
+
+        case "Reserve":
+          return "🟡";
+
+        case "Maybe":
+          return "❔";
+
+        default:
+          return "✅";
+
+      }
+
+    }
+
+
+
+    function formatDate(dateString) {
 
       const date =
         new Date(

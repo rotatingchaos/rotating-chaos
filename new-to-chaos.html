@@ -2,29 +2,620 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="New to Rotating Chaos? Start here for guild guidance, builds, dungeon mechanics and support."
+    content="New to Rotating Chaos - Start Here"
   >
 
   <title>New to Chaos | Rotating Chaos</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Crimson+Pro:wght@400;500;600&display=swap"
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+
+  <style>
+
+    /* ======================================================
+       PAGE
+       ====================================================== */
+
+    .new-page {
+      min-height: 100vh;
+
+      padding:
+        70px 20px 100px;
+
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(15, 130, 105, 0.10),
+          transparent 35%
+        ),
+        #0d0c0b;
+    }
+
+
+    .new-shell {
+      width:
+        min(
+          1150px,
+          100%
+        );
+
+      margin:
+        0 auto;
+    }
+
+
+
+    /* ======================================================
+       HERO
+       ====================================================== */
+
+    .new-hero {
+      display:
+        grid;
+
+      grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(260px, 0.8fr);
+
+      gap:
+        40px;
+
+      align-items:
+        center;
+
+      margin-bottom:
+        38px;
+
+      padding:
+        35px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.28);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(67, 214, 186, 0.08),
+          rgba(218, 165, 32, 0.05)
+        );
+    }
+
+
+    .new-hero h1 {
+      margin:
+        5px 0 12px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        clamp(
+          2.4rem,
+          6vw,
+          4.8rem
+        );
+    }
+
+
+    .new-hero p {
+      font-family:
+        "Crimson Pro",
+        serif;
+
+      font-size:
+        1.2rem;
+
+      line-height:
+        1.6;
+    }
+
+
+    .new-hero-image {
+      display:
+        flex;
+
+      justify-content:
+        center;
+
+      align-items:
+        center;
+    }
+
+
+    .new-hero-image img {
+      width:
+        min(
+          360px,
+          100%
+        );
+
+      display:
+        block;
+
+      filter:
+        drop-shadow(
+          0 15px 35px rgba(0, 0, 0, 0.45)
+        );
+    }
+
+
+
+    /* ======================================================
+       INTRO
+       ====================================================== */
+
+    .new-intro {
+      text-align:
+        center;
+
+      margin-bottom:
+        32px;
+
+      padding:
+        28px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.22);
+
+      background:
+        #151310;
+    }
+
+
+    .new-intro h2 {
+      margin-top:
+        0;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .new-intro p {
+      max-width:
+        760px;
+
+      margin:
+        10px auto 0;
+
+      line-height:
+        1.65;
+
+      font-family:
+        "Crimson Pro",
+        serif;
+
+      font-size:
+        1.1rem;
+    }
+
+
+
+    /* ======================================================
+       START GRID
+       ====================================================== */
+
+    .start-grid {
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          1fr
+        );
+
+      gap:
+        18px;
+
+      margin-bottom:
+        35px;
+    }
+
+
+    .start-card {
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+      padding:
+        20px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.22);
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(67, 214, 186, 0.025),
+          #151310
+        );
+    }
+
+
+    .start-number {
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      width:
+        34px;
+
+      height:
+        34px;
+
+      margin-bottom:
+        12px;
+
+      border-radius:
+        50%;
+
+      border:
+        1px solid rgba(67, 214, 186, 0.4);
+
+      background:
+        rgba(67, 214, 186, 0.08);
+
+      color:
+        #8be5d2;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-weight:
+        800;
+    }
+
+
+    .start-card h3 {
+      margin:
+        0 0 8px;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .start-card p {
+      line-height:
+        1.55;
+
+      opacity:
+        0.82;
+
+      flex:
+        1;
+    }
+
+
+    .start-link {
+      display:
+        inline-block;
+
+      align-self:
+        flex-start;
+
+      margin-top:
+        14px;
+
+      padding:
+        9px 12px;
+
+      border:
+        1px solid rgba(67, 214, 186, 0.3);
+
+      background:
+        rgba(67, 214, 186, 0.06);
+
+      color:
+        #9ae8d8;
+
+      text-decoration:
+        none;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        0.75rem;
+    }
+
+
+
+    /* ======================================================
+       CHECKLIST
+       ====================================================== */
+
+    .checklist-panel {
+      margin-top:
+        30px;
+
+      padding:
+        25px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.28);
+
+      background:
+        #121110;
+    }
+
+
+    .checklist-panel h2 {
+      margin-top:
+        0;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .checklist {
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          1fr
+        );
+
+      gap:
+        10px 18px;
+
+      margin-top:
+        18px;
+    }
+
+
+    .check-item {
+      display:
+        flex;
+
+      gap:
+        10px;
+
+      align-items:
+        flex-start;
+
+      padding:
+        10px 12px;
+
+      border:
+        1px solid rgba(255,255,255,0.05);
+
+      background:
+        rgba(255,255,255,0.02);
+    }
+
+
+    .check-icon {
+      color:
+        #43d6ba;
+
+      font-size:
+        1.05rem;
+    }
+
+
+
+    /* ======================================================
+       EXPECTATIONS
+       ====================================================== */
+
+    .expectations-panel {
+      margin-top:
+        30px;
+
+      padding:
+        25px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.24);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(218, 165, 32, 0.04),
+          rgba(67, 214, 186, 0.03)
+        );
+    }
+
+
+    .expectations-panel h2 {
+      margin-top:
+        0;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .expectations-list {
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          1fr
+        );
+
+      gap:
+        12px 18px;
+
+      margin-top:
+        18px;
+    }
+
+
+    .expectation {
+      padding:
+        14px;
+
+      border:
+        1px solid rgba(255,255,255,0.05);
+
+      background:
+        rgba(0,0,0,0.12);
+    }
+
+
+    .expectation strong {
+      display:
+        block;
+
+      margin-bottom:
+        5px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      color:
+        #ddb45d;
+    }
+
+
+
+    /* ======================================================
+       HELP STRIP
+       ====================================================== */
+
+    .help-strip {
+      margin-top:
+        30px;
+
+      padding:
+        24px;
+
+      text-align:
+        center;
+
+      border:
+        1px solid rgba(67, 214, 186, 0.24);
+
+      background:
+        rgba(67, 214, 186, 0.05);
+    }
+
+
+    .help-strip h2 {
+      margin-top:
+        0;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .help-strip p {
+      max-width:
+        700px;
+
+      margin:
+        0 auto 16px;
+
+      line-height:
+        1.6;
+    }
+
+
+
+    /* ======================================================
+       MOBILE
+       ====================================================== */
+
+    @media
+    (max-width: 900px) {
+
+      .new-hero {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .new-hero-image {
+        order:
+          -1;
+      }
+
+
+      .start-grid {
+        grid-template-columns:
+          repeat(
+            2,
+            1fr
+          );
+      }
+
+    }
+
+
+    @media
+    (max-width: 650px) {
+
+      .start-grid,
+      .checklist,
+      .expectations-list {
+        grid-template-columns:
+          1fr;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 
 <body>
+
 
   <!-- ======================================================
        HEADER
@@ -32,7 +623,10 @@
 
   <header class="site-header">
 
-    <a href="index.html" class="brand">
+    <a
+      href="index.html"
+      class="brand"
+    >
 
       <img
         src="images/logo.png"
@@ -61,15 +655,15 @@
         HOME
       </a>
 
-      <a href="index.html#about">
-        THE CHAOS CREW
+      <a href="community.html">
+        COMMUNITY
       </a>
 
       <a href="build-guides.html">
         CHAOS GUIDES
       </a>
 
-      <a href="index.html#events">
+      <a href="events.html">
         EVENTS
       </a>
 
@@ -97,281 +691,452 @@
 
 
 
-  <main>
+  <main class="new-page">
+
+    <div class="new-shell">
 
 
-    <!-- ======================================================
-         NEW TO CHAOS HERO
-         ====================================================== -->
+      <!-- ==================================================
+           HERO
+           ================================================== -->
 
-    <section class="magic-page-hero guides-hero">
+      <section class="new-hero">
 
-      <div class="guides-hero-content">
+
+        <div>
+
+          <p class="section-eyebrow">
+            NEW HERE? START HERE.
+          </p>
+
+          <h1>
+            NEW TO CHAOS?
+          </h1>
+
+          <p>
+            Welcome to Rotating Chaos. You do not need to know everything,
+            own everything or pretend you know what the hell is going on.
+            We’ll get you sorted.
+          </p>
+
+        </div>
+
+
+
+        <div class="new-hero-image">
+
+          <img
+            src="images/new.png"
+            alt="New to Rotating Chaos"
+          >
+
+        </div>
+
+
+      </section>
+
+
+
+      <!-- ==================================================
+           INTRO
+           ================================================== -->
+
+      <section class="new-intro">
 
         <p class="section-eyebrow">
-          WELCOME TO THE GUILD
-        </p>
-
-        <h1>
-          NEW TO CHAOS?
-        </h1>
-
-        <p class="guides-intro">
-          New player, returning player or just trying to work out what the hell
-          changed while you were gone? Start here.
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ======================================================
-         GETTING STARTED GRID
-         ====================================================== -->
-
-    <section class="build-guides-section">
-
-      <div class="build-guides-grid">
-
-
-        <!-- WELCOME -->
-
-        <article class="build-class-card">
-
-          <h2>
-            WELCOME TO ROTATING CHAOS
-          </h2>
-
-          <div class="paragon-links">
-
-            <a href="index.html#about">
-              Meet the Guild
-            </a>
-
-            <a
-              href="https://discord.gg/UhJndyjYWr"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Join Discord
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- NEW PLAYER -->
-
-        <article class="build-class-card">
-
-          <h2>
-            NEW TO NEVERWINTER?
-          </h2>
-
-          <div class="paragon-links">
-
-            <a href="build-guides.html">
-              Explore Build Guides
-            </a>
-
-            <a href="dungeon-mechanics.html">
-              Learn Dungeon Mechanics
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- RETURNING PLAYER -->
-
-        <article class="build-class-card">
-
-          <h2>
-            RETURNING PLAYER?
-          </h2>
-
-          <div class="paragon-links">
-
-            <a href="build-guides.html">
-              Check Current Builds
-            </a>
-
-            <a href="dungeon-mechanics.html">
-              Refresh Dungeon Mechanics
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- BUILD YOUR CHARACTER -->
-
-        <article class="build-class-card">
-
-          <h2>
-            BUILD YOUR CHARACTER
-          </h2>
-
-          <div class="paragon-links">
-
-            <a href="build-guides.html">
-              Browse Every Class
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- LEARN THE MECHANICS -->
-
-        <article class="build-class-card">
-
-          <h2>
-            LEARN THE MECHANICS
-          </h2>
-
-          <div class="paragon-links">
-
-            <a href="dungeon-mechanics.html">
-              Browse Dungeon Guides
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- NEED HELP -->
-
-        <article class="build-class-card">
-
-          <h2>
-            NEED HELP?
-          </h2>
-
-          <div class="paragon-links">
-
-            <a
-              href="https://discord.gg/UhJndyjYWr"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ask the Guild
-            </a>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ======================================================
-         CHAOS NOTES
-         ====================================================== -->
-
-    <section class="build-detail-page">
-
-      <article class="build-guide-panel chaos-notes-panel">
-
-        <p class="build-panel-eyebrow">
-          FROM THE GUILD
+          GUILD ◆ FAMILY ◆ CHAOS
         </p>
 
         <h2>
-          CHAOS NOTES
+          WELCOME TO ROTATING CHAOS
         </h2>
 
         <p>
-          You do not need to know everything before joining in.
-          Ask questions, learn the mechanics, improve your build as you go
-          and most importantly — do not be afraid to say you need help.
+          We’re here to run content, learn together, help each other improve
+          and have a laugh while doing it. Nobody expects you to arrive knowing
+          every mechanic, build, dungeon or piece of guild nonsense on day one.
         </p>
+
+      </section>
+
+
+
+      <!-- ==================================================
+           START HERE
+           ================================================== -->
+
+      <section class="start-grid">
+
+
+        <article class="start-card">
+
+          <div class="start-number">
+            1
+          </div>
+
+          <h3>
+            JOIN DISCORD
+          </h3>
+
+          <p>
+            Discord is where most of the day-to-day guild chatter,
+            announcements and questionable decisions happen.
+          </p>
+
+          <a
+            href="https://discord.gg/UhJndyjYWr"
+            class="start-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            JOIN DISCORD
+          </a>
+
+        </article>
+
+
+
+        <article class="start-card">
+
+          <div class="start-number">
+            2
+          </div>
+
+          <h3>
+            MEET THE CREW
+          </h3>
+
+          <p>
+            See who’s who, what people play and who is most likely
+            to drag you into content you absolutely did not volunteer for.
+          </p>
+
+          <a
+            href="chaos-crew.html"
+            class="start-link"
+          >
+            MEET THE CREW
+          </a>
+
+        </article>
+
+
+
+        <article class="start-card">
+
+          <div class="start-number">
+            3
+          </div>
+
+          <h3>
+            CHECK THE EVENTS
+          </h3>
+
+          <p>
+            See upcoming runs, guild nights and organised content.
+            Sign up, choose your role and join the carnage.
+          </p>
+
+          <a
+            href="events.html"
+            class="start-link"
+          >
+            VIEW EVENTS
+          </a>
+
+        </article>
+
+
+
+        <article class="start-card">
+
+          <div class="start-number">
+            4
+          </div>
+
+          <h3>
+            USE CHAOS CHAT
+          </h3>
+
+          <p>
+            Our private guild messenger for chatting, planning,
+            reacting and generally behaving badly in a controlled environment.
+          </p>
+
+          <a
+            href="chaos-chat.html"
+            class="start-link"
+          >
+            ENTER CHAOS CHAT
+          </a>
+
+        </article>
+
+
+
+        <article class="start-card">
+
+          <div class="start-number">
+            5
+          </div>
+
+          <h3>
+            CHECK YOUR BUILD
+          </h3>
+
+          <p>
+            Head to the build guides if you want help with your class,
+            stats, paragon or general setup.
+          </p>
+
+          <a
+            href="build-guides.html"
+            class="start-link"
+          >
+            CHAOS GUIDES
+          </a>
+
+        </article>
+
+
+
+        <article class="start-card">
+
+          <div class="start-number">
+            6
+          </div>
+
+          <h3>
+            SEE WHAT WE’VE BEEN UP TO
+          </h3>
+
+          <p>
+            Browse the gallery and From the Chaos for guild updates,
+            memories, wins, fails and whatever else escaped Discord.
+          </p>
+
+          <a
+            href="community.html"
+            class="start-link"
+          >
+            COMMUNITY HUB
+          </a>
+
+        </article>
+
+
+      </section>
+
+
+
+      <!-- ==================================================
+           FIRST WEEK CHECKLIST
+           ================================================== -->
+
+      <section class="checklist-panel">
+
+        <p class="section-eyebrow">
+          YOUR FIRST WEEK
+        </p>
+
+        <h2>
+          CHAOS CHECKLIST
+        </h2>
+
+
+        <div class="checklist">
+
+          <div class="check-item">
+            <span class="check-icon">◆</span>
+            <span>Join the guild Discord.</span>
+          </div>
+
+          <div class="check-item">
+            <span class="check-icon">◆</span>
+            <span>Make sure you have your guild website login.</span>
+          </div>
+
+          <div class="check-item">
+            <span class="check-icon">◆</span>
+            <span>Create your Chaos Crew profile.</span>
+          </div>
+
+          <div class="check-item">
+            <span class="check-icon">◆</span>
+            <span>Have a nose through the build guides.</span>
+          </div>
+
+          <div class="check-item">
+            <span class="check-icon">◆</span>
+            <span>Check upcoming events and runs.</span>
+          </div>
+
+          <div class="check-item">
+            <span class="check-icon">◆</span>
+            <span>Say hello somewhere before we assume you’re a Mimic.</span>
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ==================================================
+           EXPECTATIONS
+           ================================================== -->
+
+      <section class="expectations-panel">
+
+        <p class="section-eyebrow">
+          THE IMPORTANT BIT
+        </p>
+
+        <h2>
+          HOW WE DO THINGS
+        </h2>
+
+
+        <div class="expectations-list">
+
+
+          <div class="expectation">
+
+            <strong>
+              HELP EACH OTHER
+            </strong>
+
+            Nobody knows everything. Ask questions, share what you know
+            and don’t make people feel stupid for learning.
+
+          </div>
+
+
+
+          <div class="expectation">
+
+            <strong>
+              RESPECT PEOPLE
+            </strong>
+
+            Banter is banter. Being a dick is still being a dick.
+            Know the difference.
+
+          </div>
+
+
+
+          <div class="expectation">
+
+            <strong>
+              SPEAK UP
+            </strong>
+
+            If you’re confused, struggling with mechanics or need help
+            with a build, say so. That’s literally what the guild is for.
+
+          </div>
+
+
+
+          <div class="expectation">
+
+            <strong>
+              HAVE A LAUGH
+            </strong>
+
+            We take clearing content seriously.
+            We do not take ourselves particularly seriously.
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ==================================================
+           HELP
+           ================================================== -->
+
+      <section class="help-strip">
+
+        <p class="section-eyebrow">
+          STUCK?
+        </p>
+
+        <h2>
+          ASK THE CHAOS
+        </h2>
 
         <p>
-          Rotating Chaos is built around helping people progress together.
-          Nobody starts with everything figured out, and half the game changes
-          every time you look away anyway.
+          If you’re not sure where to go next, ask in Discord or Chaos Chat.
+          Someone will know the answer. Or confidently give you the wrong one
+          until somebody sensible appears. 😂
         </p>
 
-      </article>
-
-
-
-      <!-- BACK HOME -->
-
-      <div class="build-back-link">
-
-        <a href="index.html">
-          ← BACK TO HOME
-        </a>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ======================================================
-         FOOTER
-         ====================================================== -->
-
-    <footer>
-
-      <h2>
-        STAY CONNECTED
-      </h2>
-
-      <p class="footer-tagline">
-        GUILD ◆ FAMILY ◆ CHAOS
-      </p>
-
-
-      <div class="footer-links">
 
         <a
-          href="https://discord.gg/UhJndyjYWr"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="chaos-chat.html"
+          class="start-link"
         >
-          Discord
+          GO TO CHAOS CHAT
         </a>
 
-        <a href="index.html#contact">
-          Contact
-        </a>
-
-        <a href="#">
-          Privacy
-        </a>
-
-      </div>
+      </section>
 
 
-      <p class="copyright">
-        © 2026 Rotating Chaos.
-        Neverwinter is property of its respective owners.
-      </p>
-
-    </footer>
-
+    </div>
 
   </main>
+
+
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+
+  <footer id="contact">
+
+    <h2>
+      STAY CONNECTED
+    </h2>
+
+    <p class="footer-tagline">
+      GUILD ◆ FAMILY ◆ CHAOS
+    </p>
+
+
+    <div class="footer-links">
+
+      <a
+        href="https://discord.gg/UhJndyjYWr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Discord
+      </a>
+
+      <a href="community.html">
+        Community
+      </a>
+
+      <a href="#">
+        Privacy
+      </a>
+
+    </div>
+
+
+    <p class="copyright">
+      © 2026 Rotating Chaos.
+      Neverwinter is property of its respective owners.
+    </p>
+
+  </footer>
+
 
 </body>
 

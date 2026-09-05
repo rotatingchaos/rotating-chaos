@@ -285,7 +285,8 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
+      position: relative;
     }
 
 
@@ -354,15 +355,22 @@
        MESSAGE REACTIONS
        ====================================================== */
 
-    .message-reactions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
+    .message-reaction-area {
+      position: relative;
       margin-top: 6px;
     }
 
 
-    .reaction-button {
+    .message-reactions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+    }
+
+
+    .reaction-button,
+    .reaction-add-button {
       border: 1px solid rgba(218, 165, 32, 0.2);
       background: rgba(255, 255, 255, 0.04);
       color: #f6efe2;
@@ -371,10 +379,12 @@
       cursor: pointer;
       font-size: 0.88rem;
       line-height: 1.2;
+      min-height: 28px;
     }
 
 
-    .reaction-button:hover {
+    .reaction-button:hover,
+    .reaction-add-button:hover {
       border-color: rgba(218, 165, 32, 0.65);
       background: rgba(218, 165, 32, 0.08);
     }
@@ -390,6 +400,76 @@
       margin-left: 3px;
       font-size: 0.78rem;
       opacity: 0.85;
+    }
+
+
+    .reaction-add-button {
+      font-weight: 700;
+      color: #ddb45d;
+    }
+
+
+
+    /* ======================================================
+       REACTION PICKER
+       ====================================================== */
+
+    .reaction-picker {
+      display: none;
+      position: absolute;
+      z-index: 60;
+      left: 0;
+      bottom: 36px;
+      width: min(340px, calc(100vw - 70px));
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(218, 165, 32, 0.4);
+      background: #171513;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.55);
+    }
+
+
+    .message-own .reaction-picker {
+      left: auto;
+      right: 0;
+    }
+
+
+    .reaction-picker.open {
+      display: block;
+    }
+
+
+    .reaction-picker-title {
+      margin: 0 0 8px;
+      font-family: "Cinzel", serif;
+      font-size: 0.72rem;
+      letter-spacing: 1px;
+      opacity: 0.65;
+    }
+
+
+    .reaction-picker-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 3px;
+      max-height: 190px;
+      overflow-y: auto;
+    }
+
+
+    .reaction-choice {
+      border: 0;
+      background: transparent;
+      font-size: 1.15rem;
+      padding: 6px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+
+    .reaction-choice:hover {
+      background: rgba(218, 165, 32, 0.14);
     }
 
 
@@ -604,6 +684,16 @@
         width: min(390px, calc(100vw - 36px));
       }
 
+
+      .reaction-picker {
+        width: min(330px, calc(100vw - 50px));
+      }
+
+
+      .reaction-picker-grid {
+        grid-template-columns: repeat(7, 1fr);
+      }
+
     }
 
   </style>
@@ -613,6 +703,10 @@
 
 <body>
 
+
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
 
   <header class="site-header">
 
@@ -700,7 +794,9 @@
 
 
 
-      <!-- LOGIN -->
+      <!-- ==================================================
+           LOGIN
+           ================================================== -->
 
       <section
         class="chat-login-card"
@@ -774,7 +870,9 @@
 
 
 
-      <!-- MESSENGER -->
+      <!-- ==================================================
+           MESSENGER
+           ================================================== -->
 
       <section
         class="messenger"
@@ -849,6 +947,10 @@
 
 
 
+            <!-- ==================================================
+                 CHAT TOOLS
+                 ================================================== -->
+
             <div class="chat-toolbar">
 
               <button
@@ -874,6 +976,8 @@
               </span>
 
 
+
+              <!-- MAIN EMOJI PICKER -->
 
               <div
                 class="emoji-picker"
@@ -927,10 +1031,13 @@
 
 
 
+                <!-- FACES -->
+
                 <div
                   class="emoji-category active"
                   data-category="faces"
                 >
+
                   <button type="button" class="emoji-choice">😀</button>
                   <button type="button" class="emoji-choice">😃</button>
                   <button type="button" class="emoji-choice">😄</button>
@@ -959,14 +1066,18 @@
                   <button type="button" class="emoji-choice">💀</button>
                   <button type="button" class="emoji-choice">🤡</button>
                   <button type="button" class="emoji-choice">🥳</button>
+
                 </div>
 
 
+
+                <!-- REACTIONS -->
 
                 <div
                   class="emoji-category"
                   data-category="reactions"
                 >
+
                   <button type="button" class="emoji-choice">❤️</button>
                   <button type="button" class="emoji-choice">🧡</button>
                   <button type="button" class="emoji-choice">💛</button>
@@ -988,14 +1099,18 @@
                   <button type="button" class="emoji-choice">💪</button>
                   <button type="button" class="emoji-choice">🫡</button>
                   <button type="button" class="emoji-choice">🎉</button>
+
                 </div>
 
 
+
+                <!-- GAMING -->
 
                 <div
                   class="emoji-category"
                   data-category="gaming"
                 >
+
                   <button type="button" class="emoji-choice">🎮</button>
                   <button type="button" class="emoji-choice">🕹️</button>
                   <button type="button" class="emoji-choice">⚔️</button>
@@ -1016,14 +1131,18 @@
                   <button type="button" class="emoji-choice">📜</button>
                   <button type="button" class="emoji-choice">🏰</button>
                   <button type="button" class="emoji-choice">🎲</button>
+
                 </div>
 
 
+
+                <!-- FANTASY -->
 
                 <div
                   class="emoji-category"
                   data-category="fantasy"
                 >
+
                   <button type="button" class="emoji-choice">🐉</button>
                   <button type="button" class="emoji-choice">🐲</button>
                   <button type="button" class="emoji-choice">🧙‍♂️</button>
@@ -1047,14 +1166,18 @@
                   <button type="button" class="emoji-choice">⚡</button>
                   <button type="button" class="emoji-choice">🌙</button>
                   <button type="button" class="emoji-choice">⭐</button>
+
                 </div>
 
 
+
+                <!-- RANDOM -->
 
                 <div
                   class="emoji-category"
                   data-category="random"
                 >
+
                   <button type="button" class="emoji-choice">🍻</button>
                   <button type="button" class="emoji-choice">🍺</button>
                   <button type="button" class="emoji-choice">🍷</button>
@@ -1078,6 +1201,7 @@
                   <button type="button" class="emoji-choice">🌈</button>
                   <button type="button" class="emoji-choice">👽</button>
                   <button type="button" class="emoji-choice">💣</button>
+
                 </div>
 
 
@@ -1086,6 +1210,8 @@
             </div>
 
 
+
+            <!-- MESSAGE BOX -->
 
             <form
               class="chat-compose"
@@ -1113,15 +1239,23 @@
 
           </div>
 
+
         </div>
+
 
       </section>
 
+
     </div>
+
 
   </main>
 
 
+
+  <!-- ======================================================
+       FIREBASE
+       ====================================================== -->
 
   <script type="module">
 
@@ -1421,6 +1555,7 @@
           "chaosNickname"
         );
 
+
         await signOut(auth);
 
       }
@@ -1429,7 +1564,7 @@
 
 
     /* ======================================================
-       EMOJI PICKER
+       MAIN EMOJI PICKER
        ====================================================== */
 
     emojiButton.addEventListener(
@@ -1477,7 +1612,11 @@
 
 
             if (target) {
-              target.classList.add("active");
+
+              target.classList.add(
+                "active"
+              );
+
             }
 
           }
@@ -1543,26 +1682,6 @@
 
 
 
-    document.addEventListener(
-      "click",
-      (event) => {
-
-        if (
-          !emojiPicker.contains(event.target)
-          && !emojiButton.contains(event.target)
-        ) {
-
-          emojiPicker.classList.remove(
-            "open"
-          );
-
-        }
-
-      }
-    );
-
-
-
     /* ======================================================
        GIF / IMAGE BUTTON
        ====================================================== */
@@ -1607,6 +1726,7 @@
 
         }
 
+
         else {
 
           messageInput.value =
@@ -1632,6 +1752,7 @@
 
         const parsed =
           new URL(url);
+
 
         const path =
           parsed.pathname.toLowerCase();
@@ -1730,7 +1851,9 @@
               );
 
 
-              container.appendChild(image);
+              container.appendChild(
+                image
+              );
 
             }
 
@@ -1757,7 +1880,9 @@
                 piece;
 
 
-              container.appendChild(link);
+              container.appendChild(
+                link
+              );
 
             }
 
@@ -1783,8 +1908,68 @@
        REACTIONS
        ====================================================== */
 
-    const quickReactions =
+    const defaultReactions =
       ["😂", "❤️", "💀", "🔥"];
+
+
+    const reactionChoices = [
+
+      "😀",
+      "😂",
+      "🤣",
+      "😍",
+      "🥰",
+      "😭",
+      "😱",
+      "🙄",
+
+      "🤦‍♀️",
+      "🤦‍♂️",
+      "🤷‍♀️",
+      "🤷‍♂️",
+      "🤬",
+      "💀",
+      "🤡",
+      "😈",
+
+      "❤️",
+      "💜",
+      "🖤",
+      "🔥",
+      "💯",
+      "👀",
+      "👏",
+      "🙌",
+
+      "👍",
+      "👎",
+      "👌",
+      "🫶",
+      "🖕",
+      "💪",
+      "🫡",
+      "🎉",
+
+      "⚔️",
+      "🛡️",
+      "🏹",
+      "🐉",
+      "👑",
+      "🎮",
+      "🏆",
+      "💥",
+
+      "🍻",
+      "🍿",
+      "💩",
+      "🦩",
+      "🌈",
+      "👽",
+      "💣",
+      "🚨"
+
+    ];
+
 
 
     function stopReactionListeners() {
@@ -1801,9 +1986,120 @@
 
 
 
+    function closeAllReactionPickers() {
+
+      document
+        .querySelectorAll(".reaction-picker.open")
+        .forEach(
+          picker => {
+
+            picker.classList.remove(
+              "open"
+            );
+
+          }
+        );
+
+    }
+
+
+
+    function createReactionPicker(
+      messageId,
+      getCurrentReaction
+    ) {
+
+      const picker =
+        document.createElement("div");
+
+
+      picker.className =
+        "reaction-picker";
+
+
+      const title =
+        document.createElement("p");
+
+
+      title.className =
+        "reaction-picker-title";
+
+
+      title.textContent =
+        "CHOOSE YOUR CHAOS";
+
+
+      const grid =
+        document.createElement("div");
+
+
+      grid.className =
+        "reaction-picker-grid";
+
+
+      reactionChoices.forEach(
+        (emoji) => {
+
+          const button =
+            document.createElement("button");
+
+
+          button.type =
+            "button";
+
+
+          button.className =
+            "reaction-choice";
+
+
+          button.textContent =
+            emoji;
+
+
+          button.addEventListener(
+            "click",
+            async (event) => {
+
+              event.stopPropagation();
+
+
+              await toggleReaction(
+                messageId,
+                emoji,
+                getCurrentReaction()
+              );
+
+
+              picker.classList.remove(
+                "open"
+              );
+
+            }
+          );
+
+
+          grid.appendChild(
+            button
+          );
+
+        }
+      );
+
+
+      picker.appendChild(title);
+
+      picker.appendChild(grid);
+
+
+      return picker;
+
+    }
+
+
+
     function startReactionListener(
       messageId,
-      reactionContainer
+      reactionArea
     ) {
 
       const reactionsRef =
@@ -1815,6 +2111,22 @@
         );
 
 
+      let currentReaction =
+        null;
+
+
+      const picker =
+        createReactionPicker(
+          messageId,
+          () => currentReaction
+        );
+
+
+      reactionArea.appendChild(
+        picker
+      );
+
+
       const unsubscribe =
         onSnapshot(
           reactionsRef,
@@ -1822,15 +2134,9 @@
 
             const counts = {};
 
-            let myReaction =
+
+            currentReaction =
               null;
-
-
-            quickReactions.forEach(
-              emoji => {
-                counts[emoji] = 0;
-              }
-            );
 
 
             snapshot.forEach(
@@ -1840,15 +2146,17 @@
                   reactionDocument.data();
 
 
-                if (
-                  quickReactions.includes(
-                    reaction.emoji
-                  )
-                ) {
+                const emoji =
+                  reaction.emoji;
 
-                  counts[reaction.emoji]++;
 
+                if (!emoji) {
+                  return;
                 }
+
+
+                counts[emoji] =
+                  (counts[emoji] || 0) + 1;
 
 
                 if (
@@ -1857,8 +2165,8 @@
                   === auth.currentUser.uid
                 ) {
 
-                  myReaction =
-                    reaction.emoji;
+                  currentReaction =
+                    emoji;
 
                 }
 
@@ -1866,87 +2174,146 @@
             );
 
 
-            reactionContainer.innerHTML =
-              "";
+            const oldRow =
+              reactionArea.querySelector(
+                ".message-reactions"
+              );
 
 
-            quickReactions.forEach(
+            if (oldRow) {
+
+              oldRow.remove();
+
+            }
+
+
+            const row =
+              document.createElement("div");
+
+
+            row.className =
+              "message-reactions";
+
+
+
+            /* ==============================================
+               SHOW USED REACTIONS FIRST
+               ============================================== */
+
+            const usedReactions =
+              Object.keys(counts);
+
+
+            usedReactions.forEach(
               (emoji) => {
 
                 const button =
-                  document.createElement("button");
-
-
-                button.type =
-                  "button";
-
-
-                button.className =
-                  "reaction-button";
-
-
-                if (myReaction === emoji) {
-
-                  button.classList.add(
-                    "active"
+                  createReactionButton(
+                    messageId,
+                    emoji,
+                    counts[emoji],
+                    currentReaction
                   );
 
-                }
 
-
-                const emojiSpan =
-                  document.createElement("span");
-
-
-                emojiSpan.textContent =
-                  emoji;
-
-
-                button.appendChild(
-                  emojiSpan
-                );
-
-
-                if (counts[emoji] > 0) {
-
-                  const count =
-                    document.createElement("span");
-
-
-                  count.className =
-                    "reaction-count";
-
-
-                  count.textContent =
-                    counts[emoji];
-
-
-                  button.appendChild(
-                    count
-                  );
-
-                }
-
-
-                button.addEventListener(
-                  "click",
-                  () => {
-
-                    toggleReaction(
-                      messageId,
-                      emoji,
-                      myReaction
-                    );
-
-                  }
-                );
-
-
-                reactionContainer.appendChild(
+                row.appendChild(
                   button
                 );
 
               }
+            );
+
+
+
+            /* ==============================================
+               IF NOTHING USED YET, SHOW QUICK OPTIONS
+               ============================================== */
+
+            if (usedReactions.length === 0) {
+
+              defaultReactions.forEach(
+                (emoji) => {
+
+                  const button =
+                    createReactionButton(
+                      messageId,
+                      emoji,
+                      0,
+                      currentReaction
+                    );
+
+
+                  row.appendChild(
+                    button
+                  );
+
+                }
+              );
+
+            }
+
+
+
+            /* ==============================================
+               PLUS BUTTON
+               ============================================== */
+
+            const addButton =
+              document.createElement("button");
+
+
+            addButton.type =
+              "button";
+
+
+            addButton.className =
+              "reaction-add-button";
+
+
+            addButton.textContent =
+              "+";
+
+
+            addButton.title =
+              "Choose another reaction";
+
+
+            addButton.addEventListener(
+              "click",
+              (event) => {
+
+                event.stopPropagation();
+
+
+                const wasOpen =
+                  picker.classList.contains(
+                    "open"
+                  );
+
+
+                closeAllReactionPickers();
+
+
+                if (!wasOpen) {
+
+                  picker.classList.add(
+                    "open"
+                  );
+
+                }
+
+              }
+            );
+
+
+            row.appendChild(
+              addButton
+            );
+
+
+            reactionArea.insertBefore(
+              row,
+              picker
             );
 
           }
@@ -1956,6 +2323,88 @@
       reactionUnsubscribers.push(
         unsubscribe
       );
+
+    }
+
+
+
+    function createReactionButton(
+      messageId,
+      emoji,
+      count,
+      currentReaction
+    ) {
+
+      const button =
+        document.createElement("button");
+
+
+      button.type =
+        "button";
+
+
+      button.className =
+        "reaction-button";
+
+
+      if (currentReaction === emoji) {
+
+        button.classList.add(
+          "active"
+        );
+
+      }
+
+
+      const emojiSpan =
+        document.createElement("span");
+
+
+      emojiSpan.textContent =
+        emoji;
+
+
+      button.appendChild(
+        emojiSpan
+      );
+
+
+      if (count > 0) {
+
+        const countSpan =
+          document.createElement("span");
+
+
+        countSpan.className =
+          "reaction-count";
+
+
+        countSpan.textContent =
+          count;
+
+
+        button.appendChild(
+          countSpan
+        );
+
+      }
+
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          toggleReaction(
+            messageId,
+            emoji,
+            currentReaction
+          );
+
+        }
+      );
+
+
+      return button;
 
     }
 
@@ -2025,6 +2474,44 @@
 
 
     /* ======================================================
+       CLOSE PICKERS WHEN CLICKING ELSEWHERE
+       ====================================================== */
+
+    document.addEventListener(
+      "click",
+      (event) => {
+
+        if (
+          !emojiPicker.contains(event.target)
+          && !emojiButton.contains(event.target)
+        ) {
+
+          emojiPicker.classList.remove(
+            "open"
+          );
+
+        }
+
+
+        if (
+          !event.target.closest(
+            ".reaction-picker"
+          )
+          && !event.target.closest(
+            ".reaction-add-button"
+          )
+        ) {
+
+          closeAllReactionPickers();
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
        LIVE CHAT
        ====================================================== */
 
@@ -2086,6 +2573,8 @@
 
 
 
+                /* META */
+
                 const meta =
                   document.createElement("div");
 
@@ -2137,6 +2626,8 @@
 
 
 
+                /* BUBBLE */
+
                 const bubble =
                   document.createElement("div");
 
@@ -2159,30 +2650,42 @@
                 );
 
 
-                bubble.appendChild(text);
-
-
-
-                const reactions =
-                  document.createElement("div");
-
-
-                reactions.className =
-                  "message-reactions";
-
-
-                startReactionListener(
-                  messageDocument.id,
-                  reactions
+                bubble.appendChild(
+                  text
                 );
 
 
 
-                message.appendChild(meta);
+                /* REACTIONS */
 
-                message.appendChild(bubble);
+                const reactionArea =
+                  document.createElement("div");
 
-                message.appendChild(reactions);
+
+                reactionArea.className =
+                  "message-reaction-area";
+
+
+                startReactionListener(
+                  messageDocument.id,
+                  reactionArea
+                );
+
+
+
+                message.appendChild(
+                  meta
+                );
+
+
+                message.appendChild(
+                  bubble
+                );
+
+
+                message.appendChild(
+                  reactionArea
+                );
 
 
                 messagesElement.appendChild(

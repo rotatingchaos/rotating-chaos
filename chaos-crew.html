@@ -1,0 +1,2552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Meet the Rotating Chaos Neverwinter Guild Crew"
+  >
+
+  <title>Meet the Chaos Crew | Rotating Chaos</title>
+
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Crimson+Pro:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+
+  <style>
+
+    /* ======================================================
+       PAGE
+       ====================================================== */
+
+    .crew-page {
+      min-height: 100vh;
+      padding: 70px 20px 100px;
+
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(15, 130, 105, 0.10),
+          transparent 35%
+        ),
+        #0d0c0b;
+    }
+
+
+    .crew-shell {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+    }
+
+
+
+    /* ======================================================
+       HERO
+       ====================================================== */
+
+    .crew-hero {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(260px, 0.8fr);
+
+      gap: 40px;
+
+      align-items: center;
+
+      margin-bottom: 40px;
+
+      padding: 35px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.28);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(67, 214, 186, 0.08),
+          rgba(218, 165, 32, 0.05)
+        );
+    }
+
+
+    .crew-hero h1 {
+      margin: 5px 0 12px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        clamp(
+          2.4rem,
+          6vw,
+          4.8rem
+        );
+    }
+
+
+    .crew-hero p {
+      font-family:
+        "Crimson Pro",
+        serif;
+
+      font-size:
+        1.2rem;
+
+      line-height:
+        1.6;
+    }
+
+
+    .crew-hero-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .crew-hero-image img {
+      width: min(360px, 100%);
+      display: block;
+
+      filter:
+        drop-shadow(
+          0 15px 35px rgba(0, 0, 0, 0.45)
+        );
+    }
+
+
+
+    /* ======================================================
+       LOGIN
+       ====================================================== */
+
+    .crew-login {
+      width: min(520px, 100%);
+      margin: 0 auto;
+      padding: 30px;
+
+      background: #151310;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.35);
+    }
+
+
+    .crew-login h2 {
+      margin-top: 0;
+
+      text-align: center;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .crew-login p {
+      text-align: center;
+    }
+
+
+    .crew-field {
+      margin-top: 18px;
+    }
+
+
+    .crew-field label {
+      display: block;
+      margin-bottom: 6px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+
+
+    .crew-field input,
+    .crew-field textarea,
+    .crew-field select {
+      width: 100%;
+      box-sizing: border-box;
+
+      padding: 12px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.35);
+
+      background: #11100f;
+
+      color: #f6efe2;
+
+      font: inherit;
+
+      outline: none;
+    }
+
+
+    .crew-field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+
+    .crew-primary-button {
+      border: 1px solid #d7aa42;
+      background: #d7aa42;
+      color: #111;
+      padding: 11px 16px;
+      font-family: "Cinzel", serif;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+
+    .crew-secondary-button {
+      border:
+        1px solid rgba(218, 165, 32, 0.4);
+
+      background: #171513;
+
+      color: #f6efe2;
+
+      padding: 9px 13px;
+
+      cursor: pointer;
+    }
+
+
+    .crew-danger-button {
+      border:
+        1px solid rgba(210, 80, 80, 0.5);
+
+      background:
+        rgba(130, 30, 30, 0.15);
+
+      color: #ffbaba;
+
+      padding: 8px 11px;
+
+      cursor: pointer;
+    }
+
+
+    .crew-login-button {
+      width: 100%;
+      margin-top: 22px;
+    }
+
+
+    .crew-login-error {
+      display: none;
+      margin-top: 14px;
+      text-align: center;
+      color: #ff9999;
+    }
+
+
+
+    /* ======================================================
+       APP
+       ====================================================== */
+
+    .crew-app {
+      display: none;
+    }
+
+
+    .crew-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+
+    .crew-user {
+      opacity: 0.7;
+    }
+
+
+    .crew-actions {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+    }
+
+
+
+    /* ======================================================
+       FILTERS
+       ====================================================== */
+
+    .crew-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 25px;
+    }
+
+
+    .crew-filter {
+      border:
+        1px solid rgba(218, 165, 32, 0.28);
+
+      background: #151310;
+
+      color: #f6efe2;
+
+      padding: 8px 12px;
+
+      cursor: pointer;
+
+      border-radius: 999px;
+    }
+
+
+    .crew-filter.active {
+      border-color: #43d6ba;
+
+      background:
+        rgba(67, 214, 186, 0.08);
+
+      color: #8be5d2;
+    }
+
+
+
+    /* ======================================================
+       GRID
+       ====================================================== */
+
+    .crew-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+
+    .crew-card {
+      display: flex;
+      flex-direction: column;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.22);
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(67, 214, 186, 0.03),
+          #151310
+        );
+
+      overflow: hidden;
+    }
+
+
+    .crew-avatar-wrap {
+      aspect-ratio: 1 / 1;
+      background: #090807;
+      overflow: hidden;
+      position: relative;
+    }
+
+
+    .crew-avatar {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    .crew-avatar-fallback {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(67, 214, 186, 0.15),
+          rgba(218, 165, 32, 0.04)
+        );
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 3rem;
+
+      color: #ddb45d;
+    }
+
+
+    .crew-card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 17px;
+    }
+
+
+    .crew-role {
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 0.68rem;
+
+      letter-spacing: 1px;
+
+      color: #43d6ba;
+    }
+
+
+    .crew-card h2 {
+      margin: 7px 0 4px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 1.4rem;
+    }
+
+
+    .crew-chaos-title {
+      color: #ddb45d;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+
+    .crew-details {
+      display: grid;
+      gap: 7px;
+      margin-bottom: 13px;
+    }
+
+
+    .crew-detail {
+      font-size: 0.9rem;
+    }
+
+
+    .crew-detail strong {
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 0.68rem;
+
+      letter-spacing: 0.7px;
+
+      color: #d7aa42;
+    }
+
+
+    .crew-bio {
+      line-height: 1.55;
+      opacity: 0.82;
+      flex: 1;
+    }
+
+
+    .crew-card-actions {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+
+
+    .crew-empty {
+      grid-column: 1 / -1;
+      padding: 45px 20px;
+      text-align: center;
+
+      border:
+        1px dashed rgba(218, 165, 32, 0.2);
+
+      opacity: 0.6;
+    }
+
+
+
+    /* ======================================================
+       MODAL
+       ====================================================== */
+
+    .crew-modal-backdrop {
+      display: none;
+
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 400;
+
+      padding: 25px 15px;
+
+      overflow-y: auto;
+
+      background:
+        rgba(0, 0, 0, 0.86);
+    }
+
+
+    .crew-modal-backdrop.open {
+      display: block;
+    }
+
+
+    .crew-modal {
+      width: min(760px, 100%);
+      margin: 35px auto;
+      padding: 26px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.4);
+
+      background: #141210;
+    }
+
+
+    .crew-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+
+    .crew-modal h2 {
+      margin-top: 0;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .crew-modal-close {
+      border: 0;
+      background: transparent;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+
+
+    /* ======================================================
+       AVATAR PREVIEW
+       ====================================================== */
+
+    .crew-preview {
+      display: none;
+
+      margin-top: 16px;
+
+      padding: 10px;
+
+      border:
+        1px solid rgba(67, 214, 186, 0.25);
+
+      background: #090807;
+    }
+
+
+    .crew-preview img {
+      width: 100%;
+      max-height: 380px;
+      object-fit: contain;
+      display: block;
+    }
+
+
+
+    /* ======================================================
+       FORM GRID
+       ====================================================== */
+
+    .crew-form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+
+    .crew-field.full {
+      grid-column: 1 / -1;
+    }
+
+
+
+    /* ======================================================
+       MOBILE
+       ====================================================== */
+
+    @media (max-width: 900px) {
+
+      .crew-hero {
+        grid-template-columns: 1fr;
+      }
+
+
+      .crew-hero-image {
+        order: -1;
+      }
+
+
+      .crew-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 620px) {
+
+      .crew-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+
+      .crew-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .crew-form-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
+
+  <header class="site-header">
+
+    <a href="index.html" class="brand">
+
+      <img
+        src="images/logo.png"
+        alt="Rotating Chaos guild emblem"
+        class="brand-logo"
+      >
+
+      <div class="brand-text">
+
+        <span class="brand-name">
+          ROTATING CHAOS
+        </span>
+
+        <span class="brand-subtitle">
+          GUILD ◆ FAMILY ◆ CHAOS
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+      <a href="index.html">
+        HOME
+      </a>
+
+      <a href="community.html">
+        COMMUNITY
+      </a>
+
+      <a href="build-guides.html">
+        CHAOS GUIDES
+      </a>
+
+      <a href="events.html">
+        EVENTS
+      </a>
+
+      <a href="merch.html">
+        MERCH
+      </a>
+
+      <a href="index.html#contact">
+        CONTACT
+      </a>
+
+    </nav>
+
+
+    <a
+      href="https://discord.gg/UhJndyjYWr"
+      class="discord-button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      JOIN DISCORD
+    </a>
+
+  </header>
+
+
+
+  <main class="crew-page">
+
+    <div class="crew-shell">
+
+
+      <!-- ==================================================
+           HERO
+           ================================================== -->
+
+      <section class="crew-hero">
+
+        <div>
+
+          <p class="section-eyebrow">
+            THE PEOPLE BEHIND THE CHAOS
+          </p>
+
+          <h1>
+            MEET THE CHAOS CREW
+          </h1>
+
+          <p>
+            The tanks who refuse to die, the healers keeping everyone alive,
+            the DPS standing somewhere questionable and every glorious chaos
+            gremlin in between.
+          </p>
+
+        </div>
+
+
+        <div class="crew-hero-image">
+
+          <img
+            src="images/meet.png"
+            alt="Meet the Chaos Crew"
+          >
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ==================================================
+           LOGIN
+           ================================================== -->
+
+      <section
+        class="crew-login"
+        id="crewLogin"
+      >
+
+        <h2>
+          GUILD MEMBERS ONLY
+        </h2>
+
+        <p>
+          Same Chaos login. We have successfully avoided creating another account system. 😂
+        </p>
+
+
+        <form id="crewLoginForm">
+
+          <div class="crew-field">
+
+            <label for="crewGuildName">
+              GUILD NAME
+            </label>
+
+            <input
+              id="crewGuildName"
+              type="text"
+              required
+            >
+
+          </div>
+
+
+          <div class="crew-field">
+
+            <label for="crewAccessCode">
+              ACCESS CODE
+            </label>
+
+            <input
+              id="crewAccessCode"
+              type="password"
+              required
+            >
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="crew-primary-button crew-login-button"
+          >
+            ENTER THE CREW
+          </button>
+
+
+          <p
+            class="crew-login-error"
+            id="crewLoginError"
+          >
+            Nope. Chaos has no idea who you are. 😂
+          </p>
+
+        </form>
+
+      </section>
+
+
+
+      <!-- ==================================================
+           APP
+           ================================================== -->
+
+      <section
+        class="crew-app"
+        id="crewApp"
+      >
+
+
+        <div class="crew-topbar">
+
+          <div>
+
+            <strong
+              id="crewLoggedInUser"
+            ></strong>
+
+            <div class="crew-user">
+              Rotating Chaos roster
+            </div>
+
+          </div>
+
+
+          <div class="crew-actions">
+
+            <button
+              type="button"
+              class="crew-primary-button"
+              id="profileButton"
+            >
+              CREATE MY PROFILE
+            </button>
+
+
+            <button
+              type="button"
+              class="crew-secondary-button"
+              id="crewSignOut"
+            >
+              SIGN OUT
+            </button>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- FILTERS -->
+
+        <div class="crew-filters">
+
+          <button
+            type="button"
+            class="crew-filter active"
+            data-role="All"
+          >
+            ALL
+          </button>
+
+          <button
+            type="button"
+            class="crew-filter"
+            data-role="Guild Leader"
+          >
+            GUILD LEADERS
+          </button>
+
+          <button
+            type="button"
+            class="crew-filter"
+            data-role="Officer"
+          >
+            OFFICERS
+          </button>
+
+          <button
+            type="button"
+            class="crew-filter"
+            data-role="Tank"
+          >
+            TANKS
+          </button>
+
+          <button
+            type="button"
+            class="crew-filter"
+            data-role="Healer"
+          >
+            HEALERS
+          </button>
+
+          <button
+            type="button"
+            class="crew-filter"
+            data-role="DPS"
+          >
+            DPS
+          </button>
+
+          <button
+            type="button"
+            class="crew-filter"
+            data-role="Chaos Gremlin"
+          >
+            CHAOS GREMLINS
+          </button>
+
+        </div>
+
+
+
+        <!-- ROSTER -->
+
+        <div
+          class="crew-grid"
+          id="crewGrid"
+        ></div>
+
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+
+  <!-- ======================================================
+       PROFILE MODAL
+       ====================================================== -->
+
+  <div
+    class="crew-modal-backdrop"
+    id="profileModal"
+  >
+
+    <div class="crew-modal">
+
+
+      <div class="crew-modal-header">
+
+        <div>
+
+          <p class="section-eyebrow">
+            YOUR PLACE IN THE CHAOS
+          </p>
+
+          <h2 id="profileModalTitle">
+            CREATE PROFILE
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="crew-modal-close"
+          id="closeProfileModal"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+
+      <form id="profileForm">
+
+
+        <div class="crew-form-grid">
+
+
+          <div class="crew-field">
+
+            <label for="profileGuildName">
+              GUILD NAME
+            </label>
+
+            <input
+              id="profileGuildName"
+              type="text"
+              maxlength="40"
+              required
+            >
+
+          </div>
+
+
+
+          <div class="crew-field">
+
+            <label for="profileRole">
+              GUILD ROLE
+            </label>
+
+            <select id="profileRole">
+
+              <option value="Guild Leader">
+                Guild Leader
+              </option>
+
+              <option value="Officer">
+                Officer
+              </option>
+
+              <option value="Tank">
+                Tank
+              </option>
+
+              <option value="Healer">
+                Healer
+              </option>
+
+              <option value="DPS">
+                DPS
+              </option>
+
+              <option value="Chaos Gremlin">
+                Chaos Gremlin
+              </option>
+
+              <option value="Member">
+                Member
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <div class="crew-field">
+
+            <label for="profileClass">
+              MAIN CLASS
+            </label>
+
+            <input
+              id="profileClass"
+              type="text"
+              maxlength="50"
+              placeholder="e.g. Paladin"
+            >
+
+          </div>
+
+
+
+          <div class="crew-field">
+
+            <label for="profileCharacter">
+              MAIN CHARACTER
+            </label>
+
+            <input
+              id="profileCharacter"
+              type="text"
+              maxlength="60"
+              placeholder="Character name"
+            >
+
+          </div>
+
+
+
+          <div class="crew-field">
+
+            <label for="profileDiscord">
+              DISCORD NAME
+            </label>
+
+            <input
+              id="profileDiscord"
+              type="text"
+              maxlength="60"
+              placeholder="Optional"
+            >
+
+          </div>
+
+
+
+          <div class="crew-field">
+
+            <label for="profileChaosTitle">
+              CHAOS TITLE
+            </label>
+
+            <input
+              id="profileChaosTitle"
+              type="text"
+              maxlength="80"
+              placeholder="e.g. Professional Floor Inspector"
+            >
+
+          </div>
+
+
+
+          <div class="crew-field full">
+
+            <label for="profileAvatar">
+              OPTIONAL IMAGE / AVATAR URL
+            </label>
+
+            <input
+              id="profileAvatar"
+              type="url"
+              placeholder="https://..."
+            >
+
+          </div>
+
+
+
+          <div
+            class="crew-preview crew-field full"
+            id="profilePreview"
+          >
+
+            <img
+              id="profilePreviewImage"
+              alt="Profile preview"
+            >
+
+          </div>
+
+
+
+          <div class="crew-field full">
+
+            <label for="profileBio">
+              ABOUT ME
+            </label>
+
+            <textarea
+              id="profileBio"
+              maxlength="1000"
+              placeholder="Tell the guild a little about yourself..."
+            ></textarea>
+
+          </div>
+
+
+        </div>
+
+
+
+        <div style="margin-top:20px;">
+
+          <button
+            type="submit"
+            class="crew-primary-button"
+          >
+            SAVE PROFILE
+          </button>
+
+        </div>
+
+
+      </form>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ======================================================
+       FIREBASE
+       ====================================================== -->
+
+  <script type="module">
+
+
+    import {
+      initializeApp
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+
+
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+      signOut,
+      onAuthStateChanged
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+
+
+    import {
+      getFirestore,
+      collection,
+      doc,
+      setDoc,
+      deleteDoc,
+      serverTimestamp,
+      onSnapshot
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+
+
+    /* ======================================================
+       FIREBASE CONFIG
+       ====================================================== */
+
+    const firebaseConfig = {
+
+      apiKey:
+        "AIzaSyDQjutG0oa4v8dpI3i3UlgsFC9EmWsX4kI",
+
+      authDomain:
+        "rotating-chaos-chat.firebaseapp.com",
+
+      projectId:
+        "rotating-chaos-chat",
+
+      storageBucket:
+        "rotating-chaos-chat.firebasestorage.app",
+
+      messagingSenderId:
+        "337862334710",
+
+      appId:
+        "1:337862334710:web:92e38dd0646dd9bec474d7",
+
+      measurementId:
+        "G-7M761SJ4CJ"
+
+    };
+
+
+    const app =
+      initializeApp(
+        firebaseConfig
+      );
+
+
+    const auth =
+      getAuth(
+        app
+      );
+
+
+    const db =
+      getFirestore(
+        app
+      );
+
+
+
+    /* ======================================================
+       ELEMENTS
+       ====================================================== */
+
+    const crewLogin =
+      document.getElementById(
+        "crewLogin"
+      );
+
+    const crewApp =
+      document.getElementById(
+        "crewApp"
+      );
+
+    const crewLoginForm =
+      document.getElementById(
+        "crewLoginForm"
+      );
+
+    const crewGuildName =
+      document.getElementById(
+        "crewGuildName"
+      );
+
+    const crewAccessCode =
+      document.getElementById(
+        "crewAccessCode"
+      );
+
+    const crewLoginError =
+      document.getElementById(
+        "crewLoginError"
+      );
+
+    const crewLoggedInUser =
+      document.getElementById(
+        "crewLoggedInUser"
+      );
+
+    const crewSignOut =
+      document.getElementById(
+        "crewSignOut"
+      );
+
+    const profileButton =
+      document.getElementById(
+        "profileButton"
+      );
+
+    const profileModal =
+      document.getElementById(
+        "profileModal"
+      );
+
+    const closeProfileModal =
+      document.getElementById(
+        "closeProfileModal"
+      );
+
+    const profileModalTitle =
+      document.getElementById(
+        "profileModalTitle"
+      );
+
+    const profileForm =
+      document.getElementById(
+        "profileForm"
+      );
+
+    const profileGuildName =
+      document.getElementById(
+        "profileGuildName"
+      );
+
+    const profileRole =
+      document.getElementById(
+        "profileRole"
+      );
+
+    const profileClass =
+      document.getElementById(
+        "profileClass"
+      );
+
+    const profileCharacter =
+      document.getElementById(
+        "profileCharacter"
+      );
+
+    const profileDiscord =
+      document.getElementById(
+        "profileDiscord"
+      );
+
+    const profileChaosTitle =
+      document.getElementById(
+        "profileChaosTitle"
+      );
+
+    const profileAvatar =
+      document.getElementById(
+        "profileAvatar"
+      );
+
+    const profileBio =
+      document.getElementById(
+        "profileBio"
+      );
+
+    const profilePreview =
+      document.getElementById(
+        "profilePreview"
+      );
+
+    const profilePreviewImage =
+      document.getElementById(
+        "profilePreviewImage"
+      );
+
+    const crewGrid =
+      document.getElementById(
+        "crewGrid"
+      );
+
+    const crewFilters =
+      document.querySelectorAll(
+        ".crew-filter"
+      );
+
+
+
+    /* ======================================================
+       STATE
+       ====================================================== */
+
+    let currentGuildName =
+      "";
+
+    let profiles =
+      [];
+
+    let activeRole =
+      "All";
+
+    let currentProfile =
+      null;
+
+    let unsubscribeProfiles =
+      null;
+
+
+
+    /* ======================================================
+       ACCOUNT EMAIL
+       ====================================================== */
+
+    function makeAccountEmail(name) {
+
+      const cleaned =
+        name
+          .trim()
+          .toLowerCase()
+          .replace(
+            /[^a-z0-9]/g,
+            ""
+          );
+
+
+      return `${cleaned}@rotatingchaos.local`;
+
+    }
+
+
+
+    function prettyNameFromEmail(email) {
+
+      const raw =
+        email.split("@")[0];
+
+
+      return (
+        raw.charAt(0).toUpperCase()
+        + raw.slice(1)
+      );
+
+    }
+
+
+
+    /* ======================================================
+       LOGIN
+       ====================================================== */
+
+    crewLoginForm.addEventListener(
+      "submit",
+      async (event) => {
+
+        event.preventDefault();
+
+
+        crewLoginError.style.display =
+          "none";
+
+
+        const name =
+          crewGuildName.value.trim();
+
+
+        const password =
+          crewAccessCode.value;
+
+
+        try {
+
+          await signInWithEmailAndPassword(
+            auth,
+            makeAccountEmail(name),
+            password
+          );
+
+
+          currentGuildName =
+            name;
+
+
+          sessionStorage.setItem(
+            "chaosNickname",
+            name
+          );
+
+
+          crewAccessCode.value =
+            "";
+
+        }
+
+
+        catch (error) {
+
+          console.error(error);
+
+
+          crewLoginError.style.display =
+            "block";
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       AUTH
+       ====================================================== */
+
+    onAuthStateChanged(
+      auth,
+      (user) => {
+
+        if (user) {
+
+          currentGuildName =
+            sessionStorage.getItem(
+              "chaosNickname"
+            )
+            || prettyNameFromEmail(
+              user.email
+            );
+
+
+          crewLoggedInUser.textContent =
+            `Signed in as ${currentGuildName}`;
+
+
+          crewLogin.style.display =
+            "none";
+
+
+          crewApp.style.display =
+            "block";
+
+
+          startProfilesListener();
+
+        }
+
+
+        else {
+
+          crewLogin.style.display =
+            "block";
+
+
+          crewApp.style.display =
+            "none";
+
+
+          if (unsubscribeProfiles) {
+
+            unsubscribeProfiles();
+
+            unsubscribeProfiles =
+              null;
+
+          }
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       SIGN OUT
+       ====================================================== */
+
+    crewSignOut.addEventListener(
+      "click",
+      async () => {
+
+        sessionStorage.removeItem(
+          "chaosNickname"
+        );
+
+
+        await signOut(auth);
+
+      }
+    );
+
+
+
+    /* ======================================================
+       PROFILE MODAL
+       ====================================================== */
+
+    profileButton.addEventListener(
+      "click",
+      () => {
+
+        openProfileModal();
+
+      }
+    );
+
+
+    closeProfileModal.addEventListener(
+      "click",
+      closeProfileModalFunction
+    );
+
+
+    profileModal.addEventListener(
+      "click",
+      (event) => {
+
+        if (
+          event.target
+          === profileModal
+        ) {
+
+          closeProfileModalFunction();
+
+        }
+
+      }
+    );
+
+
+    function openProfileModal() {
+
+      const user =
+        auth.currentUser;
+
+
+      if (!user) {
+        return;
+      }
+
+
+      currentProfile =
+        profiles.find(
+          profile =>
+            profile.uid === user.uid
+        )
+        || null;
+
+
+      profileForm.reset();
+
+
+      profilePreview.style.display =
+        "none";
+
+
+      if (currentProfile) {
+
+        profileModalTitle.textContent =
+          "EDIT MY PROFILE";
+
+
+        profileGuildName.value =
+          currentProfile.guildName || currentGuildName;
+
+
+        profileRole.value =
+          currentProfile.role || "Member";
+
+
+        profileClass.value =
+          currentProfile.mainClass || "";
+
+
+        profileCharacter.value =
+          currentProfile.mainCharacter || "";
+
+
+        profileDiscord.value =
+          currentProfile.discordName || "";
+
+
+        profileChaosTitle.value =
+          currentProfile.chaosTitle || "";
+
+
+        profileAvatar.value =
+          currentProfile.avatarUrl || "";
+
+
+        profileBio.value =
+          currentProfile.bio || "";
+
+
+        if (currentProfile.avatarUrl) {
+
+          profilePreviewImage.src =
+            currentProfile.avatarUrl;
+
+
+          profilePreview.style.display =
+            "block";
+
+        }
+
+      }
+
+
+      else {
+
+        profileModalTitle.textContent =
+          "CREATE MY PROFILE";
+
+
+        profileGuildName.value =
+          currentGuildName;
+
+      }
+
+
+      profileModal.classList.add(
+        "open"
+      );
+
+    }
+
+
+
+    function closeProfileModalFunction() {
+
+      profileModal.classList.remove(
+        "open"
+      );
+
+
+      profilePreview.style.display =
+        "none";
+
+    }
+
+
+
+    /* ======================================================
+       AVATAR PREVIEW
+       ====================================================== */
+
+    profileAvatar.addEventListener(
+      "input",
+      () => {
+
+        const url =
+          profileAvatar.value.trim();
+
+
+        if (!url) {
+
+          profilePreview.style.display =
+            "none";
+
+
+          return;
+
+        }
+
+
+        profilePreviewImage.src =
+          url;
+
+
+        profilePreview.style.display =
+          "block";
+
+      }
+    );
+
+
+    profilePreviewImage.addEventListener(
+      "error",
+      () => {
+
+        profilePreview.style.display =
+          "none";
+
+      }
+    );
+
+
+
+    /* ======================================================
+       SAVE PROFILE
+       ====================================================== */
+
+    profileForm.addEventListener(
+      "submit",
+      async (event) => {
+
+        event.preventDefault();
+
+
+        const user =
+          auth.currentUser;
+
+
+        if (!user) {
+          return;
+        }
+
+
+        const existing =
+          profiles.find(
+            profile =>
+              profile.uid === user.uid
+          );
+
+
+        await setDoc(
+          doc(
+            db,
+            "crewProfiles",
+            user.uid
+          ),
+          {
+
+            uid:
+              user.uid,
+
+            guildName:
+              profileGuildName.value.trim(),
+
+            role:
+              profileRole.value,
+
+            mainClass:
+              profileClass.value.trim(),
+
+            mainCharacter:
+              profileCharacter.value.trim(),
+
+            discordName:
+              profileDiscord.value.trim(),
+
+            chaosTitle:
+              profileChaosTitle.value.trim(),
+
+            avatarUrl:
+              profileAvatar.value.trim(),
+
+            bio:
+              profileBio.value.trim(),
+
+            createdAt:
+              existing?.createdAt
+              || serverTimestamp(),
+
+            updatedAt:
+              serverTimestamp()
+
+          }
+        );
+
+
+        closeProfileModalFunction();
+
+      }
+    );
+
+
+
+    /* ======================================================
+       LIVE PROFILES
+       ====================================================== */
+
+    function startProfilesListener() {
+
+      if (unsubscribeProfiles) {
+
+        unsubscribeProfiles();
+
+      }
+
+
+      unsubscribeProfiles =
+        onSnapshot(
+          collection(
+            db,
+            "crewProfiles"
+          ),
+          (snapshot) => {
+
+            profiles =
+              [];
+
+
+            snapshot.forEach(
+              item => {
+
+                profiles.push({
+                  id: item.id,
+                  ...item.data()
+                });
+
+              }
+            );
+
+
+            profiles.sort(
+              (a, b) =>
+                (a.guildName || "")
+                  .localeCompare(
+                    b.guildName || ""
+                  )
+            );
+
+
+            updateProfileButton();
+
+            renderCrew();
+
+          }
+        );
+
+    }
+
+
+
+    /* ======================================================
+       PROFILE BUTTON
+       ====================================================== */
+
+    function updateProfileButton() {
+
+      const user =
+        auth.currentUser;
+
+
+      if (!user) {
+        return;
+      }
+
+
+      const mine =
+        profiles.find(
+          profile =>
+            profile.uid === user.uid
+        );
+
+
+      profileButton.textContent =
+        mine
+        ? "EDIT MY PROFILE"
+        : "CREATE MY PROFILE";
+
+    }
+
+
+
+    /* ======================================================
+       FILTERS
+       ====================================================== */
+
+    crewFilters.forEach(
+      button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            activeRole =
+              button.dataset.role;
+
+
+            crewFilters.forEach(
+              item => {
+
+                item.classList.remove(
+                  "active"
+                );
+
+              }
+            );
+
+
+            button.classList.add(
+              "active"
+            );
+
+
+            renderCrew();
+
+          }
+        );
+
+      }
+    );
+
+
+
+    /* ======================================================
+       RENDER CREW
+       ====================================================== */
+
+    function renderCrew() {
+
+      crewGrid.innerHTML =
+        "";
+
+
+      const filtered =
+        activeRole === "All"
+        ? profiles
+        : profiles.filter(
+            profile =>
+              profile.role === activeRole
+          );
+
+
+      if (
+        filtered.length === 0
+      ) {
+
+        const empty =
+          document.createElement(
+            "div"
+          );
+
+
+        empty.className =
+          "crew-empty";
+
+
+        empty.textContent =
+          activeRole === "All"
+          ? "Nobody has created a profile yet. Apparently everyone is shy now. 😂"
+          : "No crew members in this category yet.";
+
+
+        crewGrid.appendChild(
+          empty
+        );
+
+
+        return;
+
+      }
+
+
+      filtered.forEach(
+        profile => {
+
+          const card =
+            document.createElement(
+              "article"
+            );
+
+
+          card.className =
+            "crew-card";
+
+
+
+          /* AVATAR */
+
+          const avatarWrap =
+            document.createElement(
+              "div"
+            );
+
+
+          avatarWrap.className =
+            "crew-avatar-wrap";
+
+
+          if (profile.avatarUrl) {
+
+            const image =
+              document.createElement(
+                "img"
+              );
+
+
+            image.className =
+              "crew-avatar";
+
+
+            image.src =
+              profile.avatarUrl;
+
+
+            image.alt =
+              profile.guildName || "Chaos Crew";
+
+
+            image.loading =
+              "lazy";
+
+
+            image.addEventListener(
+              "error",
+              () => {
+
+                avatarWrap.innerHTML =
+                  "";
+
+
+                avatarWrap.appendChild(
+                  createFallbackAvatar(
+                    profile.guildName
+                  )
+                );
+
+              }
+            );
+
+
+            avatarWrap.appendChild(
+              image
+            );
+
+          }
+
+
+          else {
+
+            avatarWrap.appendChild(
+              createFallbackAvatar(
+                profile.guildName
+              )
+            );
+
+          }
+
+
+
+          /* BODY */
+
+          const body =
+            document.createElement(
+              "div"
+            );
+
+
+          body.className =
+            "crew-card-body";
+
+
+          const role =
+            document.createElement(
+              "div"
+            );
+
+
+          role.className =
+            "crew-role";
+
+
+          role.textContent =
+            (profile.role || "Member")
+            .toUpperCase();
+
+
+          const name =
+            document.createElement(
+              "h2"
+            );
+
+
+          name.textContent =
+            profile.guildName
+            || "Chaos Member";
+
+
+          body.appendChild(
+            role
+          );
+
+
+          body.appendChild(
+            name
+          );
+
+
+
+          if (profile.chaosTitle) {
+
+            const chaosTitle =
+              document.createElement(
+                "div"
+              );
+
+
+            chaosTitle.className =
+              "crew-chaos-title";
+
+
+            chaosTitle.textContent =
+              `“${profile.chaosTitle}”`;
+
+
+            body.appendChild(
+              chaosTitle
+            );
+
+          }
+
+
+
+          const details =
+            document.createElement(
+              "div"
+            );
+
+
+          details.className =
+            "crew-details";
+
+
+          if (profile.mainClass) {
+
+            details.appendChild(
+              createDetail(
+                "MAIN CLASS",
+                profile.mainClass
+              )
+            );
+
+          }
+
+
+          if (profile.mainCharacter) {
+
+            details.appendChild(
+              createDetail(
+                "MAIN CHARACTER",
+                profile.mainCharacter
+              )
+            );
+
+          }
+
+
+          if (profile.discordName) {
+
+            details.appendChild(
+              createDetail(
+                "DISCORD",
+                profile.discordName
+              )
+            );
+
+          }
+
+
+          body.appendChild(
+            details
+          );
+
+
+
+          if (profile.bio) {
+
+            const bio =
+              document.createElement(
+                "div"
+              );
+
+
+            bio.className =
+              "crew-bio";
+
+
+            bio.textContent =
+              profile.bio;
+
+
+            body.appendChild(
+              bio
+            );
+
+          }
+
+
+
+          /* OWN PROFILE CONTROLS */
+
+          if (
+            auth.currentUser
+            && profile.uid
+            === auth.currentUser.uid
+          ) {
+
+            const actions =
+              document.createElement(
+                "div"
+              );
+
+
+            actions.className =
+              "crew-card-actions";
+
+
+            const edit =
+              document.createElement(
+                "button"
+              );
+
+
+            edit.type =
+              "button";
+
+
+            edit.className =
+              "crew-secondary-button";
+
+
+            edit.textContent =
+              "EDIT PROFILE";
+
+
+            edit.addEventListener(
+              "click",
+              () => {
+
+                openProfileModal();
+
+              }
+            );
+
+
+            const remove =
+              document.createElement(
+                "button"
+              );
+
+
+            remove.type =
+              "button";
+
+
+            remove.className =
+              "crew-danger-button";
+
+
+            remove.textContent =
+              "DELETE PROFILE";
+
+
+            remove.addEventListener(
+              "click",
+              async () => {
+
+                const confirmed =
+                  window.confirm(
+                    "Delete your Chaos Crew profile?"
+                  );
+
+
+                if (!confirmed) {
+                  return;
+                }
+
+
+                await deleteDoc(
+                  doc(
+                    db,
+                    "crewProfiles",
+                    auth.currentUser.uid
+                  )
+                );
+
+              }
+            );
+
+
+            actions.appendChild(
+              edit
+            );
+
+
+            actions.appendChild(
+              remove
+            );
+
+
+            body.appendChild(
+              actions
+            );
+
+          }
+
+
+
+          card.appendChild(
+            avatarWrap
+          );
+
+
+          card.appendChild(
+            body
+          );
+
+
+          crewGrid.appendChild(
+            card
+          );
+
+        }
+      );
+
+    }
+
+
+
+    /* ======================================================
+       HELPERS
+       ====================================================== */
+
+    function createFallbackAvatar(name) {
+
+      const fallback =
+        document.createElement(
+          "div"
+        );
+
+
+      fallback.className =
+        "crew-avatar-fallback";
+
+
+      const firstCharacter =
+        (name || "?")
+          .trim()
+          .charAt(0)
+          .toUpperCase();
+
+
+      fallback.textContent =
+        firstCharacter || "?";
+
+
+      return fallback;
+
+    }
+
+
+
+    function createDetail(
+      label,
+      value
+    ) {
+
+      const row =
+        document.createElement(
+          "div"
+        );
+
+
+      row.className =
+        "crew-detail";
+
+
+      const strong =
+        document.createElement(
+          "strong"
+        );
+
+
+      strong.textContent =
+        `${label}: `;
+
+
+      const text =
+        document.createTextNode(
+          value
+        );
+
+
+      row.appendChild(
+        strong
+      );
+
+
+      row.appendChild(
+        text
+      );
+
+
+      return row;
+
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>

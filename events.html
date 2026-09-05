@@ -1,1 +1,2288 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Rotating Chaos Guild Events and Run Calendar"
+  >
+
+  <title>Events | Rotating Chaos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Crimson+Pro:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+
+  <style>
+
+    /* ======================================================
+       EVENTS PAGE
+       ====================================================== */
+
+    .events-page {
+      min-height: 100vh;
+      padding: 70px 20px 100px;
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(15, 130, 105, 0.10),
+          transparent 35%
+        ),
+        #0d0c0b;
+    }
+
+
+    .events-shell {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+    }
+
+
+    .events-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+
+    .events-heading h1 {
+      font-family: "Cinzel", serif;
+      font-size: clamp(2.4rem, 6vw, 4.6rem);
+      margin: 5px 0 10px;
+    }
+
+
+    .events-heading p {
+      font-family: "Crimson Pro", serif;
+      font-size: 1.2rem;
+    }
+
+
+
+    /* ======================================================
+       LOGIN
+       ====================================================== */
+
+    .events-login {
+      width: min(520px, 100%);
+      margin: 0 auto;
+      padding: 30px;
+      background: #151310;
+      border: 1px solid rgba(218, 165, 32, 0.35);
+    }
+
+
+    .events-login h2 {
+      margin-top: 0;
+      text-align: center;
+      font-family: "Cinzel", serif;
+    }
+
+
+    .events-login p {
+      text-align: center;
+    }
+
+
+    .event-field {
+      margin-top: 18px;
+    }
+
+
+    .event-field label {
+      display: block;
+      margin-bottom: 6px;
+      font-family: "Cinzel", serif;
+      font-size: 0.82rem;
+      letter-spacing: 1px;
+    }
+
+
+    .event-field input,
+    .event-field textarea,
+    .event-field select {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px 13px;
+      background: #11100f;
+      border: 1px solid rgba(218, 165, 32, 0.35);
+      color: #f6efe2;
+      font: inherit;
+      outline: none;
+    }
+
+
+    .event-field textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+
+    .event-field input:focus,
+    .event-field textarea:focus,
+    .event-field select:focus {
+      border-color: #d7aa42;
+    }
+
+
+    .event-login-button,
+    .event-primary-button {
+      border: 1px solid #d7aa42;
+      background: #d7aa42;
+      color: #111;
+      padding: 12px 18px;
+      font-family: "Cinzel", serif;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+
+    .event-login-button {
+      width: 100%;
+      margin-top: 22px;
+    }
+
+
+    .events-error {
+      display: none;
+      color: #ff9999;
+      text-align: center;
+      margin-top: 15px;
+    }
+
+
+
+    /* ======================================================
+       EVENTS APP
+       ====================================================== */
+
+    .events-app {
+      display: none;
+    }
+
+
+    .events-top-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+
+    .events-user {
+      opacity: 0.75;
+    }
+
+
+    .events-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+
+    .event-secondary-button {
+      border: 1px solid rgba(218, 165, 32, 0.4);
+      background: #151310;
+      color: #f6efe2;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+
+
+    /* ======================================================
+       MAIN LAYOUT
+       ====================================================== */
+
+    .events-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(280px, 0.8fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+
+
+    /* ======================================================
+       CALENDAR
+       ====================================================== */
+
+    .calendar-panel {
+      border: 1px solid rgba(218, 165, 32, 0.32);
+      background: rgba(18, 17, 16, 0.97);
+      overflow: hidden;
+    }
+
+
+    .calendar-header {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 14px;
+      padding: 18px;
+      border-bottom: 1px solid rgba(218, 165, 32, 0.25);
+      background:
+        linear-gradient(
+          90deg,
+          rgba(44, 30, 10, 0.96),
+          rgba(11, 73, 67, 0.7)
+        );
+    }
+
+
+    .calendar-header h2 {
+      margin: 0;
+      text-align: center;
+      font-family: "Cinzel", serif;
+      font-size: 1.4rem;
+    }
+
+
+    .calendar-nav {
+      border: 1px solid rgba(218, 165, 32, 0.4);
+      background: #11100f;
+      color: white;
+      width: 38px;
+      height: 38px;
+      cursor: pointer;
+    }
+
+
+    .calendar-weekdays {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      border-bottom: 1px solid rgba(218, 165, 32, 0.18);
+    }
+
+
+    .calendar-weekdays div {
+      padding: 10px 5px;
+      text-align: center;
+      font-family: "Cinzel", serif;
+      font-size: 0.72rem;
+      opacity: 0.65;
+    }
+
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+    }
+
+
+    .calendar-day {
+      min-height: 118px;
+      padding: 8px;
+      box-sizing: border-box;
+      border-right: 1px solid rgba(218, 165, 32, 0.10);
+      border-bottom: 1px solid rgba(218, 165, 32, 0.10);
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+
+    .calendar-day.other-month {
+      opacity: 0.28;
+    }
+
+
+    .calendar-day.today {
+      background: rgba(15, 130, 105, 0.09);
+      box-shadow: inset 0 0 0 1px rgba(67, 220, 188, 0.4);
+    }
+
+
+    .calendar-date-number {
+      font-family: "Cinzel", serif;
+      font-size: 0.8rem;
+      margin-bottom: 6px;
+    }
+
+
+    .calendar-event {
+      display: block;
+      margin-top: 4px;
+      padding: 5px 6px;
+      border-left: 2px solid #d7aa42;
+      background: rgba(218, 165, 32, 0.12);
+      color: #f6efe2;
+      text-decoration: none;
+      font-size: 0.76rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+
+    .calendar-event.organised {
+      border-left-color: #43d6ba;
+      background: rgba(67, 214, 186, 0.11);
+    }
+
+
+
+    /* ======================================================
+       UPCOMING EVENTS
+       ====================================================== */
+
+    .upcoming-panel {
+      border: 1px solid rgba(218, 165, 32, 0.32);
+      background: #121110;
+      padding: 18px;
+    }
+
+
+    .upcoming-panel h2 {
+      margin-top: 0;
+      font-family: "Cinzel", serif;
+      font-size: 1.25rem;
+    }
+
+
+    .upcoming-event-card {
+      display: block;
+      margin-top: 12px;
+      padding: 13px;
+      border: 1px solid rgba(218, 165, 32, 0.18);
+      background: #181613;
+      color: #f6efe2;
+      text-decoration: none;
+    }
+
+
+    .upcoming-event-card:hover {
+      border-color: #d7aa42;
+    }
+
+
+    .upcoming-event-type {
+      font-family: "Cinzel", serif;
+      font-size: 0.68rem;
+      color: #43d6ba;
+      letter-spacing: 1px;
+    }
+
+
+    .upcoming-event-title {
+      margin-top: 5px;
+      font-family: "Cinzel", serif;
+      font-weight: 700;
+    }
+
+
+    .upcoming-event-meta {
+      margin-top: 5px;
+      font-size: 0.88rem;
+      opacity: 0.7;
+    }
+
+
+    .no-events {
+      opacity: 0.6;
+      font-style: italic;
+    }
+
+
+
+    /* ======================================================
+       MODAL
+       ====================================================== */
+
+    .event-modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.82);
+      z-index: 200;
+      padding: 30px 15px;
+      overflow-y: auto;
+    }
+
+
+    .event-modal-backdrop.open {
+      display: block;
+    }
+
+
+    .event-modal {
+      width: min(720px, 100%);
+      margin: 30px auto;
+      padding: 28px;
+      background: #141210;
+      border: 1px solid rgba(218, 165, 32, 0.45);
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.7);
+    }
+
+
+    .event-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+
+    .event-modal-header h2 {
+      margin-top: 0;
+      font-family: "Cinzel", serif;
+    }
+
+
+    .event-modal-close {
+      border: 0;
+      background: transparent;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+
+
+    /* ======================================================
+       EVENT TYPE
+       ====================================================== */
+
+    .event-type-options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+
+    .event-type-option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+
+    .event-type-card {
+      display: block;
+      padding: 16px;
+      border: 1px solid rgba(218, 165, 32, 0.25);
+      background: #11100f;
+      cursor: pointer;
+    }
+
+
+    .event-type-option input:checked + .event-type-card {
+      border-color: #43d6ba;
+      background: rgba(67, 214, 186, 0.08);
+    }
+
+
+    .event-type-card strong {
+      display: block;
+      font-family: "Cinzel", serif;
+      margin-bottom: 5px;
+    }
+
+
+    .event-type-card span {
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+
+
+    /* ======================================================
+       FORM GRID
+       ====================================================== */
+
+    .event-form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+
+    .event-field.full {
+      grid-column: 1 / -1;
+    }
+
+
+
+    /* ======================================================
+       DISCORD TIMESTAMP
+       ====================================================== */
+
+    .discord-preview {
+      margin-top: 18px;
+      padding: 14px;
+      border: 1px solid rgba(67, 214, 186, 0.25);
+      background: rgba(67, 214, 186, 0.06);
+    }
+
+
+    .discord-preview h3 {
+      margin-top: 0;
+      font-family: "Cinzel", serif;
+      font-size: 0.85rem;
+    }
+
+
+    .discord-code {
+      display: block;
+      margin-top: 8px;
+      padding: 10px;
+      background: #0a0908;
+      word-break: break-all;
+      font-family: monospace;
+    }
+
+
+    .discord-copy {
+      margin-top: 10px;
+    }
+
+
+
+    /* ======================================================
+       MOBILE
+       ====================================================== */
+
+    @media (max-width: 850px) {
+
+      .events-layout {
+        grid-template-columns: 1fr;
+      }
+
+
+      .calendar-day {
+        min-height: 90px;
+      }
+
+    }
+
+
+    @media (max-width: 620px) {
+
+      .events-top-controls {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+
+      .calendar-day {
+        min-height: 72px;
+        padding: 4px;
+      }
+
+
+      .calendar-date-number {
+        font-size: 0.7rem;
+      }
+
+
+      .calendar-event {
+        font-size: 0;
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: #d7aa42;
+      }
+
+
+      .calendar-event.organised {
+        background: #43d6ba;
+      }
+
+
+      .event-form-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .event-type-options {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
+
+  <header class="site-header">
+
+    <a href="index.html" class="brand">
+
+      <img
+        src="images/logo.png"
+        alt="Rotating Chaos guild emblem"
+        class="brand-logo"
+      >
+
+      <div class="brand-text">
+
+        <span class="brand-name">
+          ROTATING CHAOS
+        </span>
+
+        <span class="brand-subtitle">
+          GUILD ◆ FAMILY ◆ CHAOS
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+      <a href="index.html">
+        HOME
+      </a>
+
+      <a href="community.html">
+        COMMUNITY
+      </a>
+
+      <a href="build-guides.html">
+        CHAOS GUIDES
+      </a>
+
+      <a href="events.html">
+        EVENTS
+      </a>
+
+      <a href="merch.html">
+        MERCH
+      </a>
+
+      <a href="index.html#contact">
+        CONTACT
+      </a>
+
+    </nav>
+
+
+    <a
+      href="https://discord.gg/UhJndyjYWr"
+      class="discord-button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      JOIN DISCORD
+    </a>
+
+  </header>
+
+
+
+  <main class="events-page">
+
+    <div class="events-shell">
+
+
+      <!-- ==================================================
+           HERO
+           ================================================== -->
+
+      <div class="events-heading">
+
+        <p class="section-eyebrow">
+          RUNS ◆ EVENTS ◆ QUESTIONABLE DECISIONS
+        </p>
+
+        <h1>
+          CHAOS EVENTS
+        </h1>
+
+        <p>
+          Plan runs, organise the carnage and try to remember who said they were healing.
+        </p>
+
+      </div>
+
+
+
+      <!-- ==================================================
+           LOGIN
+           ================================================== -->
+
+      <section
+        class="events-login"
+        id="eventsLogin"
+      >
+
+        <h2>
+          GUILD MEMBERS ONLY
+        </h2>
+
+        <p>
+          Use the same Chaos login you use for guild chat.
+        </p>
+
+
+        <form id="eventLoginForm">
+
+          <div class="event-field">
+
+            <label for="eventGuildName">
+              GUILD NAME
+            </label>
+
+            <input
+              id="eventGuildName"
+              type="text"
+              autocomplete="username"
+              required
+            >
+
+          </div>
+
+
+          <div class="event-field">
+
+            <label for="eventAccessCode">
+              ACCESS CODE
+            </label>
+
+            <input
+              id="eventAccessCode"
+              type="password"
+              autocomplete="current-password"
+              required
+            >
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="event-login-button"
+          >
+            ENTER EVENTS
+          </button>
+
+
+          <p
+            class="events-error"
+            id="eventLoginError"
+          >
+            Nope. Chaos does not recognise you. 😂
+          </p>
+
+        </form>
+
+      </section>
+
+
+
+      <!-- ==================================================
+           EVENTS APP
+           ================================================== -->
+
+      <section
+        class="events-app"
+        id="eventsApp"
+      >
+
+
+        <div class="events-top-controls">
+
+          <div>
+
+            <strong id="eventsLoggedInUser"></strong>
+
+            <div class="events-user">
+              Guild event planner
+            </div>
+
+          </div>
+
+
+          <div class="events-actions">
+
+            <button
+              type="button"
+              class="event-primary-button"
+              id="openEventModal"
+            >
+              + CREATE EVENT
+            </button>
+
+
+            <button
+              type="button"
+              class="event-secondary-button"
+              id="eventsSignOut"
+            >
+              Sign Out
+            </button>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="events-layout">
+
+
+          <!-- ==================================================
+               CALENDAR
+               ================================================== -->
+
+          <section class="calendar-panel">
+
+
+            <div class="calendar-header">
+
+              <button
+                type="button"
+                class="calendar-nav"
+                id="previousMonth"
+              >
+                ←
+              </button>
+
+
+              <h2 id="calendarMonthTitle"></h2>
+
+
+              <button
+                type="button"
+                class="calendar-nav"
+                id="nextMonth"
+              >
+                →
+              </button>
+
+            </div>
+
+
+
+            <div class="calendar-weekdays">
+
+              <div>MON</div>
+              <div>TUE</div>
+              <div>WED</div>
+              <div>THU</div>
+              <div>FRI</div>
+              <div>SAT</div>
+              <div>SUN</div>
+
+            </div>
+
+
+            <div
+              class="calendar-grid"
+              id="calendarGrid"
+            ></div>
+
+
+          </section>
+
+
+
+          <!-- ==================================================
+               UPCOMING
+               ================================================== -->
+
+          <aside class="upcoming-panel">
+
+            <h2>
+              UPCOMING CHAOS
+            </h2>
+
+            <div id="upcomingEvents"></div>
+
+          </aside>
+
+
+        </div>
+
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+
+  <!-- ======================================================
+       CREATE EVENT MODAL
+       ====================================================== -->
+
+  <div
+    class="event-modal-backdrop"
+    id="eventModalBackdrop"
+  >
+
+    <div class="event-modal">
+
+
+      <div class="event-modal-header">
+
+        <div>
+
+          <p class="section-eyebrow">
+            ORGANISE THE CHAOS
+          </p>
+
+          <h2>
+            CREATE EVENT
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="event-modal-close"
+          id="closeEventModal"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+
+      <form id="createEventForm">
+
+
+        <!-- EVENT TYPE -->
+
+        <div class="event-type-options">
+
+
+          <label class="event-type-option">
+
+            <input
+              type="radio"
+              name="eventType"
+              value="quick"
+              checked
+            >
+
+            <span class="event-type-card">
+
+              <strong>
+                QUICK EVENT
+              </strong>
+
+              <span>
+                Guild night, random runs, training or social chaos.
+              </span>
+
+            </span>
+
+          </label>
+
+
+
+          <label class="event-type-option">
+
+            <input
+              type="radio"
+              name="eventType"
+              value="organised"
+            >
+
+            <span class="event-type-card">
+
+              <strong>
+                ORGANISED RUN
+              </strong>
+
+              <span>
+                Creates a proper run sheet with roles, requirements and sign-ups.
+              </span>
+
+            </span>
+
+          </label>
+
+
+        </div>
+
+
+
+        <div class="event-form-grid">
+
+
+          <div class="event-field full">
+
+            <label for="eventTitle">
+              EVENT / RUN NAME
+            </label>
+
+            <input
+              id="eventTitle"
+              type="text"
+              maxlength="80"
+              placeholder="e.g. Master Tiamat"
+              required
+            >
+
+          </div>
+
+
+
+          <div class="event-field">
+
+            <label for="eventDate">
+              DATE
+            </label>
+
+            <input
+              id="eventDate"
+              type="date"
+              required
+            >
+
+          </div>
+
+
+
+          <div class="event-field">
+
+            <label for="eventStartTime">
+              START TIME
+            </label>
+
+            <input
+              id="eventStartTime"
+              type="time"
+              required
+            >
+
+          </div>
+
+
+
+          <div class="event-field">
+
+            <label for="eventMeetTime">
+              MEET TIME
+            </label>
+
+            <input
+              id="eventMeetTime"
+              type="time"
+            >
+
+          </div>
+
+
+
+          <div class="event-field">
+
+            <label for="eventMeetLocation">
+              MEET LOCATION
+            </label>
+
+            <input
+              id="eventMeetLocation"
+              type="text"
+              maxlength="80"
+              placeholder="e.g. Moonstone Mask"
+            >
+
+          </div>
+
+
+
+          <div class="event-field full">
+
+            <label for="eventNotes">
+              NOTES / CUSTOM MESSAGE
+            </label>
+
+            <textarea
+              id="eventNotes"
+              maxlength="1000"
+              placeholder="Learning run, requirements, bring scrolls, don't stand in red, etc..."
+            ></textarea>
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- DISCORD TIMESTAMP -->
+
+        <div class="discord-preview">
+
+          <h3>
+            DISCORD TIMESTAMP
+          </h3>
+
+          <p>
+            This will display the event time automatically in each member's local timezone on Discord.
+          </p>
+
+          <code
+            class="discord-code"
+            id="discordTimestampPreview"
+          >
+            Choose a date and time first.
+          </code>
+
+
+          <button
+            type="button"
+            class="event-secondary-button discord-copy"
+            id="copyDiscordTimestamp"
+          >
+            COPY TIMESTAMP
+          </button>
+
+        </div>
+
+
+
+        <div style="margin-top: 22px;">
+
+          <button
+            type="submit"
+            class="event-primary-button"
+          >
+            CREATE EVENT
+          </button>
+
+        </div>
+
+
+      </form>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ======================================================
+       FIREBASE
+       ====================================================== -->
+
+  <script type="module">
+
+    import {
+      initializeApp
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+
+
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+      signOut,
+      onAuthStateChanged
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+
+
+    import {
+      getFirestore,
+      collection,
+      addDoc,
+      serverTimestamp,
+      query,
+      orderBy,
+      onSnapshot
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+
+
+    /* ======================================================
+       FIREBASE CONFIG
+       ====================================================== */
+
+    const firebaseConfig = {
+
+      apiKey: "AIzaSyDQjutG0oa4v8dpI3i3UlgsFC9EmWsX4kI",
+
+      authDomain: "rotating-chaos-chat.firebaseapp.com",
+
+      projectId: "rotating-chaos-chat",
+
+      storageBucket: "rotating-chaos-chat.firebasestorage.app",
+
+      messagingSenderId: "337862334710",
+
+      appId: "1:337862334710:web:92e38dd0646dd9bec474d7",
+
+      measurementId: "G-7M761SJ4CJ"
+
+    };
+
+
+    const app =
+      initializeApp(firebaseConfig);
+
+    const auth =
+      getAuth(app);
+
+    const db =
+      getFirestore(app);
+
+
+
+    /* ======================================================
+       ELEMENTS
+       ====================================================== */
+
+    const eventsLogin =
+      document.getElementById("eventsLogin");
+
+    const eventsApp =
+      document.getElementById("eventsApp");
+
+    const eventLoginForm =
+      document.getElementById("eventLoginForm");
+
+    const eventGuildName =
+      document.getElementById("eventGuildName");
+
+    const eventAccessCode =
+      document.getElementById("eventAccessCode");
+
+    const eventLoginError =
+      document.getElementById("eventLoginError");
+
+    const eventsLoggedInUser =
+      document.getElementById("eventsLoggedInUser");
+
+    const eventsSignOut =
+      document.getElementById("eventsSignOut");
+
+    const openEventModal =
+      document.getElementById("openEventModal");
+
+    const closeEventModal =
+      document.getElementById("closeEventModal");
+
+    const eventModalBackdrop =
+      document.getElementById("eventModalBackdrop");
+
+    const createEventForm =
+      document.getElementById("createEventForm");
+
+    const eventTitle =
+      document.getElementById("eventTitle");
+
+    const eventDate =
+      document.getElementById("eventDate");
+
+    const eventStartTime =
+      document.getElementById("eventStartTime");
+
+    const eventMeetTime =
+      document.getElementById("eventMeetTime");
+
+    const eventMeetLocation =
+      document.getElementById("eventMeetLocation");
+
+    const eventNotes =
+      document.getElementById("eventNotes");
+
+    const discordTimestampPreview =
+      document.getElementById("discordTimestampPreview");
+
+    const copyDiscordTimestamp =
+      document.getElementById("copyDiscordTimestamp");
+
+    const calendarMonthTitle =
+      document.getElementById("calendarMonthTitle");
+
+    const calendarGrid =
+      document.getElementById("calendarGrid");
+
+    const previousMonth =
+      document.getElementById("previousMonth");
+
+    const nextMonth =
+      document.getElementById("nextMonth");
+
+    const upcomingEvents =
+      document.getElementById("upcomingEvents");
+
+
+
+    let currentGuildName = "";
+
+    let allEvents = [];
+
+    let currentCalendarDate =
+      new Date(
+        new Date().getFullYear(),
+        new Date().getMonth(),
+        1
+      );
+
+    let unsubscribeEvents = null;
+
+
+
+    /* ======================================================
+       ACCOUNT EMAIL
+       ====================================================== */
+
+    function makeAccountEmail(name) {
+
+      const cleaned =
+        name
+          .trim()
+          .toLowerCase()
+          .replace(/[^a-z0-9]/g, "");
+
+      return `${cleaned}@rotatingchaos.local`;
+
+    }
+
+
+
+    function prettyNameFromEmail(email) {
+
+      const raw =
+        email.split("@")[0];
+
+      return raw.charAt(0).toUpperCase()
+        + raw.slice(1);
+
+    }
+
+
+
+    /* ======================================================
+       LOGIN
+       ====================================================== */
+
+    eventLoginForm.addEventListener(
+      "submit",
+      async (event) => {
+
+        event.preventDefault();
+
+        eventLoginError.style.display =
+          "none";
+
+
+        const name =
+          eventGuildName.value.trim();
+
+        const password =
+          eventAccessCode.value;
+
+
+        if (!name || !password) {
+          return;
+        }
+
+
+        try {
+
+          await signInWithEmailAndPassword(
+            auth,
+            makeAccountEmail(name),
+            password
+          );
+
+
+          currentGuildName =
+            name;
+
+
+          sessionStorage.setItem(
+            "chaosNickname",
+            currentGuildName
+          );
+
+
+          eventAccessCode.value =
+            "";
+
+        }
+
+
+        catch (error) {
+
+          console.error(error);
+
+          eventLoginError.style.display =
+            "block";
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       AUTH STATE
+       ====================================================== */
+
+    onAuthStateChanged(
+      auth,
+      (user) => {
+
+        if (user) {
+
+          currentGuildName =
+            sessionStorage.getItem("chaosNickname")
+            || prettyNameFromEmail(user.email);
+
+
+          eventsLoggedInUser.textContent =
+            `Signed in as ${currentGuildName}`;
+
+
+          eventsLogin.style.display =
+            "none";
+
+
+          eventsApp.style.display =
+            "block";
+
+
+          startEventsListener();
+
+        }
+
+
+        else {
+
+          eventsLogin.style.display =
+            "block";
+
+
+          eventsApp.style.display =
+            "none";
+
+
+          if (unsubscribeEvents) {
+
+            unsubscribeEvents();
+
+            unsubscribeEvents =
+              null;
+
+          }
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       SIGN OUT
+       ====================================================== */
+
+    eventsSignOut.addEventListener(
+      "click",
+      async () => {
+
+        sessionStorage.removeItem(
+          "chaosNickname"
+        );
+
+
+        await signOut(auth);
+
+      }
+    );
+
+
+
+    /* ======================================================
+       MODAL
+       ====================================================== */
+
+    openEventModal.addEventListener(
+      "click",
+      () => {
+
+        eventModalBackdrop.classList.add(
+          "open"
+        );
+
+      }
+    );
+
+
+    closeEventModal.addEventListener(
+      "click",
+      closeModal
+    );
+
+
+    eventModalBackdrop.addEventListener(
+      "click",
+      (event) => {
+
+        if (
+          event.target === eventModalBackdrop
+        ) {
+
+          closeModal();
+
+        }
+
+      }
+    );
+
+
+    function closeModal() {
+
+      eventModalBackdrop.classList.remove(
+        "open"
+      );
+
+    }
+
+
+
+    /* ======================================================
+       DISCORD TIMESTAMP
+       ====================================================== */
+
+    function generateDiscordTimestamp() {
+
+      if (
+        !eventDate.value
+        || !eventStartTime.value
+      ) {
+
+        discordTimestampPreview.textContent =
+          "Choose a date and time first.";
+
+        return "";
+
+      }
+
+
+      const eventDateTime =
+        new Date(
+          `${eventDate.value}T${eventStartTime.value}:00`
+        );
+
+
+      const unix =
+        Math.floor(
+          eventDateTime.getTime() / 1000
+        );
+
+
+      const discordCode =
+        `<t:${unix}:F>  •  <t:${unix}:R>`;
+
+
+      discordTimestampPreview.textContent =
+        discordCode;
+
+
+      return discordCode;
+
+    }
+
+
+
+    eventDate.addEventListener(
+      "change",
+      generateDiscordTimestamp
+    );
+
+
+    eventStartTime.addEventListener(
+      "change",
+      generateDiscordTimestamp
+    );
+
+
+
+    copyDiscordTimestamp.addEventListener(
+      "click",
+      async () => {
+
+        const code =
+          generateDiscordTimestamp();
+
+
+        if (!code) {
+          return;
+        }
+
+
+        try {
+
+          await navigator.clipboard.writeText(
+            code
+          );
+
+
+          copyDiscordTimestamp.textContent =
+            "COPIED ✓";
+
+
+          setTimeout(
+            () => {
+
+              copyDiscordTimestamp.textContent =
+                "COPY TIMESTAMP";
+
+            },
+            1500
+          );
+
+        }
+
+
+        catch (error) {
+
+          console.error(
+            "Could not copy timestamp:",
+            error
+          );
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       CREATE EVENT
+       ====================================================== */
+
+    createEventForm.addEventListener(
+      "submit",
+      async (event) => {
+
+        event.preventDefault();
+
+
+        const user =
+          auth.currentUser;
+
+
+        if (!user) {
+          return;
+        }
+
+
+        const type =
+          document.querySelector(
+            'input[name="eventType"]:checked'
+          ).value;
+
+
+        const discordTimestamp =
+          generateDiscordTimestamp();
+
+
+        const startDateTime =
+          new Date(
+            `${eventDate.value}T${eventStartTime.value}:00`
+          );
+
+
+        try {
+
+          const eventDocument =
+            await addDoc(
+              collection(db, "events"),
+              {
+
+                title:
+                  eventTitle.value.trim(),
+
+                type:
+                  type,
+
+                eventDate:
+                  eventDate.value,
+
+                startTime:
+                  eventStartTime.value,
+
+                startTimestamp:
+                  Math.floor(
+                    startDateTime.getTime() / 1000
+                  ),
+
+                meetTime:
+                  eventMeetTime.value || "",
+
+                meetLocation:
+                  eventMeetLocation.value.trim(),
+
+                notes:
+                  eventNotes.value.trim(),
+
+                discordTimestamp:
+                  discordTimestamp,
+
+                createdByUid:
+                  user.uid,
+
+                createdByName:
+                  currentGuildName,
+
+                createdAt:
+                  serverTimestamp()
+
+              }
+            );
+
+
+          createEventForm.reset();
+
+
+          discordTimestampPreview.textContent =
+            "Choose a date and time first.";
+
+
+          closeModal();
+
+
+          if (type === "organised") {
+
+            window.location.href =
+              `event.html?id=${eventDocument.id}`;
+
+          }
+
+        }
+
+
+        catch (error) {
+
+          console.error(
+            "Could not create event:",
+            error
+          );
+
+
+          window.alert(
+            "Event creation failed. The chaos resisted."
+          );
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       LIVE EVENTS
+       ====================================================== */
+
+    function startEventsListener() {
+
+      if (unsubscribeEvents) {
+
+        unsubscribeEvents();
+
+      }
+
+
+      const eventsQuery =
+        query(
+          collection(db, "events"),
+          orderBy("createdAt", "asc")
+        );
+
+
+      unsubscribeEvents =
+        onSnapshot(
+          eventsQuery,
+          (snapshot) => {
+
+            allEvents =
+              [];
+
+
+            snapshot.forEach(
+              documentSnapshot => {
+
+                allEvents.push({
+                  id:
+                    documentSnapshot.id,
+
+                  ...documentSnapshot.data()
+                });
+
+              }
+            );
+
+
+            renderCalendar();
+
+            renderUpcomingEvents();
+
+          }
+        );
+
+    }
+
+
+
+    /* ======================================================
+       CALENDAR NAVIGATION
+       ====================================================== */
+
+    previousMonth.addEventListener(
+      "click",
+      () => {
+
+        currentCalendarDate =
+          new Date(
+            currentCalendarDate.getFullYear(),
+            currentCalendarDate.getMonth() - 1,
+            1
+          );
+
+
+        renderCalendar();
+
+      }
+    );
+
+
+    nextMonth.addEventListener(
+      "click",
+      () => {
+
+        currentCalendarDate =
+          new Date(
+            currentCalendarDate.getFullYear(),
+            currentCalendarDate.getMonth() + 1,
+            1
+          );
+
+
+        renderCalendar();
+
+      }
+    );
+
+
+
+    /* ======================================================
+       RENDER CALENDAR
+       ====================================================== */
+
+    function renderCalendar() {
+
+      const year =
+        currentCalendarDate.getFullYear();
+
+      const month =
+        currentCalendarDate.getMonth();
+
+
+      calendarMonthTitle.textContent =
+        currentCalendarDate.toLocaleDateString(
+          "en-GB",
+          {
+            month: "long",
+            year: "numeric"
+          }
+        ).toUpperCase();
+
+
+      calendarGrid.innerHTML =
+        "";
+
+
+      const firstDay =
+        new Date(
+          year,
+          month,
+          1
+        );
+
+
+      let startWeekDay =
+        firstDay.getDay();
+
+
+      if (startWeekDay === 0) {
+
+        startWeekDay =
+          7;
+
+      }
+
+
+      const calendarStart =
+        new Date(
+          year,
+          month,
+          1 - (startWeekDay - 1)
+        );
+
+
+      const today =
+        new Date();
+
+
+      for (
+        let index = 0;
+        index < 42;
+        index++
+      ) {
+
+        const day =
+          new Date(calendarStart);
+
+
+        day.setDate(
+          calendarStart.getDate()
+          + index
+        );
+
+
+        const dayBox =
+          document.createElement("div");
+
+
+        dayBox.className =
+          "calendar-day";
+
+
+        if (
+          day.getMonth()
+          !== month
+        ) {
+
+          dayBox.classList.add(
+            "other-month"
+          );
+
+        }
+
+
+        if (
+          day.getFullYear()
+          === today.getFullYear()
+          && day.getMonth()
+          === today.getMonth()
+          && day.getDate()
+          === today.getDate()
+        ) {
+
+          dayBox.classList.add(
+            "today"
+          );
+
+        }
+
+
+        const dateNumber =
+          document.createElement("div");
+
+
+        dateNumber.className =
+          "calendar-date-number";
+
+
+        dateNumber.textContent =
+          day.getDate();
+
+
+        dayBox.appendChild(
+          dateNumber
+        );
+
+
+        const dateKey =
+          formatDateKey(day);
+
+
+        const dayEvents =
+          allEvents
+            .filter(
+              item =>
+                item.eventDate
+                === dateKey
+            )
+            .sort(
+              (a, b) =>
+                (a.startTime || "")
+                  .localeCompare(
+                    b.startTime || ""
+                  )
+            );
+
+
+        dayEvents.forEach(
+          item => {
+
+            const link =
+              document.createElement("a");
+
+
+            link.href =
+              `event.html?id=${item.id}`;
+
+
+            link.className =
+              "calendar-event";
+
+
+            if (
+              item.type === "organised"
+            ) {
+
+              link.classList.add(
+                "organised"
+              );
+
+            }
+
+
+            link.textContent =
+              `${item.startTime} ${item.title}`;
+
+
+            dayBox.appendChild(
+              link
+            );
+
+          }
+        );
+
+
+        calendarGrid.appendChild(
+          dayBox
+        );
+
+      }
+
+    }
+
+
+
+    /* ======================================================
+       UPCOMING EVENTS
+       ====================================================== */
+
+    function renderUpcomingEvents() {
+
+      upcomingEvents.innerHTML =
+        "";
+
+
+      const nowUnix =
+        Math.floor(
+          Date.now() / 1000
+        );
+
+
+      const futureEvents =
+        allEvents
+          .filter(
+            event =>
+              event.startTimestamp
+              >= nowUnix
+          )
+          .sort(
+            (a, b) =>
+              a.startTimestamp
+              - b.startTimestamp
+          )
+          .slice(
+            0,
+            8
+          );
+
+
+      if (
+        futureEvents.length === 0
+      ) {
+
+        const empty =
+          document.createElement("p");
+
+
+        empty.className =
+          "no-events";
+
+
+        empty.textContent =
+          "No upcoming chaos yet.";
+
+
+        upcomingEvents.appendChild(
+          empty
+        );
+
+
+        return;
+
+      }
+
+
+      futureEvents.forEach(
+        event => {
+
+          const card =
+            document.createElement("a");
+
+
+          card.href =
+            `event.html?id=${event.id}`;
+
+
+          card.className =
+            "upcoming-event-card";
+
+
+          const type =
+            document.createElement("div");
+
+
+          type.className =
+            "upcoming-event-type";
+
+
+          type.textContent =
+            event.type === "organised"
+              ? "ORGANISED RUN"
+              : "QUICK EVENT";
+
+
+          const title =
+            document.createElement("div");
+
+
+          title.className =
+            "upcoming-event-title";
+
+
+          title.textContent =
+            event.title;
+
+
+          const meta =
+            document.createElement("div");
+
+
+          meta.className =
+            "upcoming-event-meta";
+
+
+          meta.textContent =
+            formatReadableDateTime(
+              event.eventDate,
+              event.startTime
+            );
+
+
+          card.appendChild(type);
+
+          card.appendChild(title);
+
+          card.appendChild(meta);
+
+
+          upcomingEvents.appendChild(
+            card
+          );
+
+        }
+      );
+
+    }
+
+
+
+    /* ======================================================
+       HELPERS
+       ====================================================== */
+
+    function formatDateKey(date) {
+
+      const year =
+        date.getFullYear();
+
+
+      const month =
+        String(
+          date.getMonth() + 1
+        ).padStart(
+          2,
+          "0"
+        );
+
+
+      const day =
+        String(
+          date.getDate()
+        ).padStart(
+          2,
+          "0"
+        );
+
+
+      return `${year}-${month}-${day}`;
+
+    }
+
+
+
+    function formatReadableDateTime(
+      dateString,
+      timeString
+    ) {
+
+      const date =
+        new Date(
+          `${dateString}T${timeString}:00`
+        );
+
+
+      return date.toLocaleString(
+        "en-GB",
+        {
+          weekday: "short",
+          day: "numeric",
+          month: "short",
+          hour: "2-digit",
+          minute: "2-digit"
+        }
+      );
+
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>

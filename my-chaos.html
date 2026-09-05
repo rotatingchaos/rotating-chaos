@@ -1,0 +1,2570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="My Chaos - Rotating Chaos Member Dashboard"
+  >
+
+  <title>My Chaos | Rotating Chaos</title>
+
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Crimson+Pro:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+
+  <style>
+
+    /* ======================================================
+       PAGE
+       ====================================================== */
+
+    .my-chaos-page {
+      min-height: 100vh;
+      padding: 70px 20px 100px;
+
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(15, 130, 105, 0.10),
+          transparent 35%
+        ),
+        #0d0c0b;
+    }
+
+
+    .my-chaos-shell {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+    }
+
+
+
+    /* ======================================================
+       HERO
+       ====================================================== */
+
+    .my-chaos-hero {
+      padding: 36px;
+
+      margin-bottom: 28px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.30);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(67, 214, 186, 0.09),
+          rgba(218, 165, 32, 0.05)
+        );
+    }
+
+
+    .my-chaos-hero h1 {
+      margin: 5px 0 10px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        clamp(
+          2.5rem,
+          6vw,
+          4.7rem
+        );
+    }
+
+
+    .my-chaos-hero p {
+      margin: 0;
+
+      font-family:
+        "Crimson Pro",
+        serif;
+
+      font-size: 1.18rem;
+    }
+
+
+
+    /* ======================================================
+       LOGIN
+       ====================================================== */
+
+    .my-chaos-login {
+      width: min(520px, 100%);
+      margin: 0 auto;
+      padding: 30px;
+
+      background: #151310;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.35);
+    }
+
+
+    .my-chaos-login h2 {
+      margin-top: 0;
+
+      text-align: center;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .my-chaos-login p {
+      text-align: center;
+    }
+
+
+    .chaos-field {
+      margin-top: 18px;
+    }
+
+
+    .chaos-field label {
+      display: block;
+      margin-bottom: 6px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+
+
+    .chaos-field input {
+      width: 100%;
+      box-sizing: border-box;
+
+      padding: 12px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.35);
+
+      background: #11100f;
+      color: #f6efe2;
+
+      font: inherit;
+    }
+
+
+    .chaos-primary-button {
+      border: 1px solid #d7aa42;
+      background: #d7aa42;
+      color: #111;
+
+      padding: 11px 16px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+
+    .chaos-secondary-button {
+      border:
+        1px solid rgba(218, 165, 32, 0.4);
+
+      background: #171513;
+      color: #f6efe2;
+
+      padding: 9px 13px;
+
+      cursor: pointer;
+    }
+
+
+    .chaos-login-button {
+      width: 100%;
+      margin-top: 22px;
+    }
+
+
+    .chaos-login-error {
+      display: none;
+      margin-top: 14px;
+      text-align: center;
+      color: #ff9999;
+    }
+
+
+
+    /* ======================================================
+       APP
+       ====================================================== */
+
+    .my-chaos-app {
+      display: none;
+    }
+
+
+    .my-chaos-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 12px;
+
+      margin-bottom: 22px;
+    }
+
+
+    .my-chaos-actions {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+    }
+
+
+
+    /* ======================================================
+       PROFILE CARD
+       ====================================================== */
+
+    .member-profile-panel {
+      display: grid;
+
+      grid-template-columns:
+        170px
+        1fr;
+
+      gap: 22px;
+
+      margin-bottom: 24px;
+
+      padding: 22px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.25);
+
+      background: #151310;
+    }
+
+
+    .member-avatar {
+      width: 170px;
+      height: 170px;
+
+      overflow: hidden;
+
+      border:
+        1px solid rgba(67, 214, 186, 0.25);
+
+      background: #090807;
+    }
+
+
+    .member-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    .member-avatar-fallback {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 3rem;
+
+      color: #ddb45d;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(67, 214, 186, 0.13),
+          rgba(218, 165, 32, 0.03)
+        );
+    }
+
+
+    .member-profile-panel h2 {
+      margin: 0 0 5px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 1.8rem;
+    }
+
+
+    .member-chaos-title {
+      color: #ddb45d;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+
+    .member-profile-details {
+      display: grid;
+      gap: 5px;
+      margin-bottom: 12px;
+    }
+
+
+    .member-profile-details strong {
+      color: #43d6ba;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 0.72rem;
+      letter-spacing: 0.7px;
+    }
+
+
+    .member-profile-bio {
+      opacity: 0.82;
+      line-height: 1.55;
+    }
+
+
+
+    /* ======================================================
+       QUICK LINKS
+       ====================================================== */
+
+    .quick-links {
+      display: grid;
+
+      grid-template-columns:
+        repeat(5, 1fr);
+
+      gap: 12px;
+
+      margin-bottom: 25px;
+    }
+
+
+    .quick-link {
+      display: block;
+
+      padding: 15px;
+
+      text-align: center;
+
+      text-decoration: none;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.20);
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(67, 214, 186, 0.035),
+          #151310
+        );
+
+      color: #f6efe2;
+    }
+
+
+    .quick-link strong {
+      display: block;
+
+      margin-top: 6px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 0.76rem;
+    }
+
+
+    .quick-link span {
+      font-size: 1.5rem;
+    }
+
+
+
+    /* ======================================================
+       DASHBOARD GRID
+       ====================================================== */
+
+    .dashboard-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 20px;
+    }
+
+
+    .dashboard-panel {
+      padding: 20px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.23);
+
+      background: #121110;
+    }
+
+
+    .dashboard-panel h2 {
+      margin-top: 0;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .dashboard-list {
+      display: grid;
+      gap: 10px;
+    }
+
+
+
+    /* ======================================================
+       EVENT CARDS
+       ====================================================== */
+
+    .my-event-card {
+      display: block;
+
+      padding: 13px;
+
+      border:
+        1px solid rgba(67, 214, 186, 0.16);
+
+      background: #171513;
+
+      color: #f6efe2;
+
+      text-decoration: none;
+    }
+
+
+    .my-event-title {
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-weight: 700;
+    }
+
+
+    .my-event-meta {
+      margin-top: 5px;
+      opacity: 0.65;
+      font-size: 0.86rem;
+    }
+
+
+    .my-event-role {
+      margin-top: 7px;
+
+      color: #ddb45d;
+
+      font-size: 0.82rem;
+    }
+
+
+
+    /* ======================================================
+       BLOG / GALLERY ITEMS
+       ====================================================== */
+
+    .my-content-item {
+      padding: 12px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.14);
+
+      background: #171513;
+    }
+
+
+    .my-content-title {
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-weight: 700;
+    }
+
+
+    .my-content-meta {
+      margin-top: 5px;
+      font-size: 0.8rem;
+      opacity: 0.58;
+    }
+
+
+    .my-content-link {
+      display: inline-block;
+
+      margin-top: 8px;
+
+      color: #9ae8d8;
+
+      text-decoration: none;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 0.7rem;
+    }
+
+
+
+    /* ======================================================
+       EMPTY
+       ====================================================== */
+
+    .dashboard-empty {
+      opacity: 0.55;
+      font-style: italic;
+    }
+
+
+
+    /* ======================================================
+       MOBILE
+       ====================================================== */
+
+    @media (max-width: 900px) {
+
+      .quick-links {
+        grid-template-columns:
+          repeat(3, 1fr);
+      }
+
+
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      .my-chaos-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+
+      .member-profile-panel {
+        grid-template-columns: 1fr;
+      }
+
+
+      .member-avatar {
+        width: 130px;
+        height: 130px;
+      }
+
+
+      .quick-links {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
+
+  <header class="site-header">
+
+    <a href="index.html" class="brand">
+
+      <img
+        src="images/logo.png"
+        alt="Rotating Chaos guild emblem"
+        class="brand-logo"
+      >
+
+      <div class="brand-text">
+
+        <span class="brand-name">
+          ROTATING CHAOS
+        </span>
+
+        <span class="brand-subtitle">
+          GUILD ◆ FAMILY ◆ CHAOS
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+      <a href="index.html">
+        HOME
+      </a>
+
+      <a href="community.html">
+        COMMUNITY
+      </a>
+
+      <a href="build-guides.html">
+        CHAOS GUIDES
+      </a>
+
+      <a href="events.html">
+        EVENTS
+      </a>
+
+      <a href="merch.html">
+        MERCH
+      </a>
+
+      <a href="my-chaos.html">
+        MY CHAOS
+      </a>
+
+    </nav>
+
+
+    <a
+      href="https://discord.gg/UhJndyjYWr"
+      class="discord-button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      JOIN DISCORD
+    </a>
+
+  </header>
+
+
+
+  <main class="my-chaos-page">
+
+    <div class="my-chaos-shell">
+
+
+      <!-- ==================================================
+           HERO
+           ================================================== -->
+
+      <section class="my-chaos-hero">
+
+        <p class="section-eyebrow">
+          YOUR CORNER OF THE MADNESS
+        </p>
+
+        <h1 id="heroTitle">
+          MY CHAOS
+        </h1>
+
+        <p>
+          Your profile, your runs, your posts and the questionable decisions you personally contributed.
+        </p>
+
+      </section>
+
+
+
+      <!-- ==================================================
+           LOGIN
+           ================================================== -->
+
+      <section
+        class="my-chaos-login"
+        id="myChaosLogin"
+      >
+
+        <h2>
+          GUILD MEMBERS ONLY
+        </h2>
+
+        <p>
+          Same Chaos login. Obviously. 😂
+        </p>
+
+
+        <form id="myChaosLoginForm">
+
+          <div class="chaos-field">
+
+            <label for="myChaosGuildName">
+              GUILD NAME
+            </label>
+
+            <input
+              id="myChaosGuildName"
+              type="text"
+              required
+            >
+
+          </div>
+
+
+          <div class="chaos-field">
+
+            <label for="myChaosAccessCode">
+              ACCESS CODE
+            </label>
+
+            <input
+              id="myChaosAccessCode"
+              type="password"
+              required
+            >
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="chaos-primary-button chaos-login-button"
+          >
+            ENTER MY CHAOS
+          </button>
+
+
+          <p
+            class="chaos-login-error"
+            id="myChaosLoginError"
+          >
+            Nope. Chaos doesn't recognise you. 😂
+          </p>
+
+        </form>
+
+      </section>
+
+
+
+      <!-- ==================================================
+           APP
+           ================================================== -->
+
+      <section
+        class="my-chaos-app"
+        id="myChaosApp"
+      >
+
+
+        <div class="my-chaos-topbar">
+
+          <div id="loggedInUser"></div>
+
+
+          <div class="my-chaos-actions">
+
+            <a
+              href="chaos-crew.html"
+              class="chaos-secondary-button"
+            >
+              EDIT PROFILE
+            </a>
+
+
+            <button
+              type="button"
+              class="chaos-secondary-button"
+              id="myChaosSignOut"
+            >
+              SIGN OUT
+            </button>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             PROFILE
+             ================================================== -->
+
+        <section
+          class="member-profile-panel"
+          id="memberProfilePanel"
+        >
+
+
+          <div
+            class="member-avatar"
+            id="memberAvatar"
+          ></div>
+
+
+          <div>
+
+            <h2 id="memberName">
+              Chaos Member
+            </h2>
+
+            <div
+              class="member-chaos-title"
+              id="memberChaosTitle"
+            ></div>
+
+
+            <div
+              class="member-profile-details"
+              id="memberProfileDetails"
+            ></div>
+
+
+            <div
+              class="member-profile-bio"
+              id="memberProfileBio"
+            ></div>
+
+          </div>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             QUICK LINKS
+             ================================================== -->
+
+        <div class="quick-links">
+
+          <a
+            href="events.html"
+            class="quick-link"
+          >
+            <span>📅</span>
+            <strong>EVENTS</strong>
+          </a>
+
+
+          <a
+            href="chaos-chat.html"
+            class="quick-link"
+          >
+            <span>💬</span>
+            <strong>CHAOS CHAT</strong>
+          </a>
+
+
+          <a
+            href="chaos-crew.html"
+            class="quick-link"
+          >
+            <span>👥</span>
+            <strong>CREW</strong>
+          </a>
+
+
+          <a
+            href="gallery.html"
+            class="quick-link"
+          >
+            <span>🖼️</span>
+            <strong>GALLERY</strong>
+          </a>
+
+
+          <a
+            href="blog.html"
+            class="quick-link"
+          >
+            <span>📜</span>
+            <strong>FROM THE CHAOS</strong>
+          </a>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             DASHBOARD
+             ================================================== -->
+
+        <div class="dashboard-grid">
+
+
+          <!-- MY EVENTS -->
+
+          <section class="dashboard-panel">
+
+            <h2>
+              MY UPCOMING RUNS
+            </h2>
+
+            <div
+              class="dashboard-list"
+              id="myEventsList"
+            ></div>
+
+          </section>
+
+
+
+          <!-- MY ASSIGNMENTS -->
+
+          <section class="dashboard-panel">
+
+            <h2>
+              MY RUN SHEET ROLES
+            </h2>
+
+            <div
+              class="dashboard-list"
+              id="myAssignmentsList"
+            ></div>
+
+          </section>
+
+
+
+          <!-- MY POSTS -->
+
+          <section class="dashboard-panel">
+
+            <h2>
+              MY POSTS
+            </h2>
+
+            <div
+              class="dashboard-list"
+              id="myPostsList"
+            ></div>
+
+          </section>
+
+
+
+          <!-- MY GALLERY -->
+
+          <section class="dashboard-panel">
+
+            <h2>
+              MY GALLERY DROPS
+            </h2>
+
+            <div
+              class="dashboard-list"
+              id="myGalleryList"
+            ></div>
+
+          </section>
+
+
+        </div>
+
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+
+  <!-- ======================================================
+       FIREBASE
+       ====================================================== -->
+
+  <script type="module">
+
+
+    import {
+      initializeApp
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+
+
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+      signOut,
+      onAuthStateChanged
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+
+
+    import {
+      getFirestore,
+      collection,
+      doc,
+      getDoc,
+      query,
+      orderBy,
+      onSnapshot
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+
+
+    /* ======================================================
+       FIREBASE CONFIG
+       ====================================================== */
+
+    const firebaseConfig = {
+
+      apiKey:
+        "AIzaSyDQjutG0oa4v8dpI3i3UlgsFC9EmWsX4kI",
+
+      authDomain:
+        "rotating-chaos-chat.firebaseapp.com",
+
+      projectId:
+        "rotating-chaos-chat",
+
+      storageBucket:
+        "rotating-chaos-chat.firebasestorage.app",
+
+      messagingSenderId:
+        "337862334710",
+
+      appId:
+        "1:337862334710:web:92e38dd0646dd9bec474d7",
+
+      measurementId:
+        "G-7M761SJ4CJ"
+
+    };
+
+
+    const app =
+      initializeApp(firebaseConfig);
+
+
+    const auth =
+      getAuth(app);
+
+
+    const db =
+      getFirestore(app);
+
+
+
+    /* ======================================================
+       ELEMENTS
+       ====================================================== */
+
+    const myChaosLogin =
+      document.getElementById("myChaosLogin");
+
+    const myChaosApp =
+      document.getElementById("myChaosApp");
+
+    const myChaosLoginForm =
+      document.getElementById("myChaosLoginForm");
+
+    const myChaosGuildName =
+      document.getElementById("myChaosGuildName");
+
+    const myChaosAccessCode =
+      document.getElementById("myChaosAccessCode");
+
+    const myChaosLoginError =
+      document.getElementById("myChaosLoginError");
+
+    const myChaosSignOut =
+      document.getElementById("myChaosSignOut");
+
+    const loggedInUser =
+      document.getElementById("loggedInUser");
+
+    const heroTitle =
+      document.getElementById("heroTitle");
+
+    const memberAvatar =
+      document.getElementById("memberAvatar");
+
+    const memberName =
+      document.getElementById("memberName");
+
+    const memberChaosTitle =
+      document.getElementById("memberChaosTitle");
+
+    const memberProfileDetails =
+      document.getElementById("memberProfileDetails");
+
+    const memberProfileBio =
+      document.getElementById("memberProfileBio");
+
+    const myEventsList =
+      document.getElementById("myEventsList");
+
+    const myAssignmentsList =
+      document.getElementById("myAssignmentsList");
+
+    const myPostsList =
+      document.getElementById("myPostsList");
+
+    const myGalleryList =
+      document.getElementById("myGalleryList");
+
+
+
+    /* ======================================================
+       STATE
+       ====================================================== */
+
+    let currentGuildName =
+      "";
+
+    let events =
+      [];
+
+    let signups =
+      [];
+
+    let runGroupListeners =
+      [];
+
+    let unsubscribeEvents =
+      null;
+
+    let unsubscribeSignups =
+      [];
+
+    let unsubscribePosts =
+      null;
+
+    let unsubscribeGallery =
+      null;
+
+
+
+    /* ======================================================
+       LOGIN HELPERS
+       ====================================================== */
+
+    function makeAccountEmail(name) {
+
+      const cleaned =
+        name
+          .trim()
+          .toLowerCase()
+          .replace(
+            /[^a-z0-9]/g,
+            ""
+          );
+
+
+      return `${cleaned}@rotatingchaos.local`;
+
+    }
+
+
+
+    function prettyNameFromEmail(email) {
+
+      const raw =
+        email.split("@")[0];
+
+
+      return (
+        raw.charAt(0).toUpperCase()
+        + raw.slice(1)
+      );
+
+    }
+
+
+
+    /* ======================================================
+       LOGIN
+       ====================================================== */
+
+    myChaosLoginForm.addEventListener(
+      "submit",
+      async (event) => {
+
+        event.preventDefault();
+
+
+        myChaosLoginError.style.display =
+          "none";
+
+
+        const name =
+          myChaosGuildName.value.trim();
+
+
+        const password =
+          myChaosAccessCode.value;
+
+
+        try {
+
+          await signInWithEmailAndPassword(
+            auth,
+            makeAccountEmail(name),
+            password
+          );
+
+
+          currentGuildName =
+            name;
+
+
+          sessionStorage.setItem(
+            "chaosNickname",
+            name
+          );
+
+
+          myChaosAccessCode.value =
+            "";
+
+        }
+
+
+        catch (error) {
+
+          console.error(error);
+
+
+          myChaosLoginError.style.display =
+            "block";
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       AUTH
+       ====================================================== */
+
+    onAuthStateChanged(
+      auth,
+      async (user) => {
+
+        if (user) {
+
+          currentGuildName =
+            sessionStorage.getItem(
+              "chaosNickname"
+            )
+            || prettyNameFromEmail(
+              user.email
+            );
+
+
+          loggedInUser.textContent =
+            `Signed in as ${currentGuildName}`;
+
+
+          heroTitle.textContent =
+            `WELCOME BACK, ${currentGuildName.toUpperCase()}`;
+
+
+          myChaosLogin.style.display =
+            "none";
+
+
+          myChaosApp.style.display =
+            "block";
+
+
+          await loadMyProfile();
+
+          startMyDashboard();
+
+        }
+
+
+        else {
+
+          myChaosLogin.style.display =
+            "block";
+
+
+          myChaosApp.style.display =
+            "none";
+
+
+          stopListeners();
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       SIGN OUT
+       ====================================================== */
+
+    myChaosSignOut.addEventListener(
+      "click",
+      async () => {
+
+        sessionStorage.removeItem(
+          "chaosNickname"
+        );
+
+
+        await signOut(auth);
+
+      }
+    );
+
+
+
+    /* ======================================================
+       PROFILE
+       ====================================================== */
+
+    async function loadMyProfile() {
+
+      const user =
+        auth.currentUser;
+
+
+      if (!user) {
+        return;
+      }
+
+
+      const snapshot =
+        await getDoc(
+          doc(
+            db,
+            "crewProfiles",
+            user.uid
+          )
+        );
+
+
+      memberProfileDetails.innerHTML =
+        "";
+
+
+      memberAvatar.innerHTML =
+        "";
+
+
+      if (!snapshot.exists()) {
+
+        memberName.textContent =
+          currentGuildName;
+
+
+        memberChaosTitle.textContent =
+          "Profile not created yet";
+
+
+        memberProfileBio.textContent =
+          "Head to Meet the Chaos Crew and create your profile.";
+
+
+        memberAvatar.appendChild(
+          createFallbackAvatar(
+            currentGuildName
+          )
+        );
+
+
+        return;
+
+      }
+
+
+      const profile =
+        snapshot.data();
+
+
+      memberName.textContent =
+        profile.guildName
+        || currentGuildName;
+
+
+      memberChaosTitle.textContent =
+        profile.chaosTitle
+        ? `“${profile.chaosTitle}”`
+        : "";
+
+
+      if (profile.avatarUrl) {
+
+        const image =
+          document.createElement("img");
+
+
+        image.src =
+          profile.avatarUrl;
+
+
+        image.alt =
+          profile.guildName
+          || currentGuildName;
+
+
+        image.addEventListener(
+          "error",
+          () => {
+
+            memberAvatar.innerHTML =
+              "";
+
+
+            memberAvatar.appendChild(
+              createFallbackAvatar(
+                profile.guildName
+                || currentGuildName
+              )
+            );
+
+          }
+        );
+
+
+        memberAvatar.appendChild(image);
+
+      }
+
+
+      else {
+
+        memberAvatar.appendChild(
+          createFallbackAvatar(
+            profile.guildName
+            || currentGuildName
+          )
+        );
+
+      }
+
+
+
+      if (profile.role) {
+
+        addProfileDetail(
+          "ROLE",
+          profile.role
+        );
+
+      }
+
+
+      if (profile.mainClass) {
+
+        addProfileDetail(
+          "MAIN CLASS",
+          profile.mainClass
+        );
+
+      }
+
+
+      if (profile.mainCharacter) {
+
+        addProfileDetail(
+          "MAIN CHARACTER",
+          profile.mainCharacter
+        );
+
+      }
+
+
+      if (profile.discordName) {
+
+        addProfileDetail(
+          "DISCORD",
+          profile.discordName
+        );
+
+      }
+
+
+      memberProfileBio.textContent =
+        profile.bio || "";
+
+    }
+
+
+
+    /* ======================================================
+       DASHBOARD START
+       ====================================================== */
+
+    function startMyDashboard() {
+
+      stopListeners();
+
+
+      startEvents();
+
+      startPosts();
+
+      startGallery();
+
+    }
+
+
+
+    /* ======================================================
+       EVENTS
+       ====================================================== */
+
+    function startEvents() {
+
+      unsubscribeEvents =
+        onSnapshot(
+          query(
+            collection(
+              db,
+              "events"
+            ),
+            orderBy(
+              "startTimestamp",
+              "asc"
+            )
+          ),
+          snapshot => {
+
+            events =
+              [];
+
+
+            snapshot.forEach(
+              item => {
+
+                events.push({
+                  id: item.id,
+                  ...item.data()
+                });
+
+              }
+            );
+
+
+            startSignupChecks();
+
+          }
+        );
+
+    }
+
+
+
+    function startSignupChecks() {
+
+      unsubscribeSignups.forEach(
+        unsubscribe =>
+          unsubscribe()
+      );
+
+
+      unsubscribeSignups =
+        [];
+
+
+      signups =
+        [];
+
+
+      const user =
+        auth.currentUser;
+
+
+      if (!user) {
+        return;
+      }
+
+
+      events.forEach(
+        event => {
+
+          const signupRef =
+            doc(
+              db,
+              "events",
+              event.id,
+              "signups",
+              user.uid
+            );
+
+
+          const unsubscribe =
+            onSnapshot(
+              signupRef,
+              snapshot => {
+
+                signups =
+                  signups.filter(
+                    item =>
+                      item.eventId
+                      !== event.id
+                  );
+
+
+                if (snapshot.exists()) {
+
+                  signups.push({
+                    eventId:
+                      event.id,
+
+                    ...snapshot.data()
+                  });
+
+                }
+
+
+                renderMyEvents();
+
+                startAssignmentChecks();
+
+              }
+            );
+
+
+          unsubscribeSignups.push(
+            unsubscribe
+          );
+
+        }
+      );
+
+    }
+
+
+
+    function renderMyEvents() {
+
+      myEventsList.innerHTML =
+        "";
+
+
+      const now =
+        Math.floor(
+          Date.now() / 1000
+        );
+
+
+      const upcoming =
+        signups
+          .map(
+            signup => {
+
+              const event =
+                events.find(
+                  item =>
+                    item.id
+                    === signup.eventId
+                );
+
+
+              return {
+                signup,
+                event
+              };
+
+            }
+          )
+          .filter(
+            item =>
+              item.event
+              && !item.event.cancelled
+              && item.event.startTimestamp
+              >= now
+          );
+
+
+      if (
+        upcoming.length === 0
+      ) {
+
+        myEventsList.innerHTML =
+          '<p class="dashboard-empty">You are not signed up for any upcoming suffering. 😂</p>';
+
+
+        return;
+
+      }
+
+
+      upcoming.forEach(
+        item => {
+
+          const link =
+            document.createElement("a");
+
+
+          link.className =
+            "my-event-card";
+
+
+          link.href =
+            `event.html?id=${item.event.id}`;
+
+
+          const title =
+            document.createElement("div");
+
+
+          title.className =
+            "my-event-title";
+
+
+          title.textContent =
+            item.event.title;
+
+
+          const meta =
+            document.createElement("div");
+
+
+          meta.className =
+            "my-event-meta";
+
+
+          meta.textContent =
+            formatEventDate(
+              item.event.eventDate,
+              item.event.startTime
+            );
+
+
+          const role =
+            document.createElement("div");
+
+
+          role.className =
+            "my-event-role";
+
+
+          role.textContent =
+            `${statusIcon(
+              item.signup.status || "Going"
+            )} ${item.signup.status || "Going"} ◆ ${item.signup.role || "Any"}`;
+
+
+          link.appendChild(title);
+
+          link.appendChild(meta);
+
+          link.appendChild(role);
+
+
+          myEventsList.appendChild(link);
+
+        }
+      );
+
+    }
+
+
+
+    /* ======================================================
+       RUN SHEET ASSIGNMENTS
+       ====================================================== */
+
+    function startAssignmentChecks() {
+
+      runGroupListeners.forEach(
+        unsubscribe =>
+          unsubscribe()
+      );
+
+
+      runGroupListeners =
+        [];
+
+
+      myAssignmentsList.innerHTML =
+        "";
+
+
+      const user =
+        auth.currentUser;
+
+
+      if (!user) {
+        return;
+      }
+
+
+      const organisedEvents =
+        events.filter(
+          event =>
+            event.type === "organised"
+            && !event.cancelled
+            && event.startTimestamp
+            >= Math.floor(
+              Date.now() / 1000
+            )
+        );
+
+
+      const assignments =
+        [];
+
+
+      organisedEvents.forEach(
+        event => {
+
+          const unsubscribe =
+            onSnapshot(
+              collection(
+                db,
+                "events",
+                event.id,
+                "runGroups"
+              ),
+              snapshot => {
+
+                for (
+                  let index =
+                    assignments.length - 1;
+                  index >= 0;
+                  index--
+                ) {
+
+                  if (
+                    assignments[index]
+                      .eventId
+                    === event.id
+                  ) {
+
+                    assignments.splice(
+                      index,
+                      1
+                    );
+
+                  }
+
+                }
+
+
+                snapshot.forEach(
+                  groupDoc => {
+
+                    const group =
+                      groupDoc.data();
+
+
+                    (group.slots || [])
+                      .forEach(
+                        slot => {
+
+                          if (
+                            slot.assignedUid
+                            === user.uid
+                          ) {
+
+                            assignments.push({
+                              eventId:
+                                event.id,
+
+                              eventTitle:
+                                event.title,
+
+                              groupName:
+                                group.name,
+
+                              role:
+                                slot.role,
+
+                              requirements:
+                                slot.requirements || "",
+
+                              date:
+                                event.eventDate,
+
+                              time:
+                                event.startTime
+                            });
+
+                          }
+
+                        }
+                      );
+
+                  }
+                );
+
+
+                renderAssignments(
+                  assignments
+                );
+
+              }
+            );
+
+
+          runGroupListeners.push(
+            unsubscribe
+          );
+
+        }
+      );
+
+
+      if (
+        organisedEvents.length === 0
+      ) {
+
+        renderAssignments(
+          []
+        );
+
+      }
+
+    }
+
+
+
+    function renderAssignments(
+      assignments
+    ) {
+
+      myAssignmentsList.innerHTML =
+        "";
+
+
+      if (
+        assignments.length === 0
+      ) {
+
+        myAssignmentsList.innerHTML =
+          '<p class="dashboard-empty">No run-sheet assignments yet.</p>';
+
+
+        return;
+
+      }
+
+
+      assignments.forEach(
+        assignment => {
+
+          const card =
+            document.createElement("a");
+
+
+          card.className =
+            "my-event-card";
+
+
+          card.href =
+            `event.html?id=${assignment.eventId}`;
+
+
+          const title =
+            document.createElement("div");
+
+
+          title.className =
+            "my-event-title";
+
+
+          title.textContent =
+            assignment.eventTitle;
+
+
+          const meta =
+            document.createElement("div");
+
+
+          meta.className =
+            "my-event-meta";
+
+
+          meta.textContent =
+            `${assignment.groupName} ◆ ${formatEventDate(
+              assignment.date,
+              assignment.time
+            )}`;
+
+
+          const role =
+            document.createElement("div");
+
+
+          role.className =
+            "my-event-role";
+
+
+          role.textContent =
+            `${roleIcon(
+              assignment.role
+            )} ${assignment.role}`;
+
+
+          if (
+            assignment.requirements
+          ) {
+
+            role.textContent +=
+              ` ◆ ${assignment.requirements}`;
+
+          }
+
+
+          card.appendChild(title);
+
+          card.appendChild(meta);
+
+          card.appendChild(role);
+
+
+          myAssignmentsList.appendChild(
+            card
+          );
+
+        }
+      );
+
+    }
+
+
+
+    /* ======================================================
+       POSTS
+       ====================================================== */
+
+    function startPosts() {
+
+      unsubscribePosts =
+        onSnapshot(
+          query(
+            collection(
+              db,
+              "posts"
+            ),
+            orderBy(
+              "createdAt",
+              "desc"
+            )
+          ),
+          snapshot => {
+
+            const mine =
+              [];
+
+
+            snapshot.forEach(
+              item => {
+
+                const data =
+                  item.data();
+
+
+                if (
+                  auth.currentUser
+                  && data.authorUid
+                  === auth.currentUser.uid
+                ) {
+
+                  mine.push({
+                    id: item.id,
+                    ...data
+                  });
+
+                }
+
+              }
+            );
+
+
+            renderMyPosts(
+              mine
+            );
+
+          }
+        );
+
+    }
+
+
+
+    function renderMyPosts(posts) {
+
+      myPostsList.innerHTML =
+        "";
+
+
+      if (
+        posts.length === 0
+      ) {
+
+        myPostsList.innerHTML =
+          '<p class="dashboard-empty">You haven’t published anything yet.</p>';
+
+
+        return;
+
+      }
+
+
+      posts
+        .slice(0, 5)
+        .forEach(
+          post => {
+
+            const item =
+              document.createElement("div");
+
+
+            item.className =
+              "my-content-item";
+
+
+            const title =
+              document.createElement("div");
+
+
+            title.className =
+              "my-content-title";
+
+
+            title.textContent =
+              post.title;
+
+
+            const meta =
+              document.createElement("div");
+
+
+            meta.className =
+              "my-content-meta";
+
+
+            meta.textContent =
+              post.category
+              || "From the Chaos";
+
+
+            const link =
+              document.createElement("a");
+
+
+            link.className =
+              "my-content-link";
+
+
+            link.href =
+              "blog.html";
+
+
+            link.textContent =
+              "VIEW FROM THE CHAOS";
+
+
+            item.appendChild(title);
+
+            item.appendChild(meta);
+
+            item.appendChild(link);
+
+
+            myPostsList.appendChild(item);
+
+          }
+        );
+
+    }
+
+
+
+    /* ======================================================
+       GALLERY
+       ====================================================== */
+
+    function startGallery() {
+
+      unsubscribeGallery =
+        onSnapshot(
+          query(
+            collection(
+              db,
+              "gallery"
+            ),
+            orderBy(
+              "createdAt",
+              "desc"
+            )
+          ),
+          snapshot => {
+
+            const mine =
+              [];
+
+
+            snapshot.forEach(
+              item => {
+
+                const data =
+                  item.data();
+
+
+                if (
+                  auth.currentUser
+                  && data.uploadedByUid
+                  === auth.currentUser.uid
+                ) {
+
+                  mine.push({
+                    id: item.id,
+                    ...data
+                  });
+
+                }
+
+              }
+            );
+
+
+            renderMyGallery(
+              mine
+            );
+
+          }
+        );
+
+    }
+
+
+
+    function renderMyGallery(items) {
+
+      myGalleryList.innerHTML =
+        "";
+
+
+      if (
+        items.length === 0
+      ) {
+
+        myGalleryList.innerHTML =
+          '<p class="dashboard-empty">You haven’t added any screenshots yet.</p>';
+
+
+        return;
+
+      }
+
+
+      items
+        .slice(0, 5)
+        .forEach(
+          galleryItem => {
+
+            const item =
+              document.createElement("div");
+
+
+            item.className =
+              "my-content-item";
+
+
+            const title =
+              document.createElement("div");
+
+
+            title.className =
+              "my-content-title";
+
+
+            title.textContent =
+              galleryItem.caption
+              || "Chaos Gallery Drop";
+
+
+            const meta =
+              document.createElement("div");
+
+
+            meta.className =
+              "my-content-meta";
+
+
+            meta.textContent =
+              galleryItem.category
+              || "Gallery";
+
+
+            const link =
+              document.createElement("a");
+
+
+            link.className =
+              "my-content-link";
+
+
+            link.href =
+              "gallery.html";
+
+
+            link.textContent =
+              "VIEW GALLERY";
+
+
+            item.appendChild(title);
+
+            item.appendChild(meta);
+
+            item.appendChild(link);
+
+
+            myGalleryList.appendChild(
+              item
+            );
+
+          }
+        );
+
+    }
+
+
+
+    /* ======================================================
+       STOP LISTENERS
+       ====================================================== */
+
+    function stopListeners() {
+
+      if (unsubscribeEvents) {
+
+        unsubscribeEvents();
+
+        unsubscribeEvents =
+          null;
+
+      }
+
+
+      unsubscribeSignups.forEach(
+        unsubscribe =>
+          unsubscribe()
+      );
+
+
+      unsubscribeSignups =
+        [];
+
+
+      runGroupListeners.forEach(
+        unsubscribe =>
+          unsubscribe()
+      );
+
+
+      runGroupListeners =
+        [];
+
+
+      if (unsubscribePosts) {
+
+        unsubscribePosts();
+
+        unsubscribePosts =
+          null;
+
+      }
+
+
+      if (unsubscribeGallery) {
+
+        unsubscribeGallery();
+
+        unsubscribeGallery =
+          null;
+
+      }
+
+    }
+
+
+
+    /* ======================================================
+       HELPERS
+       ====================================================== */
+
+    function createFallbackAvatar(name) {
+
+      const fallback =
+        document.createElement("div");
+
+
+      fallback.className =
+        "member-avatar-fallback";
+
+
+      fallback.textContent =
+        (name || "?")
+          .trim()
+          .charAt(0)
+          .toUpperCase()
+        || "?";
+
+
+      return fallback;
+
+    }
+
+
+
+    function addProfileDetail(
+      label,
+      value
+    ) {
+
+      const row =
+        document.createElement("div");
+
+
+      const strong =
+        document.createElement("strong");
+
+
+      strong.textContent =
+        `${label}: `;
+
+
+      row.appendChild(strong);
+
+      row.appendChild(
+        document.createTextNode(
+          value
+        )
+      );
+
+
+      memberProfileDetails.appendChild(
+        row
+      );
+
+    }
+
+
+
+    function formatEventDate(
+      dateString,
+      timeString
+    ) {
+
+      const date =
+        new Date(
+          `${dateString}T${timeString}:00`
+        );
+
+
+      return date.toLocaleString(
+        "en-GB",
+        {
+          weekday: "short",
+          day: "numeric",
+          month: "short",
+          hour: "2-digit",
+          minute: "2-digit"
+        }
+      );
+
+    }
+
+
+
+    function statusIcon(status) {
+
+      switch (status) {
+
+        case "Reserve":
+          return "🟡";
+
+        case "Maybe":
+          return "❔";
+
+        default:
+          return "✅";
+
+      }
+
+    }
+
+
+
+    function roleIcon(role) {
+
+      switch (role) {
+
+        case "Tank":
+          return "🛡️";
+
+        case "Healer":
+          return "💙";
+
+        case "DPS":
+          return "⚔️";
+
+        case "Filler":
+          return "⭐";
+
+        default:
+          return "🎲";
+
+      }
+
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>

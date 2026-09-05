@@ -2,8 +2,13 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
@@ -12,84 +17,261 @@
 
   <title>Privacy | Rotating Chaos</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Crimson+Pro:wght@400;500;600&display=swap"
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
 
   <style>
 
+    /* ======================================================
+       PRIVACY PAGE
+       ====================================================== */
+
     .privacy-page {
       min-height: 100vh;
-      padding: 70px 20px 100px;
+
+      padding:
+        70px 20px 100px;
+
       background:
         radial-gradient(
           circle at top,
-          rgba(15,130,105,0.10),
+          rgba(15, 130, 105, 0.10),
           transparent 35%
         ),
         #0d0c0b;
     }
 
+
     .privacy-shell {
-      width: min(900px, 100%);
-      margin: 0 auto;
+      width:
+        min(
+          950px,
+          100%
+        );
+
+      margin:
+        0 auto;
     }
+
+
+    /* ======================================================
+       HERO
+       ====================================================== */
 
     .privacy-hero {
       text-align: center;
-      margin-bottom: 30px;
-      padding: 35px;
-      border: 1px solid rgba(218,165,32,0.28);
+
+      margin-bottom: 28px;
+
+      padding:
+        40px 30px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.28);
+
       background:
         linear-gradient(
           135deg,
-          rgba(67,214,186,0.08),
-          rgba(218,165,32,0.05)
+          rgba(67, 214, 186, 0.08),
+          rgba(218, 165, 32, 0.05)
         );
     }
 
+
     .privacy-hero h1 {
-      margin: 5px 0 10px;
-      font-family: "Cinzel", serif;
-      font-size: clamp(2.3rem, 6vw, 4.5rem);
+      margin:
+        5px 0 10px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        clamp(
+          2.5rem,
+          6vw,
+          4.8rem
+        );
     }
+
+
+    .privacy-hero p {
+      max-width: 700px;
+
+      margin:
+        0 auto;
+
+      font-family:
+        "Crimson Pro",
+        serif;
+
+      font-size: 1.18rem;
+
+      line-height: 1.6;
+    }
+
+
+    /* ======================================================
+       PANELS
+       ====================================================== */
 
     .privacy-panel {
       margin-top: 18px;
-      padding: 24px;
-      border: 1px solid rgba(218,165,32,0.22);
-      background: #151310;
+
+      padding: 25px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.22);
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(67, 214, 186, 0.025),
+          #151310
+        );
     }
+
 
     .privacy-panel h2 {
       margin-top: 0;
-      font-family: "Cinzel", serif;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      color: #ddb45d;
     }
+
 
     .privacy-panel p,
     .privacy-panel li {
-      line-height: 1.65;
+      line-height: 1.68;
     }
 
+
+    .privacy-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+
     .privacy-panel ul {
-      padding-left: 20px;
+      padding-left: 22px;
+
+      margin-bottom: 0;
+    }
+
+
+    .privacy-panel li + li {
+      margin-top: 7px;
+    }
+
+
+    .privacy-highlight {
+      border-color:
+        rgba(67, 214, 186, 0.28);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(67, 214, 186, 0.06),
+          rgba(218, 165, 32, 0.03)
+        );
+    }
+
+
+    .privacy-contact-link {
+      color: #9ae8d8;
+
+      text-decoration: none;
+    }
+
+
+    .privacy-contact-link:hover {
+      text-decoration: underline;
+    }
+
+
+    /* ======================================================
+       BOTTOM
+       ====================================================== */
+
+    .privacy-bottom {
+      margin-top: 28px;
+
+      padding: 26px;
+
+      text-align: center;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.18);
+
+      background: #121110;
+    }
+
+
+    .privacy-bottom h2 {
+      margin-top: 0;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .privacy-bottom p {
+      max-width: 720px;
+
+      margin:
+        0 auto;
+
+      line-height: 1.65;
+
+      opacity: 0.82;
+    }
+
+
+    .privacy-bottom p + p {
+      margin-top: 12px;
     }
 
   </style>
 
 </head>
 
+
 <body>
+
+
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
 
   <header class="site-header">
 
-    <a href="index.html" class="brand">
+    <a
+      href="index.html"
+      class="brand"
+    >
 
       <img
         src="images/logo.png"
@@ -98,20 +280,52 @@
       >
 
       <div class="brand-text">
-        <span class="brand-name">ROTATING CHAOS</span>
-        <span class="brand-subtitle">GUILD ◆ FAMILY ◆ CHAOS</span>
+
+        <span class="brand-name">
+          ROTATING CHAOS
+        </span>
+
+        <span class="brand-subtitle">
+          GUILD ◆ FAMILY ◆ CHAOS
+        </span>
+
       </div>
 
     </a>
 
+
     <nav class="desktop-nav">
-      <a href="index.html">HOME</a>
-      <a href="community.html">COMMUNITY</a>
-      <a href="build-guides.html">CHAOS GUIDES</a>
-      <a href="events.html">EVENTS</a>
-      <a href="merch.html">MERCH</a>
-      <a href="my-chaos.html">MY CHAOS</a>
+
+      <a href="index.html">
+        HOME
+      </a>
+
+      <a href="community.html">
+        COMMUNITY
+      </a>
+
+      <a href="build-guides.html">
+        CHAOS GUIDES
+      </a>
+
+      <a href="events.html">
+        EVENTS
+      </a>
+
+      <a href="merch.html">
+        MERCH
+      </a>
+
+      <a href="my-chaos.html">
+        MY CHAOS
+      </a>
+
+      <a href="contact.html">
+        CONTACT
+      </a>
+
     </nav>
+
 
     <a
       href="https://discord.gg/UhJndyjYWr"
@@ -124,9 +338,20 @@
 
   </header>
 
+
+
+  <!-- ======================================================
+       MAIN
+       ====================================================== -->
+
   <main class="privacy-page">
 
     <div class="privacy-shell">
+
+
+      <!-- ==================================================
+           HERO
+           ================================================== -->
 
       <section class="privacy-hero">
 
@@ -139,100 +364,298 @@
         </h1>
 
         <p>
-          The sensible bit. We know. Horrifying. 😂
+          The sensible bit.
+          We know. Horrifying. 😂
         </p>
 
       </section>
 
 
-      <section class="privacy-panel">
+
+      <!-- ==================================================
+           ABOUT
+           ================================================== -->
+
+      <section class="privacy-panel privacy-highlight">
 
         <h2>
-          WHAT THIS SITE USES
+          ABOUT THIS SITE
         </h2>
 
         <p>
-          Rotating Chaos uses Firebase services to provide guild-member
-          login and interactive community features.
+          Rotating Chaos is a player-run Neverwinter guild
+          and community website.
         </p>
 
         <p>
-          This includes authentication and database storage used by
-          features such as Chaos Chat, Events, Crew Profiles, Gallery,
-          From the Chaos and My Chaos.
+          Some areas of the website are public, while interactive
+          community features are intended for authenticated
+          Rotating Chaos guild members.
+        </p>
+
+        <p>
+          We only use information needed to provide and manage
+          those community features.
         </p>
 
       </section>
 
 
+
+      <!-- ==================================================
+           FIREBASE
+           ================================================== -->
+
       <section class="privacy-panel">
 
         <h2>
-          WHAT MAY BE STORED
+          FIREBASE
         </h2>
+
+        <p>
+          Rotating Chaos uses Firebase services to provide
+          guild-member authentication and interactive
+          website features.
+        </p>
+
+        <p>
+          Firebase Authentication is used to manage member access,
+          while Firestore is used to store information required
+          by community features on the website.
+        </p>
+
+        <p>
+          These features may include Chaos Chat, Events,
+          Crew Profiles, Gallery, From the Chaos,
+          My Chaos and other member areas.
+        </p>
+
+      </section>
+
+
+
+      <!-- ==================================================
+           INFORMATION STORED
+           ================================================== -->
+
+      <section class="privacy-panel">
+
+        <h2>
+          INFORMATION WE MAY STORE
+        </h2>
+
+        <p>
+          Depending on which parts of the website you use,
+          information stored may include:
+        </p>
 
         <ul>
-          <li>Guild name used for site login and display.</li>
-          <li>Firebase authentication account information.</li>
-          <li>Chaos Chat messages and reactions.</li>
-          <li>Event sign-ups and run-sheet assignments.</li>
-          <li>Crew profile details voluntarily added by members.</li>
-          <li>Gallery image links, captions and categories.</li>
-          <li>From the Chaos posts.</li>
-          <li>Merch listings created through the site.</li>
+
+          <li>
+            Your guild name used for login and display.
+          </li>
+
+          <li>
+            Information required for your authenticated
+            guild-member account.
+          </li>
+
+          <li>
+            Your guild role or website permission level.
+          </li>
+
+          <li>
+            Crew profile information you choose to provide.
+          </li>
+
+          <li>
+            Your profile image URL.
+          </li>
+
+          <li>
+            Chaos Chat messages and reactions.
+          </li>
+
+          <li>
+            Event sign-ups and run-sheet assignments.
+          </li>
+
+          <li>
+            Gallery entries, image links,
+            captions and categories.
+          </li>
+
+          <li>
+            From the Chaos posts or other
+            member-created content.
+          </li>
+
+          <li>
+            Merch information created through
+            authorised website features.
+          </li>
+
         </ul>
 
       </section>
 
 
+
+      <!-- ==================================================
+           PROFILE IMAGES / CLOUDINARY
+           ================================================== -->
+
       <section class="privacy-panel">
 
         <h2>
-          IMAGES AND LINKS
+          PROFILE IMAGES & CLOUDINARY
         </h2>
 
         <p>
-          The site may display externally hosted images or links supplied
-          by guild members. Those files may be hosted by third-party services
-          rather than directly by Rotating Chaos.
+          Guild members can choose to upload a profile image
+          from their device.
+        </p>
+
+        <p>
+          Profile images uploaded through the website are hosted
+          using Cloudinary. Once uploaded, the image is stored
+          by Cloudinary and the resulting image URL is saved
+          with the member's Crew Profile.
+        </p>
+
+        <p>
+          Members should only upload images they are comfortable
+          using as part of their guild profile and that they have
+          permission to use.
         </p>
 
       </section>
 
 
+
+      <!-- ==================================================
+           MEMBER CONTENT
+           ================================================== -->
+
       <section class="privacy-panel">
 
         <h2>
-          WHO CAN SEE GUILD CONTENT
+          MEMBER-CREATED CONTENT
         </h2>
 
         <p>
-          Most interactive community areas are restricted to authenticated
-          guild members. Public-facing pages may still contain general guild
-          information and links.
+          Some parts of Rotating Chaos allow guild members
+          to create or submit content.
+        </p>
+
+        <p>
+          This can include profiles, chat messages,
+          event information, gallery content, posts,
+          images and other community contributions.
+        </p>
+
+        <p>
+          Information submitted to shared guild areas
+          may be visible to other authenticated members
+          who have access to that area of the website.
         </p>
 
       </section>
 
 
+
+      <!-- ==================================================
+           PUBLIC / PRIVATE CONTENT
+           ================================================== -->
+
       <section class="privacy-panel">
 
         <h2>
-          MEMBER CONTROL
+          WHO CAN SEE CONTENT
         </h2>
 
         <p>
-          Where supported, members can edit or remove content they created,
-          including profiles, posts, gallery entries and event sign-ups.
+          Public-facing pages may contain general information
+          about Rotating Chaos, Neverwinter guides,
+          guild information, events, merchandise
+          and other public content.
         </p>
 
         <p>
-          Guild administrators may also moderate content where required once
-          administrator permissions are enabled.
+          Interactive member areas are intended to be restricted
+          to authenticated guild members.
+        </p>
+
+        <p>
+          Members should still avoid posting sensitive personal
+          information in chats, profiles, posts or other
+          shared community areas.
         </p>
 
       </section>
 
+
+
+      <!-- ==================================================
+           MEMBER CONTROL
+           ================================================== -->
+
+      <section class="privacy-panel">
+
+        <h2>
+          YOUR CONTENT
+        </h2>
+
+        <p>
+          Where the website provides the option,
+          members can edit or remove content they created.
+        </p>
+
+        <p>
+          This may include Crew Profiles,
+          event participation, posts,
+          gallery entries and other contributions.
+        </p>
+
+        <p>
+          Guild administrators may also moderate,
+          edit or remove content where required
+          for the operation of the guild community.
+        </p>
+
+      </section>
+
+
+
+      <!-- ==================================================
+           REMOVAL REQUESTS
+           ================================================== -->
+
+      <section class="privacy-panel">
+
+        <h2>
+          REMOVAL REQUESTS
+        </h2>
+
+        <p>
+          If you leave Rotating Chaos or want information
+          associated with your website account reviewed
+          or removed, contact the guild team.
+        </p>
+
+        <p>
+          We can review content and account information
+          held within the Rotating Chaos website systems
+          and remove it where appropriate.
+        </p>
+
+      </section>
+
+
+
+      <!-- ==================================================
+           THIRD PARTY SERVICES
+           ================================================== -->
 
       <section class="privacy-panel">
 
@@ -241,31 +664,104 @@
         </h2>
 
         <p>
-          Rotating Chaos may link to services such as Discord, Firebase,
-          image-hosting services and future merch providers. Those services
-          operate under their own privacy policies and terms.
+          Rotating Chaos uses or links to third-party services
+          in order to provide parts of the website.
+        </p>
+
+        <p>
+          These may include Firebase, Cloudinary,
+          Discord, merchandise providers
+          and other external websites or services.
+        </p>
+
+        <p>
+          Third-party services operate under their own
+          privacy policies, security practices and terms.
         </p>
 
       </section>
 
+
+
+      <!-- ==================================================
+           EXTERNAL LINKS
+           ================================================== -->
 
       <section class="privacy-panel">
 
         <h2>
-          QUESTIONS
+          EXTERNAL LINKS
         </h2>
 
         <p>
-          If you have a question about information displayed on the site,
-          contact the Rotating Chaos guild team through Discord.
+          The website contains links to external services,
+          including the Rotating Chaos Discord server.
+        </p>
+
+        <p>
+          Once you follow an external link,
+          the privacy practices of that service apply.
         </p>
 
       </section>
+
+
+
+      <!-- ==================================================
+           CONTACT
+           ================================================== -->
+
+      <section class="privacy-bottom">
+
+        <p class="section-eyebrow">
+          QUESTIONS?
+        </p>
+
+        <h2>
+          CONTACT THE CHAOS
+        </h2>
+
+        <p>
+          If you have a question about information stored
+          or displayed on the Rotating Chaos website,
+          want something reviewed or need help with your account,
+          contact us.
+        </p>
+
+        <p>
+
+          <a
+            href="mailto:rotatingchaos@gmail.com"
+            class="privacy-contact-link"
+          >
+            rotatingchaos@gmail.com
+          </a>
+
+          &nbsp;◆&nbsp;
+
+          <a
+            href="https://discord.gg/UhJndyjYWr"
+            class="privacy-contact-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Rotating Chaos Discord
+          </a>
+
+        </p>
+
+      </section>
+
 
     </div>
 
   </main>
 
+
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
 
   <footer>
 
@@ -276,6 +772,7 @@
     <p class="footer-tagline">
       GUILD ◆ FAMILY ◆ CHAOS
     </p>
+
 
     <div class="footer-links">
 
@@ -291,11 +788,20 @@
         Community
       </a>
 
+      <a href="contact.html">
+        Contact
+      </a>
+
       <a href="privacy.html">
         Privacy
       </a>
 
+      <a href="disclaimer.html">
+        Disclaimer
+      </a>
+
     </div>
+
 
     <p class="copyright">
       © 2026 Rotating Chaos.
@@ -303,6 +809,7 @@
     </p>
 
   </footer>
+
 
 </body>
 

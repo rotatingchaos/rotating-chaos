@@ -17,34 +17,18 @@
 
   <title>Meet the Chaos Crew | Rotating Chaos</title>
 
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Crimson+Pro:wght@400;500;600&display=swap"
     rel="stylesheet"
   >
 
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
+  <link rel="stylesheet" href="style.css">
 
 
   <style>
-
-    /* ======================================================
-       PAGE
-       ====================================================== */
 
     .crew-page {
       min-height: 100vh;
@@ -59,31 +43,21 @@
         #0d0c0b;
     }
 
-
     .crew-shell {
       width: min(1200px, 100%);
       margin: 0 auto;
     }
 
-
-
-    /* ======================================================
-       HERO
-       ====================================================== */
-
     .crew-hero {
       display: grid;
-
       grid-template-columns:
         minmax(0, 1.2fr)
         minmax(260px, 0.8fr);
 
       gap: 40px;
-
       align-items: center;
 
       margin-bottom: 40px;
-
       padding: 35px;
 
       border:
@@ -97,13 +71,9 @@
         );
     }
 
-
     .crew-hero h1 {
       margin: 5px 0 12px;
-
-      font-family:
-        "Cinzel",
-        serif;
+      font-family: "Cinzel", serif;
 
       font-size:
         clamp(
@@ -113,26 +83,17 @@
         );
     }
 
-
     .crew-hero p {
-      font-family:
-        "Crimson Pro",
-        serif;
-
-      font-size:
-        1.2rem;
-
-      line-height:
-        1.6;
+      font-family: "Crimson Pro", serif;
+      font-size: 1.2rem;
+      line-height: 1.6;
     }
-
 
     .crew-hero-image {
       display: flex;
       justify-content: center;
       align-items: center;
     }
-
 
     .crew-hero-image img {
       width: min(360px, 100%);
@@ -143,12 +104,6 @@
           0 15px 35px rgba(0, 0, 0, 0.45)
         );
     }
-
-
-
-    /* ======================================================
-       LOGIN
-       ====================================================== */
 
     .crew-login {
       width: min(520px, 100%);
@@ -161,40 +116,28 @@
         1px solid rgba(218, 165, 32, 0.35);
     }
 
-
     .crew-login h2 {
       margin-top: 0;
-
       text-align: center;
-
-      font-family:
-        "Cinzel",
-        serif;
+      font-family: "Cinzel", serif;
     }
-
 
     .crew-login p {
       text-align: center;
     }
 
-
     .crew-field {
       margin-top: 18px;
     }
-
 
     .crew-field label {
       display: block;
       margin-bottom: 6px;
 
-      font-family:
-        "Cinzel",
-        serif;
-
+      font-family: "Cinzel", serif;
       font-size: 0.8rem;
       letter-spacing: 1px;
     }
-
 
     .crew-field input,
     .crew-field textarea,
@@ -208,45 +151,49 @@
         1px solid rgba(218, 165, 32, 0.35);
 
       background: #11100f;
-
       color: #f6efe2;
 
       font: inherit;
-
       outline: none;
     }
 
+    .crew-field input[type="file"] {
+      cursor: pointer;
+    }
 
     .crew-field textarea {
       min-height: 120px;
       resize: vertical;
     }
 
-
     .crew-primary-button {
       border: 1px solid #d7aa42;
       background: #d7aa42;
       color: #111;
+
       padding: 11px 16px;
+
       font-family: "Cinzel", serif;
       font-weight: 800;
+
       cursor: pointer;
     }
 
+    .crew-primary-button:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
 
     .crew-secondary-button {
       border:
         1px solid rgba(218, 165, 32, 0.4);
 
       background: #171513;
-
       color: #f6efe2;
 
       padding: 9px 13px;
-
       cursor: pointer;
     }
-
 
     .crew-danger-button {
       border:
@@ -258,16 +205,13 @@
       color: #ffbaba;
 
       padding: 8px 11px;
-
       cursor: pointer;
     }
-
 
     .crew-login-button {
       width: 100%;
       margin-top: 22px;
     }
-
 
     .crew-login-error {
       display: none;
@@ -276,30 +220,23 @@
       color: #ff9999;
     }
 
-
-
-    /* ======================================================
-       APP
-       ====================================================== */
-
     .crew-app {
       display: none;
     }
-
 
     .crew-topbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       gap: 14px;
+
       margin-bottom: 24px;
     }
-
 
     .crew-user {
       opacity: 0.7;
     }
-
 
     .crew-actions {
       display: flex;
@@ -307,26 +244,20 @@
       flex-wrap: wrap;
     }
 
-
-
-    /* ======================================================
-       FILTERS
-       ====================================================== */
-
     .crew-filters {
       display: flex;
       flex-wrap: wrap;
+
       gap: 8px;
+
       margin-bottom: 25px;
     }
-
 
     .crew-filter {
       border:
         1px solid rgba(218, 165, 32, 0.28);
 
       background: #151310;
-
       color: #f6efe2;
 
       padding: 8px 12px;
@@ -335,7 +266,6 @@
 
       border-radius: 999px;
     }
-
 
     .crew-filter.active {
       border-color: #43d6ba;
@@ -346,12 +276,6 @@
       color: #8be5d2;
     }
 
-
-
-    /* ======================================================
-       GRID
-       ====================================================== */
-
     .crew-grid {
       display: grid;
 
@@ -360,7 +284,6 @@
 
       gap: 18px;
     }
-
 
     .crew-card {
       display: flex;
@@ -379,22 +302,21 @@
       overflow: hidden;
     }
 
-
     .crew-avatar-wrap {
       aspect-ratio: 1 / 1;
       background: #090807;
+
       overflow: hidden;
       position: relative;
     }
 
-
     .crew-avatar {
       width: 100%;
       height: 100%;
+
       object-fit: cover;
       display: block;
     }
-
 
     .crew-avatar-fallback {
       width: 100%;
@@ -411,47 +333,32 @@
           rgba(218, 165, 32, 0.04)
         );
 
-      font-family:
-        "Cinzel",
-        serif;
-
+      font-family: "Cinzel", serif;
       font-size: 3rem;
-
       color: #ddb45d;
     }
-
 
     .crew-card-body {
       display: flex;
       flex-direction: column;
       flex: 1;
+
       padding: 17px;
     }
 
-
     .crew-role {
-      font-family:
-        "Cinzel",
-        serif;
-
+      font-family: "Cinzel", serif;
       font-size: 0.68rem;
-
       letter-spacing: 1px;
-
       color: #43d6ba;
     }
-
 
     .crew-card h2 {
       margin: 7px 0 4px;
 
-      font-family:
-        "Cinzel",
-        serif;
-
+      font-family: "Cinzel", serif;
       font-size: 1.4rem;
     }
-
 
     .crew-chaos-title {
       color: #ddb45d;
@@ -459,38 +366,28 @@
       margin-bottom: 12px;
     }
 
-
     .crew-details {
       display: grid;
       gap: 7px;
       margin-bottom: 13px;
     }
 
-
     .crew-detail {
       font-size: 0.9rem;
     }
 
-
     .crew-detail strong {
-      font-family:
-        "Cinzel",
-        serif;
-
+      font-family: "Cinzel", serif;
       font-size: 0.68rem;
-
       letter-spacing: 0.7px;
-
       color: #d7aa42;
     }
-
 
     .crew-bio {
       line-height: 1.55;
       opacity: 0.82;
       flex: 1;
     }
-
 
     .crew-card-actions {
       display: flex;
@@ -499,10 +396,11 @@
       margin-top: 15px;
     }
 
-
     .crew-empty {
       grid-column: 1 / -1;
+
       padding: 45px 20px;
+
       text-align: center;
 
       border:
@@ -511,38 +409,30 @@
       opacity: 0.6;
     }
 
-
-
-    /* ======================================================
-       MODAL
-       ====================================================== */
-
     .crew-modal-backdrop {
       display: none;
 
       position: fixed;
-
       inset: 0;
 
       z-index: 400;
 
       padding: 25px 15px;
-
       overflow-y: auto;
 
       background:
         rgba(0, 0, 0, 0.86);
     }
 
-
     .crew-modal-backdrop.open {
       display: block;
     }
 
-
     .crew-modal {
       width: min(760px, 100%);
+
       margin: 35px auto;
+
       padding: 26px;
 
       border:
@@ -551,43 +441,33 @@
       background: #141210;
     }
 
-
     .crew-modal-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+
       gap: 12px;
     }
 
-
     .crew-modal h2 {
       margin-top: 0;
-
-      font-family:
-        "Cinzel",
-        serif;
+      font-family: "Cinzel", serif;
     }
-
 
     .crew-modal-close {
       border: 0;
       background: transparent;
       color: white;
+
       font-size: 1.5rem;
+
       cursor: pointer;
     }
-
-
-
-    /* ======================================================
-       AVATAR PREVIEW
-       ====================================================== */
 
     .crew-preview {
       display: none;
 
       margin-top: 16px;
-
       padding: 10px;
 
       border:
@@ -596,36 +476,32 @@
       background: #090807;
     }
 
-
     .crew-preview img {
       width: 100%;
       max-height: 380px;
+
       object-fit: contain;
       display: block;
     }
 
-
-
-    /* ======================================================
-       FORM GRID
-       ====================================================== */
+    .crew-upload-note {
+      margin: 7px 0 0;
+      opacity: 0.58;
+      font-size: 0.85rem;
+    }
 
     .crew-form-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
       gap: 14px;
     }
-
 
     .crew-field.full {
       grid-column: 1 / -1;
     }
-
-
-
-    /* ======================================================
-       MOBILE
-       ====================================================== */
 
     @media (max-width: 900px) {
 
@@ -633,18 +509,16 @@
         grid-template-columns: 1fr;
       }
 
-
       .crew-hero-image {
         order: -1;
       }
 
-
       .crew-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2, 1fr);
       }
 
     }
-
 
     @media (max-width: 620px) {
 
@@ -653,11 +527,9 @@
         align-items: flex-start;
       }
 
-
       .crew-grid {
         grid-template-columns: 1fr;
       }
-
 
       .crew-form-grid {
         grid-template-columns: 1fr;
@@ -671,11 +543,6 @@
 
 
 <body>
-
-
-  <!-- ======================================================
-       HEADER
-       ====================================================== -->
 
   <header class="site-header">
 
@@ -724,8 +591,8 @@
         MERCH
       </a>
 
-      <a href="index.html#contact">
-        CONTACT
+      <a href="my-chaos.html">
+        MY CHAOS
       </a>
 
     </nav>
@@ -747,11 +614,6 @@
   <main class="crew-page">
 
     <div class="crew-shell">
-
-
-      <!-- ==================================================
-           HERO
-           ================================================== -->
 
       <section class="crew-hero">
 
@@ -786,10 +648,6 @@
       </section>
 
 
-
-      <!-- ==================================================
-           LOGIN
-           ================================================== -->
 
       <section
         class="crew-login"
@@ -858,15 +716,10 @@
 
 
 
-      <!-- ==================================================
-           APP
-           ================================================== -->
-
       <section
         class="crew-app"
         id="crewApp"
       >
-
 
         <div class="crew-topbar">
 
@@ -907,8 +760,6 @@
         </div>
 
 
-
-        <!-- FILTERS -->
 
         <div class="crew-filters">
 
@@ -971,17 +822,12 @@
         </div>
 
 
-
-        <!-- ROSTER -->
-
         <div
           class="crew-grid"
           id="crewGrid"
         ></div>
 
-
       </section>
-
 
     </div>
 
@@ -989,17 +835,12 @@
 
 
 
-  <!-- ======================================================
-       PROFILE MODAL
-       ====================================================== -->
-
   <div
     class="crew-modal-backdrop"
     id="profileModal"
   >
 
     <div class="crew-modal">
-
 
       <div class="crew-modal-header">
 
@@ -1030,9 +871,7 @@
 
       <form id="profileForm">
 
-
         <div class="crew-form-grid">
-
 
           <div class="crew-field">
 
@@ -1161,22 +1000,39 @@
 
 
 
-        </div>
+          <div class="crew-field full">
+
+            <label for="profileAvatarFile">
+              PROFILE PICTURE
+            </label>
+
+            <input
+              id="profileAvatarFile"
+              type="file"
+              accept="image/jpeg,image/png,image/webp,image/gif"
+            >
+
+            <p class="crew-upload-note">
+              Choose a JPG, PNG, WebP or GIF from your laptop or phone. Max 8MB.
+            </p>
+
+          </div>
 
 
-<div class="crew-field full">
 
-  <label for="profileAvatar">
-    OR USE AN IMAGE URL
-  </label>
+          <div class="crew-field full">
 
-  <input
-    id="profileAvatar"
-    type="url"
-    placeholder="https://..."
-  >
+            <label for="profileAvatar">
+              OR USE AN IMAGE URL
+            </label>
 
-</div>
+            <input
+              id="profileAvatar"
+              type="url"
+              placeholder="https://..."
+            >
+
+          </div>
 
 
 
@@ -1208,7 +1064,6 @@
 
           </div>
 
-
         </div>
 
 
@@ -1218,15 +1073,14 @@
           <button
             type="submit"
             class="crew-primary-button"
+            id="profileSaveButton"
           >
             SAVE PROFILE
           </button>
 
         </div>
 
-
       </form>
-
 
     </div>
 
@@ -1234,12 +1088,7 @@
 
 
 
-  <!-- ======================================================
-       FIREBASE
-       ====================================================== -->
-
   <script type="module">
-
 
     import {
       initializeApp
@@ -1265,10 +1114,6 @@
     } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
 
-
-    /* ======================================================
-       FIREBASE CONFIG
-       ====================================================== */
 
     const firebaseConfig = {
 
@@ -1296,6 +1141,15 @@
     };
 
 
+    const CLOUDINARY_CLOUD_NAME =
+      "m9foargd";
+
+
+    const CLOUDINARY_UPLOAD_PRESET =
+      "rotating_chaos_profiles";
+
+
+
     const app =
       initializeApp(
         firebaseConfig
@@ -1314,10 +1168,6 @@
       );
 
 
-
-    /* ======================================================
-       ELEMENTS
-       ====================================================== */
 
     const crewLogin =
       document.getElementById(
@@ -1384,6 +1234,11 @@
         "profileForm"
       );
 
+    const profileSaveButton =
+      document.getElementById(
+        "profileSaveButton"
+      );
+
     const profileGuildName =
       document.getElementById(
         "profileGuildName"
@@ -1412,6 +1267,11 @@
     const profileChaosTitle =
       document.getElementById(
         "profileChaosTitle"
+      );
+
+    const profileAvatarFile =
+      document.getElementById(
+        "profileAvatarFile"
       );
 
     const profileAvatar =
@@ -1446,10 +1306,6 @@
 
 
 
-    /* ======================================================
-       STATE
-       ====================================================== */
-
     let currentGuildName =
       "";
 
@@ -1465,11 +1321,10 @@
     let unsubscribeProfiles =
       null;
 
+    let localPreviewUrl =
+      null;
 
 
-    /* ======================================================
-       ACCOUNT EMAIL
-       ====================================================== */
 
     function makeAccountEmail(name) {
 
@@ -1503,10 +1358,6 @@
     }
 
 
-
-    /* ======================================================
-       LOGIN
-       ====================================================== */
 
     crewLoginForm.addEventListener(
       "submit",
@@ -1567,10 +1418,6 @@
 
 
 
-    /* ======================================================
-       AUTH
-       ====================================================== */
-
     onAuthStateChanged(
       auth,
       (user) => {
@@ -1581,7 +1428,8 @@
             sessionStorage.getItem(
               "chaosNickname"
             )
-            || prettyNameFromEmail(
+            ||
+            prettyNameFromEmail(
               user.email
             );
 
@@ -1613,7 +1461,9 @@
             "none";
 
 
-          if (unsubscribeProfiles) {
+          if (
+            unsubscribeProfiles
+          ) {
 
             unsubscribeProfiles();
 
@@ -1629,10 +1479,6 @@
 
 
 
-    /* ======================================================
-       SIGN OUT
-       ====================================================== */
-
     crewSignOut.addEventListener(
       "click",
       async () => {
@@ -1642,16 +1488,14 @@
         );
 
 
-        await signOut(auth);
+        await signOut(
+          auth
+        );
 
       }
     );
 
 
-
-    /* ======================================================
-       PROFILE MODAL
-       ====================================================== */
 
     profileButton.addEventListener(
       "click",
@@ -1686,6 +1530,7 @@
     );
 
 
+
     function openProfileModal() {
 
       const user =
@@ -1700,7 +1545,8 @@
       currentProfile =
         profiles.find(
           profile =>
-            profile.uid === user.uid
+            profile.uid
+            === user.uid
         )
         || null;
 
@@ -1708,49 +1554,64 @@
       profileForm.reset();
 
 
+      clearLocalPreview();
+
+
       profilePreview.style.display =
         "none";
 
 
-      if (currentProfile) {
+      if (
+        currentProfile
+      ) {
 
         profileModalTitle.textContent =
           "EDIT MY PROFILE";
 
 
         profileGuildName.value =
-          currentProfile.guildName || currentGuildName;
+          currentProfile.guildName
+          || currentGuildName;
 
 
         profileRole.value =
-          currentProfile.role || "Member";
+          currentProfile.role
+          || "Member";
 
 
         profileClass.value =
-          currentProfile.mainClass || "";
+          currentProfile.mainClass
+          || "";
 
 
         profileCharacter.value =
-          currentProfile.mainCharacter || "";
+          currentProfile.mainCharacter
+          || "";
 
 
         profileDiscord.value =
-          currentProfile.discordName || "";
+          currentProfile.discordName
+          || "";
 
 
         profileChaosTitle.value =
-          currentProfile.chaosTitle || "";
+          currentProfile.chaosTitle
+          || "";
 
 
         profileAvatar.value =
-          currentProfile.avatarUrl || "";
+          currentProfile.avatarUrl
+          || "";
 
 
         profileBio.value =
-          currentProfile.bio || "";
+          currentProfile.bio
+          || "";
 
 
-        if (currentProfile.avatarUrl) {
+        if (
+          currentProfile.avatarUrl
+        ) {
 
           profilePreviewImage.src =
             currentProfile.avatarUrl;
@@ -1794,17 +1655,130 @@
       profilePreview.style.display =
         "none";
 
+
+      clearLocalPreview();
+
     }
 
 
 
-    /* ======================================================
-       AVATAR PREVIEW
-       ====================================================== */
+    function clearLocalPreview() {
+
+      if (
+        localPreviewUrl
+      ) {
+
+        URL.revokeObjectURL(
+          localPreviewUrl
+        );
+
+
+        localPreviewUrl =
+          null;
+
+      }
+
+    }
+
+
+
+    profileAvatarFile.addEventListener(
+      "change",
+      () => {
+
+        const file =
+          profileAvatarFile.files[0];
+
+
+        if (!file) {
+          return;
+        }
+
+
+        const allowedTypes = [
+          "image/jpeg",
+          "image/png",
+          "image/webp",
+          "image/gif"
+        ];
+
+
+        if (
+          !allowedTypes.includes(
+            file.type
+          )
+        ) {
+
+          window.alert(
+            "Please choose a JPG, PNG, WebP or GIF image."
+          );
+
+
+          profileAvatarFile.value =
+            "";
+
+
+          return;
+
+        }
+
+
+        const maxSize =
+          8 * 1024 * 1024;
+
+
+        if (
+          file.size > maxSize
+        ) {
+
+          window.alert(
+            "That image is over 8MB. Pick a slightly less enormous bastard. 😂"
+          );
+
+
+          profileAvatarFile.value =
+            "";
+
+
+          return;
+
+        }
+
+
+        clearLocalPreview();
+
+
+        localPreviewUrl =
+          URL.createObjectURL(
+            file
+          );
+
+
+        profilePreviewImage.src =
+          localPreviewUrl;
+
+
+        profilePreview.style.display =
+          "block";
+
+      }
+    );
+
+
 
     profileAvatar.addEventListener(
       "input",
       () => {
+
+        if (
+          profileAvatarFile.files.length
+          > 0
+        ) {
+
+          return;
+
+        }
+
 
         const url =
           profileAvatar.value.trim();
@@ -1832,21 +1806,92 @@
     );
 
 
+
     profilePreviewImage.addEventListener(
       "error",
       () => {
 
-        profilePreview.style.display =
-          "none";
+        if (
+          profileAvatarFile.files.length
+          === 0
+        ) {
+
+          profilePreview.style.display =
+            "none";
+
+        }
 
       }
     );
 
 
 
-    /* ======================================================
-       SAVE PROFILE
-       ====================================================== */
+    async function uploadProfileImage(file) {
+
+      const formData =
+        new FormData();
+
+
+      formData.append(
+        "file",
+        file
+      );
+
+
+      formData.append(
+        "upload_preset",
+        CLOUDINARY_UPLOAD_PRESET
+      );
+
+
+      const response =
+        await fetch(
+          `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`,
+          {
+            method:
+              "POST",
+
+            body:
+              formData
+          }
+        );
+
+
+      const data =
+        await response.json()
+          .catch(
+            () => ({})
+          );
+
+
+      if (
+        !response.ok
+      ) {
+
+        throw new Error(
+          data.error?.message
+          || "Cloudinary upload failed."
+        );
+
+      }
+
+
+      if (
+        !data.secure_url
+      ) {
+
+        throw new Error(
+          "Cloudinary returned no secure image URL."
+        );
+
+      }
+
+
+      return data.secure_url;
+
+    }
+
+
 
     profileForm.addEventListener(
       "submit",
@@ -1864,73 +1909,143 @@
         }
 
 
-        const existing =
-          profiles.find(
-            profile =>
-              profile.uid === user.uid
+        const originalText =
+          profileSaveButton.textContent;
+
+
+        profileSaveButton.disabled =
+          true;
+
+
+        try {
+
+          const existing =
+            profiles.find(
+              profile =>
+                profile.uid
+                === user.uid
+            );
+
+
+          let avatarUrl =
+            profileAvatar.value.trim()
+            ||
+            existing?.avatarUrl
+            ||
+            "";
+
+
+          const selectedFile =
+            profileAvatarFile.files[0];
+
+
+          if (
+            selectedFile
+          ) {
+
+            profileSaveButton.textContent =
+              "UPLOADING IMAGE...";
+
+
+            avatarUrl =
+              await uploadProfileImage(
+                selectedFile
+              );
+
+          }
+
+
+          profileSaveButton.textContent =
+            "SAVING PROFILE...";
+
+
+          await setDoc(
+            doc(
+              db,
+              "crewProfiles",
+              user.uid
+            ),
+            {
+
+              uid:
+                user.uid,
+
+              guildName:
+                profileGuildName.value.trim(),
+
+              role:
+                profileRole.value,
+
+              mainClass:
+                profileClass.value.trim(),
+
+              mainCharacter:
+                profileCharacter.value.trim(),
+
+              discordName:
+                profileDiscord.value.trim(),
+
+              chaosTitle:
+                profileChaosTitle.value.trim(),
+
+              avatarUrl:
+                avatarUrl,
+
+              bio:
+                profileBio.value.trim(),
+
+              createdAt:
+                existing?.createdAt
+                || serverTimestamp(),
+
+              updatedAt:
+                serverTimestamp()
+
+            }
           );
 
 
-        await setDoc(
-          doc(
-            db,
-            "crewProfiles",
-            user.uid
-          ),
-          {
+          closeProfileModalFunction();
 
-            uid:
-              user.uid,
-
-            guildName:
-              profileGuildName.value.trim(),
-
-            role:
-              profileRole.value,
-
-            mainClass:
-              profileClass.value.trim(),
-
-            mainCharacter:
-              profileCharacter.value.trim(),
-
-            discordName:
-              profileDiscord.value.trim(),
-
-            chaosTitle:
-              profileChaosTitle.value.trim(),
-
-            avatarUrl:
-              profileAvatar.value.trim(),
-
-            bio:
-              profileBio.value.trim(),
-
-            createdAt:
-              existing?.createdAt
-              || serverTimestamp(),
-
-            updatedAt:
-              serverTimestamp()
-
-          }
-        );
+        }
 
 
-        closeProfileModalFunction();
+        catch (error) {
+
+          console.error(
+            "Profile save failed:",
+            error
+          );
+
+
+          window.alert(
+            `Couldn't save the profile: ${error.message}`
+          );
+
+        }
+
+
+        finally {
+
+          profileSaveButton.disabled =
+            false;
+
+
+          profileSaveButton.textContent =
+            originalText;
+
+        }
 
       }
     );
 
 
 
-    /* ======================================================
-       LIVE PROFILES
-       ====================================================== */
-
     function startProfilesListener() {
 
-      if (unsubscribeProfiles) {
+      if (
+        unsubscribeProfiles
+      ) {
 
         unsubscribeProfiles();
 
@@ -1953,7 +2068,9 @@
               item => {
 
                 profiles.push({
-                  id: item.id,
+                  id:
+                    item.id,
+
                   ...item.data()
                 });
 
@@ -1963,10 +2080,14 @@
 
             profiles.sort(
               (a, b) =>
-                (a.guildName || "")
-                  .localeCompare(
-                    b.guildName || ""
-                  )
+                (
+                  a.guildName
+                  || ""
+                )
+                .localeCompare(
+                  b.guildName
+                  || ""
+                )
             );
 
 
@@ -1980,10 +2101,6 @@
     }
 
 
-
-    /* ======================================================
-       PROFILE BUTTON
-       ====================================================== */
 
     function updateProfileButton() {
 
@@ -1999,7 +2116,8 @@
       const mine =
         profiles.find(
           profile =>
-            profile.uid === user.uid
+            profile.uid
+            === user.uid
         );
 
 
@@ -2011,10 +2129,6 @@
     }
 
 
-
-    /* ======================================================
-       FILTERS
-       ====================================================== */
 
     crewFilters.forEach(
       button => {
@@ -2053,10 +2167,6 @@
 
 
 
-    /* ======================================================
-       RENDER CREW
-       ====================================================== */
-
     function renderCrew() {
 
       crewGrid.innerHTML =
@@ -2068,12 +2178,14 @@
         ? profiles
         : profiles.filter(
             profile =>
-              profile.role === activeRole
+              profile.role
+              === activeRole
           );
 
 
       if (
-        filtered.length === 0
+        filtered.length
+        === 0
       ) {
 
         const empty =
@@ -2115,9 +2227,6 @@
             "crew-card";
 
 
-
-          /* AVATAR */
-
           const avatarWrap =
             document.createElement(
               "div"
@@ -2128,7 +2237,9 @@
             "crew-avatar-wrap";
 
 
-          if (profile.avatarUrl) {
+          if (
+            profile.avatarUrl
+          ) {
 
             const image =
               document.createElement(
@@ -2145,7 +2256,8 @@
 
 
             image.alt =
-              profile.guildName || "Chaos Crew";
+              profile.guildName
+              || "Chaos Crew";
 
 
             image.loading =
@@ -2189,8 +2301,6 @@
 
 
 
-          /* BODY */
-
           const body =
             document.createElement(
               "div"
@@ -2212,7 +2322,10 @@
 
 
           role.textContent =
-            (profile.role || "Member")
+            (
+              profile.role
+              || "Member"
+            )
             .toUpperCase();
 
 
@@ -2238,7 +2351,9 @@
 
 
 
-          if (profile.chaosTitle) {
+          if (
+            profile.chaosTitle
+          ) {
 
             const chaosTitle =
               document.createElement(
@@ -2272,7 +2387,9 @@
             "crew-details";
 
 
-          if (profile.mainClass) {
+          if (
+            profile.mainClass
+          ) {
 
             details.appendChild(
               createDetail(
@@ -2284,7 +2401,9 @@
           }
 
 
-          if (profile.mainCharacter) {
+          if (
+            profile.mainCharacter
+          ) {
 
             details.appendChild(
               createDetail(
@@ -2296,7 +2415,9 @@
           }
 
 
-          if (profile.discordName) {
+          if (
+            profile.discordName
+          ) {
 
             details.appendChild(
               createDetail(
@@ -2314,7 +2435,9 @@
 
 
 
-          if (profile.bio) {
+          if (
+            profile.bio
+          ) {
 
             const bio =
               document.createElement(
@@ -2338,11 +2461,10 @@
 
 
 
-          /* OWN PROFILE CONTROLS */
-
           if (
             auth.currentUser
-            && profile.uid
+            &&
+            profile.uid
             === auth.currentUser.uid
           ) {
 
@@ -2446,7 +2568,6 @@
           }
 
 
-
           card.appendChild(
             avatarWrap
           );
@@ -2468,10 +2589,6 @@
 
 
 
-    /* ======================================================
-       HELPERS
-       ====================================================== */
-
     function createFallbackAvatar(name) {
 
       const fallback =
@@ -2485,14 +2602,18 @@
 
 
       const firstCharacter =
-        (name || "?")
-          .trim()
-          .charAt(0)
-          .toUpperCase();
+        (
+          name
+          || "?"
+        )
+        .trim()
+        .charAt(0)
+        .toUpperCase();
 
 
       fallback.textContent =
-        firstCharacter || "?";
+        firstCharacter
+        || "?";
 
 
       return fallback;
@@ -2548,7 +2669,6 @@
 
 
   </script>
-
 
 </body>
 

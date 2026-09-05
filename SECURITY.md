@@ -10,7 +10,14 @@ The website includes member authentication and community features powered by Fir
 
 If you discover a security vulnerability, please do **not** report it publicly through GitHub Issues, Discord public channels, Chaos Chat, or other public areas.
 
-Please report security concerns privately to the Rotating Chaos site administrator or guild leadership.
+Please report security vulnerabilities privately using **GitHub Private Vulnerability Reporting** for this repository.
+
+To submit a private report:
+
+1. Open the **Security** tab of the Rotating Chaos GitHub repository.
+2. Select **Advisories**.
+3. Choose **Report a vulnerability**.
+4. Provide as much information as possible about the issue.
 
 When reporting an issue, please include:
 
@@ -21,6 +28,8 @@ When reporting an issue, please include:
 - What you believe could be accessed or affected
 
 Please do not attempt to access, alter, delete, or download another member's information while investigating a possible vulnerability.
+
+If GitHub Private Vulnerability Reporting is unavailable, please contact the Rotating Chaos site administrator or guild leadership privately.
 
 ## What Counts as a Security Issue?
 

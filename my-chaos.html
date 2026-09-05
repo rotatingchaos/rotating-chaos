@@ -73,7 +73,6 @@
 
     .my-chaos-hero {
       padding: 36px;
-
       margin-bottom: 28px;
 
       border:
@@ -134,7 +133,6 @@
 
     .my-chaos-login h2 {
       margin-top: 0;
-
       text-align: center;
 
       font-family:
@@ -184,6 +182,7 @@
 
     .chaos-primary-button {
       border: 1px solid #d7aa42;
+
       background: #d7aa42;
       color: #111;
 
@@ -208,6 +207,7 @@
       padding: 9px 13px;
 
       cursor: pointer;
+      text-decoration: none;
     }
 
 
@@ -219,8 +219,11 @@
 
     .chaos-login-error {
       display: none;
+
       margin-top: 14px;
+
       text-align: center;
+
       color: #ff9999;
     }
 
@@ -237,6 +240,7 @@
 
     .my-chaos-topbar {
       display: flex;
+
       justify-content: space-between;
       align-items: center;
 
@@ -248,8 +252,64 @@
 
     .my-chaos-actions {
       display: flex;
+
       gap: 9px;
+
       flex-wrap: wrap;
+    }
+
+
+
+    /* ======================================================
+       ROLE BADGE
+       ====================================================== */
+
+    .role-badge {
+      display: inline-block;
+
+      margin-left: 8px;
+
+      padding: 4px 8px;
+
+      border-radius: 999px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 0.62rem;
+
+      letter-spacing: 1px;
+
+      border:
+        1px solid rgba(67, 214, 186, 0.3);
+
+      color: #8be5d2;
+
+      background:
+        rgba(67, 214, 186, 0.06);
+    }
+
+
+    .role-badge.officer {
+      border-color:
+        rgba(218, 165, 32, 0.4);
+
+      color: #e2c26d;
+
+      background:
+        rgba(218, 165, 32, 0.07);
+    }
+
+
+    .role-badge.admin {
+      border-color:
+        rgba(180, 110, 220, 0.45);
+
+      color: #dca8ff;
+
+      background:
+        rgba(180, 110, 220, 0.08);
     }
 
 
@@ -294,7 +354,9 @@
     .member-avatar img {
       width: 100%;
       height: 100%;
+
       object-fit: cover;
+
       display: block;
     }
 
@@ -304,6 +366,7 @@
       height: 100%;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
@@ -337,14 +400,18 @@
 
     .member-chaos-title {
       color: #ddb45d;
+
       font-style: italic;
+
       margin-bottom: 12px;
     }
 
 
     .member-profile-details {
       display: grid;
+
       gap: 5px;
+
       margin-bottom: 12px;
     }
 
@@ -357,12 +424,14 @@
         serif;
 
       font-size: 0.72rem;
+
       letter-spacing: 0.7px;
     }
 
 
     .member-profile-bio {
       opacity: 0.82;
+
       line-height: 1.55;
     }
 
@@ -427,7 +496,7 @@
 
 
     /* ======================================================
-       DASHBOARD GRID
+       DASHBOARD
        ====================================================== */
 
     .dashboard-grid {
@@ -461,6 +530,7 @@
 
     .dashboard-list {
       display: grid;
+
       gap: 10px;
     }
 
@@ -497,7 +567,9 @@
 
     .my-event-meta {
       margin-top: 5px;
+
       opacity: 0.65;
+
       font-size: 0.86rem;
     }
 
@@ -513,7 +585,7 @@
 
 
     /* ======================================================
-       BLOG / GALLERY ITEMS
+       BLOG / GALLERY
        ====================================================== */
 
     .my-content-item {
@@ -537,7 +609,9 @@
 
     .my-content-meta {
       margin-top: 5px;
+
       font-size: 0.8rem;
+
       opacity: 0.58;
     }
 
@@ -561,11 +635,191 @@
 
 
     /* ======================================================
+       OFFICER / ADMIN PANELS
+       ====================================================== */
+
+    .staff-panel {
+      display: none;
+
+      margin-top: 26px;
+
+      padding: 24px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.30);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(218, 165, 32, 0.05),
+          rgba(67, 214, 186, 0.03)
+        );
+    }
+
+
+    .staff-panel.show {
+      display: block;
+    }
+
+
+    .staff-panel.admin-panel {
+      border-color:
+        rgba(180, 110, 220, 0.35);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(180, 110, 220, 0.08),
+          rgba(67, 214, 186, 0.03)
+        );
+    }
+
+
+    .staff-panel h2 {
+      margin-top: 0;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .staff-panel-intro {
+      max-width: 800px;
+
+      line-height: 1.55;
+
+      opacity: 0.8;
+    }
+
+
+
+    /* ======================================================
+       STAFF LINKS
+       ====================================================== */
+
+    .staff-links {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 10px;
+
+      margin-top: 18px;
+    }
+
+
+    .staff-link {
+      display: block;
+
+      padding: 13px;
+
+      text-align: center;
+
+      text-decoration: none;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.20);
+
+      background: #151310;
+
+      color: #f6efe2;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 0.72rem;
+    }
+
+
+
+    /* ======================================================
+       ADMIN MEMBERS
+       ====================================================== */
+
+    .admin-members {
+      margin-top: 24px;
+    }
+
+
+    .admin-members h3 {
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .admin-member-list {
+      display: grid;
+
+      gap: 10px;
+    }
+
+
+    .admin-member-row {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1fr)
+        160px;
+
+      gap: 12px;
+
+      align-items: center;
+
+      padding: 12px;
+
+      border:
+        1px solid rgba(255, 255, 255, 0.06);
+
+      background: #151310;
+    }
+
+
+    .admin-member-name {
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-weight: 700;
+    }
+
+
+    .admin-member-uid {
+      margin-top: 3px;
+
+      opacity: 0.45;
+
+      font-size: 0.7rem;
+
+      word-break: break-all;
+    }
+
+
+    .admin-role-select {
+      width: 100%;
+
+      padding: 9px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.28);
+
+      background: #11100f;
+
+      color: #f6efe2;
+    }
+
+
+
+    /* ======================================================
        EMPTY
        ====================================================== */
 
     .dashboard-empty {
       opacity: 0.55;
+
       font-style: italic;
     }
 
@@ -587,6 +841,12 @@
         grid-template-columns: 1fr;
       }
 
+
+      .staff-links {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
     }
 
 
@@ -594,6 +854,7 @@
 
       .my-chaos-topbar {
         flex-direction: column;
+
         align-items: flex-start;
       }
 
@@ -612,6 +873,16 @@
       .quick-links {
         grid-template-columns:
           repeat(2, 1fr);
+      }
+
+
+      .staff-links {
+        grid-template-columns: 1fr;
+      }
+
+
+      .admin-member-row {
+        grid-template-columns: 1fr;
       }
 
     }
@@ -655,9 +926,7 @@
 
     <nav class="desktop-nav">
 
-      <a href="index.html">
-        HOME
-      </a>
+      <a href="index.html">HOME</a>
 
       <a href="community.html">
         COMMUNITY
@@ -805,7 +1074,18 @@
 
         <div class="my-chaos-topbar">
 
-          <div id="loggedInUser"></div>
+          <div>
+
+            <span id="loggedInUser"></span>
+
+            <span
+              class="role-badge"
+              id="currentRoleBadge"
+            >
+              MEMBER
+            </span>
+
+          </div>
 
 
           <div class="my-chaos-actions">
@@ -836,11 +1116,7 @@
              PROFILE
              ================================================== -->
 
-        <section
-          class="member-profile-panel"
-          id="memberProfilePanel"
-        >
-
+        <section class="member-profile-panel">
 
           <div
             class="member-avatar"
@@ -872,7 +1148,6 @@
             ></div>
 
           </div>
-
 
         </section>
 
@@ -933,13 +1208,11 @@
 
 
         <!-- ==================================================
-             DASHBOARD
+             PERSONAL DASHBOARD
              ================================================== -->
 
         <div class="dashboard-grid">
 
-
-          <!-- MY EVENTS -->
 
           <section class="dashboard-panel">
 
@@ -956,8 +1229,6 @@
 
 
 
-          <!-- MY ASSIGNMENTS -->
-
           <section class="dashboard-panel">
 
             <h2>
@@ -972,8 +1243,6 @@
           </section>
 
 
-
-          <!-- MY POSTS -->
 
           <section class="dashboard-panel">
 
@@ -990,8 +1259,6 @@
 
 
 
-          <!-- MY GALLERY -->
-
           <section class="dashboard-panel">
 
             <h2>
@@ -1007,6 +1274,145 @@
 
 
         </div>
+
+
+
+        <!-- ==================================================
+             OFFICER TOOLS
+             ================================================== -->
+
+        <section
+          class="staff-panel"
+          id="officerPanel"
+        >
+
+          <p class="section-eyebrow">
+            OFFICER ACCESS
+          </p>
+
+          <h2>
+            OFFICER TOOLS
+          </h2>
+
+          <p class="staff-panel-intro">
+            Help organise runs, keep community content tidy and generally
+            prevent the guild from setting itself on fire.
+          </p>
+
+
+          <div class="staff-links">
+
+            <a
+              href="events.html"
+              class="staff-link"
+            >
+              MANAGE EVENTS
+            </a>
+
+            <a
+              href="blog.html"
+              class="staff-link"
+            >
+              FROM THE CHAOS
+            </a>
+
+            <a
+              href="gallery.html"
+              class="staff-link"
+            >
+              GALLERY
+            </a>
+
+            <a
+              href="chaos-crew.html"
+              class="staff-link"
+            >
+              CREW
+            </a>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             ADMIN CONTROL ROOM
+             ================================================== -->
+
+        <section
+          class="staff-panel admin-panel"
+          id="adminPanel"
+        >
+
+          <p class="section-eyebrow">
+            ADMIN ACCESS
+          </p>
+
+          <h2>
+            CHAOS CONTROL ROOM 👑
+          </h2>
+
+          <p class="staff-panel-intro">
+            Full guild-site controls. Use powers responsibly.
+            Or at least convincingly pretend to. 😂
+          </p>
+
+
+          <div class="staff-links">
+
+            <a
+              href="events.html"
+              class="staff-link"
+            >
+              EVENTS
+            </a>
+
+            <a
+              href="merch.html"
+              class="staff-link"
+            >
+              MERCH
+            </a>
+
+            <a
+              href="blog.html"
+              class="staff-link"
+            >
+              BLOG
+            </a>
+
+            <a
+              href="gallery.html"
+              class="staff-link"
+            >
+              GALLERY
+            </a>
+
+          </div>
+
+
+
+          <div class="admin-members">
+
+            <h3>
+              MEMBER PERMISSIONS
+            </h3>
+
+            <p>
+              Promote members to Officer, give another trusted soul Admin access,
+              or return someone to normal Member status.
+            </p>
+
+
+            <div
+              class="admin-member-list"
+              id="adminMemberList"
+            ></div>
+
+          </div>
+
+        </section>
 
 
       </section>
@@ -1043,6 +1449,9 @@
       collection,
       doc,
       getDoc,
+      setDoc,
+      updateDoc,
+      serverTimestamp,
       query,
       orderBy,
       onSnapshot
@@ -1081,15 +1490,21 @@
 
 
     const app =
-      initializeApp(firebaseConfig);
+      initializeApp(
+        firebaseConfig
+      );
 
 
     const auth =
-      getAuth(app);
+      getAuth(
+        app
+      );
 
 
     const db =
-      getFirestore(app);
+      getFirestore(
+        app
+      );
 
 
 
@@ -1098,58 +1513,114 @@
        ====================================================== */
 
     const myChaosLogin =
-      document.getElementById("myChaosLogin");
+      document.getElementById(
+        "myChaosLogin"
+      );
 
     const myChaosApp =
-      document.getElementById("myChaosApp");
+      document.getElementById(
+        "myChaosApp"
+      );
 
     const myChaosLoginForm =
-      document.getElementById("myChaosLoginForm");
+      document.getElementById(
+        "myChaosLoginForm"
+      );
 
     const myChaosGuildName =
-      document.getElementById("myChaosGuildName");
+      document.getElementById(
+        "myChaosGuildName"
+      );
 
     const myChaosAccessCode =
-      document.getElementById("myChaosAccessCode");
+      document.getElementById(
+        "myChaosAccessCode"
+      );
 
     const myChaosLoginError =
-      document.getElementById("myChaosLoginError");
+      document.getElementById(
+        "myChaosLoginError"
+      );
 
     const myChaosSignOut =
-      document.getElementById("myChaosSignOut");
+      document.getElementById(
+        "myChaosSignOut"
+      );
 
     const loggedInUser =
-      document.getElementById("loggedInUser");
+      document.getElementById(
+        "loggedInUser"
+      );
+
+    const currentRoleBadge =
+      document.getElementById(
+        "currentRoleBadge"
+      );
 
     const heroTitle =
-      document.getElementById("heroTitle");
+      document.getElementById(
+        "heroTitle"
+      );
 
     const memberAvatar =
-      document.getElementById("memberAvatar");
+      document.getElementById(
+        "memberAvatar"
+      );
 
     const memberName =
-      document.getElementById("memberName");
+      document.getElementById(
+        "memberName"
+      );
 
     const memberChaosTitle =
-      document.getElementById("memberChaosTitle");
+      document.getElementById(
+        "memberChaosTitle"
+      );
 
     const memberProfileDetails =
-      document.getElementById("memberProfileDetails");
+      document.getElementById(
+        "memberProfileDetails"
+      );
 
     const memberProfileBio =
-      document.getElementById("memberProfileBio");
+      document.getElementById(
+        "memberProfileBio"
+      );
 
     const myEventsList =
-      document.getElementById("myEventsList");
+      document.getElementById(
+        "myEventsList"
+      );
 
     const myAssignmentsList =
-      document.getElementById("myAssignmentsList");
+      document.getElementById(
+        "myAssignmentsList"
+      );
 
     const myPostsList =
-      document.getElementById("myPostsList");
+      document.getElementById(
+        "myPostsList"
+      );
 
     const myGalleryList =
-      document.getElementById("myGalleryList");
+      document.getElementById(
+        "myGalleryList"
+      );
+
+    const officerPanel =
+      document.getElementById(
+        "officerPanel"
+      );
+
+    const adminPanel =
+      document.getElementById(
+        "adminPanel"
+      );
+
+    const adminMemberList =
+      document.getElementById(
+        "adminMemberList"
+      );
 
 
 
@@ -1160,6 +1631,12 @@
     let currentGuildName =
       "";
 
+    let currentSiteRole =
+      "member";
+
+    let members =
+      [];
+
     let events =
       [];
 
@@ -1168,6 +1645,9 @@
 
     let runGroupListeners =
       [];
+
+    let unsubscribeMembers =
+      null;
 
     let unsubscribeEvents =
       null;
@@ -1297,7 +1777,8 @@
             sessionStorage.getItem(
               "chaosNickname"
             )
-            || prettyNameFromEmail(
+            ||
+            prettyNameFromEmail(
               user.email
             );
 
@@ -1318,7 +1799,13 @@
             "block";
 
 
+          await ensureMemberRecord();
+
+          await loadMySiteRole();
+
           await loadMyProfile();
+
+          startMembersListener();
 
           startMyDashboard();
 
@@ -1335,12 +1822,532 @@
             "none";
 
 
+          currentSiteRole =
+            "member";
+
+
+          hideStaffPanels();
+
           stopListeners();
 
         }
 
       }
     );
+
+
+
+    /* ======================================================
+       MEMBER RECORD
+       ====================================================== */
+
+    async function ensureMemberRecord() {
+
+      const user =
+        auth.currentUser;
+
+
+      if (!user) {
+        return;
+      }
+
+
+      const memberRef =
+        doc(
+          db,
+          "members",
+          user.uid
+        );
+
+
+      const snapshot =
+        await getDoc(
+          memberRef
+        );
+
+
+      if (
+        snapshot.exists()
+      ) {
+
+        return;
+
+      }
+
+
+      await setDoc(
+        memberRef,
+        {
+
+          uid:
+            user.uid,
+
+          guildName:
+            currentGuildName,
+
+          role:
+            "member",
+
+          createdAt:
+            serverTimestamp(),
+
+          updatedAt:
+            serverTimestamp()
+
+        }
+      );
+
+    }
+
+
+
+    /* ======================================================
+       SITE ROLE
+       ====================================================== */
+
+    async function loadMySiteRole() {
+
+      const user =
+        auth.currentUser;
+
+
+      if (!user) {
+        return;
+      }
+
+
+      const snapshot =
+        await getDoc(
+          doc(
+            db,
+            "members",
+            user.uid
+          )
+        );
+
+
+      if (
+        snapshot.exists()
+      ) {
+
+        currentSiteRole =
+          snapshot.data().role
+          || "member";
+
+      }
+
+
+      else {
+
+        currentSiteRole =
+          "member";
+
+      }
+
+
+      renderRoleUI();
+
+    }
+
+
+
+    function renderRoleUI() {
+
+      currentRoleBadge.textContent =
+        currentSiteRole.toUpperCase();
+
+
+      currentRoleBadge.className =
+        "role-badge";
+
+
+      if (
+        currentSiteRole === "officer"
+      ) {
+
+        currentRoleBadge.classList.add(
+          "officer"
+        );
+
+      }
+
+
+      if (
+        currentSiteRole === "admin"
+      ) {
+
+        currentRoleBadge.classList.add(
+          "admin"
+        );
+
+      }
+
+
+      hideStaffPanels();
+
+
+      if (
+        currentSiteRole === "officer"
+      ) {
+
+        officerPanel.classList.add(
+          "show"
+        );
+
+      }
+
+
+      if (
+        currentSiteRole === "admin"
+      ) {
+
+        officerPanel.classList.add(
+          "show"
+        );
+
+
+        adminPanel.classList.add(
+          "show"
+        );
+
+      }
+
+    }
+
+
+
+    function hideStaffPanels() {
+
+      officerPanel.classList.remove(
+        "show"
+      );
+
+
+      adminPanel.classList.remove(
+        "show"
+      );
+
+    }
+
+
+
+    /* ======================================================
+       MEMBERS LIST
+       ====================================================== */
+
+    function startMembersListener() {
+
+      if (
+        unsubscribeMembers
+      ) {
+
+        unsubscribeMembers();
+
+      }
+
+
+      unsubscribeMembers =
+        onSnapshot(
+          collection(
+            db,
+            "members"
+          ),
+          snapshot => {
+
+            members =
+              [];
+
+
+            snapshot.forEach(
+              item => {
+
+                members.push({
+                  id:
+                    item.id,
+
+                  ...item.data()
+                });
+
+              }
+            );
+
+
+            members.sort(
+              (a, b) =>
+                (
+                  a.guildName
+                  || ""
+                )
+                .localeCompare(
+                  b.guildName
+                  || ""
+                )
+            );
+
+
+            if (
+              currentSiteRole
+              === "admin"
+            ) {
+
+              renderAdminMembers();
+
+            }
+
+          }
+        );
+
+    }
+
+
+
+    /* ======================================================
+       ADMIN MEMBER MANAGEMENT
+       ====================================================== */
+
+    function renderAdminMembers() {
+
+      adminMemberList.innerHTML =
+        "";
+
+
+      if (
+        members.length === 0
+      ) {
+
+        adminMemberList.innerHTML =
+          '<p class="dashboard-empty">No member records yet.</p>';
+
+
+        return;
+
+      }
+
+
+      members.forEach(
+        member => {
+
+          const row =
+            document.createElement(
+              "div"
+            );
+
+
+          row.className =
+            "admin-member-row";
+
+
+          const info =
+            document.createElement(
+              "div"
+            );
+
+
+          const name =
+            document.createElement(
+              "div"
+            );
+
+
+          name.className =
+            "admin-member-name";
+
+
+          name.textContent =
+            member.guildName
+            || "Unnamed Chaos Gremlin";
+
+
+          const uid =
+            document.createElement(
+              "div"
+            );
+
+
+          uid.className =
+            "admin-member-uid";
+
+
+          uid.textContent =
+            member.uid
+            || member.id;
+
+
+          info.appendChild(
+            name
+          );
+
+
+          info.appendChild(
+            uid
+          );
+
+
+
+          const select =
+            document.createElement(
+              "select"
+            );
+
+
+          select.className =
+            "admin-role-select";
+
+
+          [
+            "member",
+            "officer",
+            "admin"
+          ]
+          .forEach(
+            role => {
+
+              const option =
+                document.createElement(
+                  "option"
+                );
+
+
+              option.value =
+                role;
+
+
+              option.textContent =
+                role.toUpperCase();
+
+
+              if (
+                member.role
+                === role
+              ) {
+
+                option.selected =
+                  true;
+
+              }
+
+
+              select.appendChild(
+                option
+              );
+
+            }
+          );
+
+
+          select.addEventListener(
+            "change",
+            async () => {
+
+              const newRole =
+                select.value;
+
+
+              const confirmed =
+                window.confirm(
+                  `Change ${member.guildName || "this member"} to ${newRole.toUpperCase()}?`
+                );
+
+
+              if (
+                !confirmed
+              ) {
+
+                select.value =
+                  member.role
+                  || "member";
+
+
+                return;
+
+              }
+
+
+              try {
+
+                await updateDoc(
+                  doc(
+                    db,
+                    "members",
+                    member.id
+                  ),
+                  {
+
+                    role:
+                      newRole,
+
+                    updatedAt:
+                      serverTimestamp()
+
+                  }
+                );
+
+
+
+                /*
+                 * If Shlerp edits her own role,
+                 * update the page immediately.
+                 */
+
+                if (
+                  auth.currentUser
+                  &&
+                  member.id
+                  === auth.currentUser.uid
+                ) {
+
+                  currentSiteRole =
+                    newRole;
+
+
+                  renderRoleUI();
+
+                }
+
+              }
+
+
+              catch (error) {
+
+                console.error(
+                  "Could not change role:",
+                  error
+                );
+
+
+                window.alert(
+                  "Firebase said absolutely not. 😂"
+                );
+
+
+                select.value =
+                  member.role
+                  || "member";
+
+              }
+
+            }
+          );
+
+
+          row.appendChild(
+            info
+          );
+
+
+          row.appendChild(
+            select
+          );
+
+
+          adminMemberList.appendChild(
+            row
+          );
+
+        }
+      );
+
+    }
 
 
 
@@ -1357,7 +2364,9 @@
         );
 
 
-        await signOut(auth);
+        await signOut(
+          auth
+        );
 
       }
     );
@@ -1397,7 +2406,9 @@
         "";
 
 
-      if (!snapshot.exists()) {
+      if (
+        !snapshot.exists()
+      ) {
 
         memberName.textContent =
           currentGuildName;
@@ -1438,10 +2449,14 @@
         : "";
 
 
-      if (profile.avatarUrl) {
+      if (
+        profile.avatarUrl
+      ) {
 
         const image =
-          document.createElement("img");
+          document.createElement(
+            "img"
+          );
 
 
         image.src =
@@ -1472,7 +2487,9 @@
         );
 
 
-        memberAvatar.appendChild(image);
+        memberAvatar.appendChild(
+          image
+        );
 
       }
 
@@ -1490,17 +2507,27 @@
 
 
 
-      if (profile.role) {
+      if (
+        profile.role
+      ) {
 
         addProfileDetail(
-          "ROLE",
+          "GUILD ROLE",
           profile.role
         );
 
       }
 
 
-      if (profile.mainClass) {
+      addProfileDetail(
+        "SITE ACCESS",
+        currentSiteRole.toUpperCase()
+      );
+
+
+      if (
+        profile.mainClass
+      ) {
 
         addProfileDetail(
           "MAIN CLASS",
@@ -1510,7 +2537,9 @@
       }
 
 
-      if (profile.mainCharacter) {
+      if (
+        profile.mainCharacter
+      ) {
 
         addProfileDetail(
           "MAIN CHARACTER",
@@ -1520,7 +2549,9 @@
       }
 
 
-      if (profile.discordName) {
+      if (
+        profile.discordName
+      ) {
 
         addProfileDetail(
           "DISCORD",
@@ -1531,7 +2562,8 @@
 
 
       memberProfileBio.textContent =
-        profile.bio || "";
+        profile.bio
+        || "";
 
     }
 
@@ -1542,9 +2574,6 @@
        ====================================================== */
 
     function startMyDashboard() {
-
-      stopListeners();
-
 
       startEvents();
 
@@ -1561,6 +2590,15 @@
        ====================================================== */
 
     function startEvents() {
+
+      if (
+        unsubscribeEvents
+      ) {
+
+        unsubscribeEvents();
+
+      }
+
 
       unsubscribeEvents =
         onSnapshot(
@@ -1584,7 +2622,9 @@
               item => {
 
                 events.push({
-                  id: item.id,
+                  id:
+                    item.id,
+
                   ...item.data()
                 });
 
@@ -1626,6 +2666,19 @@
       }
 
 
+      if (
+        events.length === 0
+      ) {
+
+        renderMyEvents();
+
+        startAssignmentChecks();
+
+        return;
+
+      }
+
+
       events.forEach(
         event => {
 
@@ -1652,7 +2705,9 @@
                   );
 
 
-                if (snapshot.exists()) {
+                if (
+                  snapshot.exists()
+                ) {
 
                   signups.push({
                     eventId:
@@ -1691,7 +2746,8 @@
 
       const now =
         Math.floor(
-          Date.now() / 1000
+          Date.now()
+          / 1000
         );
 
 
@@ -1718,8 +2774,10 @@
           .filter(
             item =>
               item.event
-              && !item.event.cancelled
-              && item.event.startTimestamp
+              &&
+              !item.event.cancelled
+              &&
+              item.event.startTimestamp
               >= now
           );
 
@@ -1741,7 +2799,9 @@
         item => {
 
           const link =
-            document.createElement("a");
+            document.createElement(
+              "a"
+            );
 
 
           link.className =
@@ -1753,7 +2813,9 @@
 
 
           const title =
-            document.createElement("div");
+            document.createElement(
+              "div"
+            );
 
 
           title.className =
@@ -1765,7 +2827,9 @@
 
 
           const meta =
-            document.createElement("div");
+            document.createElement(
+              "div"
+            );
 
 
           meta.className =
@@ -1780,7 +2844,9 @@
 
 
           const role =
-            document.createElement("div");
+            document.createElement(
+              "div"
+            );
 
 
           role.className =
@@ -1789,18 +2855,35 @@
 
           role.textContent =
             `${statusIcon(
-              item.signup.status || "Going"
-            )} ${item.signup.status || "Going"} ◆ ${item.signup.role || "Any"}`;
+              item.signup.status
+              || "Going"
+            )} ${
+              item.signup.status
+              || "Going"
+            } ◆ ${
+              item.signup.role
+              || "Any"
+            }`;
 
 
-          link.appendChild(title);
-
-          link.appendChild(meta);
-
-          link.appendChild(role);
+          link.appendChild(
+            title
+          );
 
 
-          myEventsList.appendChild(link);
+          link.appendChild(
+            meta
+          );
+
+
+          link.appendChild(
+            role
+          );
+
+
+          myEventsList.appendChild(
+            link
+          );
 
         }
       );
@@ -1841,12 +2924,16 @@
       const organisedEvents =
         events.filter(
           event =>
-            event.type === "organised"
-            && !event.cancelled
-            && event.startTimestamp
-            >= Math.floor(
-              Date.now() / 1000
-            )
+            event.type
+              === "organised"
+            &&
+            !event.cancelled
+            &&
+            event.startTimestamp
+              >= Math.floor(
+                Date.now()
+                / 1000
+              )
         );
 
 
@@ -1897,42 +2984,48 @@
                       groupDoc.data();
 
 
-                    (group.slots || [])
-                      .forEach(
-                        slot => {
+                    (
+                      group.slots
+                      || []
+                    )
+                    .forEach(
+                      slot => {
 
-                          if (
-                            slot.assignedUid
-                            === user.uid
-                          ) {
+                        if (
+                          slot.assignedUid
+                          === user.uid
+                        ) {
 
-                            assignments.push({
-                              eventId:
-                                event.id,
+                          assignments.push({
 
-                              eventTitle:
-                                event.title,
+                            eventId:
+                              event.id,
 
-                              groupName:
-                                group.name,
+                            eventTitle:
+                              event.title,
 
-                              role:
-                                slot.role,
+                            groupName:
+                              group.name,
 
-                              requirements:
-                                slot.requirements || "",
+                            role:
+                              slot.role,
 
-                              date:
-                                event.eventDate,
+                            requirements:
+                              slot.requirements
+                              || "",
 
-                              time:
-                                event.startTime
-                            });
+                            date:
+                              event.eventDate,
 
-                          }
+                            time:
+                              event.startTime
+
+                          });
 
                         }
-                      );
+
+                      }
+                    );
 
                   }
                 );
@@ -1955,7 +3048,8 @@
 
 
       if (
-        organisedEvents.length === 0
+        organisedEvents.length
+        === 0
       ) {
 
         renderAssignments(
@@ -1977,7 +3071,8 @@
 
 
       if (
-        assignments.length === 0
+        assignments.length
+        === 0
       ) {
 
         myAssignmentsList.innerHTML =
@@ -1993,7 +3088,9 @@
         assignment => {
 
           const card =
-            document.createElement("a");
+            document.createElement(
+              "a"
+            );
 
 
           card.className =
@@ -2005,7 +3102,9 @@
 
 
           const title =
-            document.createElement("div");
+            document.createElement(
+              "div"
+            );
 
 
           title.className =
@@ -2017,7 +3116,9 @@
 
 
           const meta =
-            document.createElement("div");
+            document.createElement(
+              "div"
+            );
 
 
           meta.className =
@@ -2025,14 +3126,18 @@
 
 
           meta.textContent =
-            `${assignment.groupName} ◆ ${formatEventDate(
-              assignment.date,
-              assignment.time
-            )}`;
+            `${assignment.groupName} ◆ ${
+              formatEventDate(
+                assignment.date,
+                assignment.time
+              )
+            }`;
 
 
           const role =
-            document.createElement("div");
+            document.createElement(
+              "div"
+            );
 
 
           role.className =
@@ -2055,11 +3160,19 @@
           }
 
 
-          card.appendChild(title);
+          card.appendChild(
+            title
+          );
 
-          card.appendChild(meta);
 
-          card.appendChild(role);
+          card.appendChild(
+            meta
+          );
+
+
+          card.appendChild(
+            role
+          );
 
 
           myAssignmentsList.appendChild(
@@ -2078,6 +3191,15 @@
        ====================================================== */
 
     function startPosts() {
+
+      if (
+        unsubscribePosts
+      ) {
+
+        unsubscribePosts();
+
+      }
+
 
       unsubscribePosts =
         onSnapshot(
@@ -2106,12 +3228,15 @@
 
                 if (
                   auth.currentUser
-                  && data.authorUid
+                  &&
+                  data.authorUid
                   === auth.currentUser.uid
                 ) {
 
                   mine.push({
-                    id: item.id,
+                    id:
+                      item.id,
+
                     ...data
                   });
 
@@ -2132,14 +3257,17 @@
 
 
 
-    function renderMyPosts(posts) {
+    function renderMyPosts(
+      posts
+    ) {
 
       myPostsList.innerHTML =
         "";
 
 
       if (
-        posts.length === 0
+        posts.length
+        === 0
       ) {
 
         myPostsList.innerHTML =
@@ -2152,12 +3280,17 @@
 
 
       posts
-        .slice(0, 5)
+        .slice(
+          0,
+          5
+        )
         .forEach(
           post => {
 
             const item =
-              document.createElement("div");
+              document.createElement(
+                "div"
+              );
 
 
             item.className =
@@ -2165,7 +3298,9 @@
 
 
             const title =
-              document.createElement("div");
+              document.createElement(
+                "div"
+              );
 
 
             title.className =
@@ -2177,7 +3312,9 @@
 
 
             const meta =
-              document.createElement("div");
+              document.createElement(
+                "div"
+              );
 
 
             meta.className =
@@ -2190,7 +3327,9 @@
 
 
             const link =
-              document.createElement("a");
+              document.createElement(
+                "a"
+              );
 
 
             link.className =
@@ -2205,14 +3344,24 @@
               "VIEW FROM THE CHAOS";
 
 
-            item.appendChild(title);
-
-            item.appendChild(meta);
-
-            item.appendChild(link);
+            item.appendChild(
+              title
+            );
 
 
-            myPostsList.appendChild(item);
+            item.appendChild(
+              meta
+            );
+
+
+            item.appendChild(
+              link
+            );
+
+
+            myPostsList.appendChild(
+              item
+            );
 
           }
         );
@@ -2226,6 +3375,15 @@
        ====================================================== */
 
     function startGallery() {
+
+      if (
+        unsubscribeGallery
+      ) {
+
+        unsubscribeGallery();
+
+      }
+
 
       unsubscribeGallery =
         onSnapshot(
@@ -2254,12 +3412,15 @@
 
                 if (
                   auth.currentUser
-                  && data.uploadedByUid
+                  &&
+                  data.uploadedByUid
                   === auth.currentUser.uid
                 ) {
 
                   mine.push({
-                    id: item.id,
+                    id:
+                      item.id,
+
                     ...data
                   });
 
@@ -2280,14 +3441,17 @@
 
 
 
-    function renderMyGallery(items) {
+    function renderMyGallery(
+      items
+    ) {
 
       myGalleryList.innerHTML =
         "";
 
 
       if (
-        items.length === 0
+        items.length
+        === 0
       ) {
 
         myGalleryList.innerHTML =
@@ -2300,12 +3464,17 @@
 
 
       items
-        .slice(0, 5)
+        .slice(
+          0,
+          5
+        )
         .forEach(
           galleryItem => {
 
             const item =
-              document.createElement("div");
+              document.createElement(
+                "div"
+              );
 
 
             item.className =
@@ -2313,7 +3482,9 @@
 
 
             const title =
-              document.createElement("div");
+              document.createElement(
+                "div"
+              );
 
 
             title.className =
@@ -2326,7 +3497,9 @@
 
 
             const meta =
-              document.createElement("div");
+              document.createElement(
+                "div"
+              );
 
 
             meta.className =
@@ -2339,7 +3512,9 @@
 
 
             const link =
-              document.createElement("a");
+              document.createElement(
+                "a"
+              );
 
 
             link.className =
@@ -2354,11 +3529,19 @@
               "VIEW GALLERY";
 
 
-            item.appendChild(title);
+            item.appendChild(
+              title
+            );
 
-            item.appendChild(meta);
 
-            item.appendChild(link);
+            item.appendChild(
+              meta
+            );
+
+
+            item.appendChild(
+              link
+            );
 
 
             myGalleryList.appendChild(
@@ -2378,7 +3561,21 @@
 
     function stopListeners() {
 
-      if (unsubscribeEvents) {
+      if (
+        unsubscribeMembers
+      ) {
+
+        unsubscribeMembers();
+
+        unsubscribeMembers =
+          null;
+
+      }
+
+
+      if (
+        unsubscribeEvents
+      ) {
 
         unsubscribeEvents();
 
@@ -2408,7 +3605,9 @@
         [];
 
 
-      if (unsubscribePosts) {
+      if (
+        unsubscribePosts
+      ) {
 
         unsubscribePosts();
 
@@ -2418,7 +3617,9 @@
       }
 
 
-      if (unsubscribeGallery) {
+      if (
+        unsubscribeGallery
+      ) {
 
         unsubscribeGallery();
 
@@ -2435,10 +3636,14 @@
        HELPERS
        ====================================================== */
 
-    function createFallbackAvatar(name) {
+    function createFallbackAvatar(
+      name
+    ) {
 
       const fallback =
-        document.createElement("div");
+        document.createElement(
+          "div"
+        );
 
 
       fallback.className =
@@ -2446,10 +3651,13 @@
 
 
       fallback.textContent =
-        (name || "?")
-          .trim()
-          .charAt(0)
-          .toUpperCase()
+        (
+          name
+          || "?"
+        )
+        .trim()
+        .charAt(0)
+        .toUpperCase()
         || "?";
 
 
@@ -2465,18 +3673,25 @@
     ) {
 
       const row =
-        document.createElement("div");
+        document.createElement(
+          "div"
+        );
 
 
       const strong =
-        document.createElement("strong");
+        document.createElement(
+          "strong"
+        );
 
 
       strong.textContent =
         `${label}: `;
 
 
-      row.appendChild(strong);
+      row.appendChild(
+        strong
+      );
+
 
       row.appendChild(
         document.createTextNode(
@@ -2498,6 +3713,17 @@
       timeString
     ) {
 
+      if (
+        !dateString
+        ||
+        !timeString
+      ) {
+
+        return "";
+
+      }
+
+
       const date =
         new Date(
           `${dateString}T${timeString}:00`
@@ -2507,11 +3733,22 @@
       return date.toLocaleString(
         "en-GB",
         {
-          weekday: "short",
-          day: "numeric",
-          month: "short",
-          hour: "2-digit",
-          minute: "2-digit"
+
+          weekday:
+            "short",
+
+          day:
+            "numeric",
+
+          month:
+            "short",
+
+          hour:
+            "2-digit",
+
+          minute:
+            "2-digit"
+
         }
       );
 
@@ -2519,9 +3756,13 @@
 
 
 
-    function statusIcon(status) {
+    function statusIcon(
+      status
+    ) {
 
-      switch (status) {
+      switch (
+        status
+      ) {
 
         case "Reserve":
           return "🟡";
@@ -2538,9 +3779,13 @@
 
 
 
-    function roleIcon(role) {
+    function roleIcon(
+      role
+    ) {
 
-      switch (role) {
+      switch (
+        role
+      ) {
 
         case "Tank":
           return "🛡️";

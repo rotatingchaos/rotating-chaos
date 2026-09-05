@@ -138,11 +138,6 @@
     }
 
 
-    .chat-login-button:hover {
-      filter: brightness(1.08);
-    }
-
-
     .chat-error {
       display: none;
       margin-top: 18px;
@@ -233,7 +228,6 @@
       align-items: center;
       gap: 9px;
       margin-top: 15px;
-      font-size: 1rem;
     }
 
 
@@ -272,6 +266,7 @@
       height: 470px;
       overflow-y: auto;
       padding: 22px;
+
       background:
         linear-gradient(
           rgba(17, 16, 15, 0.94),
@@ -290,7 +285,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
 
@@ -339,7 +334,6 @@
     .message-text a {
       color: #efc76e;
       text-decoration: underline;
-      overflow-wrap: anywhere;
     }
 
 
@@ -352,6 +346,50 @@
       border: 1px solid rgba(218, 165, 32, 0.25);
       object-fit: contain;
       background: #090909;
+    }
+
+
+
+    /* ======================================================
+       MESSAGE REACTIONS
+       ====================================================== */
+
+    .message-reactions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 6px;
+    }
+
+
+    .reaction-button {
+      border: 1px solid rgba(218, 165, 32, 0.2);
+      background: rgba(255, 255, 255, 0.04);
+      color: #f6efe2;
+      padding: 4px 8px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      line-height: 1.2;
+    }
+
+
+    .reaction-button:hover {
+      border-color: rgba(218, 165, 32, 0.65);
+      background: rgba(218, 165, 32, 0.08);
+    }
+
+
+    .reaction-button.active {
+      border-color: #d7aa42;
+      background: rgba(218, 165, 32, 0.18);
+    }
+
+
+    .reaction-count {
+      margin-left: 3px;
+      font-size: 0.78rem;
+      opacity: 0.85;
     }
 
 
@@ -437,11 +475,6 @@
       padding: 10px;
       font-size: 1.2rem;
       cursor: pointer;
-    }
-
-
-    .emoji-tab:hover {
-      background: rgba(218, 165, 32, 0.08);
     }
 
 
@@ -545,11 +578,6 @@
       }
 
 
-      .messenger-topbar {
-        align-items: flex-start;
-      }
-
-
       .message-bubble {
         max-width: 90%;
       }
@@ -571,12 +599,6 @@
       }
 
 
-      .chat-toolbar {
-        padding-left: 9px;
-        padding-right: 9px;
-      }
-
-
       .emoji-picker {
         left: 9px;
         width: min(390px, calc(100vw - 36px));
@@ -591,10 +613,6 @@
 
 <body>
 
-
-  <!-- ======================================================
-       HEADER
-       ====================================================== -->
 
   <header class="site-header">
 
@@ -661,7 +679,6 @@
 
   <main class="chaos-chat-page">
 
-
     <div class="chaos-chat-shell">
 
 
@@ -683,9 +700,7 @@
 
 
 
-      <!-- ==================================================
-           LOGIN
-           ================================================== -->
+      <!-- LOGIN -->
 
       <section
         class="chat-login-card"
@@ -759,9 +774,7 @@
 
 
 
-      <!-- ==================================================
-           MESSENGER
-           ================================================== -->
+      <!-- MESSENGER -->
 
       <section
         class="messenger"
@@ -836,17 +849,12 @@
 
 
 
-            <!-- ==================================================
-                 CHAT TOOLS
-                 ================================================== -->
-
             <div class="chat-toolbar">
 
               <button
                 type="button"
                 class="chat-tool-button"
                 id="emojiButton"
-                title="Add emoji"
               >
                 😀
               </button>
@@ -856,7 +864,6 @@
                 type="button"
                 class="chat-tool-button"
                 id="mediaButton"
-                title="Add GIF or picture link"
               >
                 🖼 GIF / PIC
               </button>
@@ -868,17 +875,11 @@
 
 
 
-              <!-- ==============================================
-                   EMOJI PICKER
-                   ============================================== -->
-
               <div
                 class="emoji-picker"
                 id="emojiPicker"
               >
 
-
-                <!-- CATEGORY TABS -->
 
                 <div class="emoji-tabs">
 
@@ -886,7 +887,6 @@
                     type="button"
                     class="emoji-tab active"
                     data-category="faces"
-                    title="Faces"
                   >
                     😀
                   </button>
@@ -895,7 +895,6 @@
                     type="button"
                     class="emoji-tab"
                     data-category="reactions"
-                    title="Reactions"
                   >
                     ❤️
                   </button>
@@ -904,7 +903,6 @@
                     type="button"
                     class="emoji-tab"
                     data-category="gaming"
-                    title="Gaming"
                   >
                     ⚔️
                   </button>
@@ -913,7 +911,6 @@
                     type="button"
                     class="emoji-tab"
                     data-category="fantasy"
-                    title="Fantasy"
                   >
                     🐉
                   </button>
@@ -922,7 +919,6 @@
                     type="button"
                     class="emoji-tab"
                     data-category="random"
-                    title="Random Chaos"
                   >
                     🍻
                   </button>
@@ -931,13 +927,10 @@
 
 
 
-                <!-- FACES -->
-
                 <div
                   class="emoji-category active"
                   data-category="faces"
                 >
-
                   <button type="button" class="emoji-choice">😀</button>
                   <button type="button" class="emoji-choice">😃</button>
                   <button type="button" class="emoji-choice">😄</button>
@@ -945,7 +938,6 @@
                   <button type="button" class="emoji-choice">😆</button>
                   <button type="button" class="emoji-choice">😂</button>
                   <button type="button" class="emoji-choice">🤣</button>
-
                   <button type="button" class="emoji-choice">😊</button>
                   <button type="button" class="emoji-choice">😍</button>
                   <button type="button" class="emoji-choice">🥰</button>
@@ -953,15 +945,9 @@
                   <button type="button" class="emoji-choice">😜</button>
                   <button type="button" class="emoji-choice">🤪</button>
                   <button type="button" class="emoji-choice">😎</button>
-
-                  <button type="button" class="emoji-choice">🤓</button>
-                  <button type="button" class="emoji-choice">🧐</button>
                   <button type="button" class="emoji-choice">🙄</button>
-                  <button type="button" class="emoji-choice">😒</button>
                   <button type="button" class="emoji-choice">😬</button>
-                  <button type="button" class="emoji-choice">😏</button>
                   <button type="button" class="emoji-choice">🤔</button>
-
                   <button type="button" class="emoji-choice">🤦‍♀️</button>
                   <button type="button" class="emoji-choice">🤦‍♂️</button>
                   <button type="button" class="emoji-choice">🤷‍♀️</button>
@@ -969,26 +955,18 @@
                   <button type="button" class="emoji-choice">😭</button>
                   <button type="button" class="emoji-choice">😱</button>
                   <button type="button" class="emoji-choice">😈</button>
-
                   <button type="button" class="emoji-choice">🤬</button>
                   <button type="button" class="emoji-choice">💀</button>
                   <button type="button" class="emoji-choice">🤡</button>
                   <button type="button" class="emoji-choice">🥳</button>
-                  <button type="button" class="emoji-choice">🤯</button>
-                  <button type="button" class="emoji-choice">🥴</button>
-                  <button type="button" class="emoji-choice">😴</button>
-
                 </div>
 
 
-
-                <!-- REACTIONS -->
 
                 <div
                   class="emoji-category"
                   data-category="reactions"
                 >
-
                   <button type="button" class="emoji-choice">❤️</button>
                   <button type="button" class="emoji-choice">🧡</button>
                   <button type="button" class="emoji-choice">💛</button>
@@ -996,42 +974,28 @@
                   <button type="button" class="emoji-choice">💙</button>
                   <button type="button" class="emoji-choice">💜</button>
                   <button type="button" class="emoji-choice">🖤</button>
-
                   <button type="button" class="emoji-choice">🤍</button>
                   <button type="button" class="emoji-choice">💔</button>
-                  <button type="button" class="emoji-choice">💕</button>
-                  <button type="button" class="emoji-choice">💖</button>
                   <button type="button" class="emoji-choice">🔥</button>
                   <button type="button" class="emoji-choice">💯</button>
-                  <button type="button" class="emoji-choice">✨</button>
-
                   <button type="button" class="emoji-choice">👏</button>
                   <button type="button" class="emoji-choice">🙌</button>
                   <button type="button" class="emoji-choice">👍</button>
                   <button type="button" class="emoji-choice">👎</button>
-                  <button type="button" class="emoji-choice">👌</button>
-                  <button type="button" class="emoji-choice">✌️</button>
-                  <button type="button" class="emoji-choice">🤝</button>
-
-                  <button type="button" class="emoji-choice">🙏</button>
                   <button type="button" class="emoji-choice">🫶</button>
                   <button type="button" class="emoji-choice">👀</button>
                   <button type="button" class="emoji-choice">🖕</button>
                   <button type="button" class="emoji-choice">💪</button>
                   <button type="button" class="emoji-choice">🫡</button>
                   <button type="button" class="emoji-choice">🎉</button>
-
                 </div>
 
 
-
-                <!-- GAMING -->
 
                 <div
                   class="emoji-category"
                   data-category="gaming"
                 >
-
                   <button type="button" class="emoji-choice">🎮</button>
                   <button type="button" class="emoji-choice">🕹️</button>
                   <button type="button" class="emoji-choice">⚔️</button>
@@ -1039,42 +1003,27 @@
                   <button type="button" class="emoji-choice">🏹</button>
                   <button type="button" class="emoji-choice">🗡️</button>
                   <button type="button" class="emoji-choice">🪓</button>
-
                   <button type="button" class="emoji-choice">🔮</button>
                   <button type="button" class="emoji-choice">💎</button>
                   <button type="button" class="emoji-choice">👑</button>
                   <button type="button" class="emoji-choice">🏆</button>
-                  <button type="button" class="emoji-choice">🥇</button>
                   <button type="button" class="emoji-choice">🎯</button>
                   <button type="button" class="emoji-choice">💥</button>
-
                   <button type="button" class="emoji-choice">☠️</button>
                   <button type="button" class="emoji-choice">🧪</button>
                   <button type="button" class="emoji-choice">🗺️</button>
                   <button type="button" class="emoji-choice">🧭</button>
                   <button type="button" class="emoji-choice">📜</button>
                   <button type="button" class="emoji-choice">🏰</button>
-                  <button type="button" class="emoji-choice">💰</button>
-
-                  <button type="button" class="emoji-choice">💀</button>
-                  <button type="button" class="emoji-choice">🔥</button>
-                  <button type="button" class="emoji-choice">⚡</button>
-                  <button type="button" class="emoji-choice">❄️</button>
-                  <button type="button" class="emoji-choice">🪄</button>
-                  <button type="button" class="emoji-choice">🧿</button>
                   <button type="button" class="emoji-choice">🎲</button>
-
                 </div>
 
 
-
-                <!-- FANTASY -->
 
                 <div
                   class="emoji-category"
                   data-category="fantasy"
                 >
-
                   <button type="button" class="emoji-choice">🐉</button>
                   <button type="button" class="emoji-choice">🐲</button>
                   <button type="button" class="emoji-choice">🧙‍♂️</button>
@@ -1082,15 +1031,10 @@
                   <button type="button" class="emoji-choice">🧝‍♂️</button>
                   <button type="button" class="emoji-choice">🧝‍♀️</button>
                   <button type="button" class="emoji-choice">🧚‍♀️</button>
-
-                  <button type="button" class="emoji-choice">🧚‍♂️</button>
                   <button type="button" class="emoji-choice">🧌</button>
                   <button type="button" class="emoji-choice">🧟</button>
                   <button type="button" class="emoji-choice">🧛‍♂️</button>
-                  <button type="button" class="emoji-choice">🧛‍♀️</button>
                   <button type="button" class="emoji-choice">👹</button>
-                  <button type="button" class="emoji-choice">👺</button>
-
                   <button type="button" class="emoji-choice">👻</button>
                   <button type="button" class="emoji-choice">🕷️</button>
                   <button type="button" class="emoji-choice">🦂</button>
@@ -1098,26 +1042,19 @@
                   <button type="button" class="emoji-choice">🦄</button>
                   <button type="button" class="emoji-choice">🦇</button>
                   <button type="button" class="emoji-choice">🐍</button>
-
                   <button type="button" class="emoji-choice">🔥</button>
                   <button type="button" class="emoji-choice">❄️</button>
                   <button type="button" class="emoji-choice">⚡</button>
                   <button type="button" class="emoji-choice">🌙</button>
                   <button type="button" class="emoji-choice">⭐</button>
-                  <button type="button" class="emoji-choice">🌟</button>
-                  <button type="button" class="emoji-choice">🌌</button>
-
                 </div>
 
 
-
-                <!-- RANDOM CHAOS -->
 
                 <div
                   class="emoji-category"
                   data-category="random"
                 >
-
                   <button type="button" class="emoji-choice">🍻</button>
                   <button type="button" class="emoji-choice">🍺</button>
                   <button type="button" class="emoji-choice">🍷</button>
@@ -1125,39 +1062,22 @@
                   <button type="button" class="emoji-choice">🍕</button>
                   <button type="button" class="emoji-choice">🍔</button>
                   <button type="button" class="emoji-choice">🍟</button>
-
                   <button type="button" class="emoji-choice">🍿</button>
                   <button type="button" class="emoji-choice">🍰</button>
-                  <button type="button" class="emoji-choice">🎂</button>
                   <button type="button" class="emoji-choice">🐈</button>
                   <button type="button" class="emoji-choice">🐕</button>
-                  <button type="button" class="emoji-choice">🦆</button>
                   <button type="button" class="emoji-choice">🐸</button>
-
                   <button type="button" class="emoji-choice">🦖</button>
                   <button type="button" class="emoji-choice">💩</button>
                   <button type="button" class="emoji-choice">🧠</button>
                   <button type="button" class="emoji-choice">🫠</button>
-                  <button type="button" class="emoji-choice">🫣</button>
-                  <button type="button" class="emoji-choice">🫢</button>
-                  <button type="button" class="emoji-choice">🤌</button>
-
-                  <button type="button" class="emoji-choice">🤏</button>
                   <button type="button" class="emoji-choice">🧨</button>
                   <button type="button" class="emoji-choice">🚨</button>
-                  <button type="button" class="emoji-choice">🛑</button>
-                  <button type="button" class="emoji-choice">🚩</button>
                   <button type="button" class="emoji-choice">🎵</button>
-                  <button type="button" class="emoji-choice">🎶</button>
-
                   <button type="button" class="emoji-choice">🦩</button>
                   <button type="button" class="emoji-choice">🌈</button>
-                  <button type="button" class="emoji-choice">🛸</button>
                   <button type="button" class="emoji-choice">👽</button>
                   <button type="button" class="emoji-choice">💣</button>
-                  <button type="button" class="emoji-choice">🗑️</button>
-                  <button type="button" class="emoji-choice">🧯</button>
-
                 </div>
 
 
@@ -1166,10 +1086,6 @@
             </div>
 
 
-
-            <!-- ==================================================
-                 MESSAGE BOX
-                 ================================================== -->
 
             <form
               class="chat-compose"
@@ -1197,23 +1113,15 @@
 
           </div>
 
-
         </div>
-
 
       </section>
 
-
     </div>
-
 
   </main>
 
 
-
-  <!-- ======================================================
-       FIREBASE
-       ====================================================== -->
 
   <script type="module">
 
@@ -1234,6 +1142,9 @@
       getFirestore,
       collection,
       addDoc,
+      doc,
+      setDoc,
+      deleteDoc,
       serverTimestamp,
       query,
       orderBy,
@@ -1331,14 +1242,19 @@
 
 
 
-    let currentNickname = "";
+    let currentNickname =
+      "";
 
-    let unsubscribeMessages = null;
+    let unsubscribeMessages =
+      null;
+
+    let reactionUnsubscribers =
+      [];
 
 
 
     /* ======================================================
-       NORMALISE GUILD NAME
+       LOGIN EMAIL
        ====================================================== */
 
     function makeAccountEmail(name) {
@@ -1354,10 +1270,6 @@
     }
 
 
-
-    /* ======================================================
-       DISPLAY NAME
-       ====================================================== */
 
     function prettyNameFromEmail(email) {
 
@@ -1397,15 +1309,11 @@
         }
 
 
-        const email =
-          makeAccountEmail(enteredName);
-
-
         try {
 
           await signInWithEmailAndPassword(
             auth,
-            email,
+            makeAccountEmail(enteredName),
             password
           );
 
@@ -1482,6 +1390,9 @@
             "none";
 
 
+          stopReactionListeners();
+
+
           if (unsubscribeMessages) {
 
             unsubscribeMessages();
@@ -1510,7 +1421,6 @@
           "chaosNickname"
         );
 
-
         await signOut(auth);
 
       }
@@ -1519,7 +1429,7 @@
 
 
     /* ======================================================
-       OPEN / CLOSE EMOJI PICKER
+       EMOJI PICKER
        ====================================================== */
 
     emojiButton.addEventListener(
@@ -1534,11 +1444,6 @@
     );
 
 
-
-    /* ======================================================
-       EMOJI CATEGORY TABS
-       ====================================================== */
-
     emojiTabs.forEach(
       (tab) => {
 
@@ -1551,44 +1456,28 @@
 
 
             emojiTabs.forEach(
-              (item) => {
-
-                item.classList.remove(
-                  "active"
-                );
-
-              }
+              item =>
+                item.classList.remove("active")
             );
 
 
             emojiCategories.forEach(
-              (item) => {
-
-                item.classList.remove(
-                  "active"
-                );
-
-              }
+              item =>
+                item.classList.remove("active")
             );
 
 
-            tab.classList.add(
-              "active"
-            );
+            tab.classList.add("active");
 
 
-            const targetCategory =
+            const target =
               document.querySelector(
                 `.emoji-category[data-category="${category}"]`
               );
 
 
-            if (targetCategory) {
-
-              targetCategory.classList.add(
-                "active"
-              );
-
+            if (target) {
+              target.classList.add("active");
             }
 
           }
@@ -1597,11 +1486,6 @@
       }
     );
 
-
-
-    /* ======================================================
-       INSERT EMOJI INTO MESSAGE
-       ====================================================== */
 
     document
       .querySelectorAll(".emoji-choice")
@@ -1624,14 +1508,14 @@
                 messageInput.selectionEnd;
 
 
-              const current =
+              const value =
                 messageInput.value;
 
 
               messageInput.value =
-                current.slice(0, start)
+                value.slice(0, start)
                 + emoji
-                + current.slice(end);
+                + value.slice(end);
 
 
               const newPosition =
@@ -1658,10 +1542,6 @@
       );
 
 
-
-    /* ======================================================
-       CLICK OUTSIDE EMOJI PICKER
-       ====================================================== */
 
     document.addEventListener(
       "click",
@@ -1727,7 +1607,6 @@
 
         }
 
-
         else {
 
           messageInput.value =
@@ -1744,7 +1623,7 @@
 
 
     /* ======================================================
-       IMAGE URL CHECK
+       IMAGE / GIF CHECK
        ====================================================== */
 
     function isImageUrl(url) {
@@ -1753,7 +1632,6 @@
 
         const parsed =
           new URL(url);
-
 
         const path =
           parsed.pathname.toLowerCase();
@@ -1796,7 +1674,7 @@
 
 
     /* ======================================================
-       DISPLAY LINKS + MEDIA
+       DISPLAY MESSAGE CONTENT
        ====================================================== */
 
     function appendMessageContent(
@@ -1820,29 +1698,6 @@
             || piece.startsWith("https://")
           ) {
 
-            const link =
-              document.createElement("a");
-
-
-            link.href =
-              piece;
-
-
-            link.target =
-              "_blank";
-
-
-            link.rel =
-              "noopener noreferrer";
-
-
-            link.textContent =
-              piece;
-
-
-            container.appendChild(link);
-
-
             if (isImageUrl(piece)) {
 
               const image =
@@ -1854,7 +1709,7 @@
 
 
               image.alt =
-                "Shared image";
+                "Shared image or GIF";
 
 
               image.className =
@@ -1879,6 +1734,33 @@
 
             }
 
+
+            else {
+
+              const link =
+                document.createElement("a");
+
+
+              link.href =
+                piece;
+
+
+              link.target =
+                "_blank";
+
+
+              link.rel =
+                "noopener noreferrer";
+
+
+              link.textContent =
+                piece;
+
+
+              container.appendChild(link);
+
+            }
+
           }
 
 
@@ -1892,6 +1774,251 @@
 
         }
       );
+
+    }
+
+
+
+    /* ======================================================
+       REACTIONS
+       ====================================================== */
+
+    const quickReactions =
+      ["😂", "❤️", "💀", "🔥"];
+
+
+    function stopReactionListeners() {
+
+      reactionUnsubscribers.forEach(
+        unsubscribe => unsubscribe()
+      );
+
+
+      reactionUnsubscribers =
+        [];
+
+    }
+
+
+
+    function startReactionListener(
+      messageId,
+      reactionContainer
+    ) {
+
+      const reactionsRef =
+        collection(
+          db,
+          "messages",
+          messageId,
+          "reactions"
+        );
+
+
+      const unsubscribe =
+        onSnapshot(
+          reactionsRef,
+          (snapshot) => {
+
+            const counts = {};
+
+            let myReaction =
+              null;
+
+
+            quickReactions.forEach(
+              emoji => {
+                counts[emoji] = 0;
+              }
+            );
+
+
+            snapshot.forEach(
+              reactionDocument => {
+
+                const reaction =
+                  reactionDocument.data();
+
+
+                if (
+                  quickReactions.includes(
+                    reaction.emoji
+                  )
+                ) {
+
+                  counts[reaction.emoji]++;
+
+                }
+
+
+                if (
+                  auth.currentUser
+                  && reactionDocument.id
+                  === auth.currentUser.uid
+                ) {
+
+                  myReaction =
+                    reaction.emoji;
+
+                }
+
+              }
+            );
+
+
+            reactionContainer.innerHTML =
+              "";
+
+
+            quickReactions.forEach(
+              (emoji) => {
+
+                const button =
+                  document.createElement("button");
+
+
+                button.type =
+                  "button";
+
+
+                button.className =
+                  "reaction-button";
+
+
+                if (myReaction === emoji) {
+
+                  button.classList.add(
+                    "active"
+                  );
+
+                }
+
+
+                const emojiSpan =
+                  document.createElement("span");
+
+
+                emojiSpan.textContent =
+                  emoji;
+
+
+                button.appendChild(
+                  emojiSpan
+                );
+
+
+                if (counts[emoji] > 0) {
+
+                  const count =
+                    document.createElement("span");
+
+
+                  count.className =
+                    "reaction-count";
+
+
+                  count.textContent =
+                    counts[emoji];
+
+
+                  button.appendChild(
+                    count
+                  );
+
+                }
+
+
+                button.addEventListener(
+                  "click",
+                  () => {
+
+                    toggleReaction(
+                      messageId,
+                      emoji,
+                      myReaction
+                    );
+
+                  }
+                );
+
+
+                reactionContainer.appendChild(
+                  button
+                );
+
+              }
+            );
+
+          }
+        );
+
+
+      reactionUnsubscribers.push(
+        unsubscribe
+      );
+
+    }
+
+
+
+    async function toggleReaction(
+      messageId,
+      emoji,
+      currentReaction
+    ) {
+
+      const user =
+        auth.currentUser;
+
+
+      if (!user) {
+        return;
+      }
+
+
+      const reactionRef =
+        doc(
+          db,
+          "messages",
+          messageId,
+          "reactions",
+          user.uid
+        );
+
+
+      try {
+
+        if (currentReaction === emoji) {
+
+          await deleteDoc(
+            reactionRef
+          );
+
+        }
+
+
+        else {
+
+          await setDoc(
+            reactionRef,
+            {
+              emoji: emoji
+            }
+          );
+
+        }
+
+      }
+
+
+      catch (error) {
+
+        console.error(
+          "Reaction failed:",
+          error
+        );
+
+      }
 
     }
 
@@ -1923,15 +2050,18 @@
           messagesQuery,
           (snapshot) => {
 
+            stopReactionListeners();
+
+
             messagesElement.innerHTML =
               "";
 
 
             snapshot.forEach(
-              (documentSnapshot) => {
+              (messageDocument) => {
 
                 const data =
-                  documentSnapshot.data();
+                  messageDocument.data();
 
 
                 const message =
@@ -1944,7 +2074,8 @@
 
                 if (
                   auth.currentUser
-                  && data.uid === auth.currentUser.uid
+                  && data.uid
+                  === auth.currentUser.uid
                 ) {
 
                   message.classList.add(
@@ -1954,8 +2085,6 @@
                 }
 
 
-
-                /* META */
 
                 const meta =
                   document.createElement("div");
@@ -2008,8 +2137,6 @@
 
 
 
-                /* BUBBLE */
-
                 const bubble =
                   document.createElement("div");
 
@@ -2035,9 +2162,28 @@
                 bubble.appendChild(text);
 
 
+
+                const reactions =
+                  document.createElement("div");
+
+
+                reactions.className =
+                  "message-reactions";
+
+
+                startReactionListener(
+                  messageDocument.id,
+                  reactions
+                );
+
+
+
                 message.appendChild(meta);
 
                 message.appendChild(bubble);
+
+                message.appendChild(reactions);
+
 
                 messagesElement.appendChild(
                   message

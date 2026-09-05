@@ -63,7 +63,9 @@
     }
 
 
-    /* LOGIN */
+    /* ======================================================
+       LOGIN
+       ====================================================== */
 
     .chat-login-card {
       width: min(520px, 100%);
@@ -144,7 +146,9 @@
     }
 
 
-    /* MESSENGER */
+    /* ======================================================
+       MESSENGER
+       ====================================================== */
 
     .messenger {
       display: none;
@@ -199,7 +203,9 @@
     }
 
 
-    /* SIDEBAR */
+    /* ======================================================
+       SIDEBAR
+       ====================================================== */
 
     .messenger-sidebar {
       padding: 20px;
@@ -241,12 +247,15 @@
     }
 
 
-    /* CHAT AREA */
+    /* ======================================================
+       CHAT AREA
+       ====================================================== */
 
     .messenger-chat {
       display: flex;
       flex-direction: column;
       min-width: 0;
+      position: relative;
     }
 
 
@@ -261,15 +270,32 @@
     }
 
 
+    /* ======================================================
+       MESSAGE BUBBLES
+       ====================================================== */
+
     .message {
-      margin-bottom: 17px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+
+
+    .message-own {
+      align-items: flex-end;
+    }
+
+
+    .message-meta {
+      margin-bottom: 5px;
     }
 
 
     .message-name {
       font-family: "Cinzel", serif;
       font-weight: 700;
-      font-size: 0.92rem;
+      font-size: 0.86rem;
       color: #ddb45d;
     }
 
@@ -281,19 +307,130 @@
     }
 
 
-    .message-text {
-      margin-top: 4px;
+    .message-bubble {
+      max-width: min(620px, 85%);
+      padding: 10px 14px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       line-height: 1.45;
       overflow-wrap: anywhere;
     }
 
 
+    .message-own .message-bubble {
+      background: rgba(183, 128, 24, 0.19);
+      border-color: rgba(218, 165, 32, 0.35);
+    }
+
+
+    .message-text a {
+      color: #efc76e;
+      text-decoration: underline;
+      overflow-wrap: anywhere;
+    }
+
+
+    .message-media {
+      display: block;
+      margin-top: 9px;
+      max-width: min(420px, 100%);
+      max-height: 420px;
+      border-radius: 10px;
+      border: 1px solid rgba(218, 165, 32, 0.25);
+      object-fit: contain;
+      background: #090909;
+    }
+
+
+    /* ======================================================
+       TOOLBAR
+       ====================================================== */
+
+    .chat-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 15px 0;
+      border-top: 1px solid rgba(218, 165, 32, 0.2);
+      background: #0d0c0b;
+      position: relative;
+    }
+
+
+    .chat-tool-button {
+      border: 1px solid rgba(218, 165, 32, 0.3);
+      background: #171513;
+      color: #f6efe2;
+      padding: 8px 11px;
+      cursor: pointer;
+      font: inherit;
+      border-radius: 6px;
+    }
+
+
+    .chat-tool-button:hover {
+      border-color: #d7aa42;
+    }
+
+
+    .chat-media-hint {
+      opacity: 0.5;
+      font-size: 0.82rem;
+      margin-left: auto;
+    }
+
+
+    /* ======================================================
+       EMOJI PICKER
+       ====================================================== */
+
+    .emoji-picker {
+      display: none;
+      position: absolute;
+      bottom: 47px;
+      left: 15px;
+      width: min(340px, calc(100vw - 70px));
+      padding: 12px;
+      border: 1px solid rgba(218, 165, 32, 0.4);
+      background: #171513;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.55);
+      border-radius: 10px;
+      z-index: 20;
+    }
+
+
+    .emoji-picker.open {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+    }
+
+
+    .emoji-choice {
+      border: 0;
+      background: transparent;
+      padding: 7px 3px;
+      font-size: 1.35rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+
+    .emoji-choice:hover {
+      background: rgba(218, 165, 32, 0.14);
+    }
+
+
+    /* ======================================================
+       COMPOSE
+       ====================================================== */
+
     .chat-compose {
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 12px;
-      padding: 15px;
-      border-top: 1px solid rgba(218, 165, 32, 0.2);
+      padding: 10px 15px 15px;
       background: #0d0c0b;
     }
 
@@ -337,10 +474,33 @@
 
       .messages {
         height: 60vh;
+        padding: 14px;
       }
 
       .messenger-topbar {
         align-items: flex-start;
+      }
+
+      .message-bubble {
+        max-width: 90%;
+      }
+
+      .chat-media-hint {
+        display: none;
+      }
+
+      .chat-compose {
+        gap: 7px;
+        padding: 9px;
+      }
+
+      .chat-send {
+        padding: 11px 13px;
+      }
+
+      .chat-toolbar {
+        padding-left: 9px;
+        padding-right: 9px;
       }
 
     }
@@ -597,6 +757,91 @@
 
 
 
+            <!-- CHAT TOOLS -->
+
+            <div class="chat-toolbar">
+
+              <button
+                type="button"
+                class="chat-tool-button"
+                id="emojiButton"
+                title="Add emoji"
+              >
+                😀
+              </button>
+
+
+              <button
+                type="button"
+                class="chat-tool-button"
+                id="mediaButton"
+                title="Add GIF or picture link"
+              >
+                🖼 GIF / PIC
+              </button>
+
+
+              <span class="chat-media-hint">
+                Paste direct image or GIF links to preview them.
+              </span>
+
+
+
+              <!-- EMOJI PICKER -->
+
+              <div
+                class="emoji-picker"
+                id="emojiPicker"
+              >
+
+                <button type="button" class="emoji-choice">😂</button>
+                <button type="button" class="emoji-choice">🤣</button>
+                <button type="button" class="emoji-choice">😭</button>
+                <button type="button" class="emoji-choice">💀</button>
+                <button type="button" class="emoji-choice">🔥</button>
+                <button type="button" class="emoji-choice">❤️</button>
+                <button type="button" class="emoji-choice">👀</button>
+
+                <button type="button" class="emoji-choice">😈</button>
+                <button type="button" class="emoji-choice">🤦‍♀️</button>
+                <button type="button" class="emoji-choice">🤦‍♂️</button>
+                <button type="button" class="emoji-choice">🙄</button>
+                <button type="button" class="emoji-choice">🤷‍♀️</button>
+                <button type="button" class="emoji-choice">🤷‍♂️</button>
+                <button type="button" class="emoji-choice">🖕</button>
+
+                <button type="button" class="emoji-choice">🥳</button>
+                <button type="button" class="emoji-choice">😍</button>
+                <button type="button" class="emoji-choice">😘</button>
+                <button type="button" class="emoji-choice">😜</button>
+                <button type="button" class="emoji-choice">🤪</button>
+                <button type="button" class="emoji-choice">😱</button>
+                <button type="button" class="emoji-choice">🤬</button>
+
+                <button type="button" class="emoji-choice">👍</button>
+                <button type="button" class="emoji-choice">👎</button>
+                <button type="button" class="emoji-choice">👏</button>
+                <button type="button" class="emoji-choice">🙌</button>
+                <button type="button" class="emoji-choice">💯</button>
+                <button type="button" class="emoji-choice">⚔️</button>
+                <button type="button" class="emoji-choice">🐉</button>
+
+                <button type="button" class="emoji-choice">🧙‍♂️</button>
+                <button type="button" class="emoji-choice">🧙‍♀️</button>
+                <button type="button" class="emoji-choice">🛡️</button>
+                <button type="button" class="emoji-choice">🏹</button>
+                <button type="button" class="emoji-choice">💩</button>
+                <button type="button" class="emoji-choice">🍿</button>
+                <button type="button" class="emoji-choice">🤡</button>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- MESSAGE BOX -->
+
             <form
               class="chat-compose"
               id="messageForm"
@@ -736,6 +981,15 @@
 
     const messagesElement =
       document.getElementById("messages");
+
+    const emojiButton =
+      document.getElementById("emojiButton");
+
+    const emojiPicker =
+      document.getElementById("emojiPicker");
+
+    const mediaButton =
+      document.getElementById("mediaButton");
 
 
 
@@ -920,6 +1174,273 @@
 
 
     /* ======================================================
+       EMOJI PICKER
+       ====================================================== */
+
+    emojiButton.addEventListener(
+      "click",
+      () => {
+
+        emojiPicker.classList.toggle("open");
+
+      }
+    );
+
+
+    document
+      .querySelectorAll(".emoji-choice")
+      .forEach(
+        (button) => {
+
+          button.addEventListener(
+            "click",
+            () => {
+
+              const emoji =
+                button.textContent;
+
+
+              const start =
+                messageInput.selectionStart;
+
+
+              const end =
+                messageInput.selectionEnd;
+
+
+              const current =
+                messageInput.value;
+
+
+              messageInput.value =
+                current.slice(0, start)
+                + emoji
+                + current.slice(end);
+
+
+              const newPosition =
+                start + emoji.length;
+
+
+              messageInput.focus();
+
+              messageInput.setSelectionRange(
+                newPosition,
+                newPosition
+              );
+
+
+              emojiPicker.classList.remove("open");
+
+            }
+          );
+
+        }
+      );
+
+
+    document.addEventListener(
+      "click",
+      (event) => {
+
+        if (
+          !emojiPicker.contains(event.target)
+          && event.target !== emojiButton
+        ) {
+
+          emojiPicker.classList.remove("open");
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       GIF / IMAGE BUTTON
+       ====================================================== */
+
+    mediaButton.addEventListener(
+      "click",
+      () => {
+
+        const url =
+          window.prompt(
+            "Paste a direct image or GIF link:"
+          );
+
+
+        if (!url) {
+          return;
+        }
+
+
+        const cleanUrl =
+          url.trim();
+
+
+        if (
+          !cleanUrl.startsWith("https://")
+          && !cleanUrl.startsWith("http://")
+        ) {
+
+          window.alert(
+            "That doesn't look like a web link."
+          );
+
+          return;
+        }
+
+
+        if (messageInput.value.trim()) {
+
+          messageInput.value +=
+            ` ${cleanUrl}`;
+
+        }
+
+        else {
+
+          messageInput.value =
+            cleanUrl;
+
+        }
+
+
+        messageInput.focus();
+
+      }
+    );
+
+
+
+    /* ======================================================
+       URL HELPERS
+       ====================================================== */
+
+    function isImageUrl(url) {
+
+      try {
+
+        const parsed =
+          new URL(url);
+
+
+        return /\.(jpg|jpeg|png|gif|webp|avif)$/i
+          .test(parsed.pathname);
+
+      }
+
+      catch {
+
+        return false;
+
+      }
+
+    }
+
+
+
+    function appendMessageContent(
+      container,
+      text
+    ) {
+
+      const urlRegex =
+        /(https?:\/\/[^\s]+)/g;
+
+
+      const pieces =
+        text.split(urlRegex);
+
+
+      pieces.forEach(
+        (piece) => {
+
+          if (
+            piece.startsWith("http://")
+            || piece.startsWith("https://")
+          ) {
+
+            const link =
+              document.createElement("a");
+
+
+            link.href =
+              piece;
+
+
+            link.target =
+              "_blank";
+
+
+            link.rel =
+              "noopener noreferrer";
+
+
+            link.textContent =
+              piece;
+
+
+            container.appendChild(link);
+
+
+            if (isImageUrl(piece)) {
+
+              const image =
+                document.createElement("img");
+
+
+              image.src =
+                piece;
+
+
+              image.alt =
+                "Shared image";
+
+
+              image.className =
+                "message-media";
+
+
+              image.loading =
+                "lazy";
+
+
+              image.addEventListener(
+                "error",
+                () => {
+
+                  image.remove();
+
+                }
+              );
+
+
+              container.appendChild(image);
+
+            }
+
+          }
+
+
+          else {
+
+            container.appendChild(
+              document.createTextNode(piece)
+            );
+
+          }
+
+        }
+      );
+
+    }
+
+
+
+    /* ======================================================
        LIVE CHAT
        ====================================================== */
 
@@ -956,19 +1477,41 @@
                 const message =
                   document.createElement("div");
 
+
                 message.className =
                   "message";
 
 
-                const heading =
+                if (
+                  auth.currentUser
+                  && data.uid === auth.currentUser.uid
+                ) {
+
+                  message.classList.add(
+                    "message-own"
+                  );
+
+                }
+
+
+
+                /* META */
+
+                const meta =
                   document.createElement("div");
+
+
+                meta.className =
+                  "message-meta";
 
 
                 const name =
                   document.createElement("span");
 
+
                 name.className =
                   "message-name";
+
 
                 name.textContent =
                   data.nickname || "Chaos Member";
@@ -976,6 +1519,7 @@
 
                 const time =
                   document.createElement("span");
+
 
                 time.className =
                   "message-time";
@@ -997,23 +1541,41 @@
                 }
 
 
+                meta.appendChild(name);
+
+                meta.appendChild(time);
+
+
+
+                /* BUBBLE */
+
+                const bubble =
+                  document.createElement("div");
+
+
+                bubble.className =
+                  "message-bubble";
+
+
                 const text =
                   document.createElement("div");
+
 
                 text.className =
                   "message-text";
 
-                text.textContent =
-                  data.text;
+
+                appendMessageContent(
+                  text,
+                  data.text || ""
+                );
 
 
-                heading.appendChild(name);
+                bubble.appendChild(text);
 
-                heading.appendChild(time);
+                message.appendChild(meta);
 
-                message.appendChild(heading);
-
-                message.appendChild(text);
+                message.appendChild(bubble);
 
                 messagesElement.appendChild(message);
 
@@ -1081,6 +1643,8 @@
           messageInput.value = "";
 
           messageInput.focus();
+
+          emojiPicker.classList.remove("open");
 
         }
 

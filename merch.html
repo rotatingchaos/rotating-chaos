@@ -2,18 +2,29 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="Rotating Chaos guild merchandise and upcoming merch collections."
+    content="Rotating Chaos Guild Merch"
   >
 
-  <title>Merch Store | Rotating Chaos</title>
+  <title>Merch | Rotating Chaos</title>
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Crimson+Pro:wght@400;500;600&display=swap"
@@ -21,10 +32,901 @@
   >
 
   <link rel="stylesheet" href="style.css">
+
+
+  <style>
+
+    /* ======================================================
+       PAGE
+       ====================================================== */
+
+    .merch-page {
+      min-height: 100vh;
+      padding: 70px 20px 100px;
+
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(15, 130, 105, 0.10),
+          transparent 35%
+        ),
+        #0d0c0b;
+    }
+
+
+    .merch-shell {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+    }
+
+
+
+    /* ======================================================
+       HERO
+       ====================================================== */
+
+    .merch-hero {
+      text-align: center;
+
+      padding: 50px 25px;
+
+      margin-bottom: 35px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.28);
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(67, 214, 186, 0.08),
+          transparent 55%
+        ),
+        linear-gradient(
+          135deg,
+          rgba(218, 165, 32, 0.05),
+          rgba(67, 214, 186, 0.03)
+        );
+    }
+
+
+    .merch-hero h1 {
+      margin: 5px 0 10px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        clamp(
+          2.8rem,
+          7vw,
+          5.3rem
+        );
+    }
+
+
+    .merch-hero p {
+      max-width: 720px;
+
+      margin:
+        0 auto;
+
+      font-family:
+        "Crimson Pro",
+        serif;
+
+      font-size:
+        1.25rem;
+
+      line-height:
+        1.6;
+    }
+
+
+    .merch-hero-line {
+      margin-top: 18px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      color: #d7aa42;
+
+      letter-spacing: 3px;
+
+      font-size: 0.82rem;
+    }
+
+
+
+    /* ======================================================
+       LOGIN
+       ====================================================== */
+
+    .merch-login {
+      width: min(520px, 100%);
+      margin: 0 auto;
+      padding: 30px;
+
+      background: #151310;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.35);
+    }
+
+
+    .merch-login h2 {
+      margin-top: 0;
+
+      text-align: center;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .merch-login p {
+      text-align: center;
+    }
+
+
+    .merch-field {
+      margin-top: 18px;
+    }
+
+
+    .merch-field label {
+      display: block;
+
+      margin-bottom: 6px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 0.8rem;
+
+      letter-spacing: 1px;
+    }
+
+
+    .merch-field input,
+    .merch-field textarea,
+    .merch-field select {
+      width: 100%;
+
+      box-sizing: border-box;
+
+      padding: 12px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.35);
+
+      background: #11100f;
+
+      color: #f6efe2;
+
+      font: inherit;
+
+      outline: none;
+    }
+
+
+    .merch-field textarea {
+      min-height: 110px;
+
+      resize: vertical;
+    }
+
+
+
+    /* ======================================================
+       BUTTONS
+       ====================================================== */
+
+    .merch-primary-button {
+      border: 1px solid #d7aa42;
+
+      background: #d7aa42;
+
+      color: #111;
+
+      padding: 11px 16px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-weight: 800;
+
+      cursor: pointer;
+    }
+
+
+    .merch-secondary-button {
+      border:
+        1px solid rgba(218, 165, 32, 0.4);
+
+      background: #171513;
+
+      color: #f6efe2;
+
+      padding: 9px 13px;
+
+      cursor: pointer;
+    }
+
+
+    .merch-danger-button {
+      border:
+        1px solid rgba(210, 80, 80, 0.5);
+
+      background:
+        rgba(130, 30, 30, 0.15);
+
+      color: #ffbaba;
+
+      padding: 8px 11px;
+
+      cursor: pointer;
+    }
+
+
+    .merch-login-button {
+      width: 100%;
+
+      margin-top: 22px;
+    }
+
+
+    .merch-login-error {
+      display: none;
+
+      margin-top: 14px;
+
+      text-align: center;
+
+      color: #ff9999;
+    }
+
+
+
+    /* ======================================================
+       APP
+       ====================================================== */
+
+    .merch-app {
+      display: none;
+    }
+
+
+    .merch-topbar {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 14px;
+
+      margin-bottom: 24px;
+    }
+
+
+    .merch-user {
+      opacity: 0.7;
+    }
+
+
+    .merch-actions {
+      display: flex;
+
+      gap: 9px;
+
+      flex-wrap: wrap;
+    }
+
+
+
+    /* ======================================================
+       FILTERS
+       ====================================================== */
+
+    .merch-filters {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      gap: 8px;
+
+      margin-bottom: 28px;
+    }
+
+
+    .merch-filter {
+      border:
+        1px solid rgba(218, 165, 32, 0.28);
+
+      background: #151310;
+
+      color: #f6efe2;
+
+      padding: 9px 14px;
+
+      cursor: pointer;
+
+      border-radius: 999px;
+    }
+
+
+    .merch-filter.active {
+      border-color: #43d6ba;
+
+      background:
+        rgba(67, 214, 186, 0.08);
+
+      color: #8be5d2;
+    }
+
+
+
+    /* ======================================================
+       GRID
+       ====================================================== */
+
+    .merch-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+
+    .merch-card {
+      display: flex;
+
+      flex-direction: column;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.22);
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(67, 214, 186, 0.025),
+          #151310
+        );
+
+      overflow: hidden;
+
+      position: relative;
+    }
+
+
+    .merch-image-wrap {
+      aspect-ratio: 1 / 1;
+
+      background: #090807;
+
+      overflow: hidden;
+
+      cursor: pointer;
+
+      position: relative;
+    }
+
+
+    .merch-image {
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+      transition:
+        transform 0.25s ease;
+    }
+
+
+    .merch-image-wrap:hover
+    .merch-image {
+      transform: scale(1.035);
+    }
+
+
+    .merch-image-fallback {
+      width: 100%;
+
+      height: 100%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      font-size: 4rem;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(67, 214, 186, 0.13),
+          rgba(218, 165, 32, 0.03)
+        );
+    }
+
+
+
+    /* ======================================================
+       STATUS
+       ====================================================== */
+
+    .merch-status {
+      position: absolute;
+
+      top: 12px;
+
+      left: 12px;
+
+      z-index: 5;
+
+      padding: 6px 9px;
+
+      border-radius: 999px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 0.62rem;
+
+      letter-spacing: 1px;
+
+      background:
+        rgba(12, 12, 12, 0.88);
+
+      border:
+        1px solid rgba(218, 165, 32, 0.35);
+
+      color: #e7c977;
+    }
+
+
+    .merch-status.available {
+      border-color:
+        rgba(67, 214, 186, 0.45);
+
+      color: #85e3d0;
+    }
+
+
+    .merch-status.coming-soon {
+      color: #e7c977;
+    }
+
+
+    .merch-status.sold-out {
+      border-color:
+        rgba(210, 80, 80, 0.45);
+
+      color: #ffaaaa;
+    }
+
+
+    .merch-status.limited {
+      border-color:
+        rgba(180, 110, 220, 0.45);
+
+      color: #dca8ff;
+    }
+
+
+
+    /* ======================================================
+       CARD BODY
+       ====================================================== */
+
+    .merch-card-body {
+      display: flex;
+
+      flex-direction: column;
+
+      flex: 1;
+
+      padding: 17px;
+    }
+
+
+    .merch-category {
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 0.67rem;
+
+      letter-spacing: 1px;
+
+      color: #43d6ba;
+    }
+
+
+    .merch-card h2 {
+      margin: 7px 0 4px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 1.3rem;
+    }
+
+
+    .merch-price {
+      margin-bottom: 10px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 1.2rem;
+
+      color: #ddb45d;
+
+      font-weight: 800;
+    }
+
+
+    .merch-description {
+      line-height: 1.5;
+
+      opacity: 0.82;
+
+      flex: 1;
+    }
+
+
+    .merch-variants {
+      margin-top: 12px;
+
+      padding-top: 10px;
+
+      border-top:
+        1px solid rgba(255,255,255,0.05);
+
+      font-size: 0.85rem;
+
+      opacity: 0.7;
+    }
+
+
+    .merch-card-actions {
+      display: flex;
+
+      gap: 7px;
+
+      flex-wrap: wrap;
+
+      margin-top: 15px;
+    }
+
+
+    .merch-view-button {
+      border:
+        1px solid rgba(67, 214, 186, 0.3);
+
+      background:
+        rgba(67, 214, 186, 0.06);
+
+      color: #98e7d7;
+
+      padding: 8px 11px;
+
+      cursor: pointer;
+    }
+
+
+    .merch-empty {
+      grid-column: 1 / -1;
+
+      padding: 50px 20px;
+
+      text-align: center;
+
+      border:
+        1px dashed rgba(218, 165, 32, 0.2);
+
+      opacity: 0.6;
+    }
+
+
+
+    /* ======================================================
+       MODALS
+       ====================================================== */
+
+    .merch-modal-backdrop {
+      display: none;
+
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 400;
+
+      padding: 25px 15px;
+
+      overflow-y: auto;
+
+      background:
+        rgba(0, 0, 0, 0.87);
+    }
+
+
+    .merch-modal-backdrop.open {
+      display: block;
+    }
+
+
+    .merch-modal {
+      width: min(760px, 100%);
+
+      margin: 35px auto;
+
+      padding: 26px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.4);
+
+      background: #141210;
+    }
+
+
+    .merch-modal-header {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: flex-start;
+
+      gap: 12px;
+    }
+
+
+    .merch-modal h2 {
+      margin-top: 0;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .merch-modal-close {
+      border: 0;
+
+      background: transparent;
+
+      color: white;
+
+      font-size: 1.5rem;
+
+      cursor: pointer;
+    }
+
+
+
+    /* ======================================================
+       IMAGE PREVIEW
+       ====================================================== */
+
+    .merch-preview {
+      display: none;
+
+      margin-top: 16px;
+
+      padding: 10px;
+
+      border:
+        1px solid rgba(67, 214, 186, 0.25);
+
+      background: #090807;
+    }
+
+
+    .merch-preview img {
+      width: 100%;
+
+      max-height: 400px;
+
+      object-fit: contain;
+
+      display: block;
+    }
+
+
+
+    /* ======================================================
+       PRODUCT DETAIL
+       ====================================================== */
+
+    .product-detail {
+      width: min(950px, 100%);
+
+      margin: 35px auto;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.4);
+
+      background: #141210;
+
+      overflow: hidden;
+    }
+
+
+    .product-detail-layout {
+      display: grid;
+
+      grid-template-columns:
+        minmax(280px, 1fr)
+        minmax(0, 1fr);
+    }
+
+
+    .product-detail-image {
+      min-height: 500px;
+
+      background: #090807;
+    }
+
+
+    .product-detail-image img {
+      width: 100%;
+
+      height: 100%;
+
+      max-height: 650px;
+
+      object-fit: cover;
+
+      display: block;
+    }
+
+
+    .product-detail-body {
+      padding: 30px;
+    }
+
+
+    .product-detail-category {
+      font-family:
+        "Cinzel",
+        serif;
+
+      color: #43d6ba;
+
+      font-size: 0.7rem;
+
+      letter-spacing: 1.2px;
+    }
+
+
+    .product-detail-title {
+      margin: 7px 0;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        clamp(
+          2rem,
+          5vw,
+          3.7rem
+        );
+    }
+
+
+    .product-detail-price {
+      margin-bottom: 18px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 1.45rem;
+
+      color: #ddb45d;
+    }
+
+
+    .product-detail-description {
+      white-space: pre-wrap;
+
+      line-height: 1.65;
+
+      font-family:
+        "Crimson Pro",
+        serif;
+
+      font-size: 1.08rem;
+    }
+
+
+    .product-detail-variants {
+      margin-top: 18px;
+
+      padding: 13px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.15);
+
+      background: #11100f;
+    }
+
+
+    .product-link {
+      display: inline-block;
+
+      margin-top: 20px;
+
+      text-decoration: none;
+    }
+
+
+
+    /* ======================================================
+       MOBILE
+       ====================================================== */
+
+    @media (max-width: 900px) {
+
+      .merch-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+
+      .product-detail-layout {
+        grid-template-columns: 1fr;
+      }
+
+
+      .product-detail-image {
+        min-height: 320px;
+      }
+
+    }
+
+
+    @media (max-width: 620px) {
+
+      .merch-topbar {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+
+      .merch-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 
 <body>
+
 
   <!-- ======================================================
        HEADER
@@ -61,15 +963,15 @@
         HOME
       </a>
 
-      <a href="index.html#about">
-        THE CHAOS CREW
+      <a href="community.html">
+        COMMUNITY
       </a>
 
       <a href="build-guides.html">
         CHAOS GUIDES
       </a>
 
-      <a href="index.html#events">
+      <a href="events.html">
         EVENTS
       </a>
 
@@ -97,260 +999,2102 @@
 
 
 
-  <main>
+  <main class="merch-page">
+
+    <div class="merch-shell">
 
 
-    <!-- ======================================================
-         MERCH HERO
-         ====================================================== -->
+      <!-- ==================================================
+           HERO
+           ================================================== -->
 
-    <section class="magic-page-hero guides-hero">
-
-      <div class="guides-hero-content">
+      <section class="merch-hero">
 
         <p class="section-eyebrow">
-          REP THE CHAOS
+          OFFICIAL ROTATING CHAOS MERCH
         </p>
 
         <h1>
-          MERCH STORE
+          WEAR THE CHAOS
         </h1>
 
-        <p class="guides-intro">
-          Guild gear, chaos-branded goodies and questionable financial decisions
-          are coming soon.
+        <p>
+          Guild gear, questionable purchases and assorted ways
+          to publicly admit you willingly joined this lot.
         </p>
 
-      </div>
+        <div class="merch-hero-line">
+          GUILD ◆ FAMILY ◆ CHAOS
+        </div>
 
-    </section>
+      </section>
 
 
 
-    <!-- ======================================================
-         MERCH CATEGORIES
-         ====================================================== -->
+      <!-- ==================================================
+           LOGIN
+           ================================================== -->
 
-    <section class="build-guides-section">
-
-      <div class="build-guides-grid">
-
-
-        <!-- CLOTHING -->
-
-        <article class="build-class-card">
-
-          <h2>
-            CLOTHING
-          </h2>
-
-          <div class="paragon-links">
-
-            <a href="#">
-              Coming Soon
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- ACCESSORIES -->
-
-        <article class="build-class-card">
-
-          <h2>
-            ACCESSORIES
-          </h2>
-
-          <div class="paragon-links">
-
-            <a href="#">
-              Coming Soon
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- GUILD EXCLUSIVES -->
-
-        <article class="build-class-card">
-
-          <h2>
-            GUILD EXCLUSIVES
-          </h2>
-
-          <div class="paragon-links">
-
-            <a href="#">
-              Coming Soon
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- CHAOS COLLECTION -->
-
-        <article class="build-class-card">
-
-          <h2>
-            CHAOS COLLECTION
-          </h2>
-
-          <div class="paragon-links">
-
-            <a href="#">
-              Coming Soon
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- LIMITED DROPS -->
-
-        <article class="build-class-card">
-
-          <h2>
-            LIMITED DROPS
-          </h2>
-
-          <div class="paragon-links">
-
-            <a href="#">
-              Coming Soon
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- CUSTOM ITEMS -->
-
-        <article class="build-class-card">
-
-          <h2>
-            CUSTOM ITEMS
-          </h2>
-
-          <div class="paragon-links">
-
-            <a href="#">
-              Coming Soon
-            </a>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ======================================================
-         STORE NOTICE
-         ====================================================== -->
-
-    <section class="build-detail-page">
-
-      <article class="build-guide-panel chaos-notes-panel">
-
-        <p class="build-panel-eyebrow">
-          STORE UPDATE
-        </p>
+      <section
+        class="merch-login"
+        id="merchLogin"
+      >
 
         <h2>
-          MERCH IS ON THE WAY
+          GUILD MEMBERS
         </h2>
 
         <p>
-          The Rotating Chaos merch store is still being built.
-          This page will eventually hold our guild clothing, accessories,
-          limited designs and other chaos-branded nonsense.
+          Use your normal Chaos login to browse and manage guild merch.
         </p>
 
-        <p>
-          When products are ready, each category above will link directly
-          to the relevant items.
-        </p>
 
-      </article>
+        <form id="merchLoginForm">
 
 
+          <div class="merch-field">
 
-      <!-- BACK HOME -->
+            <label for="merchGuildName">
+              GUILD NAME
+            </label>
 
-      <div class="build-back-link">
+            <input
+              id="merchGuildName"
+              type="text"
+              required
+            >
 
-        <a href="index.html">
-          ← BACK TO HOME
-        </a>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ======================================================
-         FOOTER
-         ====================================================== -->
-
-    <footer>
-
-      <h2>
-        STAY CONNECTED
-      </h2>
-
-      <p class="footer-tagline">
-        GUILD ◆ FAMILY ◆ CHAOS
-      </p>
+          </div>
 
 
-      <div class="footer-links">
+          <div class="merch-field">
 
-        <a
-          href="https://discord.gg/UhJndyjYWr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Discord
-        </a>
+            <label for="merchAccessCode">
+              ACCESS CODE
+            </label>
 
-        <a href="index.html#contact">
-          Contact
-        </a>
+            <input
+              id="merchAccessCode"
+              type="password"
+              required
+            >
 
-        <a href="#">
-          Privacy
-        </a>
-
-      </div>
+          </div>
 
 
-      <p class="copyright">
-        © 2026 Rotating Chaos.
-        Neverwinter is property of its respective owners.
-      </p>
+          <button
+            type="submit"
+            class="merch-primary-button merch-login-button"
+          >
+            ENTER MERCH STORE
+          </button>
 
-    </footer>
 
+          <p
+            class="merch-login-error"
+            id="merchLoginError"
+          >
+            Chaos doesn't recognise you. 😂
+          </p>
+
+
+        </form>
+
+      </section>
+
+
+
+      <!-- ==================================================
+           APP
+           ================================================== -->
+
+      <section
+        class="merch-app"
+        id="merchApp"
+      >
+
+
+        <div class="merch-topbar">
+
+          <div>
+
+            <strong
+              id="merchLoggedInUser"
+            ></strong>
+
+            <div class="merch-user">
+              Rotating Chaos merch vault
+            </div>
+
+          </div>
+
+
+          <div class="merch-actions">
+
+            <button
+              type="button"
+              class="merch-primary-button"
+              id="addProductButton"
+            >
+              + ADD PRODUCT
+            </button>
+
+
+            <button
+              type="button"
+              class="merch-secondary-button"
+              id="merchSignOut"
+            >
+              SIGN OUT
+            </button>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- FILTERS -->
+
+        <div class="merch-filters">
+
+          <button
+            type="button"
+            class="merch-filter active"
+            data-category="All"
+          >
+            ALL
+          </button>
+
+          <button
+            type="button"
+            class="merch-filter"
+            data-category="Clothing"
+          >
+            CLOTHING
+          </button>
+
+          <button
+            type="button"
+            class="merch-filter"
+            data-category="Drinkware"
+          >
+            DRINKWARE
+          </button>
+
+          <button
+            type="button"
+            class="merch-filter"
+            data-category="Accessories"
+          >
+            ACCESSORIES
+          </button>
+
+          <button
+            type="button"
+            class="merch-filter"
+            data-category="Chaos Specials"
+          >
+            CHAOS SPECIALS
+          </button>
+
+        </div>
+
+
+
+        <!-- PRODUCTS -->
+
+        <div
+          class="merch-grid"
+          id="merchGrid"
+        ></div>
+
+
+      </section>
+
+
+    </div>
 
   </main>
+
+
+
+  <!-- ======================================================
+       ADD / EDIT PRODUCT MODAL
+       ====================================================== -->
+
+  <div
+    class="merch-modal-backdrop"
+    id="productModal"
+  >
+
+    <div class="merch-modal">
+
+
+      <div class="merch-modal-header">
+
+        <div>
+
+          <p class="section-eyebrow">
+            STOCK THE CHAOS
+          </p>
+
+          <h2 id="productModalTitle">
+            ADD PRODUCT
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="merch-modal-close"
+          id="closeProductModal"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+
+      <form id="productForm">
+
+
+        <div class="merch-field">
+
+          <label for="productName">
+            PRODUCT NAME
+          </label>
+
+          <input
+            id="productName"
+            type="text"
+            maxlength="100"
+            required
+          >
+
+        </div>
+
+
+
+        <div class="merch-field">
+
+          <label for="productCategory">
+            CATEGORY
+          </label>
+
+          <select id="productCategory">
+
+            <option value="Clothing">
+              Clothing
+            </option>
+
+            <option value="Drinkware">
+              Drinkware
+            </option>
+
+            <option value="Accessories">
+              Accessories
+            </option>
+
+            <option value="Chaos Specials">
+              Chaos Specials
+            </option>
+
+          </select>
+
+        </div>
+
+
+
+        <div class="merch-field">
+
+          <label for="productPrice">
+            PRICE
+          </label>
+
+          <input
+            id="productPrice"
+            type="text"
+            maxlength="30"
+            placeholder="e.g. £24.99"
+            required
+          >
+
+        </div>
+
+
+
+        <div class="merch-field">
+
+          <label for="productStatus">
+            STATUS
+          </label>
+
+          <select id="productStatus">
+
+            <option value="Available">
+              Available
+            </option>
+
+            <option value="Coming Soon">
+              Coming Soon
+            </option>
+
+            <option value="Limited">
+              Limited
+            </option>
+
+            <option value="Sold Out">
+              Sold Out
+            </option>
+
+          </select>
+
+        </div>
+
+
+
+        <div class="merch-field">
+
+          <label for="productImageUrl">
+            IMAGE URL
+          </label>
+
+          <input
+            id="productImageUrl"
+            type="url"
+            placeholder="https://..."
+          >
+
+        </div>
+
+
+
+        <div
+          class="merch-preview"
+          id="productPreview"
+        >
+
+          <img
+            id="productPreviewImage"
+            alt="Product preview"
+          >
+
+        </div>
+
+
+
+        <div class="merch-field">
+
+          <label for="productDescription">
+            DESCRIPTION
+          </label>
+
+          <textarea
+            id="productDescription"
+            maxlength="1500"
+            required
+          ></textarea>
+
+        </div>
+
+
+
+        <div class="merch-field">
+
+          <label for="productVariants">
+            SIZES / COLOURS / VARIANTS
+          </label>
+
+          <textarea
+            id="productVariants"
+            maxlength="500"
+            placeholder="e.g. S, M, L, XL • Black / Cream"
+          ></textarea>
+
+        </div>
+
+
+
+        <div class="merch-field">
+
+          <label for="productLink">
+            BUY / ENQUIRY LINK
+          </label>
+
+          <input
+            id="productLink"
+            type="url"
+            placeholder="Optional for now"
+          >
+
+        </div>
+
+
+
+        <div style="margin-top:20px;">
+
+          <button
+            type="submit"
+            class="merch-primary-button"
+            id="saveProductButton"
+          >
+            ADD PRODUCT
+          </button>
+
+        </div>
+
+
+      </form>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ======================================================
+       PRODUCT DETAIL MODAL
+       ====================================================== -->
+
+  <div
+    class="merch-modal-backdrop"
+    id="productDetailModal"
+  >
+
+    <article class="product-detail">
+
+
+      <div class="product-detail-layout">
+
+
+        <div
+          class="product-detail-image"
+          id="detailImageWrap"
+        >
+
+          <img
+            id="detailImage"
+            alt="Merch product"
+          >
+
+        </div>
+
+
+
+        <div class="product-detail-body">
+
+
+          <div class="merch-modal-header">
+
+            <div>
+
+              <div
+                class="product-detail-category"
+                id="detailCategory"
+              ></div>
+
+              <h2
+                class="product-detail-title"
+                id="detailTitle"
+              ></h2>
+
+            </div>
+
+
+            <button
+              type="button"
+              class="merch-modal-close"
+              id="closeProductDetail"
+            >
+              ×
+            </button>
+
+          </div>
+
+
+
+          <div
+            class="product-detail-price"
+            id="detailPrice"
+          ></div>
+
+
+          <div
+            id="detailStatus"
+          ></div>
+
+
+          <div
+            class="product-detail-description"
+            id="detailDescription"
+          ></div>
+
+
+
+          <div
+            class="product-detail-variants"
+            id="detailVariants"
+          ></div>
+
+
+
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="merch-primary-button product-link"
+            id="detailLink"
+          >
+            BUY / ENQUIRE
+          </a>
+
+
+        </div>
+
+
+      </div>
+
+
+    </article>
+
+  </div>
+
+
+
+  <!-- ======================================================
+       FIREBASE
+       ====================================================== -->
+
+  <script type="module">
+
+
+    import {
+      initializeApp
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+
+
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+      signOut,
+      onAuthStateChanged
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+
+
+    import {
+      getFirestore,
+      collection,
+      addDoc,
+      doc,
+      updateDoc,
+      deleteDoc,
+      serverTimestamp,
+      query,
+      orderBy,
+      onSnapshot
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+
+
+    /* ======================================================
+       FIREBASE CONFIG
+       ====================================================== */
+
+    const firebaseConfig = {
+
+      apiKey:
+        "AIzaSyDQjutG0oa4v8dpI3i3UlgsFC9EmWsX4kI",
+
+      authDomain:
+        "rotating-chaos-chat.firebaseapp.com",
+
+      projectId:
+        "rotating-chaos-chat",
+
+      storageBucket:
+        "rotating-chaos-chat.firebasestorage.app",
+
+      messagingSenderId:
+        "337862334710",
+
+      appId:
+        "1:337862334710:web:92e38dd0646dd9bec474d7",
+
+      measurementId:
+        "G-7M761SJ4CJ"
+
+    };
+
+
+    const app =
+      initializeApp(
+        firebaseConfig
+      );
+
+
+    const auth =
+      getAuth(
+        app
+      );
+
+
+    const db =
+      getFirestore(
+        app
+      );
+
+
+
+    /* ======================================================
+       ELEMENTS
+       ====================================================== */
+
+    const merchLogin =
+      document.getElementById(
+        "merchLogin"
+      );
+
+    const merchApp =
+      document.getElementById(
+        "merchApp"
+      );
+
+    const merchLoginForm =
+      document.getElementById(
+        "merchLoginForm"
+      );
+
+    const merchGuildName =
+      document.getElementById(
+        "merchGuildName"
+      );
+
+    const merchAccessCode =
+      document.getElementById(
+        "merchAccessCode"
+      );
+
+    const merchLoginError =
+      document.getElementById(
+        "merchLoginError"
+      );
+
+    const merchLoggedInUser =
+      document.getElementById(
+        "merchLoggedInUser"
+      );
+
+    const merchSignOut =
+      document.getElementById(
+        "merchSignOut"
+      );
+
+    const addProductButton =
+      document.getElementById(
+        "addProductButton"
+      );
+
+    const productModal =
+      document.getElementById(
+        "productModal"
+      );
+
+    const closeProductModal =
+      document.getElementById(
+        "closeProductModal"
+      );
+
+    const productModalTitle =
+      document.getElementById(
+        "productModalTitle"
+      );
+
+    const productForm =
+      document.getElementById(
+        "productForm"
+      );
+
+    const productName =
+      document.getElementById(
+        "productName"
+      );
+
+    const productCategory =
+      document.getElementById(
+        "productCategory"
+      );
+
+    const productPrice =
+      document.getElementById(
+        "productPrice"
+      );
+
+    const productStatus =
+      document.getElementById(
+        "productStatus"
+      );
+
+    const productImageUrl =
+      document.getElementById(
+        "productImageUrl"
+      );
+
+    const productDescription =
+      document.getElementById(
+        "productDescription"
+      );
+
+    const productVariants =
+      document.getElementById(
+        "productVariants"
+      );
+
+    const productLink =
+      document.getElementById(
+        "productLink"
+      );
+
+    const saveProductButton =
+      document.getElementById(
+        "saveProductButton"
+      );
+
+    const productPreview =
+      document.getElementById(
+        "productPreview"
+      );
+
+    const productPreviewImage =
+      document.getElementById(
+        "productPreviewImage"
+      );
+
+    const merchGrid =
+      document.getElementById(
+        "merchGrid"
+      );
+
+    const merchFilters =
+      document.querySelectorAll(
+        ".merch-filter"
+      );
+
+    const productDetailModal =
+      document.getElementById(
+        "productDetailModal"
+      );
+
+    const closeProductDetail =
+      document.getElementById(
+        "closeProductDetail"
+      );
+
+    const detailImage =
+      document.getElementById(
+        "detailImage"
+      );
+
+    const detailImageWrap =
+      document.getElementById(
+        "detailImageWrap"
+      );
+
+    const detailCategory =
+      document.getElementById(
+        "detailCategory"
+      );
+
+    const detailTitle =
+      document.getElementById(
+        "detailTitle"
+      );
+
+    const detailPrice =
+      document.getElementById(
+        "detailPrice"
+      );
+
+    const detailStatus =
+      document.getElementById(
+        "detailStatus"
+      );
+
+    const detailDescription =
+      document.getElementById(
+        "detailDescription"
+      );
+
+    const detailVariants =
+      document.getElementById(
+        "detailVariants"
+      );
+
+    const detailLink =
+      document.getElementById(
+        "detailLink"
+      );
+
+
+
+    /* ======================================================
+       STATE
+       ====================================================== */
+
+    let currentGuildName =
+      "";
+
+    let products =
+      [];
+
+    let activeCategory =
+      "All";
+
+    let editingProductId =
+      null;
+
+    let unsubscribeProducts =
+      null;
+
+
+
+    /* ======================================================
+       LOGIN EMAIL
+       ====================================================== */
+
+    function makeAccountEmail(name) {
+
+      const cleaned =
+        name
+          .trim()
+          .toLowerCase()
+          .replace(
+            /[^a-z0-9]/g,
+            ""
+          );
+
+
+      return `${cleaned}@rotatingchaos.local`;
+
+    }
+
+
+
+    function prettyNameFromEmail(email) {
+
+      const raw =
+        email.split("@")[0];
+
+
+      return (
+        raw.charAt(0).toUpperCase()
+        + raw.slice(1)
+      );
+
+    }
+
+
+
+    /* ======================================================
+       LOGIN
+       ====================================================== */
+
+    merchLoginForm.addEventListener(
+      "submit",
+      async (event) => {
+
+        event.preventDefault();
+
+
+        merchLoginError.style.display =
+          "none";
+
+
+        const name =
+          merchGuildName.value.trim();
+
+
+        const password =
+          merchAccessCode.value;
+
+
+        try {
+
+          await signInWithEmailAndPassword(
+            auth,
+            makeAccountEmail(name),
+            password
+          );
+
+
+          currentGuildName =
+            name;
+
+
+          sessionStorage.setItem(
+            "chaosNickname",
+            name
+          );
+
+
+          merchAccessCode.value =
+            "";
+
+        }
+
+
+        catch (error) {
+
+          console.error(error);
+
+
+          merchLoginError.style.display =
+            "block";
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       AUTH
+       ====================================================== */
+
+    onAuthStateChanged(
+      auth,
+      (user) => {
+
+        if (user) {
+
+          currentGuildName =
+            sessionStorage.getItem(
+              "chaosNickname"
+            )
+            || prettyNameFromEmail(
+              user.email
+            );
+
+
+          merchLoggedInUser.textContent =
+            `Signed in as ${currentGuildName}`;
+
+
+          merchLogin.style.display =
+            "none";
+
+
+          merchApp.style.display =
+            "block";
+
+
+          startProductsListener();
+
+        }
+
+
+        else {
+
+          merchLogin.style.display =
+            "block";
+
+
+          merchApp.style.display =
+            "none";
+
+
+          if (unsubscribeProducts) {
+
+            unsubscribeProducts();
+
+            unsubscribeProducts =
+              null;
+
+          }
+
+        }
+
+      }
+    );
+
+
+
+    merchSignOut.addEventListener(
+      "click",
+      async () => {
+
+        sessionStorage.removeItem(
+          "chaosNickname"
+        );
+
+
+        await signOut(auth);
+
+      }
+    );
+
+
+
+    /* ======================================================
+       ADD PRODUCT
+       ====================================================== */
+
+    addProductButton.addEventListener(
+      "click",
+      () => {
+
+        editingProductId =
+          null;
+
+
+        productForm.reset();
+
+
+        productPreview.style.display =
+          "none";
+
+
+        productModalTitle.textContent =
+          "ADD PRODUCT";
+
+
+        saveProductButton.textContent =
+          "ADD PRODUCT";
+
+
+        productModal.classList.add(
+          "open"
+        );
+
+      }
+    );
+
+
+
+    closeProductModal.addEventListener(
+      "click",
+      closeProductModalFunction
+    );
+
+
+    productModal.addEventListener(
+      "click",
+      (event) => {
+
+        if (
+          event.target
+          === productModal
+        ) {
+
+          closeProductModalFunction();
+
+        }
+
+      }
+    );
+
+
+    function closeProductModalFunction() {
+
+      productModal.classList.remove(
+        "open"
+      );
+
+
+      editingProductId =
+        null;
+
+    }
+
+
+
+    /* ======================================================
+       PREVIEW
+       ====================================================== */
+
+    productImageUrl.addEventListener(
+      "input",
+      () => {
+
+        const url =
+          productImageUrl.value.trim();
+
+
+        if (!url) {
+
+          productPreview.style.display =
+            "none";
+
+
+          return;
+
+        }
+
+
+        productPreviewImage.src =
+          url;
+
+
+        productPreview.style.display =
+          "block";
+
+      }
+    );
+
+
+    productPreviewImage.addEventListener(
+      "error",
+      () => {
+
+        productPreview.style.display =
+          "none";
+
+      }
+    );
+
+
+
+    /* ======================================================
+       SAVE PRODUCT
+       ====================================================== */
+
+    productForm.addEventListener(
+      "submit",
+      async (event) => {
+
+        event.preventDefault();
+
+
+        const user =
+          auth.currentUser;
+
+
+        if (!user) {
+          return;
+        }
+
+
+        const payload = {
+
+          name:
+            productName.value.trim(),
+
+          category:
+            productCategory.value,
+
+          price:
+            productPrice.value.trim(),
+
+          status:
+            productStatus.value,
+
+          imageUrl:
+            productImageUrl.value.trim(),
+
+          description:
+            productDescription.value.trim(),
+
+          variants:
+            productVariants.value.trim(),
+
+          link:
+            productLink.value.trim(),
+
+          createdByUid:
+            user.uid,
+
+          createdByName:
+            currentGuildName
+
+        };
+
+
+        try {
+
+          if (editingProductId) {
+
+            await updateDoc(
+              doc(
+                db,
+                "merchProducts",
+                editingProductId
+              ),
+              {
+
+                ...payload,
+
+                updatedAt:
+                  serverTimestamp()
+
+              }
+            );
+
+          }
+
+
+          else {
+
+            await addDoc(
+              collection(
+                db,
+                "merchProducts"
+              ),
+              {
+
+                ...payload,
+
+                createdAt:
+                  serverTimestamp(),
+
+                updatedAt:
+                  serverTimestamp()
+
+              }
+            );
+
+          }
+
+
+          closeProductModalFunction();
+
+          productForm.reset();
+
+        }
+
+
+        catch (error) {
+
+          console.error(
+            "Could not save merch product:",
+            error
+          );
+
+
+          window.alert(
+            "The merch goblin rejected that one. 😂"
+          );
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       LIVE PRODUCTS
+       ====================================================== */
+
+    function startProductsListener() {
+
+      if (unsubscribeProducts) {
+
+        unsubscribeProducts();
+
+      }
+
+
+      const productsQuery =
+        query(
+          collection(
+            db,
+            "merchProducts"
+          ),
+          orderBy(
+            "createdAt",
+            "desc"
+          )
+        );
+
+
+      unsubscribeProducts =
+        onSnapshot(
+          productsQuery,
+          (snapshot) => {
+
+            products =
+              [];
+
+
+            snapshot.forEach(
+              item => {
+
+                products.push({
+                  id:
+                    item.id,
+
+                  ...item.data()
+                });
+
+              }
+            );
+
+
+            renderProducts();
+
+          }
+        );
+
+    }
+
+
+
+    /* ======================================================
+       FILTERS
+       ====================================================== */
+
+    merchFilters.forEach(
+      button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            activeCategory =
+              button.dataset.category;
+
+
+            merchFilters.forEach(
+              item => {
+
+                item.classList.remove(
+                  "active"
+                );
+
+              }
+            );
+
+
+            button.classList.add(
+              "active"
+            );
+
+
+            renderProducts();
+
+          }
+        );
+
+      }
+    );
+
+
+
+    /* ======================================================
+       RENDER PRODUCTS
+       ====================================================== */
+
+    function renderProducts() {
+
+      merchGrid.innerHTML =
+        "";
+
+
+      const filtered =
+        activeCategory === "All"
+          ? products
+          : products.filter(
+              product =>
+                product.category
+                === activeCategory
+            );
+
+
+      if (filtered.length === 0) {
+
+        const empty =
+          document.createElement(
+            "div"
+          );
+
+
+        empty.className =
+          "merch-empty";
+
+
+        empty.textContent =
+          "Nothing here yet. The merch goblins are apparently on tea break. 😂";
+
+
+        merchGrid.appendChild(
+          empty
+        );
+
+
+        return;
+
+      }
+
+
+      filtered.forEach(
+        product => {
+
+          const card =
+            document.createElement(
+              "article"
+            );
+
+
+          card.className =
+            "merch-card";
+
+
+
+          const imageWrap =
+            document.createElement(
+              "div"
+            );
+
+
+          imageWrap.className =
+            "merch-image-wrap";
+
+
+
+          if (product.imageUrl) {
+
+            const image =
+              document.createElement(
+                "img"
+              );
+
+
+            image.className =
+              "merch-image";
+
+
+            image.src =
+              product.imageUrl;
+
+
+            image.alt =
+              product.name;
+
+
+            image.loading =
+              "lazy";
+
+
+            image.addEventListener(
+              "error",
+              () => {
+
+                imageWrap.innerHTML =
+                  "🛍️";
+
+
+                imageWrap.classList.add(
+                  "merch-image-fallback"
+                );
+
+              }
+            );
+
+
+            imageWrap.appendChild(
+              image
+            );
+
+          }
+
+
+          else {
+
+            imageWrap.classList.add(
+              "merch-image-fallback"
+            );
+
+
+            imageWrap.textContent =
+              "🛍️";
+
+          }
+
+
+
+          const status =
+            document.createElement(
+              "div"
+            );
+
+
+          status.className =
+            `merch-status ${statusClass(product.status)}`;
+
+
+          status.textContent =
+            product.status.toUpperCase();
+
+
+          imageWrap.appendChild(
+            status
+          );
+
+
+          imageWrap.addEventListener(
+            "click",
+            () => {
+
+              openProductDetail(
+                product
+              );
+
+            }
+          );
+
+
+
+          const body =
+            document.createElement(
+              "div"
+            );
+
+
+          body.className =
+            "merch-card-body";
+
+
+          const category =
+            document.createElement(
+              "div"
+            );
+
+
+          category.className =
+            "merch-category";
+
+
+          category.textContent =
+            product.category.toUpperCase();
+
+
+
+          const name =
+            document.createElement(
+              "h2"
+            );
+
+
+          name.textContent =
+            product.name;
+
+
+
+          const price =
+            document.createElement(
+              "div"
+            );
+
+
+          price.className =
+            "merch-price";
+
+
+          price.textContent =
+            product.price;
+
+
+
+          const description =
+            document.createElement(
+              "div"
+            );
+
+
+          description.className =
+            "merch-description";
+
+
+          description.textContent =
+            excerpt(
+              product.description,
+              180
+            );
+
+
+          body.appendChild(
+            category
+          );
+
+
+          body.appendChild(
+            name
+          );
+
+
+          body.appendChild(
+            price
+          );
+
+
+          body.appendChild(
+            description
+          );
+
+
+
+          if (product.variants) {
+
+            const variants =
+              document.createElement(
+                "div"
+              );
+
+
+            variants.className =
+              "merch-variants";
+
+
+            variants.textContent =
+              product.variants;
+
+
+            body.appendChild(
+              variants
+            );
+
+          }
+
+
+
+          const actions =
+            document.createElement(
+              "div"
+            );
+
+
+          actions.className =
+            "merch-card-actions";
+
+
+          const view =
+            document.createElement(
+              "button"
+            );
+
+
+          view.type =
+            "button";
+
+
+          view.className =
+            "merch-view-button";
+
+
+          view.textContent =
+            "VIEW PRODUCT";
+
+
+          view.addEventListener(
+            "click",
+            () => {
+
+              openProductDetail(
+                product
+              );
+
+            }
+          );
+
+
+          actions.appendChild(
+            view
+          );
+
+
+
+          if (
+            auth.currentUser
+            && product.createdByUid
+            === auth.currentUser.uid
+          ) {
+
+            const edit =
+              document.createElement(
+                "button"
+              );
+
+
+            edit.type =
+              "button";
+
+
+            edit.className =
+              "merch-secondary-button";
+
+
+            edit.textContent =
+              "EDIT";
+
+
+            edit.addEventListener(
+              "click",
+              () => {
+
+                openEditProduct(
+                  product
+                );
+
+              }
+            );
+
+
+            const remove =
+              document.createElement(
+                "button"
+              );
+
+
+            remove.type =
+              "button";
+
+
+            remove.className =
+              "merch-danger-button";
+
+
+            remove.textContent =
+              "DELETE";
+
+
+            remove.addEventListener(
+              "click",
+              async () => {
+
+                const confirmed =
+                  confirm(
+                    `Delete ${product.name}?`
+                  );
+
+
+                if (!confirmed) {
+                  return;
+                }
+
+
+                await deleteDoc(
+                  doc(
+                    db,
+                    "merchProducts",
+                    product.id
+                  )
+                );
+
+              }
+            );
+
+
+            actions.appendChild(
+              edit
+            );
+
+
+            actions.appendChild(
+              remove
+            );
+
+          }
+
+
+          body.appendChild(
+            actions
+          );
+
+
+          card.appendChild(
+            imageWrap
+          );
+
+
+          card.appendChild(
+            body
+          );
+
+
+          merchGrid.appendChild(
+            card
+          );
+
+        }
+      );
+
+    }
+
+
+
+    /* ======================================================
+       EDIT PRODUCT
+       ====================================================== */
+
+    function openEditProduct(product) {
+
+      editingProductId =
+        product.id;
+
+
+      productModalTitle.textContent =
+        "EDIT PRODUCT";
+
+
+      saveProductButton.textContent =
+        "SAVE CHANGES";
+
+
+      productName.value =
+        product.name || "";
+
+
+      productCategory.value =
+        product.category || "Clothing";
+
+
+      productPrice.value =
+        product.price || "";
+
+
+      productStatus.value =
+        product.status || "Available";
+
+
+      productImageUrl.value =
+        product.imageUrl || "";
+
+
+      productDescription.value =
+        product.description || "";
+
+
+      productVariants.value =
+        product.variants || "";
+
+
+      productLink.value =
+        product.link || "";
+
+
+      if (product.imageUrl) {
+
+        productPreviewImage.src =
+          product.imageUrl;
+
+
+        productPreview.style.display =
+          "block";
+
+      }
+
+
+      else {
+
+        productPreview.style.display =
+          "none";
+
+      }
+
+
+      productModal.classList.add(
+        "open"
+      );
+
+    }
+
+
+
+    /* ======================================================
+       PRODUCT DETAIL
+       ====================================================== */
+
+    function openProductDetail(product) {
+
+      detailCategory.textContent =
+        product.category.toUpperCase();
+
+
+      detailTitle.textContent =
+        product.name;
+
+
+      detailPrice.textContent =
+        product.price;
+
+
+      detailDescription.textContent =
+        product.description;
+
+
+      detailStatus.innerHTML =
+        `<span class="merch-status ${statusClass(product.status)}" style="position:static;display:inline-block;margin-bottom:18px;">${product.status.toUpperCase()}</span>`;
+
+
+      if (product.imageUrl) {
+
+        detailImage.src =
+          product.imageUrl;
+
+
+        detailImageWrap.style.display =
+          "block";
+
+      }
+
+
+      else {
+
+        detailImageWrap.style.display =
+          "none";
+
+      }
+
+
+      if (product.variants) {
+
+        detailVariants.style.display =
+          "block";
+
+
+        detailVariants.textContent =
+          `OPTIONS ◆ ${product.variants}`;
+
+      }
+
+
+      else {
+
+        detailVariants.style.display =
+          "none";
+
+      }
+
+
+      if (
+        product.link
+        && product.status !== "Coming Soon"
+        && product.status !== "Sold Out"
+      ) {
+
+        detailLink.style.display =
+          "inline-block";
+
+
+        detailLink.href =
+          product.link;
+
+      }
+
+
+      else {
+
+        detailLink.style.display =
+          "none";
+
+      }
+
+
+      productDetailModal.classList.add(
+        "open"
+      );
+
+    }
+
+
+
+    closeProductDetail.addEventListener(
+      "click",
+      () => {
+
+        productDetailModal.classList.remove(
+          "open"
+        );
+
+      }
+    );
+
+
+    productDetailModal.addEventListener(
+      "click",
+      (event) => {
+
+        if (
+          event.target
+          === productDetailModal
+        ) {
+
+          productDetailModal.classList.remove(
+            "open"
+          );
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       HELPERS
+       ====================================================== */
+
+    function excerpt(
+      text,
+      maxLength
+    ) {
+
+      if (!text) {
+        return "";
+      }
+
+
+      if (
+        text.length <= maxLength
+      ) {
+
+        return text;
+
+      }
+
+
+      return (
+        text.slice(
+          0,
+          maxLength
+        )
+        + "..."
+      );
+
+    }
+
+
+
+    function statusClass(status) {
+
+      switch (status) {
+
+        case "Available":
+          return "available";
+
+        case "Coming Soon":
+          return "coming-soon";
+
+        case "Sold Out":
+          return "sold-out";
+
+        case "Limited":
+          return "limited";
+
+        default:
+          return "";
+
+      }
+
+    }
+
+
+  </script>
+
 
 </body>
 

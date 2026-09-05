@@ -32,6 +32,7 @@
     .events-page {
       min-height: 100vh;
       padding: 70px 20px 100px;
+
       background:
         radial-gradient(
           circle at top,
@@ -76,15 +77,22 @@
       width: min(520px, 100%);
       margin: 0 auto;
       padding: 30px;
+
       background: #151310;
-      border: 1px solid rgba(218, 165, 32, 0.35);
+
+      border:
+        1px solid rgba(218, 165, 32, 0.35);
     }
 
 
     .events-login h2 {
       margin-top: 0;
+
       text-align: center;
-      font-family: "Cinzel", serif;
+
+      font-family:
+        "Cinzel",
+        serif;
     }
 
 
@@ -101,7 +109,11 @@
     .event-field label {
       display: block;
       margin-bottom: 6px;
-      font-family: "Cinzel", serif;
+
+      font-family:
+        "Cinzel",
+        serif;
+
       font-size: 0.82rem;
       letter-spacing: 1px;
     }
@@ -112,11 +124,18 @@
     .event-field select {
       width: 100%;
       box-sizing: border-box;
+
       padding: 12px 13px;
+
       background: #11100f;
-      border: 1px solid rgba(218, 165, 32, 0.35);
+
+      border:
+        1px solid rgba(218, 165, 32, 0.35);
+
       color: #f6efe2;
+
       font: inherit;
+
       outline: none;
     }
 
@@ -137,11 +156,19 @@
     .event-login-button,
     .event-primary-button {
       border: 1px solid #d7aa42;
+
       background: #d7aa42;
+
       color: #111;
+
       padding: 12px 18px;
-      font-family: "Cinzel", serif;
+
+      font-family:
+        "Cinzel",
+        serif;
+
       font-weight: 800;
+
       cursor: pointer;
     }
 
@@ -174,7 +201,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       gap: 15px;
+
       margin-bottom: 20px;
     }
 
@@ -192,23 +221,33 @@
 
 
     .event-secondary-button {
-      border: 1px solid rgba(218, 165, 32, 0.4);
+      border:
+        1px solid rgba(218, 165, 32, 0.4);
+
       background: #151310;
+
       color: #f6efe2;
+
       padding: 10px 15px;
+
       cursor: pointer;
     }
 
 
 
     /* ======================================================
-       MAIN LAYOUT
+       LAYOUT
        ====================================================== */
 
     .events-layout {
       display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(280px, 0.8fr);
+
+      grid-template-columns:
+        minmax(0, 2fr)
+        minmax(280px, 0.8fr);
+
       gap: 24px;
+
       align-items: start;
     }
 
@@ -219,19 +258,33 @@
        ====================================================== */
 
     .calendar-panel {
-      border: 1px solid rgba(218, 165, 32, 0.32);
-      background: rgba(18, 17, 16, 0.97);
+      border:
+        1px solid rgba(218, 165, 32, 0.32);
+
+      background:
+        rgba(18, 17, 16, 0.97);
+
       overflow: hidden;
     }
 
 
     .calendar-header {
       display: grid;
-      grid-template-columns: auto 1fr auto;
+
+      grid-template-columns:
+        auto
+        1fr
+        auto;
+
       align-items: center;
+
       gap: 14px;
+
       padding: 18px;
-      border-bottom: 1px solid rgba(218, 165, 32, 0.25);
+
+      border-bottom:
+        1px solid rgba(218, 165, 32, 0.25);
+
       background:
         linear-gradient(
           90deg,
@@ -243,51 +296,81 @@
 
     .calendar-header h2 {
       margin: 0;
+
       text-align: center;
-      font-family: "Cinzel", serif;
+
+      font-family:
+        "Cinzel",
+        serif;
+
       font-size: 1.4rem;
     }
 
 
     .calendar-nav {
-      border: 1px solid rgba(218, 165, 32, 0.4);
+      border:
+        1px solid rgba(218, 165, 32, 0.4);
+
       background: #11100f;
+
       color: white;
+
       width: 38px;
       height: 38px;
+
       cursor: pointer;
     }
 
 
     .calendar-weekdays {
       display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      border-bottom: 1px solid rgba(218, 165, 32, 0.18);
+
+      grid-template-columns:
+        repeat(7, 1fr);
+
+      border-bottom:
+        1px solid rgba(218, 165, 32, 0.18);
     }
 
 
     .calendar-weekdays div {
       padding: 10px 5px;
+
       text-align: center;
-      font-family: "Cinzel", serif;
+
+      font-family:
+        "Cinzel",
+        serif;
+
       font-size: 0.72rem;
+
       opacity: 0.65;
     }
 
 
     .calendar-grid {
       display: grid;
-      grid-template-columns: repeat(7, 1fr);
+
+      grid-template-columns:
+        repeat(7, 1fr);
     }
 
 
     .calendar-day {
-      min-height: 118px;
+      min-height: 125px;
+
       padding: 8px;
+
       box-sizing: border-box;
-      border-right: 1px solid rgba(218, 165, 32, 0.10);
-      border-bottom: 1px solid rgba(218, 165, 32, 0.10);
-      background: rgba(255, 255, 255, 0.015);
+
+      border-right:
+        1px solid rgba(218, 165, 32, 0.10);
+
+      border-bottom:
+        1px solid rgba(218, 165, 32, 0.10);
+
+      background:
+        rgba(255, 255, 255, 0.015);
     }
 
 
@@ -297,65 +380,165 @@
 
 
     .calendar-day.today {
-      background: rgba(15, 130, 105, 0.09);
-      box-shadow: inset 0 0 0 1px rgba(67, 220, 188, 0.4);
+      background:
+        rgba(15, 130, 105, 0.09);
+
+      box-shadow:
+        inset 0 0 0 1px
+        rgba(67, 220, 188, 0.4);
     }
 
 
     .calendar-date-number {
-      font-family: "Cinzel", serif;
+      font-family:
+        "Cinzel",
+        serif;
+
       font-size: 0.8rem;
+
       margin-bottom: 6px;
-    }
-
-
-    .calendar-event {
-      display: block;
-      margin-top: 4px;
-      padding: 5px 6px;
-      border-left: 2px solid #d7aa42;
-      background: rgba(218, 165, 32, 0.12);
-      color: #f6efe2;
-      text-decoration: none;
-      font-size: 0.76rem;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-
-    .calendar-event.organised {
-      border-left-color: #43d6ba;
-      background: rgba(67, 214, 186, 0.11);
     }
 
 
 
     /* ======================================================
-       UPCOMING EVENTS
+       CALENDAR EVENT
+       ====================================================== */
+
+    .calendar-event {
+      display: block;
+
+      margin-top: 5px;
+
+      padding: 6px 7px;
+
+      border-left:
+        3px solid #d7aa42;
+
+      background:
+        rgba(218, 165, 32, 0.12);
+
+      color: #f6efe2;
+
+      text-decoration: none;
+
+      font-size: 0.75rem;
+
+      overflow: hidden;
+
+      transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+    }
+
+
+    .calendar-event:hover {
+      background:
+        rgba(218, 165, 32, 0.18);
+    }
+
+
+    .calendar-event.organised {
+      border-left-color: #43d6ba;
+
+      background:
+        rgba(67, 214, 186, 0.10);
+    }
+
+
+    .calendar-event.full {
+      border-left-color: #d7aa42;
+
+      background:
+        rgba(218, 165, 32, 0.12);
+    }
+
+
+    .calendar-event.cancelled {
+      border-left-color: #c45b5b;
+
+      background:
+        rgba(150, 40, 40, 0.12);
+
+      opacity: 0.7;
+    }
+
+
+    .calendar-event-title {
+      display: block;
+
+      overflow: hidden;
+
+      text-overflow: ellipsis;
+
+      white-space: nowrap;
+    }
+
+
+    .calendar-event-status {
+      display: block;
+
+      margin-top: 3px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 0.56rem;
+
+      letter-spacing: 0.7px;
+
+      opacity: 0.75;
+    }
+
+
+    .calendar-event.cancelled
+    .calendar-event-status {
+      color: #ff9d9d;
+      opacity: 1;
+    }
+
+
+
+    /* ======================================================
+       UPCOMING PANEL
        ====================================================== */
 
     .upcoming-panel {
-      border: 1px solid rgba(218, 165, 32, 0.32);
+      border:
+        1px solid rgba(218, 165, 32, 0.32);
+
       background: #121110;
+
       padding: 18px;
     }
 
 
     .upcoming-panel h2 {
       margin-top: 0;
-      font-family: "Cinzel", serif;
+
+      font-family:
+        "Cinzel",
+        serif;
+
       font-size: 1.25rem;
     }
 
 
     .upcoming-event-card {
       display: block;
+
       margin-top: 12px;
+
       padding: 13px;
-      border: 1px solid rgba(218, 165, 32, 0.18);
+
+      border:
+        1px solid rgba(218, 165, 32, 0.18);
+
       background: #181613;
+
       color: #f6efe2;
+
       text-decoration: none;
     }
 
@@ -365,25 +548,104 @@
     }
 
 
+    .upcoming-event-card.cancelled {
+      border-color:
+        rgba(210, 80, 80, 0.3);
+
+      opacity: 0.68;
+    }
+
+
     .upcoming-event-type {
-      font-family: "Cinzel", serif;
+      font-family:
+        "Cinzel",
+        serif;
+
       font-size: 0.68rem;
+
       color: #43d6ba;
+
       letter-spacing: 1px;
+    }
+
+
+    .upcoming-event-card.cancelled
+    .upcoming-event-type {
+      color: #ff9d9d;
     }
 
 
     .upcoming-event-title {
       margin-top: 5px;
-      font-family: "Cinzel", serif;
+
+      font-family:
+        "Cinzel",
+        serif;
+
       font-weight: 700;
     }
 
 
     .upcoming-event-meta {
       margin-top: 5px;
+
       font-size: 0.88rem;
+
       opacity: 0.7;
+    }
+
+
+
+    /* ======================================================
+       STATUS BADGES
+       ====================================================== */
+
+    .event-status-badge {
+      display: inline-block;
+
+      margin-top: 8px;
+
+      padding: 4px 7px;
+
+      border-radius: 999px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size: 0.62rem;
+
+      letter-spacing: 0.7px;
+
+      border:
+        1px solid rgba(67, 214, 186, 0.28);
+
+      background:
+        rgba(67, 214, 186, 0.08);
+
+      color: #7fe5d0;
+    }
+
+
+    .event-status-badge.full {
+      border-color:
+        rgba(218, 165, 32, 0.35);
+
+      background:
+        rgba(218, 165, 32, 0.09);
+
+      color: #e8c878;
+    }
+
+
+    .event-status-badge.cancelled {
+      border-color:
+        rgba(210, 80, 80, 0.4);
+
+      background:
+        rgba(160, 40, 40, 0.13);
+
+      color: #ffaaaa;
     }
 
 
@@ -400,11 +662,18 @@
 
     .event-modal-backdrop {
       display: none;
+
       position: fixed;
+
       inset: 0;
-      background: rgba(0, 0, 0, 0.82);
+
+      background:
+        rgba(0, 0, 0, 0.82);
+
       z-index: 200;
+
       padding: 30px 15px;
+
       overflow-y: auto;
     }
 
@@ -416,33 +685,50 @@
 
     .event-modal {
       width: min(720px, 100%);
+
       margin: 30px auto;
+
       padding: 28px;
+
       background: #141210;
-      border: 1px solid rgba(218, 165, 32, 0.45);
-      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.7);
+
+      border:
+        1px solid rgba(218, 165, 32, 0.45);
+
+      box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.7);
     }
 
 
     .event-modal-header {
       display: flex;
+
       justify-content: space-between;
+
       align-items: flex-start;
+
       gap: 15px;
     }
 
 
     .event-modal-header h2 {
       margin-top: 0;
-      font-family: "Cinzel", serif;
+
+      font-family:
+        "Cinzel",
+        serif;
     }
 
 
     .event-modal-close {
       border: 0;
+
       background: transparent;
+
       color: white;
+
       font-size: 1.5rem;
+
       cursor: pointer;
     }
 
@@ -454,55 +740,78 @@
 
     .event-type-options {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
       gap: 12px;
+
       margin-top: 18px;
     }
 
 
     .event-type-option input {
       position: absolute;
+
       opacity: 0;
+
       pointer-events: none;
     }
 
 
     .event-type-card {
       display: block;
+
       padding: 16px;
-      border: 1px solid rgba(218, 165, 32, 0.25);
+
+      border:
+        1px solid rgba(218, 165, 32, 0.25);
+
       background: #11100f;
+
       cursor: pointer;
     }
 
 
-    .event-type-option input:checked + .event-type-card {
+    .event-type-option
+    input:checked
+    + .event-type-card {
       border-color: #43d6ba;
-      background: rgba(67, 214, 186, 0.08);
+
+      background:
+        rgba(67, 214, 186, 0.08);
     }
 
 
     .event-type-card strong {
       display: block;
-      font-family: "Cinzel", serif;
+
+      font-family:
+        "Cinzel",
+        serif;
+
       margin-bottom: 5px;
     }
 
 
     .event-type-card span {
       font-size: 0.9rem;
+
       opacity: 0.7;
     }
 
 
 
     /* ======================================================
-       FORM GRID
+       FORM
        ====================================================== */
 
     .event-form-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
       gap: 14px;
     }
 
@@ -514,30 +823,44 @@
 
 
     /* ======================================================
-       DISCORD TIMESTAMP
+       DISCORD
        ====================================================== */
 
     .discord-preview {
       margin-top: 18px;
+
       padding: 14px;
-      border: 1px solid rgba(67, 214, 186, 0.25);
-      background: rgba(67, 214, 186, 0.06);
+
+      border:
+        1px solid rgba(67, 214, 186, 0.25);
+
+      background:
+        rgba(67, 214, 186, 0.06);
     }
 
 
     .discord-preview h3 {
       margin-top: 0;
-      font-family: "Cinzel", serif;
+
+      font-family:
+        "Cinzel",
+        serif;
+
       font-size: 0.85rem;
     }
 
 
     .discord-code {
       display: block;
+
       margin-top: 8px;
+
       padding: 10px;
+
       background: #0a0908;
+
       word-break: break-all;
+
       font-family: monospace;
     }
 
@@ -560,7 +883,7 @@
 
 
       .calendar-day {
-        min-height: 90px;
+        min-height: 95px;
       }
 
     }
@@ -575,7 +898,7 @@
 
 
       .calendar-day {
-        min-height: 72px;
+        min-height: 76px;
         padding: 4px;
       }
 
@@ -586,18 +909,39 @@
 
 
       .calendar-event {
-        font-size: 0;
-        width: 8px;
-        height: 8px;
+        width: 11px;
+        height: 11px;
+
         padding: 0;
+
         border: 0;
+
         border-radius: 50%;
+
         background: #d7aa42;
+
+        overflow: hidden;
       }
 
 
       .calendar-event.organised {
         background: #43d6ba;
+      }
+
+
+      .calendar-event.full {
+        background: #d7aa42;
+      }
+
+
+      .calendar-event.cancelled {
+        background: #c45b5b;
+      }
+
+
+      .calendar-event-title,
+      .calendar-event-status {
+        display: none;
       }
 
 
@@ -651,9 +995,7 @@
 
     <nav class="desktop-nav">
 
-      <a href="index.html">
-        HOME
-      </a>
+      <a href="index.html">HOME</a>
 
       <a href="community.html">
         COMMUNITY
@@ -805,7 +1147,9 @@
 
           <div>
 
-            <strong id="eventsLoggedInUser"></strong>
+            <strong
+              id="eventsLoggedInUser"
+            ></strong>
 
             <div class="events-user">
               Guild event planner
@@ -860,7 +1204,9 @@
               </button>
 
 
-              <h2 id="calendarMonthTitle"></h2>
+              <h2
+                id="calendarMonthTitle"
+              ></h2>
 
 
               <button
@@ -908,7 +1254,9 @@
               UPCOMING CHAOS
             </h2>
 
-            <div id="upcomingEvents"></div>
+            <div
+              id="upcomingEvents"
+            ></div>
 
           </aside>
 
@@ -964,7 +1312,9 @@
 
 
 
-      <form id="createEventForm">
+      <form
+        id="createEventForm"
+      >
 
 
         <!-- EVENT TYPE -->
@@ -1137,7 +1487,7 @@
           </h3>
 
           <p>
-            This will display the event time automatically in each member's local timezone on Discord.
+            Displays the event time automatically in each member's local timezone on Discord.
           </p>
 
           <code
@@ -1160,7 +1510,7 @@
 
 
 
-        <div style="margin-top: 22px;">
+        <div style="margin-top:22px;">
 
           <button
             type="submit"
@@ -1218,31 +1568,46 @@
 
     const firebaseConfig = {
 
-      apiKey: "AIzaSyDQjutG0oa4v8dpI3i3UlgsFC9EmWsX4kI",
+      apiKey:
+        "AIzaSyDQjutG0oa4v8dpI3i3UlgsFC9EmWsX4kI",
 
-      authDomain: "rotating-chaos-chat.firebaseapp.com",
+      authDomain:
+        "rotating-chaos-chat.firebaseapp.com",
 
-      projectId: "rotating-chaos-chat",
+      projectId:
+        "rotating-chaos-chat",
 
-      storageBucket: "rotating-chaos-chat.firebasestorage.app",
+      storageBucket:
+        "rotating-chaos-chat.firebasestorage.app",
 
-      messagingSenderId: "337862334710",
+      messagingSenderId:
+        "337862334710",
 
-      appId: "1:337862334710:web:92e38dd0646dd9bec474d7",
+      appId:
+        "1:337862334710:web:92e38dd0646dd9bec474d7",
 
-      measurementId: "G-7M761SJ4CJ"
+      measurementId:
+        "G-7M761SJ4CJ"
 
     };
 
 
     const app =
-      initializeApp(firebaseConfig);
+      initializeApp(
+        firebaseConfig
+      );
+
 
     const auth =
-      getAuth(app);
+      getAuth(
+        app
+      );
+
 
     const db =
-      getFirestore(app);
+      getFirestore(
+        app
+      );
 
 
 
@@ -1251,85 +1616,141 @@
        ====================================================== */
 
     const eventsLogin =
-      document.getElementById("eventsLogin");
+      document.getElementById(
+        "eventsLogin"
+      );
 
     const eventsApp =
-      document.getElementById("eventsApp");
+      document.getElementById(
+        "eventsApp"
+      );
 
     const eventLoginForm =
-      document.getElementById("eventLoginForm");
+      document.getElementById(
+        "eventLoginForm"
+      );
 
     const eventGuildName =
-      document.getElementById("eventGuildName");
+      document.getElementById(
+        "eventGuildName"
+      );
 
     const eventAccessCode =
-      document.getElementById("eventAccessCode");
+      document.getElementById(
+        "eventAccessCode"
+      );
 
     const eventLoginError =
-      document.getElementById("eventLoginError");
+      document.getElementById(
+        "eventLoginError"
+      );
 
     const eventsLoggedInUser =
-      document.getElementById("eventsLoggedInUser");
+      document.getElementById(
+        "eventsLoggedInUser"
+      );
 
     const eventsSignOut =
-      document.getElementById("eventsSignOut");
+      document.getElementById(
+        "eventsSignOut"
+      );
 
     const openEventModal =
-      document.getElementById("openEventModal");
+      document.getElementById(
+        "openEventModal"
+      );
 
     const closeEventModal =
-      document.getElementById("closeEventModal");
+      document.getElementById(
+        "closeEventModal"
+      );
 
     const eventModalBackdrop =
-      document.getElementById("eventModalBackdrop");
+      document.getElementById(
+        "eventModalBackdrop"
+      );
 
     const createEventForm =
-      document.getElementById("createEventForm");
+      document.getElementById(
+        "createEventForm"
+      );
 
     const eventTitle =
-      document.getElementById("eventTitle");
+      document.getElementById(
+        "eventTitle"
+      );
 
     const eventDate =
-      document.getElementById("eventDate");
+      document.getElementById(
+        "eventDate"
+      );
 
     const eventStartTime =
-      document.getElementById("eventStartTime");
+      document.getElementById(
+        "eventStartTime"
+      );
 
     const eventMeetTime =
-      document.getElementById("eventMeetTime");
+      document.getElementById(
+        "eventMeetTime"
+      );
 
     const eventMeetLocation =
-      document.getElementById("eventMeetLocation");
+      document.getElementById(
+        "eventMeetLocation"
+      );
 
     const eventNotes =
-      document.getElementById("eventNotes");
+      document.getElementById(
+        "eventNotes"
+      );
 
     const discordTimestampPreview =
-      document.getElementById("discordTimestampPreview");
+      document.getElementById(
+        "discordTimestampPreview"
+      );
 
     const copyDiscordTimestamp =
-      document.getElementById("copyDiscordTimestamp");
+      document.getElementById(
+        "copyDiscordTimestamp"
+      );
 
     const calendarMonthTitle =
-      document.getElementById("calendarMonthTitle");
+      document.getElementById(
+        "calendarMonthTitle"
+      );
 
     const calendarGrid =
-      document.getElementById("calendarGrid");
+      document.getElementById(
+        "calendarGrid"
+      );
 
     const previousMonth =
-      document.getElementById("previousMonth");
+      document.getElementById(
+        "previousMonth"
+      );
 
     const nextMonth =
-      document.getElementById("nextMonth");
+      document.getElementById(
+        "nextMonth"
+      );
 
     const upcomingEvents =
-      document.getElementById("upcomingEvents");
+      document.getElementById(
+        "upcomingEvents"
+      );
 
 
 
-    let currentGuildName = "";
+    /* ======================================================
+       STATE
+       ====================================================== */
 
-    let allEvents = [];
+    let currentGuildName =
+      "";
+
+    let allEvents =
+      [];
 
     let currentCalendarDate =
       new Date(
@@ -1338,7 +1759,11 @@
         1
       );
 
-    let unsubscribeEvents = null;
+    let unsubscribeEvents =
+      null;
+
+    let groupStatusListeners =
+      new Map();
 
 
 
@@ -1346,27 +1771,42 @@
        ACCOUNT EMAIL
        ====================================================== */
 
-    function makeAccountEmail(name) {
+    function makeAccountEmail(
+      name
+    ) {
 
       const cleaned =
         name
           .trim()
           .toLowerCase()
-          .replace(/[^a-z0-9]/g, "");
+          .replace(
+            /[^a-z0-9]/g,
+            ""
+          );
 
-      return `${cleaned}@rotatingchaos.local`;
+
+      return (
+        `${cleaned}@rotatingchaos.local`
+      );
 
     }
 
 
 
-    function prettyNameFromEmail(email) {
+    function prettyNameFromEmail(
+      email
+    ) {
 
       const raw =
-        email.split("@")[0];
+        email.split(
+          "@"
+        )[0];
 
-      return raw.charAt(0).toUpperCase()
-        + raw.slice(1);
+
+      return (
+        raw.charAt(0).toUpperCase()
+        + raw.slice(1)
+      );
 
     }
 
@@ -1378,9 +1818,12 @@
 
     eventLoginForm.addEventListener(
       "submit",
-      async (event) => {
+      async (
+        event
+      ) => {
 
         event.preventDefault();
+
 
         eventLoginError.style.display =
           "none";
@@ -1388,6 +1831,7 @@
 
         const name =
           eventGuildName.value.trim();
+
 
         const password =
           eventAccessCode.value;
@@ -1402,7 +1846,9 @@
 
           await signInWithEmailAndPassword(
             auth,
-            makeAccountEmail(name),
+            makeAccountEmail(
+              name
+            ),
             password
           );
 
@@ -1423,9 +1869,14 @@
         }
 
 
-        catch (error) {
+        catch (
+          error
+        ) {
 
-          console.error(error);
+          console.error(
+            error
+          );
+
 
           eventLoginError.style.display =
             "block";
@@ -1438,18 +1889,25 @@
 
 
     /* ======================================================
-       AUTH STATE
+       AUTH
        ====================================================== */
 
     onAuthStateChanged(
       auth,
-      (user) => {
+      (
+        user
+      ) => {
 
         if (user) {
 
           currentGuildName =
-            sessionStorage.getItem("chaosNickname")
-            || prettyNameFromEmail(user.email);
+            sessionStorage.getItem(
+              "chaosNickname"
+            )
+            ||
+            prettyNameFromEmail(
+              user.email
+            );
 
 
           eventsLoggedInUser.textContent =
@@ -1479,9 +1937,15 @@
             "none";
 
 
-          if (unsubscribeEvents) {
+          stopGroupStatusListeners();
+
+
+          if (
+            unsubscribeEvents
+          ) {
 
             unsubscribeEvents();
+
 
             unsubscribeEvents =
               null;
@@ -1508,7 +1972,9 @@
         );
 
 
-        await signOut(auth);
+        await signOut(
+          auth
+        );
 
       }
     );
@@ -1539,10 +2005,13 @@
 
     eventModalBackdrop.addEventListener(
       "click",
-      (event) => {
+      (
+        event
+      ) => {
 
         if (
-          event.target === eventModalBackdrop
+          event.target
+          === eventModalBackdrop
         ) {
 
           closeModal();
@@ -1571,11 +2040,13 @@
 
       if (
         !eventDate.value
-        || !eventStartTime.value
+        ||
+        !eventStartTime.value
       ) {
 
         discordTimestampPreview.textContent =
           "Choose a date and time first.";
+
 
         return "";
 
@@ -1590,7 +2061,8 @@
 
       const unix =
         Math.floor(
-          eventDateTime.getTime() / 1000
+          eventDateTime.getTime()
+          / 1000
         );
 
 
@@ -1658,7 +2130,9 @@
         }
 
 
-        catch (error) {
+        catch (
+          error
+        ) {
 
           console.error(
             "Could not copy timestamp:",
@@ -1678,7 +2152,9 @@
 
     createEventForm.addEventListener(
       "submit",
-      async (event) => {
+      async (
+        event
+      ) => {
 
         event.preventDefault();
 
@@ -1712,7 +2188,10 @@
 
           const eventDocument =
             await addDoc(
-              collection(db, "events"),
+              collection(
+                db,
+                "events"
+              ),
               {
 
                 title:
@@ -1729,11 +2208,13 @@
 
                 startTimestamp:
                   Math.floor(
-                    startDateTime.getTime() / 1000
+                    startDateTime.getTime()
+                    / 1000
                   ),
 
                 meetTime:
-                  eventMeetTime.value || "",
+                  eventMeetTime.value
+                  || "",
 
                 meetLocation:
                   eventMeetLocation.value.trim(),
@@ -1743,6 +2224,9 @@
 
                 discordTimestamp:
                   discordTimestamp,
+
+                cancelled:
+                  false,
 
                 createdByUid:
                   user.uid,
@@ -1767,7 +2251,10 @@
           closeModal();
 
 
-          if (type === "organised") {
+          if (
+            type
+            === "organised"
+          ) {
 
             window.location.href =
               `event.html?id=${eventDocument.id}`;
@@ -1777,7 +2264,9 @@
         }
 
 
-        catch (error) {
+        catch (
+          error
+        ) {
 
           console.error(
             "Could not create event:",
@@ -1802,7 +2291,9 @@
 
     function startEventsListener() {
 
-      if (unsubscribeEvents) {
+      if (
+        unsubscribeEvents
+      ) {
 
         unsubscribeEvents();
 
@@ -1811,15 +2302,26 @@
 
       const eventsQuery =
         query(
-          collection(db, "events"),
-          orderBy("createdAt", "asc")
+          collection(
+            db,
+            "events"
+          ),
+          orderBy(
+            "createdAt",
+            "asc"
+          )
         );
 
 
       unsubscribeEvents =
         onSnapshot(
           eventsQuery,
-          (snapshot) => {
+          (
+            snapshot
+          ) => {
+
+            stopGroupStatusListeners();
+
 
             allEvents =
               [];
@@ -1828,23 +2330,190 @@
             snapshot.forEach(
               documentSnapshot => {
 
-                allEvents.push({
+                const data =
+                  documentSnapshot.data();
+
+
+                const item = {
+
                   id:
                     documentSnapshot.id,
 
-                  ...documentSnapshot.data()
-                });
+                  ...data,
+
+                  cancelled:
+                    data.cancelled
+                    || false,
+
+                  totalSlots:
+                    0,
+
+                  filledSlots:
+                    0,
+
+                  openSlots:
+                    0
+
+                };
+
+
+                allEvents.push(
+                  item
+                );
 
               }
             );
 
 
-            renderCalendar();
+            renderAll();
 
-            renderUpcomingEvents();
+
+            allEvents.forEach(
+              event => {
+
+                if (
+                  event.type
+                  === "organised"
+                ) {
+
+                  startGroupStatusListener(
+                    event.id
+                  );
+
+                }
+
+              }
+            );
 
           }
         );
+
+    }
+
+
+
+    /* ======================================================
+       RUN GROUP STATUS LISTENERS
+       ====================================================== */
+
+    function stopGroupStatusListeners() {
+
+      groupStatusListeners.forEach(
+        unsubscribe => {
+
+          unsubscribe();
+
+        }
+      );
+
+
+      groupStatusListeners.clear();
+
+    }
+
+
+
+    function startGroupStatusListener(
+      eventId
+    ) {
+
+      const groupsRef =
+        collection(
+          db,
+          "events",
+          eventId,
+          "runGroups"
+        );
+
+
+      const unsubscribe =
+        onSnapshot(
+          groupsRef,
+          (
+            snapshot
+          ) => {
+
+            let totalSlots =
+              0;
+
+
+            let filledSlots =
+              0;
+
+
+            snapshot.forEach(
+              groupDocument => {
+
+                const group =
+                  groupDocument.data();
+
+
+                const slots =
+                  group.slots
+                  || [];
+
+
+                totalSlots +=
+                  slots.length;
+
+
+                slots.forEach(
+                  slot => {
+
+                    if (
+                      slot.assignedUid
+                    ) {
+
+                      filledSlots++;
+
+                    }
+
+                  }
+                );
+
+              }
+            );
+
+
+            const event =
+              allEvents.find(
+                item =>
+                  item.id
+                  === eventId
+              );
+
+
+            if (!event) {
+              return;
+            }
+
+
+            event.totalSlots =
+              totalSlots;
+
+
+            event.filledSlots =
+              filledSlots;
+
+
+            event.openSlots =
+              Math.max(
+                0,
+                totalSlots
+                - filledSlots
+              );
+
+
+            renderAll();
+
+          }
+        );
+
+
+      groupStatusListeners.set(
+        eventId,
+        unsubscribe
+      );
 
     }
 
@@ -1892,7 +2561,21 @@
 
 
     /* ======================================================
-       RENDER CALENDAR
+       RENDER EVERYTHING
+       ====================================================== */
+
+    function renderAll() {
+
+      renderCalendar();
+
+      renderUpcomingEvents();
+
+    }
+
+
+
+    /* ======================================================
+       CALENDAR
        ====================================================== */
 
     function renderCalendar() {
@@ -1900,18 +2583,24 @@
       const year =
         currentCalendarDate.getFullYear();
 
+
       const month =
         currentCalendarDate.getMonth();
 
 
       calendarMonthTitle.textContent =
-        currentCalendarDate.toLocaleDateString(
-          "en-GB",
-          {
-            month: "long",
-            year: "numeric"
-          }
-        ).toUpperCase();
+        currentCalendarDate
+          .toLocaleDateString(
+            "en-GB",
+            {
+              month:
+                "long",
+
+              year:
+                "numeric"
+            }
+          )
+          .toUpperCase();
 
 
       calendarGrid.innerHTML =
@@ -1930,7 +2619,10 @@
         firstDay.getDay();
 
 
-      if (startWeekDay === 0) {
+      if (
+        startWeekDay
+        === 0
+      ) {
 
         startWeekDay =
           7;
@@ -1950,6 +2642,7 @@
         new Date();
 
 
+
       for (
         let index = 0;
         index < 42;
@@ -1957,7 +2650,9 @@
       ) {
 
         const day =
-          new Date(calendarStart);
+          new Date(
+            calendarStart
+          );
 
 
         day.setDate(
@@ -1967,7 +2662,9 @@
 
 
         const dayBox =
-          document.createElement("div");
+          document.createElement(
+            "div"
+          );
 
 
         dayBox.className =
@@ -1989,9 +2686,11 @@
         if (
           day.getFullYear()
           === today.getFullYear()
-          && day.getMonth()
+          &&
+          day.getMonth()
           === today.getMonth()
-          && day.getDate()
+          &&
+          day.getDate()
           === today.getDate()
         ) {
 
@@ -2003,7 +2702,9 @@
 
 
         const dateNumber =
-          document.createElement("div");
+          document.createElement(
+            "div"
+          );
 
 
         dateNumber.className =
@@ -2020,7 +2721,9 @@
 
 
         const dateKey =
-          formatDateKey(day);
+          formatDateKey(
+            day
+          );
 
 
         const dayEvents =
@@ -2031,7 +2734,10 @@
                 === dateKey
             )
             .sort(
-              (a, b) =>
+              (
+                a,
+                b
+              ) =>
                 (a.startTime || "")
                   .localeCompare(
                     b.startTime || ""
@@ -2043,7 +2749,9 @@
           item => {
 
             const link =
-              document.createElement("a");
+              document.createElement(
+                "a"
+              );
 
 
             link.href =
@@ -2055,7 +2763,8 @@
 
 
             if (
-              item.type === "organised"
+              item.type
+              === "organised"
             ) {
 
               link.classList.add(
@@ -2065,8 +2774,83 @@
             }
 
 
-            link.textContent =
-              `${item.startTime} ${item.title}`;
+            if (
+              item.cancelled
+            ) {
+
+              link.classList.add(
+                "cancelled"
+              );
+
+            }
+
+
+            else if (
+              item.type
+              === "organised"
+              &&
+              item.totalSlots > 0
+              &&
+              item.openSlots === 0
+            ) {
+
+              link.classList.add(
+                "full"
+              );
+
+            }
+
+
+
+            const title =
+              document.createElement(
+                "span"
+              );
+
+
+            title.className =
+              "calendar-event-title";
+
+
+            title.textContent =
+              `${item.startTime || ""} ${item.title}`;
+
+
+            link.appendChild(
+              title
+            );
+
+
+
+            const statusText =
+              getEventStatusText(
+                item
+              );
+
+
+            if (
+              statusText
+            ) {
+
+              const status =
+                document.createElement(
+                  "span"
+                );
+
+
+              status.className =
+                "calendar-event-status";
+
+
+              status.textContent =
+                statusText;
+
+
+              link.appendChild(
+                status
+              );
+
+            }
 
 
             dayBox.appendChild(
@@ -2099,7 +2883,8 @@
 
       const nowUnix =
         Math.floor(
-          Date.now() / 1000
+          Date.now()
+          / 1000
         );
 
 
@@ -2111,22 +2896,28 @@
               >= nowUnix
           )
           .sort(
-            (a, b) =>
+            (
+              a,
+              b
+            ) =>
               a.startTimestamp
               - b.startTimestamp
           )
           .slice(
             0,
-            8
+            10
           );
 
 
       if (
-        futureEvents.length === 0
+        futureEvents.length
+        === 0
       ) {
 
         const empty =
-          document.createElement("p");
+          document.createElement(
+            "p"
+          );
 
 
         empty.className =
@@ -2151,7 +2942,9 @@
         event => {
 
           const card =
-            document.createElement("a");
+            document.createElement(
+              "a"
+            );
 
 
           card.href =
@@ -2162,8 +2955,22 @@
             "upcoming-event-card";
 
 
+          if (
+            event.cancelled
+          ) {
+
+            card.classList.add(
+              "cancelled"
+            );
+
+          }
+
+
+
           const type =
-            document.createElement("div");
+            document.createElement(
+              "div"
+            );
 
 
           type.className =
@@ -2171,13 +2978,18 @@
 
 
           type.textContent =
-            event.type === "organised"
-              ? "ORGANISED RUN"
-              : "QUICK EVENT";
+            event.cancelled
+              ? "CANCELLED"
+              : event.type === "organised"
+                ? "ORGANISED RUN"
+                : "QUICK EVENT";
+
 
 
           const title =
-            document.createElement("div");
+            document.createElement(
+              "div"
+            );
 
 
           title.className =
@@ -2188,8 +3000,11 @@
             event.title;
 
 
+
           const meta =
-            document.createElement("div");
+            document.createElement(
+              "div"
+            );
 
 
           meta.className =
@@ -2203,11 +3018,93 @@
             );
 
 
-          card.appendChild(type);
+          card.appendChild(
+            type
+          );
 
-          card.appendChild(title);
 
-          card.appendChild(meta);
+          card.appendChild(
+            title
+          );
+
+
+          card.appendChild(
+            meta
+          );
+
+
+
+          const statusText =
+            getEventStatusText(
+              event
+            );
+
+
+          if (
+            statusText
+            &&
+            !event.cancelled
+          ) {
+
+            const badge =
+              document.createElement(
+                "span"
+              );
+
+
+            badge.className =
+              "event-status-badge";
+
+
+            if (
+              event.type === "organised"
+              &&
+              event.totalSlots > 0
+              &&
+              event.openSlots === 0
+            ) {
+
+              badge.classList.add(
+                "full"
+              );
+
+            }
+
+
+            badge.textContent =
+              statusText;
+
+
+            card.appendChild(
+              badge
+            );
+
+          }
+
+
+          else if (
+            event.cancelled
+          ) {
+
+            const badge =
+              document.createElement(
+                "span"
+              );
+
+
+            badge.className =
+              "event-status-badge cancelled";
+
+
+            badge.textContent =
+              "EVENT CANCELLED";
+
+
+            card.appendChild(
+              badge
+            );
+
+          }
 
 
           upcomingEvents.appendChild(
@@ -2222,10 +3119,71 @@
 
 
     /* ======================================================
+       EVENT STATUS
+       ====================================================== */
+
+    function getEventStatusText(
+      event
+    ) {
+
+      if (
+        event.cancelled
+      ) {
+
+        return "CANCELLED";
+
+      }
+
+
+      if (
+        event.type
+        !== "organised"
+      ) {
+
+        return "";
+
+      }
+
+
+      if (
+        event.totalSlots
+        === 0
+      ) {
+
+        return "RUN SHEET NOT SET";
+
+      }
+
+
+      if (
+        event.openSlots
+        === 0
+      ) {
+
+        return "RUN FULL";
+
+      }
+
+
+      return (
+        `${event.openSlots} SPOT${
+          event.openSlots === 1
+            ? ""
+            : "S"
+        } OPEN`
+      );
+
+    }
+
+
+
+    /* ======================================================
        HELPERS
        ====================================================== */
 
-    function formatDateKey(date) {
+    function formatDateKey(
+      date
+    ) {
 
       const year =
         date.getFullYear();
@@ -2249,7 +3207,9 @@
         );
 
 
-      return `${year}-${month}-${day}`;
+      return (
+        `${year}-${month}-${day}`
+      );
 
     }
 
@@ -2269,11 +3229,22 @@
       return date.toLocaleString(
         "en-GB",
         {
-          weekday: "short",
-          day: "numeric",
-          month: "short",
-          hour: "2-digit",
-          minute: "2-digit"
+
+          weekday:
+            "short",
+
+          day:
+            "numeric",
+
+          month:
+            "short",
+
+          hour:
+            "2-digit",
+
+          minute:
+            "2-digit"
+
         }
       );
 

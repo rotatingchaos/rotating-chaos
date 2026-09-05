@@ -33,7 +33,11 @@
       min-height: 100vh;
       padding: 70px 20px 100px;
       background:
-        radial-gradient(circle at top, rgba(184, 134, 11, 0.08), transparent 35%),
+        radial-gradient(
+          circle at top,
+          rgba(184, 134, 11, 0.08),
+          transparent 35%
+        ),
         #0d0c0b;
     }
 
@@ -61,6 +65,7 @@
       font-family: "Crimson Pro", serif;
       font-size: 1.2rem;
     }
+
 
 
     /* ======================================================
@@ -146,6 +151,7 @@
     }
 
 
+
     /* ======================================================
        MESSENGER
        ====================================================== */
@@ -203,6 +209,7 @@
     }
 
 
+
     /* ======================================================
        SIDEBAR
        ====================================================== */
@@ -247,6 +254,7 @@
     }
 
 
+
     /* ======================================================
        CHAT AREA
        ====================================================== */
@@ -265,9 +273,13 @@
       overflow-y: auto;
       padding: 22px;
       background:
-        linear-gradient(rgba(17, 16, 15, 0.94), rgba(17, 16, 15, 0.94)),
+        linear-gradient(
+          rgba(17, 16, 15, 0.94),
+          rgba(17, 16, 15, 0.94)
+        ),
         url("images/logo.png") center / 260px no-repeat;
     }
+
 
 
     /* ======================================================
@@ -343,6 +355,7 @@
     }
 
 
+
     /* ======================================================
        TOOLBAR
        ====================================================== */
@@ -381,6 +394,7 @@
     }
 
 
+
     /* ======================================================
        EMOJI PICKER
        ====================================================== */
@@ -390,8 +404,10 @@
       position: absolute;
       bottom: 47px;
       left: 15px;
-      width: min(340px, calc(100vw - 70px));
-      padding: 12px;
+      width: min(390px, calc(100vw - 70px));
+      max-height: 360px;
+      overflow: hidden;
+      padding: 0;
       border: 1px solid rgba(218, 165, 32, 0.4);
       background: #171513;
       box-shadow: 0 15px 50px rgba(0, 0, 0, 0.55);
@@ -401,9 +417,52 @@
 
 
     .emoji-picker.open {
+      display: block;
+    }
+
+
+    .emoji-tabs {
       display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border-bottom: 1px solid rgba(218, 165, 32, 0.25);
+      background: #11100f;
+    }
+
+
+    .emoji-tab {
+      border: 0;
+      border-bottom: 2px solid transparent;
+      background: transparent;
+      color: white;
+      padding: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+
+    .emoji-tab:hover {
+      background: rgba(218, 165, 32, 0.08);
+    }
+
+
+    .emoji-tab.active {
+      border-bottom-color: #d7aa42;
+      background: rgba(218, 165, 32, 0.12);
+    }
+
+
+    .emoji-category {
+      display: none;
       grid-template-columns: repeat(7, 1fr);
       gap: 5px;
+      padding: 12px;
+      max-height: 280px;
+      overflow-y: auto;
+    }
+
+
+    .emoji-category.active {
+      display: grid;
     }
 
 
@@ -420,62 +479,8 @@
     .emoji-choice:hover {
       background: rgba(218, 165, 32, 0.14);
     }
-.emoji-picker {
-  width: min(390px, calc(100vw - 70px));
-  max-height: 360px;
-  overflow: hidden;
-  padding: 0;
-}
 
 
-.emoji-picker.open {
-  display: block;
-}
-
-
-.emoji-tabs {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  border-bottom: 1px solid rgba(218, 165, 32, 0.25);
-  background: #11100f;
-}
-
-
-.emoji-tab {
-  border: 0;
-  border-bottom: 2px solid transparent;
-  background: transparent;
-  color: white;
-  padding: 10px;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-
-.emoji-tab:hover {
-  background: rgba(218, 165, 32, 0.08);
-}
-
-
-.emoji-tab.active {
-  border-bottom-color: #d7aa42;
-  background: rgba(218, 165, 32, 0.12);
-}
-
-
-.emoji-category {
-  display: none;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
-  padding: 12px;
-  max-height: 280px;
-  overflow-y: auto;
-}
-
-
-.emoji-category.active {
-  display: grid;
-}
 
     /* ======================================================
        COMPOSE
@@ -517,45 +522,64 @@
     }
 
 
+
+    /* ======================================================
+       MOBILE
+       ====================================================== */
+
     @media (max-width: 700px) {
 
       .messenger-body {
         grid-template-columns: 1fr;
       }
 
+
       .messenger-sidebar {
         display: none;
       }
+
 
       .messages {
         height: 60vh;
         padding: 14px;
       }
 
+
       .messenger-topbar {
         align-items: flex-start;
       }
+
 
       .message-bubble {
         max-width: 90%;
       }
 
+
       .chat-media-hint {
         display: none;
       }
+
 
       .chat-compose {
         gap: 7px;
         padding: 9px;
       }
 
+
       .chat-send {
         padding: 11px 13px;
       }
 
+
       .chat-toolbar {
         padding-left: 9px;
         padding-right: 9px;
+      }
+
+
+      .emoji-picker {
+        left: 9px;
+        width: min(390px, calc(100vw - 36px));
       }
 
     }
@@ -812,7 +836,9 @@
 
 
 
-            <!-- CHAT TOOLS -->
+            <!-- ==================================================
+                 CHAT TOOLS
+                 ================================================== -->
 
             <div class="chat-toolbar">
 
@@ -840,294 +866,310 @@
                 Paste direct image or GIF links to preview them.
               </span>
 
-<div
-  class="emoji-picker"
-  id="emojiPicker"
->
-
-  <!-- EMOJI CATEGORY TABS -->
-
-  <div class="emoji-tabs">
-
-    <button
-      type="button"
-      class="emoji-tab active"
-      data-category="faces"
-      title="Faces"
-    >
-      😀
-    </button>
-
-    <button
-      type="button"
-      class="emoji-tab"
-      data-category="reactions"
-      title="Reactions"
-    >
-      ❤️
-    </button>
-
-    <button
-      type="button"
-      class="emoji-tab"
-      data-category="gaming"
-      title="Gaming"
-    >
-      ⚔️
-    </button>
-
-    <button
-      type="button"
-      class="emoji-tab"
-      data-category="fantasy"
-      title="Fantasy"
-    >
-      🐉
-    </button>
-
-    <button
-      type="button"
-      class="emoji-tab"
-      data-category="random"
-      title="Random Chaos"
-    >
-      🍻
-    </button>
-
-  </div>
 
 
-  <!-- FACES -->
+              <!-- ==============================================
+                   EMOJI PICKER
+                   ============================================== -->
 
-  <div
-    class="emoji-category active"
-    data-category="faces"
-  >
-
-    <button type="button" class="emoji-choice">😀</button>
-    <button type="button" class="emoji-choice">😃</button>
-    <button type="button" class="emoji-choice">😄</button>
-    <button type="button" class="emoji-choice">😁</button>
-    <button type="button" class="emoji-choice">😆</button>
-    <button type="button" class="emoji-choice">😂</button>
-    <button type="button" class="emoji-choice">🤣</button>
-
-    <button type="button" class="emoji-choice">😊</button>
-    <button type="button" class="emoji-choice">😍</button>
-    <button type="button" class="emoji-choice">🥰</button>
-    <button type="button" class="emoji-choice">😘</button>
-    <button type="button" class="emoji-choice">😜</button>
-    <button type="button" class="emoji-choice">🤪</button>
-    <button type="button" class="emoji-choice">😎</button>
-
-    <button type="button" class="emoji-choice">🤓</button>
-    <button type="button" class="emoji-choice">🧐</button>
-    <button type="button" class="emoji-choice">🙄</button>
-    <button type="button" class="emoji-choice">😒</button>
-    <button type="button" class="emoji-choice">😬</button>
-    <button type="button" class="emoji-choice">😏</button>
-    <button type="button" class="emoji-choice">🤔</button>
-
-    <button type="button" class="emoji-choice">🤦‍♀️</button>
-    <button type="button" class="emoji-choice">🤦‍♂️</button>
-    <button type="button" class="emoji-choice">🤷‍♀️</button>
-    <button type="button" class="emoji-choice">🤷‍♂️</button>
-    <button type="button" class="emoji-choice">😭</button>
-    <button type="button" class="emoji-choice">😱</button>
-    <button type="button" class="emoji-choice">😈</button>
-
-    <button type="button" class="emoji-choice">🤬</button>
-    <button type="button" class="emoji-choice">💀</button>
-    <button type="button" class="emoji-choice">🤡</button>
-    <button type="button" class="emoji-choice">🥳</button>
-    <button type="button" class="emoji-choice">🤯</button>
-    <button type="button" class="emoji-choice">🥴</button>
-    <button type="button" class="emoji-choice">😴</button>
-
-  </div>
+              <div
+                class="emoji-picker"
+                id="emojiPicker"
+              >
 
 
-  <!-- REACTIONS -->
+                <!-- CATEGORY TABS -->
 
-  <div
-    class="emoji-category"
-    data-category="reactions"
-  >
+                <div class="emoji-tabs">
 
-    <button type="button" class="emoji-choice">❤️</button>
-    <button type="button" class="emoji-choice">🧡</button>
-    <button type="button" class="emoji-choice">💛</button>
-    <button type="button" class="emoji-choice">💚</button>
-    <button type="button" class="emoji-choice">💙</button>
-    <button type="button" class="emoji-choice">💜</button>
-    <button type="button" class="emoji-choice">🖤</button>
+                  <button
+                    type="button"
+                    class="emoji-tab active"
+                    data-category="faces"
+                    title="Faces"
+                  >
+                    😀
+                  </button>
 
-    <button type="button" class="emoji-choice">🤍</button>
-    <button type="button" class="emoji-choice">💔</button>
-    <button type="button" class="emoji-choice">💕</button>
-    <button type="button" class="emoji-choice">💖</button>
-    <button type="button" class="emoji-choice">🔥</button>
-    <button type="button" class="emoji-choice">💯</button>
-    <button type="button" class="emoji-choice">✨</button>
+                  <button
+                    type="button"
+                    class="emoji-tab"
+                    data-category="reactions"
+                    title="Reactions"
+                  >
+                    ❤️
+                  </button>
 
-    <button type="button" class="emoji-choice">👏</button>
-    <button type="button" class="emoji-choice">🙌</button>
-    <button type="button" class="emoji-choice">👍</button>
-    <button type="button" class="emoji-choice">👎</button>
-    <button type="button" class="emoji-choice">👌</button>
-    <button type="button" class="emoji-choice">✌️</button>
-    <button type="button" class="emoji-choice">🤝</button>
+                  <button
+                    type="button"
+                    class="emoji-tab"
+                    data-category="gaming"
+                    title="Gaming"
+                  >
+                    ⚔️
+                  </button>
 
-    <button type="button" class="emoji-choice">🙏</button>
-    <button type="button" class="emoji-choice">🫶</button>
-    <button type="button" class="emoji-choice">👀</button>
-    <button type="button" class="emoji-choice">🖕</button>
-    <button type="button" class="emoji-choice">💪</button>
-    <button type="button" class="emoji-choice">🫡</button>
-    <button type="button" class="emoji-choice">🎉</button>
+                  <button
+                    type="button"
+                    class="emoji-tab"
+                    data-category="fantasy"
+                    title="Fantasy"
+                  >
+                    🐉
+                  </button>
 
-  </div>
+                  <button
+                    type="button"
+                    class="emoji-tab"
+                    data-category="random"
+                    title="Random Chaos"
+                  >
+                    🍻
+                  </button>
 
-
-  <!-- GAMING -->
-
-  <div
-    class="emoji-category"
-    data-category="gaming"
-  >
-
-    <button type="button" class="emoji-choice">🎮</button>
-    <button type="button" class="emoji-choice">🕹️</button>
-    <button type="button" class="emoji-choice">⚔️</button>
-    <button type="button" class="emoji-choice">🛡️</button>
-    <button type="button" class="emoji-choice">🏹</button>
-    <button type="button" class="emoji-choice">🗡️</button>
-    <button type="button" class="emoji-choice">🪓</button>
-
-    <button type="button" class="emoji-choice">🔮</button>
-    <button type="button" class="emoji-choice">💎</button>
-    <button type="button" class="emoji-choice">👑</button>
-    <button type="button" class="emoji-choice">🏆</button>
-    <button type="button" class="emoji-choice">🥇</button>
-    <button type="button" class="emoji-choice">🎯</button>
-    <button type="button" class="emoji-choice">💥</button>
-
-    <button type="button" class="emoji-choice">☠️</button>
-    <button type="button" class="emoji-choice">🧪</button>
-    <button type="button" class="emoji-choice">🗺️</button>
-    <button type="button" class="emoji-choice">🧭</button>
-    <button type="button" class="emoji-choice">📜</button>
-    <button type="button" class="emoji-choice">🏰</button>
-    <button type="button" class="emoji-choice">💰</button>
-
-    <button type="button" class="emoji-choice">💀</button>
-    <button type="button" class="emoji-choice">🔥</button>
-    <button type="button" class="emoji-choice">⚡</button>
-    <button type="button" class="emoji-choice">❄️</button>
-    <button type="button" class="emoji-choice">🪄</button>
-    <button type="button" class="emoji-choice">🧿</button>
-    <button type="button" class="emoji-choice">🎲</button>
-
-  </div>
+                </div>
 
 
-  <!-- FANTASY -->
 
-  <div
-    class="emoji-category"
-    data-category="fantasy"
-  >
+                <!-- FACES -->
 
-    <button type="button" class="emoji-choice">🐉</button>
-    <button type="button" class="emoji-choice">🐲</button>
-    <button type="button" class="emoji-choice">🧙‍♂️</button>
-    <button type="button" class="emoji-choice">🧙‍♀️</button>
-    <button type="button" class="emoji-choice">🧝‍♂️</button>
-    <button type="button" class="emoji-choice">🧝‍♀️</button>
-    <button type="button" class="emoji-choice">🧚‍♀️</button>
+                <div
+                  class="emoji-category active"
+                  data-category="faces"
+                >
 
-    <button type="button" class="emoji-choice">🧚‍♂️</button>
-    <button type="button" class="emoji-choice">🧌</button>
-    <button type="button" class="emoji-choice">🧟</button>
-    <button type="button" class="emoji-choice">🧛‍♂️</button>
-    <button type="button" class="emoji-choice">🧛‍♀️</button>
-    <button type="button" class="emoji-choice">👹</button>
-    <button type="button" class="emoji-choice">👺</button>
+                  <button type="button" class="emoji-choice">😀</button>
+                  <button type="button" class="emoji-choice">😃</button>
+                  <button type="button" class="emoji-choice">😄</button>
+                  <button type="button" class="emoji-choice">😁</button>
+                  <button type="button" class="emoji-choice">😆</button>
+                  <button type="button" class="emoji-choice">😂</button>
+                  <button type="button" class="emoji-choice">🤣</button>
 
-    <button type="button" class="emoji-choice">👻</button>
-    <button type="button" class="emoji-choice">🕷️</button>
-    <button type="button" class="emoji-choice">🦂</button>
-    <button type="button" class="emoji-choice">🐺</button>
-    <button type="button" class="emoji-choice">🦄</button>
-    <button type="button" class="emoji-choice">🦇</button>
-    <button type="button" class="emoji-choice">🐍</button>
+                  <button type="button" class="emoji-choice">😊</button>
+                  <button type="button" class="emoji-choice">😍</button>
+                  <button type="button" class="emoji-choice">🥰</button>
+                  <button type="button" class="emoji-choice">😘</button>
+                  <button type="button" class="emoji-choice">😜</button>
+                  <button type="button" class="emoji-choice">🤪</button>
+                  <button type="button" class="emoji-choice">😎</button>
 
-    <button type="button" class="emoji-choice">🔥</button>
-    <button type="button" class="emoji-choice">❄️</button>
-    <button type="button" class="emoji-choice">⚡</button>
-    <button type="button" class="emoji-choice">🌙</button>
-    <button type="button" class="emoji-choice">⭐</button>
-    <button type="button" class="emoji-choice">🌟</button>
-    <button type="button" class="emoji-choice">🌌</button>
+                  <button type="button" class="emoji-choice">🤓</button>
+                  <button type="button" class="emoji-choice">🧐</button>
+                  <button type="button" class="emoji-choice">🙄</button>
+                  <button type="button" class="emoji-choice">😒</button>
+                  <button type="button" class="emoji-choice">😬</button>
+                  <button type="button" class="emoji-choice">😏</button>
+                  <button type="button" class="emoji-choice">🤔</button>
 
-  </div>
+                  <button type="button" class="emoji-choice">🤦‍♀️</button>
+                  <button type="button" class="emoji-choice">🤦‍♂️</button>
+                  <button type="button" class="emoji-choice">🤷‍♀️</button>
+                  <button type="button" class="emoji-choice">🤷‍♂️</button>
+                  <button type="button" class="emoji-choice">😭</button>
+                  <button type="button" class="emoji-choice">😱</button>
+                  <button type="button" class="emoji-choice">😈</button>
 
+                  <button type="button" class="emoji-choice">🤬</button>
+                  <button type="button" class="emoji-choice">💀</button>
+                  <button type="button" class="emoji-choice">🤡</button>
+                  <button type="button" class="emoji-choice">🥳</button>
+                  <button type="button" class="emoji-choice">🤯</button>
+                  <button type="button" class="emoji-choice">🥴</button>
+                  <button type="button" class="emoji-choice">😴</button>
 
-  <!-- RANDOM CHAOS -->
-
-  <div
-    class="emoji-category"
-    data-category="random"
-  >
-
-    <button type="button" class="emoji-choice">🍻</button>
-    <button type="button" class="emoji-choice">🍺</button>
-    <button type="button" class="emoji-choice">🍷</button>
-    <button type="button" class="emoji-choice">☕</button>
-    <button type="button" class="emoji-choice">🍕</button>
-    <button type="button" class="emoji-choice">🍔</button>
-    <button type="button" class="emoji-choice">🍟</button>
-
-    <button type="button" class="emoji-choice">🍿</button>
-    <button type="button" class="emoji-choice">🍰</button>
-    <button type="button" class="emoji-choice">🎂</button>
-    <button type="button" class="emoji-choice">🐈</button>
-    <button type="button" class="emoji-choice">🐕</button>
-    <button type="button" class="emoji-choice">🦆</button>
-    <button type="button" class="emoji-choice">🐸</button>
-
-    <button type="button" class="emoji-choice">🦖</button>
-    <button type="button" class="emoji-choice">💩</button>
-    <button type="button" class="emoji-choice">🧠</button>
-    <button type="button" class="emoji-choice">🫠</button>
-    <button type="button" class="emoji-choice">🫣</button>
-    <button type="button" class="emoji-choice">🫢</button>
-    <button type="button" class="emoji-choice">🤌</button>
-
-    <button type="button" class="emoji-choice">🤏</button>
-    <button type="button" class="emoji-choice">🧨</button>
-    <button type="button" class="emoji-choice">🚨</button>
-    <button type="button" class="emoji-choice">🛑</button>
-    <button type="button" class="emoji-choice">🚩</button>
-    <button type="button" class="emoji-choice">🎵</button>
-    <button type="button" class="emoji-choice">🎶</button>
-
-    <button type="button" class="emoji-choice">🦩</button>
-    <button type="button" class="emoji-choice">🌈</button>
-    <button type="button" class="emoji-choice">🛸</button>
-    <button type="button" class="emoji-choice">👽</button>
-    <button type="button" class="emoji-choice">💣</button>
-    <button type="button" class="emoji-choice">🗑️</button>
-    <button type="button" class="emoji-choice">🧯</button>
-
-  </div>
-
-</div>
-
-              
+                </div>
 
 
-            <!-- MESSAGE BOX -->
+
+                <!-- REACTIONS -->
+
+                <div
+                  class="emoji-category"
+                  data-category="reactions"
+                >
+
+                  <button type="button" class="emoji-choice">❤️</button>
+                  <button type="button" class="emoji-choice">🧡</button>
+                  <button type="button" class="emoji-choice">💛</button>
+                  <button type="button" class="emoji-choice">💚</button>
+                  <button type="button" class="emoji-choice">💙</button>
+                  <button type="button" class="emoji-choice">💜</button>
+                  <button type="button" class="emoji-choice">🖤</button>
+
+                  <button type="button" class="emoji-choice">🤍</button>
+                  <button type="button" class="emoji-choice">💔</button>
+                  <button type="button" class="emoji-choice">💕</button>
+                  <button type="button" class="emoji-choice">💖</button>
+                  <button type="button" class="emoji-choice">🔥</button>
+                  <button type="button" class="emoji-choice">💯</button>
+                  <button type="button" class="emoji-choice">✨</button>
+
+                  <button type="button" class="emoji-choice">👏</button>
+                  <button type="button" class="emoji-choice">🙌</button>
+                  <button type="button" class="emoji-choice">👍</button>
+                  <button type="button" class="emoji-choice">👎</button>
+                  <button type="button" class="emoji-choice">👌</button>
+                  <button type="button" class="emoji-choice">✌️</button>
+                  <button type="button" class="emoji-choice">🤝</button>
+
+                  <button type="button" class="emoji-choice">🙏</button>
+                  <button type="button" class="emoji-choice">🫶</button>
+                  <button type="button" class="emoji-choice">👀</button>
+                  <button type="button" class="emoji-choice">🖕</button>
+                  <button type="button" class="emoji-choice">💪</button>
+                  <button type="button" class="emoji-choice">🫡</button>
+                  <button type="button" class="emoji-choice">🎉</button>
+
+                </div>
+
+
+
+                <!-- GAMING -->
+
+                <div
+                  class="emoji-category"
+                  data-category="gaming"
+                >
+
+                  <button type="button" class="emoji-choice">🎮</button>
+                  <button type="button" class="emoji-choice">🕹️</button>
+                  <button type="button" class="emoji-choice">⚔️</button>
+                  <button type="button" class="emoji-choice">🛡️</button>
+                  <button type="button" class="emoji-choice">🏹</button>
+                  <button type="button" class="emoji-choice">🗡️</button>
+                  <button type="button" class="emoji-choice">🪓</button>
+
+                  <button type="button" class="emoji-choice">🔮</button>
+                  <button type="button" class="emoji-choice">💎</button>
+                  <button type="button" class="emoji-choice">👑</button>
+                  <button type="button" class="emoji-choice">🏆</button>
+                  <button type="button" class="emoji-choice">🥇</button>
+                  <button type="button" class="emoji-choice">🎯</button>
+                  <button type="button" class="emoji-choice">💥</button>
+
+                  <button type="button" class="emoji-choice">☠️</button>
+                  <button type="button" class="emoji-choice">🧪</button>
+                  <button type="button" class="emoji-choice">🗺️</button>
+                  <button type="button" class="emoji-choice">🧭</button>
+                  <button type="button" class="emoji-choice">📜</button>
+                  <button type="button" class="emoji-choice">🏰</button>
+                  <button type="button" class="emoji-choice">💰</button>
+
+                  <button type="button" class="emoji-choice">💀</button>
+                  <button type="button" class="emoji-choice">🔥</button>
+                  <button type="button" class="emoji-choice">⚡</button>
+                  <button type="button" class="emoji-choice">❄️</button>
+                  <button type="button" class="emoji-choice">🪄</button>
+                  <button type="button" class="emoji-choice">🧿</button>
+                  <button type="button" class="emoji-choice">🎲</button>
+
+                </div>
+
+
+
+                <!-- FANTASY -->
+
+                <div
+                  class="emoji-category"
+                  data-category="fantasy"
+                >
+
+                  <button type="button" class="emoji-choice">🐉</button>
+                  <button type="button" class="emoji-choice">🐲</button>
+                  <button type="button" class="emoji-choice">🧙‍♂️</button>
+                  <button type="button" class="emoji-choice">🧙‍♀️</button>
+                  <button type="button" class="emoji-choice">🧝‍♂️</button>
+                  <button type="button" class="emoji-choice">🧝‍♀️</button>
+                  <button type="button" class="emoji-choice">🧚‍♀️</button>
+
+                  <button type="button" class="emoji-choice">🧚‍♂️</button>
+                  <button type="button" class="emoji-choice">🧌</button>
+                  <button type="button" class="emoji-choice">🧟</button>
+                  <button type="button" class="emoji-choice">🧛‍♂️</button>
+                  <button type="button" class="emoji-choice">🧛‍♀️</button>
+                  <button type="button" class="emoji-choice">👹</button>
+                  <button type="button" class="emoji-choice">👺</button>
+
+                  <button type="button" class="emoji-choice">👻</button>
+                  <button type="button" class="emoji-choice">🕷️</button>
+                  <button type="button" class="emoji-choice">🦂</button>
+                  <button type="button" class="emoji-choice">🐺</button>
+                  <button type="button" class="emoji-choice">🦄</button>
+                  <button type="button" class="emoji-choice">🦇</button>
+                  <button type="button" class="emoji-choice">🐍</button>
+
+                  <button type="button" class="emoji-choice">🔥</button>
+                  <button type="button" class="emoji-choice">❄️</button>
+                  <button type="button" class="emoji-choice">⚡</button>
+                  <button type="button" class="emoji-choice">🌙</button>
+                  <button type="button" class="emoji-choice">⭐</button>
+                  <button type="button" class="emoji-choice">🌟</button>
+                  <button type="button" class="emoji-choice">🌌</button>
+
+                </div>
+
+
+
+                <!-- RANDOM CHAOS -->
+
+                <div
+                  class="emoji-category"
+                  data-category="random"
+                >
+
+                  <button type="button" class="emoji-choice">🍻</button>
+                  <button type="button" class="emoji-choice">🍺</button>
+                  <button type="button" class="emoji-choice">🍷</button>
+                  <button type="button" class="emoji-choice">☕</button>
+                  <button type="button" class="emoji-choice">🍕</button>
+                  <button type="button" class="emoji-choice">🍔</button>
+                  <button type="button" class="emoji-choice">🍟</button>
+
+                  <button type="button" class="emoji-choice">🍿</button>
+                  <button type="button" class="emoji-choice">🍰</button>
+                  <button type="button" class="emoji-choice">🎂</button>
+                  <button type="button" class="emoji-choice">🐈</button>
+                  <button type="button" class="emoji-choice">🐕</button>
+                  <button type="button" class="emoji-choice">🦆</button>
+                  <button type="button" class="emoji-choice">🐸</button>
+
+                  <button type="button" class="emoji-choice">🦖</button>
+                  <button type="button" class="emoji-choice">💩</button>
+                  <button type="button" class="emoji-choice">🧠</button>
+                  <button type="button" class="emoji-choice">🫠</button>
+                  <button type="button" class="emoji-choice">🫣</button>
+                  <button type="button" class="emoji-choice">🫢</button>
+                  <button type="button" class="emoji-choice">🤌</button>
+
+                  <button type="button" class="emoji-choice">🤏</button>
+                  <button type="button" class="emoji-choice">🧨</button>
+                  <button type="button" class="emoji-choice">🚨</button>
+                  <button type="button" class="emoji-choice">🛑</button>
+                  <button type="button" class="emoji-choice">🚩</button>
+                  <button type="button" class="emoji-choice">🎵</button>
+                  <button type="button" class="emoji-choice">🎶</button>
+
+                  <button type="button" class="emoji-choice">🦩</button>
+                  <button type="button" class="emoji-choice">🌈</button>
+                  <button type="button" class="emoji-choice">🛸</button>
+                  <button type="button" class="emoji-choice">👽</button>
+                  <button type="button" class="emoji-choice">💣</button>
+                  <button type="button" class="emoji-choice">🗑️</button>
+                  <button type="button" class="emoji-choice">🧯</button>
+
+                </div>
+
+
+              </div>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 MESSAGE BOX
+                 ================================================== -->
 
             <form
               class="chat-compose"
@@ -1224,11 +1266,14 @@
     };
 
 
-    const app = initializeApp(firebaseConfig);
+    const app =
+      initializeApp(firebaseConfig);
 
-    const auth = getAuth(app);
+    const auth =
+      getAuth(app);
 
-    const db = getFirestore(app);
+    const db =
+      getFirestore(app);
 
 
 
@@ -1278,6 +1323,12 @@
     const mediaButton =
       document.getElementById("mediaButton");
 
+    const emojiTabs =
+      document.querySelectorAll(".emoji-tab");
+
+    const emojiCategories =
+      document.querySelectorAll(".emoji-category");
+
 
 
     let currentNickname = "";
@@ -1311,10 +1362,10 @@
     function prettyNameFromEmail(email) {
 
       const raw =
-        email
-          .split("@")[0];
+        email.split("@")[0];
 
-      return raw.charAt(0).toUpperCase() + raw.slice(1);
+      return raw.charAt(0).toUpperCase()
+        + raw.slice(1);
 
     }
 
@@ -1330,7 +1381,8 @@
 
         event.preventDefault();
 
-        loginError.style.display = "none";
+        loginError.style.display =
+          "none";
 
 
         const enteredName =
@@ -1358,7 +1410,9 @@
           );
 
 
-          currentNickname = enteredName;
+          currentNickname =
+            enteredName;
+
 
           sessionStorage.setItem(
             "chaosNickname",
@@ -1366,7 +1420,8 @@
           );
 
 
-          accessCodeInput.value = "";
+          accessCodeInput.value =
+            "";
 
         }
 
@@ -1375,7 +1430,8 @@
 
           console.error(error);
 
-          loginError.style.display = "block";
+          loginError.style.display =
+            "block";
 
         }
 
@@ -1430,7 +1486,8 @@
 
             unsubscribeMessages();
 
-            unsubscribeMessages = null;
+            unsubscribeMessages =
+              null;
 
           }
 
@@ -1453,6 +1510,7 @@
           "chaosNickname"
         );
 
+
         await signOut(auth);
 
       }
@@ -1461,18 +1519,89 @@
 
 
     /* ======================================================
-       EMOJI PICKER
+       OPEN / CLOSE EMOJI PICKER
        ====================================================== */
 
     emojiButton.addEventListener(
       "click",
       () => {
 
-        emojiPicker.classList.toggle("open");
+        emojiPicker.classList.toggle(
+          "open"
+        );
 
       }
     );
 
+
+
+    /* ======================================================
+       EMOJI CATEGORY TABS
+       ====================================================== */
+
+    emojiTabs.forEach(
+      (tab) => {
+
+        tab.addEventListener(
+          "click",
+          () => {
+
+            const category =
+              tab.dataset.category;
+
+
+            emojiTabs.forEach(
+              (item) => {
+
+                item.classList.remove(
+                  "active"
+                );
+
+              }
+            );
+
+
+            emojiCategories.forEach(
+              (item) => {
+
+                item.classList.remove(
+                  "active"
+                );
+
+              }
+            );
+
+
+            tab.classList.add(
+              "active"
+            );
+
+
+            const targetCategory =
+              document.querySelector(
+                `.emoji-category[data-category="${category}"]`
+              );
+
+
+            if (targetCategory) {
+
+              targetCategory.classList.add(
+                "active"
+              );
+
+            }
+
+          }
+        );
+
+      }
+    );
+
+
+
+    /* ======================================================
+       INSERT EMOJI INTO MESSAGE
+       ====================================================== */
 
     document
       .querySelectorAll(".emoji-choice")
@@ -1511,13 +1640,16 @@
 
               messageInput.focus();
 
+
               messageInput.setSelectionRange(
                 newPosition,
                 newPosition
               );
 
 
-              emojiPicker.classList.remove("open");
+              emojiPicker.classList.remove(
+                "open"
+              );
 
             }
           );
@@ -1526,16 +1658,23 @@
       );
 
 
+
+    /* ======================================================
+       CLICK OUTSIDE EMOJI PICKER
+       ====================================================== */
+
     document.addEventListener(
       "click",
       (event) => {
 
         if (
           !emojiPicker.contains(event.target)
-          && event.target !== emojiButton
+          && !emojiButton.contains(event.target)
         ) {
 
-          emojiPicker.classList.remove("open");
+          emojiPicker.classList.remove(
+            "open"
+          );
 
         }
 
@@ -1577,6 +1716,7 @@
           );
 
           return;
+
         }
 
 
@@ -1586,6 +1726,7 @@
             ` ${cleanUrl}`;
 
         }
+
 
         else {
 
@@ -1603,7 +1744,7 @@
 
 
     /* ======================================================
-       URL HELPERS
+       IMAGE URL CHECK
        ====================================================== */
 
     function isImageUrl(url) {
@@ -1614,10 +1755,35 @@
           new URL(url);
 
 
-        return /\.(jpg|jpeg|png|gif|webp|avif)$/i
-          .test(parsed.pathname);
+        const path =
+          parsed.pathname.toLowerCase();
+
+
+        if (
+          /\.(jpg|jpeg|png|gif|webp|avif)$/
+            .test(path)
+        ) {
+
+          return true;
+
+        }
+
+
+        if (
+          parsed.hostname.includes("media.giphy.com")
+          || parsed.hostname.includes("i.giphy.com")
+          || parsed.hostname.includes("media.tenor.com")
+        ) {
+
+          return true;
+
+        }
+
+
+        return false;
 
       }
+
 
       catch {
 
@@ -1628,6 +1794,10 @@
     }
 
 
+
+    /* ======================================================
+       DISPLAY LINKS + MEDIA
+       ====================================================== */
 
     function appendMessageContent(
       container,
@@ -1734,7 +1904,9 @@
     function startChat() {
 
       if (unsubscribeMessages) {
+
         unsubscribeMessages();
+
       }
 
 
@@ -1751,7 +1923,8 @@
           messagesQuery,
           (snapshot) => {
 
-            messagesElement.innerHTML = "";
+            messagesElement.innerHTML =
+              "";
 
 
             snapshot.forEach(
@@ -1801,7 +1974,8 @@
 
 
                 name.textContent =
-                  data.nickname || "Chaos Member";
+                  data.nickname
+                  || "Chaos Member";
 
 
                 const time =
@@ -1860,11 +2034,14 @@
 
                 bubble.appendChild(text);
 
+
                 message.appendChild(meta);
 
                 message.appendChild(bubble);
 
-                messagesElement.appendChild(message);
+                messagesElement.appendChild(
+                  message
+                );
 
               }
             );
@@ -1927,11 +2104,16 @@
           );
 
 
-          messageInput.value = "";
+          messageInput.value =
+            "";
+
 
           messageInput.focus();
 
-          emojiPicker.classList.remove("open");
+
+          emojiPicker.classList.remove(
+            "open"
+          );
 
         }
 

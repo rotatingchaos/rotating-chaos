@@ -1,1 +1,4084 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Rotating Chaos Neverwinter Guild Event Run Sheet"
+  >
+
+  <title>Run Sheet | Rotating Chaos</title>
+
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Crimson+Pro:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+
+  <style>
+
+    /* ======================================================
+       EVENT PAGE
+       ====================================================== */
+
+    .event-page {
+      min-height: 100vh;
+      padding: 70px 20px 100px;
+
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(15, 130, 105, 0.10),
+          transparent 35%
+        ),
+        #0d0c0b;
+    }
+
+
+    .event-shell {
+      width: min(1150px, 100%);
+      margin: 0 auto;
+    }
+
+
+
+    /* ======================================================
+       LOGIN
+       ====================================================== */
+
+    .event-login-panel {
+      width: min(520px, 100%);
+      margin: 50px auto;
+      padding: 30px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.35);
+
+      background:
+        #151310;
+    }
+
+
+    .event-login-panel h2 {
+      margin-top: 0;
+
+      text-align:
+        center;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .event-login-panel p {
+      text-align:
+        center;
+    }
+
+
+    .field {
+      margin-top:
+        17px;
+    }
+
+
+    .field label {
+      display:
+        block;
+
+      margin-bottom:
+        6px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        0.78rem;
+
+      letter-spacing:
+        1px;
+    }
+
+
+    .field input,
+    .field select,
+    .field textarea {
+      width:
+        100%;
+
+      box-sizing:
+        border-box;
+
+      padding:
+        11px 12px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.35);
+
+      background:
+        #11100f;
+
+      color:
+        #f6efe2;
+
+      font:
+        inherit;
+    }
+
+
+    .field textarea {
+      min-height:
+        95px;
+
+      resize:
+        vertical;
+    }
+
+
+    .primary-button {
+      border:
+        1px solid #d7aa42;
+
+      background:
+        #d7aa42;
+
+      color:
+        #111;
+
+      padding:
+        11px 16px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-weight:
+        800;
+
+      cursor:
+        pointer;
+    }
+
+
+    .secondary-button {
+      border:
+        1px solid rgba(218, 165, 32, 0.4);
+
+      background:
+        #171513;
+
+      color:
+        #f6efe2;
+
+      padding:
+        9px 13px;
+
+      cursor:
+        pointer;
+    }
+
+
+    .danger-button {
+      border:
+        1px solid rgba(210, 80, 80, 0.5);
+
+      background:
+        rgba(130, 30, 30, 0.15);
+
+      color:
+        #ffbaba;
+
+      padding:
+        8px 12px;
+
+      cursor:
+        pointer;
+    }
+
+
+    .login-submit {
+      width:
+        100%;
+
+      margin-top:
+        22px;
+    }
+
+
+    .login-error {
+      display:
+        none;
+
+      margin-top:
+        14px;
+
+      color:
+        #ff9999;
+
+      text-align:
+        center;
+    }
+
+
+
+    /* ======================================================
+       MAIN APP
+       ====================================================== */
+
+    .event-app {
+      display:
+        none;
+    }
+
+
+    .event-top-actions {
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      gap:
+        15px;
+
+      align-items:
+        center;
+
+      margin-bottom:
+        20px;
+    }
+
+
+    .event-top-actions-right {
+      display:
+        flex;
+
+      gap:
+        9px;
+
+      flex-wrap:
+        wrap;
+    }
+
+
+
+    /* ======================================================
+       EVENT HERO
+       ====================================================== */
+
+    .event-hero {
+      padding:
+        30px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.34);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(67, 214, 186, 0.10),
+          rgba(218, 165, 32, 0.06)
+        );
+    }
+
+
+    .event-type {
+      font-family:
+        "Cinzel",
+        serif;
+
+      color:
+        #43d6ba;
+
+      font-size:
+        0.76rem;
+
+      letter-spacing:
+        2px;
+    }
+
+
+    .event-hero h1 {
+      margin:
+        6px 0 12px;
+
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        clamp(
+          2rem,
+          5vw,
+          3.5rem
+        );
+    }
+
+
+    .event-meta-grid {
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(
+          4,
+          1fr
+        );
+
+      gap:
+        12px;
+
+      margin-top:
+        20px;
+    }
+
+
+    .event-meta-box {
+      padding:
+        13px;
+
+      background:
+        rgba(
+          0,
+          0,
+          0,
+          0.2
+        );
+
+      border:
+        1px solid rgba(218, 165, 32, 0.14);
+    }
+
+
+    .event-meta-label {
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        0.68rem;
+
+      opacity:
+        0.55;
+
+      letter-spacing:
+        1px;
+    }
+
+
+    .event-meta-value {
+      margin-top:
+        5px;
+
+      font-size:
+        1rem;
+    }
+
+
+    .event-notes {
+      margin-top:
+        18px;
+
+      line-height:
+        1.6;
+    }
+
+
+
+    /* ======================================================
+       DISCORD TIMESTAMP
+       ====================================================== */
+
+    .discord-box {
+      margin-top:
+        18px;
+
+      padding:
+        13px;
+
+      background:
+        rgba(67, 214, 186, 0.06);
+
+      border:
+        1px solid rgba(67, 214, 186, 0.22);
+    }
+
+
+    .discord-code {
+      display:
+        block;
+
+      margin-top:
+        7px;
+
+      padding:
+        9px;
+
+      background:
+        #090807;
+
+      font-family:
+        monospace;
+
+      word-break:
+        break-all;
+    }
+
+
+
+    /* ======================================================
+       SECTION PANELS
+       ====================================================== */
+
+    .event-panel {
+      margin-top:
+        24px;
+
+      padding:
+        22px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.28);
+
+      background:
+        #121110;
+    }
+
+
+    .panel-heading {
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      align-items:
+        center;
+
+      gap:
+        10px;
+
+      margin-bottom:
+        16px;
+    }
+
+
+    .panel-heading h2 {
+      margin:
+        0;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+
+    /* ======================================================
+       SIGNUPS
+       ====================================================== */
+
+    .signup-layout {
+      display:
+        grid;
+
+      grid-template-columns:
+        minmax(
+          260px,
+          0.8fr
+        )
+        minmax(
+          0,
+          1.3fr
+        );
+
+      gap:
+        20px;
+    }
+
+
+    .signup-form {
+      padding:
+        16px;
+
+      background:
+        #171513;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.15);
+    }
+
+
+    .signup-list {
+      display:
+        grid;
+
+      gap:
+        9px;
+    }
+
+
+    .signup-person {
+      display:
+        grid;
+
+      grid-template-columns:
+        1fr auto;
+
+      gap:
+        10px;
+
+      padding:
+        11px 13px;
+
+      background:
+        #171513;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.14);
+    }
+
+
+    .signup-person-name {
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-weight:
+        700;
+    }
+
+
+    .signup-person-note {
+      margin-top:
+        3px;
+
+      opacity:
+        0.65;
+
+      font-size:
+        0.88rem;
+    }
+
+
+    .signup-role {
+      padding:
+        5px 8px;
+
+      border-radius:
+        999px;
+
+      font-size:
+        0.72rem;
+
+      align-self:
+        start;
+    }
+
+
+    .role-tank {
+      background:
+        rgba(60, 140, 220, 0.15);
+
+      color:
+        #8ecbff;
+    }
+
+
+    .role-healer {
+      background:
+        rgba(50, 190, 140, 0.14);
+
+      color:
+        #80e8bd;
+    }
+
+
+    .role-dps {
+      background:
+        rgba(220, 80, 80, 0.14);
+
+      color:
+        #ffaaaa;
+    }
+
+
+    .role-filler,
+    .role-any {
+      background:
+        rgba(218, 165, 32, 0.13);
+
+      color:
+        #e5c26b;
+    }
+
+
+
+    /* ======================================================
+       RUN SHEET
+       ====================================================== */
+
+    .run-group {
+      margin-top:
+        15px;
+
+      border:
+        1px solid rgba(67, 214, 186, 0.20);
+
+      background:
+        #151310;
+    }
+
+
+    .run-group-header {
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      align-items:
+        center;
+
+      gap:
+        12px;
+
+      padding:
+        13px 15px;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(67, 214, 186, 0.09),
+          rgba(218, 165, 32, 0.04)
+        );
+
+      border-bottom:
+        1px solid rgba(67, 214, 186, 0.15);
+    }
+
+
+    .run-group-header h3 {
+      margin:
+        0;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .run-group-actions {
+      display:
+        flex;
+
+      gap:
+        7px;
+
+      flex-wrap:
+        wrap;
+    }
+
+
+    .run-slots {
+      padding:
+        10px 14px 14px;
+    }
+
+
+    .run-slot {
+      display:
+        grid;
+
+      grid-template-columns:
+        120px
+        minmax(140px, 0.8fr)
+        minmax(180px, 1.4fr);
+
+      gap:
+        10px;
+
+      padding:
+        10px 0;
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.05);
+    }
+
+
+    .run-slot:last-child {
+      border-bottom:
+        0;
+    }
+
+
+    .slot-role {
+      font-family:
+        "Cinzel",
+        serif;
+
+      font-size:
+        0.8rem;
+
+      font-weight:
+        700;
+    }
+
+
+    .slot-player {
+      color:
+        #ddb45d;
+
+      font-weight:
+        600;
+    }
+
+
+    .slot-requirements {
+      opacity:
+        0.75;
+    }
+
+
+    .open-slot {
+      opacity:
+        0.45;
+
+      font-style:
+        italic;
+    }
+
+
+
+    /* ======================================================
+       ORGANISER EDITOR
+       ====================================================== */
+
+    .organiser-tools {
+      display:
+        none;
+    }
+
+
+    .organiser-tools.active {
+      display:
+        block;
+    }
+
+
+    .group-editor {
+      padding:
+        16px;
+
+      background:
+        #0e0d0c;
+
+      border-top:
+        1px solid rgba(218, 165, 32, 0.15);
+    }
+
+
+    .editor-slot {
+      display:
+        grid;
+
+      grid-template-columns:
+        130px
+        1fr
+        1.4fr
+        auto;
+
+      gap:
+        8px;
+
+      margin-top:
+        9px;
+
+      align-items:
+        end;
+    }
+
+
+    .editor-slot select,
+    .editor-slot input {
+      width:
+        100%;
+
+      box-sizing:
+        border-box;
+
+      padding:
+        9px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.25);
+
+      background:
+        #161412;
+
+      color:
+        white;
+    }
+
+
+
+    /* ======================================================
+       ADD GROUP MODAL
+       ====================================================== */
+
+    .modal-backdrop {
+      display:
+        none;
+
+      position:
+        fixed;
+
+      inset:
+        0;
+
+      z-index:
+        300;
+
+      padding:
+        25px 15px;
+
+      overflow-y:
+        auto;
+
+      background:
+        rgba(0, 0, 0, 0.82);
+    }
+
+
+    .modal-backdrop.open {
+      display:
+        block;
+    }
+
+
+    .modal {
+      width:
+        min(600px, 100%);
+
+      margin:
+        40px auto;
+
+      padding:
+        24px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.4);
+
+      background:
+        #141210;
+    }
+
+
+    .modal h2 {
+      margin-top:
+        0;
+
+      font-family:
+        "Cinzel",
+        serif;
+    }
+
+
+    .template-grid {
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap:
+        10px;
+
+      margin-top:
+        15px;
+    }
+
+
+    .template-option {
+      padding:
+        12px;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.25);
+
+      background:
+        #171513;
+
+      cursor:
+        pointer;
+
+      color:
+        white;
+    }
+
+
+    .template-option.active {
+      border-color:
+        #43d6ba;
+
+      background:
+        rgba(67, 214, 186, 0.08);
+    }
+
+
+
+    /* ======================================================
+       DISCORD ANNOUNCEMENT
+       ====================================================== */
+
+    .announcement-preview {
+      white-space:
+        pre-wrap;
+
+      padding:
+        15px;
+
+      background:
+        #090807;
+
+      border:
+        1px solid rgba(218, 165, 32, 0.18);
+
+      font-family:
+        monospace;
+
+      line-height:
+        1.55;
+
+      max-height:
+        430px;
+
+      overflow-y:
+        auto;
+    }
+
+
+
+    /* ======================================================
+       EMPTY
+       ====================================================== */
+
+    .empty-state {
+      opacity:
+        0.55;
+
+      font-style:
+        italic;
+    }
+
+
+
+    /* ======================================================
+       MOBILE
+       ====================================================== */
+
+    @media
+    (max-width: 800px) {
+
+      .event-meta-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+
+      .signup-layout {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .run-slot {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .editor-slot {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .template-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+    }
+
+
+    @media
+    (max-width: 500px) {
+
+      .event-top-actions {
+        flex-direction:
+          column;
+
+        align-items:
+          flex-start;
+      }
+
+
+      .event-meta-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
+
+  <header class="site-header">
+
+    <a
+      href="index.html"
+      class="brand"
+    >
+
+      <img
+        src="images/logo.png"
+        alt="Rotating Chaos guild emblem"
+        class="brand-logo"
+      >
+
+      <div class="brand-text">
+
+        <span class="brand-name">
+          ROTATING CHAOS
+        </span>
+
+        <span class="brand-subtitle">
+          GUILD ◆ FAMILY ◆ CHAOS
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+      <a href="index.html">
+        HOME
+      </a>
+
+      <a href="community.html">
+        COMMUNITY
+      </a>
+
+      <a href="build-guides.html">
+        CHAOS GUIDES
+      </a>
+
+      <a href="events.html">
+        EVENTS
+      </a>
+
+      <a href="merch.html">
+        MERCH
+      </a>
+
+      <a href="index.html#contact">
+        CONTACT
+      </a>
+
+    </nav>
+
+
+    <a
+      href="https://discord.gg/UhJndyjYWr"
+      class="discord-button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      JOIN DISCORD
+    </a>
+
+  </header>
+
+
+
+  <main class="event-page">
+
+    <div class="event-shell">
+
+
+      <!-- LOGIN -->
+
+      <section
+        class="event-login-panel"
+        id="eventLoginPanel"
+      >
+
+        <h2>
+          ENTER THE RUN SHEET
+        </h2>
+
+        <p>
+          Same guild login. No new nonsense required.
+        </p>
+
+
+        <form id="eventLoginForm">
+
+
+          <div class="field">
+
+            <label
+              for="guildName"
+            >
+              GUILD NAME
+            </label>
+
+            <input
+              id="guildName"
+              type="text"
+              required
+            >
+
+          </div>
+
+
+          <div class="field">
+
+            <label
+              for="accessCode"
+            >
+              ACCESS CODE
+            </label>
+
+            <input
+              id="accessCode"
+              type="password"
+              required
+            >
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="primary-button login-submit"
+          >
+            ENTER
+          </button>
+
+
+          <p
+            id="loginError"
+            class="login-error"
+          >
+            Chaos has no idea who you are. 😂
+          </p>
+
+
+        </form>
+
+      </section>
+
+
+
+      <!-- EVENT APP -->
+
+      <section
+        class="event-app"
+        id="eventApp"
+      >
+
+
+        <div class="event-top-actions">
+
+
+          <a
+            href="events.html"
+            class="secondary-button"
+          >
+            ← EVENTS
+          </a>
+
+
+          <div
+            class="event-top-actions-right"
+          >
+
+            <span
+              id="loggedInName"
+            ></span>
+
+
+            <button
+              type="button"
+              class="secondary-button"
+              id="signOutButton"
+            >
+              SIGN OUT
+            </button>
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- EVENT DETAILS -->
+
+        <section
+          class="event-hero"
+        >
+
+
+          <div
+            class="event-type"
+            id="eventType"
+          ></div>
+
+
+          <h1
+            id="eventTitle"
+          >
+            LOADING CHAOS...
+          </h1>
+
+
+          <div
+            id="eventCreatedBy"
+          ></div>
+
+
+
+          <div
+            class="event-meta-grid"
+          >
+
+
+            <div
+              class="event-meta-box"
+            >
+
+              <div
+                class="event-meta-label"
+              >
+                DATE
+              </div>
+
+              <div
+                class="event-meta-value"
+                id="eventDate"
+              ></div>
+
+            </div>
+
+
+
+            <div
+              class="event-meta-box"
+            >
+
+              <div
+                class="event-meta-label"
+              >
+                START TIME
+              </div>
+
+              <div
+                class="event-meta-value"
+                id="eventStart"
+              ></div>
+
+            </div>
+
+
+
+            <div
+              class="event-meta-box"
+            >
+
+              <div
+                class="event-meta-label"
+              >
+                MEET TIME
+              </div>
+
+              <div
+                class="event-meta-value"
+                id="eventMeetTime"
+              ></div>
+
+            </div>
+
+
+
+            <div
+              class="event-meta-box"
+            >
+
+              <div
+                class="event-meta-label"
+              >
+                MEET LOCATION
+              </div>
+
+              <div
+                class="event-meta-value"
+                id="eventMeetLocation"
+              ></div>
+
+            </div>
+
+
+          </div>
+
+
+
+          <p
+            class="event-notes"
+            id="eventNotes"
+          ></p>
+
+
+
+          <div
+            class="discord-box"
+          >
+
+            <strong>
+              DISCORD TIME
+            </strong>
+
+            <code
+              class="discord-code"
+              id="discordTimestamp"
+            ></code>
+
+
+            <button
+              type="button"
+              class="secondary-button"
+              id="copyTimestamp"
+              style="margin-top:10px;"
+            >
+              COPY TIMESTAMP
+            </button>
+
+          </div>
+
+
+        </section>
+
+
+
+        <!-- SIGNUPS -->
+
+        <section
+          class="event-panel"
+        >
+
+
+          <div
+            class="panel-heading"
+          >
+
+            <h2>
+              SIGN UPS
+            </h2>
+
+          </div>
+
+
+
+          <div
+            class="signup-layout"
+          >
+
+
+            <form
+              class="signup-form"
+              id="signupForm"
+            >
+
+
+              <h3>
+                I’M IN
+              </h3>
+
+
+              <div
+                class="field"
+              >
+
+                <label
+                  for="signupRole"
+                >
+                  PREFERRED ROLE
+                </label>
+
+                <select
+                  id="signupRole"
+                >
+
+                  <option value="Tank">
+                    🛡️ Tank
+                  </option>
+
+                  <option value="Healer">
+                    💙 Healer
+                  </option>
+
+                  <option value="DPS">
+                    ⚔️ DPS
+                  </option>
+
+                  <option value="Filler">
+                    ⭐ Filler
+                  </option>
+
+                  <option value="Any">
+                    🎲 Any
+                  </option>
+
+                </select>
+
+              </div>
+
+
+
+              <div
+                class="field"
+              >
+
+                <label
+                  for="signupNote"
+                >
+                  NOTES
+                </label>
+
+                <textarea
+                  id="signupNote"
+                  placeholder="Can tank or DPS, learning run, available as filler, etc..."
+                ></textarea>
+
+              </div>
+
+
+              <button
+                type="submit"
+                class="primary-button"
+              >
+                SAVE SIGN UP
+              </button>
+
+
+              <button
+                type="button"
+                class="danger-button"
+                id="removeSignup"
+                style="margin-left:7px;"
+              >
+                REMOVE ME
+              </button>
+
+
+            </form>
+
+
+
+            <div>
+
+              <h3>
+                WHO’S COMING
+              </h3>
+
+
+              <div
+                class="signup-list"
+                id="signupList"
+              ></div>
+
+            </div>
+
+
+          </div>
+
+
+        </section>
+
+
+
+        <!-- RUN SHEET -->
+
+        <section
+          class="event-panel"
+          id="runSheetPanel"
+        >
+
+
+          <div
+            class="panel-heading"
+          >
+
+            <h2>
+              RUN SHEET
+            </h2>
+
+
+            <button
+              type="button"
+              class="primary-button organiser-tools"
+              id="openGroupModal"
+            >
+              + ADD GROUP
+            </button>
+
+          </div>
+
+
+
+          <div
+            id="runGroups"
+          ></div>
+
+
+        </section>
+
+
+
+        <!-- DISCORD COPY -->
+
+        <section
+          class="event-panel"
+        >
+
+
+          <div
+            class="panel-heading"
+          >
+
+            <h2>
+              DISCORD ANNOUNCEMENT
+            </h2>
+
+
+            <button
+              type="button"
+              class="primary-button"
+              id="copyAnnouncement"
+            >
+              COPY FOR DISCORD
+            </button>
+
+          </div>
+
+
+          <div
+            class="announcement-preview"
+            id="announcementPreview"
+          ></div>
+
+
+        </section>
+
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+
+  <!-- ======================================================
+       ADD GROUP MODAL
+       ====================================================== -->
+
+  <div
+    class="modal-backdrop"
+    id="groupModal"
+  >
+
+
+    <div
+      class="modal"
+    >
+
+
+      <h2>
+        ADD RUN GROUP
+      </h2>
+
+
+      <form
+        id="groupForm"
+      >
+
+
+        <div
+          class="field"
+        >
+
+          <label
+            for="groupName"
+          >
+            GROUP / PHASE NAME
+          </label>
+
+          <input
+            id="groupName"
+            type="text"
+            maxlength="60"
+            placeholder="e.g. Pit Fiend, Bone Devil, Main Group"
+            required
+          >
+
+        </div>
+
+
+
+        <p>
+          Starting layout:
+        </p>
+
+
+        <div
+          class="template-grid"
+        >
+
+
+          <button
+            type="button"
+            class="template-option active"
+            data-template="five"
+          >
+            5 PLAYER
+            <br>
+            1T / 1H / 3D
+          </button>
+
+
+          <button
+            type="button"
+            class="template-option"
+            data-template="ten"
+          >
+            10 PLAYER
+            <br>
+            2T / 2H / 6D
+          </button>
+
+
+          <button
+            type="button"
+            class="template-option"
+            data-template="blank"
+          >
+            BLANK
+            <br>
+            BUILD IT YOURSELF
+          </button>
+
+
+        </div>
+
+
+
+        <div
+          style="margin-top:20px;"
+        >
+
+          <button
+            type="submit"
+            class="primary-button"
+          >
+            CREATE GROUP
+          </button>
+
+
+          <button
+            type="button"
+            class="secondary-button"
+            id="closeGroupModal"
+          >
+            CANCEL
+          </button>
+
+        </div>
+
+
+      </form>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- ======================================================
+       FIREBASE
+       ====================================================== -->
+
+  <script type="module">
+
+
+    import {
+      initializeApp
+    }
+    from
+    "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+
+
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+      signOut,
+      onAuthStateChanged
+    }
+    from
+    "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+
+
+    import {
+      getFirestore,
+      doc,
+      getDoc,
+      collection,
+      addDoc,
+      setDoc,
+      updateDoc,
+      deleteDoc,
+      serverTimestamp,
+      query,
+      orderBy,
+      onSnapshot
+    }
+    from
+    "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+
+
+    /* ======================================================
+       FIREBASE
+       ====================================================== */
+
+    const firebaseConfig = {
+
+      apiKey:
+        "AIzaSyDQjutG0oa4v8dpI3i3UlgsFC9EmWsX4kI",
+
+      authDomain:
+        "rotating-chaos-chat.firebaseapp.com",
+
+      projectId:
+        "rotating-chaos-chat",
+
+      storageBucket:
+        "rotating-chaos-chat.firebasestorage.app",
+
+      messagingSenderId:
+        "337862334710",
+
+      appId:
+        "1:337862334710:web:92e38dd0646dd9bec474d7",
+
+      measurementId:
+        "G-7M761SJ4CJ"
+
+    };
+
+
+    const app =
+      initializeApp(
+        firebaseConfig
+      );
+
+
+    const auth =
+      getAuth(
+        app
+      );
+
+
+    const db =
+      getFirestore(
+        app
+      );
+
+
+
+    /* ======================================================
+       EVENT ID
+       ====================================================== */
+
+    const params =
+      new URLSearchParams(
+        window.location.search
+      );
+
+
+    const eventId =
+      params.get(
+        "id"
+      );
+
+
+    if (!eventId) {
+
+      window.location.href =
+        "events.html";
+
+    }
+
+
+
+    /* ======================================================
+       STATE
+       ====================================================== */
+
+    let eventData =
+      null;
+
+
+    let currentGuildName =
+      "";
+
+
+    let organiser =
+      false;
+
+
+    let currentSignups =
+      [];
+
+
+    let currentGroups =
+      [];
+
+
+    let unsubscribeSignups =
+      null;
+
+
+    let unsubscribeGroups =
+      null;
+
+
+
+    /* ======================================================
+       ELEMENTS
+       ====================================================== */
+
+    const eventLoginPanel =
+      document.getElementById(
+        "eventLoginPanel"
+      );
+
+
+    const eventApp =
+      document.getElementById(
+        "eventApp"
+      );
+
+
+    const eventLoginForm =
+      document.getElementById(
+        "eventLoginForm"
+      );
+
+
+    const guildName =
+      document.getElementById(
+        "guildName"
+      );
+
+
+    const accessCode =
+      document.getElementById(
+        "accessCode"
+      );
+
+
+    const loginError =
+      document.getElementById(
+        "loginError"
+      );
+
+
+    const loggedInName =
+      document.getElementById(
+        "loggedInName"
+      );
+
+
+    const signOutButton =
+      document.getElementById(
+        "signOutButton"
+      );
+
+
+    const signupForm =
+      document.getElementById(
+        "signupForm"
+      );
+
+
+    const signupRole =
+      document.getElementById(
+        "signupRole"
+      );
+
+
+    const signupNote =
+      document.getElementById(
+        "signupNote"
+      );
+
+
+    const removeSignup =
+      document.getElementById(
+        "removeSignup"
+      );
+
+
+    const signupList =
+      document.getElementById(
+        "signupList"
+      );
+
+
+    const runGroups =
+      document.getElementById(
+        "runGroups"
+      );
+
+
+    const runSheetPanel =
+      document.getElementById(
+        "runSheetPanel"
+      );
+
+
+    const openGroupModal =
+      document.getElementById(
+        "openGroupModal"
+      );
+
+
+    const groupModal =
+      document.getElementById(
+        "groupModal"
+      );
+
+
+    const closeGroupModal =
+      document.getElementById(
+        "closeGroupModal"
+      );
+
+
+    const groupForm =
+      document.getElementById(
+        "groupForm"
+      );
+
+
+    const groupName =
+      document.getElementById(
+        "groupName"
+      );
+
+
+    const copyAnnouncement =
+      document.getElementById(
+        "copyAnnouncement"
+      );
+
+
+    const announcementPreview =
+      document.getElementById(
+        "announcementPreview"
+      );
+
+
+    const copyTimestamp =
+      document.getElementById(
+        "copyTimestamp"
+      );
+
+
+    let selectedTemplate =
+      "five";
+
+
+
+    /* ======================================================
+       ACCOUNT EMAIL
+       ====================================================== */
+
+    function makeAccountEmail(
+      name
+    ) {
+
+      const cleaned =
+        name
+          .trim()
+          .toLowerCase()
+          .replace(
+            /[^a-z0-9]/g,
+            ""
+          );
+
+
+      return (
+        `${cleaned}@rotatingchaos.local`
+      );
+
+    }
+
+
+
+    function prettyNameFromEmail(
+      email
+    ) {
+
+      const raw =
+        email.split(
+          "@"
+        )[0];
+
+
+      return (
+        raw.charAt(0).toUpperCase()
+        + raw.slice(1)
+      );
+
+    }
+
+
+
+    /* ======================================================
+       LOGIN
+       ====================================================== */
+
+    eventLoginForm.addEventListener(
+      "submit",
+      async (
+        event
+      ) => {
+
+        event.preventDefault();
+
+
+        loginError.style.display =
+          "none";
+
+
+        const name =
+          guildName.value.trim();
+
+
+        const password =
+          accessCode.value;
+
+
+        try {
+
+          await signInWithEmailAndPassword(
+            auth,
+            makeAccountEmail(
+              name
+            ),
+            password
+          );
+
+
+          currentGuildName =
+            name;
+
+
+          sessionStorage.setItem(
+            "chaosNickname",
+            name
+          );
+
+
+          accessCode.value =
+            "";
+
+        }
+
+
+        catch (
+          error
+        ) {
+
+          console.error(
+            error
+          );
+
+
+          loginError.style.display =
+            "block";
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       AUTH
+       ====================================================== */
+
+    onAuthStateChanged(
+      auth,
+      async (
+        user
+      ) => {
+
+        if (user) {
+
+          currentGuildName =
+            sessionStorage.getItem(
+              "chaosNickname"
+            )
+            ||
+            prettyNameFromEmail(
+              user.email
+            );
+
+
+          loggedInName.textContent =
+            `Signed in as ${currentGuildName}`;
+
+
+          eventLoginPanel.style.display =
+            "none";
+
+
+          eventApp.style.display =
+            "block";
+
+
+          await loadEvent();
+
+
+        }
+
+
+        else {
+
+          eventLoginPanel.style.display =
+            "block";
+
+
+          eventApp.style.display =
+            "none";
+
+        }
+
+      }
+    );
+
+
+
+    signOutButton.addEventListener(
+      "click",
+      async () => {
+
+        sessionStorage.removeItem(
+          "chaosNickname"
+        );
+
+
+        await signOut(
+          auth
+        );
+
+      }
+    );
+
+
+
+    /* ======================================================
+       LOAD EVENT
+       ====================================================== */
+
+    async function loadEvent() {
+
+      const eventRef =
+        doc(
+          db,
+          "events",
+          eventId
+        );
+
+
+      const snapshot =
+        await getDoc(
+          eventRef
+        );
+
+
+      if (!snapshot.exists()) {
+
+        window.alert(
+          "That event has vanished into the void."
+        );
+
+
+        window.location.href =
+          "events.html";
+
+
+        return;
+
+      }
+
+
+      eventData =
+        snapshot.data();
+
+
+      organiser =
+        auth.currentUser.uid
+        === eventData.createdByUid;
+
+
+      renderEventDetails();
+
+
+      if (
+        eventData.type
+        === "quick"
+      ) {
+
+        runSheetPanel.style.display =
+          "none";
+
+      }
+
+
+      else {
+
+        runSheetPanel.style.display =
+          "block";
+
+      }
+
+
+      if (
+        organiser
+      ) {
+
+        document
+          .querySelectorAll(
+            ".organiser-tools"
+          )
+          .forEach(
+            element => {
+
+              element.classList.add(
+                "active"
+              );
+
+            }
+          );
+
+      }
+
+
+      startSignupListener();
+
+
+      if (
+        eventData.type
+        === "organised"
+      ) {
+
+        startGroupsListener();
+
+      }
+
+
+      generateAnnouncement();
+
+    }
+
+
+
+    /* ======================================================
+       EVENT DETAILS
+       ====================================================== */
+
+    function renderEventDetails() {
+
+      document.getElementById(
+        "eventType"
+      ).textContent =
+        eventData.type
+        === "organised"
+          ? "ORGANISED RUN"
+          : "QUICK EVENT";
+
+
+      document.getElementById(
+        "eventTitle"
+      ).textContent =
+        eventData.title;
+
+
+      document.getElementById(
+        "eventCreatedBy"
+      ).textContent =
+        `Created by ${eventData.createdByName}`;
+
+
+      document.getElementById(
+        "eventDate"
+      ).textContent =
+        formatDate(
+          eventData.eventDate
+        );
+
+
+      document.getElementById(
+        "eventStart"
+      ).textContent =
+        eventData.startTime
+        || "—";
+
+
+      document.getElementById(
+        "eventMeetTime"
+      ).textContent =
+        eventData.meetTime
+        || "—";
+
+
+      document.getElementById(
+        "eventMeetLocation"
+      ).textContent =
+        eventData.meetLocation
+        || "TBC";
+
+
+      document.getElementById(
+        "eventNotes"
+      ).textContent =
+        eventData.notes
+        || "";
+
+
+      document.getElementById(
+        "discordTimestamp"
+      ).textContent =
+        eventData.discordTimestamp
+        || "";
+
+    }
+
+
+
+    /* ======================================================
+       SIGN UPS
+       ====================================================== */
+
+    function startSignupListener() {
+
+      if (
+        unsubscribeSignups
+      ) {
+
+        unsubscribeSignups();
+
+      }
+
+
+      const ref =
+        collection(
+          db,
+          "events",
+          eventId,
+          "signups"
+        );
+
+
+      unsubscribeSignups =
+        onSnapshot(
+          ref,
+          snapshot => {
+
+            currentSignups =
+              [];
+
+
+            snapshot.forEach(
+              item => {
+
+                currentSignups.push({
+                  uid:
+                    item.id,
+
+                  ...item.data()
+                });
+
+              }
+            );
+
+
+            currentSignups.sort(
+              (
+                a,
+                b
+              ) =>
+                a.name.localeCompare(
+                  b.name
+                )
+            );
+
+
+            renderSignups();
+
+
+            loadMySignup();
+
+
+            renderGroups();
+
+
+            generateAnnouncement();
+
+          }
+        );
+
+    }
+
+
+
+    signupForm.addEventListener(
+      "submit",
+      async (
+        event
+      ) => {
+
+        event.preventDefault();
+
+
+        const user =
+          auth.currentUser;
+
+
+        if (!user) {
+          return;
+        }
+
+
+        await setDoc(
+          doc(
+            db,
+            "events",
+            eventId,
+            "signups",
+            user.uid
+          ),
+          {
+
+            name:
+              currentGuildName,
+
+            role:
+              signupRole.value,
+
+            note:
+              signupNote.value.trim(),
+
+            updatedAt:
+              Date.now()
+
+          }
+        );
+
+    });
+
+
+
+    removeSignup.addEventListener(
+      "click",
+      async () => {
+
+        const user =
+          auth.currentUser;
+
+
+        if (!user) {
+          return;
+        }
+
+
+        await deleteDoc(
+          doc(
+            db,
+            "events",
+            eventId,
+            "signups",
+            user.uid
+          )
+        );
+
+    });
+
+
+
+    function loadMySignup() {
+
+      const user =
+        auth.currentUser;
+
+
+      if (!user) {
+        return;
+      }
+
+
+      const mine =
+        currentSignups.find(
+          signup =>
+            signup.uid
+            === user.uid
+        );
+
+
+      if (
+        mine
+      ) {
+
+        signupRole.value =
+          mine.role;
+
+
+        signupNote.value =
+          mine.note
+          || "";
+
+      }
+
+
+      else {
+
+        signupRole.value =
+          "DPS";
+
+
+        signupNote.value =
+          "";
+
+      }
+
+    }
+
+
+
+    function renderSignups() {
+
+      signupList.innerHTML =
+        "";
+
+
+      if (
+        currentSignups.length
+        === 0
+      ) {
+
+        signupList.innerHTML =
+          '<p class="empty-state">Nobody has volunteered for the suffering yet. 😂</p>';
+
+
+        return;
+
+      }
+
+
+      currentSignups.forEach(
+        signup => {
+
+          const card =
+            document.createElement(
+              "div"
+            );
+
+
+          card.className =
+            "signup-person";
+
+
+          const left =
+            document.createElement(
+              "div"
+            );
+
+
+          const name =
+            document.createElement(
+              "div"
+            );
+
+
+          name.className =
+            "signup-person-name";
+
+
+          name.textContent =
+            signup.name;
+
+
+          left.appendChild(
+            name
+          );
+
+
+          if (
+            signup.note
+          ) {
+
+            const note =
+              document.createElement(
+                "div"
+              );
+
+
+            note.className =
+              "signup-person-note";
+
+
+            note.textContent =
+              signup.note;
+
+
+            left.appendChild(
+              note
+            );
+
+          }
+
+
+          const role =
+            document.createElement(
+              "span"
+            );
+
+
+          role.className =
+            `signup-role role-${signup.role.toLowerCase()}`;
+
+
+          role.textContent =
+            roleIcon(
+              signup.role
+            )
+            + " "
+            + signup.role;
+
+
+          card.appendChild(
+            left
+          );
+
+
+          card.appendChild(
+            role
+          );
+
+
+          signupList.appendChild(
+            card
+          );
+
+        }
+      );
+
+    }
+
+
+
+    /* ======================================================
+       RUN GROUPS
+       ====================================================== */
+
+    function startGroupsListener() {
+
+      if (
+        unsubscribeGroups
+      ) {
+
+        unsubscribeGroups();
+
+      }
+
+
+      const groupsQuery =
+        query(
+          collection(
+            db,
+            "events",
+            eventId,
+            "runGroups"
+          ),
+          orderBy(
+            "order",
+            "asc"
+          )
+        );
+
+
+      unsubscribeGroups =
+        onSnapshot(
+          groupsQuery,
+          snapshot => {
+
+            currentGroups =
+              [];
+
+
+            snapshot.forEach(
+              item => {
+
+                currentGroups.push({
+                  id:
+                    item.id,
+
+                  ...item.data()
+                });
+
+              }
+            );
+
+
+            renderGroups();
+
+
+            generateAnnouncement();
+
+          }
+        );
+
+    }
+
+
+
+    function renderGroups() {
+
+      runGroups.innerHTML =
+        "";
+
+
+      if (
+        currentGroups.length
+        === 0
+      ) {
+
+        runGroups.innerHTML =
+          '<p class="empty-state">No groups have been built yet.</p>';
+
+
+        return;
+
+      }
+
+
+      currentGroups.forEach(
+        group => {
+
+          const wrapper =
+            document.createElement(
+              "div"
+            );
+
+
+          wrapper.className =
+            "run-group";
+
+
+          const header =
+            document.createElement(
+              "div"
+            );
+
+
+          header.className =
+            "run-group-header";
+
+
+          const title =
+            document.createElement(
+              "h3"
+            );
+
+
+          title.textContent =
+            group.name;
+
+
+          header.appendChild(
+            title
+          );
+
+
+          if (
+            organiser
+          ) {
+
+            const actions =
+              document.createElement(
+                "div"
+              );
+
+
+            actions.className =
+              "run-group-actions";
+
+
+            const edit =
+              document.createElement(
+                "button"
+              );
+
+
+            edit.type =
+              "button";
+
+
+            edit.className =
+              "secondary-button";
+
+
+            edit.textContent =
+              "EDIT";
+
+
+            const remove =
+              document.createElement(
+                "button"
+              );
+
+
+            remove.type =
+              "button";
+
+
+            remove.className =
+              "danger-button";
+
+
+            remove.textContent =
+              "DELETE";
+
+
+            actions.appendChild(
+              edit
+            );
+
+
+            actions.appendChild(
+              remove
+            );
+
+
+            header.appendChild(
+              actions
+            );
+
+
+            edit.addEventListener(
+              "click",
+              () => {
+
+                toggleGroupEditor(
+                  wrapper,
+                  group
+                );
+
+              }
+            );
+
+
+            remove.addEventListener(
+              "click",
+              async () => {
+
+                if (
+                  !confirm(
+                    `Delete ${group.name}?`
+                  )
+                ) {
+                  return;
+                }
+
+
+                await deleteDoc(
+                  doc(
+                    db,
+                    "events",
+                    eventId,
+                    "runGroups",
+                    group.id
+                  )
+                );
+
+              }
+            );
+
+          }
+
+
+          wrapper.appendChild(
+            header
+          );
+
+
+          const slots =
+            document.createElement(
+              "div"
+            );
+
+
+          slots.className =
+            "run-slots";
+
+
+          const groupSlots =
+            group.slots
+            || [];
+
+
+          if (
+            groupSlots.length
+            === 0
+          ) {
+
+            slots.innerHTML =
+              '<p class="empty-state">No slots yet.</p>';
+
+          }
+
+
+          groupSlots.forEach(
+            slot => {
+
+              const row =
+                document.createElement(
+                  "div"
+                );
+
+
+              row.className =
+                "run-slot";
+
+
+              const role =
+                document.createElement(
+                  "div"
+                );
+
+
+              role.className =
+                "slot-role";
+
+
+              role.textContent =
+                roleIcon(
+                  slot.role
+                )
+                + " "
+                + slot.role;
+
+
+              const player =
+                document.createElement(
+                  "div"
+                );
+
+
+              player.className =
+                slot.assignedName
+                  ? "slot-player"
+                  : "open-slot";
+
+
+              player.textContent =
+                slot.assignedName
+                || "[ OPEN ]";
+
+
+              const requirements =
+                document.createElement(
+                  "div"
+                );
+
+
+              requirements.className =
+                "slot-requirements";
+
+
+              requirements.textContent =
+                slot.requirements
+                || "";
+
+
+              row.appendChild(
+                role
+              );
+
+
+              row.appendChild(
+                player
+              );
+
+
+              row.appendChild(
+                requirements
+              );
+
+
+              slots.appendChild(
+                row
+              );
+
+            }
+          );
+
+
+          wrapper.appendChild(
+            slots
+          );
+
+
+          runGroups.appendChild(
+            wrapper
+          );
+
+        }
+      );
+
+    }
+
+
+
+    /* ======================================================
+       GROUP EDITOR
+       ====================================================== */
+
+    function toggleGroupEditor(
+      wrapper,
+      group
+    ) {
+
+      const existing =
+        wrapper.querySelector(
+          ".group-editor"
+        );
+
+
+      if (
+        existing
+      ) {
+
+        existing.remove();
+
+
+        return;
+
+      }
+
+
+      const editor =
+        document.createElement(
+          "div"
+        );
+
+
+      editor.className =
+        "group-editor";
+
+
+      let slots =
+        JSON.parse(
+          JSON.stringify(
+            group.slots
+            || []
+          )
+        );
+
+
+      const slotContainer =
+        document.createElement(
+          "div"
+        );
+
+
+      function redrawEditor() {
+
+        slotContainer.innerHTML =
+          "";
+
+
+        slots.forEach(
+          (
+            slot,
+            index
+          ) => {
+
+            const row =
+              document.createElement(
+                "div"
+              );
+
+
+            row.className =
+              "editor-slot";
+
+
+            const roleSelect =
+              document.createElement(
+                "select"
+              );
+
+
+            [
+              "Tank",
+              "Healer",
+              "DPS",
+              "Filler",
+              "Any"
+            ].forEach(
+              role => {
+
+                const option =
+                  document.createElement(
+                    "option"
+                  );
+
+
+                option.value =
+                  role;
+
+
+                option.textContent =
+                  role;
+
+
+                if (
+                  slot.role
+                  === role
+                ) {
+
+                  option.selected =
+                    true;
+
+                }
+
+
+                roleSelect.appendChild(
+                  option
+                );
+
+              }
+            );
+
+
+            const playerSelect =
+              document.createElement(
+                "select"
+              );
+
+
+            const empty =
+              document.createElement(
+                "option"
+              );
+
+
+            empty.value =
+              "";
+
+
+            empty.textContent =
+              "[ OPEN ]";
+
+
+            playerSelect.appendChild(
+              empty
+            );
+
+
+            currentSignups.forEach(
+              signup => {
+
+                const option =
+                  document.createElement(
+                    "option"
+                  );
+
+
+                option.value =
+                  signup.uid;
+
+
+                option.textContent =
+                  `${signup.name} (${signup.role})`;
+
+
+                if (
+                  slot.assignedUid
+                  === signup.uid
+                ) {
+
+                  option.selected =
+                    true;
+
+                }
+
+
+                playerSelect.appendChild(
+                  option
+                );
+
+              }
+            );
+
+
+            const requirements =
+              document.createElement(
+                "input"
+              );
+
+
+            requirements.type =
+              "text";
+
+
+            requirements.placeholder =
+              "MW, Pact, Armour Break, artifact etc...";
+
+
+            requirements.value =
+              slot.requirements
+              || "";
+
+
+            const remove =
+              document.createElement(
+                "button"
+              );
+
+
+            remove.type =
+              "button";
+
+
+            remove.className =
+              "danger-button";
+
+
+            remove.textContent =
+              "×";
+
+
+            roleSelect.addEventListener(
+              "change",
+              () => {
+
+                slots[index].role =
+                  roleSelect.value;
+
+              }
+            );
+
+
+            playerSelect.addEventListener(
+              "change",
+              () => {
+
+                const signup =
+                  currentSignups.find(
+                    person =>
+                      person.uid
+                      === playerSelect.value
+                  );
+
+
+                slots[index].assignedUid =
+                  signup
+                    ? signup.uid
+                    : "";
+
+
+                slots[index].assignedName =
+                  signup
+                    ? signup.name
+                    : "";
+
+              }
+            );
+
+
+            requirements.addEventListener(
+              "input",
+              () => {
+
+                slots[index].requirements =
+                  requirements.value;
+
+              }
+            );
+
+
+            remove.addEventListener(
+              "click",
+              () => {
+
+                slots.splice(
+                  index,
+                  1
+                );
+
+
+                redrawEditor();
+
+              }
+            );
+
+
+            row.appendChild(
+              roleSelect
+            );
+
+
+            row.appendChild(
+              playerSelect
+            );
+
+
+            row.appendChild(
+              requirements
+            );
+
+
+            row.appendChild(
+              remove
+            );
+
+
+            slotContainer.appendChild(
+              row
+            );
+
+          }
+        );
+
+      }
+
+
+      redrawEditor();
+
+
+      const addSlot =
+        document.createElement(
+          "button"
+        );
+
+
+      addSlot.type =
+        "button";
+
+
+      addSlot.className =
+        "secondary-button";
+
+
+      addSlot.textContent =
+        "+ ADD SLOT";
+
+
+      addSlot.addEventListener(
+        "click",
+        () => {
+
+          slots.push(
+            createEmptySlot(
+              "DPS"
+            )
+          );
+
+
+          redrawEditor();
+
+        }
+      );
+
+
+      const save =
+        document.createElement(
+          "button"
+        );
+
+
+      save.type =
+        "button";
+
+
+      save.className =
+        "primary-button";
+
+
+      save.textContent =
+        "SAVE GROUP";
+
+
+      save.style.marginLeft =
+        "8px";
+
+
+      save.addEventListener(
+        "click",
+        async () => {
+
+          await updateDoc(
+            doc(
+              db,
+              "events",
+              eventId,
+              "runGroups",
+              group.id
+            ),
+            {
+              slots:
+                slots
+            }
+          );
+
+        }
+      );
+
+
+      editor.appendChild(
+        slotContainer
+      );
+
+
+      editor.appendChild(
+        addSlot
+      );
+
+
+      editor.appendChild(
+        save
+      );
+
+
+      wrapper.appendChild(
+        editor
+      );
+
+    }
+
+
+
+    /* ======================================================
+       ADD GROUP
+       ====================================================== */
+
+    openGroupModal.addEventListener(
+      "click",
+      () => {
+
+        groupModal.classList.add(
+          "open"
+        );
+
+      }
+    );
+
+
+    closeGroupModal.addEventListener(
+      "click",
+      () => {
+
+        groupModal.classList.remove(
+          "open"
+        );
+
+      }
+    );
+
+
+    document
+      .querySelectorAll(
+        ".template-option"
+      )
+      .forEach(
+        button => {
+
+          button.addEventListener(
+            "click",
+            () => {
+
+              selectedTemplate =
+                button.dataset.template;
+
+
+              document
+                .querySelectorAll(
+                  ".template-option"
+                )
+                .forEach(
+                  item => {
+
+                    item.classList.remove(
+                      "active"
+                    );
+
+                  }
+                );
+
+
+              button.classList.add(
+                "active"
+              );
+
+            }
+          );
+
+        }
+      );
+
+
+
+    groupForm.addEventListener(
+      "submit",
+      async (
+        event
+      ) => {
+
+        event.preventDefault();
+
+
+        const slots =
+          buildTemplate(
+            selectedTemplate
+          );
+
+
+        await addDoc(
+          collection(
+            db,
+            "events",
+            eventId,
+            "runGroups"
+          ),
+          {
+
+            name:
+              groupName.value.trim(),
+
+            order:
+              Date.now(),
+
+            slots:
+              slots,
+
+            createdAt:
+              serverTimestamp()
+
+          }
+        );
+
+
+        groupForm.reset();
+
+
+        selectedTemplate =
+          "five";
+
+
+        groupModal.classList.remove(
+          "open"
+        );
+
+      }
+    );
+
+
+
+    /* ======================================================
+       TEMPLATES
+       ====================================================== */
+
+    function buildTemplate(
+      template
+    ) {
+
+      if (
+        template
+        === "blank"
+      ) {
+
+        return [];
+
+      }
+
+
+      if (
+        template
+        === "ten"
+      ) {
+
+        return [
+
+          createEmptySlot(
+            "Tank"
+          ),
+
+          createEmptySlot(
+            "Tank"
+          ),
+
+          createEmptySlot(
+            "Healer"
+          ),
+
+          createEmptySlot(
+            "Healer"
+          ),
+
+          createEmptySlot(
+            "DPS"
+          ),
+
+          createEmptySlot(
+            "DPS"
+          ),
+
+          createEmptySlot(
+            "DPS"
+          ),
+
+          createEmptySlot(
+            "DPS"
+          ),
+
+          createEmptySlot(
+            "DPS"
+          ),
+
+          createEmptySlot(
+            "DPS"
+          )
+
+        ];
+
+      }
+
+
+      return [
+
+        createEmptySlot(
+          "Tank"
+        ),
+
+        createEmptySlot(
+          "Healer"
+        ),
+
+        createEmptySlot(
+          "DPS"
+        ),
+
+        createEmptySlot(
+          "DPS"
+        ),
+
+        createEmptySlot(
+          "DPS"
+        )
+
+      ];
+
+    }
+
+
+
+    function createEmptySlot(
+      role
+    ) {
+
+      return {
+
+        id:
+          crypto.randomUUID(),
+
+        role:
+          role,
+
+        assignedUid:
+          "",
+
+        assignedName:
+          "",
+
+        requirements:
+          ""
+
+      };
+
+    }
+
+
+
+    /* ======================================================
+       DISCORD ANNOUNCEMENT
+       ====================================================== */
+
+    function generateAnnouncement() {
+
+      if (
+        !eventData
+      ) {
+        return;
+      }
+
+
+      let text =
+        `🔥 **${eventData.title.toUpperCase()}** 🔥\n\n`;
+
+
+      if (
+        eventData.discordTimestamp
+      ) {
+
+        text +=
+          `🕒 ${eventData.discordTimestamp}\n`;
+
+      }
+
+
+      if (
+        eventData.meetLocation
+      ) {
+
+        text +=
+          `📍 **MEET UP:** ${eventData.meetLocation}`;
+
+
+        if (
+          eventData.meetTime
+        ) {
+
+          text +=
+            ` at ${eventData.meetTime}`;
+
+        }
+
+
+        text +=
+          `\n`;
+
+      }
+
+
+      if (
+        eventData.notes
+      ) {
+
+        text +=
+          `\n${eventData.notes}\n`;
+
+      }
+
+
+      if (
+        eventData.type
+        === "organised"
+      ) {
+
+        currentGroups.forEach(
+          group => {
+
+            text +=
+              `\n━━━━━━━━━━━━━━\n`;
+
+            text +=
+              `**${group.name.toUpperCase()}**\n\n`;
+
+
+            (
+              group.slots
+              || []
+            )
+            .forEach(
+              slot => {
+
+                text +=
+                  `${roleIcon(slot.role)} **${slot.role}:** `;
+
+
+                text +=
+                  slot.assignedName
+                  || "[ OPEN ]";
+
+
+                if (
+                  slot.requirements
+                ) {
+
+                  text +=
+                    ` ➡️ ${slot.requirements}`;
+
+                }
+
+
+                text +=
+                  `\n`;
+
+              }
+            );
+
+          }
+        );
+
+      }
+
+
+      if (
+        currentSignups.length
+        > 0
+      ) {
+
+        text +=
+          `\n━━━━━━━━━━━━━━\n`;
+
+        text +=
+          `**SIGNED UP:**\n`;
+
+
+        currentSignups.forEach(
+          signup => {
+
+            text +=
+              `${roleIcon(signup.role)} ${signup.name} — ${signup.role}`;
+
+
+            if (
+              signup.note
+            ) {
+
+              text +=
+                ` (${signup.note})`;
+
+            }
+
+
+            text +=
+              `\n`;
+
+          }
+        );
+
+      }
+
+
+      text +=
+        `\nPlease let the organiser know if you can no longer attend so a replacement can be found.`;
+
+
+      announcementPreview.textContent =
+        text;
+
+    }
+
+
+
+    copyAnnouncement.addEventListener(
+      "click",
+      async () => {
+
+        await navigator.clipboard.writeText(
+          announcementPreview.textContent
+        );
+
+
+        copyAnnouncement.textContent =
+          "COPIED ✓";
+
+
+        setTimeout(
+          () => {
+
+            copyAnnouncement.textContent =
+              "COPY FOR DISCORD";
+
+          },
+          1500
+        );
+
+      }
+    );
+
+
+
+    copyTimestamp.addEventListener(
+      "click",
+      async () => {
+
+        if (
+          !eventData
+          ||
+          !eventData.discordTimestamp
+        ) {
+          return;
+        }
+
+
+        await navigator.clipboard.writeText(
+          eventData.discordTimestamp
+        );
+
+
+        copyTimestamp.textContent =
+          "COPIED ✓";
+
+
+        setTimeout(
+          () => {
+
+            copyTimestamp.textContent =
+              "COPY TIMESTAMP";
+
+          },
+          1500
+        );
+
+      }
+    );
+
+
+
+    /* ======================================================
+       HELPERS
+       ====================================================== */
+
+    function roleIcon(
+      role
+    ) {
+
+      switch (
+        role
+      ) {
+
+        case "Tank":
+          return "🛡️";
+
+
+        case "Healer":
+          return "💙";
+
+
+        case "DPS":
+          return "⚔️";
+
+
+        case "Filler":
+          return "⭐";
+
+
+        default:
+          return "🎲";
+
+      }
+
+    }
+
+
+
+    function formatDate(
+      dateString
+    ) {
+
+      const date =
+        new Date(
+          `${dateString}T12:00:00`
+        );
+
+
+      return date.toLocaleDateString(
+        "en-GB",
+        {
+
+          weekday:
+            "long",
+
+          day:
+            "numeric",
+
+          month:
+            "long",
+
+          year:
+            "numeric"
+
+        }
+      );
+
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>

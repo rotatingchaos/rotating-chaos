@@ -21,10 +21,293 @@
   >
 
   <link rel="stylesheet" href="style.css">
+
+
+  <style>
+
+    /* ======================================================
+       LIVE COMMUNITY DASHBOARD
+       ====================================================== */
+
+    .community-live-section {
+      padding: 20px 20px 65px;
+    }
+
+
+    .community-live-shell {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+    }
+
+
+    .community-live-heading {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+
+    .community-live-heading h2 {
+      margin: 6px 0 8px;
+      font-family: "Cinzel", serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+    }
+
+
+    .community-live-heading p {
+      font-family: "Crimson Pro", serif;
+      font-size: 1.1rem;
+      opacity: 0.8;
+    }
+
+
+
+    /* ======================================================
+       MEMBER LOGIN
+       ====================================================== */
+
+    .community-login {
+      width: min(620px, 100%);
+      margin: 0 auto 30px;
+      padding: 24px;
+      border: 1px solid rgba(218, 165, 32, 0.3);
+      background: rgba(18, 17, 16, 0.96);
+      text-align: center;
+    }
+
+
+    .community-login h3 {
+      margin-top: 0;
+      font-family: "Cinzel", serif;
+    }
+
+
+    .community-login-fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+
+    .community-login input {
+      min-width: 0;
+      padding: 11px 12px;
+      box-sizing: border-box;
+      border: 1px solid rgba(218, 165, 32, 0.35);
+      background: #11100f;
+      color: #f6efe2;
+      font: inherit;
+    }
+
+
+    .community-login button {
+      border: 1px solid #d7aa42;
+      background: #d7aa42;
+      color: #111;
+      padding: 11px 16px;
+      font-family: "Cinzel", serif;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+
+    .community-login-error {
+      display: none;
+      margin: 12px 0 0;
+      color: #ff9999;
+    }
+
+
+
+    /* ======================================================
+       MEMBER BAR
+       ====================================================== */
+
+    .community-member-bar {
+      display: none;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 12px 15px;
+      border: 1px solid rgba(218, 165, 32, 0.18);
+      background: #121110;
+    }
+
+
+    .community-member-name {
+      font-family: "Cinzel", serif;
+      font-size: 0.85rem;
+    }
+
+
+    .community-signout {
+      border: 1px solid rgba(218, 165, 32, 0.35);
+      background: #171513;
+      color: #f6efe2;
+      padding: 8px 11px;
+      cursor: pointer;
+    }
+
+
+
+    /* ======================================================
+       DASHBOARD GRID
+       ====================================================== */
+
+    .community-dashboard {
+      display: none;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+
+    .community-live-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 310px;
+      overflow: hidden;
+      border: 1px solid rgba(218, 165, 32, 0.24);
+      background:
+        linear-gradient(
+          180deg,
+          rgba(67, 214, 186, 0.025),
+          #151310
+        );
+    }
+
+
+    .community-live-card-image {
+      display: none;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #090807;
+    }
+
+
+    .community-live-card-image.show {
+      display: block;
+    }
+
+
+    .community-live-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    .community-live-card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 18px;
+    }
+
+
+    .community-live-label {
+      font-family: "Cinzel", serif;
+      font-size: 0.67rem;
+      letter-spacing: 1.2px;
+      color: #43d6ba;
+    }
+
+
+    .community-live-card h3 {
+      margin: 7px 0 9px;
+      font-family: "Cinzel", serif;
+      font-size: 1.25rem;
+    }
+
+
+    .community-live-text {
+      flex: 1;
+      line-height: 1.5;
+      opacity: 0.8;
+    }
+
+
+    .community-live-meta {
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: #ddb45d;
+    }
+
+
+    .community-live-link {
+      display: inline-block;
+      margin-top: 15px;
+      align-self: flex-start;
+      padding: 9px 12px;
+      border: 1px solid rgba(67, 214, 186, 0.3);
+      background: rgba(67, 214, 186, 0.06);
+      color: #9ae8d8;
+      text-decoration: none;
+      font-family: "Cinzel", serif;
+      font-size: 0.75rem;
+    }
+
+
+    .community-status {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 4px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(67, 214, 186, 0.25);
+      font-family: "Cinzel", serif;
+      font-size: 0.62rem;
+      color: #8be5d2;
+    }
+
+
+    .community-status.full {
+      border-color: rgba(218, 165, 32, 0.35);
+      color: #e5c26b;
+    }
+
+
+    .community-empty {
+      opacity: 0.55;
+      font-style: italic;
+    }
+
+
+
+    /* ======================================================
+       MOBILE
+       ====================================================== */
+
+    @media (max-width: 900px) {
+
+      .community-dashboard {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      .community-login-fields {
+        grid-template-columns: 1fr;
+      }
+
+
+      .community-member-bar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 
 <body>
+
 
   <!-- ======================================================
        HEADER
@@ -69,7 +352,7 @@
         CHAOS GUIDES
       </a>
 
-      <a href="index.html#events">
+      <a href="events.html">
         EVENTS
       </a>
 
@@ -127,7 +410,7 @@
 
 
     <!-- ======================================================
-         COMMUNITY INTRO
+         INTRO
          ====================================================== -->
 
     <section class="build-guides-section">
@@ -151,11 +434,277 @@
 
       </div>
 
+    </section>
 
 
-      <!-- ==================================================
-           COMMUNITY CARDS
-           ================================================== -->
+
+    <!-- ======================================================
+         WHAT'S HAPPENING
+         ====================================================== -->
+
+    <section class="community-live-section">
+
+      <div class="community-live-shell">
+
+
+        <div class="community-live-heading">
+
+          <p class="section-eyebrow">
+            LIVE FROM THE GUILD
+          </p>
+
+          <h2>
+            WHAT'S HAPPENING IN CHAOS?
+          </h2>
+
+          <p>
+            The latest runs, stories and moments from around the guild.
+          </p>
+
+        </div>
+
+
+
+        <!-- LOGIN -->
+
+        <section
+          class="community-login"
+          id="communityLogin"
+        >
+
+          <h3>
+            GUILD MEMBER DASHBOARD
+          </h3>
+
+          <p>
+            Sign in to see what's happening right now.
+          </p>
+
+
+          <form
+            class="community-login-fields"
+            id="communityLoginForm"
+          >
+
+            <input
+              id="communityGuildName"
+              type="text"
+              placeholder="Guild name"
+              required
+            >
+
+            <input
+              id="communityAccessCode"
+              type="password"
+              placeholder="Access code"
+              required
+            >
+
+            <button type="submit">
+              ENTER
+            </button>
+
+          </form>
+
+
+          <p
+            class="community-login-error"
+            id="communityLoginError"
+          >
+            Nope. Chaos doesn't recognise you. 😂
+          </p>
+
+        </section>
+
+
+
+        <!-- MEMBER BAR -->
+
+        <div
+          class="community-member-bar"
+          id="communityMemberBar"
+        >
+
+          <div
+            class="community-member-name"
+            id="communityMemberName"
+          ></div>
+
+          <button
+            type="button"
+            class="community-signout"
+            id="communitySignOut"
+          >
+            SIGN OUT
+          </button>
+
+        </div>
+
+
+
+        <!-- LIVE DASHBOARD -->
+
+        <div
+          class="community-dashboard"
+          id="communityDashboard"
+        >
+
+
+          <!-- NEXT EVENT -->
+
+          <article class="community-live-card">
+
+            <div class="community-live-card-body">
+
+              <div class="community-live-label">
+                NEXT EVENT
+              </div>
+
+              <h3 id="nextEventTitle">
+                Loading the carnage...
+              </h3>
+
+              <div
+                class="community-live-text"
+                id="nextEventText"
+              ></div>
+
+              <div
+                class="community-live-meta"
+                id="nextEventMeta"
+              ></div>
+
+              <div
+                id="nextEventStatus"
+              ></div>
+
+              <a
+                href="events.html"
+                class="community-live-link"
+                id="nextEventLink"
+              >
+                VIEW EVENT
+              </a>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- LATEST BLOG -->
+
+          <article class="community-live-card">
+
+            <div
+              class="community-live-card-image"
+              id="latestPostImageWrap"
+            >
+
+              <img
+                id="latestPostImage"
+                alt="Latest From the Chaos"
+              >
+
+            </div>
+
+
+            <div class="community-live-card-body">
+
+              <div class="community-live-label">
+                LATEST FROM THE CHAOS
+              </div>
+
+              <h3 id="latestPostTitle">
+                Loading the gossip...
+              </h3>
+
+              <div
+                class="community-live-text"
+                id="latestPostText"
+              ></div>
+
+              <div
+                class="community-live-meta"
+                id="latestPostMeta"
+              ></div>
+
+              <a
+                href="blog.html"
+                class="community-live-link"
+              >
+                READ FROM THE CHAOS
+              </a>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- LATEST GALLERY -->
+
+          <article class="community-live-card">
+
+            <div
+              class="community-live-card-image"
+              id="latestGalleryImageWrap"
+            >
+
+              <img
+                id="latestGalleryImage"
+                alt="Latest Chaos Gallery image"
+              >
+
+            </div>
+
+
+            <div class="community-live-card-body">
+
+              <div class="community-live-label">
+                LATEST CHAOS
+              </div>
+
+              <h3 id="latestGalleryTitle">
+                Gallery drop
+              </h3>
+
+              <div
+                class="community-live-text"
+                id="latestGalleryText"
+              ></div>
+
+              <div
+                class="community-live-meta"
+                id="latestGalleryMeta"
+              ></div>
+
+              <a
+                href="gallery.html"
+                class="community-live-link"
+              >
+                VIEW GALLERY
+              </a>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         COMMUNITY CARDS
+         ====================================================== -->
+
+    <section class="build-guides-section">
 
       <div class="build-guides-grid">
 
@@ -364,7 +913,7 @@
 
 
     <!-- ======================================================
-         COMMUNITY QUOTE / GUILD FEEL
+         COMMUNITY QUOTE
          ====================================================== -->
 
     <section class="build-detail-page">
@@ -448,6 +997,1070 @@
 
 
   </main>
+
+
+
+  <!-- ======================================================
+       FIREBASE
+       ====================================================== -->
+
+  <script type="module">
+
+
+    import {
+      initializeApp
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+
+
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+      signOut,
+      onAuthStateChanged
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+
+
+    import {
+      getFirestore,
+      collection,
+      query,
+      orderBy,
+      onSnapshot
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+
+
+    /* ======================================================
+       FIREBASE CONFIG
+       ====================================================== */
+
+    const firebaseConfig = {
+
+      apiKey:
+        "AIzaSyDQjutG0oa4v8dpI3i3UlgsFC9EmWsX4kI",
+
+      authDomain:
+        "rotating-chaos-chat.firebaseapp.com",
+
+      projectId:
+        "rotating-chaos-chat",
+
+      storageBucket:
+        "rotating-chaos-chat.firebasestorage.app",
+
+      messagingSenderId:
+        "337862334710",
+
+      appId:
+        "1:337862334710:web:92e38dd0646dd9bec474d7",
+
+      measurementId:
+        "G-7M761SJ4CJ"
+
+    };
+
+
+    const app =
+      initializeApp(
+        firebaseConfig
+      );
+
+
+    const auth =
+      getAuth(
+        app
+      );
+
+
+    const db =
+      getFirestore(
+        app
+      );
+
+
+
+    /* ======================================================
+       ELEMENTS
+       ====================================================== */
+
+    const communityLogin =
+      document.getElementById(
+        "communityLogin"
+      );
+
+    const communityLoginForm =
+      document.getElementById(
+        "communityLoginForm"
+      );
+
+    const communityGuildName =
+      document.getElementById(
+        "communityGuildName"
+      );
+
+    const communityAccessCode =
+      document.getElementById(
+        "communityAccessCode"
+      );
+
+    const communityLoginError =
+      document.getElementById(
+        "communityLoginError"
+      );
+
+    const communityMemberBar =
+      document.getElementById(
+        "communityMemberBar"
+      );
+
+    const communityMemberName =
+      document.getElementById(
+        "communityMemberName"
+      );
+
+    const communitySignOut =
+      document.getElementById(
+        "communitySignOut"
+      );
+
+    const communityDashboard =
+      document.getElementById(
+        "communityDashboard"
+      );
+
+
+
+    /* EVENT */
+
+    const nextEventTitle =
+      document.getElementById(
+        "nextEventTitle"
+      );
+
+    const nextEventText =
+      document.getElementById(
+        "nextEventText"
+      );
+
+    const nextEventMeta =
+      document.getElementById(
+        "nextEventMeta"
+      );
+
+    const nextEventStatus =
+      document.getElementById(
+        "nextEventStatus"
+      );
+
+    const nextEventLink =
+      document.getElementById(
+        "nextEventLink"
+      );
+
+
+
+    /* POST */
+
+    const latestPostImageWrap =
+      document.getElementById(
+        "latestPostImageWrap"
+      );
+
+    const latestPostImage =
+      document.getElementById(
+        "latestPostImage"
+      );
+
+    const latestPostTitle =
+      document.getElementById(
+        "latestPostTitle"
+      );
+
+    const latestPostText =
+      document.getElementById(
+        "latestPostText"
+      );
+
+    const latestPostMeta =
+      document.getElementById(
+        "latestPostMeta"
+      );
+
+
+
+    /* GALLERY */
+
+    const latestGalleryImageWrap =
+      document.getElementById(
+        "latestGalleryImageWrap"
+      );
+
+    const latestGalleryImage =
+      document.getElementById(
+        "latestGalleryImage"
+      );
+
+    const latestGalleryTitle =
+      document.getElementById(
+        "latestGalleryTitle"
+      );
+
+    const latestGalleryText =
+      document.getElementById(
+        "latestGalleryText"
+      );
+
+    const latestGalleryMeta =
+      document.getElementById(
+        "latestGalleryMeta"
+      );
+
+
+
+    /* ======================================================
+       STATE
+       ====================================================== */
+
+    let currentGuildName =
+      "";
+
+    let allEvents =
+      [];
+
+    let allPosts =
+      [];
+
+    let allGalleryItems =
+      [];
+
+    let unsubscribeEvents =
+      null;
+
+    let unsubscribePosts =
+      null;
+
+    let unsubscribeGallery =
+      null;
+
+    let unsubscribeRunGroups =
+      null;
+
+
+
+    /* ======================================================
+       LOGIN HELPERS
+       ====================================================== */
+
+    function makeAccountEmail(name) {
+
+      const cleaned =
+        name
+          .trim()
+          .toLowerCase()
+          .replace(
+            /[^a-z0-9]/g,
+            ""
+          );
+
+
+      return `${cleaned}@rotatingchaos.local`;
+
+    }
+
+
+
+    function prettyNameFromEmail(email) {
+
+      const raw =
+        email.split("@")[0];
+
+
+      return (
+        raw.charAt(0).toUpperCase()
+        + raw.slice(1)
+      );
+
+    }
+
+
+
+    /* ======================================================
+       LOGIN
+       ====================================================== */
+
+    communityLoginForm.addEventListener(
+      "submit",
+      async (event) => {
+
+        event.preventDefault();
+
+
+        communityLoginError.style.display =
+          "none";
+
+
+        const name =
+          communityGuildName.value.trim();
+
+
+        const password =
+          communityAccessCode.value;
+
+
+        try {
+
+          await signInWithEmailAndPassword(
+            auth,
+            makeAccountEmail(name),
+            password
+          );
+
+
+          currentGuildName =
+            name;
+
+
+          sessionStorage.setItem(
+            "chaosNickname",
+            name
+          );
+
+
+          communityAccessCode.value =
+            "";
+
+        }
+
+
+        catch (error) {
+
+          console.error(error);
+
+
+          communityLoginError.style.display =
+            "block";
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       AUTH STATE
+       ====================================================== */
+
+    onAuthStateChanged(
+      auth,
+      (user) => {
+
+        if (user) {
+
+          currentGuildName =
+            sessionStorage.getItem(
+              "chaosNickname"
+            )
+            || prettyNameFromEmail(
+              user.email
+            );
+
+
+          communityMemberName.textContent =
+            `Signed in as ${currentGuildName}`;
+
+
+          communityLogin.style.display =
+            "none";
+
+
+          communityMemberBar.style.display =
+            "flex";
+
+
+          communityDashboard.style.display =
+            "grid";
+
+
+          startDashboard();
+
+        }
+
+
+        else {
+
+          communityLogin.style.display =
+            "block";
+
+
+          communityMemberBar.style.display =
+            "none";
+
+
+          communityDashboard.style.display =
+            "none";
+
+
+          stopDashboard();
+
+        }
+
+      }
+    );
+
+
+
+    /* ======================================================
+       SIGN OUT
+       ====================================================== */
+
+    communitySignOut.addEventListener(
+      "click",
+      async () => {
+
+        sessionStorage.removeItem(
+          "chaosNickname"
+        );
+
+
+        await signOut(
+          auth
+        );
+
+      }
+    );
+
+
+
+    /* ======================================================
+       DASHBOARD LISTENERS
+       ====================================================== */
+
+    function startDashboard() {
+
+      stopDashboard();
+
+
+      unsubscribeEvents =
+        onSnapshot(
+          query(
+            collection(
+              db,
+              "events"
+            ),
+            orderBy(
+              "createdAt",
+              "desc"
+            )
+          ),
+          snapshot => {
+
+            allEvents =
+              [];
+
+
+            snapshot.forEach(
+              item => {
+
+                allEvents.push({
+                  id:
+                    item.id,
+
+                  ...item.data()
+                });
+
+              }
+            );
+
+
+            renderNextEvent();
+
+          }
+        );
+
+
+
+      unsubscribePosts =
+        onSnapshot(
+          query(
+            collection(
+              db,
+              "posts"
+            ),
+            orderBy(
+              "createdAt",
+              "desc"
+            )
+          ),
+          snapshot => {
+
+            allPosts =
+              [];
+
+
+            snapshot.forEach(
+              item => {
+
+                allPosts.push({
+                  id:
+                    item.id,
+
+                  ...item.data()
+                });
+
+              }
+            );
+
+
+            renderLatestPost();
+
+          }
+        );
+
+
+
+      unsubscribeGallery =
+        onSnapshot(
+          query(
+            collection(
+              db,
+              "gallery"
+            ),
+            orderBy(
+              "createdAt",
+              "desc"
+            )
+          ),
+          snapshot => {
+
+            allGalleryItems =
+              [];
+
+
+            snapshot.forEach(
+              item => {
+
+                allGalleryItems.push({
+                  id:
+                    item.id,
+
+                  ...item.data()
+                });
+
+              }
+            );
+
+
+            renderLatestGallery();
+
+          }
+        );
+
+    }
+
+
+
+    function stopDashboard() {
+
+      if (unsubscribeEvents) {
+        unsubscribeEvents();
+        unsubscribeEvents = null;
+      }
+
+
+      if (unsubscribePosts) {
+        unsubscribePosts();
+        unsubscribePosts = null;
+      }
+
+
+      if (unsubscribeGallery) {
+        unsubscribeGallery();
+        unsubscribeGallery = null;
+      }
+
+
+      if (unsubscribeRunGroups) {
+        unsubscribeRunGroups();
+        unsubscribeRunGroups = null;
+      }
+
+    }
+
+
+
+    /* ======================================================
+       NEXT EVENT
+       ====================================================== */
+
+    function renderNextEvent() {
+
+      if (unsubscribeRunGroups) {
+
+        unsubscribeRunGroups();
+
+        unsubscribeRunGroups =
+          null;
+
+      }
+
+
+      const nowUnix =
+        Math.floor(
+          Date.now() / 1000
+        );
+
+
+      const upcoming =
+        allEvents
+          .filter(
+            event =>
+              event.startTimestamp
+              >= nowUnix
+              && !event.cancelled
+          )
+          .sort(
+            (a, b) =>
+              a.startTimestamp
+              - b.startTimestamp
+          );
+
+
+      if (
+        upcoming.length === 0
+      ) {
+
+        nextEventTitle.textContent =
+          "No upcoming events";
+
+
+        nextEventText.innerHTML =
+          '<span class="community-empty">Apparently everyone is behaving. Suspicious. 😂</span>';
+
+
+        nextEventMeta.textContent =
+          "";
+
+
+        nextEventStatus.innerHTML =
+          "";
+
+
+        nextEventLink.href =
+          "events.html";
+
+
+        nextEventLink.textContent =
+          "VIEW EVENTS";
+
+
+        return;
+
+      }
+
+
+      const event =
+        upcoming[0];
+
+
+      nextEventTitle.textContent =
+        event.title;
+
+
+      nextEventText.textContent =
+        event.notes
+        || (
+          event.type === "organised"
+          ? "An organised run is waiting for victims."
+          : "Guild chaos has been scheduled."
+        );
+
+
+      nextEventMeta.textContent =
+        formatEventDate(
+          event.eventDate,
+          event.startTime
+        );
+
+
+      nextEventLink.href =
+        `event.html?id=${event.id}`;
+
+
+      nextEventLink.textContent =
+        "VIEW EVENT";
+
+
+      nextEventStatus.innerHTML =
+        "";
+
+
+      if (
+        event.type !== "organised"
+      ) {
+        return;
+      }
+
+
+      unsubscribeRunGroups =
+        onSnapshot(
+          collection(
+            db,
+            "events",
+            event.id,
+            "runGroups"
+          ),
+          snapshot => {
+
+            let total =
+              0;
+
+
+            let filled =
+              0;
+
+
+            snapshot.forEach(
+              groupDoc => {
+
+                const group =
+                  groupDoc.data();
+
+
+                (group.slots || [])
+                  .forEach(
+                    slot => {
+
+                      total++;
+
+
+                      if (slot.assignedUid) {
+                        filled++;
+                      }
+
+                    }
+                  );
+
+              }
+            );
+
+
+            nextEventStatus.innerHTML =
+              "";
+
+
+            if (total === 0) {
+
+              createStatusBadge(
+                nextEventStatus,
+                "RUN SHEET NOT SET"
+              );
+
+
+              return;
+
+            }
+
+
+            const open =
+              total - filled;
+
+
+            if (open === 0) {
+
+              createStatusBadge(
+                nextEventStatus,
+                "RUN FULL",
+                true
+              );
+
+            }
+
+
+            else {
+
+              createStatusBadge(
+                nextEventStatus,
+                `${open} SPOT${open === 1 ? "" : "S"} OPEN`
+              );
+
+            }
+
+          }
+        );
+
+    }
+
+
+
+    /* ======================================================
+       LATEST BLOG
+       ====================================================== */
+
+    function renderLatestPost() {
+
+      if (
+        allPosts.length === 0
+      ) {
+
+        latestPostTitle.textContent =
+          "Nothing posted yet";
+
+
+        latestPostText.innerHTML =
+          '<span class="community-empty">Someone clearly needs to start gossiping.</span>';
+
+
+        latestPostMeta.textContent =
+          "";
+
+
+        latestPostImageWrap.classList.remove(
+          "show"
+        );
+
+
+        return;
+
+      }
+
+
+      const post =
+        allPosts[0];
+
+
+      latestPostTitle.textContent =
+        post.title;
+
+
+      latestPostText.textContent =
+        makeExcerpt(
+          post.body,
+          220
+        );
+
+
+      latestPostMeta.textContent =
+        `${post.category || "From the Chaos"} ◆ By ${post.authorName || "Chaos Member"}`;
+
+
+      if (post.imageUrl) {
+
+        latestPostImage.src =
+          post.imageUrl;
+
+
+        latestPostImageWrap.classList.add(
+          "show"
+        );
+
+      }
+
+
+      else {
+
+        latestPostImageWrap.classList.remove(
+          "show"
+        );
+
+      }
+
+    }
+
+
+
+    /* ======================================================
+       LATEST GALLERY
+       ====================================================== */
+
+    function renderLatestGallery() {
+
+      if (
+        allGalleryItems.length === 0
+      ) {
+
+        latestGalleryTitle.textContent =
+          "Nothing in the vault yet";
+
+
+        latestGalleryText.innerHTML =
+          '<span class="community-empty">Someone go do something screenshot-worthy. 😂</span>';
+
+
+        latestGalleryMeta.textContent =
+          "";
+
+
+        latestGalleryImageWrap.classList.remove(
+          "show"
+        );
+
+
+        return;
+
+      }
+
+
+      const item =
+        allGalleryItems[0];
+
+
+      latestGalleryTitle.textContent =
+        item.category || "Latest Chaos";
+
+
+      latestGalleryText.textContent =
+        item.caption
+        || "Another moment preserved before everyone denies it happened.";
+
+
+      latestGalleryMeta.textContent =
+        `Added by ${item.uploadedByName || "Chaos Member"}`;
+
+
+      if (item.imageUrl) {
+
+        latestGalleryImage.src =
+          item.imageUrl;
+
+
+        latestGalleryImageWrap.classList.add(
+          "show"
+        );
+
+      }
+
+
+      else {
+
+        latestGalleryImageWrap.classList.remove(
+          "show"
+        );
+
+      }
+
+    }
+
+
+
+    /* ======================================================
+       HELPERS
+       ====================================================== */
+
+    function createStatusBadge(
+      target,
+      text,
+      full = false
+    ) {
+
+      const badge =
+        document.createElement(
+          "span"
+        );
+
+
+      badge.className =
+        "community-status";
+
+
+      if (full) {
+
+        badge.classList.add(
+          "full"
+        );
+
+      }
+
+
+      badge.textContent =
+        text;
+
+
+      target.appendChild(
+        badge
+      );
+
+    }
+
+
+
+    function makeExcerpt(
+      text,
+      limit
+    ) {
+
+      if (!text) {
+        return "";
+      }
+
+
+      if (
+        text.length <= limit
+      ) {
+
+        return text;
+
+      }
+
+
+      return (
+        text.slice(
+          0,
+          limit
+        )
+        + "..."
+      );
+
+    }
+
+
+
+    function formatEventDate(
+      dateString,
+      timeString
+    ) {
+
+      if (
+        !dateString
+        || !timeString
+      ) {
+
+        return "";
+
+      }
+
+
+      const date =
+        new Date(
+          `${dateString}T${timeString}:00`
+        );
+
+
+      return date.toLocaleString(
+        "en-GB",
+        {
+          weekday:
+            "long",
+
+          day:
+            "numeric",
+
+          month:
+            "long",
+
+          hour:
+            "2-digit",
+
+          minute:
+            "2-digit"
+        }
+      );
+
+    }
+
+
+  </script>
+
 
 </body>
 

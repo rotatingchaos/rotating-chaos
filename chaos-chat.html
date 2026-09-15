@@ -22,7 +22,6 @@
 
   <link rel="stylesheet" href="style.css">
 
-
   <style>
 
     /* ======================================================
@@ -41,18 +40,15 @@
         #0d0c0b;
     }
 
-
     .chaos-chat-shell {
       width: min(1100px, 100%);
       margin: 0 auto;
     }
 
-
     .chaos-chat-heading {
       text-align: center;
       margin-bottom: 35px;
     }
-
 
     .chaos-chat-heading h1 {
       font-family: "Cinzel", serif;
@@ -60,12 +56,10 @@
       margin: 5px 0 10px;
     }
 
-
     .chaos-chat-heading p {
       font-family: "Crimson Pro", serif;
       font-size: 1.2rem;
     }
-
 
 
     /* ======================================================
@@ -81,23 +75,19 @@
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     }
 
-
     .chat-login-card h2 {
       font-family: "Cinzel", serif;
       margin-top: 0;
       text-align: center;
     }
 
-
     .chat-login-card p {
       text-align: center;
     }
 
-
     .chat-field {
       margin-top: 20px;
     }
-
 
     .chat-field label {
       display: block;
@@ -106,7 +96,6 @@
       font-size: 0.85rem;
       letter-spacing: 1px;
     }
-
 
     .chat-field input {
       width: 100%;
@@ -119,11 +108,9 @@
       outline: none;
     }
 
-
     .chat-field input:focus {
       border-color: #d7aa42;
     }
-
 
     .chat-login-button {
       width: 100%;
@@ -137,14 +124,12 @@
       cursor: pointer;
     }
 
-
     .chat-error {
       display: none;
       margin-top: 18px;
       color: #ff9f9f;
       text-align: center;
     }
-
 
 
     /* ======================================================
@@ -158,7 +143,6 @@
       background: #121110;
       box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
     }
-
 
     .messenger-topbar {
       display: flex;
@@ -174,19 +158,16 @@
       border-bottom: 1px solid rgba(218, 165, 32, 0.4);
     }
 
-
     .messenger-title {
       font-family: "Cinzel", serif;
       font-weight: 800;
       letter-spacing: 1px;
     }
 
-
     .messenger-user {
       font-size: 0.95rem;
       opacity: 0.9;
     }
-
 
     .signout-button {
       border: 1px solid rgba(255, 255, 255, 0.4);
@@ -196,7 +177,6 @@
       cursor: pointer;
     }
 
-
     .messenger-body {
       display: grid;
       grid-template-columns: 220px 1fr;
@@ -204,9 +184,8 @@
     }
 
 
-
     /* ======================================================
-       SIDEBAR
+       SIDEBAR / ONLINE CHAOS
        ====================================================== */
 
     .messenger-sidebar {
@@ -215,30 +194,43 @@
       background: #0d0c0b;
     }
 
-
     .messenger-sidebar h3 {
       margin-top: 0;
       font-family: "Cinzel", serif;
       font-size: 0.95rem;
     }
 
-
-    .online-badge {
+    .online-list {
       display: flex;
-      align-items: center;
-      gap: 9px;
+      flex-direction: column;
+      gap: 10px;
       margin-top: 15px;
     }
 
+    .online-member {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-family: "Crimson Pro", serif;
+      color: #ff9fcb;
+      text-transform: none;
+    }
 
     .online-dot {
       width: 9px;
       height: 9px;
+      flex: 0 0 9px;
       border-radius: 50%;
       background: #68d46b;
       box-shadow: 0 0 8px rgba(104, 212, 107, 0.75);
     }
 
+    .online-empty {
+      margin-top: 15px;
+      font-family: "Crimson Pro", serif;
+      color: rgba(255, 159, 203, 0.72);
+      text-transform: none;
+    }
 
     .messenger-sidebar-note {
       margin-top: 30px;
@@ -246,7 +238,6 @@
       font-size: 0.9rem;
       line-height: 1.5;
     }
-
 
 
     /* ======================================================
@@ -259,7 +250,6 @@
       min-width: 0;
       position: relative;
     }
-
 
     .messages {
       flex: 1;
@@ -276,7 +266,6 @@
     }
 
 
-
     /* ======================================================
        MESSAGE BUBBLES
        ====================================================== */
@@ -289,16 +278,13 @@
       position: relative;
     }
 
-
     .message-own {
       align-items: flex-end;
     }
 
-
     .message-meta {
       margin-bottom: 5px;
     }
-
 
     .message-name {
       font-family: "Cinzel", serif;
@@ -307,13 +293,11 @@
       color: #ddb45d;
     }
 
-
     .message-time {
       margin-left: 8px;
       opacity: 0.45;
       font-size: 0.75rem;
     }
-
 
     .message-bubble {
       max-width: min(620px, 85%);
@@ -325,18 +309,28 @@
       overflow-wrap: anywhere;
     }
 
-
     .message-own .message-bubble {
       background: rgba(183, 128, 24, 0.19);
       border-color: rgba(218, 165, 32, 0.35);
     }
 
+    /* THE IMPORTANT BIT:
+       messages are normal case + Shelley pink 😂 */
 
-    .message-text a {
-      color: #efc76e;
-      text-decoration: underline;
+    .message-text {
+      font-family: "Crimson Pro", serif;
+      font-size: 1.08rem;
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: normal;
+      line-height: 1.45;
+      color: #ff9fcb;
     }
 
+    .message-text a {
+      color: #ffc1df;
+      text-decoration: underline;
+    }
 
     .message-media {
       display: block;
@@ -350,7 +344,6 @@
     }
 
 
-
     /* ======================================================
        MESSAGE REACTIONS
        ====================================================== */
@@ -360,14 +353,12 @@
       margin-top: 6px;
     }
 
-
     .message-reactions {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
       align-items: center;
     }
-
 
     .reaction-button,
     .reaction-add-button {
@@ -382,19 +373,16 @@
       min-height: 28px;
     }
 
-
     .reaction-button:hover,
     .reaction-add-button:hover {
       border-color: rgba(218, 165, 32, 0.65);
       background: rgba(218, 165, 32, 0.08);
     }
 
-
     .reaction-button.active {
       border-color: #d7aa42;
       background: rgba(218, 165, 32, 0.18);
     }
-
 
     .reaction-count {
       margin-left: 3px;
@@ -402,12 +390,10 @@
       opacity: 0.85;
     }
 
-
     .reaction-add-button {
       font-weight: 700;
       color: #ddb45d;
     }
-
 
 
     /* ======================================================
@@ -428,17 +414,14 @@
       box-shadow: 0 15px 45px rgba(0, 0, 0, 0.55);
     }
 
-
     .message-own .reaction-picker {
       left: auto;
       right: 0;
     }
 
-
     .reaction-picker.open {
       display: block;
     }
-
 
     .reaction-picker-title {
       margin: 0 0 8px;
@@ -448,7 +431,6 @@
       opacity: 0.65;
     }
 
-
     .reaction-picker-grid {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
@@ -456,7 +438,6 @@
       max-height: 190px;
       overflow-y: auto;
     }
-
 
     .reaction-choice {
       border: 0;
@@ -467,11 +448,9 @@
       border-radius: 5px;
     }
 
-
     .reaction-choice:hover {
       background: rgba(218, 165, 32, 0.14);
     }
-
 
 
     /* ======================================================
@@ -488,7 +467,6 @@
       position: relative;
     }
 
-
     .chat-tool-button {
       border: 1px solid rgba(218, 165, 32, 0.3);
       background: #171513;
@@ -499,18 +477,15 @@
       border-radius: 6px;
     }
 
-
     .chat-tool-button:hover {
       border-color: #d7aa42;
     }
-
 
     .chat-media-hint {
       opacity: 0.5;
       font-size: 0.82rem;
       margin-left: auto;
     }
-
 
 
     /* ======================================================
@@ -533,11 +508,9 @@
       z-index: 20;
     }
 
-
     .emoji-picker.open {
       display: block;
     }
-
 
     .emoji-tabs {
       display: grid;
@@ -545,7 +518,6 @@
       border-bottom: 1px solid rgba(218, 165, 32, 0.25);
       background: #11100f;
     }
-
 
     .emoji-tab {
       border: 0;
@@ -557,12 +529,10 @@
       cursor: pointer;
     }
 
-
     .emoji-tab.active {
       border-bottom-color: #d7aa42;
       background: rgba(218, 165, 32, 0.12);
     }
-
 
     .emoji-category {
       display: none;
@@ -573,11 +543,9 @@
       overflow-y: auto;
     }
 
-
     .emoji-category.active {
       display: grid;
     }
-
 
     .emoji-choice {
       border: 0;
@@ -588,11 +556,9 @@
       border-radius: 5px;
     }
 
-
     .emoji-choice:hover {
       background: rgba(218, 165, 32, 0.14);
     }
-
 
 
     /* ======================================================
@@ -607,22 +573,26 @@
       background: #0d0c0b;
     }
 
-
     .chat-compose input {
       min-width: 0;
       padding: 13px 14px;
       border: 1px solid rgba(218, 165, 32, 0.35);
       background: #171513;
-      color: #f6efe2;
+      color: #ff9fcb;
       outline: none;
-      font: inherit;
+      font-family: "Crimson Pro", serif;
+      font-size: 1.05rem;
+      text-transform: none;
+      letter-spacing: normal;
     }
 
+    .chat-compose input::placeholder {
+      color: rgba(255, 159, 203, 0.52);
+    }
 
     .chat-compose input:focus {
       border-color: #d7aa42;
     }
-
 
     .chat-send {
       padding: 12px 20px;
@@ -635,7 +605,6 @@
     }
 
 
-
     /* ======================================================
        MOBILE
        ====================================================== */
@@ -646,60 +615,66 @@
         grid-template-columns: 1fr;
       }
 
-
       .messenger-sidebar {
-        display: none;
+        display: block;
+        padding: 14px 18px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(218, 165, 32, 0.2);
       }
 
+      .online-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px 16px;
+      }
+
+      .online-member {
+        font-size: 0.95rem;
+      }
+
+      .messenger-sidebar-note {
+        display: none;
+      }
 
       .messages {
         height: 60vh;
         padding: 14px;
       }
 
-
       .message-bubble {
         max-width: 90%;
       }
 
-
       .chat-media-hint {
         display: none;
       }
-
 
       .chat-compose {
         gap: 7px;
         padding: 9px;
       }
 
-
       .chat-send {
         padding: 11px 13px;
       }
-
 
       .emoji-picker {
         left: 9px;
         width: min(390px, calc(100vw - 36px));
       }
 
-
       .reaction-picker {
         width: min(330px, calc(100vw - 50px));
       }
 
-
       .reaction-picker-grid {
         grid-template-columns: repeat(7, 1fr);
       }
-
     }
 
   </style>
 
 </head>
-
 
 <body>
 
@@ -735,35 +710,22 @@
 
     <nav class="desktop-nav">
 
-  <a href="index.html">
-    HOME
-  </a>
+      <a href="index.html">HOME</a>
 
-  <a href="community.html">
-    COMMUNITY
-  </a>
+      <a href="community.html">COMMUNITY</a>
 
-  <a href="build-guides.html">
-    CHAOS GUIDES
-  </a>
+      <a href="build-guides.html">CHAOS GUIDES</a>
 
-  <a href="events.html">
-    EVENTS
-  </a>
+      <a href="events.html">EVENTS</a>
 
-  <a href="merch.html">
-    MERCH
-  </a>
+      <a href="merch.html">MERCH</a>
 
-  <a href="my-chaos.html">
-    MY CHAOS
-  </a>
+      <a href="my-chaos.html">MY CHAOS</a>
 
-  <a href="contact.html">
-    CONTACT
-  </a>
+      <a href="contact.html">CONTACT</a>
 
-</nav>
+    </nav>
+
 
     <a
       href="https://discord.gg/UhJndyjYWr"
@@ -775,7 +737,6 @@
     </a>
 
   </header>
-
 
 
   <main class="chaos-chat-page">
@@ -798,7 +759,6 @@
         </p>
 
       </div>
-
 
 
       <!-- ==================================================
@@ -876,7 +836,6 @@
       </section>
 
 
-
       <!-- ==================================================
            MESSENGER
            ================================================== -->
@@ -914,24 +873,24 @@
         </div>
 
 
-
         <div class="messenger-body">
 
+
+          <!-- REAL ONLINE MEMBER LIST -->
 
           <aside class="messenger-sidebar">
 
             <h3>
-              CHAOS STATUS
+              CHAOS ONLINE
             </h3>
 
-            <div class="online-badge">
-
-              <span class="online-dot"></span>
-
-              <span>
-                Online
-              </span>
-
+            <div
+              class="online-list"
+              id="onlineMembers"
+            >
+              <div class="online-empty">
+                Checking who is causing chaos...
+              </div>
             </div>
 
 
@@ -943,15 +902,12 @@
           </aside>
 
 
-
           <div class="messenger-chat">
-
 
             <div
               class="messages"
               id="messages"
             ></div>
-
 
 
             <!-- ==================================================
@@ -981,7 +937,6 @@
               <span class="chat-media-hint">
                 Paste direct image or GIF links to preview them.
               </span>
-
 
 
               <!-- MAIN EMOJI PICKER -->
@@ -1037,14 +992,12 @@
                 </div>
 
 
-
                 <!-- FACES -->
 
                 <div
                   class="emoji-category active"
                   data-category="faces"
                 >
-
                   <button type="button" class="emoji-choice">😀</button>
                   <button type="button" class="emoji-choice">😃</button>
                   <button type="button" class="emoji-choice">😄</button>
@@ -1073,9 +1026,7 @@
                   <button type="button" class="emoji-choice">💀</button>
                   <button type="button" class="emoji-choice">🤡</button>
                   <button type="button" class="emoji-choice">🥳</button>
-
                 </div>
-
 
 
                 <!-- REACTIONS -->
@@ -1084,7 +1035,6 @@
                   class="emoji-category"
                   data-category="reactions"
                 >
-
                   <button type="button" class="emoji-choice">❤️</button>
                   <button type="button" class="emoji-choice">🧡</button>
                   <button type="button" class="emoji-choice">💛</button>
@@ -1106,9 +1056,7 @@
                   <button type="button" class="emoji-choice">💪</button>
                   <button type="button" class="emoji-choice">🫡</button>
                   <button type="button" class="emoji-choice">🎉</button>
-
                 </div>
-
 
 
                 <!-- GAMING -->
@@ -1117,7 +1065,6 @@
                   class="emoji-category"
                   data-category="gaming"
                 >
-
                   <button type="button" class="emoji-choice">🎮</button>
                   <button type="button" class="emoji-choice">🕹️</button>
                   <button type="button" class="emoji-choice">⚔️</button>
@@ -1138,9 +1085,7 @@
                   <button type="button" class="emoji-choice">📜</button>
                   <button type="button" class="emoji-choice">🏰</button>
                   <button type="button" class="emoji-choice">🎲</button>
-
                 </div>
-
 
 
                 <!-- FANTASY -->
@@ -1149,7 +1094,6 @@
                   class="emoji-category"
                   data-category="fantasy"
                 >
-
                   <button type="button" class="emoji-choice">🐉</button>
                   <button type="button" class="emoji-choice">🐲</button>
                   <button type="button" class="emoji-choice">🧙‍♂️</button>
@@ -1173,9 +1117,7 @@
                   <button type="button" class="emoji-choice">⚡</button>
                   <button type="button" class="emoji-choice">🌙</button>
                   <button type="button" class="emoji-choice">⭐</button>
-
                 </div>
-
 
 
                 <!-- RANDOM -->
@@ -1184,7 +1126,6 @@
                   class="emoji-category"
                   data-category="random"
                 >
-
                   <button type="button" class="emoji-choice">🍻</button>
                   <button type="button" class="emoji-choice">🍺</button>
                   <button type="button" class="emoji-choice">🍷</button>
@@ -1208,14 +1149,11 @@
                   <button type="button" class="emoji-choice">🌈</button>
                   <button type="button" class="emoji-choice">👽</button>
                   <button type="button" class="emoji-choice">💣</button>
-
                 </div>
-
 
               </div>
 
             </div>
-
 
 
             <!-- MESSAGE BOX -->
@@ -1246,21 +1184,16 @@
 
           </div>
 
-
         </div>
-
 
       </section>
 
-
     </div>
-
 
   </main>
 
 
-
-  <!-- ======================================================
+    <!-- ======================================================
        FIREBASE
        ====================================================== -->
 
@@ -1294,7 +1227,6 @@
     } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
 
-
     /* ======================================================
        FIREBASE CONFIG
        ====================================================== */
@@ -1326,7 +1258,6 @@
 
     const db =
       getFirestore(app);
-
 
 
     /* ======================================================
@@ -1366,6 +1297,9 @@
     const messagesElement =
       document.getElementById("messages");
 
+    const onlineMembersElement =
+      document.getElementById("onlineMembers");
+
     const emojiButton =
       document.getElementById("emojiButton");
 
@@ -1382,16 +1316,26 @@
       document.querySelectorAll(".emoji-category");
 
 
+    let currentNickname = "";
 
-    let currentNickname =
-      "";
+    let unsubscribeMessages = null;
 
-    let unsubscribeMessages =
-      null;
+    let unsubscribePresence = null;
 
-    let reactionUnsubscribers =
-      [];
+    let reactionUnsubscribers = [];
 
+    let presenceHeartbeat = null;
+
+    let presenceRefreshTimer = null;
+
+    let latestPresenceSnapshot = null;
+
+
+    /* A member counts as online if they have checked in
+       during the last two minutes. */
+
+    const PRESENCE_TIMEOUT =
+      2 * 60 * 1000;
 
 
     /* ======================================================
@@ -1411,7 +1355,6 @@
     }
 
 
-
     function prettyNameFromEmail(email) {
 
       const raw =
@@ -1421,7 +1364,6 @@
         + raw.slice(1);
 
     }
-
 
 
     /* ======================================================
@@ -1488,14 +1430,13 @@
     );
 
 
-
     /* ======================================================
        AUTH STATE
        ====================================================== */
 
     onAuthStateChanged(
       auth,
-      (user) => {
+      async (user) => {
 
         if (user) {
 
@@ -1518,6 +1459,8 @@
 
           startChat();
 
+          startPresence();
+
         }
 
 
@@ -1532,6 +1475,8 @@
 
 
           stopReactionListeners();
+
+          stopPresence();
 
 
           if (unsubscribeMessages) {
@@ -1549,6 +1494,366 @@
     );
 
 
+    /* ======================================================
+       LIVE PRESENCE
+       ====================================================== */
+
+    async function updateMyPresence() {
+
+      const user =
+        auth.currentUser;
+
+
+      if (!user) {
+        return;
+      }
+
+
+      try {
+
+        await setDoc(
+          doc(
+            db,
+            "presence",
+            user.uid
+          ),
+          {
+            uid: user.uid,
+
+            nickname:
+              currentNickname
+              || prettyNameFromEmail(user.email),
+
+            online: true,
+
+            lastSeen:
+              serverTimestamp()
+          },
+          {
+            merge: true
+          }
+        );
+
+      }
+
+
+      catch (error) {
+
+        console.error(
+          "Could not update presence:",
+          error
+        );
+
+      }
+
+    }
+
+
+    async function markMeOffline() {
+
+      const user =
+        auth.currentUser;
+
+
+      if (!user) {
+        return;
+      }
+
+
+      try {
+
+        await setDoc(
+          doc(
+            db,
+            "presence",
+            user.uid
+          ),
+          {
+            uid: user.uid,
+
+            nickname:
+              currentNickname
+              || prettyNameFromEmail(user.email),
+
+            online: false,
+
+            lastSeen:
+              serverTimestamp()
+          },
+          {
+            merge: true
+          }
+        );
+
+      }
+
+
+      catch (error) {
+
+        console.error(
+          "Could not mark member offline:",
+          error
+        );
+
+      }
+
+    }
+
+
+    function renderOnlineMembers(snapshot) {
+
+      if (!onlineMembersElement) {
+        return;
+      }
+
+
+      const now =
+        Date.now();
+
+
+      const onlineMembers =
+        [];
+
+
+      snapshot.forEach(
+        (presenceDocument) => {
+
+          const data =
+            presenceDocument.data();
+
+
+          if (!data.online) {
+            return;
+          }
+
+
+          if (!data.lastSeen?.toDate) {
+            return;
+          }
+
+
+          const lastSeen =
+            data.lastSeen
+              .toDate()
+              .getTime();
+
+
+          if (
+            now - lastSeen
+            > PRESENCE_TIMEOUT
+          ) {
+
+            return;
+
+          }
+
+
+          onlineMembers.push({
+            uid:
+              presenceDocument.id,
+
+            nickname:
+              data.nickname
+              || "Chaos Member"
+          });
+
+        }
+      );
+
+
+      onlineMembers.sort(
+        (a, b) =>
+          a.nickname.localeCompare(
+            b.nickname
+          )
+      );
+
+
+      onlineMembersElement.innerHTML =
+        "";
+
+
+      if (!onlineMembers.length) {
+
+        const empty =
+          document.createElement("div");
+
+
+        empty.className =
+          "online-empty";
+
+
+        empty.textContent =
+          "No gremlins detected. 👀";
+
+
+        onlineMembersElement.appendChild(
+          empty
+        );
+
+
+        return;
+
+      }
+
+
+      onlineMembers.forEach(
+        (member) => {
+
+          const row =
+            document.createElement("div");
+
+
+          row.className =
+            "online-member";
+
+
+          const dot =
+            document.createElement("span");
+
+
+          dot.className =
+            "online-dot";
+
+
+          const name =
+            document.createElement("span");
+
+
+          name.textContent =
+            member.nickname;
+
+
+          row.appendChild(dot);
+
+          row.appendChild(name);
+
+
+          onlineMembersElement.appendChild(
+            row
+          );
+
+        }
+      );
+
+    }
+
+
+    function startPresence() {
+
+      stopPresence();
+
+
+      updateMyPresence();
+
+
+      presenceHeartbeat =
+        setInterval(
+          updateMyPresence,
+          60 * 1000
+        );
+
+
+      unsubscribePresence =
+        onSnapshot(
+          collection(
+            db,
+            "presence"
+          ),
+          (snapshot) => {
+
+            latestPresenceSnapshot =
+              snapshot;
+
+
+            renderOnlineMembers(
+              snapshot
+            );
+
+          },
+          (error) => {
+
+            console.error(
+              "Could not read presence:",
+              error
+            );
+
+
+            onlineMembersElement.innerHTML =
+              `<div class="online-empty">
+                Chaos radar is having a moment. 😂
+              </div>`;
+
+          }
+        );
+
+
+      /* Firestore only fires when data changes.
+         This timer also removes stale people locally. */
+
+      presenceRefreshTimer =
+        setInterval(
+          () => {
+
+            if (latestPresenceSnapshot) {
+
+              renderOnlineMembers(
+                latestPresenceSnapshot
+              );
+
+            }
+
+          },
+          30 * 1000
+        );
+
+    }
+
+
+    function stopPresence() {
+
+      if (presenceHeartbeat) {
+
+        clearInterval(
+          presenceHeartbeat
+        );
+
+
+        presenceHeartbeat =
+          null;
+
+      }
+
+
+      if (presenceRefreshTimer) {
+
+        clearInterval(
+          presenceRefreshTimer
+        );
+
+
+        presenceRefreshTimer =
+          null;
+
+      }
+
+
+      if (unsubscribePresence) {
+
+        unsubscribePresence();
+
+
+        unsubscribePresence =
+          null;
+
+      }
+
+
+      latestPresenceSnapshot =
+        null;
+
+    }
+
 
     /* ======================================================
        SIGN OUT
@@ -1557,6 +1862,9 @@
     signOutButton.addEventListener(
       "click",
       async () => {
+
+        await markMeOffline();
+
 
         sessionStorage.removeItem(
           "chaosNickname"
@@ -1567,7 +1875,6 @@
 
       }
     );
-
 
 
     /* ======================================================
@@ -1599,17 +1906,23 @@
 
             emojiTabs.forEach(
               item =>
-                item.classList.remove("active")
+                item.classList.remove(
+                  "active"
+                )
             );
 
 
             emojiCategories.forEach(
               item =>
-                item.classList.remove("active")
+                item.classList.remove(
+                  "active"
+                )
             );
 
 
-            tab.classList.add("active");
+            tab.classList.add(
+              "active"
+            );
 
 
             const target =
@@ -1634,7 +1947,9 @@
 
 
     document
-      .querySelectorAll(".emoji-choice")
+      .querySelectorAll(
+        ".emoji-choice"
+      )
       .forEach(
         (button) => {
 
@@ -1686,7 +2001,6 @@
 
         }
       );
-
 
 
     /* ======================================================
@@ -1748,7 +2062,6 @@
     );
 
 
-
     /* ======================================================
        IMAGE / GIF CHECK
        ====================================================== */
@@ -1776,9 +2089,15 @@
 
 
         if (
-          parsed.hostname.includes("media.giphy.com")
-          || parsed.hostname.includes("i.giphy.com")
-          || parsed.hostname.includes("media.tenor.com")
+          parsed.hostname.includes(
+            "media.giphy.com"
+          )
+          || parsed.hostname.includes(
+            "i.giphy.com"
+          )
+          || parsed.hostname.includes(
+            "media.tenor.com"
+          )
         ) {
 
           return true;
@@ -1798,7 +2117,6 @@
       }
 
     }
-
 
 
     /* ======================================================
@@ -1829,7 +2147,9 @@
             if (isImageUrl(piece)) {
 
               const image =
-                document.createElement("img");
+                document.createElement(
+                  "img"
+                );
 
 
               image.src =
@@ -1868,7 +2188,9 @@
             else {
 
               const link =
-                document.createElement("a");
+                document.createElement(
+                  "a"
+                );
 
 
               link.href =
@@ -1899,7 +2221,9 @@
           else {
 
             container.appendChild(
-              document.createTextNode(piece)
+              document.createTextNode(
+                piece
+              )
             );
 
           }
@@ -1908,7 +2232,6 @@
       );
 
     }
-
 
 
     /* ======================================================
@@ -1978,11 +2301,11 @@
     ];
 
 
-
     function stopReactionListeners() {
 
       reactionUnsubscribers.forEach(
-        unsubscribe => unsubscribe()
+        unsubscribe =>
+          unsubscribe()
       );
 
 
@@ -1992,11 +2315,12 @@
     }
 
 
-
     function closeAllReactionPickers() {
 
       document
-        .querySelectorAll(".reaction-picker.open")
+        .querySelectorAll(
+          ".reaction-picker.open"
+        )
         .forEach(
           picker => {
 
@@ -2010,14 +2334,15 @@
     }
 
 
-
     function createReactionPicker(
       messageId,
       getCurrentReaction
     ) {
 
       const picker =
-        document.createElement("div");
+        document.createElement(
+          "div"
+        );
 
 
       picker.className =
@@ -2025,7 +2350,9 @@
 
 
       const title =
-        document.createElement("p");
+        document.createElement(
+          "p"
+        );
 
 
       title.className =
@@ -2037,7 +2364,9 @@
 
 
       const grid =
-        document.createElement("div");
+        document.createElement(
+          "div"
+        );
 
 
       grid.className =
@@ -2048,7 +2377,9 @@
         (emoji) => {
 
           const button =
-            document.createElement("button");
+            document.createElement(
+              "button"
+            );
 
 
           button.type =
@@ -2093,15 +2424,19 @@
       );
 
 
-      picker.appendChild(title);
+      picker.appendChild(
+        title
+      );
 
-      picker.appendChild(grid);
+
+      picker.appendChild(
+        grid
+      );
 
 
       return picker;
 
     }
-
 
 
     function startReactionListener(
@@ -2195,17 +2530,14 @@
 
 
             const row =
-              document.createElement("div");
+              document.createElement(
+                "div"
+              );
 
 
             row.className =
               "message-reactions";
 
-
-
-            /* ==============================================
-               SHOW USED REACTIONS FIRST
-               ============================================== */
 
             const usedReactions =
               Object.keys(counts);
@@ -2231,12 +2563,9 @@
             );
 
 
-
-            /* ==============================================
-               IF NOTHING USED YET, SHOW QUICK OPTIONS
-               ============================================== */
-
-            if (usedReactions.length === 0) {
+            if (
+              usedReactions.length === 0
+            ) {
 
               defaultReactions.forEach(
                 (emoji) => {
@@ -2260,13 +2589,10 @@
             }
 
 
-
-            /* ==============================================
-               PLUS BUTTON
-               ============================================== */
-
             const addButton =
-              document.createElement("button");
+              document.createElement(
+                "button"
+              );
 
 
             addButton.type =
@@ -2334,7 +2660,6 @@
     }
 
 
-
     function createReactionButton(
       messageId,
       emoji,
@@ -2343,7 +2668,9 @@
     ) {
 
       const button =
-        document.createElement("button");
+        document.createElement(
+          "button"
+        );
 
 
       button.type =
@@ -2354,7 +2681,9 @@
         "reaction-button";
 
 
-      if (currentReaction === emoji) {
+      if (
+        currentReaction === emoji
+      ) {
 
         button.classList.add(
           "active"
@@ -2364,7 +2693,9 @@
 
 
       const emojiSpan =
-        document.createElement("span");
+        document.createElement(
+          "span"
+        );
 
 
       emojiSpan.textContent =
@@ -2379,7 +2710,9 @@
       if (count > 0) {
 
         const countSpan =
-          document.createElement("span");
+          document.createElement(
+            "span"
+          );
 
 
         countSpan.className =
@@ -2416,7 +2749,6 @@
     }
 
 
-
     async function toggleReaction(
       messageId,
       emoji,
@@ -2444,7 +2776,9 @@
 
       try {
 
-        if (currentReaction === emoji) {
+        if (
+          currentReaction === emoji
+        ) {
 
           await deleteDoc(
             reactionRef
@@ -2479,7 +2813,6 @@
     }
 
 
-
     /* ======================================================
        CLOSE PICKERS WHEN CLICKING ELSEWHERE
        ====================================================== */
@@ -2489,8 +2822,12 @@
       (event) => {
 
         if (
-          !emojiPicker.contains(event.target)
-          && !emojiButton.contains(event.target)
+          !emojiPicker.contains(
+            event.target
+          )
+          && !emojiButton.contains(
+            event.target
+          )
         ) {
 
           emojiPicker.classList.remove(
@@ -2517,7 +2854,6 @@
     );
 
 
-
     /* ======================================================
        LIVE CHAT
        ====================================================== */
@@ -2533,8 +2869,14 @@
 
       const messagesQuery =
         query(
-          collection(db, "messages"),
-          orderBy("createdAt", "asc"),
+          collection(
+            db,
+            "messages"
+          ),
+          orderBy(
+            "createdAt",
+            "asc"
+          ),
           limit(100)
         );
 
@@ -2559,7 +2901,9 @@
 
 
                 const message =
-                  document.createElement("div");
+                  document.createElement(
+                    "div"
+                  );
 
 
                 message.className =
@@ -2579,11 +2923,12 @@
                 }
 
 
-
                 /* META */
 
                 const meta =
-                  document.createElement("div");
+                  document.createElement(
+                    "div"
+                  );
 
 
                 meta.className =
@@ -2591,7 +2936,9 @@
 
 
                 const name =
-                  document.createElement("span");
+                  document.createElement(
+                    "span"
+                  );
 
 
                 name.className =
@@ -2604,14 +2951,18 @@
 
 
                 const time =
-                  document.createElement("span");
+                  document.createElement(
+                    "span"
+                  );
 
 
                 time.className =
                   "message-time";
 
 
-                if (data.createdAt?.toDate) {
+                if (
+                  data.createdAt?.toDate
+                ) {
 
                   time.textContent =
                     data.createdAt
@@ -2619,24 +2970,33 @@
                       .toLocaleTimeString(
                         [],
                         {
-                          hour: "2-digit",
-                          minute: "2-digit"
+                          hour:
+                            "2-digit",
+
+                          minute:
+                            "2-digit"
                         }
                       );
 
                 }
 
 
-                meta.appendChild(name);
+                meta.appendChild(
+                  name
+                );
 
-                meta.appendChild(time);
 
+                meta.appendChild(
+                  time
+                );
 
 
                 /* BUBBLE */
 
                 const bubble =
-                  document.createElement("div");
+                  document.createElement(
+                    "div"
+                  );
 
 
                 bubble.className =
@@ -2644,7 +3004,9 @@
 
 
                 const text =
-                  document.createElement("div");
+                  document.createElement(
+                    "div"
+                  );
 
 
                 text.className =
@@ -2662,11 +3024,12 @@
                 );
 
 
-
                 /* REACTIONS */
 
                 const reactionArea =
-                  document.createElement("div");
+                  document.createElement(
+                    "div"
+                  );
 
 
                 reactionArea.className =
@@ -2677,7 +3040,6 @@
                   messageDocument.id,
                   reactionArea
                 );
-
 
 
                 message.appendChild(
@@ -2712,7 +3074,6 @@
     }
 
 
-
     /* ======================================================
        SEND MESSAGE
        ====================================================== */
@@ -2745,19 +3106,32 @@
         try {
 
           await addDoc(
-            collection(db, "messages"),
+            collection(
+              db,
+              "messages"
+            ),
             {
 
-              text: text,
+              text:
+                text,
 
-              nickname: currentNickname,
+              nickname:
+                currentNickname,
 
-              uid: user.uid,
+              uid:
+                user.uid,
 
-              createdAt: serverTimestamp()
+              createdAt:
+                serverTimestamp()
 
             }
           );
+
+
+          /* Sending something is definitely activity,
+             so refresh their online presence too. */
+
+          updateMyPresence();
 
 
           messageInput.value =
@@ -2787,7 +3161,7 @@
     );
 
 
-    </script>
+  </script>
 
 
   <!-- ======================================================
@@ -2843,5 +3217,7 @@
 
 
 </body>
-
 </html>
+
+
+  

@@ -1832,8 +1832,9 @@ footer h2 {
     saturate(1.06)
     contrast(1.06)
     brightness(1);
+}
 
-   /* =========================================================
+/* =========================================================
    SHARED MAGICAL PAGE HERO
    Use this on all secondary pages
    ========================================================= */
@@ -2536,7 +2537,6 @@ footer h2 {
     padding: 12px;
   }
 
-}
 }
 
 /* =========================================================
@@ -3270,5 +3270,67 @@ footer h2 {
     left: 10px;
   }
 
+}
+
+/* =========================================================
+   FINAL BUILD SHEET POLISH
+   Shared across all completed Paragon pages
+   ========================================================= */
+
+.build-guide-panel p + p {
+  margin-top: 16px;
+}
+
+.build-guide-panel ul + p,
+.build-guide-panel ol + p,
+.build-guide-panel .build-info-grid + p,
+.build-guide-panel .build-callout + p {
+  margin-top: 22px;
+}
+
+.build-guide-panel strong {
+  color: var(--light-gold);
+}
+
+.build-info-card .build-list {
+  margin-top: 12px;
+}
+
+.build-info-card .build-list li {
+  padding-left: 28px;
+  font-size: 16px;
+}
+
+.build-info-card .build-list li::before {
+  left: 6px;
+}
+
+.build-rotation-panel .build-callout {
+  border-color: rgba(226, 195, 107, 0.46);
+}
+
+.build-overview .build-callout {
+  background:
+    radial-gradient(
+      ellipse at 0% 50%,
+      rgba(16, 168, 120, 0.13),
+      transparent 46%
+    ),
+    rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 600px) {
+  .build-detail-hero-text > p:last-child {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .build-guide-panel p {
+    font-size: 17px;
+  }
+
+  .build-info-card p {
+    font-size: 16px;
+  }
 }
 

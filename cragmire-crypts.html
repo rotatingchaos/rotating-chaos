@@ -26,7 +26,9 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
 
   <header class="site-header">
 
@@ -96,40 +98,15 @@
   <main>
 
 
-    <!-- HERO -->
+    <!-- ======================================================
+         DUNGEON HERO
+         ====================================================== -->
 
-    <section class="magic-page-hero guides-hero">
+    <section class="magic-page-hero build-detail-hero">
 
-      <div class="guides-hero-content">
+      <div class="build-detail-hero-content">
 
-        <p class="section-eyebrow">
-          DUNGEON MECHANICS
-        </p>
-
-        <h1>
-          CRAGMIRE CRYPTS
-        </h1>
-
-        <p class="guides-intro">
-          Dodge the traps. Control the adds. Try not to set the entire room on fire.
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- GUIDE -->
-
-    <section class="build-detail-page">
-
-      <div class="build-detail-card">
-
-
-        <!-- IMAGE -->
-
-        <div class="build-detail-image">
+        <div class="build-detail-hero-image">
 
           <img
             src="images/cragmire.jpeg"
@@ -139,409 +116,763 @@
         </div>
 
 
+        <div class="build-detail-hero-text">
 
-        <!-- OVERVIEW -->
-
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            OVERVIEW
+          <p class="section-eyebrow">
+            DUNGEON ◆ MECHANICS
           </p>
 
-          <h2>
+          <h1>
             CRAGMIRE CRYPTS
-          </h2>
+          </h1>
 
           <p>
-            Cragmire Crypts is heavily filled with traps, enemy ambushes
-            and additional enemies. The final encounter against
-            Blackdagger requires the group to manage both adds and
-            persistent fire across the arena.
+            Rotating Chaos Neverwinter Dungeon Guide
           </p>
 
         </div>
 
+      </div>
+
+    </section>
 
 
-        <!-- TRAPS -->
 
-        <div class="build-guide-panel">
+    <!-- ======================================================
+         SIMPLE NAVIGATION
+         ====================================================== -->
 
-          <p class="build-panel-eyebrow">
-            THROUGHOUT THE DUNGEON
-          </p>
+    <nav class="build-section-nav">
 
-          <h2>
-            WATCH THE FLOOR
-          </h2>
+      <a href="#quick-guide">
+        Quick Mechanics
+      </a>
 
-          <ul>
+      <a href="#full-guide">
+        Full Mechanics
+      </a>
 
-            <li>
+    </nav>
+
+
+
+    <!-- ======================================================
+         DUNGEON CONTENT
+         ====================================================== -->
+
+    <section class="build-detail-page dungeon-guide-page">
+
+
+      <!-- ====================================================
+           CHAOS WARNING
+           ==================================================== -->
+
+      <aside class="dungeon-chaos-warning">
+
+        <p class="chaos-warning-label">
+          ⚠ CHAOS WARNING
+        </p>
+
+        <p class="chaos-warning-message">
+          Fire is spreading, adds are multiplying and somebody
+          is inevitably standing directly in front of the boss.
+          Don't be that somebody.
+        </p>
+
+      </aside>
+
+
+
+      <!-- ====================================================
+           QUICK & DIRTY MECHANICS
+           ==================================================== -->
+
+      <article
+        class="build-guide-panel quick-mechanics-panel"
+        id="quick-guide"
+      >
+
+        <p class="build-panel-eyebrow">
+          THE QUICK & DIRTY VERSION
+        </p>
+
+        <h2>
+          ALL YOU REALLY NEED TO KNOW
+        </h2>
+
+        <p class="quick-mechanics-intro">
+          No essays. See the mechanic, do the thing.
+        </p>
+
+
+        <div class="quick-mechanics-grid">
+
+
+          <!-- TRAPS -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🪤
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                TRAPS
+              </h3>
+
+              <p>
+                Moving through the crypt?
+              </p>
+
+              <strong>
+                WATCH THE BLOODY FLOOR.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- RIVAL PARTY -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              ⚔️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                RIVAL PARTY
+              </h3>
+
+              <p>
+                Enemy adventuring party?
+              </p>
+
+              <strong>
+                HEALER ◆ DPS ◆ TANK.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- BLACKDAGGER -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              💀
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                BLACKDAGGER
+              </h3>
+
+              <p>
+                Not the tank?
+              </p>
+
+              <strong>
+                DON'T STAND IN FRONT OF HIM.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- FIRE -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🔥
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                FIRE
+              </h3>
+
+              <p>
+                Bombs leave fire behind.
+              </p>
+
+              <strong>
+                KEEP MOVING ◆ KEEP SAFE SPACE.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- ADDS -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🎯
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                ADDS
+              </h3>
+
+              <p>
+                Adds spawning?
+              </p>
+
+              <strong>
+                KILL THEM ◆ SNIPERS FIRST.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- WATER BARREL -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              💧
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                WATER BARREL
+              </h3>
+
+              <p>
+                Running out of safe floor?
+              </p>
+
+              <strong>
+                USE THE BARREL.
+              </strong>
+
+              <p>
+                Then dodge — Blackdagger gets angry.
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ====================================================
+           FULL MECHANICS DROPDOWN
+           ==================================================== -->
+
+      <details
+        class="full-mechanics-dropdown"
+        id="full-guide"
+      >
+
+        <summary class="full-mechanics-summary">
+
+          <span class="full-mechanics-summary-main">
+            WANT THE FULL MECHANICS?
+          </span>
+
+          <span class="full-mechanics-summary-sub">
+            Open the full Cragmire Crypts guide
+          </span>
+
+          <span
+            class="full-mechanics-chevron"
+            aria-hidden="true"
+          >
+            ▼
+          </span>
+
+        </summary>
+
+
+
+        <div class="full-mechanics-content">
+
+
+          <!-- ==================================================
+               OVERVIEW
+               ================================================== -->
+
+          <article
+            class="build-guide-panel build-overview"
+            id="overview"
+          >
+
+            <p class="build-panel-eyebrow">
+              THE DUNGEON
+            </p>
+
+            <h2>
+              OVERVIEW
+            </h2>
+
+            <p>
+              Cragmire Crypts is heavily filled with traps, enemy
+              ambushes and additional enemies.
+            </p>
+
+            <p>
+              The final encounter against Blackdagger requires the
+              group to manage both adds and persistent fire across
+              the arena.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               TRAPS
+               ================================================== -->
+
+          <article
+            class="build-guide-panel"
+            id="traps"
+          >
+
+            <p class="build-panel-eyebrow">
+              THROUGHOUT THE DUNGEON
+            </p>
+
+            <h2>
+              WATCH THE FLOOR
+            </h2>
+
+            <p>
               Cragmire Crypts contains numerous spike and blade traps
               across floors and corridors.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Watch the ground carefully while moving through the
               dungeon rather than running blindly through rooms.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Some rooms contain several traps across the centre.
               Moving around the edges can avoid triggering them.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Later sections contain spike pits capable of instantly
               killing players who fall into them.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Activate the nearby mechanism and wait for the bridge
               before attempting to cross a spike pit.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- CALLOS TAM -->
+          <!-- ==================================================
+               CALLOS TAM
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="callos-tam"
+          >
 
-          <p class="build-panel-eyebrow">
-            MINI BOSS
-          </p>
+            <p class="build-panel-eyebrow">
+              MINI BOSS
+            </p>
 
-          <h2>
-            CALLOS TAM
-          </h2>
+            <h2>
+              CALLOS TAM
+            </h2>
 
-          <ul>
+            <p>
+              Callos Tam deals strong single-target damage and also
+              has area-of-effect attacks.
+            </p>
 
-            <li>
-              Callos Tam deals strong single-target damage and also has
-              area-of-effect attacks.
-            </li>
-
-            <li>
+            <p>
               His main mechanic is summoning groups of undead adds.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Group the adds together and use area damage to hit them
               alongside Callos Tam.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Do not allow the summoned enemies to overwhelm an
               individual player.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- ADVENTURING PARTY -->
+          <!-- ==================================================
+               RIVAL PARTY
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="rival-party"
+          >
 
-          <p class="build-panel-eyebrow">
-            MINI BOSS
-          </p>
+            <p class="build-panel-eyebrow">
+              MINI BOSS
+            </p>
 
-          <h2>
-            RIVAL ADVENTURING PARTY
-          </h2>
+            <h2>
+              RIVAL ADVENTURING PARTY
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               The opposing adventuring party contains its own tank,
               damage dealers and healer.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Prioritise their healer first to prevent the enemy group
               sustaining itself.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Once the healer is dead, focus the damage dealers.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Leave the enemy tank until last where possible.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Reducing the number of enemies quickly makes the fight
               considerably easier.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- PHASE SPIDERS -->
+          <!-- ==================================================
+               PHASE SPIDERS
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="phase-spiders"
+          >
 
-          <p class="build-panel-eyebrow">
-            DUNGEON MECHANIC
-          </p>
+            <p class="build-panel-eyebrow">
+              DUNGEON MECHANIC
+            </p>
 
-          <h2>
-            PHASE SPIDERS
-          </h2>
+            <h2>
+              PHASE SPIDERS
+            </h2>
 
-          <ul>
+            <p>
+              Phase spiders appear during the deeper sections of the crypt.
+            </p>
 
-            <li>
-              Phase spiders appear during the deeper sections of the
-              crypt.
-            </li>
-
-            <li>
+            <p>
               Lower-damage groups should focus one phase spider at a
               time rather than fighting several simultaneously.
-            </li>
+            </p>
 
-            <li>
-              Spiders can create webbed areas that reduce player
-              movement.
-            </li>
+            <p>
+              Spiders can create webbed areas that reduce player movement.
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- BLACKDAGGER -->
+          <!-- ==================================================
+               BLACKDAGGER
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="blackdagger"
+          >
 
-          <p class="build-panel-eyebrow">
-            FINAL BOSS
-          </p>
+            <p class="build-panel-eyebrow">
+              FINAL BOSS
+            </p>
 
-          <h2>
-            BLACKDAGGER
-          </h2>
+            <h2>
+              BLACKDAGGER
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               Blackdagger deals heavy damage to players standing
               directly in front of him.
-            </li>
+            </p>
 
-            <li>
+            <p>
               The tank should keep Blackdagger's attention while the
               rest of the group attacks from safer positions.
-            </li>
+            </p>
 
-            <li>
+
+            <h3>
+              FRONTAL ATTACK
+            </h3>
+
+            <p>
               Blackdagger uses a repeated frontal slash attack.
+            </p>
+
+            <p>
               Avoid standing in front of him when this begins.
-            </li>
+            </p>
 
-            <li>
-              He regularly throws bombs around the arena.
-            </li>
 
-            <li>
+            <h3>
+              BOMBS & FIRE
+            </h3>
+
+            <p>
+              Blackdagger regularly throws bombs around the arena.
+            </p>
+
+            <p>
               Each bomb leaves behind a persistent circle of fire.
-            </li>
+            </p>
 
-            <li>
-              The fire deals heavy damage and remains until the water
-              barrel mechanic is used.
-            </li>
+            <p>
+              The fire deals heavy damage and remains until the
+              water barrel mechanic is used.
+            </p>
 
-            <li>
-              Keep repositioning as fire spreads across the arena and
-              avoid allowing the group to become trapped.
-            </li>
+            <p>
+              Keep repositioning as fire spreads across the arena
+              and avoid allowing the group to become trapped.
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- WATER BARREL -->
+          <!-- ==================================================
+               WATER BARREL
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="water-barrel"
+          >
 
-          <p class="build-panel-eyebrow">
-            KEY MECHANIC
-          </p>
+            <p class="build-panel-eyebrow">
+              KEY MECHANIC
+            </p>
 
-          <h2>
-            WATER BARREL
-          </h2>
+            <h2>
+              WATER BARREL
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               A water barrel at the end of the arena can clear all
               existing fire from the floor.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Use the barrel when the amount of fire leaves the group
               with too little safe space to continue fighting.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Activating the barrel causes Blackdagger to become
               enraged and rapidly attack players around the room.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Be prepared to dodge or mitigate his attacks immediately
               after the barrel is activated.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Each additional use of the barrel causes Blackdagger's
               retaliation to hit harder.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Use the barrel only when necessary rather than clearing
               manageable fire unnecessarily.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- ADDS -->
+          <!-- ==================================================
+               ADDS
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="adds"
+          >
 
-          <p class="build-panel-eyebrow">
-            ADD CONTROL
-          </p>
+            <p class="build-panel-eyebrow">
+              ADD CONTROL
+            </p>
 
-          <h2>
-            DON'T LET THEM BUILD UP
-          </h2>
+            <h2>
+              DON'T LET THEM BUILD UP
+            </h2>
 
-          <ul>
+            <p>
+              Blackdagger summons additional enemies throughout
+              the encounter.
+            </p>
 
-            <li>
-              Blackdagger summons additional enemies throughout the
-              encounter.
-            </li>
+            <p>
+              DPS should switch to the adds when they appear and
+              remove them quickly.
+            </p>
 
-            <li>
-              DPS should switch to the adds when they appear and remove
-              them quickly.
-            </li>
-
-            <li>
+            <p>
               Snipers have relatively low health but deal high damage,
               making them priority targets.
-            </li>
+            </p>
 
-            <li>
-              Stronger enemies begin appearing as Blackdagger's health
-              decreases.
-            </li>
+            <p>
+              Stronger enemies begin appearing as Blackdagger's
+              health decreases.
+            </p>
 
-            <li>
+            <p>
               If adds are allowed to accumulate while the arena fills
               with fire, the group can quickly become overwhelmed.
-            </li>
+            </p>
 
-            <li>
+            <p>
               When Blackdagger dies, surviving adds remain active.
               Kill them before considering the encounter finished.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- QUICK REFERENCE -->
+          <!-- ==================================================
+               CHAOS NOTES
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel chaos-notes-panel"
+            id="chaos-notes"
+          >
 
-          <p class="build-panel-eyebrow">
-            QUICK REFERENCE
-          </p>
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
 
-          <h2>
-            DON'T GET CREMATED
-          </h2>
+            <h2>
+              CHAOS NOTES
+            </h2>
 
-          <ul>
+            <p>
+              Watch the floor. The crypt is apparently incapable
+              of having a normal fucking corridor.
+            </p>
 
-            <li>
-              Watch for traps throughout the dungeon.
-            </li>
+            <p>
+              Rival adventurers?
+              Murder their healer first, then DPS, then deal with
+              the irritatingly durable tank.
+            </p>
 
-            <li>
-              Rival party → healer first, DPS second, tank last.
-            </li>
+            <p>
+              Blackdagger's front belongs to the tank.
+              Everyone else has an entire boss backside available.
+              Use it.
+            </p>
 
-            <li>
-              Blackdagger → stay away from his front.
-            </li>
+            <p>
+              Adds appear? Kill them.
+              Snipers appear? Kill them faster.
+            </p>
 
-            <li>
-              Bombs → leave persistent fire.
-            </li>
+            <p>
+              Don't use the water barrel every time somebody sees
+              a tiny patch of fire. Save it until you're actually
+              running out of room because Blackdagger gets progressively
+              more pissed off every time you use it.
+            </p>
 
-            <li>
-              Adds → kill them before they accumulate.
-            </li>
+          </article>
 
-            <li>
-              Snipers → priority targets.
-            </li>
-
-            <li>
-              Arena running out of space → use the water barrel.
-            </li>
-
-            <li>
-              Barrel used → prepare for Blackdagger's retaliation.
-            </li>
-
-            <li>
-              Don't spam the barrel — his retaliation becomes stronger.
-            </li>
-
-            <li>
-              Blackdagger dead → finish any remaining adds.
-            </li>
-
-          </ul>
 
         </div>
 
+      </details>
+
+
+
+      <!-- ====================================================
+           UPDATED
+           ==================================================== -->
+
+      <div class="build-last-updated">
+
+        <p>
+          LAST UPDATED ◆ SEPTEMBER 2026
+        </p>
 
       </div>
 
 
 
-      <!-- BACK LINK -->
+      <!-- ====================================================
+           BACK TO MECHANICS
+           ==================================================== -->
 
       <div class="build-back-link">
 
@@ -551,11 +882,14 @@
 
       </div>
 
+
     </section>
 
 
 
-    <!-- FOOTER -->
+    <!-- ======================================================
+         FOOTER
+         ====================================================== -->
 
     <footer id="contact">
 

@@ -3539,11 +3539,11 @@ footer h2 {
 
   background:
 
-    radial-gradient(
-      ellipse at 50% 0%,
-      rgba(196, 154, 58, 0.12),
-      transparent 65%
-    ),
+  radial-gradient(
+  ellipse at 50% 0%,
+  rgba(255, 114, 189, 0.16),
+  transparent 65%
+),
 
     radial-gradient(
       ellipse at 10% 50%,

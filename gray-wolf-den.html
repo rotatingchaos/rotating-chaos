@@ -26,7 +26,9 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
 
   <header class="site-header">
 
@@ -55,9 +57,7 @@
 
     <nav class="desktop-nav">
 
-      <a href="index.html">
-        HOME
-      </a>
+      <a href="index.html">HOME</a>
 
       <a href="index.html#about">
         THE CHAOS CREW
@@ -98,40 +98,15 @@
   <main>
 
 
-    <!-- HERO -->
+    <!-- ======================================================
+         DUNGEON HERO
+         ====================================================== -->
 
-    <section class="magic-page-hero guides-hero">
+    <section class="magic-page-hero build-detail-hero">
 
-      <div class="guides-hero-content">
+      <div class="build-detail-hero-content">
 
-        <p class="section-eyebrow">
-          DUNGEON MECHANICS
-        </p>
-
-        <h1>
-          GRAY WOLF DEN
-        </h1>
-
-        <p class="guides-intro">
-          Control the wolves. Avoid the red. Kill the right wolf beside the boss.
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- GUIDE -->
-
-    <section class="build-detail-page">
-
-      <div class="build-detail-card">
-
-
-        <!-- IMAGE -->
-
-        <div class="build-detail-image">
+        <div class="build-detail-hero-image">
 
           <img
             src="images/wolf.jpeg"
@@ -141,409 +116,751 @@
         </div>
 
 
+        <div class="build-detail-hero-text">
 
-        <!-- OVERVIEW -->
-
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            OVERVIEW
+          <p class="section-eyebrow">
+            DUNGEON ◆ MECHANICS
           </p>
 
-          <h2>
+          <h1>
             GRAY WOLF DEN
-          </h2>
+          </h1>
 
           <p>
-            Gray Wolf Den is heavily populated with wolves and werewolves.
-            Most of the dungeon is straightforward add control,
-            while the final boss has an immunity mechanic that must
-            be handled correctly.
+            Rotating Chaos Neverwinter Dungeon Guide
           </p>
 
         </div>
 
+      </div>
+
+    </section>
 
 
-        <!-- MOBS -->
 
-        <div class="build-guide-panel">
+    <!-- ======================================================
+         SIMPLE NAVIGATION
+         ====================================================== -->
 
-          <p class="build-panel-eyebrow">
-            THROUGHOUT THE DUNGEON
-          </p>
+    <nav class="build-section-nav">
 
-          <h2>
-            WOLVES & WEREWOLVES
-          </h2>
+      <a href="#quick-guide">
+        Quick Mechanics
+      </a>
 
-          <ul>
+      <a href="#full-guide">
+        Full Mechanics
+      </a>
 
-            <li>
+    </nav>
+
+
+
+    <!-- ======================================================
+         DUNGEON CONTENT
+         ====================================================== -->
+
+    <section class="build-detail-page dungeon-guide-page">
+
+
+      <!-- ====================================================
+           CHAOS WARNING
+           ==================================================== -->
+
+      <aside class="dungeon-chaos-warning">
+
+        <p class="chaos-warning-label">
+          ⚠ CHAOS WARNING
+        </p>
+
+        <p class="chaos-warning-message">
+          See the special wolf?
+          Stop fucking nuking it.
+          Drag it beside the boss first or congratulations —
+          you've achieved absolutely nothing.
+        </p>
+
+      </aside>
+
+
+
+      <!-- ====================================================
+           QUICK & DIRTY MECHANICS
+           ==================================================== -->
+
+      <article
+        class="build-guide-panel quick-mechanics-panel"
+        id="quick-guide"
+      >
+
+        <p class="build-panel-eyebrow">
+          THE QUICK & DIRTY VERSION
+        </p>
+
+        <h2>
+          ALL YOU REALLY NEED TO KNOW
+        </h2>
+
+        <p class="quick-mechanics-intro">
+          No essays. See the mechanic, do the thing.
+        </p>
+
+
+        <div class="quick-mechanics-grid">
+
+
+          <!-- PACKS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🐺
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                WOLF PACKS
+              </h3>
+
+              <p>
+                Big pack?
+              </p>
+
+              <strong>
+                TANK FIRST ◆ GROUP ◆ AOE.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- LIGHTNING -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              ⚡
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                LIGHTNING
+              </h3>
+
+              <p>
+                Stormcaller puts lightning down?
+              </p>
+
+              <strong>
+                MOVE OUT.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- BOSS ADDS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              ⚔️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                BOSS ADDS
+              </h3>
+
+              <p>
+                Wolves spawning?
+              </p>
+
+              <strong>
+                KILL THEM ◆ DON'T LET THEM STACK.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- RED -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🔴
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                FINAL BOSS RED
+              </h3>
+
+              <p>
+                Red underneath you?
+              </p>
+
+              <strong>
+                GET OUT.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- IMMUNITY -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🛡️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                BOSS IMMUNE
+              </h3>
+
+              <p>
+                Ethraniev grows and becomes immune?
+              </p>
+
+              <strong>
+                STOP HITTING HER.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- BARROW WOLF -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              ☠️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                BARROW SPINE WOLF
+              </h3>
+
+              <p>
+                Special wolf appears?
+              </p>
+
+              <strong>
+                BRING IT TO BOSS ◆ THEN KILL IT.
+              </strong>
+
+              <p>
+                Too far away = immunity stays.
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ====================================================
+           FULL MECHANICS DROPDOWN
+           ==================================================== -->
+
+      <details
+        class="full-mechanics-dropdown"
+        id="full-guide"
+      >
+
+        <summary class="full-mechanics-summary">
+
+          <span class="full-mechanics-summary-main">
+            WANT THE FULL MECHANICS?
+          </span>
+
+          <span class="full-mechanics-summary-sub">
+            Open the full Gray Wolf Den guide
+          </span>
+
+          <span
+            class="full-mechanics-chevron"
+            aria-hidden="true"
+          >
+            ▼
+          </span>
+
+        </summary>
+
+
+
+        <div class="full-mechanics-content">
+
+
+          <!-- ==================================================
+               OVERVIEW
+               ================================================== -->
+
+          <article
+            class="build-guide-panel build-overview"
+            id="overview"
+          >
+
+            <p class="build-panel-eyebrow">
+              THE DUNGEON
+            </p>
+
+            <h2>
+              OVERVIEW
+            </h2>
+
+            <p>
+              Gray Wolf Den is heavily populated with wolves
+              and werewolves.
+            </p>
+
+            <p>
+              Most of the dungeon is straightforward add control,
+              while the final boss has an immunity mechanic that
+              must be handled correctly.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               MOBS
+               ================================================== -->
+
+          <article
+            class="build-guide-panel"
+            id="wolves"
+          >
+
+            <p class="build-panel-eyebrow">
+              THROUGHOUT THE DUNGEON
+            </p>
+
+            <h2>
+              WOLVES & WEREWOLVES
+            </h2>
+
+            <p>
               Enemy groups can deal heavy damage when several wolves
               or werewolves reach the same player.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Tanks should engage first and keep enemy groups together
               where possible.
-            </li>
+            </p>
 
-            <li>
+            <p>
               DPS should avoid rushing ahead alone into large packs.
-            </li>
+            </p>
 
-            <li>
+
+            <h3>
+              STORMCALLERS
+            </h3>
+
+            <p>
               Stormcallers create large lightning areas.
-              Move out of the affected ground before the damage lands.
-            </li>
+            </p>
 
-            <li>
+            <p>
+              Move out of the affected ground before the damage lands.
+            </p>
+
+            <p>
               Crowd control and AoE damage are useful throughout
               the dungeon because of the number of enemy groups.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- FIRST BOSS -->
+          <!-- ==================================================
+               FIRST BOSS
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="first-boss"
+          >
 
-          <p class="build-panel-eyebrow">
-            BOSS ONE
-          </p>
+            <p class="build-panel-eyebrow">
+              BOSS ONE
+            </p>
 
-          <h2>
-            FIRST PACK LEADER
-          </h2>
+            <h2>
+              FIRST PACK LEADER
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               The boss summons additional wolves around the outside
               of the arena.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Control the adds as they enter rather than allowing
               them to overwhelm the group.
-            </li>
+            </p>
 
-            <li>
-              The boss can jump around the arena,
-              so be ready to reposition when he moves.
-            </li>
+            <p>
+              The boss can jump around the arena, so be ready to
+              reposition when he moves.
+            </p>
 
-            <li>
+            <p>
               Maintain pressure on the boss while clearing adds
               as necessary.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- SECOND BOSS -->
+          <!-- ==================================================
+               SECOND BOSS
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="pack-master"
+          >
 
-          <p class="build-panel-eyebrow">
-            BOSS TWO
-          </p>
+            <p class="build-panel-eyebrow">
+              BOSS TWO
+            </p>
 
-          <h2>
-            PACK MASTER
-          </h2>
+            <h2>
+              PACK MASTER
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               The Pack Master also summons wolves throughout the fight.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Keep the wolves grouped and burn them down with AoE damage.
-            </li>
+            </p>
 
-            <li>
-              The boss uses standard melee attacks and can jump around
-              the arena.
-            </li>
+            <p>
+              The boss uses standard melee attacks and can jump
+              around the arena.
+            </p>
 
-            <li>
+            <p>
               Stay aware of positioning and do not allow the adds
               to pile onto lower-defence players.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- FINAL BOSS -->
+          <!-- ==================================================
+               FINAL BOSS
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="ethraniev"
+          >
 
-          <p class="build-panel-eyebrow">
-            FINAL BOSS
-          </p>
+            <p class="build-panel-eyebrow">
+              FINAL BOSS
+            </p>
 
-          <h2>
-            ETHRANIEV MARROWSLAKE
-          </h2>
+            <h2>
+              ETHRANIEV MARROWSLAKE
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               Ethraniev uses sword attacks and large red AoE zones.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Move out of the red areas before they activate.
-            </li>
+            </p>
 
-            <li>
-              She can jump toward random players,
-              so be ready to reposition when targeted.
-            </li>
+            <p>
+              She can jump toward random players, so be ready to
+              reposition when targeted.
+            </p>
 
-            <li>
+            <p>
               Additional enemies spawn during the encounter.
+            </p>
+
+            <p>
               Kill them before they begin to build up.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- IMMUNITY -->
+          <!-- ==================================================
+               IMMUNITY
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="immunity"
+          >
 
-          <p class="build-panel-eyebrow">
-            KEY MECHANIC
-          </p>
+            <p class="build-panel-eyebrow">
+              KEY MECHANIC
+            </p>
 
-          <h2>
-            IMMUNITY & BARROW SPINE WOLF
-          </h2>
+            <h2>
+              IMMUNITY & BARROW SPINE WOLF
+            </h2>
 
-          <ul>
+            <p>
+              During the fight, Ethraniev grows larger and becomes
+              immune to damage.
+            </p>
 
-            <li>
-              During the fight, Ethraniev grows larger and becomes immune
-              to damage.
-            </li>
-
-            <li>
+            <p>
               When this happens, a Barrow Spine Wolf spawns.
-            </li>
+            </p>
 
-            <li>
+            <p>
               The wolf must be killed directly beside Ethraniev.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Killing the wolf close enough to the boss breaks
               her immunity.
-            </li>
+            </p>
 
-            <li>
-              If the wolf dies too far away,
-              the mechanic fails and the group must wait for another
-              wolf to spawn.
-            </li>
+            <p>
+              If the wolf dies too far away, the mechanic fails
+              and the group must wait for another wolf to spawn.
+            </p>
 
-            <li>
+            <p>
               Repeat this mechanic every time Ethraniev becomes immune.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- ROLE JOBS -->
+          <!-- ==================================================
+               ROLE JOBS
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="roles"
+          >
 
-          <p class="build-panel-eyebrow">
-            KNOW YOUR JOB
-          </p>
+            <p class="build-panel-eyebrow">
+              KNOW YOUR JOB
+            </p>
 
-          <h2>
-            TANK ◆ HEALER ◆ DPS
-          </h2>
+            <h2>
+              TANK ◆ HEALER ◆ DPS
+            </h2>
 
-          <h3>
-            TANK
-          </h3>
 
-          <ul>
-            <li>
+            <h3>
+              TANK
+            </h3>
+
+            <p>
               Engage enemy packs first and keep wolves grouped together.
-            </li>
+            </p>
 
-            <li>
-              During the final boss,
-              keep Ethraniev controlled and bring her near the
-              Barrow Spine Wolf when the immunity phase begins.
-            </li>
-          </ul>
+            <p>
+              During the final boss, keep Ethraniev controlled and
+              bring her near the Barrow Spine Wolf when the immunity
+              phase begins.
+            </p>
 
 
-          <h3>
-            HEALER
-          </h3>
+            <h3>
+              HEALER
+            </h3>
 
-          <ul>
-            <li>
+            <p>
               Stay positioned where the group can remain inside
               your healing range during heavy add phases.
-            </li>
+            </p>
 
-            <li>
-              Watch players who are surrounded by wolves
-              or caught by the boss's direct attacks.
-            </li>
-          </ul>
+            <p>
+              Watch players who are surrounded by wolves or caught
+              by the boss's direct attacks.
+            </p>
 
 
-          <h3>
-            DPS
-          </h3>
+            <h3>
+              DPS
+            </h3>
 
-          <ul>
-            <li>
+            <p>
               Clear wolves and werewolves quickly when they spawn.
-            </li>
+            </p>
 
-            <li>
-              During the final boss,
-              do not kill the Barrow Spine Wolf until it is beside Ethraniev.
-            </li>
+            <p>
+              During the final boss, do not kill the Barrow Spine
+              Wolf until it is beside Ethraniev.
+            </p>
 
-            <li>
-              Once the wolf breaks her immunity,
-              immediately return damage to the boss.
-            </li>
-          </ul>
+            <p>
+              Once the wolf breaks her immunity, immediately return
+              damage to the boss.
+            </p>
 
-        </div>
-
+          </article>
 
 
-        <!-- COMMON WIPES -->
 
-        <div class="build-guide-panel">
+          <!-- ==================================================
+               COMMON WIPES
+               ================================================== -->
 
-          <p class="build-panel-eyebrow">
-            COMMON WIPES
-          </p>
+          <article
+            class="build-guide-panel"
+            id="wipes"
+          >
 
-          <h2>
-            WHAT USUALLY GOES WRONG
-          </h2>
+            <p class="build-panel-eyebrow">
+              WHAT USUALLY GOES WRONG
+            </p>
 
-          <ul>
+            <h2>
+              COMMON WIPES
+            </h2>
 
-            <li>
+            <p>
               DPS running ahead and being overwhelmed by wolf packs.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Standing inside Stormcaller lightning zones.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Ignoring summoned wolves during boss encounters.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Standing inside Ethraniev's red AoEs.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Killing the Barrow Spine Wolf too far away from Ethraniev.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Repeatedly failing the immunity mechanic and leaving
-              the boss permanently untargetable.
-            </li>
+              the boss untargetable.
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- QUICK REFERENCE -->
+          <!-- ==================================================
+               CHAOS NOTES
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel chaos-notes-panel"
+            id="chaos-notes"
+          >
 
-          <p class="build-panel-eyebrow">
-            QUICK REFERENCE
-          </p>
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
 
-          <h2>
-            WOLF DEN SURVIVAL NOTES
-          </h2>
+            <h2>
+              CHAOS NOTES
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               Tank goes first.
-            </li>
+              If you're DPS and you've charged alone into twenty wolves,
+              enjoy your exciting new career as dog food.
+            </p>
 
-            <li>
-              Lightning ground → move.
-            </li>
+            <p>
+              Wolves spawning during bosses?
+              Clear them before the arena becomes a canine convention.
+            </p>
 
-            <li>
-              Wolves spawn → AoE them down.
-            </li>
+            <p>
+              Ethraniev suddenly becomes enormous and immune?
+              Your damage isn't broken.
+              Stop hitting her.
+            </p>
 
-            <li>
-              Red area → get out.
-            </li>
+            <p>
+              Bring the Barrow Spine Wolf directly beside her,
+              then murder it.
+            </p>
 
-            <li>
-              Final boss grows and becomes immune → stop hitting her.
-            </li>
+            <p>
+              Kill it halfway across the arena and you've accomplished
+              precisely fuck all except arranging for another wolf
+              to spawn so we can try again.
+            </p>
 
-            <li>
-              Barrow Spine Wolf appears → bring it beside the boss.
-            </li>
+          </article>
 
-            <li>
-              Kill wolf beside boss → immunity breaks.
-            </li>
-
-            <li>
-              Wolf dies too far away → congratulations, you're doing it again.
-            </li>
-
-          </ul>
 
         </div>
 
+      </details>
+
+
+
+      <!-- ====================================================
+           UPDATED
+           ==================================================== -->
+
+      <div class="build-last-updated">
+
+        <p>
+          LAST UPDATED ◆ SEPTEMBER 2026
+        </p>
 
       </div>
 
 
 
-      <!-- BACK LINK -->
+      <!-- ====================================================
+           BACK TO MECHANICS
+           ==================================================== -->
 
       <div class="build-back-link">
 
@@ -553,11 +870,14 @@
 
       </div>
 
+
     </section>
 
 
 
-    <!-- FOOTER -->
+    <!-- ======================================================
+         FOOTER
+         ====================================================== -->
 
     <footer id="contact">
 

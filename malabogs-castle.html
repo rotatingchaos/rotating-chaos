@@ -26,7 +26,9 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
 
   <header class="site-header">
 
@@ -55,9 +57,7 @@
 
     <nav class="desktop-nav">
 
-      <a href="index.html">
-        HOME
-      </a>
+      <a href="index.html">HOME</a>
 
       <a href="index.html#about">
         THE CHAOS CREW
@@ -98,40 +98,15 @@
   <main>
 
 
-    <!-- HERO -->
+    <!-- ======================================================
+         DUNGEON HERO
+         ====================================================== -->
 
-    <section class="magic-page-hero guides-hero">
+    <section class="magic-page-hero build-detail-hero">
 
-      <div class="guides-hero-content">
+      <div class="build-detail-hero-content">
 
-        <p class="section-eyebrow">
-          DUNGEON MECHANICS
-        </p>
-
-        <h1>
-          MALABOG'S CASTLE
-        </h1>
-
-        <p class="guides-intro">
-          Control the adds. Kill Valindra when she appears. Try not to get tail-swatted into next week.
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- GUIDE -->
-
-    <section class="build-detail-page">
-
-      <div class="build-detail-card">
-
-
-        <!-- IMAGE -->
-
-        <div class="build-detail-image">
+        <div class="build-detail-hero-image">
 
           <img
             src="images/malabog.jpeg"
@@ -141,508 +116,944 @@
         </div>
 
 
+        <div class="build-detail-hero-text">
 
-        <!-- OVERVIEW -->
-
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            OVERVIEW
+          <p class="section-eyebrow">
+            DUNGEON ◆ MECHANICS
           </p>
 
-          <h2>
+          <h1>
             MALABOG'S CASTLE
-          </h2>
+          </h1>
 
           <p>
-            Malabog's Castle is mostly about add control, positioning
-            and reacting quickly to Valindra during the final encounter.
-          </p>
-
-          <p>
-            The bosses themselves are fairly straightforward,
-            but ignored adds can quickly overwhelm the group.
+            Rotating Chaos Neverwinter Dungeon Guide
           </p>
 
         </div>
 
+      </div>
+
+    </section>
 
 
-        <!-- FIRST BOSS -->
 
-        <div class="build-guide-panel">
+    <!-- ======================================================
+         SIMPLE NAVIGATION
+         ====================================================== -->
 
-          <p class="build-panel-eyebrow">
-            BOSS ONE
-          </p>
+    <nav class="build-section-nav">
 
-          <h2>
-            CROLL NIGHTFORGE
-          </h2>
+      <a href="#quick-guide">
+        Quick Mechanics
+      </a>
 
-          <ul>
+      <a href="#full-guide">
+        Full Mechanics
+      </a>
 
-            <li>
-              Croll begins the fight with several Redcap enemies nearby.
-            </li>
+    </nav>
 
-            <li>
-              Additional adds spawn throughout the encounter.
-            </li>
 
-            <li>
-              Keep the adds grouped and use AoE damage to clear them quickly.
-            </li>
 
-            <li>
-              Shamans can appear among the adds and should be prioritised.
-            </li>
+    <!-- ======================================================
+         DUNGEON CONTENT
+         ====================================================== -->
 
-            <li>
-              Do not allow enemy waves to build up around the healer
+    <section class="build-detail-page dungeon-guide-page">
+
+
+      <!-- ====================================================
+           CHAOS WARNING
+           ==================================================== -->
+
+      <aside class="dungeon-chaos-warning">
+
+        <p class="chaos-warning-label">
+          ⚠ CHAOS WARNING
+        </p>
+
+        <p class="chaos-warning-message">
+          Valindra appears? HIT VALINDRA.
+          Not the dragon. Not the random add in the corner.
+          The fucking floating necromancer currently trying to murder your teammate.
+        </p>
+
+      </aside>
+
+
+
+      <!-- ====================================================
+           QUICK & DIRTY MECHANICS
+           ==================================================== -->
+
+      <article
+        class="build-guide-panel quick-mechanics-panel"
+        id="quick-guide"
+      >
+
+        <p class="build-panel-eyebrow">
+          THE QUICK & DIRTY VERSION
+        </p>
+
+        <h2>
+          ALL YOU REALLY NEED TO KNOW
+        </h2>
+
+        <p class="quick-mechanics-intro">
+          Control the adds. Switch targets when you're told. Don't stand behind the dragon.
+        </p>
+
+
+        <div class="quick-mechanics-grid">
+
+
+          <!-- ADDS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              ⚔️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                ADDS
+              </h3>
+
+              <p>
+                Waves spawning?
+              </p>
+
+              <strong>
+                GROUP ◆ KILL ◆ DON'T LET THEM STACK.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- WITCH -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🧙
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                WITCH
+              </h3>
+
+              <p>
+                Witch appears?
+              </p>
+
+              <strong>
+                KILL IT FIRST.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- IMMUNE -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🛡️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                MALABOG IMMUNE
+              </h3>
+
+              <p>
+                Can't damage him?
+              </p>
+
+              <strong>
+                STOP BOSS ◆ CLEAR ADDS.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- DRAGON POSITION -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🐉
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                DRAGON POSITION
+              </h3>
+
+              <p>
+                Fighting Fulminax?
+              </p>
+
+              <strong>
+                DPS AT SIDES ◆ NOT FRONT OR TAIL.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- BREATH -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              ⚡
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                LIGHTNING BREATH
+              </h3>
+
+              <p>
+                Frontal red?
+              </p>
+
+              <strong>
+                MOVE ◆ TANK FACES IT AWAY.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- RED DRAIN -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🔴
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                DRAINING RED
+              </h3>
+
+              <p>
+                Huge red area?
+              </p>
+
+              <strong>
+                GET OUT ◆ KEEP MOVING.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- VALINDRA -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              💀
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                VALINDRA
+              </h3>
+
+              <p>
+                She appears?
+              </p>
+
+              <strong>
+                EVERYTHING ON VALINDRA ◆ NOW.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ====================================================
+           FULL MECHANICS DROPDOWN
+           ==================================================== -->
+
+      <details
+        class="full-mechanics-dropdown"
+        id="full-guide"
+      >
+
+        <summary class="full-mechanics-summary">
+
+          <span class="full-mechanics-summary-main">
+            WANT THE FULL MECHANICS?
+          </span>
+
+          <span class="full-mechanics-summary-sub">
+            Open the full Malabog's Castle guide
+          </span>
+
+          <span
+            class="full-mechanics-chevron"
+            aria-hidden="true"
+          >
+            ▼
+          </span>
+
+        </summary>
+
+
+        <div class="full-mechanics-content">
+
+
+          <!-- ==================================================
+               OVERVIEW
+               ================================================== -->
+
+          <article
+            class="build-guide-panel build-overview"
+            id="overview"
+          >
+
+            <p class="build-panel-eyebrow">
+              THE DUNGEON
+            </p>
+
+            <h2>
+              OVERVIEW
+            </h2>
+
+            <p>
+              Malabog's Castle is mostly about add control,
+              positioning and reacting quickly to Valindra
+              during the final encounter.
+            </p>
+
+            <p>
+              The bosses themselves are fairly straightforward,
+              but ignored adds can quickly overwhelm the group.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               CROLL NIGHTFORGE
+               ================================================== -->
+
+          <article
+            class="build-guide-panel"
+            id="croll-nightforge"
+          >
+
+            <p class="build-panel-eyebrow">
+              BOSS ONE
+            </p>
+
+            <h2>
+              CROLL NIGHTFORGE
+            </h2>
+
+            <p>
+              Croll begins the fight
+              with several Redcap enemies nearby.
+            </p>
+
+            <p>
+              Additional adds spawn
+              throughout the encounter.
+            </p>
+
+            <p>
+              Keep the adds grouped
+              and use AoE damage
+              to clear them quickly.
+            </p>
+
+
+            <h3>
+              SHAMANS
+            </h3>
+
+            <p>
+              Shamans can appear among the adds
+              and should be prioritised.
+            </p>
+
+            <p>
+              Do not allow enemy waves
+              to build up around the healer
               or damage dealers.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- MALABOG -->
+          <!-- ==================================================
+               MALABOG
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="malabog"
+          >
 
-          <p class="build-panel-eyebrow">
-            BOSS TWO
-          </p>
+            <p class="build-panel-eyebrow">
+              BOSS TWO
+            </p>
 
-          <h2>
-            MALABOG
-          </h2>
+            <h2>
+              MALABOG
+            </h2>
 
-          <ul>
+            <p>
+              Malabog begins the fight
+              with multiple adds.
+            </p>
 
-            <li>
-              Malabog begins the fight with multiple adds.
-            </li>
+            <p>
+              Keep them controlled
+              and clear them before
+              they overwhelm the group.
+            </p>
 
-            <li>
-              Keep them controlled and clear them before they overwhelm
-              the group.
-            </li>
 
-            <li>
-              Malabog periodically becomes immune to damage.
-            </li>
+            <h3>
+              IMMUNITY PHASE
+            </h3>
 
-            <li>
-              When he becomes immune,
-              stop attacking him and focus the spawned enemies instead.
-            </li>
+            <p>
+              Malabog periodically
+              becomes immune to damage.
+            </p>
 
-            <li>
-              Witches can polymorph players and should be killed quickly.
-            </li>
+            <p>
+              When this happens,
+              stop attacking him
+              and focus the spawned enemies instead.
+            </p>
 
-            <li>
-              Other summoned enemies can create additional skeletons
+
+            <h3>
+              WITCHES
+            </h3>
+
+            <p>
+              Witches can polymorph players
+              and should be killed quickly.
+            </p>
+
+            <p>
+              Other summoned enemies
+              can create additional skeletons
               if left alive.
-            </li>
+            </p>
 
-            <li>
-              Kill priority adds before returning damage to Malabog.
-            </li>
+            <p>
+              Kill priority adds
+              before returning damage
+              to Malabog.
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- DRAGON TRANSITION -->
+          <!-- ==================================================
+               DRAGON TRANSITION
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="dragon-transition"
+          >
 
-          <p class="build-panel-eyebrow">
-            TRANSITION
-          </p>
+            <p class="build-panel-eyebrow">
+              TRANSITION
+            </p>
 
-          <h2>
-            DRAGON ENCOUNTER
-          </h2>
+            <h2>
+              DRAGON ENCOUNTER
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               After Malabog,
-              the group encounters the dragon before the final fight.
-            </li>
+              the group encounters the dragon
+              before the final fight.
+            </p>
 
-            <li>
-              You do not need to kill it during this section.
-            </li>
+            <p>
+              You do not need to kill it
+              during this section.
+            </p>
 
-            <li>
-              Deal enough damage to force the dragon to retreat.
-            </li>
+            <p>
+              Deal enough damage
+              to force the dragon to retreat.
+            </p>
 
-            <li>
+            <p>
               Once it flies away,
               continue toward the final encounter.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- FINAL BOSS -->
+          <!-- ==================================================
+               FULMINAX
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="fulminax"
+          >
 
-          <p class="build-panel-eyebrow">
-            FINAL BOSS
-          </p>
+            <p class="build-panel-eyebrow">
+              FINAL BOSS
+            </p>
 
-          <h2>
-            FULMINAX
-          </h2>
+            <h2>
+              FULMINAX
+            </h2>
 
-          <ul>
+            <p>
+              Fulminax is the main target
+              during the final fight.
+            </p>
 
-            <li>
-              The dragon is the main target during the final fight.
-            </li>
+            <p>
+              Tanks should keep the dragon
+              facing away from the group.
+            </p>
 
-            <li>
-              Tanks should keep the dragon facing away from the group.
-            </li>
+            <p>
+              DPS should avoid standing
+              directly behind the dragon.
+            </p>
 
-            <li>
-              DPS should avoid standing directly behind the dragon.
-            </li>
+            <p>
+              Fulminax uses a tail swipe
+              that can knock players away.
+            </p>
 
-            <li>
-              Fulminax uses a tail swipe that can knock players away.
-            </li>
-
-            <li>
-              Position around the sides where possible rather than
-              directly front or back.
-            </li>
-
-          </ul>
-
-        </div>
-
-
-
-        <!-- LIGHTNING BREATH -->
-
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            DRAGON MECHANIC
-          </p>
-
-          <h2>
-            LIGHTNING BREATH
-          </h2>
-
-          <ul>
-
-            <li>
-              Fulminax uses a frontal lightning breath attack.
-            </li>
-
-            <li>
-              Move out of the red telegraph before it fires.
-            </li>
-
-            <li>
-              Tanks can block or mitigate the attack if necessary.
-            </li>
-
-            <li>
-              Keep the breath directed away from the rest of the group.
-            </li>
-
-          </ul>
-
-        </div>
+            <p>
+              Position around the sides
+              where possible rather than
+              directly in front or behind.
+            </p>
 
 
+            <h3>
+              LIGHTNING BREATH
+            </h3>
 
-        <!-- VALINDRA -->
+            <p>
+              Fulminax uses
+              a frontal lightning breath attack.
+            </p>
 
-        <div class="build-guide-panel">
+            <p>
+              Move out of the red telegraph
+              before it fires.
+            </p>
 
-          <p class="build-panel-eyebrow">
-            PRIORITY MECHANIC
-          </p>
+            <p>
+              Tanks can block or mitigate
+              the attack if necessary.
+            </p>
 
-          <h2>
-            VALINDRA
-          </h2>
+            <p>
+              Keep the breath directed
+              away from the rest of the group.
+            </p>
 
-          <ul>
 
-            <li>
-              Valindra appears at health thresholds during the dragon fight.
-            </li>
+            <h3>
+              VALINDRA
+            </h3>
 
-            <li>
+            <p>
+              Valindra appears
+              at health thresholds
+              during the dragon fight.
+            </p>
+
+            <p>
               When she appears,
               switch damage to her immediately.
-            </li>
+            </p>
 
-            <li>
-              She can target and drain a player.
-            </li>
+            <p>
+              She can target
+              and drain a player.
+            </p>
 
-            <li>
-              Damage Valindra quickly to force her away
+            <p>
+              Damage Valindra quickly
+              to force her away
               and free the affected player.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Once Valindra retreats,
-              return damage to the dragon.
-            </li>
-
-          </ul>
-
-        </div>
+              return damage to Fulminax.
+            </p>
 
 
+            <h3>
+              ACTION POINT DRAIN
+            </h3>
 
-        <!-- DRAINING RED AREA -->
+            <p>
+              Large red areas
+              appear during the fight.
+            </p>
 
-        <div class="build-guide-panel">
+            <p>
+              Move out immediately.
+            </p>
 
-          <p class="build-panel-eyebrow">
-            FLOOR MECHANIC
-          </p>
+            <p>
+              Standing inside
+              drains Action Points
+              and leaves the player exposed
+              to additional damage.
+            </p>
 
-          <h2>
-            ACTION POINT DRAIN
-          </h2>
-
-          <ul>
-
-            <li>
-              Large red areas appear during the fight.
-            </li>
-
-            <li>
-              Move out of them immediately.
-            </li>
-
-            <li>
-              Standing inside drains Action Points
-              and leaves the player exposed to additional damage.
-            </li>
-
-            <li>
-              Later versions of this mechanic can remain active longer,
-              requiring continued movement until the area disappears.
-            </li>
-
-          </ul>
-
-        </div>
+            <p>
+              Later versions of the mechanic
+              can remain active longer,
+              requiring continued movement
+              until the area disappears.
+            </p>
 
 
+            <h3>
+              VALINDRA WINDOWS
+            </h3>
 
-        <!-- PHASES -->
+            <p>
+              Around 75% Fulminax health,
+              the dragon phases
+              and Valindra becomes active.
+            </p>
 
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            HEALTH PHASES
-          </p>
-
-          <h2>
-            VALINDRA WINDOWS
-          </h2>
-
-          <ul>
-
-            <li>
-              Around 75% dragon health,
-              the dragon phases and Valindra becomes active.
-            </li>
-
-            <li>
+            <p>
               Move out of the draining red area
-              and kill or damage Valindra enough to end the phase.
-            </li>
+              and damage Valindra enough
+              to end the phase.
+            </p>
 
-            <li>
-              The dragon then returns and normal damage resumes.
-            </li>
+            <p>
+              Fulminax then returns
+              and normal damage resumes.
+            </p>
 
-            <li>
-              Similar Valindra phases repeat later in the fight.
-            </li>
+            <p>
+              Similar Valindra phases
+              repeat later in the fight.
+            </p>
 
-            <li>
+            <p>
               Near approximately 25% dragon health,
               the red-area phase lasts longer.
-            </li>
+            </p>
 
-            <li>
-              Continue moving until the danger zone resolves,
+            <p>
+              Continue moving
+              until the danger zone resolves,
               then return to the dragon.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- ROLE JOBS -->
+          <!-- ==================================================
+               ROLE JOBS
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="roles"
+          >
 
-          <p class="build-panel-eyebrow">
-            KNOW YOUR JOB
-          </p>
+            <p class="build-panel-eyebrow">
+              KNOW YOUR JOB
+            </p>
 
-          <h2>
-            GROUP RESPONSIBILITIES
-          </h2>
-
-          <h3>
-            TANK
-          </h3>
-
-          <ul>
-
-            <li>
-              Keep large enemy packs under control throughout the dungeon.
-            </li>
-
-            <li>
-              Keep Fulminax facing away from the group.
-            </li>
-
-            <li>
-              Block or move out of Lightning Breath.
-            </li>
-
-          </ul>
+            <h2>
+              TANK ◆ HEALER ◆ DPS
+            </h2>
 
 
-          <h3>
-            HEALER
-          </h3>
+            <h3>
+              TANK
+            </h3>
 
-          <ul>
+            <p>
+              Keep large enemy packs
+              under control throughout the dungeon.
+            </p>
 
-            <li>
-              Watch players who are surrounded by adds.
-            </li>
+            <p>
+              Keep Fulminax
+              facing away from the group.
+            </p>
 
-            <li>
-              Be ready for heavy damage during Valindra drain mechanics.
-            </li>
-
-            <li>
-              Keep players alive while the group switches targets.
-            </li>
-
-          </ul>
+            <p>
+              Block or move out
+              of Lightning Breath.
+            </p>
 
 
-          <h3>
-            DPS
-          </h3>
+            <h3>
+              HEALER
+            </h3>
 
-          <ul>
+            <p>
+              Watch players
+              who are surrounded by adds.
+            </p>
 
-            <li>
+            <p>
+              Be ready for heavy damage
+              during Valindra drain mechanics.
+            </p>
+
+            <p>
+              Keep players alive
+              while the group switches targets.
+            </p>
+
+
+            <h3>
+              DPS
+            </h3>
+
+            <p>
               Clear priority adds quickly.
-            </li>
+            </p>
 
-            <li>
-              Kill witches and summoning enemies before they create
-              additional problems.
-            </li>
+            <p>
+              Kill witches
+              and summoning enemies
+              before they create additional problems.
+            </p>
 
-            <li>
-              Switch immediately to Valindra when she appears.
-            </li>
+            <p>
+              Switch immediately
+              to Valindra when she appears.
+            </p>
 
-            <li>
-              Avoid standing directly behind Fulminax.
-            </li>
+            <p>
+              Avoid standing
+              directly behind Fulminax.
+            </p>
 
-          </ul>
+          </article>
+
+
+
+          <!-- ==================================================
+               COMMON WIPES
+               ================================================== -->
+
+          <article
+            class="build-guide-panel"
+            id="wipes"
+          >
+
+            <p class="build-panel-eyebrow">
+              WHAT USUALLY GOES WRONG
+            </p>
+
+            <h2>
+              COMMON WIPES
+            </h2>
+
+            <p>
+              Allowing Croll's add waves
+              to build up instead of clearing them.
+            </p>
+
+            <p>
+              Ignoring Shamans
+              among the first-boss adds.
+            </p>
+
+            <p>
+              Continuing to attack Malabog
+              while he is immune.
+            </p>
+
+            <p>
+              Ignoring Witches
+              and allowing players
+              to be polymorphed.
+            </p>
+
+            <p>
+              Leaving summoning enemies alive
+              long enough to create
+              additional skeletons.
+            </p>
+
+            <p>
+              Standing directly behind Fulminax
+              and being hit by the tail swipe.
+            </p>
+
+            <p>
+              Standing in front
+              of Fulminax's Lightning Breath.
+            </p>
+
+            <p>
+              Continuing to attack Fulminax
+              when Valindra appears.
+            </p>
+
+            <p>
+              Failing to damage Valindra quickly enough
+              while she drains a player.
+            </p>
+
+            <p>
+              Standing inside
+              the Action Point draining red area.
+            </p>
+
+            <p>
+              Stopping too early
+              during the longer late-fight red-area phase.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               CHAOS NOTES
+               ================================================== -->
+
+          <article
+            class="build-guide-panel chaos-notes-panel"
+            id="chaos-notes"
+          >
+
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
+
+            <h2>
+              CHAOS NOTES
+            </h2>
+
+            <p>
+              Most of this dungeon is add management.
+              Tank gathers them.
+              DPS murders them.
+              Everyone resists the urge
+              to create seventeen separate fights.
+            </p>
+
+            <p>
+              Malabog immune?
+              Stop hitting him.
+              His health bar has quite literally
+              informed you that your services
+              are no longer required.
+            </p>
+
+            <p>
+              Witches polymorph people.
+              Therefore witches die first.
+              Nobody queued for this dungeon
+              to spend the boss fight
+              unexpectedly becoming livestock.
+            </p>
+
+            <p>
+              At Fulminax,
+              front contains lightning breath
+              and back contains angry dragon tail.
+              The sides are your friends.
+            </p>
+
+            <p>
+              Valindra appears?
+              Everyone switches to Valindra.
+              She leaves?
+              Back to dragon.
+              This is not a complicated relationship.
+            </p>
+
+          </article>
+
 
         </div>
 
+      </details>
 
 
-        <!-- QUICK REFERENCE -->
 
-        <div class="build-guide-panel">
+      <!-- ====================================================
+           UPDATED
+           ==================================================== -->
 
-          <p class="build-panel-eyebrow">
-            QUICK REFERENCE
-          </p>
+      <div class="build-last-updated">
 
-          <h2>
-            MALABOG SURVIVAL NOTES
-          </h2>
-
-          <ul>
-
-            <li>
-              Adds spawn → kill them before they build up.
-            </li>
-
-            <li>
-              Witch appears → priority target.
-            </li>
-
-            <li>
-              Malabog immune → stop hitting him and clear adds.
-            </li>
-
-            <li>
-              Dragon breath → move or block.
-            </li>
-
-            <li>
-              Dragon tail → don't stand directly behind him.
-            </li>
-
-            <li>
-              Red draining area → get out.
-            </li>
-
-            <li>
-              Valindra appears → switch and burn her immediately.
-            </li>
-
-            <li>
-              Valindra leaves → back to dragon.
-            </li>
-
-          </ul>
-
-        </div>
-
+        <p>
+          LAST UPDATED ◆ SEPTEMBER 2026
+        </p>
 
       </div>
 
 
 
-      <!-- BACK LINK -->
+      <!-- ====================================================
+           BACK TO MECHANICS
+           ==================================================== -->
 
       <div class="build-back-link">
 
@@ -652,11 +1063,14 @@
 
       </div>
 
+
     </section>
 
 
 
-    <!-- FOOTER -->
+    <!-- ======================================================
+         FOOTER
+         ====================================================== -->
 
     <footer id="contact">
 

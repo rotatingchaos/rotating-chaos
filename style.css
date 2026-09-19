@@ -3497,3 +3497,899 @@ footer h2 {
 
 }
 
+/* =========================================================
+   DUNGEONS & TRIALS ◆ QUICK MECHANICS SYSTEM
+   Universal across all dungeon / trial mechanic pages
+   ========================================================= */
+
+
+/* =========================================================
+   DUNGEON / TRIAL PAGE WRAPPER
+   ========================================================= */
+
+.dungeon-guide-page {
+  position: relative;
+}
+
+
+/* =========================================================
+   CHAOS WARNING
+   One unique warning per dungeon / trial
+   ========================================================= */
+
+.dungeon-chaos-warning {
+  width: min(1100px, 100%);
+
+  margin: 0 auto 28px;
+  padding: 24px 30px;
+
+  position: relative;
+  overflow: hidden;
+
+  text-align: center;
+
+  border:
+    1px solid rgba(226, 195, 107, 0.62);
+
+  border-left:
+    4px solid var(--gold);
+
+  border-right:
+    4px solid var(--gold);
+
+  background:
+
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(196, 154, 58, 0.12),
+      transparent 65%
+    ),
+
+    radial-gradient(
+      ellipse at 10% 50%,
+      rgba(16, 168, 120, 0.12),
+      transparent 38%
+    ),
+
+    linear-gradient(
+      145deg,
+      rgba(7, 61, 50, 0.82),
+      rgba(4, 18, 15, 0.97)
+    );
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.28),
+    0 0 18px rgba(196, 154, 58, 0.06),
+    inset 0 0 30px rgba(16, 168, 120, 0.035);
+}
+
+
+/* Decorative inner border */
+
+.dungeon-chaos-warning::before {
+  content: "";
+
+  position: absolute;
+  inset: 7px;
+
+  pointer-events: none;
+
+  border:
+    1px solid rgba(226, 195, 107, 0.10);
+}
+
+
+/* Keep text above decoration */
+
+.dungeon-chaos-warning > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+.chaos-warning-label {
+  margin: 0 0 9px;
+
+  color: var(--light-gold);
+
+  font-family: "Marcellus SC", serif;
+
+  font-size: 12px;
+
+  letter-spacing: 0.22em;
+}
+
+
+.chaos-warning-message {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  color: var(--parchment);
+
+  font-family: "Crimson Pro", serif;
+
+  font-size: clamp(18px, 2vw, 22px);
+
+  font-weight: 600;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   QUICK MECHANICS PANEL
+   ========================================================= */
+
+.quick-mechanics-panel {
+  border-color:
+    rgba(226, 195, 107, 0.68);
+
+  background:
+
+    radial-gradient(
+      ellipse at 15% 10%,
+      rgba(16, 168, 120, 0.16),
+      transparent 38%
+    ),
+
+    radial-gradient(
+      ellipse at 90% 90%,
+      rgba(196, 154, 58, 0.06),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      145deg,
+      rgba(7, 61, 50, 0.78),
+      rgba(4, 18, 15, 0.97)
+    );
+}
+
+
+.quick-mechanics-intro {
+  margin:
+    -8px 0 28px !important;
+
+  color:
+    rgba(241, 235, 221, 0.58) !important;
+
+  font-size:
+    16px !important;
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   QUICK MECHANICS GRID
+   ========================================================= */
+
+.quick-mechanics-grid {
+  margin-top: 30px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+
+/* =========================================================
+   INDIVIDUAL QUICK MECHANIC CARD
+   ========================================================= */
+
+.quick-mechanic-card {
+  min-width: 0;
+
+  padding: 22px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 18px;
+
+  position: relative;
+  overflow: hidden;
+
+  border:
+    1px solid rgba(226, 195, 107, 0.22);
+
+  background:
+
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(16, 168, 120, 0.12),
+      transparent 48%
+    ),
+
+    linear-gradient(
+      145deg,
+      rgba(8, 74, 59, 0.30),
+      rgba(2, 16, 13, 0.64)
+    );
+
+  box-shadow:
+    inset 0 0 20px rgba(16, 168, 120, 0.025);
+
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+
+.quick-mechanic-card:hover {
+  transform:
+    translateY(-3px);
+
+  border-color:
+    rgba(226, 195, 107, 0.50);
+
+  background:
+
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(16, 168, 120, 0.18),
+      transparent 50%
+    ),
+
+    linear-gradient(
+      145deg,
+      rgba(8, 74, 59, 0.42),
+      rgba(2, 16, 13, 0.72)
+    );
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.20),
+    inset 0 0 24px rgba(16, 168, 120, 0.04);
+}
+
+
+/* Little gold corner diamond */
+
+.quick-mechanic-card::after {
+  content: "◆";
+
+  position: absolute;
+
+  top: 10px;
+  right: 12px;
+
+  color:
+    rgba(226, 195, 107, 0.22);
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   QUICK MECHANIC ICON
+   ========================================================= */
+
+.quick-mechanic-icon {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  display: grid;
+
+  place-items: center;
+
+  font-size: 25px;
+
+  border:
+    1px solid rgba(226, 195, 107, 0.30);
+
+  background:
+
+    radial-gradient(
+      circle,
+      rgba(16, 168, 120, 0.18),
+      rgba(0, 0, 0, 0.20)
+    );
+
+  box-shadow:
+    0 0 12px rgba(16, 168, 120, 0.08);
+}
+
+
+/* =========================================================
+   QUICK MECHANIC TEXT
+   ========================================================= */
+
+.quick-mechanic-text {
+  min-width: 0;
+}
+
+
+.quick-mechanic-text h3 {
+  margin:
+    2px 0 9px !important;
+
+  color:
+    var(--light-gold) !important;
+
+  font-family:
+    "Marcellus SC", serif;
+
+  font-size:
+    15px !important;
+
+  font-weight: 400;
+
+  letter-spacing:
+    0.10em;
+}
+
+
+/* Remove normal build h3 divider */
+
+.quick-mechanic-text h3::after {
+  display: none;
+}
+
+
+.quick-mechanic-text p {
+  margin:
+    0 0 5px !important;
+
+  color:
+    rgba(241, 235, 221, 0.78) !important;
+
+  font-family:
+    "Crimson Pro", serif;
+
+  font-size:
+    17px !important;
+
+  line-height:
+    1.4 !important;
+}
+
+
+.quick-mechanic-text p:last-child {
+  margin-bottom:
+    0 !important;
+}
+
+
+.quick-mechanic-text strong {
+  color:
+    var(--light-gold);
+
+  font-weight:
+    600;
+}
+
+
+/* Standalone strong instruction */
+
+.quick-mechanic-text > strong {
+  display: block;
+
+  margin-top: 5px;
+
+  font-family:
+    "Marcellus SC", serif;
+
+  font-size:
+    13px;
+
+  line-height:
+    1.5;
+
+  letter-spacing:
+    0.05em;
+}
+
+
+/* =========================================================
+   FULL MECHANICS DROPDOWN
+   ========================================================= */
+
+.full-mechanics-dropdown {
+  width: min(1100px, 100%);
+
+  margin:
+    32px auto 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(226, 195, 107, 0.55);
+
+  background:
+
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(16, 168, 120, 0.10),
+      transparent 45%
+    ),
+
+    linear-gradient(
+      145deg,
+      rgba(7, 61, 50, 0.68),
+      rgba(4, 18, 15, 0.96)
+    );
+
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.28),
+    inset 0 0 30px rgba(16, 168, 120, 0.025);
+}
+
+
+/* =========================================================
+   REMOVE DEFAULT DETAILS MARKER
+   ========================================================= */
+
+.full-mechanics-summary {
+  list-style: none;
+}
+
+
+.full-mechanics-summary::-webkit-details-marker {
+  display: none;
+}
+
+
+/* =========================================================
+   DROPDOWN BUTTON / SUMMARY
+   ========================================================= */
+
+.full-mechanics-summary {
+  min-height: 92px;
+
+  padding:
+    22px 70px 22px 28px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  cursor: pointer;
+
+  user-select: none;
+
+  background:
+
+    radial-gradient(
+      ellipse at 15% 50%,
+      rgba(16, 168, 120, 0.11),
+      transparent 38%
+    ),
+
+    rgba(0, 0, 0, 0.10);
+
+  transition:
+    background 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+
+.full-mechanics-summary:hover {
+  background:
+
+    radial-gradient(
+      ellipse at 15% 50%,
+      rgba(16, 168, 120, 0.18),
+      transparent 42%
+    ),
+
+    rgba(0, 0, 0, 0.14);
+
+  box-shadow:
+    inset 0 0 25px rgba(16, 168, 120, 0.04);
+}
+
+
+.full-mechanics-summary:focus-visible {
+  outline:
+    2px solid var(--light-gold);
+
+  outline-offset:
+    -4px;
+}
+
+
+/* Main dropdown title */
+
+.full-mechanics-summary-main {
+  color:
+    var(--light-gold);
+
+  font-family:
+    "Marcellus SC", serif;
+
+  font-size:
+    clamp(16px, 2vw, 20px);
+
+  letter-spacing:
+    0.10em;
+}
+
+
+/* Small subtitle */
+
+.full-mechanics-summary-sub {
+  margin-top:
+    7px;
+
+  color:
+    rgba(241, 235, 221, 0.60);
+
+  font-family:
+    "Crimson Pro", serif;
+
+  font-size:
+    16px;
+
+  letter-spacing:
+    0.02em;
+}
+
+
+/* =========================================================
+   DROPDOWN CHEVRON
+   ========================================================= */
+
+.full-mechanics-chevron {
+  position: absolute;
+
+  top: 50%;
+  right: 28px;
+
+  transform:
+    translateY(-50%);
+
+  color:
+    var(--light-gold);
+
+  font-size:
+    17px;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+
+/* Rotate when open */
+
+.full-mechanics-dropdown[open]
+.full-mechanics-chevron {
+  transform:
+    translateY(-50%)
+    rotate(180deg);
+
+  color:
+    var(--bright-emerald);
+}
+
+
+/* Give open dropdown stronger border */
+
+.full-mechanics-dropdown[open] {
+  border-color:
+    rgba(226, 195, 107, 0.72);
+
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.32),
+    0 0 20px rgba(16, 168, 120, 0.06),
+    inset 0 0 30px rgba(16, 168, 120, 0.03);
+}
+
+
+/* =========================================================
+   FULL GUIDE CONTENT
+   ========================================================= */
+
+.full-mechanics-content {
+  padding:
+    30px 28px 10px;
+
+  border-top:
+    1px solid rgba(226, 195, 107, 0.20);
+
+  background:
+
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.08),
+      rgba(0, 0, 0, 0.18)
+    );
+}
+
+
+/*
+   Panels already have universal build-guide-panel styling.
+   This just stops them touching the outer dropdown edges.
+*/
+
+.full-mechanics-content
+.build-guide-panel {
+  width: 100%;
+}
+
+
+/* =========================================================
+   DROPDOWN OPEN ANIMATION
+   ========================================================= */
+
+.full-mechanics-dropdown[open]
+.full-mechanics-content {
+  animation:
+    chaos-guide-open 0.28s ease;
+}
+
+
+@keyframes chaos-guide-open {
+
+  from {
+    opacity: 0;
+    transform:
+      translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   ANCHOR POSITIONING
+   ========================================================= */
+
+#quick-guide,
+#full-guide {
+  scroll-margin-top:
+    90px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .quick-mechanics-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .dungeon-chaos-warning {
+    padding:
+      22px 26px;
+  }
+
+
+  .full-mechanics-content {
+    padding:
+      24px 20px 8px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .dungeon-chaos-warning {
+    margin-bottom:
+      20px;
+
+    padding:
+      21px 18px;
+
+    border-left-width:
+      2px;
+
+    border-right-width:
+      2px;
+  }
+
+
+  .chaos-warning-label {
+    font-size:
+      10px;
+
+    letter-spacing:
+      0.17em;
+  }
+
+
+  .chaos-warning-message {
+    font-size:
+      18px;
+
+    line-height:
+      1.45;
+  }
+
+
+  .quick-mechanics-intro {
+    margin-bottom:
+      22px !important;
+
+    font-size:
+      15px !important;
+  }
+
+
+  .quick-mechanics-grid {
+    margin-top:
+      22px;
+
+    gap:
+      11px;
+  }
+
+
+  .quick-mechanic-card {
+    padding:
+      17px 16px;
+
+    gap:
+      13px;
+  }
+
+
+  .quick-mechanic-icon {
+    width:
+      42px;
+
+    height:
+      42px;
+
+    flex-basis:
+      42px;
+
+    font-size:
+      21px;
+  }
+
+
+  .quick-mechanic-text h3 {
+    font-size:
+      13px !important;
+  }
+
+
+  .quick-mechanic-text p {
+    font-size:
+      16px !important;
+  }
+
+
+  .quick-mechanic-text > strong {
+    font-size:
+      12px;
+  }
+
+
+  .full-mechanics-dropdown {
+    margin-top:
+      22px;
+  }
+
+
+  .full-mechanics-summary {
+    min-height:
+      82px;
+
+    padding:
+      18px 52px 18px 18px;
+  }
+
+
+  .full-mechanics-summary-main {
+    font-size:
+      15px;
+
+    line-height:
+      1.4;
+  }
+
+
+  .full-mechanics-summary-sub {
+    font-size:
+      14px;
+  }
+
+
+  .full-mechanics-chevron {
+    right:
+      18px;
+
+    font-size:
+      14px;
+  }
+
+
+  .full-mechanics-content {
+    padding:
+      18px 10px 4px;
+  }
+
+
+  #quick-guide,
+  #full-guide {
+    scroll-margin-top:
+      20px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .quick-mechanic-card {
+    align-items:
+      flex-start;
+  }
+
+
+  .quick-mechanic-icon {
+    width:
+      38px;
+
+    height:
+      38px;
+
+    flex-basis:
+      38px;
+
+    font-size:
+      19px;
+  }
+
+
+  .chaos-warning-message {
+    font-size:
+      17px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .quick-mechanic-card,
+  .full-mechanics-summary,
+  .full-mechanics-chevron {
+    transition:
+      none;
+  }
+
+
+  .full-mechanics-dropdown[open]
+  .full-mechanics-content {
+    animation:
+      none;
+  }
+
+}
+

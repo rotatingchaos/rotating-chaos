@@ -141,19 +141,18 @@
 
 
     <!-- ======================================================
-         TRIAL NAVIGATION
+         SIMPLE PAGE NAVIGATION
          ====================================================== -->
 
     <nav class="build-section-nav">
 
-      <a href="#overview">Overview</a>
-      <a href="#phase-one">Phase One</a>
-      <a href="#phase-two">Phase Two</a>
-      <a href="#manticores">Manticores</a>
-      <a href="#final-phase">Final Phase</a>
-      <a href="#roles">Role Jobs</a>
-      <a href="#wipes">Common Wipes</a>
-      <a href="#chaos-notes">Chaos Notes</a>
+      <a href="#quick-guide">
+        Quick Mechanics
+      </a>
+
+      <a href="#full-guide">
+        Full Mechanics
+      </a>
 
     </nav>
 
@@ -163,455 +162,782 @@
          TRIAL CONTENT
          ====================================================== -->
 
-    <section class="build-detail-page">
+    <section class="build-detail-page dungeon-guide-page">
 
 
-      <!-- OVERVIEW -->
+      <!-- ====================================================
+           CHAOS WARNING
+           ONE UNIQUE MESSAGE PER DUNGEON
+           ==================================================== -->
+
+      <aside class="dungeon-chaos-warning">
+
+        <p class="chaos-warning-label">
+          ⚠ CHAOS WARNING
+        </p>
+
+        <p class="chaos-warning-message">
+          Ice is not decorative. Break people out.
+          Red is bad. Group cuddles are mandatory.
+        </p>
+
+      </aside>
+
+
+
+      <!-- ====================================================
+           QUICK & DIRTY MECHANICS
+           ==================================================== -->
 
       <article
-        class="build-guide-panel build-overview"
-        id="overview"
+        class="build-guide-panel quick-mechanics-panel"
+        id="quick-guide"
       >
 
         <p class="build-panel-eyebrow">
-          THE TRIAL
+          THE QUICK & DIRTY VERSION
         </p>
 
         <h2>
-          OVERVIEW
+          ALL YOU REALLY NEED TO KNOW
         </h2>
 
-        <p>
-          Assault on Svardborg is built around shared-damage mechanics,
-          ice control, positioning and add phases.
+        <p class="quick-mechanics-intro">
+          No essays. See the mechanic, do the thing.
         </p>
 
-        <p>
-          The most important mechanics throughout the encounter are
-          breaking ice immediately, stacking correctly for Hypothermia,
-          moving targeted red circles away from the group and reacting
-          quickly to dangerous boss callouts.
-        </p>
+
+        <div class="quick-mechanics-grid">
+
+
+          <!-- ICE -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              ❄️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                ICE
+              </h3>
+
+              <p>
+                Someone gets frozen?
+              </p>
+
+              <strong>
+                BREAK THEM OUT IMMEDIATELY.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- HYPOTHERMIA -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🥶
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                HYPOTHERMIA
+              </h3>
+
+              <p>
+                Targeted?
+                <strong>GET IN THE GROUP.</strong>
+              </p>
+
+              <p>
+                Everyone else?
+                <strong>STACK.</strong>
+              </p>
+
+              <p>
+                Share the damage.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- RED CIRCLES -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🔴
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                RED CIRCLES
+              </h3>
+
+              <p>
+                Red circle on you?
+              </p>
+
+              <strong>
+                MOVE AWAY FROM THE GROUP.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- COVER -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🪨
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                BOSS CALLOUT
+              </h3>
+
+              <p>
+                Told to get behind something?
+              </p>
+
+              <strong>
+                GET BEHIND COVER.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- MANTICORES -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🦂
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                MANTICORES
+              </h3>
+
+              <p>
+                <strong>FOCUS ONE.</strong>
+              </p>
+
+              <p>
+                Avoid spines and tail.
+              </p>
+
+              <p>
+                Break ice. Stack Hypothermia.
+                Avoid red.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- FINAL PHASE -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🔥
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                FINAL PHASE
+              </h3>
+
+              <p>
+                Same shit. Keep doing the mechanics.
+              </p>
+
+              <strong>
+                BREAK ICE ◆ STACK ◆ MOVE RED ◆ KILL BOSS
+              </strong>
+
+            </div>
+
+          </div>
+
+
+        </div>
 
       </article>
 
 
 
-      <!-- PHASE ONE -->
+      <!-- ====================================================
+           FULL MECHANICS DROPDOWN
+           ==================================================== -->
 
-      <article
-        class="build-guide-panel"
-        id="phase-one"
+      <details
+        class="full-mechanics-dropdown"
+        id="full-guide"
       >
 
-        <p class="build-panel-eyebrow">
-          OPENING PHASE
-        </p>
+        <summary class="full-mechanics-summary">
 
-        <h2>
-          STAY TOGETHER
-        </h2>
+          <span class="full-mechanics-summary-main">
+            WANT THE FULL MECHANICS?
+          </span>
 
-        <p>
-          The group should stay relatively close together during the opening phase.
-        </p>
+          <span class="full-mechanics-summary-sub">
+            Open the full Svardborg guide
+          </span>
 
+          <span
+            class="full-mechanics-chevron"
+            aria-hidden="true"
+          >
+            ▼
+          </span>
 
-        <h3>
-          ICE
-        </h3>
+        </summary>
 
-        <p>
-          Players can become trapped in ice.
-        </p>
 
-        <p>
-          Break the ice immediately.
-        </p>
 
-        <p>
-          Failing to free a trapped player quickly can result in death.
-        </p>
+        <div class="full-mechanics-content">
 
 
-        <h3>
-          HYPOTHERMIA
-        </h3>
+          <!-- ==================================================
+               OVERVIEW
+               ================================================== -->
 
-        <p>
-          Hypothermia is a shared-damage mechanic.
-        </p>
+          <article
+            class="build-guide-panel build-overview"
+            id="overview"
+          >
 
-        <p>
-          The targeted player should bring the mechanic into the centre of the group.
-        </p>
+            <p class="build-panel-eyebrow">
+              THE TRIAL
+            </p>
 
-        <p>
-          Everyone stacks together to split the incoming damage.
-        </p>
+            <h2>
+              OVERVIEW
+            </h2>
 
-        <p>
-          Taking Hypothermia away from the group can kill the targeted player.
-        </p>
+            <p>
+              Assault on Svardborg is built around shared-damage
+              mechanics, ice control, positioning and add phases.
+            </p>
 
+            <p>
+              The most important mechanics throughout the encounter
+              are breaking ice immediately, stacking correctly for
+              Hypothermia, moving targeted red circles away from the
+              group and reacting quickly to dangerous boss callouts.
+            </p>
 
-        <h3>
-          RED CIRCLES
-        </h3>
+          </article>
 
-        <p>
-          Separate red circles can target players.
-        </p>
 
-        <p>
-          These should be moved away from the group.
-        </p>
 
-        <p>
-          If dropped on the party, they can knock multiple players down.
-        </p>
+          <!-- ==================================================
+               PHASE ONE
+               ================================================== -->
 
+          <article
+            class="build-guide-panel"
+            id="phase-one"
+          >
 
-        <h3>
-          GET BEHIND SOMETHING
-        </h3>
+            <p class="build-panel-eyebrow">
+              OPENING PHASE
+            </p>
 
-        <p>
-          When the boss calls for the group to get behind something,
-          move quickly to cover at the edge of the arena.
-        </p>
+            <h2>
+              STAY TOGETHER
+            </h2>
 
-        <p>
-          Use either side of the available cover to avoid the incoming attack.
-        </p>
+            <p>
+              The group should stay relatively close together during
+              the opening phase.
+            </p>
 
-      </article>
 
+            <h3>
+              ICE
+            </h3>
 
+            <p>
+              Players can become trapped in ice.
+            </p>
 
-      <!-- PHASE TWO -->
+            <p>
+              Break the ice immediately.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="phase-two"
-      >
+            <p>
+              Failing to free a trapped player quickly can result
+              in death.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          SECOND PHASE
-        </p>
 
-        <h2>
-          POSITIONING & DAMAGE
-        </h2>
+            <h3>
+              HYPOTHERMIA
+            </h3>
 
-        <p>
-          Continue moving targeted red circles away from the group.
-        </p>
+            <p>
+              Hypothermia is a shared-damage mechanic.
+            </p>
 
-        <p>
-          Maintain clean positioning and focus damage on the active target.
-        </p>
+            <p>
+              The targeted player should bring the mechanic into
+              the centre of the group.
+            </p>
 
-        <p>
-          Ice and other core mechanics continue to appear during later phases,
-          so do not stop watching for them just because the fight changes.
-        </p>
+            <p>
+              Everyone stacks together to split the incoming damage.
+            </p>
 
-      </article>
+            <p>
+              Taking Hypothermia away from the group can kill the
+              targeted player.
+            </p>
 
 
+            <h3>
+              RED CIRCLES
+            </h3>
 
-      <!-- MANTICORES -->
+            <p>
+              Separate red circles can target players.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="manticores"
-      >
+            <p>
+              These should be moved away from the group.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          ADD PHASE
-        </p>
+            <p>
+              If dropped on the party, they can knock multiple
+              players down.
+            </p>
 
-        <h2>
-          MANTICORES
-        </h2>
 
-        <p>
-          Two manticores become active during this section.
-        </p>
+            <h3>
+              GET BEHIND SOMETHING
+            </h3>
 
+            <p>
+              When the boss calls for the group to get behind
+              something, move quickly to cover at the edge
+              of the arena.
+            </p>
 
-        <h3>
-          FOCUS ONE
-        </h3>
+            <p>
+              Use either side of the available cover to avoid
+              the incoming attack.
+            </p>
 
-        <p>
-          Focus one manticore at a time where possible.
-        </p>
+          </article>
 
-        <p>
-          This reduces pressure on the group and avoids fighting both at full strength.
-        </p>
 
 
-        <h3>
-          ICE STILL MATTERS
-        </h3>
+          <!-- ==================================================
+               PHASE TWO
+               ================================================== -->
 
-        <p>
-          Ice mechanics continue during the manticore phase.
-        </p>
+          <article
+            class="build-guide-panel"
+            id="phase-two"
+          >
 
-        <p>
-          Free any trapped player immediately.
-        </p>
+            <p class="build-panel-eyebrow">
+              SECOND PHASE
+            </p>
 
-        <p>
-          A player who dies inside the ice cannot be recovered normally,
-          making this one of the most dangerous mechanics in the phase.
-        </p>
+            <h2>
+              POSITIONING & DAMAGE
+            </h2>
 
+            <p>
+              Continue moving targeted red circles away from
+              the group.
+            </p>
 
-        <h3>
-          SPINE ATTACKS
-        </h3>
+            <p>
+              Maintain clean positioning and focus damage on
+              the active target.
+            </p>
 
-        <p>
-          Avoid the manticores' spine attacks.
-        </p>
+            <p>
+              Ice and other core mechanics continue to appear
+              during later phases, so do not stop watching for
+              them just because the fight changes.
+            </p>
 
+          </article>
 
-        <h3>
-          TAIL WHIP
-        </h3>
 
-        <p>
-          Avoid the tail whip.
-        </p>
 
-        <p>
-          It can apply a poison effect that deals heavy damage over time.
-        </p>
+          <!-- ==================================================
+               MANTICORES
+               ================================================== -->
 
+          <article
+            class="build-guide-panel"
+            id="manticores"
+          >
 
-        <h3>
-          RED AOES
-        </h3>
+            <p class="build-panel-eyebrow">
+              ADD PHASE
+            </p>
 
-        <p>
-          Red areas continue appearing around the arena.
-        </p>
+            <h2>
+              MANTICORES
+            </h2>
 
-        <p>
-          Move out of them and keep dangerous telegraphs away from the group.
-        </p>
+            <p>
+              Two manticores become active during this section.
+            </p>
 
 
-        <h3>
-          HYPOTHERMIA RETURNS
-        </h3>
+            <h3>
+              FOCUS ONE
+            </h3>
 
-        <p>
-          Hypothermia can return during this phase.
-        </p>
+            <p>
+              Focus one manticore at a time where possible.
+            </p>
 
-        <p>
-          Bring it into the group and stack to share the damage.
-        </p>
+            <p>
+              This reduces pressure on the group and avoids
+              fighting both at full strength.
+            </p>
 
-      </article>
 
+            <h3>
+              ICE STILL MATTERS
+            </h3>
 
+            <p>
+              Ice mechanics continue during the manticore phase.
+            </p>
 
-      <!-- FINAL PHASE -->
+            <p>
+              Free any trapped player immediately.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="final-phase"
-      >
+            <p>
+              A player who dies inside the ice cannot be recovered
+              normally, making this one of the most dangerous
+              mechanics in the phase.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          FINAL PHASE
-        </p>
 
-        <h2>
-          FINAL BURN
-        </h2>
+            <h3>
+              SPINE ATTACKS
+            </h3>
 
-        <p>
-          Core mechanics continue into the final phase.
-        </p>
+            <p>
+              Avoid the manticores' spine attacks.
+            </p>
 
-        <p>
-          Keep breaking ice immediately.
-        </p>
 
-        <p>
-          Move red AoEs away from the party.
-        </p>
+            <h3>
+              TAIL WHIP
+            </h3>
 
-        <p>
-          Stack together for Hypothermia.
-        </p>
+            <p>
+              Avoid the tail whip.
+            </p>
 
-        <p>
-          Stay close enough to the healer and maintain awareness of tank positioning.
-        </p>
+            <p>
+              It can apply a poison effect that deals heavy damage
+              over time.
+            </p>
 
-      </article>
 
+            <h3>
+              RED AOES
+            </h3>
 
+            <p>
+              Red areas continue appearing around the arena.
+            </p>
 
-      <!-- ROLE JOBS -->
+            <p>
+              Move out of them and keep dangerous telegraphs
+              away from the group.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="roles"
-      >
 
-        <p class="build-panel-eyebrow">
-          KNOW YOUR JOB
-        </p>
+            <h3>
+              HYPOTHERMIA RETURNS
+            </h3>
 
-        <h2>
-          TANK ◆ HEALER ◆ DPS
-        </h2>
+            <p>
+              Hypothermia can return during this phase.
+            </p>
 
+            <p>
+              Bring it into the group and stack to share
+              the damage.
+            </p>
 
-        <h3>
-          TANKS
-        </h3>
+          </article>
 
-        <p>
-          Keep enemies positioned clearly so the group can react to ice,
-          red AoEs and shared-damage mechanics without unnecessary chaos.
-        </p>
 
-        <p>
-          During manticore phases, control positioning and avoid pointing
-          dangerous attacks through the group.
-        </p>
 
+          <!-- ==================================================
+               FINAL PHASE
+               ================================================== -->
 
-        <h3>
-          HEALERS
-        </h3>
+          <article
+            class="build-guide-panel"
+            id="final-phase"
+          >
 
-        <p>
-          Stay central enough that players can remain within healing range
-          while handling mechanics.
-        </p>
+            <p class="build-panel-eyebrow">
+              FINAL PHASE
+            </p>
 
-        <p>
-          Be ready for heavy damage from Hypothermia, poison effects and
-          mistakes involving ice.
-        </p>
+            <h2>
+              FINAL BURN
+            </h2>
 
+            <p>
+              Core mechanics continue into the final phase.
+            </p>
 
-        <h3>
-          DPS
-        </h3>
+            <p>
+              Keep breaking ice immediately.
+            </p>
 
-        <p>
-          Break trapped players out of ice immediately.
-        </p>
+            <p>
+              Move red AoEs away from the party.
+            </p>
 
-        <p>
-          Focus one manticore at a time.
-        </p>
+            <p>
+              Stack together for Hypothermia.
+            </p>
 
-        <p>
-          Move targeted red circles away from the group and stack correctly
-          for Hypothermia.
-        </p>
+            <p>
+              Stay close enough to the healer and maintain
+              awareness of tank positioning.
+            </p>
 
-      </article>
+          </article>
 
 
 
-      <!-- COMMON WIPES -->
+          <!-- ==================================================
+               ROLE JOBS
+               ================================================== -->
 
-      <article
-        class="build-guide-panel"
-        id="wipes"
-      >
+          <article
+            class="build-guide-panel"
+            id="roles"
+          >
 
-        <p class="build-panel-eyebrow">
-          WHAT USUALLY GOES WRONG
-        </p>
+            <p class="build-panel-eyebrow">
+              KNOW YOUR JOB
+            </p>
 
-        <h2>
-          COMMON WIPES
-        </h2>
+            <h2>
+              TANK ◆ HEALER ◆ DPS
+            </h2>
 
-        <p>
-          Failing to break players out of ice quickly enough.
-        </p>
 
-        <p>
-          Taking Hypothermia away from the group instead of sharing the damage.
-        </p>
+            <h3>
+              TANKS
+            </h3>
 
-        <p>
-          Dropping red circles on the party and knocking multiple players down.
-        </p>
+            <p>
+              Keep enemies positioned clearly so the group can
+              react to ice, red AoEs and shared-damage mechanics
+              without unnecessary chaos.
+            </p>
 
-        <p>
-          Failing to reach cover when the boss calls for the group to get behind something.
-        </p>
+            <p>
+              During manticore phases, control positioning and
+              avoid pointing dangerous attacks through the group.
+            </p>
 
-        <p>
-          Splitting damage between both manticores instead of focusing one.
-        </p>
 
-        <p>
-          Standing in tail attacks and taking heavy poison damage over time.
-        </p>
+            <h3>
+              HEALERS
+            </h3>
 
-      </article>
+            <p>
+              Stay central enough that players can remain within
+              healing range while handling mechanics.
+            </p>
 
+            <p>
+              Be ready for heavy damage from Hypothermia, poison
+              effects and mistakes involving ice.
+            </p>
 
 
-      <!-- CHAOS NOTES -->
+            <h3>
+              DPS
+            </h3>
 
-      <article
-        class="build-guide-panel chaos-notes-panel"
-        id="chaos-notes"
-      >
+            <p>
+              Break trapped players out of ice immediately.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          FROM THE GUILD
-        </p>
+            <p>
+              Focus one manticore at a time.
+            </p>
 
-        <h2>
-          CHAOS NOTES
-        </h2>
+            <p>
+              Move targeted red circles away from the group and
+              stack correctly for Hypothermia.
+            </p>
 
-        <p>
-          Svardborg is mostly about doing the simple things quickly.
-        </p>
+          </article>
 
-        <p>
-          Ice appears? Break it.
-        </p>
 
-        <p>
-          Hypothermia appears? Group cuddle.
-        </p>
 
-        <p>
-          Red circle appears? Take your personal problem away from everybody else.
-        </p>
+          <!-- ==================================================
+               COMMON WIPES
+               ================================================== -->
 
-        <p>
-          Giant attack incoming? Get behind the bloody cover.
-        </p>
+          <article
+            class="build-guide-panel"
+            id="wipes"
+          >
 
-      </article>
+            <p class="build-panel-eyebrow">
+              WHAT USUALLY GOES WRONG
+            </p>
 
+            <h2>
+              COMMON WIPES
+            </h2>
 
+            <p>
+              Failing to break players out of ice quickly enough.
+            </p>
 
-      <!-- UPDATED -->
+            <p>
+              Taking Hypothermia away from the group instead of
+              sharing the damage.
+            </p>
+
+            <p>
+              Dropping red circles on the party and knocking
+              multiple players down.
+            </p>
+
+            <p>
+              Failing to reach cover when the boss calls for
+              the group to get behind something.
+            </p>
+
+            <p>
+              Splitting damage between both manticores instead
+              of focusing one.
+            </p>
+
+            <p>
+              Standing in tail attacks and taking heavy poison
+              damage over time.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               CHAOS NOTES
+               ================================================== -->
+
+          <article
+            class="build-guide-panel chaos-notes-panel"
+            id="chaos-notes"
+          >
+
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
+
+            <h2>
+              CHAOS NOTES
+            </h2>
+
+            <p>
+              Svardborg is mostly about doing the simple things
+              quickly.
+            </p>
+
+            <p>
+              Ice appears? Break it.
+            </p>
+
+            <p>
+              Hypothermia appears? Group cuddle.
+            </p>
+
+            <p>
+              Red circle appears? Take your personal problem
+              away from everybody else.
+            </p>
+
+            <p>
+              Giant attack incoming? Get behind the bloody cover.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </details>
+
+
+
+      <!-- ====================================================
+           UPDATED
+           ==================================================== -->
 
       <div class="build-last-updated">
 
@@ -623,7 +949,9 @@
 
 
 
-      <!-- BACK TO MECHANICS -->
+      <!-- ====================================================
+           BACK TO MECHANICS
+           ==================================================== -->
 
       <div class="build-back-link">
 

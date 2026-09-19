@@ -57,9 +57,7 @@
 
     <nav class="desktop-nav">
 
-      <a href="index.html">
-        HOME
-      </a>
+      <a href="index.html">HOME</a>
 
       <a href="index.html#about">
         THE CHAOS CREW
@@ -141,18 +139,18 @@
 
 
     <!-- ======================================================
-         DUNGEON NAVIGATION
+         SIMPLE NAVIGATION
          ====================================================== -->
 
     <nav class="build-section-nav">
 
-      <a href="#overview">Overview</a>
-      <a href="#boss-one">Boss One</a>
-      <a href="#boss-two">Boss Two</a>
-      <a href="#boss-three">Final Boss</a>
-      <a href="#roles">Role Jobs</a>
-      <a href="#wipes">Common Wipes</a>
-      <a href="#chaos-notes">Chaos Notes</a>
+      <a href="#quick-guide">
+        Quick Mechanics
+      </a>
+
+      <a href="#full-guide">
+        Full Mechanics
+      </a>
 
     </nav>
 
@@ -162,795 +160,1180 @@
          DUNGEON CONTENT
          ====================================================== -->
 
-    <section class="build-detail-page">
+    <section class="build-detail-page dungeon-guide-page">
 
 
-      <!-- OVERVIEW -->
+      <!-- ====================================================
+           CHAOS WARNING
+           ==================================================== -->
+
+      <aside class="dungeon-chaos-warning">
+
+        <p class="chaos-warning-label">
+          ⚠ CHAOS WARNING
+        </p>
+
+        <p class="chaos-warning-message">
+          Cocoon appears? Murder the cocoon.
+          Not after your rotation. Not after your daily.
+          NOW. Your teammate has approximately ten seconds
+          before they become permanently fucking decorative.
+        </p>
+
+      </aside>
+
+
+
+      <!-- ====================================================
+           QUICK & DIRTY MECHANICS
+           ==================================================== -->
 
       <article
-        class="build-guide-panel build-overview"
-        id="overview"
+        class="build-guide-panel quick-mechanics-panel"
+        id="quick-guide"
       >
 
         <p class="build-panel-eyebrow">
-          THE DUNGEON
+          THE QUICK & DIRTY VERSION
         </p>
 
         <h2>
-          OVERVIEW
+          ALL YOU REALLY NEED TO KNOW
         </h2>
 
-        <p>
-          Master Temple of the Spider is built around three mechanically
-          demanding boss encounters.
+        <p class="quick-mechanics-intro">
+          Three bosses. Three different varieties of bullshit.
+          Here's what matters.
         </p>
 
-        <p>
-          The first boss focuses on controlling barrels, choking gas,
-          spider adds, webs and clones.
-        </p>
 
-        <p>
-          The second boss revolves around managing Ritual Strength,
-          timed add phases, overlapping red areas and healer-specific mechanics.
-        </p>
+        <div class="quick-mechanics-grid">
 
-        <p>
-          The final boss requires the group to rotate line interceptions,
-          break cocoons quickly and manage stacking debuffs while avoiding
-          increasingly dangerous arena mechanics.
-        </p>
+
+          <!-- BARRELS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🛢️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                RED + BARRELS
+              </h3>
+
+              <p>
+                Red circle on you?
+              </p>
+
+              <strong>
+                KEEP IT AWAY FROM BARRELS.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- ACTIVATED BARREL -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              💥
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                BARREL TIMER
+              </h3>
+
+              <p>
+                Barrel starts filling?
+              </p>
+
+              <strong>
+                DESTROY IT BEFORE IT EXPLODES.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- DEMONS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              👹
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                TIMED DEMONS
+              </h3>
+
+              <p>
+                Adds spawn at 80 / 50 / 20%?
+              </p>
+
+              <strong>
+                KILL THEM FAST ◆ SAVE BURST.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- LINKED RED -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🔴
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                LINKED RED CIRCLES
+              </h3>
+
+              <p>
+                Two giant circles connected?
+              </p>
+
+              <strong>
+                MOVE APART ◆ DO NOT OVERLAP.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- HEALER GHOST -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              👻
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                HEALER GHOST
+              </h3>
+
+              <p>
+                Special ghost appears?
+              </p>
+
+              <strong>
+                HEALER ◆ TARGET IT ◆ HEAL TO FULL.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- COCOON -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🕸️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                COCOON
+              </h3>
+
+              <p>
+                Player trapped?
+              </p>
+
+              <strong>
+                EVERYTHING ON COCOON ◆ NOW.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- LINES -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              ➖
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                BOSS LINES
+              </h3>
+
+              <p>
+                Intercepting lines?
+              </p>
+
+              <strong>
+                ROTATE PLAYERS ◆ SHARE THE STACKS.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- RED LINE -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🩸
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                RED LINE
+              </h3>
+
+              <p>
+                Worthy Sacrifice stacks?
+              </p>
+
+              <strong>
+                TANKS TAKE EARLY STACKS ◆ DON'T HOARD THEM.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- GREEN LINE -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🟢
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                GREEN LINE
+              </h3>
+
+              <p>
+                Green stacks reduce healing.
+              </p>
+
+              <strong>
+                DON'T STACK THEM ALL ON THE TANK.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+        </div>
 
       </article>
 
 
 
-      <!-- ======================================================
-           FIRST BOSS
-           ====================================================== -->
+      <!-- ====================================================
+           FULL MECHANICS DROPDOWN
+           ==================================================== -->
 
-      <article
-        class="build-guide-panel"
-        id="boss-one"
+      <details
+        class="full-mechanics-dropdown"
+        id="full-guide"
       >
 
-        <p class="build-panel-eyebrow">
-          FIRST BOSS
-        </p>
+        <summary class="full-mechanics-summary">
 
-        <h2>
-          WEBS ◆ BARRELS ◆ CLONES
-        </h2>
+          <span class="full-mechanics-summary-main">
+            WANT THE FULL MECHANICS?
+          </span>
 
+          <span class="full-mechanics-summary-sub">
+            Open the full Master Temple of the Spider guide
+          </span>
 
-        <h3>
-          LARGE RED AREAS
-        </h3>
+          <span
+            class="full-mechanics-chevron"
+            aria-hidden="true"
+          >
+            ▼
+          </span>
 
-        <p>
-          Large red areas regularly target players.
-        </p>
+        </summary>
 
-        <p>
-          Move these away from the group and, most importantly,
-          away from barrels.
-        </p>
 
-        <p>
-          A red area hitting a barrel can trigger an explosion and contribute
-          to Choking Gas.
-        </p>
+        <div class="full-mechanics-content">
 
 
-        <h3>
-          SPIDER ADDS & WEBS
-        </h3>
+          <!-- ==================================================
+               OVERVIEW
+               ================================================== -->
 
-        <p>
-          When the boss announces either
-          "Trapped in the web, the prey squirms"
-          or
-          "You are but an insect among spiders",
-          spider adds appear.
-        </p>
+          <article
+            class="build-guide-panel build-overview"
+            id="overview"
+          >
 
-        <p>
-          The spiders place webs on the ground.
-          Standing in a web causes damage and slows the affected player.
-        </p>
+            <p class="build-panel-eyebrow">
+              THE DUNGEON
+            </p>
 
-        <p>
-          Move out of webs immediately.
-        </p>
+            <h2>
+              OVERVIEW
+            </h2>
 
-        <p>
-          Spider adds can deal extremely heavy frontal damage.
-          DPS should avoid standing in front of them while the tank controls aggro.
-        </p>
+            <p>
+              Master Temple of the Spider is built around three mechanically
+              demanding boss encounters.
+            </p>
 
+            <p>
+              The first boss focuses on controlling barrels,
+              Choking Gas, spider adds, webs and clones.
+            </p>
 
-        <h3>
-          CLONE PHASE
-        </h3>
+            <p>
+              The second boss revolves around managing Ritual Strength,
+              timed add phases, overlapping red areas
+              and healer-specific mechanics.
+            </p>
 
-        <p>
-          At approximately 75% health the boss disappears and three clones appear.
-        </p>
+            <p>
+              The final boss requires the group to rotate line interceptions,
+              break cocoons quickly and manage stacking debuffs
+              while avoiding increasingly dangerous arena mechanics.
+            </p>
 
-        <p>
-          The clone phase can occur again later in the encounter,
-          including around 50% health.
-        </p>
+          </article>
 
-        <p>
-          Kill the clones quickly.
-          Crowd control and AoE damage are particularly useful here.
-        </p>
 
 
-        <h3>
-          EXPLODING BARRELS
-        </h3>
+          <!-- ==================================================
+               FIRST BOSS
+               ================================================== -->
 
-        <p>
-          Red barrels can appear during the encounter.
-        </p>
+          <article
+            class="build-guide-panel"
+            id="boss-one"
+          >
 
-        <p>
-          When activated, a red circle begins filling around the barrel.
-          Destroy the barrel before the timer completes.
-        </p>
+            <p class="build-panel-eyebrow">
+              FIRST BOSS
+            </p>
 
-        <p>
-          If the barrel explodes, the group gains a stack of Choking Gas.
-        </p>
+            <h2>
+              WEBS ◆ BARRELS ◆ CLONES
+            </h2>
 
-        <p>
-          Exploding barrels can also trigger nearby barrels,
-          creating a chain reaction across the arena.
-        </p>
 
+            <h3>
+              LARGE RED AREAS
+            </h3>
 
-        <h3>
-          CHOKING GAS
-        </h3>
+            <p>
+              Large red areas regularly target players.
+            </p>
 
-        <p>
-          Choking Gas causes the entire group to take damage over time
-          regardless of their position in the arena.
-        </p>
+            <p>
+              Move these away from the group and,
+              most importantly, away from barrels.
+            </p>
 
-        <p>
-          Additional stacks increase the pressure on the healer.
-        </p>
+            <p>
+              A red area hitting a barrel can trigger an explosion
+              and contribute to Choking Gas.
+            </p>
+
+
+            <h3>
+              SPIDER ADDS & WEBS
+            </h3>
+
+            <p>
+              When the boss announces either
+              "Trapped in the web, the prey squirms"
+              or
+              "You are but an insect among spiders",
+              spider adds appear.
+            </p>
+
+            <p>
+              The spiders place webs on the ground.
+              Standing in a web causes damage
+              and slows the affected player.
+            </p>
 
-        <p>
-          Prevent stacks by destroying activated barrels and keeping
-          targeted red areas away from them.
-        </p>
+            <p>
+              Move out of webs immediately.
+            </p>
 
+            <p>
+              Spider adds can deal extremely heavy frontal damage.
+              DPS should avoid standing in front of them
+              while the tank controls aggro.
+            </p>
 
-        <h3>
-          TRAPS
-        </h3>
 
-        <p>
-          Red trap areas can appear during clone phases.
-        </p>
+            <h3>
+              CLONE PHASE
+            </h3>
 
-        <p>
-          Walking into one causes a long stun and damage over time.
-        </p>
+            <p>
+              At approximately 75% health
+              the boss disappears and three clones appear.
+            </p>
 
-        <p>
-          Avoid the trap areas while dealing with the clones and barrels.
-        </p>
+            <p>
+              The clone phase can occur again later in the encounter,
+              including around 50% health.
+            </p>
 
-      </article>
+            <p>
+              Kill the clones quickly.
+              Crowd control and AoE damage are particularly useful here.
+            </p>
 
 
+            <h3>
+              EXPLODING BARRELS
+            </h3>
 
-      <!-- ======================================================
-           SECOND BOSS
-           ====================================================== -->
+            <p>
+              Red barrels can appear during the encounter.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="boss-two"
-      >
+            <p>
+              When activated,
+              a red circle begins filling around the barrel.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          SECOND BOSS
-        </p>
+            <p>
+              Destroy the barrel before the timer completes.
+            </p>
 
-        <h2>
-          RITUAL STRENGTH
-        </h2>
+            <p>
+              If the barrel explodes,
+              the group gains a stack of Choking Gas.
+            </p>
 
+            <p>
+              Exploding barrels can also trigger nearby barrels,
+              creating a chain reaction across the arena.
+            </p>
 
-        <h3>
-          WEBS
-        </h3>
 
-        <p>
-          Webs on the arena apply a Tangled effect.
-        </p>
+            <h3>
+              CHOKING GAS
+            </h3>
 
-        <p>
-          Tangled slows the player and deals damage.
-          Avoid remaining inside webs where possible.
-        </p>
+            <p>
+              Choking Gas causes the entire group
+              to take damage over time regardless of their position.
+            </p>
 
+            <p>
+              Additional stacks increase the pressure on the healer.
+            </p>
 
-        <h3>
-          RED AREAS
-        </h3>
+            <p>
+              Prevent stacks by destroying activated barrels
+              and keeping targeted red areas away from them.
+            </p>
 
-        <p>
-          Avoid the red areas around the boss.
-        </p>
 
-        <p>
-          Being hit can apply a poison damage-over-time effect.
-        </p>
+            <h3>
+              TRAPS
+            </h3>
 
+            <p>
+              Red trap areas can appear during clone phases.
+            </p>
 
-        <h3>
-          TIMED DEMONS
-        </h3>
+            <p>
+              Walking into one causes a long stun
+              and damage over time.
+            </p>
 
-        <p>
-          At approximately 80%, 50% and 20% boss health,
-          demons spawn around the arena.
-        </p>
+            <p>
+              Avoid the trap areas while dealing
+              with the clones and barrels.
+            </p>
 
-        <p>
-          These adds must be killed within roughly 10 seconds.
-        </p>
+          </article>
 
-        <p>
-          Any demon that survives the timer disappears and gives the group
-          a stack of Ritual Strength.
-        </p>
 
-        <p>
-          Save burst damage, Dailies and Mount powers for these phases.
-        </p>
 
+          <!-- ==================================================
+               SECOND BOSS
+               ================================================== -->
 
-        <h3>
-          RITUAL STRENGTH
-        </h3>
+          <article
+            class="build-guide-panel"
+            id="boss-two"
+          >
 
-        <p>
-          Ritual Strength increases the danger of the boss's unavoidable
-          group-wide damage.
-        </p>
+            <p class="build-panel-eyebrow">
+              SECOND BOSS
+            </p>
 
-        <p>
-          Too many stacks can make the periodic Roar lethal.
-        </p>
+            <h2>
+              RITUAL STRENGTH
+            </h2>
 
 
-        <h3>
-          ROAR
-        </h3>
+            <h3>
+              WEBS
+            </h3>
 
-        <p>
-          The boss periodically performs an unavoidable group-wide Roar.
-        </p>
+            <p>
+              Webs on the arena apply a Tangled effect.
+            </p>
 
-        <p>
-          Players should be healthy before the Roar lands,
-          particularly if the group has accumulated Ritual Strength.
-        </p>
+            <p>
+              Tangled slows the player and deals damage.
+              Avoid remaining inside webs where possible.
+            </p>
 
 
-        <h3>
-          LARGE LINKED RED AREAS
-        </h3>
+            <h3>
+              RED AREAS
+            </h3>
 
-        <p>
-          Players can be targeted with very large red circles connected
-          by a line.
-        </p>
+            <p>
+              Avoid the red areas around the boss.
+            </p>
 
-        <p>
-          The targeted players must move apart so the circles do not overlap.
-        </p>
+            <p>
+              Being hit can apply a poison damage-over-time effect.
+            </p>
 
-        <p>
-          Other party members should reposition to stay clear of both areas.
-        </p>
 
+            <h3>
+              TIMED DEMONS
+            </h3>
 
-        <h3>
-          STRANGLE
-        </h3>
+            <p>
+              At approximately 80%, 50% and 20% boss health,
+              demons spawn around the arena.
+            </p>
 
-        <p>
-          Below approximately 50% health, the boss can randomly strangle
-          a player and prevent them from moving.
-        </p>
+            <p>
+              These adds must be killed within roughly 10 seconds.
+            </p>
 
-        <p>
-          If the restrained player also receives one of the large red circles,
-          the other targeted player must move far enough away to prevent overlap.
-        </p>
+            <p>
+              Any demon that survives the timer disappears
+              and gives the group a stack of Ritual Strength.
+            </p>
 
+            <p>
+              Save burst damage,
+              Dailies and Mount powers for these phases.
+            </p>
 
-        <h3>
-          FRONTAL RED LINE
-        </h3>
 
-        <p>
-          A narrow red attack appears in front of the boss.
-        </p>
+            <h3>
+              RITUAL STRENGTH
+            </h3>
 
-        <p>
-          Non-tanks caught inside can take lethal damage.
-        </p>
+            <p>
+              Ritual Strength increases the danger
+              of the boss's unavoidable group-wide damage.
+            </p>
 
-        <p>
-          Stay away from the boss's frontal attack unless you are the tank.
-        </p>
+            <p>
+              Too many stacks can make the periodic Roar lethal.
+            </p>
 
 
-        <h3>
-          PURPLE GHOSTS
-        </h3>
+            <h3>
+              ROAR
+            </h3>
 
-        <p>
-          Purple ghosts can appear as a damage check.
-        </p>
+            <p>
+              The boss periodically performs
+              an unavoidable group-wide Roar.
+            </p>
 
-        <p>
-          Killing them can reduce Ritual Strength.
-        </p>
+            <p>
+              Players should be healthy before the Roar lands,
+              particularly if the group has accumulated Ritual Strength.
+            </p>
 
 
-        <h3>
-          HEALER GHOST
-        </h3>
+            <h3>
+              LARGE LINKED RED AREAS
+            </h3>
 
-        <p>
-          A special ghost can appear during the fight with its own health bar.
-        </p>
+            <p>
+              Players can be targeted with very large red circles
+              connected by a line.
+            </p>
 
-        <p>
-          The healer must actively heal the ghost to full health.
-        </p>
+            <p>
+              The targeted players must move apart
+              so the circles do not overlap.
+            </p>
 
-        <p>
-          Successfully healing it removes the Ritual Strength gained when it appeared.
-        </p>
+            <p>
+              Other party members should reposition
+              to stay clear of both areas.
+            </p>
 
-        <p>
-          If the healer fails, the ghost transforms into a spider and disappears,
-          leaving the Ritual Strength stack active.
-        </p>
 
-        <p>
-          Passive healing effects may not heal the ghost.
-          The healer needs to target it with active healing.
-        </p>
+            <h3>
+              STRANGLE
+            </h3>
 
-      </article>
+            <p>
+              Below approximately 50% health,
+              the boss can randomly strangle a player
+              and prevent them from moving.
+            </p>
 
+            <p>
+              If the restrained player also receives
+              one of the large red circles,
+              the other targeted player must move far enough away
+              to prevent overlap.
+            </p>
 
 
-      <!-- ======================================================
-           FINAL BOSS
-           ====================================================== -->
+            <h3>
+              FRONTAL RED LINE
+            </h3>
 
-      <article
-        class="build-guide-panel"
-        id="boss-three"
-      >
+            <p>
+              A narrow red attack appears in front of the boss.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          FINAL BOSS
-        </p>
+            <p>
+              Non-tanks caught inside can take lethal damage.
+            </p>
 
-        <h2>
-          COCOONS ◆ LINES ◆ DEBUFFS
-        </h2>
+            <p>
+              Stay away from the boss's frontal attack
+              unless you are the tank.
+            </p>
 
 
-        <h3>
-          COCOON
-        </h3>
+            <h3>
+              PURPLE GHOSTS
+            </h3>
 
-        <p>
-          A player can be trapped inside a cocoon.
-        </p>
+            <p>
+              Purple ghosts can appear as a damage check.
+            </p>
 
-        <p>
-          The group has approximately 10 seconds to destroy the cocoon
-          and free the trapped player.
-        </p>
+            <p>
+              Killing them can reduce Ritual Strength.
+            </p>
 
-        <p>
-          Failure to break the cocoon results in the trapped player dying
-          permanently.
-        </p>
 
-        <p>
-          Cocoons occur roughly every 30 seconds, although the timing can vary.
-        </p>
+            <h3>
+              HEALER GHOST
+            </h3>
 
-        <p>
-          DPS should keep enough burst damage available to destroy each cocoon quickly.
-        </p>
+            <p>
+              A special ghost can appear during the fight
+              with its own health bar.
+            </p>
 
+            <p>
+              The healer must actively heal the ghost
+              to full health.
+            </p>
 
-        <h3>
-          INTERCEPTING LINES
-        </h3>
+            <p>
+              Successfully healing it removes the Ritual Strength
+              gained when it appeared.
+            </p>
 
-        <p>
-          Coloured lines connect the boss to players and must be intercepted
-          by party members.
-        </p>
+            <p>
+              If the healer fails,
+              the ghost transforms into a spider and disappears,
+              leaving the Ritual Strength stack active.
+            </p>
 
-        <p>
-          Intercepting a line gives the player a stacking debuff.
-        </p>
+            <p>
+              Passive healing effects may not heal the ghost.
+              The healer needs to target it with active healing.
+            </p>
 
-        <p>
-          The group should rotate who intercepts the lines rather than allowing
-          one player to accumulate every stack.
-        </p>
+          </article>
 
 
-        <h3>
-          RED LINE - WORTHY SACRIFICE
-        </h3>
 
-        <p>
-          Intercepting the red line applies Worthy Sacrifice.
-        </p>
+          <!-- ==================================================
+               FINAL BOSS
+               ================================================== -->
 
-        <p>
-          Worthy Sacrifice deals damage over time,
-          with the damage increasing significantly as stacks accumulate.
-        </p>
+          <article
+            class="build-guide-panel"
+            id="boss-three"
+          >
 
-        <p>
-          Tanks are better suited to taking early red-line stacks because
-          they can survive the increasing damage more easily.
-        </p>
+            <p class="build-panel-eyebrow">
+              FINAL BOSS
+            </p>
 
+            <h2>
+              COCOONS ◆ LINES ◆ DEBUFFS
+            </h2>
 
-        <h3>
-          GREEN LINE
-        </h3>
 
-        <p>
-          Intercepting the green line applies a debuff that reduces
-          incoming healing.
-        </p>
+            <h3>
+              COCOON
+            </h3>
 
-        <p>
-          The healing reduction becomes increasingly severe with additional stacks.
-        </p>
+            <p>
+              A player can be trapped inside a cocoon.
+            </p>
 
-        <p>
-          Tanks should avoid accumulating excessive green stacks because
-          reducing their incoming healing makes tank survival considerably harder.
-        </p>
+            <p>
+              The group has approximately 10 seconds
+              to destroy the cocoon and free the trapped player.
+            </p>
 
+            <p>
+              Failure to break the cocoon results
+              in the trapped player dying permanently.
+            </p>
 
-        <h3>
-          SHARE THE STACKS
-        </h3>
+            <p>
+              Cocoons occur roughly every 30 seconds,
+              although the timing can vary.
+            </p>
 
-        <p>
-          Rotate line interceptions throughout the party.
-        </p>
+            <p>
+              DPS should keep enough burst damage available
+              to destroy each cocoon quickly.
+            </p>
 
-        <p>
-          A useful approach is to allow everyone to take one appropriate stack
-          before beginning a second rotation.
-        </p>
 
+            <h3>
+              INTERCEPTING LINES
+            </h3>
 
-        <h3>
-          BELOW 50%
-        </h3>
+            <p>
+              Coloured lines connect the boss to players
+              and must be intercepted by party members.
+            </p>
 
-        <p>
-          Additional mechanics appear once the boss reaches approximately 50% health.
-        </p>
+            <p>
+              Intercepting a line gives the player
+              a stacking debuff.
+            </p>
 
-        <p>
-          Red areas begin following players around the arena.
-        </p>
+            <p>
+              The group should rotate who intercepts the lines
+              rather than allowing one player
+              to accumulate every stack.
+            </p>
 
-        <p>
-          These deal extremely heavy damage and can become lethal when combined
-          with damage-over-time debuffs.
-        </p>
 
+            <h3>
+              RED LINE ◆ WORTHY SACRIFICE
+            </h3>
 
-        <h3>
-          PILLARS
-        </h3>
+            <p>
+              Intercepting the red line applies Worthy Sacrifice.
+            </p>
 
-        <p>
-          Pillar-like attacks appear around the arena during the later phase.
-        </p>
+            <p>
+              Worthy Sacrifice deals damage over time,
+              with the damage increasing significantly
+              as stacks accumulate.
+            </p>
 
-        <p>
-          Avoid these alongside the moving red areas and webs.
-        </p>
+            <p>
+              Tanks are better suited to taking early red-line stacks
+              because they can survive the increasing damage
+              more easily.
+            </p>
 
 
-        <h3>
-          TELEPORT BURN
-        </h3>
+            <h3>
+              GREEN LINE
+            </h3>
 
-        <p>
-          When the boss teleports, nearby players can receive a burn effect
-          that deals damage over time for roughly 10 seconds.
-        </p>
+            <p>
+              Intercepting the green line applies a debuff
+              that reduces incoming healing.
+            </p>
 
-        <p>
-          Ranged DPS can reduce the risk by maintaining distance when possible.
-        </p>
+            <p>
+              The healing reduction becomes increasingly severe
+              with additional stacks.
+            </p>
 
+            <p>
+              Tanks should avoid accumulating excessive green stacks
+              because reducing their incoming healing
+              makes tank survival considerably harder.
+            </p>
 
-        <h3>
-          PRIORITY
-        </h3>
 
-        <p>
-          When a cocoon appears, freeing the trapped player is the immediate priority.
-        </p>
+            <h3>
+              SHARE THE STACKS
+            </h3>
 
-        <p>
-          Continue rotating line interceptions and avoiding arena damage between cocoons.
-        </p>
+            <p>
+              Rotate line interceptions throughout the party.
+            </p>
 
-      </article>
+            <p>
+              A useful approach is to allow everyone
+              to take one appropriate stack
+              before beginning a second rotation.
+            </p>
 
 
+            <h3>
+              BELOW 50%
+            </h3>
 
-      <!-- ======================================================
-           ROLE JOBS
-           ====================================================== -->
+            <p>
+              Additional mechanics appear once the boss
+              reaches approximately 50% health.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="roles"
-      >
+            <p>
+              Red areas begin following players around the arena.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          KNOW YOUR JOB
-        </p>
+            <p>
+              These deal extremely heavy damage
+              and can become lethal when combined
+              with damage-over-time debuffs.
+            </p>
 
-        <h2>
-          TANK ◆ HEALER ◆ DPS
-        </h2>
 
+            <h3>
+              PILLARS
+            </h3>
 
-        <h3>
-          TANK
-        </h3>
+            <p>
+              Pillar-like attacks appear around the arena
+              during the later phase.
+            </p>
 
-        <p>
-          Control spider adds and keep dangerous frontal attacks facing
-          away from the party.
-        </p>
+            <p>
+              Avoid these alongside the moving red areas and webs.
+            </p>
 
-        <p>
-          Control adds during the second boss and keep the group clear
-          of frontal attacks.
-        </p>
 
-        <p>
-          During the final boss, tanks are better suited to taking
-          early red-line Worthy Sacrifice stacks.
-        </p>
+            <h3>
+              TELEPORT BURN
+            </h3>
 
-        <p>
-          Avoid excessive green-line stacks because they reduce incoming healing.
-        </p>
+            <p>
+              When the boss teleports,
+              nearby players can receive a burn effect
+              that deals damage over time for roughly 10 seconds.
+            </p>
 
+            <p>
+              Ranged DPS can reduce the risk
+              by maintaining distance when possible.
+            </p>
 
-        <h3>
-          HEALER
-        </h3>
 
-        <p>
-          Choking Gas during the first boss creates increasing group-wide
-          healing pressure.
-        </p>
+            <h3>
+              PRIORITY
+            </h3>
 
-        <p>
-          During the second boss, actively heal the special ghost to full
-          to remove Ritual Strength.
-        </p>
+            <p>
+              When a cocoon appears,
+              freeing the trapped player is the immediate priority.
+            </p>
 
-        <p>
-          Prepare the group for the unavoidable Roar,
-          especially when Ritual Strength stacks are active.
-        </p>
+            <p>
+              Continue rotating line interceptions
+              and avoiding arena damage between cocoons.
+            </p>
 
-        <p>
-          During the final boss, watch players carrying Worthy Sacrifice
-          because its damage increases with additional stacks.
-        </p>
+          </article>
 
 
-        <h3>
-          DPS
-        </h3>
 
-        <p>
-          Bring enough AoE or crowd control to deal with first-boss clones
-          and spider adds.
-        </p>
+          <!-- ==================================================
+               ROLE JOBS
+               ================================================== -->
 
-        <p>
-          Save burst damage for the timed demons during the second boss.
-        </p>
+          <article
+            class="build-guide-panel"
+            id="roles"
+          >
 
-        <p>
-          During the final boss, always keep enough damage available
-          for the next cocoon.
-        </p>
+            <p class="build-panel-eyebrow">
+              KNOW YOUR JOB
+            </p>
 
-        <p>
-          A dead boss is lovely.
-          A permanently dead teammate because everyone blew their Encounters
-          five seconds before the cocoon is considerably less lovely.
-        </p>
+            <h2>
+              TANK ◆ HEALER ◆ DPS
+            </h2>
 
-      </article>
 
+            <h3>
+              TANK
+            </h3>
 
+            <p>
+              Control spider adds and keep dangerous frontal attacks
+              facing away from the party.
+            </p>
 
-      <!-- ======================================================
-           COMMON WIPES
-           ====================================================== -->
+            <p>
+              Control adds during the second boss
+              and keep the group clear of frontal attacks.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="wipes"
-      >
+            <p>
+              During the final boss,
+              tanks are better suited to taking
+              early red-line Worthy Sacrifice stacks.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          WHAT USUALLY GOES WRONG
-        </p>
+            <p>
+              Avoid excessive green-line stacks
+              because they reduce incoming healing.
+            </p>
 
-        <h2>
-          COMMON WIPES
-        </h2>
 
-        <p>
-          Dropping first-boss red areas onto barrels and triggering explosions.
-        </p>
+            <h3>
+              HEALER
+            </h3>
 
-        <p>
-          Allowing exploding barrels to chain together and building
-          multiple Choking Gas stacks.
-        </p>
+            <p>
+              Choking Gas during the first boss
+              creates increasing group-wide healing pressure.
+            </p>
 
-        <p>
-          Standing in webs or traps.
-        </p>
+            <p>
+              During the second boss,
+              actively heal the special ghost to full
+              to remove Ritual Strength.
+            </p>
 
-        <p>
-          Failing to control first-boss clones and spider adds.
-        </p>
+            <p>
+              Prepare the group for the unavoidable Roar,
+              especially when Ritual Strength stacks are active.
+            </p>
 
-        <p>
-          Failing the second-boss demon damage checks and accumulating
-          too much Ritual Strength.
-        </p>
+            <p>
+              During the final boss,
+              watch players carrying Worthy Sacrifice
+              because its damage increases with additional stacks.
+            </p>
 
-        <p>
-          Overlapping the linked red circles.
-        </p>
 
-        <p>
-          The healer failing to fully heal the special ghost.
-        </p>
+            <h3>
+              DPS
+            </h3>
 
-        <p>
-          Standing in the second boss's frontal red attack.
-        </p>
+            <p>
+              Bring enough AoE or crowd control
+              to deal with first-boss clones and spider adds.
+            </p>
 
-        <p>
-          Failing to destroy a final-boss cocoon within the time limit.
-        </p>
+            <p>
+              Save burst damage for the timed demons
+              during the second boss.
+            </p>
 
-        <p>
-          Allowing one player to accumulate too many line debuff stacks.
-        </p>
+            <p>
+              During the final boss,
+              always keep enough damage available
+              for the next cocoon.
+            </p>
 
-        <p>
-          Ignoring later-phase red areas while focusing on the cocoon.
-        </p>
+            <p>
+              A dead boss is lovely.
+              A permanently dead teammate because everyone blew
+              their Encounters five seconds before the cocoon
+              is considerably less lovely.
+            </p>
 
-      </article>
+          </article>
 
 
 
-      <!-- ======================================================
-           CHAOS NOTES
-           ====================================================== -->
+          <!-- ==================================================
+               COMMON WIPES
+               ================================================== -->
 
-      <article
-        class="build-guide-panel chaos-notes-panel"
-        id="chaos-notes"
-      >
+          <article
+            class="build-guide-panel"
+            id="wipes"
+          >
 
-        <p class="build-panel-eyebrow">
-          FROM THE GUILD
-        </p>
+            <p class="build-panel-eyebrow">
+              WHAT USUALLY GOES WRONG
+            </p>
 
-        <h2>
-          CHAOS NOTES
-        </h2>
+            <h2>
+              COMMON WIPES
+            </h2>
 
-        <p>
-          The dungeon is basically three different lessons.
-        </p>
+            <p>
+              Dropping first-boss red areas onto barrels
+              and triggering explosions.
+            </p>
 
-        <p>
-          First boss:
-          keep red away from barrels and don't let Choking Gas turn the healer
-          into an unpaid emergency service.
-        </p>
+            <p>
+              Allowing exploding barrels to chain together
+              and building multiple Choking Gas stacks.
+            </p>
 
-        <p>
-          Second boss:
-          kill the timed adds, control Ritual Strength and stop overlapping
-          giant red circles.
-        </p>
+            <p>
+              Standing in webs or traps.
+            </p>
 
-        <p>
-          Final boss:
-          rotate the lines and murder the cocoon immediately.
-        </p>
+            <p>
+              Failing to control first-boss clones and spider adds.
+            </p>
 
-        <p>
-          And as always, if the floor turns red,
-          standing there to investigate it is generally not part of the mechanic.
-        </p>
+            <p>
+              Failing the second-boss demon damage checks
+              and accumulating too much Ritual Strength.
+            </p>
 
-      </article>
+            <p>
+              Overlapping the linked red circles.
+            </p>
 
+            <p>
+              The healer failing to fully heal the special ghost.
+            </p>
 
+            <p>
+              Standing in the second boss's frontal red attack.
+            </p>
 
-      <!-- ======================================================
-           SOURCE
-           ====================================================== -->
+            <p>
+              Failing to destroy a final-boss cocoon
+              within the time limit.
+            </p>
 
-      <article class="build-guide-panel">
+            <p>
+              Allowing one player to accumulate
+              too many line debuff stacks.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          GUIDE SOURCE
-        </p>
+            <p>
+              Ignoring later-phase red areas
+              while focusing on the cocoon.
+            </p>
 
-        <h2>
-          MECHANICS REFERENCE
-        </h2>
+          </article>
 
-        <p>
-          Mechanics on this page have been distilled from a community
-          Master Temple of the Spider mechanics guide supplied to Rotating Chaos.
-        </p>
 
-      </article>
 
+          <!-- ==================================================
+               CHAOS NOTES
+               ================================================== -->
 
+          <article
+            class="build-guide-panel chaos-notes-panel"
+            id="chaos-notes"
+          >
 
-      <!-- ======================================================
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
+
+            <h2>
+              CHAOS NOTES
+            </h2>
+
+            <p>
+              First boss:
+              red goes away from the barrels.
+              Activated barrel gets murdered before it explodes.
+              Simple enough until five people decide the barrel
+              looks like an excellent meeting point.
+            </p>
+
+            <p>
+              Choking Gas hits everybody.
+              You cannot outrun it,
+              hide from it or pretend it's somebody else's problem.
+              Stop creating stacks.
+            </p>
+
+            <p>
+              Second boss:
+              the timed demons are the damage check.
+              Save your good shit for them.
+            </p>
+
+            <p>
+              Healer ghost appears?
+              DPS leave it alone.
+              The healer actually needs to heal the bloody thing.
+            </p>
+
+            <p>
+              Final boss:
+              cocoon beats everything else on the priority list.
+              Boss damage can wait ten seconds.
+              Your trapped teammate cannot.
+            </p>
+
+            <p>
+              And rotate the lines.
+              One heroic volunteer collecting every debuff
+              is not teamwork.
+              It's an increasingly elaborate suicide attempt.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </details>
+
+
+
+      <!-- ====================================================
            UPDATED
-           ====================================================== -->
+           ==================================================== -->
 
       <div class="build-last-updated">
 
@@ -962,9 +1345,9 @@
 
 
 
-      <!-- ======================================================
+      <!-- ====================================================
            BACK TO MECHANICS
-           ====================================================== -->
+           ==================================================== -->
 
       <div class="build-back-link">
 
@@ -983,7 +1366,7 @@
          FOOTER
          ====================================================== -->
 
-    <footer>
+    <footer id="contact">
 
       <h2>
         STAY CONNECTED

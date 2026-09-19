@@ -141,19 +141,18 @@
 
 
     <!-- ======================================================
-         DUNGEON NAVIGATION
+         SIMPLE NAVIGATION
          ====================================================== -->
 
     <nav class="build-section-nav">
 
-      <a href="#overview">Overview</a>
-      <a href="#sisters">Sisters</a>
-      <a href="#arcolith">Arcolith</a>
-      <a href="#strahd">Strahd</a>
-      <a href="#sun-sword">Sun Sword</a>
-      <a href="#roles">Role Jobs</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#chaos-notes">Chaos Notes</a>
+      <a href="#quick-guide">
+        Quick Mechanics
+      </a>
+
+      <a href="#full-guide">
+        Full Mechanics
+      </a>
 
     </nav>
 
@@ -163,652 +162,962 @@
          DUNGEON CONTENT
          ====================================================== -->
 
-    <section class="build-detail-page">
+    <section class="build-detail-page dungeon-guide-page">
 
 
-      <!-- OVERVIEW -->
+      <!-- ====================================================
+           CHAOS WARNING
+           ==================================================== -->
+
+      <aside class="dungeon-chaos-warning">
+
+        <p class="chaos-warning-label">
+          ⚠ CHAOS WARNING
+        </p>
+
+        <p class="chaos-warning-message">
+          If someone is chained to the boss, stop hitting it.
+          Your enormous DPS is considerably less impressive
+          when you're murdering your own teammate.
+        </p>
+
+      </aside>
+
+
+
+      <!-- ====================================================
+           QUICK & DIRTY MECHANICS
+           ==================================================== -->
 
       <article
-        class="build-guide-panel build-overview"
-        id="overview"
+        class="build-guide-panel quick-mechanics-panel"
+        id="quick-guide"
       >
 
         <p class="build-panel-eyebrow">
-          THE DUNGEON
+          THE QUICK & DIRTY VERSION
         </p>
 
         <h2>
-          OVERVIEW
+          ALL YOU REALLY NEED TO KNOW
         </h2>
 
-        <p>
-          Castle Ravenloft is a mechanics-heavy dungeon featuring three major
-          encounters: the Sisters, the Arcolith and Strahd von Zarovich.
+        <p class="quick-mechanics-intro">
+          No essays. See the mechanic, do the thing.
         </p>
 
-        <p>
-          Raw damage helps, but several mechanics must still be handled correctly.
-          The key themes are separating enemies, reacting to debuffs, controlling
-          boss positioning and using the Sun Sword correctly during the final fight.
-        </p>
+
+        <div class="quick-mechanics-grid">
+
+
+          <!-- SISTERS -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              👯
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                SISTERS
+              </h3>
+
+              <p>
+                Keep the other Sisters away from the one being killed.
+              </p>
+
+              <strong>
+                TOO CLOSE = BOSS INVULNERABLE.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- CHAINS -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              ⛓️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                CHAINS
+              </h3>
+
+              <p>
+                Player chained to the Sister?
+              </p>
+
+              <strong>
+                STOP ATTACKING.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- HYPO -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🏹
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                HYPO ARROWS
+              </h3>
+
+              <p>
+                Hypo arrows incoming?
+              </p>
+
+              <strong>
+                STACK TOGETHER.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- RED OBJECT -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🔴
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                RED OBJECT
+              </h3>
+
+              <p>
+                Get everyone there before attacking.
+              </p>
+
+              <strong>
+                FIRST HIT STARTS THE 10 SECOND TIMER.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- ARCOLITH -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🗿
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                ARCOLITH
+              </h3>
+
+              <p>
+                Starts spinning?
+              </p>
+
+              <strong>
+                TANK IT INTO A PILLAR.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- STRAHD -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🧛
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                STRAHD
+              </h3>
+
+              <p>
+                Player disappears?
+                <strong>KILL DOPPELGANGERS.</strong>
+              </p>
+
+              <p>
+                “Raise your sword to the sky”?
+              </p>
+
+              <strong>
+                SUN SWORD DAILY. NOW.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+        </div>
 
       </article>
 
 
 
-      <!-- ======================================================
-           SISTERS
-           ====================================================== -->
+      <!-- ====================================================
+           FULL MECHANICS DROPDOWN
+           ==================================================== -->
 
-      <article
-        class="build-guide-panel"
-        id="sisters"
+      <details
+        class="full-mechanics-dropdown"
+        id="full-guide"
       >
 
-        <p class="build-panel-eyebrow">
-          FIRST ENCOUNTER
-        </p>
+        <summary class="full-mechanics-summary">
 
-        <h2>
-          THE SISTERS
-        </h2>
+          <span class="full-mechanics-summary-main">
+            WANT THE FULL MECHANICS?
+          </span>
 
-        <h3>
-          PHASE ONE ◆ FIRST SISTER
-        </h3>
+          <span class="full-mechanics-summary-sub">
+            Open the full Castle Ravenloft guide
+          </span>
 
-        <p>
-          Attack the first Sister normally until the Book appears.
-        </p>
+          <span
+            class="full-mechanics-chevron"
+            aria-hidden="true"
+          >
+            ▼
+          </span>
 
+        </summary>
 
-        <h3>
-          PHASE TWO ◆ USE THE BOOK
-        </h3>
 
-        <p>
-          One player — preferably the lowest DPS — picks up the Book.
-        </p>
 
-        <p>
-          Use the Book's lure ability to pull two of the Sisters away from the
-          Sister currently being attacked.
-        </p>
+        <div class="full-mechanics-content">
 
-        <p>
-          If the Sisters are too close together, the active Sister becomes
-          invulnerable.
-        </p>
 
+          <!-- ==================================================
+               OVERVIEW
+               ================================================== -->
 
-        <h3>
-          PHASE THREE ◆ DESTROY THE RED OBJECT
-        </h3>
+          <article
+            class="build-guide-panel build-overview"
+            id="overview"
+          >
 
-        <p>
-          Once the first Sister dies, a red object appears below the stairs.
-          The group has approximately 10 seconds to destroy it.
-        </p>
+            <p class="build-panel-eyebrow">
+              THE DUNGEON
+            </p>
 
-        <p>
-          The timer begins when the object is first attacked, so allow the group
-          to reach it before starting damage.
-        </p>
+            <h2>
+              OVERVIEW
+            </h2>
 
+            <p>
+              Castle Ravenloft is a mechanics-heavy dungeon featuring
+              three major encounters: the Sisters, the Arcolith and
+              Strahd von Zarovich.
+            </p>
 
-        <h3>
-          PHASE FOUR ◆ SECOND SISTER
-        </h3>
+            <p>
+              Raw damage helps, but several mechanics must still be
+              handled correctly. The key themes are separating enemies,
+              reacting to debuffs, controlling boss positioning and
+              using the Sun Sword correctly during the final fight.
+            </p>
 
-        <p>
-          Attack the second Sister while another player uses the Book to lure
-          the remaining Sister away.
-        </p>
+          </article>
 
 
-        <h3>
-          PHASE FIVE ◆ RED OBJECT AGAIN
-        </h3>
 
-        <p>
-          After the second Sister dies, destroy the red object again using the
-          same method.
-        </p>
+          <!-- ==================================================
+               SISTERS
+               ================================================== -->
 
+          <article
+            class="build-guide-panel"
+            id="sisters"
+          >
 
-        <h3>
-          PHASE SIX ◆ FINAL SISTER
-        </h3>
+            <p class="build-panel-eyebrow">
+              FIRST ENCOUNTER
+            </p>
 
-        <p>
-          Kill the final Sister.
-        </p>
+            <h2>
+              THE SISTERS
+            </h2>
 
-        <p>
-          Summoned enemies appear during this phase and can hit extremely hard,
-          particularly if they gain Combat Advantage.
-        </p>
 
-        <p>
-          Healers may want to keep a strong daily heal available for this part
-          of the encounter.
-        </p>
+            <h3>
+              PHASE ONE ◆ FIRST SISTER
+            </h3>
 
+            <p>
+              Attack the first Sister normally until the Book appears.
+            </p>
 
-        <h3>
-          CHAINS
-        </h3>
 
-        <p>
-          The Sister being attacked can chain one player to herself.
-        </p>
+            <h3>
+              PHASE TWO ◆ USE THE BOOK
+            </h3>
 
-        <p>
-          While the player is chained, damage dealt to that Sister also damages
-          the chained player.
-        </p>
+            <p>
+              One player — preferably the lowest DPS — picks up the Book.
+            </p>
 
-        <p>
-          Stop attacking until the chain ends.
-        </p>
+            <p>
+              Use the Book's lure ability to pull two of the Sisters
+              away from the Sister currently being attacked.
+            </p>
 
+            <p>
+              If the Sisters are too close together, the active Sister
+              becomes invulnerable.
+            </p>
 
-        <h3>
-          HYPO ARROWS
-        </h3>
 
-        <p>
-          When Hypo Arrows occur, the group should stack together to share the
-          incoming damage.
-        </p>
+            <h3>
+              PHASE THREE ◆ DESTROY THE RED OBJECT
+            </h3>
 
-        <p>
-          Healers should be ready with a large heal.
-        </p>
+            <p>
+              Once the first Sister dies, a red object appears below
+              the stairs.
+            </p>
 
+            <p>
+              The group has approximately 10 seconds to destroy it.
+            </p>
 
-        <h3>
-          TANK DEBUFF
-        </h3>
+            <p>
+              The timer begins when the object is first attacked,
+              so allow the group to reach it before starting damage.
+            </p>
 
-        <p>
-          Whoever is holding aggro on the active Sister builds debuff stacks.
-          These appear as a red marker beneath the character name.
-        </p>
 
-        <p>
-          When the stacks reach 10, the tank must shield until the stacks are
-          removed.
-        </p>
+            <h3>
+              PHASE FOUR ◆ SECOND SISTER
+            </h3>
 
-        <p>
-          Failing to shield at 10 stacks can kill the tank regardless of their
-          remaining hit points.
-        </p>
+            <p>
+              Attack the second Sister while another player uses the
+              Book to lure the remaining Sister away.
+            </p>
 
 
-        <h3>
-          DOPPELGANGERS
-        </h3>
+            <h3>
+              PHASE FIVE ◆ RED OBJECT AGAIN
+            </h3>
 
-        <p>
-          Doppelgangers can also appear during the Sisters fight.
-          Kill them as they spawn.
-        </p>
+            <p>
+              After the second Sister dies, destroy the red object
+              again using the same method.
+            </p>
 
-      </article>
 
+            <h3>
+              PHASE SIX ◆ FINAL SISTER
+            </h3>
 
+            <p>
+              Kill the final Sister.
+            </p>
 
-      <!-- ======================================================
-           ARCOLITH
-           ====================================================== -->
+            <p>
+              Summoned enemies appear during this phase and can hit
+              extremely hard, particularly if they gain Combat Advantage.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="arcolith"
-      >
+            <p>
+              Healers may want to keep a strong daily heal available
+              for this part of the encounter.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          SECOND ENCOUNTER
-        </p>
 
-        <h2>
-          ARCOLITH
-        </h2>
+            <h3>
+              CHAINS
+            </h3>
 
-        <h3>
-          PHASE ONE ◆ DAMAGE
-        </h3>
+            <p>
+              The Sister being attacked can chain one player to herself.
+            </p>
 
-        <p>
-          Attack the Arcolith and reduce its health normally.
-        </p>
+            <p>
+              While the player is chained, damage dealt to that Sister
+              also damages the chained player.
+            </p>
 
-        <p>
-          Avoid unnecessary movement and excessive stamina use.
-          The Arcolith reacts to movement and can perform additional actions.
-        </p>
+            <p>
+              Stop attacking until the chain ends.
+            </p>
 
-        <p>
-          Staying relatively stationary behind it is generally the safest position.
-        </p>
 
+            <h3>
+              HYPO ARROWS
+            </h3>
 
-        <h3>
-          WATCH THE SWORD
-        </h3>
+            <p>
+              When Hypo Arrows occur, the group should stack together
+              to share the incoming damage.
+            </p>
 
-        <p>
-          The Arcolith has a huge sword swing.
-        </p>
+            <p>
+              Healers should be ready with a large heal.
+            </p>
 
-        <p>
-          Do not stand inside the sword arc. It hits extremely hard.
-        </p>
 
+            <h3>
+              TANK DEBUFF
+            </h3>
 
-        <h3>
-          PHASE TWO ◆ SPINNING ARCOLITH
-        </h3>
+            <p>
+              Whoever is holding aggro on the active Sister builds
+              debuff stacks.
+            </p>
 
-        <p>
-          The Arcolith periodically becomes immune and begins spinning.
-        </p>
+            <p>
+              These appear as a red marker beneath the character name.
+            </p>
 
-        <p>
-          During this phase, the tank must position the Arcolith so that it
-          collides with one of the arena pillars.
-        </p>
+            <p>
+              When the stacks reach 10, the tank must shield until
+              the stacks are removed.
+            </p>
 
-        <p>
-          Hitting a pillar stops the spin and makes the Arcolith vulnerable again.
-        </p>
+            <p>
+              Failing to shield at 10 stacks can kill the tank regardless
+              of their remaining hit points.
+            </p>
 
 
-        <h3>
-          REPEAT
-        </h3>
+            <h3>
+              DOPPELGANGERS
+            </h3>
 
-        <p>
-          The encounter alternates between normal damage and spinning phases
-          until the Arcolith dies.
-        </p>
+            <p>
+              Doppelgangers can also appear during the Sisters fight.
+              Kill them as they spawn.
+            </p>
 
-        <p>
-          Historically, allowing the Arcolith to reach a fifth spinning phase
-          resulted in a wipe. Modern damage output means groups will usually kill
-          it long before this becomes an issue.
-        </p>
+          </article>
 
-      </article>
 
 
+          <!-- ==================================================
+               ARCOLITH
+               ================================================== -->
 
-      <!-- ======================================================
-           STRAHD
-           ====================================================== -->
+          <article
+            class="build-guide-panel"
+            id="arcolith"
+          >
 
-      <article
-        class="build-guide-panel"
-        id="strahd"
-      >
+            <p class="build-panel-eyebrow">
+              SECOND ENCOUNTER
+            </p>
 
-        <p class="build-panel-eyebrow">
-          FINAL ENCOUNTER
-        </p>
+            <h2>
+              ARCOLITH
+            </h2>
 
-        <h2>
-          STRAHD VON ZAROVICH
-        </h2>
 
-        <p>
-          One player will take responsibility for the Sun Sword during this fight.
-        </p>
+            <h3>
+              PHASE ONE ◆ DAMAGE
+            </h3>
 
+            <p>
+              Attack the Arcolith and reduce its health normally.
+            </p>
 
-        <h3>
-          STRAHD'S CURSE
-        </h3>
+            <p>
+              Avoid unnecessary movement and excessive stamina use.
+              The Arcolith reacts to movement and can perform
+              additional actions.
+            </p>
 
-        <p>
-          Strahd begins by cursing the Sun Sword.
-        </p>
+            <p>
+              Staying relatively stationary behind it is generally
+              the safest position.
+            </p>
 
-        <p>
-          The group waits near the door for Strahd to approach and attempts to
-          damage him before he can steal one of the party members away.
-        </p>
 
+            <h3>
+              WATCH THE SWORD
+            </h3>
 
-        <h3>
-          TELEPORTED PLAYER
-        </h3>
+            <p>
+              The Arcolith has a huge sword swing.
+            </p>
 
-        <p>
-          If Strahd successfully takes a player, Doppelgangers representing party
-          members appear.
-        </p>
+            <p>
+              Do not stand inside the sword arc.
+              It hits extremely hard.
+            </p>
 
-        <p>
-          Kill the Doppelgangers quickly to recover the missing player.
-        </p>
 
-        <p>
-          If the group takes too long, an Executioner appears and kills the
-          teleported player.
-        </p>
+            <h3>
+              PHASE TWO ◆ SPINNING ARCOLITH
+            </h3>
 
+            <p>
+              The Arcolith periodically becomes immune and begins spinning.
+            </p>
 
-        <h3>
-          DAMAGE PHASE
-        </h3>
+            <p>
+              During this phase, the tank must position the Arcolith
+              so that it collides with one of the arena pillars.
+            </p>
 
-        <p>
-          Once the Sun Sword is recovered, begin the main damage phase against
-          Strahd.
-        </p>
+            <p>
+              Hitting a pillar stops the spin and makes the Arcolith
+              vulnerable again.
+            </p>
 
-        <p>
-          Similar curse phases occur as his health is reduced, approximately
-          around 25%, 50% and 75% health thresholds.
-        </p>
 
+            <h3>
+              REPEAT
+            </h3>
 
-        <h3>
-          FINAL SHIELD
-        </h3>
+            <p>
+              The encounter alternates between normal damage and
+              spinning phases until the Arcolith dies.
+            </p>
 
-        <p>
-          At roughly 15–20% health remaining, Strahd pulls the entire party into
-          the centre of the arena.
-        </p>
+            <p>
+              Historically, allowing the Arcolith to reach a fifth
+              spinning phase resulted in a wipe. Modern damage output
+              means groups will usually kill it long before this
+              becomes an issue.
+            </p>
 
-        <p>
-          Listen for the narrator's instruction:
-          <strong>“Raise your sword to the sky.”</strong>
-        </p>
+          </article>
 
-        <p>
-          The Sun Sword carrier must use the Sword's daily ability to create a
-          protective shield around the group.
-        </p>
 
-        <p>
-          If the shield is not activated correctly, the group wipes.
-        </p>
 
-        <p>
-          Survive the shield phase, finish Strahd and collect your loot.
-        </p>
+          <!-- ==================================================
+               STRAHD
+               ================================================== -->
 
-      </article>
+          <article
+            class="build-guide-panel"
+            id="strahd"
+          >
 
+            <p class="build-panel-eyebrow">
+              FINAL ENCOUNTER
+            </p>
 
+            <h2>
+              STRAHD VON ZAROVICH
+            </h2>
 
-      <!-- ======================================================
-           SUN SWORD
-           ====================================================== -->
+            <p>
+              One player will take responsibility for the Sun Sword
+              during this fight.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="sun-sword"
-      >
 
-        <p class="build-panel-eyebrow">
-          FINAL FIGHT TOOL
-        </p>
+            <h3>
+              STRAHD'S CURSE
+            </h3>
 
-        <h2>
-          THE SUN SWORD
-        </h2>
+            <p>
+              Strahd begins by cursing the Sun Sword.
+            </p>
 
-        <p>
-          One player should be assigned to use the Sun Sword during the Strahd fight.
-        </p>
+            <p>
+              The group waits near the door for Strahd to approach
+              and attempts to damage him before he can steal one of
+              the party members away.
+            </p>
 
 
-        <h3>
-          X ◆ ACTION POINT RECHARGE
-        </h3>
+            <h3>
+              TELEPORTED PLAYER
+            </h3>
 
-        <p>
-          Recharges Action Points to full for nearby party members.
-        </p>
+            <p>
+              If Strahd successfully takes a player, Doppelgangers
+              representing party members appear.
+            </p>
 
+            <p>
+              Kill the Doppelgangers quickly to recover the missing player.
+            </p>
 
-        <h3>
-          Y ◆ RUNNING ATTACK
-        </h3>
+            <p>
+              If the group takes too long, an Executioner appears
+              and kills the teleported player.
+            </p>
 
-        <p>
-          Performs a running attack.
-        </p>
 
+            <h3>
+              DAMAGE PHASE
+            </h3>
 
-        <h3>
-          B ◆ HEAVY SWING
-        </h3>
+            <p>
+              Once the Sun Sword is recovered, begin the main damage
+              phase against Strahd.
+            </p>
 
-        <p>
-          Performs a slower, powerful sword attack.
-        </p>
+            <p>
+              Similar curse phases occur as his health is reduced,
+              approximately around 25%, 50% and 75% health thresholds.
+            </p>
 
 
-        <h3>
-          RIGHT TRIGGER ◆ STANDARD ATTACK
-        </h3>
+            <h3>
+              FINAL SHIELD
+            </h3>
 
-        <p>
-          Used as the normal attack while carrying the sword.
-        </p>
+            <p>
+              At roughly 15–20% health remaining, Strahd pulls the
+              entire party into the centre of the arena.
+            </p>
 
+            <p>
+              Listen for the narrator's instruction:
+              <strong>“Raise your sword to the sky.”</strong>
+            </p>
 
-        <h3>
-          X DAILY ◆ GROUP SHIELD
-        </h3>
+            <p>
+              The Sun Sword carrier must use the Sword's daily ability
+              to create a protective shield around the group.
+            </p>
 
-        <p>
-          Activates the protective shield required during Strahd's final
-          group-wipe mechanic.
-        </p>
+            <p>
+              If the shield is not activated correctly, the group wipes.
+            </p>
 
-      </article>
+            <p>
+              Survive the shield phase, finish Strahd and collect your loot.
+            </p>
 
+          </article>
 
 
-      <!-- ======================================================
-           ROLE JOBS
-           ====================================================== -->
 
-      <article
-        class="build-guide-panel"
-        id="roles"
-      >
+          <!-- ==================================================
+               SUN SWORD
+               ================================================== -->
 
-        <p class="build-panel-eyebrow">
-          KNOW YOUR JOB
-        </p>
+          <article
+            class="build-guide-panel"
+            id="sun-sword"
+          >
 
-        <h2>
-          TANK ◆ HEALER ◆ DPS
-        </h2>
+            <p class="build-panel-eyebrow">
+              FINAL FIGHT TOOL
+            </p>
 
+            <h2>
+              THE SUN SWORD
+            </h2>
 
-        <h3>
-          TANK
-        </h3>
+            <p>
+              One player should be assigned to use the Sun Sword
+              during the Strahd fight.
+            </p>
 
-        <p>
-          During the Sisters encounter, monitor debuff stacks and shield when
-          they reach 10.
-        </p>
 
-        <p>
-          During Arcolith, control its position and direct its spinning phase
-          into a pillar.
-        </p>
+            <h3>
+              X ◆ ACTION POINT RECHARGE
+            </h3>
 
+            <p>
+              Recharges Action Points to full for nearby party members.
+            </p>
 
-        <h3>
-          HEALER
-        </h3>
 
-        <p>
-          Be ready for Hypo Arrows during Sisters and save strong healing for
-          heavy group damage.
-        </p>
+            <h3>
+              Y ◆ RUNNING ATTACK
+            </h3>
 
-        <p>
-          The final Sister's summoned enemies can be especially dangerous, so
-          keeping a strong healing daily available can help.
-        </p>
+            <p>
+              Performs a running attack.
+            </p>
 
 
-        <h3>
-          DPS
-        </h3>
+            <h3>
+              B ◆ HEAVY SWING
+            </h3>
 
-        <p>
-          Stop attacking a Sister when another player is chained to her.
-        </p>
+            <p>
+              Performs a slower, powerful sword attack.
+            </p>
 
-        <p>
-          During the red-object phases, wait until everyone reaches the target
-          before beginning damage so the 10-second timer is not started early.
-        </p>
 
-        <p>
-          Quickly kill Doppelgangers and other priority adds when they appear.
-        </p>
+            <h3>
+              RIGHT TRIGGER ◆ STANDARD ATTACK
+            </h3>
 
-      </article>
+            <p>
+              Used as the normal attack while carrying the sword.
+            </p>
 
 
+            <h3>
+              X DAILY ◆ GROUP SHIELD
+            </h3>
 
-      <!-- ======================================================
-           ACHIEVEMENTS
-           ====================================================== -->
+            <p>
+              Activates the protective shield required during
+              Strahd's final group-wipe mechanic.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="achievements"
-      >
+          </article>
 
-        <p class="build-panel-eyebrow">
-          EXTRA CHAOS
-        </p>
 
-        <h2>
-          ACHIEVEMENTS
-        </h2>
 
-        <h3>
-          THREE GHOSTS
-        </h3>
+          <!-- ==================================================
+               ROLE JOBS
+               ================================================== -->
 
-        <p>
-          Speak to all three ghosts during the dungeon.
-        </p>
+          <article
+            class="build-guide-panel"
+            id="roles"
+          >
 
-        <p>
-          The first is in the hallway before the ballroom containing the Arcolith.
-        </p>
+            <p class="build-panel-eyebrow">
+              KNOW YOUR JOB
+            </p>
 
-        <p>
-          The second is inside the chapel with the vampires, to the right after
-          entering.
-        </p>
+            <h2>
+              TANK ◆ HEALER ◆ DPS
+            </h2>
 
-        <p>
-          The third is on the final stairs before Strahd.
-        </p>
 
+            <h3>
+              TANK
+            </h3>
 
-        <h3>
-          BALLROOM ENEMIES
-        </h3>
+            <p>
+              During the Sisters encounter, monitor debuff stacks
+              and shield when they reach 10.
+            </p>
 
-        <p>
-          Allow all five Ballroom Dancers / Suits of Armour to spawn before
-          killing anything.
-        </p>
+            <p>
+              During Arcolith, control its position and direct its
+              spinning phase into a pillar.
+            </p>
 
-        <p>
-          One method is to let the tank gather them while the healer keeps the
-          tank alive, avoiding damage until all five have spawned.
-        </p>
 
+            <h3>
+              HEALER
+            </h3>
 
-        <h3>
-          NIGHT TERROR
-        </h3>
+            <p>
+              Be ready for Hypo Arrows during Sisters and save strong
+              healing for heavy group damage.
+            </p>
 
-        <p>
-          Defeat the optional Night Terror boss when it appears.
-        </p>
+            <p>
+              The final Sister's summoned enemies can be especially
+              dangerous, so keeping a strong healing daily available
+              can help.
+            </p>
 
 
-        <h3>
-          CHAPEL
-        </h3>
+            <h3>
+              DPS
+            </h3>
 
-        <p>
-          Kill all vampires in the chapel before purifying the altar.
-        </p>
+            <p>
+              Stop attacking a Sister when another player is chained
+              to her.
+            </p>
 
+            <p>
+              During the red-object phases, wait until everyone reaches
+              the target before beginning damage so the 10-second timer
+              is not started early.
+            </p>
 
-        <h3>
-          COMPLETION
-        </h3>
+            <p>
+              Quickly kill Doppelgangers and other priority adds when
+              they appear.
+            </p>
 
-        <p>
-          Complete Castle Ravenloft.
-        </p>
+          </article>
 
-      </article>
 
 
+          <!-- ==================================================
+               ACHIEVEMENTS
+               ================================================== -->
 
-      <!-- ======================================================
-           CHAOS NOTES
-           ====================================================== -->
+          <article
+            class="build-guide-panel"
+            id="achievements"
+          >
 
-      <article
-        class="build-guide-panel chaos-notes-panel"
-        id="chaos-notes"
-      >
+            <p class="build-panel-eyebrow">
+              EXTRA CHAOS
+            </p>
 
-        <p class="build-panel-eyebrow">
-          FROM THE GUILD
-        </p>
+            <h2>
+              ACHIEVEMENTS
+            </h2>
 
-        <h2>
-          CHAOS NOTES
-        </h2>
 
-        <p>
-          Ravenloft is much easier once everyone understands which mechanics
-          should not simply be brute-forced.
-        </p>
+            <h3>
+              THREE GHOSTS
+            </h3>
 
-        <p>
-          The biggest avoidable mistakes are attacking a chained Sister,
-          starting the red-object timer before the group is ready, failing to
-          drive Arcolith into a pillar and missing the Sun Sword shield during
-          Strahd's final phase.
-        </p>
+            <p>
+              Speak to all three ghosts during the dungeon.
+            </p>
 
-        <p>
-          If those four things are handled properly, the run becomes dramatically
-          cleaner.
-        </p>
+            <p>
+              The first is in the hallway before the ballroom
+              containing the Arcolith.
+            </p>
 
-      </article>
+            <p>
+              The second is inside the chapel with the vampires,
+              to the right after entering.
+            </p>
 
+            <p>
+              The third is on the final stairs before Strahd.
+            </p>
 
 
-      <!-- UPDATED -->
+            <h3>
+              BALLROOM ENEMIES
+            </h3>
+
+            <p>
+              Allow all five Ballroom Dancers / Suits of Armour
+              to spawn before killing anything.
+            </p>
+
+            <p>
+              One method is to let the tank gather them while the
+              healer keeps the tank alive, avoiding damage until
+              all five have spawned.
+            </p>
+
+
+            <h3>
+              NIGHT TERROR
+            </h3>
+
+            <p>
+              Defeat the optional Night Terror boss when it appears.
+            </p>
+
+
+            <h3>
+              CHAPEL
+            </h3>
+
+            <p>
+              Kill all vampires in the chapel before purifying the altar.
+            </p>
+
+
+            <h3>
+              COMPLETION
+            </h3>
+
+            <p>
+              Complete Castle Ravenloft.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               CHAOS NOTES
+               ================================================== -->
+
+          <article
+            class="build-guide-panel chaos-notes-panel"
+            id="chaos-notes"
+          >
+
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
+
+            <h2>
+              CHAOS NOTES
+            </h2>
+
+            <p>
+              Ravenloft is much easier once everyone understands
+              which mechanics should not simply be brute-forced.
+            </p>
+
+            <p>
+              The biggest avoidable mistakes are attacking a chained
+              Sister, starting the red-object timer before the group
+              is ready, failing to drive Arcolith into a pillar and
+              missing the Sun Sword shield during Strahd's final phase.
+            </p>
+
+            <p>
+              If those four things are handled properly, the run
+              becomes dramatically cleaner.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </details>
+
+
+
+      <!-- ====================================================
+           UPDATED
+           ==================================================== -->
 
       <div class="build-last-updated">
 
@@ -820,7 +1129,9 @@
 
 
 
-      <!-- BACK TO DUNGEONS -->
+      <!-- ====================================================
+           BACK TO MECHANICS
+           ==================================================== -->
 
       <div class="build-back-link">
 

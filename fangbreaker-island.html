@@ -57,9 +57,7 @@
 
     <nav class="desktop-nav">
 
-      <a href="index.html">
-        HOME
-      </a>
+      <a href="index.html">HOME</a>
 
       <a href="index.html#about">
         THE CHAOS CREW
@@ -141,20 +139,18 @@
 
 
     <!-- ======================================================
-         DUNGEON NAVIGATION
+         SIMPLE NAVIGATION
          ====================================================== -->
 
     <nav class="build-section-nav">
 
-      <a href="#overview">Overview</a>
-      <a href="#mountain">Mountain</a>
-      <a href="#hati">Hati</a>
-      <a href="#ice-walls">Ice Walls</a>
-      <a href="#dragon-turtle">Dragon Turtle</a>
-      <a href="#drufi">Drufi</a>
-      <a href="#roles">Role Jobs</a>
-      <a href="#wipes">Common Wipes</a>
-      <a href="#chaos-notes">Chaos Notes</a>
+      <a href="#quick-guide">
+        Quick Mechanics
+      </a>
+
+      <a href="#full-guide">
+        Full Mechanics
+      </a>
 
     </nav>
 
@@ -164,735 +160,1097 @@
          DUNGEON CONTENT
          ====================================================== -->
 
-    <section class="build-detail-page">
+    <section class="build-detail-page dungeon-guide-page">
 
 
-      <!-- OVERVIEW -->
+      <!-- ====================================================
+           CHAOS WARNING
+           ==================================================== -->
+
+      <aside class="dungeon-chaos-warning">
+
+        <p class="chaos-warning-label">
+          ⚠ CHAOS WARNING
+        </p>
+
+        <p class="chaos-warning-message">
+          The icicles are not decorative.
+          Stop smashing the fucking things.
+          Future you is going to need somewhere to hide.
+        </p>
+
+      </aside>
+
+
+
+      <!-- ====================================================
+           QUICK & DIRTY MECHANICS
+           ==================================================== -->
 
       <article
-        class="build-guide-panel build-overview"
-        id="overview"
+        class="build-guide-panel quick-mechanics-panel"
+        id="quick-guide"
       >
 
         <p class="build-panel-eyebrow">
-          THE DUNGEON
+          THE QUICK & DIRTY VERSION
         </p>
 
         <h2>
-          OVERVIEW
+          ALL YOU REALLY NEED TO KNOW
         </h2>
 
-        <p>
-          Fangbreaker Island combines dangerous trash packs,
-          avalanche hazards, two defence sections and three major boss encounters.
+        <p class="quick-mechanics-intro">
+          No essays. See the mechanic, do the thing.
         </p>
 
-        <p>
-          The dungeon punishes poor positioning heavily.
-          Giant attacks, avalanches, icy terrain, explosive runes and boss mechanics
-          can all knock players down or out of position very quickly.
-        </p>
+
+        <div class="quick-mechanics-grid">
+
+
+          <!-- HATI -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🌨️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                HATI AVALANCHE
+              </h3>
+
+              <p>
+                Hati leaves / avalanche coming?
+              </p>
+
+              <strong>
+                GET UNDER COVER.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- ICE WALLS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🧊
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                ICE WALLS
+              </h3>
+
+              <p>
+                Defence phase?
+              </p>
+
+              <strong>
+                KILL WAVES FAST ◆ DON'T LET THEM STACK.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- TURTLE RED -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🔴
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                DRAGON TURTLE
+              </h3>
+
+              <p>
+                Huge red AoE?
+              </p>
+
+              <strong>
+                MOVE OUT.
+              </strong>
+
+              <p>
+                And don't fall in the bloody sea.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- TURTLE DARKNESS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              💣
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                TURTLE HIDING
+              </h3>
+
+              <p>
+                Arena goes dark?
+              </p>
+
+              <strong>
+                FIND TURTLE ◆ HIT IT WITH EXPLOSIVE RUNE.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- DRUFI PUSH -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              💨
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                DRUFI BLIZZARD
+              </h3>
+
+              <p>
+                Blizzard starts pushing you?
+              </p>
+
+              <strong>
+                RUN TOWARDS DRUFI.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- ICICLES -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🧊
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                ICICLES
+              </h3>
+
+              <p>
+                Someone trapped?
+              </p>
+
+              <strong>
+                BREAK THAT ICICLE.
+              </strong>
+
+              <p>
+                Nobody trapped? Leave them alone.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- STACK -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🫂
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                ARROW MARKER
+              </h3>
+
+              <p>
+                Player gets the shared-damage arrow?
+              </p>
+
+              <strong>
+                STACK ◆ SHARE THE DAMAGE.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- WINTER'S DEMISE -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              ❄️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                WINTER'S DEMISE
+              </h3>
+
+              <p>
+                Told to hide behind an icicle?
+              </p>
+
+              <strong>
+                GET BEHIND AN ICICLE. NOW.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+        </div>
 
       </article>
 
 
 
-      <!-- MOUNTAIN -->
+      <!-- ====================================================
+           FULL MECHANICS DROPDOWN
+           ==================================================== -->
 
-      <article
-        class="build-guide-panel"
-        id="mountain"
+      <details
+        class="full-mechanics-dropdown"
+        id="full-guide"
       >
 
-        <p class="build-panel-eyebrow">
-          OPENING SECTION
-        </p>
+        <summary class="full-mechanics-summary">
 
-        <h2>
-          MOUNTAIN CLIMB
-        </h2>
+          <span class="full-mechanics-summary-main">
+            WANT THE FULL MECHANICS?
+          </span>
 
+          <span class="full-mechanics-summary-sub">
+            Open the full Fangbreaker Island guide
+          </span>
 
-        <h3>
-          GIANT BOULDERS
-        </h3>
+          <span
+            class="full-mechanics-chevron"
+            aria-hidden="true"
+          >
+            ▼
+          </span>
 
-        <p>
-          Giant Beastmasters throw large boulders.
-        </p>
+        </summary>
 
-        <p>
-          These deal heavy damage and knock players back.
-        </p>
 
-        <p>
-          A badly timed hit can knock a player into another attack and lead
-          to a chain of knockdowns.
-        </p>
 
+        <div class="full-mechanics-content">
 
-        <h3>
-          GIANT CHARGES
-        </h3>
 
-        <p>
-          Giants can charge in a straight line.
-        </p>
+          <!-- ==================================================
+               OVERVIEW
+               ================================================== -->
 
-        <p>
-          A long red rectangle appears before the charge.
-          Move out of it immediately.
-        </p>
+          <article
+            class="build-guide-panel build-overview"
+            id="overview"
+          >
 
+            <p class="build-panel-eyebrow">
+              THE DUNGEON
+            </p>
 
-        <h3>
-          HEAVY SWINGS
-        </h3>
+            <h2>
+              OVERVIEW
+            </h2>
 
-        <p>
-          Giant hammer and axe attacks are heavily telegraphed.
-        </p>
+            <p>
+              Fangbreaker Island combines dangerous trash packs,
+              avalanche hazards, two defence sections and three major
+              boss encounters.
+            </p>
 
-        <p>
-          Watch for the long wind-up and dodge before the swing lands.
-        </p>
+            <p>
+              The dungeon punishes poor positioning heavily.
+              Giant attacks, avalanches, icy terrain, explosive runes
+              and boss mechanics can all knock players down or out of
+              position very quickly.
+            </p>
 
+          </article>
 
-        <h3>
-          AVALANCHES
-        </h3>
 
-        <p>
-          Avalanches can sweep across the mountain path.
-        </p>
 
-        <p>
-          They cause damage and knockback.
-        </p>
+          <!-- ==================================================
+               MOUNTAIN
+               ================================================== -->
 
-        <p>
-          Avoid fighting in the middle of multiple giant attacks when an avalanche
-          is about to pass through.
-        </p>
+          <article
+            class="build-guide-panel"
+            id="mountain"
+          >
 
-      </article>
+            <p class="build-panel-eyebrow">
+              OPENING SECTION
+            </p>
 
+            <h2>
+              MOUNTAIN CLIMB
+            </h2>
 
 
-      <!-- HATI -->
+            <h3>
+              GIANT BOULDERS
+            </h3>
 
-      <article
-        class="build-guide-panel"
-        id="hati"
-      >
+            <p>
+              Giant Beastmasters throw large boulders.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          FIRST BOSS
-        </p>
+            <p>
+              These deal heavy damage and knock players back.
+            </p>
 
-        <h2>
-          HATI
-        </h2>
+            <p>
+              A badly timed hit can knock a player into another attack
+              and lead to a chain of knockdowns.
+            </p>
 
 
-        <h3>
-          AVALANCHE COVER
-        </h3>
+            <h3>
+              GIANT CHARGES
+            </h3>
 
-        <p>
-          When entering the arena, use the overhang/archway as cover from avalanches.
-        </p>
+            <p>
+              Giants can charge in a straight line.
+            </p>
 
-        <p>
-          Hati may leave the arena briefly before another avalanche arrives.
-        </p>
+            <p>
+              A long red rectangle appears before the charge.
+              Move out of it immediately.
+            </p>
 
-        <p>
-          When that happens, return to cover quickly.
-        </p>
 
+            <h3>
+              HEAVY SWINGS
+            </h3>
 
-        <h3>
-          JUMP SLAM
-        </h3>
+            <p>
+              Giant hammer and axe attacks are heavily telegraphed.
+            </p>
 
-        <p>
-          Hati can leap into the air and slam down.
-        </p>
+            <p>
+              Watch for the long wind-up and dodge before the swing lands.
+            </p>
 
-        <p>
-          A red circle marks the impact area.
-          Move out before the slam lands.
-        </p>
 
+            <h3>
+              AVALANCHES
+            </h3>
 
-        <h3>
-          FRONT CONE
-        </h3>
+            <p>
+              Avalanches can sweep across the mountain path.
+            </p>
 
-        <p>
-          Hati has a large frontal cone attack.
-        </p>
+            <p>
+              They cause damage and knockback.
+            </p>
 
-        <p>
-          Avoid standing in front of the boss.
-        </p>
+            <p>
+              Avoid fighting in the middle of multiple giant attacks
+              when an avalanche is about to pass through.
+            </p>
 
+          </article>
 
-        <h3>
-          SPINES
-        </h3>
 
-        <p>
-          Hati can fire spines forward.
-        </p>
 
-        <p>
-          Remaining behind the boss is generally safer for DPS.
-        </p>
+          <!-- ==================================================
+               HATI
+               ================================================== -->
 
+          <article
+            class="build-guide-panel"
+            id="hati"
+          >
 
-        <h3>
-          TAIL ATTACK
-        </h3>
+            <p class="build-panel-eyebrow">
+              FIRST BOSS
+            </p>
 
-        <p>
-          Hati's tail can knock players backward.
-        </p>
+            <h2>
+              HATI
+            </h2>
 
-        <p>
-          Keep enough room behind you so a tail hit does not throw you
-          into another mechanic or off the arena.
-        </p>
 
+            <h3>
+              AVALANCHE COVER
+            </h3>
 
-        <h3>
-          POSITIONING
-        </h3>
+            <p>
+              When entering the arena, use the overhang or archway
+              as cover from avalanches.
+            </p>
 
-        <p>
-          The tank should keep Hati controlled and facing away from the group.
-        </p>
+            <p>
+              Hati may leave the arena briefly before another
+              avalanche arrives.
+            </p>
 
-        <p>
-          DPS should stay behind where possible while remaining ready
-          to move for avalanches.
-        </p>
+            <p>
+              When that happens, return to cover quickly.
+            </p>
 
-      </article>
 
+            <h3>
+              JUMP SLAM
+            </h3>
 
+            <p>
+              Hati can leap into the air and slam down.
+            </p>
 
-      <!-- ICE WALLS -->
+            <p>
+              A red circle marks the impact area.
+              Move out before the slam lands.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="ice-walls"
-      >
 
-        <p class="build-panel-eyebrow">
-          DEFENCE SECTIONS
-        </p>
+            <h3>
+              FRONT CONE
+            </h3>
 
-        <h2>
-          MELTING THE ICE WALLS
-        </h2>
+            <p>
+              Hati has a large frontal cone attack.
+            </p>
 
-        <p>
-          The group must defend the NPC while two separate ice walls are melted.
-        </p>
+            <p>
+              Avoid standing in front of the boss.
+            </p>
 
 
-        <h3>
-          ACTIVATE THE WALL
-        </h3>
+            <h3>
+              SPINES
+            </h3>
 
-        <p>
-          Someone must interact with the ice wall to begin the defence phase.
-        </p>
+            <p>
+              Hati can fire spines forward.
+            </p>
 
+            <p>
+              Remaining behind the boss is generally safer for DPS.
+            </p>
 
-        <h3>
-          TWO SPAWN ROUTES
-        </h3>
 
-        <p>
-          Enemies spawn from two cave entrances.
-        </p>
+            <h3>
+              TAIL ATTACK
+            </h3>
 
-        <p>
-          Watch both directions and keep the groups controlled.
-        </p>
+            <p>
+              Hati's tail can knock players backward.
+            </p>
 
+            <p>
+              Keep enough room behind you so a tail hit does not throw
+              you into another mechanic or off the arena.
+            </p>
 
-        <h3>
-          DO NOT LET WAVES STACK
-        </h3>
 
-        <p>
-          Kill each wave quickly.
-        </p>
+            <h3>
+              POSITIONING
+            </h3>
 
-        <p>
-          If enemies remain alive when the next wave arrives,
-          they can stack into a much larger and more dangerous pack.
-        </p>
+            <p>
+              The tank should keep Hati controlled and facing away
+              from the group.
+            </p>
 
+            <p>
+              DPS should stay behind where possible while remaining
+              ready to move for avalanches.
+            </p>
 
-        <h3>
-          REPEAT
-        </h3>
+          </article>
 
-        <p>
-          The same mechanic occurs again at the second ice wall.
-        </p>
 
-      </article>
 
+          <!-- ==================================================
+               ICE WALLS
+               ================================================== -->
 
+          <article
+            class="build-guide-panel"
+            id="ice-walls"
+          >
 
-      <!-- DRAGON TURTLE -->
+            <p class="build-panel-eyebrow">
+              DEFENCE SECTIONS
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="dragon-turtle"
-      >
+            <h2>
+              MELTING THE ICE WALLS
+            </h2>
 
-        <p class="build-panel-eyebrow">
-          SECOND BOSS
-        </p>
+            <p>
+              The group must defend the NPC while two separate
+              ice walls are melted.
+            </p>
 
-        <h2>
-          DRAGON TURTLE
-        </h2>
 
+            <h3>
+              ACTIVATE THE WALL
+            </h3>
 
-        <h3>
-          RED AOE
-        </h3>
+            <p>
+              Someone must interact with the ice wall to begin
+              the defence phase.
+            </p>
 
-        <p>
-          The Dragon Turtle creates very large red AoE areas.
-        </p>
 
-        <p>
-          Move out immediately.
-        </p>
+            <h3>
+              TWO SPAWN ROUTES
+            </h3>
 
+            <p>
+              Enemies spawn from two cave entrances.
+            </p>
 
-        <h3>
-          BITE
-        </h3>
+            <p>
+              Watch both directions and keep the groups controlled.
+            </p>
 
-        <p>
-          Standing directly in front of the Dragon Turtle can result
-          in heavy bite damage.
-        </p>
 
+            <h3>
+              DO NOT LET WAVES STACK
+            </h3>
 
-        <h3>
-          WILD SLAM
-        </h3>
+            <p>
+              Kill each wave quickly.
+            </p>
 
-        <p>
-          The Dragon Turtle can raise itself and slam onto the ice.
-        </p>
+            <p>
+              If enemies remain alive when the next wave arrives,
+              they can stack into a much larger and more dangerous pack.
+            </p>
 
-        <p>
-          This grants it a Wild Slam stack.
-        </p>
 
-        <p>
-          As these stacks build, the fight becomes increasingly dangerous.
-        </p>
+            <h3>
+              REPEAT
+            </h3>
 
+            <p>
+              The same mechanic occurs again at the second ice wall.
+            </p>
 
-        <h3>
-          EXPLOSIVE RUNES
-        </h3>
+          </article>
 
-        <p>
-          Explosive runes drop onto the ice arena.
-        </p>
 
-        <p>
-          Move away when they land.
-        </p>
 
-        <p>
-          These runes are also used to force the Dragon Turtle back
-          onto the arena when it retreats into the water.
-        </p>
+          <!-- ==================================================
+               DRAGON TURTLE
+               ================================================== -->
 
+          <article
+            class="build-guide-panel"
+            id="dragon-turtle"
+          >
 
-        <h3>
-          DARKNESS PHASE
-        </h3>
+            <p class="build-panel-eyebrow">
+              SECOND BOSS
+            </p>
 
-        <p>
-          The Dragon Turtle retreats into the water and the arena becomes dark.
-        </p>
+            <h2>
+              DRAGON TURTLE
+            </h2>
 
-        <p>
-          Locate the turtle by watching for its steam breath or movement in the water.
-        </p>
 
-        <p>
-          Strike the turtle with an explosive rune to force it back onto the ice.
-        </p>
+            <h3>
+              RED AOE
+            </h3>
 
-        <p>
-          Missing the turtle wastes the rune.
-        </p>
+            <p>
+              The Dragon Turtle creates very large red AoE areas.
+            </p>
 
+            <p>
+              Move out immediately.
+            </p>
 
-        <h3>
-          STEAM BURN
-        </h3>
 
-        <p>
-          Steam attacks can apply Steam Burn.
-        </p>
+            <h3>
+              BITE
+            </h3>
 
-        <p>
-          This increases the damage taken from future steam attacks.
-        </p>
+            <p>
+              Standing directly in front of the Dragon Turtle can
+              result in heavy bite damage.
+            </p>
 
-        <p>
-          Avoid repeated steam hits because the mechanic becomes more dangerous
-          as the fight continues.
-        </p>
 
+            <h3>
+              WILD SLAM
+            </h3>
 
-        <h3>
-          DO NOT FALL IN
-        </h3>
+            <p>
+              The Dragon Turtle can raise itself and slam onto the ice.
+            </p>
 
-        <p>
-          The arena is slippery.
-        </p>
+            <p>
+              This grants it a Wild Slam stack.
+            </p>
 
-        <p>
-          Falling into the surrounding water kills the player.
-        </p>
+            <p>
+              As these stacks build, the fight becomes increasingly dangerous.
+            </p>
 
 
-        <h3>
-          BURN WINDOWS
-        </h3>
+            <h3>
+              EXPLOSIVE RUNES
+            </h3>
 
-        <p>
-          When the Dragon Turtle returns to the arena,
-          maximise damage before it retreats again.
-        </p>
+            <p>
+              Explosive runes drop onto the ice arena.
+            </p>
 
-      </article>
+            <p>
+              Move away when they land.
+            </p>
 
+            <p>
+              These runes are also used to force the Dragon Turtle
+              back onto the arena when it retreats into the water.
+            </p>
 
 
-      <!-- DRUFI -->
+            <h3>
+              DARKNESS PHASE
+            </h3>
 
-      <article
-        class="build-guide-panel"
-        id="drufi"
-      >
+            <p>
+              The Dragon Turtle retreats into the water and the
+              arena becomes dark.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          FINAL BOSS
-        </p>
+            <p>
+              Locate the turtle by watching for its steam breath
+              or movement in the water.
+            </p>
 
-        <h2>
-          DRUFI
-        </h2>
+            <p>
+              Strike the turtle with an explosive rune to force
+              it back onto the ice.
+            </p>
 
+            <p>
+              Missing the turtle wastes the rune.
+            </p>
 
-        <h3>
-          CHARGE
-        </h3>
 
-        <p>
-          Drufi can charge in a straight line.
-        </p>
+            <h3>
+              STEAM BURN
+            </h3>
 
-        <p>
-          A red rectangle marks the path.
-          Move out of it.
-        </p>
+            <p>
+              Steam attacks can apply Steam Burn.
+            </p>
 
+            <p>
+              This increases the damage taken from future steam attacks.
+            </p>
 
-        <h3>
-          BLIZZARD PUSH
-        </h3>
+            <p>
+              Avoid repeated steam hits because the mechanic becomes
+              more dangerous as the fight continues.
+            </p>
 
-        <p>
-          Drufi can move to one side of the arena and unleash a blizzard.
-        </p>
 
-        <p>
-          The blizzard pushes players toward the opposite wall.
-        </p>
+            <h3>
+              DO NOT FALL IN
+            </h3>
 
-        <p>
-          Run toward Drufi and against the push to avoid being forced
-          into the dangerous back wall.
-        </p>
+            <p>
+              The arena is slippery.
+            </p>
 
+            <p>
+              Falling into the surrounding water kills the player.
+            </p>
 
-        <h3>
-          ICICLES
-        </h3>
 
-        <p>
-          Drufi summons icicles from the ground.
-        </p>
+            <h3>
+              BURN WINDOWS
+            </h3>
 
-        <p>
-          Dodge the initial eruption.
-        </p>
+            <p>
+              When the Dragon Turtle returns to the arena,
+              maximise damage before it retreats again.
+            </p>
 
-        <p>
-          If an icicle traps a player, break that icicle to free them.
-        </p>
+          </article>
 
-        <p>
-          If nobody is trapped, do not destroy the icicle.
-        </p>
 
-        <p>
-          The group needs those icicles later for protection.
-        </p>
 
+          <!-- ==================================================
+               DRUFI
+               ================================================== -->
 
-        <h3>
-          SHARED-DAMAGE ARROW
-        </h3>
+          <article
+            class="build-guide-panel"
+            id="drufi"
+          >
 
-        <p>
-          A player can be targeted with an arrow marker.
-        </p>
+            <p class="build-panel-eyebrow">
+              FINAL BOSS
+            </p>
 
-        <p>
-          The group should stack around that player to share the incoming damage.
-        </p>
+            <h2>
+              DRUFI
+            </h2>
 
 
-        <h3>
-          WINTER'S DEMISE
-        </h3>
+            <h3>
+              CHARGE
+            </h3>
 
-        <p>
-          When Drufi calls for the group to hide behind an icicle,
-          move behind one immediately.
-        </p>
+            <p>
+              Drufi can charge in a straight line.
+            </p>
 
-        <p>
-          Failing to use an icicle for cover can wipe the group.
-        </p>
+            <p>
+              A red rectangle marks the path.
+              Move out of it.
+            </p>
 
-        <p>
-          This is why unused icicles should be preserved.
-        </p>
 
+            <h3>
+              BLIZZARD PUSH
+            </h3>
 
-        <h3>
-          KEEP DRUFI AWAY FROM THE ICICLES
-        </h3>
+            <p>
+              Drufi can move to one side of the arena and unleash
+              a blizzard.
+            </p>
 
-        <p>
-          Once icicles are available, position the boss away from them.
-        </p>
+            <p>
+              The blizzard pushes players toward the opposite wall.
+            </p>
 
-        <p>
-          This reduces the chance of accidental AoE damage destroying
-          the group's future cover.
-        </p>
+            <p>
+              Run toward Drufi and against the push to avoid being
+              forced into the dangerous back wall.
+            </p>
 
 
-        <h3>
-          SWORD ATTACKS
-        </h3>
+            <h3>
+              ICICLES
+            </h3>
 
-        <p>
-          Drufi's large sword swings are telegraphed.
-        </p>
+            <p>
+              Drufi summons icicles from the ground.
+            </p>
 
-        <p>
-          Stay behind the boss where possible and dodge the attacks.
-        </p>
+            <p>
+              Dodge the initial eruption.
+            </p>
 
-      </article>
+            <p>
+              If an icicle traps a player, break that icicle
+              to free them.
+            </p>
 
+            <p>
+              If nobody is trapped, do not destroy the icicle.
+            </p>
 
+            <p>
+              The group needs those icicles later for protection.
+            </p>
 
-      <!-- ROLE JOBS -->
 
-      <article
-        class="build-guide-panel"
-        id="roles"
-      >
+            <h3>
+              SHARED-DAMAGE ARROW
+            </h3>
 
-        <p class="build-panel-eyebrow">
-          KNOW YOUR JOB
-        </p>
+            <p>
+              A player can be targeted with an arrow marker.
+            </p>
 
-        <h2>
-          TANK ◆ HEALER ◆ DPS
-        </h2>
+            <p>
+              The group should stack around that player to share
+              the incoming damage.
+            </p>
 
 
-        <h3>
-          TANK
-        </h3>
+            <h3>
+              WINTER'S DEMISE
+            </h3>
 
-        <p>
-          Keep giant packs controlled during the mountain climb.
-        </p>
+            <p>
+              When Drufi calls for the group to hide behind an icicle,
+              move behind one immediately.
+            </p>
 
-        <p>
-          Position Hati and Drufi away from the party.
-        </p>
+            <p>
+              Failing to use an icicle for cover can wipe the group.
+            </p>
 
-        <p>
-          During the defence phases, gather enemy waves so the group
-          can burn them efficiently.
-        </p>
+            <p>
+              This is why unused icicles should be preserved.
+            </p>
 
 
-        <h3>
-          HEALER
-        </h3>
+            <h3>
+              KEEP DRUFI AWAY FROM THE ICICLES
+            </h3>
 
-        <p>
-          Expect heavy damage during giant packs, avalanches and Dragon Turtle steam phases.
-        </p>
+            <p>
+              Once icicles are available, position the boss away
+              from them.
+            </p>
 
-        <p>
-          During Drufi, keep the group healthy for the shared-damage arrow mechanic.
-        </p>
+            <p>
+              This reduces the chance of accidental AoE damage
+              destroying the group's future cover.
+            </p>
 
 
-        <h3>
-          DPS
-        </h3>
+            <h3>
+              SWORD ATTACKS
+            </h3>
 
-        <p>
-          Avoid standing in front of Hati and Drufi.
-        </p>
+            <p>
+              Drufi's large sword swings are telegraphed.
+            </p>
 
-        <p>
-          Burn defence waves quickly so enemies do not accumulate.
-        </p>
+            <p>
+              Stay behind the boss where possible and dodge the attacks.
+            </p>
 
-        <p>
-          During Dragon Turtle darkness phases, help use explosive runes
-          to bring the boss back.
-        </p>
+          </article>
 
-        <p>
-          During Drufi, do not accidentally destroy useful icicles.
-        </p>
 
-      </article>
 
+          <!-- ==================================================
+               ROLE JOBS
+               ================================================== -->
 
+          <article
+            class="build-guide-panel"
+            id="roles"
+          >
 
-      <!-- COMMON WIPES -->
+            <p class="build-panel-eyebrow">
+              KNOW YOUR JOB
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="wipes"
-      >
+            <h2>
+              TANK ◆ HEALER ◆ DPS
+            </h2>
 
-        <p class="build-panel-eyebrow">
-          WHAT USUALLY GOES WRONG
-        </p>
 
-        <h2>
-          COMMON WIPES
-        </h2>
+            <h3>
+              TANK
+            </h3>
 
-        <p>
-          Getting chain-knocked by giant boulders and charges.
-        </p>
+            <p>
+              Keep giant packs controlled during the mountain climb.
+            </p>
 
-        <p>
-          Failing to reach cover before Hati's avalanche.
-        </p>
+            <p>
+              Position Hati and Drufi away from the party.
+            </p>
 
-        <p>
-          Letting defence-wave enemies stack faster than the group can kill them.
-        </p>
+            <p>
+              During the defence phases, gather enemy waves so the
+              group can burn them efficiently.
+            </p>
 
-        <p>
-          Falling into the water during Dragon Turtle.
-        </p>
 
-        <p>
-          Missing explosive-rune shots during the Dragon Turtle darkness phase.
-        </p>
+            <h3>
+              HEALER
+            </h3>
 
-        <p>
-          Building too many Steam Burn or Wild Slam effects.
-        </p>
+            <p>
+              Expect heavy damage during giant packs, avalanches
+              and Dragon Turtle steam phases.
+            </p>
 
-        <p>
-          Destroying Drufi's icicles before Winter's Demise.
-        </p>
+            <p>
+              During Drufi, keep the group healthy for the
+              shared-damage arrow mechanic.
+            </p>
 
-        <p>
-          Failing to stack on the shared-damage arrow.
-        </p>
 
-        <p>
-          Failing to hide behind an icicle during Winter's Demise.
-        </p>
+            <h3>
+              DPS
+            </h3>
 
-      </article>
+            <p>
+              Avoid standing in front of Hati and Drufi.
+            </p>
 
+            <p>
+              Burn defence waves quickly so enemies do not accumulate.
+            </p>
 
+            <p>
+              During Dragon Turtle darkness phases, help use explosive
+              runes to bring the boss back.
+            </p>
 
-      <!-- CHAOS NOTES -->
+            <p>
+              During Drufi, do not accidentally destroy useful icicles.
+            </p>
 
-      <article
-        class="build-guide-panel chaos-notes-panel"
-        id="chaos-notes"
-      >
+          </article>
 
-        <p class="build-panel-eyebrow">
-          FROM THE GUILD
-        </p>
 
-        <h2>
-          CHAOS NOTES
-        </h2>
 
-        <p>
-          Fangbreaker is mostly a test of whether everyone can resist
-          standing exactly where the dungeon is trying to murder them.
-        </p>
+          <!-- ==================================================
+               COMMON WIPES
+               ================================================== -->
 
-        <p>
-          Hati:
-          hide from avalanches and stay away from the angry end of the manticore.
-        </p>
+          <article
+            class="build-guide-panel"
+            id="wipes"
+          >
 
-        <p>
-          Dragon Turtle:
-          don't fall in the sea and don't waste the explosive runes.
-        </p>
+            <p class="build-panel-eyebrow">
+              WHAT USUALLY GOES WRONG
+            </p>
 
-        <p>
-          Drufi:
-          the icicles are not decorative.
-          Keep them alive unless somebody is trapped inside one,
-          because five minutes later everyone will suddenly be very emotionally attached to them.
-        </p>
+            <h2>
+              COMMON WIPES
+            </h2>
 
-      </article>
+            <p>
+              Getting chain-knocked by giant boulders and charges.
+            </p>
 
+            <p>
+              Failing to reach cover before Hati's avalanche.
+            </p>
 
+            <p>
+              Letting defence-wave enemies stack faster than the
+              group can kill them.
+            </p>
 
-      <!-- UPDATED -->
+            <p>
+              Falling into the water during Dragon Turtle.
+            </p>
+
+            <p>
+              Missing explosive-rune shots during the Dragon Turtle
+              darkness phase.
+            </p>
+
+            <p>
+              Building too many Steam Burn or Wild Slam effects.
+            </p>
+
+            <p>
+              Destroying Drufi's icicles before Winter's Demise.
+            </p>
+
+            <p>
+              Failing to stack on the shared-damage arrow.
+            </p>
+
+            <p>
+              Failing to hide behind an icicle during Winter's Demise.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               CHAOS NOTES
+               ================================================== -->
+
+          <article
+            class="build-guide-panel chaos-notes-panel"
+            id="chaos-notes"
+          >
+
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
+
+            <h2>
+              CHAOS NOTES
+            </h2>
+
+            <p>
+              Hati leaves?
+              That's your cue to get under the archway,
+              not stand in the open wondering where the boss went.
+            </p>
+
+            <p>
+              Dragon Turtle:
+              explosive rune goes into turtle.
+              Player does not go into sea.
+              Fairly simple arrangement.
+            </p>
+
+            <p>
+              Drufi's blizzard pushes you away from her,
+              so run towards her.
+              Yes, deliberately towards the angry woman with the sword.
+            </p>
+
+            <p>
+              And leave the fucking icicles alone unless somebody
+              is trapped in one.
+              Winter's Demise is going to make everyone suddenly
+              appreciate why we kept them.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </details>
+
+
+
+      <!-- ====================================================
+           UPDATED
+           ==================================================== -->
 
       <div class="build-last-updated">
 
@@ -904,7 +1262,9 @@
 
 
 
-      <!-- BACK TO MECHANICS -->
+      <!-- ====================================================
+           BACK TO MECHANICS
+           ==================================================== -->
 
       <div class="build-back-link">
 

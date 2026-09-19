@@ -3605,7 +3605,7 @@ footer h2 {
 
   margin: 0 auto;
 
-  color: var(--parchment);
+  color: #ff72bd;
 
   font-family: "Crimson Pro", serif;
 
@@ -3614,8 +3614,10 @@ footer h2 {
   font-weight: 600;
 
   line-height: 1.5;
-}
 
+  text-shadow:
+    0 0 12px rgba(255, 114, 189, 0.18);
+}
 
 /* =========================================================
    QUICK MECHANICS PANEL

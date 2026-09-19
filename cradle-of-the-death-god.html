@@ -26,7 +26,9 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
 
   <header class="site-header">
 
@@ -96,40 +98,15 @@
   <main>
 
 
-    <!-- HERO -->
+    <!-- ======================================================
+         TRIAL HERO
+         ====================================================== -->
 
-    <section class="magic-page-hero guides-hero">
+    <section class="magic-page-hero build-detail-hero">
 
-      <div class="guides-hero-content">
+      <div class="build-detail-hero-content">
 
-        <p class="section-eyebrow">
-          TRIAL MECHANICS
-        </p>
-
-        <h1>
-          CRADLE OF THE DEATH GOD
-        </h1>
-
-        <p class="guides-intro">
-          Aim the skulls. Jam the gears. Survive the push and pull.
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- GUIDE -->
-
-    <section class="build-detail-page">
-
-      <div class="build-detail-card">
-
-
-        <!-- IMAGE -->
-
-        <div class="build-detail-image">
+        <div class="build-detail-hero-image">
 
           <img
             src="images/cradle.jpeg"
@@ -139,433 +116,847 @@
         </div>
 
 
+        <div class="build-detail-hero-text">
 
-        <!-- OVERVIEW -->
-
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            OVERVIEW
+          <p class="section-eyebrow">
+            TRIAL ◆ MECHANICS
           </p>
 
-          <h2>
+          <h1>
             CRADLE OF THE DEATH GOD
-          </h2>
+          </h1>
 
           <p>
-            This 10-player trial begins on a descending elevator before
-            moving into the final arena. Positioning, controlled damage,
-            group coordination and the push-and-pull mechanic are the
-            key parts of the fight.
+            Rotating Chaos Neverwinter Trial Guide
           </p>
 
         </div>
 
+      </div>
+
+    </section>
 
 
-        <!-- SKULL PHASE -->
 
-        <div class="build-guide-panel">
+    <!-- ======================================================
+         SIMPLE NAVIGATION
+         ====================================================== -->
 
-          <p class="build-panel-eyebrow">
-            PHASE ONE
-          </p>
+    <nav class="build-section-nav">
 
-          <h2>
-            SKULLS & ACERERAK
-          </h2>
+      <a href="#quick-guide">
+        Quick Mechanics
+      </a>
 
-          <ul>
+      <a href="#full-guide">
+        Full Mechanics
+      </a>
 
-            <li>
+    </nav>
+
+
+
+    <!-- ======================================================
+         TRIAL CONTENT
+         ====================================================== -->
+
+    <section class="build-detail-page dungeon-guide-page">
+
+
+      <!-- ====================================================
+           CHAOS WARNING
+           ==================================================== -->
+
+      <aside class="dungeon-chaos-warning">
+
+        <p class="chaos-warning-label">
+          ⚠ CHAOS WARNING
+        </p>
+
+        <p class="chaos-warning-message">
+          The platform has edges.
+          Neverwinter would very much like to introduce you to them.
+          Stop helping it.
+        </p>
+
+      </aside>
+
+
+
+      <!-- ====================================================
+           QUICK & DIRTY MECHANICS
+           ==================================================== -->
+
+      <article
+        class="build-guide-panel quick-mechanics-panel"
+        id="quick-guide"
+      >
+
+        <p class="build-panel-eyebrow">
+          THE QUICK & DIRTY VERSION
+        </p>
+
+        <h2>
+          ALL YOU REALLY NEED TO KNOW
+        </h2>
+
+        <p class="quick-mechanics-intro">
+          No essays. See the mechanic, do the thing.
+        </p>
+
+
+        <div class="quick-mechanics-grid">
+
+
+          <!-- SKULL -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              💀
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                SKULL
+              </h3>
+
+              <p>
+                Tethered to the skull?
+              </p>
+
+              <strong>
+                LINE IT UP WITH ACERERAK.
+              </strong>
+
+              <p>
+                Someone else hits it from behind to launch it.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- CUBES -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🟩
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                GELATINOUS CUBE
+              </h3>
+
+              <p>
+                Cube tethered to you?
+              </p>
+
+              <strong>
+                TAKE IT FULLY INTO A CORNER.
+              </strong>
+
+              <p>
+                Then kill it. Do all four corners.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- ARROW MARKER -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              ⬆️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                ARROW MARKER
+              </h3>
+
+              <p>
+                Arrow over your head?
+              </p>
+
+              <strong>
+                MOVE AWAY FROM THE GROUP.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- SHARED DAMAGE -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🫂
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                SHARED DAMAGE
+              </h3>
+
+              <p>
+                Arrows pointing inward?
+              </p>
+
+              <strong>
+                GROUP CUDDLE. STACK.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- PULL -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              ⬅️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                PULL
+              </h3>
+
+              <p>
+                Boss becomes untargetable?
+              </p>
+
+              <strong>
+                START OUTSIDE ◆ RUN OUTWARD.
+              </strong>
+
+              <p>
+                Do not get dragged into the centre.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- PUSH -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              ➡️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                PUSH
+              </h3>
+
+              <p>
+                Pull just finished?
+              </p>
+
+              <strong>
+                GET INSIDE ◆ RUN INWARD.
+              </strong>
+
+              <p>
+                Do not get yeeted off the platform.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- ACERERAK -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🔥
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                ACERERAK
+              </h3>
+
+              <p>
+                Acererak appears at the end?
+              </p>
+
+              <strong>
+                BURN HIM. NOW.
+              </strong>
+
+              <p>
+                Soulmonger fills = everybody dies.
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ====================================================
+           FULL MECHANICS DROPDOWN
+           ==================================================== -->
+
+      <details
+        class="full-mechanics-dropdown"
+        id="full-guide"
+      >
+
+        <summary class="full-mechanics-summary">
+
+          <span class="full-mechanics-summary-main">
+            WANT THE FULL MECHANICS?
+          </span>
+
+          <span class="full-mechanics-summary-sub">
+            Open the full Cradle of the Death God guide
+          </span>
+
+          <span
+            class="full-mechanics-chevron"
+            aria-hidden="true"
+          >
+            ▼
+          </span>
+
+        </summary>
+
+
+
+        <div class="full-mechanics-content">
+
+
+          <!-- ==================================================
+               OVERVIEW
+               ================================================== -->
+
+          <article
+            class="build-guide-panel build-overview"
+            id="overview"
+          >
+
+            <p class="build-panel-eyebrow">
+              THE TRIAL
+            </p>
+
+            <h2>
+              OVERVIEW
+            </h2>
+
+            <p>
+              This 10-player trial begins on a descending elevator
+              before moving into the final arena.
+            </p>
+
+            <p>
+              Positioning, controlled damage, group coordination and
+              the push-and-pull mechanic are the key parts of the fight.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               SKULL PHASE
+               ================================================== -->
+
+          <article
+            class="build-guide-panel"
+            id="skulls"
+          >
+
+            <p class="build-panel-eyebrow">
+              PHASE ONE
+            </p>
+
+            <h2>
+              SKULLS & ACERERAK
+            </h2>
+
+            <p>
               A skull appears on the opposite side of the elevator
               from Acererak and becomes tethered to one player.
-            </li>
+            </p>
 
-            <li>
+            <p>
               The tethered player should move toward Acererak so the
               skull lines up with him.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Another player should position behind the skull and
               damage it.
-            </li>
+            </p>
 
-            <li>
+            <p>
               When the skull reaches zero health, the final hit launches
               it away from the player who struck it.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Aim the skull so it launches directly into Acererak.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Repeat the mechanic until Acererak's health is depleted
               and he disappears.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Additional enemies appear between skull phases.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Watch for enemies capable of heavy knockbacks near the
               edge of the elevator.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- GELATINOUS CUBES -->
+          <!-- ==================================================
+               GELATINOUS CUBES
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="cubes"
+          >
 
-          <p class="build-panel-eyebrow">
-            PHASE TWO
-          </p>
+            <p class="build-panel-eyebrow">
+              PHASE TWO
+            </p>
 
-          <h2>
-            GELATINOUS CUBES & GEARS
-          </h2>
+            <h2>
+              GELATINOUS CUBES & GEARS
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               The elevator begins falling and the group must jam its
               gears before time expires.
-            </li>
+            </p>
 
-            <li>
+            <p>
               A gelatinous cube spawns in the centre and becomes
               tethered to a player.
-            </li>
+            </p>
 
-            <li>
+            <p>
               The tethered player must move to one of the four corners
               of the elevator.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Allow the cube to follow the tethered player fully into
               the corner before killing it.
-            </li>
+            </p>
 
-            <li>
+            <p>
               When killed in the correct position, the cube's remains
               jam the gears in that corner.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Repeat the mechanic in all four corners.
-            </li>
+            </p>
 
-            <li>
+            <p>
               All four sets of gears must be jammed before the timer
               expires or the group wipes.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- CORDS -->
+          <!-- ==================================================
+               CORDS
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="cords"
+          >
 
-          <p class="build-panel-eyebrow">
-            FINAL ARENA
-          </p>
+            <p class="build-panel-eyebrow">
+              FINAL ARENA
+            </p>
 
-          <h2>
-            DESTROY THE CORDS
-          </h2>
+            <h2>
+              DESTROY THE CORDS
+            </h2>
 
-          <ul>
+            <p>
+              On reaching the final arena, destroy the cords
+              restraining the Atropal.
+            </p>
 
-            <li>
-              On reaching the final arena, destroy the cords restraining
-              the Atropal.
-            </li>
-
-            <li>
+            <p>
               Additional enemies spawn near the elevator entrance.
-            </li>
+            </p>
 
-            <li>
-              The tank should control these enemies and keep them away
-              from the players destroying the cords.
-            </li>
+            <p>
+              The tank should control these enemies and keep them
+              away from the players destroying the cords.
+            </p>
 
-            <li>
+            <p>
               Be especially careful of enemies with strong knockback
               attacks.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- ATROPAL -->
+          <!-- ==================================================
+               ATROPAL
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="atropal"
+          >
 
-          <p class="build-panel-eyebrow">
-            FINAL BOSS
-          </p>
+            <p class="build-panel-eyebrow">
+              FINAL BOSS
+            </p>
 
-          <h2>
-            THE ATROPAL
-          </h2>
+            <h2>
+              THE ATROPAL
+            </h2>
 
-          <ul>
+            <p>
+              The Atropal uses several area-of-effect attacks
+              throughout the encounter.
+            </p>
 
-            <li>
-              The Atropal uses several area-of-effect attacks throughout
-              the encounter.
-            </li>
 
-            <li>
-              If an arrow marker appears over you, move away from the
-              group.
-            </li>
+            <h3>
+              ARROW MARKER
+            </h3>
 
-            <li>
-              These markers leave large debuff areas behind when they
-              resolve.
-            </li>
+            <p>
+              If an arrow marker appears over you, move away
+              from the group.
+            </p>
 
-            <li>
+            <p>
+              These markers leave large debuff areas behind when
+              they resolve.
+            </p>
+
+            <p>
               Avoid standing inside the debuff areas because they
               significantly reduce your damage.
-            </li>
+            </p>
 
-            <li>
+
+            <h3>
+              RED AREA
+            </h3>
+
+            <p>
               A large red damaging area also appears during the fight.
+            </p>
+
+            <p>
               Move out of it immediately.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- HYPOTHERMIA -->
+          <!-- ==================================================
+               SHARED DAMAGE
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="shared-damage"
+          >
 
-          <p class="build-panel-eyebrow">
-            GROUP MECHANIC
-          </p>
+            <p class="build-panel-eyebrow">
+              GROUP MECHANIC
+            </p>
 
-          <h2>
-            SHARED DAMAGE
-          </h2>
+            <h2>
+              SHARED DAMAGE
+            </h2>
 
-          <ul>
+            <p>
+              A player can receive a marker with arrows pointing
+              inward toward them.
+            </p>
 
-            <li>
-              A player can receive a marker with arrows pointing inward
-              toward them.
-            </li>
-
-            <li>
+            <p>
               This causes repeated pulses of damage.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Group together around the marked player.
-            </li>
+            </p>
 
-            <li>
+            <p>
               The incoming damage is divided between nearby players,
               allowing the group to survive the mechanic.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- PUSH AND PULL -->
+          <!-- ==================================================
+               PUSH & PULL
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="push-pull"
+          >
 
-          <p class="build-panel-eyebrow">
-            KEY MECHANIC
-          </p>
+            <p class="build-panel-eyebrow">
+              KEY MECHANIC
+            </p>
 
-          <h2>
-            PUSH & PULL
-          </h2>
+            <h2>
+              PUSH & PULL
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               When the Atropal becomes untargetable and its health bar
               disappears, prepare for Push & Pull.
-            </li>
+            </p>
 
-            <li>
+
+            <h3>
+              PULL
+            </h3>
+
+            <p>
               For the pull, move toward the outer edge of the arena.
-            </li>
+            </p>
 
-            <li>
+            <p>
               When the pull begins, continuously move away from the
               centre to resist being dragged inward.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Being pulled into the centre will kill or down you.
-            </li>
+            </p>
 
-            <li>
+
+            <h3>
+              PUSH
+            </h3>
+
+            <p>
               As soon as the pull ends, immediately run toward the
               inner circle.
-            </li>
+            </p>
 
-            <li>
+            <p>
               The Atropal then pushes players outward.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Starting near the inner circle gives you room to resist
               the push and avoid being thrown from the platform.
-            </li>
+            </p>
 
-            <li>
-              Continue moving toward the centre while the outward push
-              is active.
-            </li>
+            <p>
+              Continue moving toward the centre while the outward
+              push is active.
+            </p>
 
-            <li>
+            <p>
               Movement abilities can be used as an emergency recovery
               if you are being pushed too close to the edge.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- ACERERAK DPS CHECK -->
+          <!-- ==================================================
+               ACERERAK DPS CHECK
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="acererak"
+          >
 
-          <p class="build-panel-eyebrow">
-            FINAL PHASE
-          </p>
+            <p class="build-panel-eyebrow">
+              FINAL PHASE
+            </p>
 
-          <h2>
-            ACERERAK DPS CHECK
-          </h2>
+            <h2>
+              ACERERAK DPS CHECK
+            </h2>
 
-          <ul>
+            <p>
+              At approximately 25% Atropal health, the Atropal
+              becomes untargetable.
+            </p>
 
-            <li>
-              At approximately 25% Atropal health, the Atropal becomes
-              untargetable.
-            </li>
-
-            <li>
+            <p>
               Acererak appears on the north side of the platform.
-            </li>
+            </p>
 
-            <li>
+            <p>
               The group must immediately focus damage on Acererak.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Watch the Soulmonger meter during this phase.
-            </li>
+            </p>
 
-            <li>
+            <p>
               If the meter reaches full before enough damage is dealt,
               the entire group is killed.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Burn Acererak down before the meter fills to complete
               the DPS check.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- QUICK REFERENCE -->
+          <!-- ==================================================
+               CHAOS NOTES
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel chaos-notes-panel"
+            id="chaos-notes"
+          >
 
-          <p class="build-panel-eyebrow">
-            QUICK REFERENCE
-          </p>
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
 
-          <h2>
-            DON'T GET YEETED
-          </h2>
+            <h2>
+              CHAOS NOTES
+            </h2>
 
-          <ul>
+            <p>
+              Skull tether? Line it up with Acererak and let somebody
+              behind it launch the bloody thing.
+            </p>
 
-            <li>
-              Tethered skull → line it up with Acererak.
-            </li>
+            <p>
+              Cube tether? Take your new jelly friend all the way
+              into a corner before murdering it.
+            </p>
 
-            <li>
-              Hit the skull from behind to launch it into him.
-            </li>
+            <p>
+              Arrow marker goes away from everybody.
+              Inward arrows mean everybody gets together.
+            </p>
 
-            <li>
-              Cube tether → take it fully into a corner before killing it.
-            </li>
+            <p>
+              Pull means start outside and run out.
+              Push means get inside and run in.
+              Mixing those two up is an excellent way to leave
+              the platform at speed.
+            </p>
 
-            <li>
-              Jam all four gears before the timer expires.
-            </li>
+            <p>
+              Acererak appears at the end? Stop whatever else you're
+              doing and burn him before Soulmonger fills.
+            </p>
 
-            <li>
-              Arrow marker → move away from the group.
-            </li>
+          </article>
 
-            <li>
-              Shared-damage marker → group up.
-            </li>
-
-            <li>
-              Pull → start outside and run outward.
-            </li>
-
-            <li>
-              Push → start inside and run inward.
-            </li>
-
-            <li>
-              Acererak appears → burn him before Soulmonger fills.
-            </li>
-
-          </ul>
 
         </div>
 
+      </details>
+
+
+
+      <!-- ====================================================
+           UPDATED
+           ==================================================== -->
+
+      <div class="build-last-updated">
+
+        <p>
+          LAST UPDATED ◆ SEPTEMBER 2026
+        </p>
 
       </div>
 
 
 
-      <!-- BACK LINK -->
+      <!-- ====================================================
+           BACK TO MECHANICS
+           ==================================================== -->
 
       <div class="build-back-link">
 
@@ -575,11 +966,14 @@
 
       </div>
 
+
     </section>
 
 
 
-    <!-- FOOTER -->
+    <!-- ======================================================
+         FOOTER
+         ====================================================== -->
 
     <footer id="contact">
 

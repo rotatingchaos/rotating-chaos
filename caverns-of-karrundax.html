@@ -26,7 +26,9 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
 
   <header class="site-header">
 
@@ -55,7 +57,9 @@
 
     <nav class="desktop-nav">
 
-      <a href="index.html">HOME</a>
+      <a href="index.html">
+        HOME
+      </a>
 
       <a href="index.html#about">
         THE CHAOS CREW
@@ -96,40 +100,15 @@
   <main>
 
 
-    <!-- HERO -->
+    <!-- ======================================================
+         DUNGEON HERO
+         ====================================================== -->
 
-    <section class="magic-page-hero guides-hero">
+    <section class="magic-page-hero build-detail-hero">
 
-      <div class="guides-hero-content">
+      <div class="build-detail-hero-content">
 
-        <p class="section-eyebrow">
-          DUNGEON MECHANICS
-        </p>
-
-        <h1>
-          CAVERNS OF KARRUNDAX
-        </h1>
-
-        <p class="guides-intro">
-          Fight through the fiery caverns and bring down Karrundax.
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- GUIDE -->
-
-    <section class="build-detail-page">
-
-      <div class="build-detail-card">
-
-
-        <!-- IMAGE -->
-
-        <div class="build-detail-image">
+        <div class="build-detail-hero-image">
 
           <img
             src="images/karrundax.jpeg"
@@ -139,164 +118,459 @@
         </div>
 
 
+        <div class="build-detail-hero-text">
 
-        <!-- OVERVIEW -->
-
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            OVERVIEW
+          <p class="section-eyebrow">
+            DUNGEON ◆ MECHANICS
           </p>
 
-          <h2>
+          <h1>
             CAVERNS OF KARRUNDAX
-          </h2>
+          </h1>
 
           <p>
-            Caverns of Karrundax takes the group through Mount Hotenow
-            and its red dragon forces before a final battle against
-            Karrundax.
+            Rotating Chaos Neverwinter Dungeon Guide
           </p>
 
         </div>
 
+      </div>
+
+    </section>
 
 
-        <!-- THROUGH THE CAVERNS -->
 
-        <div class="build-guide-panel">
+    <!-- ======================================================
+         SIMPLE NAVIGATION
+         ====================================================== -->
 
-          <p class="build-panel-eyebrow">
-            DUNGEON
-          </p>
+    <nav class="build-section-nav">
 
-          <h2>
-            THROUGH THE CAVERNS
-          </h2>
+      <a href="#quick-guide">
+        Quick Mechanics
+      </a>
 
-          <ul>
+      <a href="#full-guide">
+        Full Mechanics
+      </a>
 
-            <li>
+    </nav>
+
+
+
+    <!-- ======================================================
+         DUNGEON CONTENT
+         ====================================================== -->
+
+    <section class="build-detail-page dungeon-guide-page">
+
+
+      <!-- ====================================================
+           CHAOS WARNING
+           ==================================================== -->
+
+      <aside class="dungeon-chaos-warning">
+
+        <p class="chaos-warning-label">
+          ⚠ CHAOS WARNING
+        </p>
+
+        <p class="chaos-warning-message">
+          Yes, the dragon breathes fire.
+          No, standing in it will not make you fireproof.
+          Move.
+        </p>
+
+      </aside>
+
+
+
+      <!-- ====================================================
+           QUICK & DIRTY MECHANICS
+           ==================================================== -->
+
+      <article
+        class="build-guide-panel quick-mechanics-panel"
+        id="quick-guide"
+      >
+
+        <p class="build-panel-eyebrow">
+          THE QUICK & DIRTY VERSION
+        </p>
+
+        <h2>
+          ALL YOU REALLY NEED TO KNOW
+        </h2>
+
+        <p class="quick-mechanics-intro">
+          No essays. See the mechanic, do the thing.
+        </p>
+
+
+        <div class="quick-mechanics-grid">
+
+
+          <!-- STAY TOGETHER -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🏃
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                THROUGH THE CAVERNS
+              </h3>
+
+              <p>
+                Running past enemy packs?
+              </p>
+
+              <strong>
+                STAY TOGETHER.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- FIRE -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🔥
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                FIRE
+              </h3>
+
+              <p>
+                Fire or dangerous area underneath you?
+              </p>
+
+              <strong>
+                MOVE OUT.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- FLIGHT -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              🐉
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                KARRUNDAX FLIES
+              </h3>
+
+              <p>
+                Dragon takes off?
+              </p>
+
+              <strong>
+                WATCH HIM. REPOSITION WHEN HE LANDS.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- ADDS -->
+
+          <div class="quick-mechanic-card">
+
+            <span
+              class="quick-mechanic-icon"
+              aria-hidden="true"
+            >
+              ⚔️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                DRAGON ADDS
+              </h3>
+
+              <p>
+                Smaller dragons appear?
+              </p>
+
+              <strong>
+                KILL THE ADDS.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ====================================================
+           FULL MECHANICS DROPDOWN
+           ==================================================== -->
+
+      <details
+        class="full-mechanics-dropdown"
+        id="full-guide"
+      >
+
+        <summary class="full-mechanics-summary">
+
+          <span class="full-mechanics-summary-main">
+            WANT THE FULL MECHANICS?
+          </span>
+
+          <span class="full-mechanics-summary-sub">
+            Open the full Caverns of Karrundax guide
+          </span>
+
+          <span
+            class="full-mechanics-chevron"
+            aria-hidden="true"
+          >
+            ▼
+          </span>
+
+        </summary>
+
+
+
+        <div class="full-mechanics-content">
+
+
+          <!-- ==================================================
+               OVERVIEW
+               ================================================== -->
+
+          <article
+            class="build-guide-panel build-overview"
+            id="overview"
+          >
+
+            <p class="build-panel-eyebrow">
+              THE DUNGEON
+            </p>
+
+            <h2>
+              OVERVIEW
+            </h2>
+
+            <p>
+              Caverns of Karrundax takes the group through Mount Hotenow
+              and its red dragon forces before a final battle against
+              Karrundax.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               THROUGH THE CAVERNS
+               ================================================== -->
+
+          <article
+            class="build-guide-panel"
+            id="caverns"
+          >
+
+            <p class="build-panel-eyebrow">
+              DUNGEON
+            </p>
+
+            <h2>
+              THROUGH THE CAVERNS
+            </h2>
+
+            <p>
               Much of the dungeon consists of groups of enemies
               positioned throughout the caverns.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Mounts can be used through large sections of the dungeon.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Groups can move past some enemy packs, but enemies may
               continue chasing players who have not escaped them.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Keep the group together when moving through the dungeon
               so players are not left behind dealing with enemies alone.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- KARRUNDAX -->
+          <!-- ==================================================
+               KARRUNDAX
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="karrundax"
+          >
 
-          <p class="build-panel-eyebrow">
-            FINAL BOSS
-          </p>
+            <p class="build-panel-eyebrow">
+              FINAL BOSS
+            </p>
 
-          <h2>
-            KARRUNDAX
-          </h2>
+            <h2>
+              KARRUNDAX
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               Karrundax is a red dragon and uses heavy fire attacks
               throughout the encounter.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Watch the arena carefully for fire and damaging areas
               appearing around the group.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Move out of dangerous areas rather than remaining
               stationary while attacking.
-            </li>
+            </p>
 
-            <li>
+
+            <h3>
+              FLIGHT
+            </h3>
+
+            <p>
               Karrundax periodically takes flight, temporarily moving
               away from the group.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Be ready to reposition when Karrundax lands and continue
               attacking once he becomes available again.
-            </li>
+            </p>
 
-            <li>
+
+            <h3>
+              ADDITIONAL DRAGONS
+            </h3>
+
+            <p>
               Smaller red dragon enemies can also appear during the
-              encounter and should be dealt with while maintaining
-              awareness of Karrundax.
-            </li>
+              encounter.
+            </p>
 
-          </ul>
+            <p>
+              Deal with them while maintaining awareness of Karrundax
+              and the damaging areas around the arena.
+            </p>
 
-        </div>
+          </article>
 
 
 
-        <!-- QUICK REFERENCE -->
+          <!-- ==================================================
+               QUICK REFERENCE
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel chaos-notes-panel"
+            id="chaos-notes"
+          >
 
-          <p class="build-panel-eyebrow">
-            QUICK REFERENCE
-          </p>
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
 
-          <h2>
-            DON'T BECOME DRAGON FOOD
-          </h2>
+            <h2>
+              CHAOS NOTES
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               Stay together while moving through the caverns.
-            </li>
+            </p>
 
-            <li>
-              Don't leave slower group members trapped with enemy packs.
-            </li>
+            <p>
+              Don't leave slower group members trapped with enemy packs
+              because you've fucked off into the distance on your mount.
+            </p>
 
-            <li>
-              Avoid Karrundax's fire attacks.
-            </li>
+            <p>
+              Fire appears? Move.
+            </p>
 
-            <li>
-              Reposition when the dragon takes flight and lands.
-            </li>
+            <p>
+              Dragon flies away? Watch where it goes and reposition
+              when it lands.
+            </p>
 
-            <li>
-              Deal with additional enemies while keeping track of
-              Karrundax.
-            </li>
+            <p>
+              Smaller dragons appear? Kill them and go back to
+              bullying Karrundax.
+            </p>
 
-          </ul>
+          </article>
+
 
         </div>
 
+      </details>
+
+
+
+      <!-- ====================================================
+           UPDATED
+           ==================================================== -->
+
+      <div class="build-last-updated">
+
+        <p>
+          LAST UPDATED ◆ SEPTEMBER 2026
+        </p>
 
       </div>
 
 
 
-      <!-- BACK LINK -->
+      <!-- ====================================================
+           BACK TO MECHANICS
+           ==================================================== -->
 
       <div class="build-back-link">
 
@@ -306,11 +580,14 @@
 
       </div>
 
+
     </section>
 
 
 
-    <!-- FOOTER -->
+    <!-- ======================================================
+         FOOTER
+         ====================================================== -->
 
     <footer id="contact">
 

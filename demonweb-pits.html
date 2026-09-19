@@ -26,7 +26,9 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
 
   <header class="site-header">
 
@@ -55,9 +57,7 @@
 
     <nav class="desktop-nav">
 
-      <a href="index.html">
-        HOME
-      </a>
+      <a href="index.html">HOME</a>
 
       <a href="index.html#about">
         THE CHAOS CREW
@@ -98,40 +98,15 @@
   <main>
 
 
-    <!-- HERO -->
+    <!-- ======================================================
+         DUNGEON HERO
+         ====================================================== -->
 
-    <section class="magic-page-hero guides-hero">
+    <section class="magic-page-hero build-detail-hero">
 
-      <div class="guides-hero-content">
+      <div class="build-detail-hero-content">
 
-        <p class="section-eyebrow">
-          MASTER DUNGEON ◆ MECHANICS
-        </p>
-
-        <h1>
-          DEMONWEB PITS
-        </h1>
-
-        <p class="guides-intro">
-          Dodge the lasers. Control the demons. Try not to get webbed into oblivion.
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- GUIDE -->
-
-    <section class="build-detail-page">
-
-      <div class="build-detail-card">
-
-
-        <!-- IMAGE -->
-
-        <div class="build-detail-image">
+        <div class="build-detail-hero-image">
 
           <img
             src="images/demonweb.jpeg"
@@ -141,744 +116,1051 @@
         </div>
 
 
+        <div class="build-detail-hero-text">
 
-        <!-- OVERVIEW -->
-
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            OVERVIEW
+          <p class="section-eyebrow">
+            MASTER DUNGEON ◆ MECHANICS
           </p>
 
-          <h2>
+          <h1>
             DEMONWEB PITS
-          </h2>
+          </h1>
 
           <p>
-            Master Demonweb Pits is built around heavy tank pressure,
-            add control, spread and stack mechanics, crowd control
-            and timed damage checks.
-          </p>
-
-          <p>
-            The most dangerous sections are the first boss laser phases,
-            the second boss add pressure and tank busters,
-            and Lolth's chained-player and weapon phases.
+            Rotating Chaos Neverwinter Master Dungeon Guide
           </p>
 
         </div>
 
+      </div>
+
+    </section>
 
 
-        <!-- FIRST BOSS -->
 
-        <div class="build-guide-panel">
+    <!-- ======================================================
+         SIMPLE NAVIGATION
+         ====================================================== -->
 
-          <p class="build-panel-eyebrow">
-            BOSS ONE
-          </p>
+    <nav class="build-section-nav">
 
-          <h2>
-            MARILITH
-          </h2>
+      <a href="#quick-guide">
+        Quick Mechanics
+      </a>
 
-          <ul>
+      <a href="#full-guide">
+        Full Mechanics
+      </a>
 
-            <li>
+    </nav>
+
+
+
+    <!-- ======================================================
+         DUNGEON CONTENT
+         ====================================================== -->
+
+    <section class="build-detail-page dungeon-guide-page">
+
+
+      <!-- ====================================================
+           CHAOS WARNING
+           ==================================================== -->
+
+      <aside class="dungeon-chaos-warning">
+
+        <p class="chaos-warning-label">
+          ⚠ CHAOS WARNING
+        </p>
+
+        <p class="chaos-warning-message">
+          The laser kills you.
+          The meteors hurt you.
+          The spiders heal your objective.
+          Demonweb is essentially a very long test of whether
+          you can stop doing the obviously terrible thing.
+        </p>
+
+      </aside>
+
+
+
+      <!-- ====================================================
+           QUICK & DIRTY MECHANICS
+           ==================================================== -->
+
+      <article
+        class="build-guide-panel quick-mechanics-panel"
+        id="quick-guide"
+      >
+
+        <p class="build-panel-eyebrow">
+          THE QUICK & DIRTY VERSION
+        </p>
+
+        <h2>
+          ALL YOU REALLY NEED TO KNOW
+        </h2>
+
+        <p class="quick-mechanics-intro">
+          No essays. See the mechanic, do the thing.
+        </p>
+
+
+        <div class="quick-mechanics-grid">
+
+
+          <!-- LASER -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              ☠️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                ROTATING LASER
+              </h3>
+
+              <p>
+                Laser starts rotating?
+              </p>
+
+              <strong>
+                MOVE WITH IT ◆ NEVER THROUGH IT.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- METEORS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              ☄️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                METEORS
+              </h3>
+
+              <p>
+                Big red area?
+              </p>
+
+              <strong>
+                MOVE OUT.
+              </strong>
+
+              <p>
+                Repeated hits make things worse.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- SECOND BOSS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🛡️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                GRUMPH'S SHIELD
+              </h3>
+
+              <p>
+                Boss shielded?
+              </p>
+
+              <strong>
+                KILL ADDS.
+              </strong>
+
+              <p>
+                Shield gone? Burn boss.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- TANK BUSTER -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              💥
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                TANK BUSTER
+              </h3>
+
+              <p>
+                Big orb coming for the tank?
+              </p>
+
+              <strong>
+                TANK AWAY ◆ MITIGATE.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- ORCUS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              👹
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                ORCUS
+              </h3>
+
+              <p>
+                Big cone?
+              </p>
+
+              <strong>
+                GET OUT OF IT.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- RED AREAS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🔴
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                LOLTH RED CIRCLE
+              </h3>
+
+              <p>
+                Big red circle on you?
+              </p>
+
+              <strong>
+                MOVE AWAY FROM WHERE IT STARTED.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- CHAINS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              ⛓️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                RED CHAINS
+              </h3>
+
+              <p>
+                Chained to another player?
+              </p>
+
+              <strong>
+                STAY TOGETHER.
+              </strong>
+
+              <p>
+                Do NOT run apart.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- HYPOTHERMIA -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🫂
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                HYPOTHERMIA
+              </h3>
+
+              <p>
+                Shared-damage marker?
+              </p>
+
+              <strong>
+                STACK ◆ SHARE IT.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- GODLY WEAPON -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🕷️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                GODLY WEAPON
+              </h3>
+
+              <p>
+                Spiders healing the weapon?
+              </p>
+
+              <strong>
+                CC OR KILL THE SPIDERS.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- FINAL BURN -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🔥
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                FINAL LOLTH BURN
+              </h3>
+
+              <p>
+                Final timer starts?
+              </p>
+
+              <strong>
+                EVERYTHING ON LOLTH ◆ BURN.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ====================================================
+           FULL MECHANICS DROPDOWN
+           ==================================================== -->
+
+      <details
+        class="full-mechanics-dropdown"
+        id="full-guide"
+      >
+
+        <summary class="full-mechanics-summary">
+
+          <span class="full-mechanics-summary-main">
+            WANT THE FULL MECHANICS?
+          </span>
+
+          <span class="full-mechanics-summary-sub">
+            Open the full Master Demonweb Pits guide
+          </span>
+
+          <span
+            class="full-mechanics-chevron"
+            aria-hidden="true"
+          >
+            ▼
+          </span>
+
+        </summary>
+
+
+
+        <div class="full-mechanics-content">
+
+
+          <!-- ==================================================
+               OVERVIEW
+               ================================================== -->
+
+          <article
+            class="build-guide-panel build-overview"
+            id="overview"
+          >
+
+            <p class="build-panel-eyebrow">
+              THE DUNGEON
+            </p>
+
+            <h2>
+              OVERVIEW
+            </h2>
+
+            <p>
+              Master Demonweb Pits is built around heavy tank pressure,
+              add control, spread and stack mechanics, crowd control
+              and timed damage checks.
+            </p>
+
+            <p>
+              The most dangerous sections are the first boss laser phases,
+              the second boss add pressure and tank busters,
+              and Lolth's chained-player and weapon phases.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               MARILITH
+               ================================================== -->
+
+          <article
+            class="build-guide-panel"
+            id="marilith"
+          >
+
+            <p class="build-panel-eyebrow">
+              BOSS ONE
+            </p>
+
+            <h2>
+              MARILITH
+            </h2>
+
+            <p>
               The boss uses strong frontal attacks.
               DPS should avoid standing directly in front of her.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Tanks need to maintain stamina and mitigation because
               her direct attacks can hit hard.
-            </li>
+            </p>
 
-            <li>
+            <p>
               She periodically creates clones of herself.
-            </li>
+            </p>
 
-            <li>
+            <p>
               The real boss must be identified and damaged to end
               the clone phase.
-            </li>
+            </p>
 
-            <li>
+            <p>
               During clone phases, the copies can also attack,
               increasing pressure on the group.
-            </li>
-
-          </ul>
-
-        </div>
+            </p>
 
 
+            <h3>
+              ROTATING LASER
+            </h3>
 
-        <!-- LASER -->
+            <p>
+              The boss creates a rotating laser that sweeps around
+              the arena.
+            </p>
 
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            KEY MECHANIC
-          </p>
-
-          <h2>
-            ROTATING LASER
-          </h2>
-
-          <ul>
-
-            <li>
-              The boss creates a rotating laser that sweeps around the arena.
-            </li>
-
-            <li>
+            <p>
               Contact with the laser can kill a player outright.
-            </li>
+            </p>
 
-            <li>
-              Watch the boss and clone positioning before the laser begins.
-            </li>
+            <p>
+              Watch the boss and clone positioning before the
+              laser begins.
+            </p>
 
-            <li>
-              Rotate around the arena with the beam and stay ahead of it.
-            </li>
+            <p>
+              Rotate around the arena with the beam and stay
+              ahead of it.
+            </p>
 
-            <li>
+            <p>
               During later phases, meteors and fireballs can appear
               at the same time, making movement more difficult.
-            </li>
+            </p>
 
-            <li>
-              Avoid getting trapped against the outer edge with no safe
-              route around the laser.
-            </li>
-
-          </ul>
-
-        </div>
+            <p>
+              Avoid getting trapped against the outer edge with
+              no safe route around the laser.
+            </p>
 
 
+            <h3>
+              METEORS & FIREBALLS
+            </h3>
 
-        <!-- METEORS -->
-
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            AVOIDABLE DAMAGE
-          </p>
-
-          <h2>
-            METEORS & FIREBALLS
-          </h2>
-
-          <ul>
-
-            <li>
+            <p>
               Large red meteor areas appear around the arena.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Move out of them before they land.
-            </li>
+            </p>
 
-            <li>
-              Being hit can apply a debuff that causes you to take
-              increased damage.
-            </li>
+            <p>
+              Being hit can apply a debuff that causes you to
+              take increased damage.
+            </p>
 
-            <li>
+            <p>
               Avoid repeated hits because the extra damage becomes
               increasingly dangerous.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Fireballs can follow players and deal damage over time.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Keep moving and avoid allowing fireballs and meteors
               to trap you during laser phases.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- BETWEEN BOSSES -->
+          <!-- ==================================================
+               DEMON WAVES
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="demon-waves"
+          >
 
-          <p class="build-panel-eyebrow">
-            THROUGH THE DUNGEON
-          </p>
+            <p class="build-panel-eyebrow">
+              THROUGH THE DUNGEON
+            </p>
 
-          <h2>
-            DEMON WAVES
-          </h2>
+            <h2>
+              DEMON WAVES
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               Enemy groups can deal heavy damage if allowed to gain
               combat advantage.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Group enemies together and use crowd control where possible.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Some demon enemies can grab players with pincers
               and hold them in place for several seconds.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Prioritise these enemies before they disable a tank,
               healer or DPS during another mechanic.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- SECOND BOSS -->
+          <!-- ==================================================
+               GRUMPH
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="grumph"
+          >
 
-          <p class="build-panel-eyebrow">
-            BOSS TWO
-          </p>
+            <p class="build-panel-eyebrow">
+              BOSS TWO
+            </p>
 
-          <h2>
-            GRUMPH BA'RAN
-          </h2>
+            <h2>
+              GRUMPH BA'RAN
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               The boss repeatedly shields herself during the encounter.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Burn through the shield before meaningful damage can
               be dealt to her health.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Additional demons continually spawn throughout the fight.
-            </li>
+            </p>
 
-            <li>
-              Keep on top of the adds rather than allowing them to
-              accumulate.
-            </li>
+            <p>
+              Keep on top of the adds rather than allowing them
+              to accumulate.
+            </p>
 
-            <li>
+            <p>
               When the boss is shielded, use the downtime to kill
               dangerous adds.
-            </li>
+            </p>
 
-            <li>
+            <p>
               When the shield drops, switch back and maximise
               damage to the boss.
-            </li>
-
-          </ul>
-
-        </div>
+            </p>
 
 
+            <h3>
+              TANK BUSTER
+            </h3>
 
-        <!-- TANK BUSTER -->
+            <p>
+              The boss periodically charges a large orb and throws
+              it at the tank.
+            </p>
 
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            TANK MECHANIC
-          </p>
-
-          <h2>
-            TANK BUSTER
-          </h2>
-
-          <ul>
-
-            <li>
-              The boss periodically charges a large orb and throws it
-              at the tank.
-            </li>
-
-            <li>
+            <p>
               The attack deals extremely heavy damage.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Tanks should use strong mitigation before the orb lands.
-            </li>
+            </p>
 
-            <li>
+            <p>
               The attack also deals area damage.
-            </li>
+            </p>
 
-            <li>
+            <p>
               The tank should move away from the rest of the group
               before resolving it.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Be especially careful if a demon has grabbed or stunned
               the tank when the buster begins.
-            </li>
-
-          </ul>
-
-        </div>
+            </p>
 
 
+            <h3>
+              ORCUS
+            </h3>
 
-        <!-- ORCUS -->
-
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            SUMMONED BOSS
-          </p>
-
-          <h2>
-            ORCUS
-          </h2>
-
-          <ul>
-
-            <li>
+            <p>
               Orcus spawns during the second boss encounter.
-            </li>
+            </p>
 
-            <li>
+            <p>
               He uses a large cone attack capable of pushing players back.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Move outside the cone rather than attempting to absorb it.
-            </li>
+            </p>
 
-            <li>
-              Orcus also uses Power Word Kill,
-              targeting a player with a pointing-finger mechanic
-              followed by heavy damage.
-            </li>
+            <p>
+              Orcus also uses Power Word Kill, targeting a player
+              with a pointing-finger mechanic followed by heavy damage.
+            </p>
 
-            <li>
+            <p>
               His direct attacks against the tank are also dangerous.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Continue managing the other demon adds while Orcus is active.
-            </li>
-
-          </ul>
-
-        </div>
+            </p>
 
 
+            <h3>
+              FINAL DPS CHECK
+            </h3>
 
-        <!-- FINAL DPS CHECK SECOND BOSS -->
+            <p>
+              Near the end of the encounter, the boss enters
+              a timed damage phase.
+            </p>
 
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            FINAL BURN
-          </p>
-
-          <h2>
-            SECOND BOSS DPS CHECK
-          </h2>
-
-          <ul>
-
-            <li>
-              Near the end of the encounter,
-              the boss enters a timed damage phase.
-            </li>
-
-            <li>
+            <p>
               The group takes increasing damage over time.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Burn the boss quickly before the incoming damage
               overwhelms the group.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- LOLTH -->
+          <!-- ==================================================
+               LOLTH
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="lolth"
+          >
 
-          <p class="build-panel-eyebrow">
-            FINAL BOSS
-          </p>
+            <p class="build-panel-eyebrow">
+              FINAL BOSS
+            </p>
 
-          <h2>
-            LOLTH
-          </h2>
+            <h2>
+              LOLTH
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               Lolth uses heavy direct attacks and can crowd control
               or knock down the tank.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Tanks should block dangerous attacks where possible
               to avoid being disabled during other mechanics.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Phase spiders periodically enter the arena.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Kill them before they become an additional threat
               during more important mechanics.
-            </li>
-
-          </ul>
-
-        </div>
+            </p>
 
 
+            <h3>
+              RED AREAS
+            </h3>
 
-        <!-- RED AREAS -->
-
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            SPREAD MECHANIC
-          </p>
-
-          <h2>
-            RED AREAS
-          </h2>
-
-          <ul>
-
-            <li>
+            <p>
               Players can receive large red circles.
-            </li>
+            </p>
 
-            <li>
+            <p>
               As soon as the circle appears, move away from your
               current position.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Do not move into another player's marked area.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Remaining in the original impact area when it resolves
               can kill you.
-            </li>
-
-          </ul>
-
-        </div>
+            </p>
 
 
+            <h3>
+              RED CHAINS
+            </h3>
 
-        <!-- CHAINS -->
-
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            PAIR MECHANIC
-          </p>
-
-          <h2>
-            RED CHAINS
-          </h2>
-
-          <ul>
-
-            <li>
+            <p>
               Two players can become linked together by a red chain.
-            </li>
+            </p>
 
-            <li>
-              Unlike some other chain mechanics,
-              these players must stay close together.
-            </li>
+            <p>
+              Unlike some other chain mechanics, these players must
+              stay close together.
+            </p>
 
-            <li>
+            <p>
               Do not try to break the chain by running apart.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Remain together until the mechanic resolves.
-            </li>
-
-          </ul>
-
-        </div>
+            </p>
 
 
+            <h3>
+              HYPOTHERMIA
+            </h3>
 
-        <!-- HYPOTHERMIA -->
-
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            SHARED DAMAGE
-          </p>
-
-          <h2>
-            HYPOTHERMIA
-          </h2>
-
-          <ul>
-
-            <li>
+            <p>
               A player can receive the shared-damage Hypothermia marker.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Group around the marked player to split the incoming damage.
-            </li>
+            </p>
 
-            <li>
+            <p>
               If the tank is able to mitigate the attack safely,
               the mechanic may be survivable without the whole group,
               but the safest approach is to share it.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Avoid being crowd controlled when Hypothermia resolves,
               as this can prevent correct positioning or blocking.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- 50% PHASE -->
+          <!-- ==================================================
+               INTERMISSION
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="intermission"
+          >
 
-          <p class="build-panel-eyebrow">
-            INTERMISSION
-          </p>
+            <p class="build-panel-eyebrow">
+              50% INTERMISSION
+            </p>
 
-          <h2>
-            TILTING PLATFORM
-          </h2>
+            <h2>
+              TILTING PLATFORM
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               At approximately 50% health, Lolth becomes immune
               and moves to another platform.
-            </li>
+            </p>
 
-            <li>
+            <p>
               The platform begins tilting and rocks fall from above.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Move out of the marked impact areas.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Falling rocks deal heavy damage.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Be prepared for additional knock-ups as the platform shifts.
-            </li>
-
-          </ul>
-
-        </div>
+            </p>
 
 
+            <h3>
+              GODLY WEAPON
+            </h3>
 
-        <!-- GODLY WEAPON -->
-
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            INTERMISSION TARGET
-          </p>
-
-          <h2>
-            GODLY WEAPON
-          </h2>
-
-          <ul>
-
-            <li>
+            <p>
               During the intermission, damage the Godly Weapon
               embedded in the platform.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Spiders spawn on both sides of the arena.
-            </li>
+            </p>
 
-            <li>
+            <p>
               These spiders can channel a green beam into the weapon
               and heal it.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Crowd control or kill the spiders quickly to stop the healing.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Pushing spiders off the platform does not permanently
               remove them because they can return.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Maintain damage on the weapon while controlling the spiders.
-            </li>
+            </p>
 
-            <li>
+            <p>
               The group also takes ongoing area damage during this phase,
               so healers need to maintain strong group healing.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- FINAL PHASE -->
+          <!-- ==================================================
+               FINAL PHASE
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="final-phase"
+          >
 
-          <p class="build-panel-eyebrow">
-            FINAL PHASE
-          </p>
+            <p class="build-panel-eyebrow">
+              FINAL PHASE
+            </p>
 
-          <h2>
-            LOLTH BURN
-          </h2>
+            <h2>
+              LOLTH BURN
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               After the weapon phase, Lolth returns and can shield herself.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Previous mechanics continue, including red areas,
               chains, Hypothermia and spiders.
-            </li>
+            </p>
 
-            <li>
-              Near the end of the fight,
-              Lolth enters a timed final damage check.
-            </li>
+            <p>
+              Near the end of the fight, Lolth enters a timed
+              final damage check.
+            </p>
 
-            <li>
+            <p>
               The group has roughly one minute to kill her.
-            </li>
+            </p>
 
-            <li>
-              Save enough burst damage to finish the boss
-              before the timer expires.
-            </li>
+            <p>
+              Save enough burst damage to finish the boss before
+              the timer expires.
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- QUICK REFERENCE -->
+          <!-- ==================================================
+               CHAOS NOTES
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel chaos-notes-panel"
+            id="chaos-notes"
+          >
 
-          <p class="build-panel-eyebrow">
-            QUICK REFERENCE
-          </p>
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
 
-          <h2>
-            DEMONWEB SURVIVAL NOTES
-          </h2>
+            <h2>
+              CHAOS NOTES
+            </h2>
 
-          <ul>
+            <p>
+              Laser coming?
+              Run with the bloody thing.
+              Trying to heroically cross it mostly produces a corpse.
+            </p>
 
-            <li>
-              Rotating laser → move with it, never through it.
-            </li>
+            <p>
+              Grumph shielded?
+              That's your invitation to clean up the demons instead
+              of repeatedly smacking an inconvenient shield.
+            </p>
 
-            <li>
-              Meteor → move out and avoid stacking debuffs.
-            </li>
+            <p>
+              Red chains are the weird one:
+              stay together.
+              Running away from your chained friend is precisely
+              the opposite of useful.
+            </p>
 
-            <li>
-              Pincer demon → kill before it grabs someone important.
-            </li>
+            <p>
+              Weapon phase?
+              If a spider is firing a green healing beam into the
+              thing you're trying to destroy, perhaps stop the spider.
+            </p>
 
-            <li>
-              Second boss shield → kill adds while shielded,
-              burst boss when open.
-            </li>
+            <p>
+              Final timer?
+              Mechanics still matter, but this is no longer the
+              moment to admire Lolth's interior decorating.
+              Burn her.
+            </p>
 
-            <li>
-              Tank buster → mitigate and move away from the group.
-            </li>
+          </article>
 
-            <li>
-              Orcus cone → get out of it.
-            </li>
-
-            <li>
-              Red circle → move away from your original position.
-            </li>
-
-            <li>
-              Red chain → stay together.
-            </li>
-
-            <li>
-              Hypothermia → stack and share.
-            </li>
-
-            <li>
-              Weapon phase → stop spiders healing the weapon.
-            </li>
-
-            <li>
-              Final timer → burn Lolth before time runs out.
-            </li>
-
-          </ul>
 
         </div>
 
+      </details>
+
+
+
+      <!-- ====================================================
+           UPDATED
+           ==================================================== -->
+
+      <div class="build-last-updated">
+
+        <p>
+          LAST UPDATED ◆ SEPTEMBER 2026
+        </p>
 
       </div>
 
 
 
-      <!-- BACK LINK -->
+      <!-- ====================================================
+           BACK TO MECHANICS
+           ==================================================== -->
 
       <div class="build-back-link">
 
@@ -888,11 +1170,14 @@
 
       </div>
 
+
     </section>
 
 
 
-    <!-- FOOTER -->
+    <!-- ======================================================
+         FOOTER
+         ====================================================== -->
 
     <footer id="contact">
 

@@ -57,9 +57,7 @@
 
     <nav class="desktop-nav">
 
-      <a href="index.html">
-        HOME
-      </a>
+      <a href="index.html">HOME</a>
 
       <a href="index.html#about">
         THE CHAOS CREW
@@ -141,18 +139,18 @@
 
 
     <!-- ======================================================
-         DUNGEON NAVIGATION
+         SIMPLE NAVIGATION
          ====================================================== -->
 
     <nav class="build-section-nav">
 
-      <a href="#overview">Overview</a>
-      <a href="#mobs">Dungeon Mobs</a>
-      <a href="#golems">Black Ice Golems</a>
-      <a href="#kessell">Akar Kessell</a>
-      <a href="#roles">Role Jobs</a>
-      <a href="#wipes">Common Wipes</a>
-      <a href="#chaos-notes">Chaos Notes</a>
+      <a href="#quick-guide">
+        Quick Mechanics
+      </a>
+
+      <a href="#full-guide">
+        Full Mechanics
+      </a>
 
     </nav>
 
@@ -162,506 +160,808 @@
          DUNGEON CONTENT
          ====================================================== -->
 
-    <section class="build-detail-page">
+    <section class="build-detail-page dungeon-guide-page">
 
 
-      <!-- ======================================================
-           OVERVIEW
-           ====================================================== -->
+      <!-- ====================================================
+           CHAOS WARNING
+           ==================================================== -->
+
+      <aside class="dungeon-chaos-warning">
+
+        <p class="chaos-warning-label">
+          ⚠ CHAOS WARNING
+        </p>
+
+        <p class="chaos-warning-message">
+          Dying ice golem gets a massive red circle around it.
+          This is the game's polite way of saying
+          GET THE FUCK AWAY FROM THE EXPLODING ICE MONSTER.
+        </p>
+
+      </aside>
+
+
+
+      <!-- ====================================================
+           QUICK & DIRTY MECHANICS
+           ==================================================== -->
 
       <article
-        class="build-guide-panel build-overview"
-        id="overview"
+        class="build-guide-panel quick-mechanics-panel"
+        id="quick-guide"
       >
 
         <p class="build-panel-eyebrow">
-          THE DUNGEON
+          THE QUICK & DIRTY VERSION
         </p>
 
         <h2>
-          OVERVIEW
+          ALL YOU REALLY NEED TO KNOW
         </h2>
 
-        <p>
-          Kessell's Retreat is largely an add-control dungeon,
-          with groups of enemies encountered throughout the route
-          before the final fight against Akar Kessell.
+        <p class="quick-mechanics-intro">
+          Honestly, this one isn't complicated.
         </p>
 
-        <p>
-          Most enemy groups are best handled by keeping them together
-          and using strong area-of-effect damage.
-        </p>
 
-        <p>
-          The main mechanics to watch are enemy knockbacks,
-          charging bears, exploding Black Ice Golems,
-          Kessell's energy attacks and the Beholders in the final encounter.
-        </p>
+        <div class="quick-mechanics-grid">
+
+
+          <!-- MOBS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              ⚔️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                MOBS
+              </h3>
+
+              <p>
+                Big packs?
+              </p>
+
+              <strong>
+                GROUP THEM ◆ AOE THEM.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- BEARS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🐻
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                BEAR CHARGE
+              </h3>
+
+              <p>
+                Long red line?
+              </p>
+
+              <strong>
+                DODGE OUT.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- GOLEMS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              💥
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                ICE GOLEMS
+              </h3>
+
+              <p>
+                Golem dying?
+              </p>
+
+              <strong>
+                MOVE AWAY ◆ IT EXPLODES.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- BEHOLDERS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              👁️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                BEHOLDERS
+              </h3>
+
+              <p>
+                Final boss?
+              </p>
+
+              <strong>
+                FOCUS ONE AT A TIME.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- ENERGY -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🟣
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                BLACK & PURPLE
+              </h3>
+
+              <p>
+                Kessell's energy attacks?
+              </p>
+
+              <strong>
+                GET OUT OF THEM.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- FINAL -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🔥
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                FINAL BURN
+              </h3>
+
+              <p>
+                Beholders & adds controlled?
+              </p>
+
+              <strong>
+                EVERYTHING ON KESSELL.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+        </div>
 
       </article>
 
 
 
-      <!-- ======================================================
-           DUNGEON MOBS
-           ====================================================== -->
+      <!-- ====================================================
+           FULL MECHANICS DROPDOWN
+           ==================================================== -->
 
-      <article
-        class="build-guide-panel"
-        id="mobs"
+      <details
+        class="full-mechanics-dropdown"
+        id="full-guide"
       >
 
-        <p class="build-panel-eyebrow">
-          ON THE WAY
-        </p>
+        <summary class="full-mechanics-summary">
 
-        <h2>
-          DUNGEON MOBS
-        </h2>
+          <span class="full-mechanics-summary-main">
+            WANT THE FULL MECHANICS?
+          </span>
 
-        <p>
-          The dungeon contains repeated groups of enemies that can
-          become considerably more dangerous if allowed to spread out.
-        </p>
+          <span class="full-mechanics-summary-sub">
+            Open the full Kessell's Retreat guide
+          </span>
 
+          <span
+            class="full-mechanics-chevron"
+            aria-hidden="true"
+          >
+            ▼
+          </span>
 
-        <h3>
-          GROUP THE ADDS
-        </h3>
+        </summary>
 
-        <p>
-          Keep enemy groups together wherever possible
-          and burn them down with AoE damage.
-        </p>
 
+        <div class="full-mechanics-content">
 
-        <h3>
-          LARGE RED CIRCLES
-        </h3>
 
-        <p>
-          Some enemies use large red-circle attacks.
-        </p>
+          <!-- ==================================================
+               OVERVIEW
+               ================================================== -->
 
-        <p>
-          Move out of these before they activate.
-        </p>
+          <article
+            class="build-guide-panel build-overview"
+            id="overview"
+          >
 
-        <p>
-          Being hit can knock players back and disrupt positioning.
-        </p>
+            <p class="build-panel-eyebrow">
+              THE DUNGEON
+            </p>
 
+            <h2>
+              OVERVIEW
+            </h2>
 
-        <h3>
-          DEATHLOCK WIGHTS
-        </h3>
+            <p>
+              Kessell's Retreat is largely an add-control dungeon,
+              with groups of enemies encountered throughout the route
+              before the final fight against Akar Kessell.
+            </p>
 
-        <p>
-          Deathlock Wights can deal significant damage,
-          particularly to less durable players.
-        </p>
+            <p>
+              Most enemy groups are best handled by keeping them together
+              and using strong area-of-effect damage.
+            </p>
 
-        <p>
-          Prioritise them if they are causing problems for the group.
-        </p>
+            <p>
+              The main mechanics to watch are enemy knockbacks,
+              charging bears, exploding Black Ice Golems,
+              Kessell's energy attacks and the Beholders
+              in the final encounter.
+            </p>
 
+          </article>
 
-        <h3>
-          BEAR CHARGES
-        </h3>
 
-        <p>
-          Enemies mounted on bears can perform charging attacks.
-        </p>
 
-        <p>
-          Watch for the long, narrow red telegraph on the ground
-          and dodge away before the charge lands.
-        </p>
+          <!-- ==================================================
+               DUNGEON MOBS
+               ================================================== -->
 
-        <p>
-          Being hit can knock you down.
-        </p>
+          <article
+            class="build-guide-panel"
+            id="mobs"
+          >
 
-      </article>
+            <p class="build-panel-eyebrow">
+              ON THE WAY
+            </p>
 
+            <h2>
+              DUNGEON MOBS
+            </h2>
 
+            <p>
+              The dungeon contains repeated groups of enemies
+              that can become considerably more dangerous
+              if allowed to spread out.
+            </p>
 
-      <!-- ======================================================
-           BLACK ICE GOLEMS
-           ====================================================== -->
 
-      <article
-        class="build-guide-panel"
-        id="golems"
-      >
+            <h3>
+              GROUP THE ADDS
+            </h3>
 
-        <p class="build-panel-eyebrow">
-          IMPORTANT ADD
-        </p>
+            <p>
+              Keep enemy groups together wherever possible
+              and burn them down with AoE damage.
+            </p>
 
-        <h2>
-          BLACK ICE GOLEMS
-        </h2>
 
-        <p>
-          Black Ice Golems explode when they die.
-        </p>
+            <h3>
+              LARGE RED CIRCLES
+            </h3>
 
+            <p>
+              Some enemies use large red-circle attacks.
+            </p>
 
-        <h3>
-          DEATH EXPLOSION
-        </h3>
+            <p>
+              Move out of these before they activate.
+            </p>
 
-        <p>
-          When a golem is about to explode,
-          a red danger circle appears around it.
-        </p>
+            <p>
+              Being hit can knock players back
+              and disrupt positioning.
+            </p>
 
-        <p>
-          Move outside the circle before the explosion activates.
-        </p>
 
+            <h3>
+              DEATHLOCK WIGHTS
+            </h3>
 
-        <h3>
-          FREEZE
-        </h3>
+            <p>
+              Deathlock Wights can deal significant damage,
+              particularly to less durable players.
+            </p>
 
-        <p>
-          Players caught inside the explosion can become frozen
-          and temporarily unable to act.
-        </p>
+            <p>
+              Prioritise them if they are causing problems
+              for the group.
+            </p>
 
-        <p>
-          This becomes particularly dangerous during the final boss
-          where other damaging AoEs may already cover parts of the arena.
-        </p>
 
-      </article>
+            <h3>
+              BEAR CHARGES
+            </h3>
 
+            <p>
+              Enemies mounted on bears
+              can perform charging attacks.
+            </p>
 
+            <p>
+              Watch for the long, narrow red telegraph
+              on the ground and dodge away
+              before the charge lands.
+            </p>
 
-      <!-- ======================================================
-           FINAL BOSS
-           ====================================================== -->
+            <p>
+              Being hit can knock you down.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="kessell"
-      >
+          </article>
 
-        <p class="build-panel-eyebrow">
-          FINAL BOSS
-        </p>
 
-        <h2>
-          AKAR KESSELL
-        </h2>
 
-        <p>
-          Akar Kessell fights alongside two Beholders
-          and summons additional enemies throughout the encounter.
-        </p>
+          <!-- ==================================================
+               BLACK ICE GOLEMS
+               ================================================== -->
 
+          <article
+            class="build-guide-panel"
+            id="golems"
+          >
 
-        <h3>
-          BEHOLDERS
-        </h3>
+            <p class="build-panel-eyebrow">
+              IMPORTANT ADD
+            </p>
 
-        <p>
-          Two Beholders are present during the fight.
-        </p>
+            <h2>
+              BLACK ICE GOLEMS
+            </h2>
 
-        <p>
-          They attack the group and can create additional pressure
-          while Kessell's attacks cover the arena.
-        </p>
+            <p>
+              Black Ice Golems explode when they die.
+            </p>
 
-        <p>
-          Focusing down one Beholder at a time can make the encounter
-          considerably easier.
-        </p>
 
+            <h3>
+              DEATH EXPLOSION
+            </h3>
 
-        <h3>
-          TURNING THE BEHOLDERS
-        </h3>
+            <p>
+              When a golem is about to explode,
+              a red danger circle appears around it.
+            </p>
 
-        <p>
-          When a Beholder is reduced to very low health,
-          it can turn and attack Akar Kessell.
-        </p>
+            <p>
+              Move outside the circle
+              before the explosion activates.
+            </p>
 
-        <p>
-          Groups that need the additional damage can leave it alive
-          briefly and allow it to attack the boss.
-        </p>
 
-        <p>
-          High-damage groups can simply kill the Beholders
-          and continue attacking Kessell.
-        </p>
+            <h3>
+              FREEZE
+            </h3>
 
+            <p>
+              Players caught inside the explosion
+              can become frozen and temporarily unable to act.
+            </p>
 
-        <h3>
-          BLACK & PURPLE ENERGY
-        </h3>
+            <p>
+              This becomes particularly dangerous
+              during the final boss,
+              where other damaging AoEs may already
+              cover parts of the arena.
+            </p>
 
-        <p>
-          Kessell repeatedly releases black and purple energy attacks
-          around the arena.
-        </p>
+          </article>
 
-        <p>
-          Avoid these wherever possible.
-        </p>
 
-        <p>
-          They can deal significant damage and temporarily disable
-          some encounter powers.
-        </p>
 
+          <!-- ==================================================
+               FINAL BOSS
+               ================================================== -->
 
-        <h3>
-          RED AOE
-        </h3>
+          <article
+            class="build-guide-panel"
+            id="kessell"
+          >
 
-        <p>
-          Large areas of the arena can become covered by red AoE attacks.
-        </p>
+            <p class="build-panel-eyebrow">
+              FINAL BOSS
+            </p>
 
-        <p>
-          Keep moving and maintain enough space to avoid overlapping
-          environmental damage.
-        </p>
+            <h2>
+              AKAR KESSELL
+            </h2>
 
+            <p>
+              Akar Kessell fights alongside two Beholders
+              and summons additional enemies
+              throughout the encounter.
+            </p>
 
-        <h3>
-          UNSTABLE GOLEMS
-        </h3>
 
-        <p>
-          Kessell summons Unstable Golems during the encounter.
-        </p>
+            <h3>
+              BEHOLDERS
+            </h3>
 
-        <p>
-          These behave like the Black Ice Golems encountered earlier
-          in the dungeon and explode when killed.
-        </p>
+            <p>
+              Two Beholders are present during the fight.
+            </p>
 
-        <p>
-          Move away from their red death circles before they detonate.
-        </p>
+            <p>
+              They attack the group and can create
+              additional pressure while Kessell's attacks
+              cover the arena.
+            </p>
 
+            <p>
+              Focusing down one Beholder at a time
+              can make the encounter considerably easier.
+            </p>
 
-        <h3>
-          FREEZE + AOE
-        </h3>
 
-        <p>
-          Getting frozen by an exploding golem can leave you unable
-          to move out of Kessell's other AoE attacks.
-        </p>
+            <h3>
+              TURNING THE BEHOLDERS
+            </h3>
 
-        <p>
-          Avoiding the golem explosions is therefore particularly
-          important during the boss fight.
-        </p>
+            <p>
+              When a Beholder is reduced to very low health,
+              it can turn and attack Akar Kessell.
+            </p>
 
+            <p>
+              Groups that need the additional damage
+              can leave it alive briefly
+              and allow it to attack the boss.
+            </p>
 
-        <h3>
-          FINAL BURN
-        </h3>
+            <p>
+              High-damage groups can simply kill the Beholders
+              and continue attacking Kessell.
+            </p>
 
-        <p>
-          Once the Beholders and dangerous adds are under control,
-          focus damage on Akar Kessell.
-        </p>
 
-        <p>
-          Continue avoiding his black and purple energy attacks
-          until he is defeated.
-        </p>
+            <h3>
+              BLACK & PURPLE ENERGY
+            </h3>
 
-      </article>
+            <p>
+              Kessell repeatedly releases black
+              and purple energy attacks around the arena.
+            </p>
 
+            <p>
+              Avoid these wherever possible.
+            </p>
 
+            <p>
+              They can deal significant damage
+              and temporarily disable some encounter powers.
+            </p>
 
-      <!-- ======================================================
-           ROLE JOBS
-           ====================================================== -->
 
-      <article
-        class="build-guide-panel"
-        id="roles"
-      >
+            <h3>
+              RED AOE
+            </h3>
 
-        <p class="build-panel-eyebrow">
-          KNOW YOUR JOB
-        </p>
+            <p>
+              Large areas of the arena
+              can become covered by red AoE attacks.
+            </p>
 
-        <h2>
-          TANK ◆ HEALER ◆ DPS
-        </h2>
+            <p>
+              Keep moving and maintain enough space
+              to avoid overlapping environmental damage.
+            </p>
 
 
-        <h3>
-          TANK
-        </h3>
+            <h3>
+              UNSTABLE GOLEMS
+            </h3>
 
-        <p>
-          Group dungeon enemies together so DPS can clear them efficiently
-          with AoE damage.
-        </p>
+            <p>
+              Kessell summons Unstable Golems
+              during the encounter.
+            </p>
 
-        <p>
-          During the final fight,
-          maintain control of Kessell and dangerous adds
-          while giving the group room to avoid AoEs.
-        </p>
+            <p>
+              These behave like the Black Ice Golems
+              encountered earlier in the dungeon
+              and explode when killed.
+            </p>
 
+            <p>
+              Move away from their red death circles
+              before they detonate.
+            </p>
 
-        <h3>
-          HEALER
-        </h3>
 
-        <p>
-          Watch players caught by knockbacks,
-          Beholder attacks or Kessell's energy damage.
-        </p>
+            <h3>
+              FREEZE + AOE
+            </h3>
 
-        <p>
-          Be especially alert when a player becomes frozen,
-          as they may be unable to escape incoming AoE damage.
-        </p>
+            <p>
+              Getting frozen by an exploding golem
+              can leave you unable to move out
+              of Kessell's other AoE attacks.
+            </p>
 
+            <p>
+              Avoiding the golem explosions
+              is therefore particularly important
+              during the boss fight.
+            </p>
 
-        <h3>
-          DPS
-        </h3>
 
-        <p>
-          Group enemies and use AoE damage throughout the dungeon.
-        </p>
+            <h3>
+              FINAL BURN
+            </h3>
 
-        <p>
-          Prioritise dangerous Wights and other high-damage enemies
-          when necessary.
-        </p>
+            <p>
+              Once the Beholders and dangerous adds
+              are under control,
+              focus damage on Akar Kessell.
+            </p>
 
-        <p>
-          During Kessell,
-          deal with Beholders and summoned adds while avoiding
-          the boss's energy attacks.
-        </p>
+            <p>
+              Continue avoiding his black
+              and purple energy attacks
+              until he is defeated.
+            </p>
 
-        <p>
-          Do not stand beside a dying Black Ice or Unstable Golem.
-          It will explode, and no, it does not care how impressive
-          your damage rotation was.
-        </p>
+          </article>
 
-      </article>
 
 
+          <!-- ==================================================
+               ROLE JOBS
+               ================================================== -->
 
-      <!-- ======================================================
-           COMMON WIPES
-           ====================================================== -->
+          <article
+            class="build-guide-panel"
+            id="roles"
+          >
 
-      <article
-        class="build-guide-panel"
-        id="wipes"
-      >
+            <p class="build-panel-eyebrow">
+              KNOW YOUR JOB
+            </p>
 
-        <p class="build-panel-eyebrow">
-          WHAT USUALLY GOES WRONG
-        </p>
+            <h2>
+              TANK ◆ HEALER ◆ DPS
+            </h2>
 
-        <h2>
-          COMMON WIPES
-        </h2>
 
-        <p>
-          Allowing large enemy groups to spread out
-          instead of controlling them together.
-        </p>
+            <h3>
+              TANK
+            </h3>
 
-        <p>
-          Standing inside large red-circle knockback attacks.
-        </p>
+            <p>
+              Group dungeon enemies together
+              so DPS can clear them efficiently
+              with AoE damage.
+            </p>
 
-        <p>
-          Getting hit by bear charges and being knocked down.
-        </p>
+            <p>
+              During the final fight,
+              maintain control of Kessell
+              and dangerous adds while giving the group
+              room to avoid AoEs.
+            </p>
 
-        <p>
-          Remaining inside a Black Ice Golem's explosion radius.
-        </p>
 
-        <p>
-          Ignoring the Beholders while they overwhelm the group.
-        </p>
+            <h3>
+              HEALER
+            </h3>
 
-        <p>
-          Standing in Kessell's black and purple energy attacks.
-        </p>
+            <p>
+              Watch players caught by knockbacks,
+              Beholder attacks or Kessell's energy damage.
+            </p>
 
-        <p>
-          Getting frozen by an Unstable Golem
-          while standing inside another damaging AoE.
-        </p>
+            <p>
+              Be especially alert when a player becomes frozen,
+              as they may be unable to escape
+              incoming AoE damage.
+            </p>
 
-      </article>
 
+            <h3>
+              DPS
+            </h3>
 
+            <p>
+              Group enemies and use AoE damage
+              throughout the dungeon.
+            </p>
 
-      <!-- ======================================================
-           CHAOS NOTES
-           ====================================================== -->
+            <p>
+              Prioritise dangerous Wights
+              and other high-damage enemies when necessary.
+            </p>
 
-      <article
-        class="build-guide-panel chaos-notes-panel"
-        id="chaos-notes"
-      >
+            <p>
+              During Kessell,
+              deal with Beholders and summoned adds
+              while avoiding the boss's energy attacks.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          FROM THE GUILD
-        </p>
+            <p>
+              Do not stand beside a dying
+              Black Ice or Unstable Golem.
+            </p>
 
-        <h2>
-          CHAOS NOTES
-        </h2>
+            <p>
+              It will explode,
+              and no, it does not care
+              how impressive your damage rotation was.
+            </p>
 
-        <p>
-          Most of Kessell's Retreat is fairly straightforward:
-          group the angry things together and make the angry things dead.
-        </p>
+          </article>
 
-        <p>
-          The important exception is the exploding golems.
-          Red circle around dying golem = leave.
-          This is not a complicated negotiation. 😂
-        </p>
 
-        <p>
-          At Kessell, deal with the Beholders,
-          dodge the purple bullshit and don't get frozen inside an AoE.
-        </p>
 
-        <p>
-          Congratulations. You now know considerably more than the person
-          who queued in and immediately sprinted directly into everything.
-        </p>
+          <!-- ==================================================
+               COMMON WIPES
+               ================================================== -->
 
-      </article>
+          <article
+            class="build-guide-panel"
+            id="wipes"
+          >
 
+            <p class="build-panel-eyebrow">
+              WHAT USUALLY GOES WRONG
+            </p>
 
+            <h2>
+              COMMON WIPES
+            </h2>
 
-      <!-- ======================================================
+            <p>
+              Allowing large enemy groups to spread out
+              instead of controlling them together.
+            </p>
+
+            <p>
+              Standing inside large red-circle
+              knockback attacks.
+            </p>
+
+            <p>
+              Getting hit by bear charges
+              and being knocked down.
+            </p>
+
+            <p>
+              Remaining inside a Black Ice Golem's
+              explosion radius.
+            </p>
+
+            <p>
+              Ignoring the Beholders
+              while they overwhelm the group.
+            </p>
+
+            <p>
+              Standing in Kessell's
+              black and purple energy attacks.
+            </p>
+
+            <p>
+              Getting frozen by an Unstable Golem
+              while standing inside another damaging AoE.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               CHAOS NOTES
+               ================================================== -->
+
+          <article
+            class="build-guide-panel chaos-notes-panel"
+            id="chaos-notes"
+          >
+
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
+
+            <h2>
+              CHAOS NOTES
+            </h2>
+
+            <p>
+              Most of Kessell's Retreat is fairly straightforward:
+              group the angry things together
+              and make the angry things dead.
+            </p>
+
+            <p>
+              Bear draws a massive red runway on the floor?
+              Move sideways.
+              Do not wait at the end of it
+              like you're expecting fucking Ryanair.
+            </p>
+
+            <p>
+              Dying golem gets a red circle.
+              Leave the red circle.
+              This mechanic has now been explained
+              with almost insulting clarity.
+            </p>
+
+            <p>
+              At Kessell,
+              deal with the Beholders,
+              dodge the purple bullshit
+              and don't get frozen inside an AoE.
+            </p>
+
+            <p>
+              Congratulations.
+              You now know considerably more
+              than the person who queued in
+              and immediately sprinted directly into everything.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </details>
+
+
+
+      <!-- ====================================================
            UPDATED
-           ====================================================== -->
+           ==================================================== -->
 
       <div class="build-last-updated">
 
@@ -673,9 +973,9 @@
 
 
 
-      <!-- ======================================================
+      <!-- ====================================================
            BACK TO MECHANICS
-           ====================================================== -->
+           ==================================================== -->
 
       <div class="build-back-link">
 

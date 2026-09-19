@@ -26,7 +26,9 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
 
   <header class="site-header">
 
@@ -55,9 +57,7 @@
 
     <nav class="desktop-nav">
 
-      <a href="index.html">
-        HOME
-      </a>
+      <a href="index.html">HOME</a>
 
       <a href="index.html#about">
         THE CHAOS CREW
@@ -98,40 +98,15 @@
   <main>
 
 
-    <!-- HERO -->
+    <!-- ======================================================
+         DUNGEON HERO
+         ====================================================== -->
 
-    <section class="magic-page-hero guides-hero">
+    <section class="magic-page-hero build-detail-hero">
 
-      <div class="guides-hero-content">
+      <div class="build-detail-hero-content">
 
-        <p class="section-eyebrow">
-          DUNGEON MECHANICS
-        </p>
-
-        <h1>
-          LAIR OF LOSTMAUTH
-        </h1>
-
-        <p class="guides-intro">
-          Avoid the lava. Watch the floor. Do not get punted into molten gold.
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- GUIDE -->
-
-    <section class="build-detail-page">
-
-      <div class="build-detail-card">
-
-
-        <!-- IMAGE -->
-
-        <div class="build-detail-image">
+        <div class="build-detail-hero-image">
 
           <img
             src="images/lost.jpeg"
@@ -141,361 +116,879 @@
         </div>
 
 
+        <div class="build-detail-hero-text">
 
-        <!-- OVERVIEW -->
-
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            OVERVIEW
+          <p class="section-eyebrow">
+            DUNGEON ◆ MECHANICS
           </p>
 
-          <h2>
+          <h1>
             LAIR OF LOSTMAUTH
-          </h2>
+          </h1>
 
           <p>
-            Lair of Lostmauth has three boss encounters.
-            Most of the danger comes from red telegraphs,
-            lethal lava areas and knockback mechanics.
+            Rotating Chaos Neverwinter Dungeon Guide
           </p>
 
         </div>
 
+      </div>
+
+    </section>
 
 
-        <!-- FIRST BOSS -->
 
-        <div class="build-guide-panel">
+    <!-- ======================================================
+         SIMPLE NAVIGATION
+         ====================================================== -->
 
-          <p class="build-panel-eyebrow">
-            BOSS ONE
-          </p>
+    <nav class="build-section-nav">
 
-          <h2>
-            DRAGON SOUL VESSEL
-          </h2>
+      <a href="#quick-guide">
+        Quick Mechanics
+      </a>
 
-          <ul>
+      <a href="#full-guide">
+        Full Mechanics
+      </a>
 
-            <li>
+    </nav>
+
+
+
+    <!-- ======================================================
+         DUNGEON CONTENT
+         ====================================================== -->
+
+    <section class="build-detail-page dungeon-guide-page">
+
+
+      <!-- ====================================================
+           CHAOS WARNING
+           ==================================================== -->
+
+      <aside class="dungeon-chaos-warning">
+
+        <p class="chaos-warning-label">
+          ⚠ CHAOS WARNING
+        </p>
+
+        <p class="chaos-warning-message">
+          Molten gold is still fucking molten.
+          It does not become safer because it looks expensive.
+          Stay on the platform.
+        </p>
+
+      </aside>
+
+
+
+      <!-- ====================================================
+           QUICK & DIRTY MECHANICS
+           ==================================================== -->
+
+      <article
+        class="build-guide-panel quick-mechanics-panel"
+        id="quick-guide"
+      >
+
+        <p class="build-panel-eyebrow">
+          THE QUICK & DIRTY VERSION
+        </p>
+
+        <h2>
+          ALL YOU REALLY NEED TO KNOW
+        </h2>
+
+        <p class="quick-mechanics-intro">
+          Red bad. Lava worse. Try not to get launched into either.
+        </p>
+
+
+        <div class="quick-mechanics-grid">
+
+
+          <!-- FIRST BOSS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🐉
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                FIRST BOSS
+              </h3>
+
+              <p>
+                Fighting the rider?
+              </p>
+
+              <strong>
+                STAY CLOSE ◆ DON'T STAND IN FRONT.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- SPLIT -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              ✂️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                50% SPLIT
+              </h3>
+
+              <p>
+                Rider & drake separate?
+              </p>
+
+              <strong>
+                CONTROL BOTH ◆ FINISH FAST.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- SCORPIONS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🦂
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                FIRE SCORPIONS
+              </h3>
+
+              <p>
+                Two bosses?
+              </p>
+
+              <strong>
+                FOCUS ONE AT A TIME.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- LAVA -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🌋
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                LAVA
+              </h3>
+
+              <p>
+                Lava pool or molten gold?
+              </p>
+
+              <strong>
+                ABSOLUTELY FUCKING NOT.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- RED FLOOR -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🔴
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                RED FLOOR
+              </h3>
+
+              <p>
+                Lostmauth floor turns red?
+              </p>
+
+              <strong>
+                MOVE IMMEDIATELY.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- FIREBALLS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🔥
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                FIREBALLS
+              </h3>
+
+              <p>
+                Flying across arena?
+              </p>
+
+              <strong>
+                DODGE ◆ DON'T GET KNOCKED OFF.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- SPIKES -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              💢
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                50% SPIKES
+              </h3>
+
+              <p>
+                Spike phase starts?
+              </p>
+
+              <strong>
+                GET CENTRE ◆ KEEP DODGING.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ====================================================
+           FULL MECHANICS DROPDOWN
+           ==================================================== -->
+
+      <details
+        class="full-mechanics-dropdown"
+        id="full-guide"
+      >
+
+        <summary class="full-mechanics-summary">
+
+          <span class="full-mechanics-summary-main">
+            WANT THE FULL MECHANICS?
+          </span>
+
+          <span class="full-mechanics-summary-sub">
+            Open the full Lair of Lostmauth guide
+          </span>
+
+          <span
+            class="full-mechanics-chevron"
+            aria-hidden="true"
+          >
+            ▼
+          </span>
+
+        </summary>
+
+
+        <div class="full-mechanics-content">
+
+
+          <!-- ==================================================
+               OVERVIEW
+               ================================================== -->
+
+          <article
+            class="build-guide-panel build-overview"
+            id="overview"
+          >
+
+            <p class="build-panel-eyebrow">
+              THE DUNGEON
+            </p>
+
+            <h2>
+              OVERVIEW
+            </h2>
+
+            <p>
+              Lair of Lostmauth has three boss encounters.
+            </p>
+
+            <p>
+              Most of the danger comes from red telegraphs,
+              lethal lava areas and knockback mechanics.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               FIRST BOSS
+               ================================================== -->
+
+          <article
+            class="build-guide-panel"
+            id="dragon-soul-vessel"
+          >
+
+            <p class="build-panel-eyebrow">
+              BOSS ONE
+            </p>
+
+            <h2>
+              DRAGON SOUL VESSEL
+            </h2>
+
+            <p>
               Stay reasonably close to the boss.
-            </li>
+            </p>
 
-            <li>
-              If players are too far away,
+            <p>
+              If players move too far away,
               he can throw his spear at random targets.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Avoid the red ground effects.
-            </li>
+            </p>
 
-            <li>
+            <p>
               The boss uses frontal AoE attacks,
               so DPS should avoid standing directly in front of him.
-            </li>
+            </p>
 
-            <li>
+
+            <h3>
+              50% SPLIT
+            </h3>
+
+            <p>
               At around 50% health,
               the rider and drake separate into two targets.
-            </li>
+            </p>
 
-            <li>
-              The tank should regain control of the drake immediately.
-            </li>
+            <p>
+              The tank should regain control
+              of the drake immediately.
+            </p>
 
-            <li>
+            <p>
               If one target dies before the other,
               the survivor becomes stronger.
-            </li>
+            </p>
 
-            <li>
-              Keep both under control and finish the remaining target quickly.
-            </li>
+            <p>
+              Keep both under control
+              and finish the remaining target quickly.
+            </p>
 
-          </ul>
-
-        </div>
-
+          </article>
 
 
-        <!-- FALLING ROCKS -->
 
-        <div class="build-guide-panel">
+          <!-- ==================================================
+               FALLING ROCKS
+               ================================================== -->
 
-          <p class="build-panel-eyebrow">
-            DUNGEON HAZARD
-          </p>
+          <article
+            class="build-guide-panel"
+            id="rocks-lava"
+          >
 
-          <h2>
-            FALLING ROCKS & LAVA
-          </h2>
+            <p class="build-panel-eyebrow">
+              DUNGEON HAZARD
+            </p>
 
-          <ul>
+            <h2>
+              FALLING ROCKS & LAVA
+            </h2>
 
-            <li>
-              Small red areas on the floor mark falling rocks.
-            </li>
+            <p>
+              Small red areas on the floor
+              mark falling rocks.
+            </p>
 
-            <li>
+            <p>
               Move out before they land.
-            </li>
+            </p>
 
-            <li>
-              Lava sections between bosses are lethal or extremely damaging.
-            </li>
+            <p>
+              Lava sections between bosses
+              are lethal or extremely damaging.
+            </p>
 
-            <li>
-              Take your time crossing rather than rushing into the lava.
-            </li>
+            <p>
+              Take your time crossing
+              rather than rushing into the lava.
+            </p>
 
-          </ul>
-
-        </div>
-
+          </article>
 
 
-        <!-- SECOND BOSS -->
 
-        <div class="build-guide-panel">
+          <!-- ==================================================
+               SECOND BOSS
+               ================================================== -->
 
-          <p class="build-panel-eyebrow">
-            BOSS TWO
-          </p>
+          <article
+            class="build-guide-panel"
+            id="fire-scorpions"
+          >
 
-          <h2>
-            TWIN FIRE SCORPIONS
-          </h2>
+            <p class="build-panel-eyebrow">
+              BOSS TWO
+            </p>
 
-          <ul>
+            <h2>
+              TWIN FIRE SCORPIONS
+            </h2>
 
-            <li>
-              Both Fire Scorpions are active at the same time.
-            </li>
+            <p>
+              Both Fire Scorpions are active
+              at the same time.
+            </p>
 
-            <li>
+            <p>
               The tank can control both,
-              or one player can kite one while the group kills the other.
-            </li>
+              or one player can kite one
+              while the group kills the other.
+            </p>
 
-            <li>
+            <p>
               DPS should focus one Scorpion at a time.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Avoid all red telegraphs.
-            </li>
+            </p>
 
-            <li>
-              Small lava pools on the ground are extremely dangerous
+
+            <h3>
+              LAVA POOLS
+            </h3>
+
+            <p>
+              Small lava pools on the ground
+              are extremely dangerous
               and can kill even a tank.
-            </li>
+            </p>
 
-            <li>
-              Keep repositioning as the lava reduces safe space.
-            </li>
+            <p>
+              Keep repositioning
+              as the lava reduces safe space.
+            </p>
 
-            <li>
+            <p>
               Once one Scorpion dies,
               the encounter becomes significantly easier.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- LOSTMAUTH -->
+          <!-- ==================================================
+               LOSTMAUTH
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="lostmauth"
+          >
 
-          <p class="build-panel-eyebrow">
-            FINAL BOSS
-          </p>
+            <p class="build-panel-eyebrow">
+              FINAL BOSS
+            </p>
 
-          <h2>
-            LOSTMAUTH
-          </h2>
+            <h2>
+              LOSTMAUTH
+            </h2>
 
-          <ul>
+            <p>
+              The final fight takes place
+              on a small hexagonal platform.
+            </p>
 
-            <li>
-              The final fight takes place on a small hexagonal platform.
-            </li>
+            <p>
+              Stay relatively close to Lostmauth
+              where possible.
+            </p>
 
-            <li>
-              Stay relatively close to Lostmauth where possible.
-            </li>
 
-            <li>
+            <h3>
+              FIREBALLS
+            </h3>
+
+            <p>
               Fireballs travel across the arena
               and can knock players backward.
-            </li>
+            </p>
 
-            <li>
-              Avoid being pushed into molten gold around the arena.
-            </li>
-
-            <li>
-              Sections of the floor turn red before filling with molten gold.
-            </li>
-
-            <li>
-              Move away from any floor section that begins glowing red.
-            </li>
-
-          </ul>
-
-        </div>
+            <p>
+              Avoid being pushed into
+              the molten gold around the arena.
+            </p>
 
 
+            <h3>
+              MOLTEN FLOOR
+            </h3>
 
-        <!-- 50% PHASE -->
+            <p>
+              Sections of the floor turn red
+              before filling with molten gold.
+            </p>
 
-        <div class="build-guide-panel">
+            <p>
+              Move away from any floor section
+              that begins glowing red.
+            </p>
 
-          <p class="build-panel-eyebrow">
-            MID-FIGHT MECHANIC
-          </p>
 
-          <h2>
-            RED SPIKES
-          </h2>
+            <h3>
+              RED SPIKES
+            </h3>
 
-          <ul>
-
-            <li>
+            <p>
               At around 50% health,
               move toward the centre of the arena.
-            </li>
+            </p>
 
-            <li>
-              Small red areas appear before spikes erupt from the floor.
-            </li>
+            <p>
+              Small red areas appear
+              before spikes erupt from the floor.
+            </p>
 
-            <li>
+            <p>
               Move or dodge before the spikes hit.
-            </li>
+            </p>
 
-            <li>
-              The spikes can knock players into the molten gold.
-            </li>
+            <p>
+              The spikes can knock players
+              into the molten gold.
+            </p>
 
-            <li>
-              Do not attempt to revive someone standing in molten gold
+            <p>
+              Do not attempt to revive someone
+              standing in molten gold
               until the dangerous area recedes.
-            </li>
-
-          </ul>
-
-        </div>
+            </p>
 
 
+            <h3>
+              EYE LASER
+            </h3>
 
-        <!-- EYE LASER -->
+            <p>
+              Lostmauth can target players
+              with an eye-beam attack.
+            </p>
 
-        <div class="build-guide-panel">
+            <p>
+              Watch for his eyes glowing
+              before the attack.
+            </p>
 
-          <p class="build-panel-eyebrow">
-            TARGETED ATTACK
-          </p>
+            <p>
+              Tanks positioned beneath or near his head
+              may be able to intercept the beam.
+            </p>
 
-          <h2>
-            EYE LASER
-          </h2>
-
-          <ul>
-
-            <li>
-              Lostmauth can target players with an eye-beam attack.
-            </li>
-
-            <li>
-              Watch for his eyes glowing before the attack.
-            </li>
-
-            <li>
-              Tanks positioned beneath or near his head may be able
-              to intercept the beam.
-            </li>
-
-            <li>
+            <p>
               Healers should watch whoever is targeted,
               as the attack can hit hard.
-            </li>
+            </p>
 
-          </ul>
+          </article>
+
+
+
+          <!-- ==================================================
+               ROLE JOBS
+               ================================================== -->
+
+          <article
+            class="build-guide-panel"
+            id="roles"
+          >
+
+            <p class="build-panel-eyebrow">
+              KNOW YOUR JOB
+            </p>
+
+            <h2>
+              TANK ◆ HEALER ◆ DPS
+            </h2>
+
+
+            <h3>
+              TANK
+            </h3>
+
+            <p>
+              Keep the first boss facing away
+              from the rest of the group.
+            </p>
+
+            <p>
+              When the rider and drake split,
+              regain control of the drake immediately.
+            </p>
+
+            <p>
+              During the Fire Scorpions,
+              control both if possible
+              while the group focuses one.
+            </p>
+
+            <p>
+              During Lostmauth,
+              stay aware of the platform edge
+              and knockback mechanics.
+            </p>
+
+
+            <h3>
+              HEALER
+            </h3>
+
+            <p>
+              Watch players hit by knockbacks
+              and heavy boss attacks.
+            </p>
+
+            <p>
+              During Lostmauth,
+              pay particular attention
+              to whoever is targeted by the eye laser.
+            </p>
+
+            <p>
+              Do not put yourself into molten gold
+              attempting an unsafe revive.
+            </p>
+
+
+            <h3>
+              DPS
+            </h3>
+
+            <p>
+              Avoid standing directly
+              in front of the first boss.
+            </p>
+
+            <p>
+              During the Fire Scorpions,
+              focus one target at a time.
+            </p>
+
+            <p>
+              Keep enough awareness during Lostmauth
+              to avoid fireballs, molten floor
+              and the spike phase.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               COMMON WIPES
+               ================================================== -->
+
+          <article
+            class="build-guide-panel"
+            id="wipes"
+          >
+
+            <p class="build-panel-eyebrow">
+              WHAT USUALLY GOES WRONG
+            </p>
+
+            <h2>
+              COMMON WIPES
+            </h2>
+
+            <p>
+              Standing in front of the first boss
+              and eating frontal attacks.
+            </p>
+
+            <p>
+              Losing control of the drake
+              when the first boss splits.
+            </p>
+
+            <p>
+              Allowing the surviving first-boss target
+              to become stronger and then failing
+              to finish it quickly.
+            </p>
+
+            <p>
+              Rushing through lava sections
+              between encounters.
+            </p>
+
+            <p>
+              Splitting damage across both Fire Scorpions
+              instead of focusing one.
+            </p>
+
+            <p>
+              Standing in the Scorpions' lava pools.
+            </p>
+
+            <p>
+              Getting knocked off Lostmauth's platform
+              by a fireball or spike.
+            </p>
+
+            <p>
+              Failing to move
+              when a floor section turns red.
+            </p>
+
+            <p>
+              Attempting to revive someone
+              while they are still standing
+              in molten gold.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               CHAOS NOTES
+               ================================================== -->
+
+          <article
+            class="build-guide-panel chaos-notes-panel"
+            id="chaos-notes"
+          >
+
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
+
+            <h2>
+              CHAOS NOTES
+            </h2>
+
+            <p>
+              First boss:
+              stay relatively close,
+              don't stand in front,
+              and when he splits,
+              somebody make sure the drake doesn't
+              immediately develop free will.
+            </p>
+
+            <p>
+              Two Fire Scorpions does not mean
+              DPS gets to invent two separate fights.
+              Pick one. Murder it.
+              Then murder the other one.
+            </p>
+
+            <p>
+              Lava pool?
+              Absolutely fucking not.
+              There is no mechanic hidden inside it.
+              You do not need to investigate.
+            </p>
+
+            <p>
+              Lostmauth's platform is surrounded
+              by molten gold.
+              Fireballs knock you backwards.
+              You can probably see where this relationship is going.
+            </p>
+
+            <p>
+              At 50%,
+              get toward the centre and dodge the spikes.
+              The edge is currently the least useful place
+              you could possibly choose to stand.
+            </p>
+
+          </article>
+
 
         </div>
 
+      </details>
 
 
-        <!-- QUICK REFERENCE -->
 
-        <div class="build-guide-panel">
+      <!-- ====================================================
+           UPDATED
+           ==================================================== -->
 
-          <p class="build-panel-eyebrow">
-            QUICK REFERENCE
-          </p>
+      <div class="build-last-updated">
 
-          <h2>
-            LOSTMAUTH SURVIVAL NOTES
-          </h2>
-
-          <ul>
-
-            <li>
-              First boss → stay close and avoid frontal attacks.
-            </li>
-
-            <li>
-              50% → rider and drake split.
-            </li>
-
-            <li>
-              Kill one → surviving target gets stronger.
-            </li>
-
-            <li>
-              Falling-rock red → move.
-            </li>
-
-            <li>
-              Fire Scorpions → focus one at a time.
-            </li>
-
-            <li>
-              Lava pool → absolutely fucking not.
-            </li>
-
-            <li>
-              Lostmauth floor turns red → move immediately.
-            </li>
-
-            <li>
-              Fireballs → avoid the knockback.
-            </li>
-
-            <li>
-              50% spikes → get centre and dodge.
-            </li>
-
-            <li>
-              Eye glow → targeted laser incoming.
-            </li>
-
-          </ul>
-
-        </div>
-
+        <p>
+          LAST UPDATED ◆ SEPTEMBER 2026
+        </p>
 
       </div>
 
 
 
-      <!-- BACK LINK -->
+      <!-- ====================================================
+           BACK TO MECHANICS
+           ==================================================== -->
 
       <div class="build-back-link">
 
@@ -505,11 +998,14 @@
 
       </div>
 
+
     </section>
 
 
 
-    <!-- FOOTER -->
+    <!-- ======================================================
+         FOOTER
+         ====================================================== -->
 
     <footer id="contact">
 

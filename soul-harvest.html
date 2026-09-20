@@ -26,9 +26,7 @@
 
 <body>
 
-  <!-- ======================================================
-       HEADER
-       ====================================================== -->
+  <!-- HEADER -->
 
   <header class="site-header">
 
@@ -57,9 +55,7 @@
 
     <nav class="desktop-nav">
 
-      <a href="index.html">
-        HOME
-      </a>
+      <a href="index.html">HOME</a>
 
       <a href="index.html#about">
         THE CHAOS CREW
@@ -100,9 +96,7 @@
   <main>
 
 
-    <!-- ======================================================
-         TRIAL HERO
-         ====================================================== -->
+    <!-- HERO -->
 
     <section class="magic-page-hero build-detail-hero">
 
@@ -140,883 +134,1447 @@
 
 
 
-    <!-- ======================================================
-         TRIAL NAVIGATION
-         ====================================================== -->
+    <!-- SIMPLE NAV -->
 
     <nav class="build-section-nav">
 
-      <a href="#overview">Overview</a>
-      <a href="#phase-one">Phase One</a>
-      <a href="#phase-two">Phase Two</a>
-      <a href="#biomes">Biome Mechanics</a>
-      <a href="#supports">Supports</a>
-      <a href="#phase-three">Phase Three</a>
-      <a href="#final-boss">Final Boss</a>
-      <a href="#phase-seven">Escape</a>
-      <a href="#szass-tam">Szass Tam</a>
-      <a href="#standard">Standard</a>
-      <a href="#chaos-notes">Chaos Notes</a>
+      <a href="#quick-guide">
+        Quick Mechanics
+      </a>
+
+      <a href="#full-guide">
+        Full Mechanics
+      </a>
 
     </nav>
 
 
 
-    <!-- ======================================================
-         TRIAL CONTENT
-         ====================================================== -->
+    <!-- CONTENT -->
 
-    <section class="build-detail-page">
+    <section class="build-detail-page dungeon-guide-page">
 
 
-      <!-- OVERVIEW -->
+      <!-- CHAOS WARNING -->
+
+      <aside class="dungeon-chaos-warning">
+
+        <p class="chaos-warning-label">
+          ⚠ CHAOS WARNING
+        </p>
+
+        <p class="chaos-warning-message">
+          DPS keep the fucking timer alive. Supports do the soul swap.
+          If you're wondering which job is yours while the countdown hits zero,
+          Szass Tam has already answered the question for you.
+        </p>
+
+      </aside>
+
+
+
+      <!-- QUICK & DIRTY -->
 
       <article
-        class="build-guide-panel build-overview"
-        id="overview"
+        class="build-guide-panel quick-mechanics-panel"
+        id="quick-guide"
       >
 
         <p class="build-panel-eyebrow">
-          THE TRIAL
+          THE QUICK & DIRTY VERSION
         </p>
 
         <h2>
-          OVERVIEW
+          ALL YOU REALLY NEED TO KNOW
         </h2>
 
-        <p>
-          Soul Harvest is a mechanically heavy 10-player trial built around
-          three elemental biomes: Fae, Fire and Ice.
+        <p class="quick-mechanics-intro">
+          Split 5 & 5. Bosses to 50%.
+          DPS keep the timer alive.
+          Tank and healer do the soul swap.
+          Then kill everything and get the hell out.
         </p>
 
-        <p>
-          The group is split into two teams of five and sent to two randomly
-          selected biomes. Each side must control its boss, perform biome-specific
-          mechanics, support a healer-and-tank maze run, and complete a coordinated
-          soul swap before the trial can progress.
-        </p>
 
-        <p>
-          Later phases reunite the group for the final boss, phantom biome bosses
-          and a timed escape sequence.
-        </p>
+        <div class="quick-mechanics-grid">
+
+
+          <!-- SPLIT -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              👥
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                BIOME SPLIT
+              </h3>
+
+              <p>
+                Two teams of five.
+              </p>
+
+              <strong>
+                GET BOSS TO 50%.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- TIMER -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              ⏱️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                STUN TIMER
+              </h3>
+
+              <p>
+                Countdown reaches zero?
+              </p>
+
+              <strong>
+                EVERYBODY FUCKING DIES.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- RED GHOST -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🔴
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                DPS BUFF
+              </h3>
+
+              <p>
+                Red Vanguard ghost?
+              </p>
+
+              <strong>
+                DPS KILL IT ◆ GET RED BUFF.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- FAE -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🌱
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                FAE
+              </h3>
+
+              <p>
+                Red buff active?
+              </p>
+
+              <strong>
+                ONE DPS PER PURPLE POOL ◆ GROW PLANTS.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- FIRE -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🔥
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                FIRE
+              </h3>
+
+              <p>
+                Kill mobs with red buff.
+              </p>
+
+              <strong>
+                COLLECT SOULS ◆ DEPOSIT AT TREE.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- ICE -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              ❄️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                ICE
+              </h3>
+
+              <p>
+                Find beacon pillar.
+              </p>
+
+              <strong>
+                GROUP IN YELLOW BARRIER ◆ FOLLOW ACTIVE PILLAR.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- SUPPORT BUFFS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🟢
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                SUPPORT BUFFS
+              </h3>
+
+              <p>
+                Green + blue ghosts?
+              </p>
+
+              <strong>
+                HEALER = GREEN ◆ TANK = BLUE.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- MAZE -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🌀
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                DEATH MAZE
+              </h3>
+
+              <p>
+                Supports enter maze.
+              </p>
+
+              <strong>
+                HEALER LEADS ◆ TANK STAYS CLOSE.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- SOUL SWAP -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              💚
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                SOUL SWAP
+              </h3>
+
+              <p>
+                Both teams ready?
+              </p>
+
+              <strong>
+                TANK TAUNTS ◆ HEALER DEPOSITS.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- PHANTOMS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              👻
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                PHANTOMS
+              </h3>
+
+              <p>
+                Two biome bosses return?
+              </p>
+
+              <strong>
+                KEEP TIMER ALIVE ◆ FOCUS ONE FIRST.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- FINAL SOULS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🏃
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                FINAL SOUL RUN
+              </h3>
+
+              <p>
+                Split back into 5 & 5.
+              </p>
+
+              <strong>
+                DELIVER BOTH SOULS ◆ RETURN FAST.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- ESCAPE -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🌉
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                BRIDGE ESCAPE
+              </h3>
+
+              <p>
+                Souls delivered?
+              </p>
+
+              <strong>
+                TANKS LEAD ◆ MOVE ◆ SURVIVE.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+        </div>
 
       </article>
 
 
 
-      <!-- PHASE ONE -->
+      <!-- FULL MECHANICS -->
 
-      <article
-        class="build-guide-panel"
-        id="phase-one"
+      <details
+        class="full-mechanics-dropdown"
+        id="full-guide"
       >
 
-        <p class="build-panel-eyebrow">
-          FIRST PHASE
-        </p>
+        <summary class="full-mechanics-summary">
 
-        <h2>
-          RANDOM BIOME SPLIT
-        </h2>
+          <span class="full-mechanics-summary-main">
+            WANT THE FULL MECHANICS?
+          </span>
+
+          <span class="full-mechanics-summary-sub">
+            Open the full Soul Harvest guide
+          </span>
+
+          <span
+            class="full-mechanics-chevron"
+            aria-hidden="true"
+          >
+            ▼
+          </span>
 
-        <p>
-          The group is randomly divided into two parties of five.
-        </p>
+        </summary>
 
-        <p>
-          The game attempts to ensure each side has at least one tank and one healer.
-        </p>
 
-        <p>
-          Each party is then sent to two of the three possible biomes:
-          Fae, Fire or Ice.
-        </p>
+        <div class="full-mechanics-content">
 
-        <p>
-          The goal is to reduce each biome boss to 50% health.
-        </p>
 
-        <p>
-          Once a boss reaches 50%, it becomes invulnerable and Phase Two begins.
-        </p>
+          <!-- OVERVIEW -->
 
-        <p>
-          The two groups do not need to hit 50% at the exact same moment.
-        </p>
+          <article
+            class="build-guide-panel build-overview"
+            id="overview"
+          >
 
-      </article>
+            <p class="build-panel-eyebrow">
+              THE TRIAL
+            </p>
 
+            <h2>
+              OVERVIEW
+            </h2>
 
+            <p>
+              Soul Harvest is a mechanically heavy 10-player trial
+              built around three elemental biomes:
+              Fae, Fire and Ice.
+            </p>
 
-      <!-- PHASE TWO -->
+            <p>
+              The group is split into two teams of five
+              and sent to two randomly selected biomes.
+              Each side must control its boss,
+              perform biome-specific mechanics,
+              support a healer-and-tank maze run,
+              and complete a coordinated soul swap
+              before the trial can progress.
+            </p>
+
+            <p>
+              Later phases reunite the group for the final boss,
+              phantom biome bosses
+              and a timed escape sequence.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="phase-two"
-      >
+          </article>
 
-        <p class="build-panel-eyebrow">
-          SECOND PHASE
-        </p>
 
-        <h2>
-          STUN TIMER & SOUL SWAP
-        </h2>
 
-        <p>
-          Once the biome bosses lock at 50%, they begin siphoning essence toward
-          Szass Tam.
-        </p>
+          <!-- PHASE ONE -->
 
-        <p>
-          A countdown appears on the right side of the screen.
-          If it reaches zero, the trial wipes.
-        </p>
+          <article
+            class="build-guide-panel"
+            id="phase-one"
+          >
 
-        <p>
-          The displayed value is not seconds. Divide it by two to estimate the
-          actual remaining time.
-        </p>
+            <p class="build-panel-eyebrow">
+              FIRST PHASE
+            </p>
 
-        <p>
-          Phase Two happens in two parts simultaneously:
-          DPS perform biome mechanics to extend the timer,
-          while tanks and healers obtain buffs and travel through the death biome maze.
-        </p>
+            <h2>
+              RANDOM BIOME SPLIT
+            </h2>
 
-      </article>
+            <p>
+              The group is randomly divided
+              into two parties of five.
+            </p>
 
+            <p>
+              The game attempts to ensure each side
+              has at least one tank and one healer.
+            </p>
 
+            <p>
+              Each party is sent to two
+              of the three possible biomes:
+              Fae, Fire or Ice.
+            </p>
 
-      <!-- BIOME MECHANICS -->
+            <p>
+              The goal is to reduce each biome boss
+              to 50% health.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="biomes"
-      >
+            <p>
+              Once a boss reaches 50%,
+              it becomes invulnerable
+              and Phase Two begins.
+            </p>
+
+            <p>
+              The two groups do not need to hit 50%
+              at exactly the same moment.
+            </p>
+
+          </article>
+
+
+
+          <!-- PHASE TWO -->
+
+          <article
+            class="build-guide-panel"
+            id="phase-two"
+          >
+
+            <p class="build-panel-eyebrow">
+              SECOND PHASE
+            </p>
+
+            <h2>
+              STUN TIMER & SOUL SWAP
+            </h2>
+
+            <p>
+              Once the biome bosses lock at 50%,
+              they begin siphoning essence toward Szass Tam.
+            </p>
+
+            <p>
+              A countdown appears
+              on the right side of the screen.
+              If it reaches zero,
+              the trial wipes.
+            </p>
+
+            <p>
+              The displayed value is not seconds.
+              Divide it by two to estimate
+              the actual remaining time.
+            </p>
+
+            <p>
+              Phase Two happens in two parts simultaneously:
+              DPS perform biome mechanics to extend the timer,
+              while tanks and healers obtain buffs
+              and travel through the death biome maze.
+            </p>
+
+          </article>
+
+
+
+          <!-- BIOME MECHANICS -->
+
+          <article
+            class="build-guide-panel"
+            id="biomes"
+          >
+
+            <p class="build-panel-eyebrow">
+              DPS JOB
+            </p>
+
+            <h2>
+              BIOME STUN MECHANICS
+            </h2>
+
+            <p>
+              DPS should first help kill
+              the green and blue support ghosts,
+              then kill red Soul of the Vanguard ghosts
+              to gain their own special buff.
+            </p>
+
+            <p>
+              The red buff reduces incoming damage
+              and provides healing over time,
+              which is critical while supports are away.
+            </p>
+
+
+            <h3>
+              FAE BIOME
+            </h3>
+
+            <p>
+              Kill a red Soul of the Vanguard
+              to gain the red buff.
+            </p>
+
+            <p>
+              Stand inside one of the purple pools
+              while the buff is active.
+              This gradually grows a plant.
+            </p>
+
+            <p>
+              After roughly 30 seconds,
+              a small creature spawns
+              and moves toward the boss.
+            </p>
+
+            <p>
+              When it reaches the boss,
+              the trial timer increases.
+            </p>
+
+            <p>
+              Each DPS should use a separate pool
+              because multiple players in the same pool
+              do not speed the mechanic up.
+            </p>
+
+            <p>
+              Ideally two DPS begin growing plants immediately
+              while one helps the supports
+              obtain their green and blue ghost buffs.
+            </p>
+
+
+            <h3>
+              FIRE BIOME
+            </h3>
+
+            <p>
+              Kill mobs while the red
+              Soul of the Vanguard buff is active.
+            </p>
+
+            <p>
+              Mobs drop soul currency
+              that is shared between nearby DPS.
+            </p>
+
+            <p>
+              Deposit collected currency
+              at the circular rune beneath the burning tree
+              in the centre of the biome
+              to increase the timer.
+            </p>
+
+            <p>
+              Currency is held individually,
+              so each player needs to deposit their own.
+            </p>
+
+
+            <h3>
+              ICE BIOME
+            </h3>
+
+            <p>
+              Find the currently active stone pillar
+              marked by a beacon.
+            </p>
+
+            <p>
+              Stand inside its yellow barrier
+              to increase the trial timer
+              and prevent freezing.
+            </p>
+
+            <p>
+              More players inside the barrier
+              increases the timer faster.
+            </p>
+
+            <p>
+              Active pillars change throughout the phase,
+              so the group must move together
+              from pillar to pillar.
+            </p>
+
+            <p>
+              Players continuously gain Frostbite stacks.
+              Staying close to another player grants warmth
+              and protects against Frostbite.
+            </p>
+
+            <p>
+              Too many Frostbite stacks
+              will freeze a player in place.
+            </p>
+
+          </article>
+
+
+
+          <!-- SUPPORTS -->
+
+          <article
+            class="build-guide-panel"
+            id="supports"
+          >
+
+            <p class="build-panel-eyebrow">
+              SUPPORT JOB
+            </p>
+
+            <h2>
+              HEALER & TANK SOUL SWAP
+            </h2>
+
+            <p>
+              Two support ghosts spawn:
+              Soul of the Devout in green
+              and Soul of the Sentinel in blue.
+            </p>
+
+            <p>
+              It does not matter who kills them,
+              provided the tank and healer are present
+              in the biome when they die.
+            </p>
+
+
+            <h3>
+              SOUL OF THE DEVOUT
+            </h3>
+
+            <p>
+              The healer receives the green buff.
+            </p>
+
+            <p>
+              This allows the healer
+              to transport their biome's soul through the maze
+              and deposit it at the biome
+              occupied by the other team.
+            </p>
+
+            <p>
+              The healer also gains improved visibility
+              of maze traps.
+            </p>
+
+
+            <h3>
+              SOUL OF THE SENTINEL
+            </h3>
+
+            <p>
+              The tank receives the blue buff.
+            </p>
+
+            <p>
+              This creates a protective bubble
+              that helps the tank and nearby allies
+              survive the death biome's damage-over-time effect
+              and improves visibility.
+            </p>
+
+
+            <h3>
+              MAZE TRAVERSAL
+            </h3>
+
+            <p>
+              The healer should lead through the maze
+              because their green buff highlights traps.
+            </p>
+
+            <p>
+              The tank follows closely,
+              using the protective bubble
+              to keep both players alive.
+            </p>
+
+            <p>
+              Avoid mobs where possible
+              and avoid the wandering Tenebraloth.
+            </p>
+
+            <p>
+              Maze paths are randomised.
+              The correct path should allow traps to be avoided
+              rather than requiring players
+              to brute-force through them.
+            </p>
+
+
+            <h3>
+              THE SWAP
+            </h3>
+
+            <p>
+              Both support teams should communicate
+              before entering their destination biome.
+            </p>
+
+            <p>
+              Once both sides are ready,
+              the tanks hard-taunt their respective bosses.
+            </p>
+
+            <p>
+              The healers then enter
+              the green circle under the boss
+              and deposit the souls.
+            </p>
+
+            <p>
+              Once both deposits are complete,
+              the wipe timer ends
+              and the bosses become active again.
+            </p>
+
+          </article>
+
+
+
+          <!-- PHASE THREE -->
+
+          <article
+            class="build-guide-panel"
+            id="phase-three"
+          >
+
+            <p class="build-panel-eyebrow">
+              THIRD PHASE
+            </p>
+
+            <h2>
+              FINISH THE BIOME BOSSES
+            </h2>
+
+            <p>
+              After the soul swap,
+              portals briefly appear
+              between the two active biomes.
+            </p>
+
+            <p>
+              These can be used
+              to rearrange players if required.
+            </p>
+
+            <p>
+              Both biome bosses are now vulnerable again
+              and should be killed.
+            </p>
+
+            <p>
+              Once both bosses are dead,
+              portals appear that take both groups
+              to the final boss arena.
+            </p>
+
+            <p>
+              Tanks and healers should enter
+              before DPS where possible.
+            </p>
+
+          </article>
+
+
+
+          <!-- FINAL BOSS -->
+
+          <article
+            class="build-guide-panel"
+            id="final-boss"
+          >
+
+            <p class="build-panel-eyebrow">
+              PHASES FOUR TO SIX
+            </p>
+
+            <h2>
+              FINAL BOSS & PHANTOMS
+            </h2>
+
+
+            <h3>
+              PHASE FOUR
+            </h3>
+
+            <p>
+              The full group reunites.
+            </p>
+
+            <p>
+              One tank can hold the boss
+              while the second tank controls additional mobs.
+            </p>
+
+            <p>
+              Reduce the boss to 50% health,
+              where it locks again.
+            </p>
+
+
+            <h3>
+              PHASE FIVE - PHANTOM BOSSES
+            </h3>
+
+            <p>
+              Phantasmal versions of the two
+              previously defeated biome bosses appear.
+            </p>
+
+            <p>
+              At the same time,
+              the biome's stun mechanic becomes active again.
+            </p>
+
+            <p>
+              DPS must keep extending the timer
+              while the group kills both phantoms.
+            </p>
+
+            <p>
+              Decide in advance
+              which phantom the group will kill first.
+            </p>
+
+            <p>
+              One tank should isolate the priority phantom
+              while the second controls the other phantom
+              and any additional enemies.
+            </p>
+
+            <p>
+              Once both phantoms are dead,
+              the countdown stops.
+            </p>
+
+
+            <h3>
+              ICE PHANTOM WARNING
+            </h3>
+
+            <p>
+              If the final biome is Ice,
+              the phantoms may target
+              the active stun-mechanic pillar directly.
+            </p>
+
+            <p>
+              DPS using the pillar
+              need to move when these attacks arrive.
+            </p>
+
+            <p>
+              Tanks may temporarily lose effective threat control
+              while the phantoms focus on the pillar.
+            </p>
+
+
+            <h3>
+              PHASE SIX
+            </h3>
+
+            <p>
+              Finish the final boss.
+            </p>
+
+            <p>
+              Before the boss dies,
+              organise two balanced groups where possible:
+              one tank, one healer and three DPS per party.
+            </p>
+
+            <p>
+              This prepares everyone
+              for the final escape phase.
+            </p>
+
+          </article>
+
+
+
+          <!-- ESCAPE -->
+
+          <article
+            class="build-guide-panel"
+            id="phase-seven"
+          >
+
+            <p class="build-panel-eyebrow">
+              FINAL PHASE
+            </p>
+
+            <h2>
+              SOUL DELIVERY & ESCAPE
+            </h2>
+
+            <p>
+              The group ends up in the Ice biome
+              and the final timed sequence begins.
+            </p>
+
+            <p>
+              Split into the two planned
+              five-player parties.
+            </p>
+
+            <p>
+              Kill the green and blue support ghosts again
+              to obtain healer and tank buffs.
+            </p>
+
+            <p>
+              The two parties must then transport
+              empowered souls through the death biome maze.
+            </p>
+
+            <p>
+              One team travels to Fae
+              and the other to Fire.
+            </p>
+
+            <p>
+              Both healers deposit their empowered soul
+              in the green circles
+              where the biome bosses previously stood.
+            </p>
+
+
+            <h3>
+              FIVE-MINUTE TIMER
+            </h3>
+
+            <p>
+              The guide states the group has five minutes
+              to complete the maze,
+              deposit both empowered souls,
+              return through the maze
+              and reach the final gate.
+            </p>
+
+            <p>
+              Bell tolls occur approximately every 25 seconds.
+              The twelfth toll means the group wipes.
+            </p>
+
+
+            <h3>
+              BRIDGE ESCAPE
+            </h3>
+
+            <p>
+              After both souls are deposited,
+              regroup at the bridge gate.
+            </p>
+
+            <p>
+              Tanks should lead the group,
+              collecting enemies ahead.
+            </p>
+
+            <p>
+              Healers keep the party alive
+              while DPS control and kill enemies.
+            </p>
+
+            <p>
+              Moving forward after Szass Tam's meteor showers
+              can reduce unnecessary deaths.
+            </p>
+
+
+            <h3>
+              REQUIRED SURVIVORS
+            </h3>
+
+            <p>
+              On Master,
+              at least nine players must survive
+              to the end of the bridge sequence.
+            </p>
+
+            <p>
+              Advanced requires six surviving players.
+            </p>
+
+            <p>
+              Standard requires three surviving players.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          DPS JOB
-        </p>
+            <p>
+              Reach the final circular platform
+              before time expires
+              to complete Soul Harvest.
+            </p>
 
-        <h2>
-          BIOME STUN MECHANICS
-        </h2>
+          </article>
+
+
+
+          <!-- SZASS TAM -->
+
+          <article
+            class="build-guide-panel"
+            id="szass-tam"
+          >
 
-        <p>
-          DPS should first help kill the green and blue support ghosts,
-          then kill red Soul of the Vanguard ghosts to gain their own special buff.
-        </p>
+            <p class="build-panel-eyebrow">
+              GLOBAL MECHANICS
+            </p>
 
-        <p>
-          The red buff reduces incoming damage and provides healing over time,
-          which is critical while supports are away.
-        </p>
+            <h2>
+              SZASS TAM'S EDICTS & POWERS
+            </h2>
 
+            <p>
+              Szass Tam can interfere throughout the trial
+              with random edicts and powers.
+            </p>
 
-        <h3>
-          FAE BIOME
-        </h3>
+            <p>
+              On Master these can begin immediately.
+              On Advanced they begin once
+              the first biome bosses reach 50%.
+              Standard does not use his edicts.
+            </p>
 
-        <p>
-          Kill a red Soul of the Vanguard to gain the red buff.
-        </p>
 
-        <p>
-          Stand inside one of the purple pools while the buff is active.
-          This gradually grows a plant.
-        </p>
+            <h3>
+              CHAOS
+            </h3>
 
-        <p>
-          After roughly 30 seconds, a small creature spawns and moves toward the boss.
-          When it reaches the boss, the trial timer increases.
-        </p>
+            <p>
+              Temporarily disables
+              a random category of player powers.
+            </p>
 
-        <p>
-          Each DPS should use a separate pool because multiple players in the same pool
-          do not speed the mechanic up.
-        </p>
+            <p>
+              This can affect Dailies,
+              Encounters or At-Wills.
+              Tanks do not have their Encounters locked out.
+            </p>
 
-        <p>
-          Ideally two DPS begin growing plants immediately while one helps the supports
-          obtain their green and blue ghost buffs.
-        </p>
 
+            <h3>
+              DECAY
+            </h3>
 
-        <h3>
-          FIRE BIOME
-        </h3>
+            <p>
+              Reduces stamina regeneration.
+              Tanks should be especially careful
+              during this effect.
+            </p>
 
-        <p>
-          Kill mobs while the red Soul of the Vanguard buff is active.
-        </p>
 
-        <p>
-          Mobs drop soul currency that is shared between nearby DPS.
-        </p>
+            <h3>
+              OPPRESSION
+            </h3>
 
-        <p>
-          Deposit collected currency at the circular rune beneath the burning tree
-          in the centre of the biome to increase the timer.
-        </p>
+            <p>
+              Increases player ability cooldown times.
+            </p>
 
-        <p>
-          Currency is held individually, so each player needs to deposit their own.
-        </p>
 
+            <h3>
+              REGRESSION
+            </h3>
 
-        <h3>
-          ICE BIOME
-        </h3>
+            <p>
+              Disables Artifacts,
+              Mount powers and Utility slots.
+            </p>
 
-        <p>
-          Find the currently active stone pillar marked by a beacon.
-        </p>
+            <p>
+              This can seriously disrupt
+              Artifact-call timing.
+            </p>
 
-        <p>
-          Stand inside its yellow barrier to increase the trial timer and prevent
-          freezing.
-        </p>
 
-        <p>
-          More players inside the barrier increases the timer faster.
-        </p>
+            <h3>
+              WRATH
+            </h3>
 
-        <p>
-          Active pillars change throughout the phase, so the group must move together
-          from pillar to pillar.
-        </p>
+            <p>
+              At-Will powers damage the player
+              while active.
+            </p>
 
-        <p>
-          Players continuously gain Frostbite stacks.
-          Staying close to another player grants warmth and protects against Frostbite.
-        </p>
 
-        <p>
-          Too many Frostbite stacks will freeze a player in place.
-        </p>
+            <h3>
+              DARK STAR
+            </h3>
 
-      </article>
+            <p>
+              Creates large purple zones
+              that inflict the death-biome status effect,
+              reducing visibility
+              and dealing damage over time.
+            </p>
 
+            <p>
+              Avoid these zones.
+            </p>
 
 
-      <!-- SUPPORTS -->
+            <h3>
+              DISRUPT LIFE
+            </h3>
 
-      <article
-        class="build-guide-panel"
-        id="supports"
-      >
+            <p>
+              Reduces maximum player health significantly.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          SUPPORT JOB
-        </p>
+            <p>
+              Tanks need to be especially careful
+              with Tankbusters while this is active.
+            </p>
 
-        <h2>
-          HEALER & TANK SOUL SWAP
-        </h2>
 
-        <p>
-          Two support ghosts spawn:
-          Soul of the Devout in green and Soul of the Sentinel in blue.
-        </p>
+            <h3>
+              FRIGHTENING GAZE
+            </h3>
 
-        <p>
-          It does not matter who kills them, provided the tank and healer are
-          present in the biome when they die.
-        </p>
+            <p>
+              Significantly reduces player movement speed.
+            </p>
 
 
-        <h3>
-          SOUL OF THE DEVOUT
-        </h3>
+            <h3>
+              METEOR
+            </h3>
 
-        <p>
-          The healer receives the green buff.
-        </p>
+            <p>
+              Large AoE circles appear
+              and deal very heavy damage.
+            </p>
 
-        <p>
-          This allows the healer to transport their biome's soul through the maze
-          and deposit it at the biome occupied by the other team.
-        </p>
+            <p>
+              Avoid them where possible
+              rather than relying on immunity frames.
+            </p>
 
-        <p>
-          The healer also gains improved visibility of maze traps.
-        </p>
+          </article>
 
 
-        <h3>
-          SOUL OF THE SENTINEL
-        </h3>
 
-        <p>
-          The tank receives the blue buff.
-        </p>
+          <!-- STANDARD -->
 
-        <p>
-          This creates a protective bubble that helps the tank and nearby allies
-          survive the death biome's damage-over-time effect and improves visibility.
-        </p>
+          <article
+            class="build-guide-panel"
+            id="standard"
+          >
 
+            <p class="build-panel-eyebrow">
+              RTQ VERSION
+            </p>
 
-        <h3>
-          MAZE TRAVERSAL
-        </h3>
+            <h2>
+              STANDARD SOUL HARVEST
+            </h2>
 
-        <p>
-          The healer should lead through the maze because their green buff highlights
-          traps.
-        </p>
+            <p>
+              Standard Soul Harvest
+              is heavily simplified.
+            </p>
 
-        <p>
-          The tank follows closely, using the protective bubble to keep both players alive.
-        </p>
+            <p>
+              The entire group remains together
+              rather than splitting into two teams.
+            </p>
 
-        <p>
-          Avoid mobs where possible and avoid the wandering Tenebraloth.
-        </p>
+            <p>
+              There is no death-biome maze,
+              stun mechanic or soul-swap sequence.
+            </p>
 
-        <p>
-          Maze paths are randomised. The correct path should allow traps to be avoided
-          rather than requiring players to brute-force through them.
-        </p>
+            <p>
+              The group defeats each biome boss in sequence
+              using portals to move between them.
+            </p>
 
+            <p>
+              After the final boss,
+              everyone enters the bridge escape together.
+            </p>
 
-        <h3>
-          THE SWAP
-        </h3>
+          </article>
 
-        <p>
-          Both support teams should communicate before entering their destination biome.
-        </p>
 
-        <p>
-          Once both sides are ready, the tanks hard-taunt their respective bosses.
-        </p>
 
-        <p>
-          The healers then enter the green circle under the boss and deposit the souls.
-        </p>
+          <!-- COMMON WIPES -->
 
-        <p>
-          Once both deposits are complete, the wipe timer ends and the bosses become active again.
-        </p>
+          <article class="build-guide-panel">
 
-      </article>
+            <p class="build-panel-eyebrow">
+              WHAT USUALLY GOES WRONG
+            </p>
 
+            <h2>
+              COMMON WIPES
+            </h2>
 
+            <p>
+              Letting the Phase Two timer reach zero.
+            </p>
 
-      <!-- PHASE THREE -->
+            <p>
+              DPS failing to keep the biome stun mechanic active
+              while supports are in the maze.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="phase-three"
-      >
+            <p>
+              Supports dying in the death biome
+              or depositing souls at different times.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          THIRD PHASE
-        </p>
+            <p>
+              Losing control of phantom bosses
+              during Phase Five.
+            </p>
 
-        <h2>
-          FINISH THE BIOME BOSSES
-        </h2>
+            <p>
+              Failing to complete the final soul delivery
+              within the five-minute limit.
+            </p>
 
-        <p>
-          After the soul swap, portals briefly appear between the two active biomes.
-        </p>
+            <p>
+              Arriving at the final bridge platform
+              with too few surviving players.
+            </p>
 
-        <p>
-          These can be used to rearrange players if required.
-        </p>
+          </article>
 
-        <p>
-          Both biome bosses are now vulnerable again and should be killed.
-        </p>
 
-        <p>
-          Once both bosses are dead, portals appear that take both groups to the
-          final boss arena.
-        </p>
 
-        <p>
-          Tanks and healers should enter before DPS where possible.
-        </p>
+          <!-- CHAOS NOTES -->
 
-      </article>
+          <article
+            class="build-guide-panel chaos-notes-panel"
+            id="chaos-notes"
+          >
 
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
 
+            <h2>
+              CHAOS NOTES
+            </h2>
 
-      <!-- FINAL BOSS -->
+            <p>
+              Soul Harvest looks horrifying
+              because everybody is doing different shit
+              in different places at the same time.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="final-boss"
-      >
+            <p>
+              The easiest way to understand it
+              is to stop trying to remember everybody else's job.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          PHASES FOUR TO SIX
-        </p>
+            <p>
+              DPS:
+              keep the bloody timer alive.
+            </p>
 
-        <h2>
-          FINAL BOSS & PHANTOMS
-        </h2>
+            <p>
+              Healer:
+              get green,
+              lead the maze
+              and carry the soul.
+            </p>
 
-        <h3>
-          PHASE FOUR
-        </h3>
+            <p>
+              Tank:
+              get blue,
+              keep your healer alive
+              and control whatever currently wants to murder everybody.
+            </p>
 
-        <p>
-          The full group reunites.
-        </p>
+            <p>
+              Then everybody reunites,
+              murders the phantoms,
+              murders the boss,
+              splits again,
+              delivers more souls
+              and runs like hell across the bridge.
+            </p>
 
-        <p>
-          One tank can hold the boss while the second tank controls additional mobs.
-        </p>
+            <p>
+              Simple.
+              Well...
+              Neverwinter simple.
+            </p>
 
-        <p>
-          Reduce the boss to 50% health, where it locks again.
-        </p>
+          </article>
 
 
-        <h3>
-          PHASE FIVE - PHANTOM BOSSES
-        </h3>
 
-        <p>
-          Phantasmal versions of the two previously defeated biome bosses appear.
-        </p>
+          <!-- SOURCE -->
 
-        <p>
-          At the same time, the biome's stun mechanic becomes active again.
-        </p>
+          <article class="build-guide-panel">
 
-        <p>
-          DPS must keep extending the timer while the group kills both phantoms.
-        </p>
+            <p class="build-panel-eyebrow">
+              GUIDE SOURCE
+            </p>
 
-        <p>
-          Decide in advance which phantom the group will kill first.
-        </p>
+            <h2>
+              MECHANICS REFERENCE
+            </h2>
 
-        <p>
-          One tank should isolate the priority phantom while the second controls
-          the other phantom and any additional enemies.
-        </p>
+            <p>
+              Mechanics on this page are based
+              on the community-created M32 Soul Harvest Trial Guide
+              supplied to Rotating Chaos.
+            </p>
 
-        <p>
-          Once both phantoms are dead, the countdown stops.
-        </p>
+            <p>
+              The source guide notes
+              that individual boss powers were still marked TBA
+              at the time it was written,
+              so this page does not invent
+              those missing boss-specific mechanics.
+            </p>
 
+          </article>
 
-        <h3>
-          ICE PHANTOM WARNING
-        </h3>
 
-        <p>
-          If the final biome is Ice, the phantoms may target the active stun-mechanic
-          pillar directly.
-        </p>
+        </div>
 
-        <p>
-          DPS using the pillar need to move when these attacks arrive.
-        </p>
-
-        <p>
-          Tanks may temporarily lose effective threat control while the phantoms
-          focus on the pillar.
-        </p>
-
-
-        <h3>
-          PHASE SIX
-        </h3>
-
-        <p>
-          Finish the final boss.
-        </p>
-
-        <p>
-          Before the boss dies, organise two balanced groups where possible:
-          one tank, one healer and three DPS per party.
-        </p>
-
-        <p>
-          This prepares everyone for the final escape phase.
-        </p>
-
-      </article>
-
-
-
-      <!-- PHASE SEVEN -->
-
-      <article
-        class="build-guide-panel"
-        id="phase-seven"
-      >
-
-        <p class="build-panel-eyebrow">
-          FINAL PHASE
-        </p>
-
-        <h2>
-          SOUL DELIVERY & ESCAPE
-        </h2>
-
-        <p>
-          The group ends up in the Ice biome and the final timed sequence begins.
-        </p>
-
-        <p>
-          Split into the two planned five-player parties.
-        </p>
-
-        <p>
-          Kill the green and blue support ghosts again to obtain healer and tank buffs.
-        </p>
-
-        <p>
-          The two parties must then transport empowered souls through the death biome maze.
-        </p>
-
-        <p>
-          One team travels to Fae and the other to Fire.
-        </p>
-
-        <p>
-          Both healers deposit their empowered soul in the green circles where the
-          biome bosses previously stood.
-        </p>
-
-
-        <h3>
-          FIVE-MINUTE TIMER
-        </h3>
-
-        <p>
-          The guide states the group has five minutes to complete the maze,
-          deposit both empowered souls, return through the maze and reach the final gate.
-        </p>
-
-        <p>
-          Bell tolls occur approximately every 25 seconds.
-          The twelfth toll means the group wipes.
-        </p>
-
-
-        <h3>
-          BRIDGE ESCAPE
-        </h3>
-
-        <p>
-          After both souls are deposited, regroup at the bridge gate.
-        </p>
-
-        <p>
-          Tanks should lead the group, collecting enemies ahead.
-        </p>
-
-        <p>
-          Healers keep the party alive while DPS control and kill enemies.
-        </p>
-
-        <p>
-          Moving forward after Szass Tam's meteor showers can reduce unnecessary deaths.
-        </p>
-
-
-        <h3>
-          REQUIRED SURVIVORS
-        </h3>
-
-        <p>
-          On Master, at least nine players must survive to the end of the bridge sequence.
-        </p>
-
-        <p>
-          Advanced requires six surviving players.
-        </p>
-
-        <p>
-          Standard requires three surviving players.
-        </p>
-
-        <p>
-          Reach the final circular platform before time expires to complete Soul Harvest.
-        </p>
-
-      </article>
-
-
-
-      <!-- SZASS TAM -->
-
-      <article
-        class="build-guide-panel"
-        id="szass-tam"
-      >
-
-        <p class="build-panel-eyebrow">
-          GLOBAL MECHANICS
-        </p>
-
-        <h2>
-          SZASS TAM'S EDICTS & POWERS
-        </h2>
-
-        <p>
-          Szass Tam can interfere throughout the trial with random edicts and powers.
-        </p>
-
-        <p>
-          On Master these can begin immediately.
-          On Advanced they begin once the first biome bosses reach 50%.
-          Standard does not use his edicts.
-        </p>
-
-
-        <h3>
-          CHAOS
-        </h3>
-
-        <p>
-          Temporarily disables a random category of player powers.
-        </p>
-
-        <p>
-          This can affect Dailies, Encounters or At-Wills.
-          Tanks do not have their Encounters locked out.
-        </p>
-
-
-        <h3>
-          DECAY
-        </h3>
-
-        <p>
-          Reduces stamina regeneration.
-          Tanks should be especially careful during this effect.
-        </p>
-
-
-        <h3>
-          OPPRESSION
-        </h3>
-
-        <p>
-          Increases player ability cooldown times.
-        </p>
-
-
-        <h3>
-          REGRESSION
-        </h3>
-
-        <p>
-          Disables Artifacts, Mount powers and Utility slots.
-        </p>
-
-        <p>
-          This can seriously disrupt Artifact-call timing.
-        </p>
-
-
-        <h3>
-          WRATH
-        </h3>
-
-        <p>
-          At-Will powers damage the player while active.
-        </p>
-
-
-        <h3>
-          DARK STAR
-        </h3>
-
-        <p>
-          Creates large purple zones that inflict the death-biome status effect,
-          reducing visibility and dealing damage over time.
-        </p>
-
-        <p>
-          Avoid these zones.
-        </p>
-
-
-        <h3>
-          DISRUPT LIFE
-        </h3>
-
-        <p>
-          Reduces maximum player health significantly.
-        </p>
-
-        <p>
-          Tanks need to be especially careful with Tankbusters while this is active.
-        </p>
-
-
-        <h3>
-          FRIGHTENING GAZE
-        </h3>
-
-        <p>
-          Significantly reduces player movement speed.
-        </p>
-
-
-        <h3>
-          METEOR
-        </h3>
-
-        <p>
-          Large AoE circles appear and deal very heavy damage.
-        </p>
-
-        <p>
-          Avoid them where possible rather than relying on immunity frames.
-        </p>
-
-      </article>
-
-
-
-      <!-- STANDARD -->
-
-      <article
-        class="build-guide-panel"
-        id="standard"
-      >
-
-        <p class="build-panel-eyebrow">
-          RTQ VERSION
-        </p>
-
-        <h2>
-          STANDARD SOUL HARVEST
-        </h2>
-
-        <p>
-          Standard Soul Harvest is heavily simplified.
-        </p>
-
-        <p>
-          The entire group remains together rather than splitting into two teams.
-        </p>
-
-        <p>
-          There is no death-biome maze, stun mechanic or soul-swap sequence.
-        </p>
-
-        <p>
-          The group defeats each biome boss in sequence using portals to move between them.
-        </p>
-
-        <p>
-          After the final boss, everyone enters the bridge escape together.
-        </p>
-
-      </article>
-
-
-
-      <!-- COMMON WIPES -->
-
-      <article class="build-guide-panel">
-
-        <p class="build-panel-eyebrow">
-          WHAT USUALLY GOES WRONG
-        </p>
-
-        <h2>
-          COMMON WIPES
-        </h2>
-
-        <p>
-          Letting the Phase Two timer reach zero.
-        </p>
-
-        <p>
-          DPS failing to keep the biome stun mechanic active while supports are in the maze.
-        </p>
-
-        <p>
-          Supports dying in the death biome or depositing souls at different times.
-        </p>
-
-        <p>
-          Losing control of phantom bosses during Phase Five.
-        </p>
-
-        <p>
-          Failing to complete the final soul delivery within the five-minute limit.
-        </p>
-
-        <p>
-          Arriving at the final bridge platform with too few surviving players.
-        </p>
-
-      </article>
-
-
-
-      <!-- CHAOS NOTES -->
-
-      <article
-        class="build-guide-panel chaos-notes-panel"
-        id="chaos-notes"
-      >
-
-        <p class="build-panel-eyebrow">
-          FROM THE GUILD
-        </p>
-
-        <h2>
-          CHAOS NOTES
-        </h2>
-
-        <p>
-          Soul Harvest looks terrifying because there are a ridiculous number
-          of moving parts, but the fight becomes much easier once everyone knows
-          which mechanic actually belongs to their role.
-        </p>
-
-        <p>
-          DPS keep the clock alive. Supports perform the soul swap.
-          Tanks control positioning. Everyone survives the final bridge.
-          Do those four things and the wall of mechanics becomes considerably
-          less horrifying.
-        </p>
-
-      </article>
-
-
-
-      <!-- SOURCE -->
-
-      <article class="build-guide-panel">
-
-        <p class="build-panel-eyebrow">
-          GUIDE SOURCE
-        </p>
-
-        <h2>
-          MECHANICS REFERENCE
-        </h2>
-
-        <p>
-          Mechanics on this page are based on the community-created
-          M32 Soul Harvest Trial Guide supplied to Rotating Chaos.
-        </p>
-
-        <p>
-          The source guide notes that individual boss powers were still marked
-          TBA at the time it was written, so this page does not invent those
-          missing boss-specific mechanics.
-        </p>
-
-      </article>
+      </details>
 
 
 
@@ -1032,7 +1590,7 @@
 
 
 
-      <!-- BACK TO MECHANICS HUB -->
+      <!-- BACK -->
 
       <div class="build-back-link">
 
@@ -1047,9 +1605,7 @@
 
 
 
-    <!-- ======================================================
-         FOOTER
-         ====================================================== -->
+    <!-- FOOTER -->
 
     <footer>
 

@@ -7,10 +7,10 @@
 
   <meta
     name="description"
-    content="Rotating Chaos Neverwinter Whisperknife Rogue Build Guide"
+    content="Rotating Chaos Neverwinter Whisperknife Build Guide"
   >
 
-  <title>Whisperknife Rogue | Rotating Chaos</title>
+  <title>Whisperknife | Rotating Chaos</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,7 +84,7 @@
 
 
     <!-- ======================================================
-         BUILD HERO
+         HERO
          ====================================================== -->
 
     <section class="magic-page-hero build-detail-hero">
@@ -95,7 +95,7 @@
 
           <img
             src="images/rogue.png"
-            alt="Rogue Whisperknife"
+            alt="Whisperknife"
           >
 
         </div>
@@ -124,19 +124,17 @@
 
 
     <!-- ======================================================
-         BUILD NAVIGATION
+         QUICK NAV
          ====================================================== -->
 
     <nav class="build-section-nav">
 
-      <a href="#overview">Overview</a>
-      <a href="#stats">Stats</a>
-      <a href="#gear">Gear</a>
+      <a href="#character">Character</a>
       <a href="#enchantments">Enchantments</a>
       <a href="#artifacts">Artifacts</a>
       <a href="#companions">Companions</a>
       <a href="#mounts">Mounts</a>
-      <a href="#powers">Powers & Feats</a>
+      <a href="#powers">Powers</a>
       <a href="#boons">Boons</a>
       <a href="#rotation">Rotation</a>
 
@@ -144,984 +142,1939 @@
 
 
 
-    <!-- ======================================================
-         BUILD CONTENT
-         ====================================================== -->
-
     <section class="build-detail-page">
 
 
-      <!-- OVERVIEW -->
+      <!-- ======================================================
+           CHARACTER SHEET
+           ====================================================== -->
 
-      <article
-        class="build-guide-panel build-overview"
-        id="overview"
+      <section
+        class="paragon-loadout-sheet"
+        id="character"
       >
 
-        <p class="build-panel-eyebrow">
-          THE BUILD
-        </p>
+        <div class="paragon-sheet-header">
 
-        <h2>
-          OVERVIEW
-        </h2>
+          <p class="paragon-sheet-eyebrow">
+            ◆ DPS LOADOUT ◆
+          </p>
 
-        <p>
-          Whisperknife is a fast Rogue DPS path built around Stealth,
-          positional damage, damage-over-time effects and explosive burst
-          during coordinated artifact calls.
-        </p>
+          <h2>
+            WHISPERKNIFE CHARACTER SHEET
+          </h2>
 
-        <p>
-          Single target revolves around maintaining Disheartening Strike,
-          staying in Combat Advantage and combining Stealth with Shadow Strike,
-          Lashing Blade and Impact Shot. Multi target changes the rhythm
-          completely, throwing you directly into the middle of enemy packs with
-          Blade Flurry, Smoke Bomb and Path of the Blade.
-        </p>
+          <p class="paragon-sheet-subtitle">
+            Flank it. Keep Disheartening Strike ticking.
+            Disappear. Throw sharp shit. Repeat until the problem stops moving.
+          </p>
 
-        <p>
-          The build can be used throughout the game, although its maximum-DPS
-          configuration is particularly optimised for boss encounters and
-          assumes useful support from the rest of the party.
-        </p>
+        </div>
 
-        <div class="build-callout">
+
+
+        <div class="paragon-character-layout">
+
+
+          <!-- LEFT GEAR -->
+
+          <div class="paragon-gear-column paragon-gear-column-left">
+
+
+            <!-- HEAD -->
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">HEAD</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">HEAD</span>
+                <h3 class="paragon-gear-name">Current DPS Headpiece</h3>
+                <span class="paragon-gear-il">Damage ◆ Stats</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>HEAD SLOT</h4>
+                <p>
+                  Prioritise a reliable offensive effect and the
+                  percentages your finished build actually needs.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <!-- ARMOR -->
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">ARMOR</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">ARMOR</span>
+                <h3 class="paragon-gear-name">Current DPS Armor</h3>
+                <span class="paragon-gear-il">Reliable Damage</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>ARMOR SLOT</h4>
+                <p>
+                  Use a current damage piece with an offensive bonus
+                  that remains useful throughout the fight.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <!-- ARMS -->
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">ARMS</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">ARMS</span>
+                <h3 class="paragon-gear-name">Current Damage Arms</h3>
+                <span class="paragon-gear-il">Content Dependent</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>ARMS SLOT</h4>
+                <p>
+                  Keep Astral Raider's Gloves for scaled content.
+                  Bindings of the Death Pact are the preferred
+                  multi-target option.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <!-- MAIN HAND -->
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">MAIN</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">MAIN HAND</span>
+                <h3 class="paragon-gear-name">Current Artifact Weapon</h3>
+                <span class="paragon-gear-il">Endgame Target</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>MAIN HAND</h4>
+                <p>
+                  Current artifact weapons are the long-term target.
+                  Voidtouched and Xaryxian remain strong alternatives,
+                  particularly in scaled single-target fights.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <!-- OFF HAND -->
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">OFF</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">OFF-HAND</span>
+                <h3 class="paragon-gear-name">Current Artifact Weapon</h3>
+                <span class="paragon-gear-il">Endgame Target</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>OFF-HAND</h4>
+                <p>
+                  Pair with the current main-hand weapon and use
+                  modifications to help finish the offensive spread.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <!-- FEET -->
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">FEET</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">FEET</span>
+                <h3 class="paragon-gear-name">Celestial Boots / Safer Alternative</h3>
+                <span class="paragon-gear-il">Damage ◆ Risk</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>FEET SLOT</h4>
+                <p>
+                  Celestial boots offer a large damage bonus but cost
+                  20% maximum health. Use a safer alternative while
+                  learning difficult content if needed.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- CHARACTER CENTRE -->
+
+          <div class="paragon-character-centre">
+
+            <div class="paragon-character-frame">
+
+              <div class="paragon-character-placeholder">
+                WHISPERKNIFE TOON
+              </div>
+
+            </div>
+
+
+            <div class="paragon-build-snapshot">
+
+              <div class="paragon-snapshot-stat">
+                <strong>ROLE</strong>
+                <span>DPS</span>
+              </div>
+
+              <div class="paragon-snapshot-stat">
+                <strong>CLASS</strong>
+                <span>Rogue</span>
+              </div>
+
+              <div class="paragon-snapshot-stat">
+                <strong>FOCUS</strong>
+                <span>Burst</span>
+              </div>
+
+              <div class="paragon-snapshot-stat">
+                <strong>CORE</strong>
+                <span>Stealth</span>
+              </div>
+
+              <div class="paragon-snapshot-stat">
+                <strong>POSITION</strong>
+                <span>Combat Advantage</span>
+              </div>
+
+              <div class="paragon-snapshot-stat">
+                <strong>STYLE</strong>
+                <span>DoT + Burst</span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- RIGHT GEAR -->
+
+          <div class="paragon-gear-column paragon-gear-column-right">
+
+
+            <!-- NECK -->
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">NECK</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">NECK</span>
+                <h3 class="paragon-gear-name">Current Damage Set</h3>
+                <span class="paragon-gear-il">Offensive Set</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>NECK SLOT</h4>
+                <p>
+                  Use a current offensive set that complements the
+                  finished stat spread and damage setup.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <!-- RIGHT RING -->
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">RING</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">RIGHT RING</span>
+                <h3 class="paragon-gear-name">Current Damage Ring</h3>
+                <span class="paragon-gear-il">Damage ◆ Stats</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>RIGHT RING</h4>
+                <p>
+                  Choose around useful damage bonuses and whichever
+                  offensive percentages still need completing.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <!-- LEFT RING -->
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">RING</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">LEFT RING</span>
+                <h3 class="paragon-gear-name">Current Damage Ring</h3>
+                <span class="paragon-gear-il">Damage ◆ Stats</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>LEFT RING</h4>
+                <p>
+                  Use the second ring to finish the offensive build
+                  rather than simply chasing the highest item level.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <!-- WAIST -->
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">WAIST</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">WAIST</span>
+                <h3 class="paragon-gear-name">Current Damage Set</h3>
+                <span class="paragon-gear-il">Offensive Set</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>WAIST SLOT</h4>
+                <p>
+                  Pair with the selected neck piece and rebalance
+                  remaining offensive stats around the finished set.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <!-- SHIRT -->
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">SHIRT</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">SHIRT</span>
+                <h3 class="paragon-gear-name">Offensive Shirt</h3>
+                <span class="paragon-gear-il">Damage ◆ Stats</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>SHIRT SLOT</h4>
+                <p>
+                  Use this slot to finish whichever offensive
+                  percentages remain short.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <!-- TROUSERS -->
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">LEGS</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">TROUSERS</span>
+                <h3 class="paragon-gear-name">Offensive Trousers</h3>
+                <span class="paragon-gear-il">Damage ◆ Stats</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>TROUSERS SLOT</h4>
+                <p>
+                  Finish the offensive spread without wasting ratings
+                  on percentages already covered by combat buffs.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="paragon-chaos-tip">
 
           <strong>THE IMPORTANT BIT:</strong>
           Whisperknife isn't "stand somewhere vaguely nearby and throw knives."
-          Positioning, Stealth timing and the ten-second artifact window matter
-          enormously.
+          Positioning, Stealth timing and the artifact window matter enormously.
 
         </div>
 
-      </article>
+      </section>
 
 
 
-      <!-- STATS -->
+      <!-- ======================================================
+           STATS
+           ====================================================== -->
 
-      <article
-        class="build-guide-panel"
-        id="stats"
-      >
+      <section class="paragon-visual-section">
 
-        <p class="build-panel-eyebrow">
-          PRIORITIES
-        </p>
+        <div class="paragon-visual-section-header">
 
-        <h2>
-          STAT PRIORITIES
-        </h2>
+          <h2>STAT PRIORITIES</h2>
 
-        <p>
-          Build toward strong total offensive percentages rather than chasing
-          ratings or item level alone. The finished build should account for
-          party buffs and temporary effects that only appear during combat.
-        </p>
+          <p>
+            Build around your actual combat percentages, not whichever number looks prettiest on the character sheet.
+          </p>
 
-        <div class="build-stat-row">
-          <strong>1 ◆ DAMAGE & MAGNITUDE</strong>
-          <span>
-            Item level contributes to base Damage, but scaled content limits
-            its value. Strong damage bonuses can therefore outperform raw item
-            level.
-          </span>
         </div>
 
-        <div class="build-stat-row">
-          <strong>2 ◆ POWER</strong>
-          <span>
-            One of the main offensive percentages and a core part of the
-            finished damage build.
-          </span>
+
+        <div class="paragon-item-grid">
+
+          <div class="paragon-item-card">
+            <h3>1 ◆ DAMAGE & MAGNITUDE</h3>
+            <p>
+              Strong damage bonuses can outperform raw item level,
+              particularly in scaled content.
+            </p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>2 ◆ POWER</h3>
+            <p>Core offensive percentage.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>3 ◆ COMBAT ADVANTAGE</h3>
+            <p>
+              Extremely important. Flank whenever possible and keep it active.
+            </p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>4 ◆ CRITICAL STRIKE</h3>
+            <p>
+              Build toward 90% total alongside Critical Severity.
+            </p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>5 ◆ CRITICAL SEVERITY</h3>
+            <p>
+              Build alongside Critical Strike and continue toward 120%.
+            </p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>6 ◆ ACCURACY</h3>
+            <p>
+              Useful, but the lowest offensive priority.
+            </p>
+          </div>
+
         </div>
 
-        <div class="build-stat-row">
-          <strong>3 ◆ COMBAT ADVANTAGE</strong>
-          <span>
-            Extremely important. Whisperknife should flank whenever possible
-            so Combat Advantage remains active.
-          </span>
-        </div>
 
-        <div class="build-stat-row">
-          <strong>4 ◆ CRITICAL STRIKE</strong>
-          <span>
-            Build toward 90% total percentage alongside Critical Severity.
-          </span>
-        </div>
-
-        <div class="build-stat-row">
-          <strong>5 ◆ CRITICAL SEVERITY</strong>
-          <span>
-            Build alongside Critical Strike. Critical Severity can continue
-            beyond 90% toward 120%.
-          </span>
-        </div>
-
-        <div class="build-stat-row">
-          <strong>6 ◆ ACCURACY</strong>
-          <span>
-            Useful, but the lowest offensive priority. Finish it after the
-            stronger damage percentages.
-          </span>
-        </div>
-
-        <div class="build-callout">
+        <div class="paragon-chaos-tip">
 
           <strong>ABILITY SCORES:</strong>
-          Strength and Dexterity are the standard offensive choices. If your
-          Critical Severity is already pushing beyond 120%, move some Dexterity
-          into Charisma instead.
+          Strength + Dexterity.
+          If Critical Severity is already pushing beyond 120%,
+          move some Dexterity into Charisma instead.
 
         </div>
 
-      </article>
+      </section>
 
 
 
-      <!-- GEAR -->
+      <!-- ======================================================
+           ENCHANTMENTS
+           ====================================================== -->
 
-      <article
-        class="build-guide-panel"
-        id="gear"
-      >
-
-        <p class="build-panel-eyebrow">
-          LOADOUT
-        </p>
-
-        <h2>
-          GEAR
-        </h2>
-
-        <p>
-          The build has a full progression route from easily accessible level
-          20 gear through advanced and master-content equipment. Don't assume
-          the newest or highest-item-level piece automatically wins,
-          particularly in scaled content.
-        </p>
-
-        <div class="build-info-grid">
-
-          <div class="build-info-card">
-            <h3>WEAPONS</h3>
-            <p>
-              Current artifact weapons are the long-term progression target.
-              Voidtouched and Xaryxian weapons remain strong alternatives and
-              can perform extremely well in scaled single-target fights.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>HEAD</h3>
-            <p>
-              Prioritise a reliable offensive effect and the stats needed by
-              the finished build rather than item level by itself.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>ARMOUR</h3>
-            <p>
-              Use a current damage piece with a consistently useful offensive
-              bonus.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>ARMS ◆ SCALED CONTENT</h3>
-            <p>
-              Astral Raider's Gloves are extremely strong whenever the content
-              scales your item level down and can outperform newer,
-              higher-item-level arms.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>ARMS ◆ MULTI TARGET</h3>
-            <p>
-              Bindings of the Death Pact from Master Shackles of Divinity are
-              the preferred multi-target arms.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>FEET</h3>
-            <p>
-              Celestial boots can provide a large damage bonus but cost 20% of
-              your health. Don't use them while learning difficult content if
-              that trade makes you unnecessarily squishy.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>RINGS</h3>
-            <p>
-              Choose rings around useful damage bonuses and whatever offensive
-              percentages still need completing.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>ARMOUR KITS & JEWELS</h3>
-            <p>
-              The source setup uses four Critical Severity and four Combat
-              Advantage modifications, adjusted if your own stat spread needs
-              something different.
-            </p>
-          </div>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- ENCHANTMENTS -->
-
-      <article
-        class="build-guide-panel"
+      <section
+        class="paragon-visual-section"
         id="enchantments"
       >
 
-        <p class="build-panel-eyebrow">
-          ENHANCEMENTS
-        </p>
+        <div class="paragon-visual-section-header">
 
-        <h2>
-          ENCHANTMENTS & REINFORCEMENTS
-        </h2>
+          <h2>ENCHANTMENTS</h2>
 
-        <p>
-          Enchantments should finish the offensive spread rather than blindly
-          copying another Rogue's exact distribution.
-        </p>
-
-        <div class="build-info-grid">
-
-          <div class="build-info-card">
-            <h3>COMBAT ENCHANTMENT</h3>
-            <p>
-              Lightning Flash is the main combat enchantment in this build.
-              Swift Synergy can technically be used, but requires rebuilding
-              around it and offers limited benefit for the additional cost.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>OVERLOADS</h3>
-            <p>
-              Rage of Flames can be replaced by enemy-specific or
-              zone-specific overloads when the content makes those stronger.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>DEFENSIVE SLOTS</h3>
-            <p>
-              Garnets are preferred for Defense, although spare high-rank
-              defensive enchantments are perfectly usable while progressing.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>OFFENSIVE SLOTS</h3>
-            <p>
-              Fill whichever of Power, Combat Advantage, Critical Strike,
-              Critical Severity or Accuracy your completed build still needs.
-            </p>
-          </div>
+          <p>
+            Fill the holes in your build. Don't blindly copy another Rogue's exact bloody distribution.
+          </p>
 
         </div>
 
-      </article>
+
+        <div class="paragon-item-grid">
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">FLASH</span>
+            </div>
+
+            <h3>LIGHTNING FLASH</h3>
+
+            <p>
+              Main combat enchantment for the current build.
+            </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">SWIFT</span>
+            </div>
+
+            <h3>SWIFT SYNERGY</h3>
+
+            <p>
+              Possible alternative, but requires rebuilding around it
+              for relatively limited additional benefit.
+            </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">FLAME</span>
+            </div>
+
+            <h3>RAGE OF FLAMES</h3>
+
+            <p>
+              Standard overload option. Replace with enemy-specific
+              or zone-specific overloads where appropriate.
+            </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">GAR</span>
+            </div>
+
+            <h3>GARNETS</h3>
+
+            <p>
+              Preferred defensive enchantment for Defense.
+            </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">OFF</span>
+            </div>
+
+            <h3>OFFENSIVE SLOTS</h3>
+
+            <p>
+              Fill Power, Combat Advantage, Critical Strike,
+              Critical Severity or Accuracy as required.
+            </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">KIT</span>
+            </div>
+
+            <h3>REINFORCEMENTS</h3>
+
+            <p>
+              Source setup uses four Critical Severity and four
+              Combat Advantage modifications, adjusted for your stats.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </section>
 
 
 
-      <!-- ARTIFACTS -->
+      <!-- ======================================================
+           ARTIFACTS
+           ====================================================== -->
 
-      <article
-        class="build-guide-panel"
+      <section
+        class="paragon-visual-section"
         id="artifacts"
       >
 
-        <p class="build-panel-eyebrow">
-          POWER
-        </p>
+        <div class="paragon-visual-section-header">
 
-        <h2>
-          ARTIFACTS
-        </h2>
+          <h2>ARTIFACTS</h2>
 
-        <p>
-          Whisperknife's damage spikes dramatically during the party's
-          coordinated artifact window, making artifact timing one of the most
-          important parts of the build.
-        </p>
-
-        <div class="build-info-grid">
-
-          <div class="build-info-card">
-            <h3>NIGHTFLAME CENSER</h3>
-            <p>
-              One of the secondary artifacts used in the capped DPS setup.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>DEMON SKULL</h3>
-            <p>
-              Strong secondary artifact option within the endgame build.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>BROKEN HALO</h3>
-            <p>
-              Another current secondary option obtained from Shackles of
-              Divinity content.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>ARMA-EGG-ON</h3>
-            <p>
-              Additional secondary artifact option used to complete the
-              offensive setup.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>PRIMARY ARTIFACT</h3>
-            <p>
-              Use the group-support artifact assigned to you for the party's
-              coordinated call. The important part is stacking complementary
-              buffs and debuffs together.
-            </p>
-          </div>
+          <p>
+            Ten seconds of coordinated murder. Try not to be admiring the scenery when the call happens.
+          </p>
 
         </div>
 
-        <div class="build-callout">
+
+        <div class="paragon-item-grid">
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">ACTIVE</span>
+            </div>
+
+            <h3>PRIMARY ARTIFACT</h3>
+
+            <p>
+              Use the group-support artifact assigned to you for
+              the coordinated party call.
+            </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">NIGHT</span>
+            </div>
+
+            <h3>NIGHTFLAME CENSER</h3>
+
+            <p>
+              Secondary artifact used within the capped DPS setup.
+            </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">SKULL</span>
+            </div>
+
+            <h3>DEMON SKULL</h3>
+
+            <p>
+              Strong secondary artifact option for the endgame build.
+            </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">HALO</span>
+            </div>
+
+            <h3>BROKEN HALO</h3>
+
+            <p>
+              Current secondary option from Shackles of Divinity content.
+            </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">EGG</span>
+            </div>
+
+            <h3>ARMA-EGG-ON</h3>
+
+            <p>
+              Additional secondary artifact option for completing
+              the offensive setup.
+            </p>
+
+          </div>
+
+
+        </div>
+
+
+        <div class="paragon-chaos-tip">
 
           <strong>WHY THE CALL MATTERS:</strong>
-          A properly supported ten-second artifact window can produce roughly
-          three to four times your normal damage. Missing it is therefore not a
-          tiny optimisation problem. It's a rather large "where the fuck did my
-          damage go?" problem. 😂
+          A properly supported artifact window can produce roughly
+          three to four times normal damage. Missing it is less
+          "tiny optimisation issue" and more "where the fuck did my damage go?" 😂
 
         </div>
 
-      </article>
+      </section>
 
 
 
-      <!-- COMPANIONS -->
+      <!-- ======================================================
+           COMPANIONS
+           ====================================================== -->
 
-      <article
-        class="build-guide-panel"
+      <section
+        class="paragon-visual-section"
         id="companions"
       >
 
-        <p class="build-panel-eyebrow">
-          YOUR CREW
-        </p>
+        <div class="paragon-visual-section-header">
 
-        <h2>
-          COMPANIONS
-        </h2>
+          <h2>COMPANIONS</h2>
 
-        <p>
-          In endgame master content, the summoned companion is normally chosen
-          for party support: increasing group stats, increasing damage or
-          helping the party maintain Combat Advantage.
-        </p>
+          <p>
+            Personal damage, boss damage and enough group support to prove Rogues can occasionally cooperate.
+          </p>
 
-        <div class="build-info-grid">
+        </div>
 
-          <div class="build-info-card">
+
+        <div class="paragon-item-grid">
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">POTENT</span>
+            </div>
+
             <h3>POTENT PRECISION</h3>
+
             <p>
-              Useful offensive companion bonus and available from several
-              companions.
+              Useful offensive companion bonus available from
+              several companions.
             </p>
+
           </div>
 
-          <div class="build-info-card">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">RAPTOR</span>
+            </div>
+
             <h3>TAMED RAPTOR</h3>
+
             <p>
-              Strong Power option when coordinated with other Raptor bonuses in
-              the party.
+              Strong Power option when coordinated with other
+              Raptor bonuses in the party.
             </p>
+
           </div>
 
-          <div class="build-info-card">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">NWK</span>
+            </div>
+
             <h3>NEVERWINTER KNIGHT</h3>
+
             <p>
               Strong personal damage companion bonus.
             </p>
+
           </div>
 
-          <div class="build-info-card">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">MINSC</span>
+            </div>
+
             <h3>MINSC</h3>
+
             <p>
-              Boss-oriented damage option for the offensive companion slots.
+              Boss-oriented damage option for offensive companion slots.
             </p>
+
           </div>
 
-          <div class="build-info-card">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">BATIRI</span>
+            </div>
+
             <h3>BATIRI</h3>
+
             <p>
               Another useful boss-damage option.
             </p>
+
           </div>
 
-          <div class="build-info-card">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">DOG</span>
+            </div>
+
             <h3>DOG / KENKU ARCHER</h3>
+
             <p>
-              Accessible offensive options that can fill the remaining
-              companion slots.
+              Accessible offensive alternatives for remaining slots.
             </p>
+
           </div>
 
-          <div class="build-info-card">
-            <h3>COMPANION ENHANCEMENT</h3>
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">DEBUFF</span>
+            </div>
+
+            <h3>ENHANCEMENT</h3>
+
             <p>
-              Coordinate enemy-stat-reduction enhancements across the party.
-              They are not intended to stack with identical copies, so don't
-              have everyone bring the same bloody one.
+              Coordinate enemy-stat-reduction enhancements with
+              the party. Identical copies aren't the bloody plan.
             </p>
+
           </div>
 
-          <div class="build-info-card">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">GEAR</span>
+            </div>
+
             <h3>COMPANION GEAR</h3>
+
             <p>
-              Current companion gear can be obtained through Red Harvest or
-              the relevant companion lockbox and should be used to finish the
-              offensive stat spread.
+              Use current gear to finish the offensive stat spread.
             </p>
+
           </div>
+
 
         </div>
 
-      </article>
+      </section>
 
 
 
-      <!-- MOUNTS -->
+      <!-- ======================================================
+           MOUNTS
+           ====================================================== -->
 
-      <article
-        class="build-guide-panel"
+      <section
+        class="paragon-visual-section"
         id="mounts"
       >
 
-        <p class="build-panel-eyebrow">
-          RIDE INTO CHAOS
-        </p>
+        <div class="paragon-visual-section-header">
 
-        <h2>
-          MOUNTS
-        </h2>
+          <h2>MOUNTS</h2>
 
-        <p>
-          Physical single-target mount attacks are particularly attractive to
-          Rogue because Strength increases physical damage.
-        </p>
+          <p>
+            Physical single-target attacks work particularly well because Strength already supports physical damage.
+          </p>
 
-        <div class="build-info-grid">
+        </div>
 
-          <div class="build-info-card">
+
+        <div class="paragon-item-grid">
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">DOG</span>
+            </div>
+
             <h3>DEMONIC GRAVEHOUND</h3>
+
             <p>
-              Strong physical single-target combat power and one of the
-              preferred options.
+              Strong physical single-target combat power and one
+              of the preferred options.
             </p>
+
           </div>
 
-          <div class="build-info-card">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">HAND</span>
+            </div>
+
             <h3>BIGBY'S HAND</h3>
+
             <p>
-              Another strong physical single-target option.
+              Another strong physical single-target combat power.
             </p>
+
           </div>
 
-          <div class="build-info-card">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">TOAD</span>
+            </div>
+
             <h3>LEGENDARY GIANT TOAD</h3>
+
             <p>
               Viable magical single-target alternative.
             </p>
+
           </div>
 
-          <div class="build-info-card">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">TV</span>
+            </div>
+
             <h3>TUNNEL VISION</h3>
+
             <p>
-              Accessible single-target combat power available from many mounts.
+              Accessible single-target combat power available
+              from many mounts.
             </p>
+
           </div>
 
-          <div class="build-info-card">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">FER</span>
+            </div>
+
             <h3>FEROCITY</h3>
+
             <p>
               Offensive mount equip bonus option.
             </p>
+
           </div>
 
-          <div class="build-info-card">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">PACK</span>
+            </div>
+
             <h3>PACK TACTICS</h3>
+
             <p>
-              Alternative mount equip bonus depending on the finished setup.
+              Alternative equip bonus depending on the finished setup.
             </p>
+
           </div>
+
 
         </div>
 
 
-        <h3>INSIGNIA BONUSES</h3>
+        <div class="paragon-chaos-tip">
 
-        <ul class="build-list">
-          <li>Artificer's Enticement</li>
-          <li>Enchanter's Hex</li>
-          <li>Executioner's Covenant</li>
-          <li>Tactician's Precision</li>
-          <li>Cavalry's Haste</li>
-        </ul>
+          <strong>INSIGNIA BONUSES:</strong>
+          Artificer's Enticement ◆ Enchanter's Hex ◆
+          Executioner's Covenant ◆ Tactician's Precision ◆ Cavalry's Haste
+
+        </div>
 
 
-        <h3>INSIGNIAS & COLLARS</h3>
+        <div class="paragon-chaos-tip">
 
-        <p>
-          The source setup uses seven Skill, eleven Brutality and two Dominance
-          insignias. Collar bonuses cover Encounter Power Damage, Stamina Gain,
-          Movement Speed or Incoming Healing, Critical Severity and the Rough
-          Astral Diamond utility slot.
-        </p>
+          <strong>INSIGNIAS:</strong>
+          Source setup uses 7 Skill ◆ 11 Brutality ◆ 2 Dominance.
+          Rebalance if your own finished percentages require it.
 
-      </article>
+        </div>
+
+      </section>
 
 
 
-      <!-- POWERS -->
+      <!-- ======================================================
+           POWERS
+           ====================================================== -->
 
-      <article
-        class="build-guide-panel"
+      <section
+        class="paragon-visual-section"
         id="powers"
       >
 
-        <p class="build-panel-eyebrow">
-          COMBAT
-        </p>
+        <div class="paragon-visual-section-header">
 
-        <h2>
-          POWERS & FEATS
-        </h2>
+          <h2>SINGLE TARGET</h2>
 
-        <p>
-          Whisperknife uses noticeably different single-target and
-          multi-target power setups. Don't try to make one bar do both jobs
-          badly when loadouts exist.
-        </p>
-
-
-        <h3>SINGLE TARGET</h3>
-
-        <div class="build-info-grid">
-
-          <div class="build-info-card">
-            <h3>DISHEARTENING STRIKE</h3>
-            <p>
-              Maintain its damage-over-time effect and damage buff by
-              refreshing it roughly every ten seconds.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>CLOUD OF STEEL</h3>
-            <p>
-              Main filler attack. It also helps maintain continual Action Point
-              generation between encounter cycles.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>SHADOW STRIKE</h3>
-            <p>
-              Core part of the normal single-target sequence and used
-              immediately after entering Stealth.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>LASHING BLADE</h3>
-            <p>
-              Heavy single-target encounter used immediately after Shadow
-              Strike.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>IMPACT SHOT</h3>
-            <p>
-              Standard final encounter in the single-target sequence.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>SMOKE BOMB</h3>
-            <p>
-              Swap this in for Impact Shot when a boss encounter contains adds
-              or when extra crowd control and multi-target damage are useful.
-            </p>
-          </div>
+          <p>
+            Maintain the DoT. Get Combat Advantage. Stealth. Then introduce the boss to several sharp objects.
+          </p>
 
         </div>
 
 
-        <h3>MULTI TARGET</h3>
+        <div class="paragon-power-row">
 
-        <div class="build-info-grid">
 
-          <div class="build-info-card">
-            <h3>BLADE FLURRY</h3>
-            <p>
-              Main AoE burst encounter. Normally use it once during Stealth
-              rather than immediately spending both charges.
-            </p>
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">DS</span>
+            </div>
+
+            <strong>DISHEARTENING STRIKE</strong>
+
           </div>
 
-          <div class="build-info-card">
-            <h3>SMOKE BOMB</h3>
-            <p>
-              Drop it into the pack after the opening Blade Flurry.
-            </p>
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">COS</span>
+            </div>
+
+            <strong>CLOUD OF STEEL</strong>
+
           </div>
 
-          <div class="build-info-card">
-            <h3>PATH OF THE BLADE</h3>
-            <p>
-              Adds sustained multi-target damage while you're fighting inside
-              the enemy pack.
-            </p>
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">SS</span>
+            </div>
+
+            <strong>SHADOW STRIKE</strong>
+
           </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">LB</span>
+            </div>
+
+            <strong>LASHING BLADE</strong>
+
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">IS</span>
+            </div>
+
+            <strong>IMPACT SHOT</strong>
+
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">SB</span>
+            </div>
+
+            <strong>SMOKE BOMB ◆ SWAP</strong>
+
+          </div>
+
 
         </div>
 
 
-        <h3>POSITIONING FEATURES</h3>
 
-        <p>
-          Dagger Threat is useful when you can maintain normal boss flanking.
-          Swap to Advantageous Position when boss mechanics or spawned mobs
+        <div class="paragon-visual-section-header">
+
+          <h2>MULTI TARGET</h2>
+
+          <p>
+            Walk directly into the middle of everybody. Because apparently Rogues don't require personal space. 😂
+          </p>
+
+        </div>
+
+
+        <div class="paragon-power-row">
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">BF</span>
+            </div>
+
+            <strong>BLADE FLURRY</strong>
+
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">SB</span>
+            </div>
+
+            <strong>SMOKE BOMB</strong>
+
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">POTB</span>
+            </div>
+
+            <strong>PATH OF THE BLADE</strong>
+
+          </div>
+
+
+        </div>
+
+
+        <div class="paragon-chaos-tip">
+
+          <strong>POSITIONING FEATURE:</strong>
+          Dagger Threat when normal boss flanking is reliable.
+          Swap to Advantageous Position when mechanics or adds
           make reliable flanking difficult.
-        </p>
 
-      </article>
+        </div>
+
+      </section>
 
 
 
-      <!-- BOONS -->
+      <!-- ======================================================
+           BOONS
+           ====================================================== -->
 
-      <article
-        class="build-guide-panel"
+      <section
+        class="paragon-visual-section"
         id="boons"
       >
 
-        <p class="build-panel-eyebrow">
-          PROGRESSION
-        </p>
+        <div class="paragon-visual-section-header">
 
-        <h2>
-          BOONS
-        </h2>
+          <h2>BOONS</h2>
 
-        <p>
-          Prioritise boons that increase the offensive percentages the build
-          needs, followed by bonuses against the enemy types you're actually
-          fighting.
-        </p>
+          <p>
+            Damage first. Useful enemy bonuses second. Random shiny nonsense considerably later.
+          </p>
 
-        <ul class="build-list">
-          <li>Power</li>
-          <li>Combat Advantage</li>
-          <li>Critical Strike</li>
-          <li>Critical Severity</li>
-          <li>Accuracy</li>
-          <li>Enemy-specific damage bonuses</li>
-          <li>Recharge and Action Point utility where useful</li>
-        </ul>
+        </div>
 
-        <p>
-          Blessed boons are particularly useful when running with a healer who
+
+        <div class="paragon-item-grid">
+
+          <div class="paragon-item-card">
+            <h3>POWER</h3>
+            <p>Core offensive priority.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>COMBAT ADVANTAGE</h3>
+            <p>Essential to the normal Whisperknife playstyle.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>CRITICAL STRIKE</h3>
+            <p>Build alongside Critical Severity.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>CRITICAL SEVERITY</h3>
+            <p>Continue toward the higher offensive ceiling.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>ACCURACY</h3>
+            <p>Finish after the stronger offensive priorities.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>ENEMY DAMAGE</h3>
+            <p>Use enemy-specific bonuses for the content you're running.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>RECHARGE</h3>
+            <p>Useful where it improves the encounter cycle.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>ACTION POINTS</h3>
+            <p>Useful utility once the core damage priorities are covered.</p>
+          </div>
+
+        </div>
+
+
+        <div class="paragon-chaos-tip">
+
+          <strong>BLESSED BOONS:</strong>
+          Particularly useful when running with a healer who
           regularly maintains heal-over-time effects.
-        </p>
 
-      </article>
+        </div>
+
+      </section>
 
 
 
-      <!-- ROTATION -->
+      <!-- ======================================================
+           ROTATION
+           ====================================================== -->
 
-      <article
-        class="build-guide-panel build-rotation-panel"
+      <section
+        class="paragon-visual-section"
         id="rotation"
       >
 
-        <p class="build-panel-eyebrow">
-          PUTTING IT TOGETHER
-        </p>
+        <div class="paragon-visual-section-header">
 
-        <h2>
-          ROTATION
-        </h2>
+          <h2>SINGLE-TARGET ROTATION</h2>
+
+          <p>
+            Positioning first. Murder second. That's very Rogue of us.
+          </p>
+
+        </div>
 
 
-        <h3>SINGLE TARGET ◆ NORMAL COMBAT</h3>
+        <div class="paragon-power-row">
 
-        <ol class="build-rotation-list">
 
-          <li>
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">1</span>
+            </div>
+
             <strong>FLANK THE BOSS</strong>
-            <span>
-              Position with an ally on the opposite side so Combat Advantage
-              remains active.
-            </span>
-          </li>
 
-          <li>
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">2</span>
+            </div>
+
             <strong>DISHEARTENING STRIKE</strong>
-            <span>
-              Apply the damage-over-time effect and maintain it approximately
-              every ten seconds.
-            </span>
-          </li>
 
-          <li>
-            <strong>MOVE NEXT TO THE TARGET</strong>
-            <span>
-              Be in position before committing Stealth.
-            </span>
-          </li>
+          </div>
 
-          <li>
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">3</span>
+            </div>
+
+            <strong>MOVE NEXT TO TARGET</strong>
+
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">4</span>
+            </div>
+
             <strong>STEALTH → SHADOW STRIKE</strong>
-            <span>
-              Enter Stealth and immediately use Shadow Strike.
-            </span>
-          </li>
 
-          <li>
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">5</span>
+            </div>
+
             <strong>LASHING BLADE</strong>
-            <span>
-              Follow Shadow Strike with your heavy single-target hit.
-            </span>
-          </li>
 
-          <li>
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">6</span>
+            </div>
+
             <strong>IMPACT SHOT</strong>
-            <span>
-              Finish the normal encounter sequence with Impact Shot.
-            </span>
-          </li>
 
-          <li>
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">7</span>
+            </div>
+
             <strong>CLOUD OF STEEL</strong>
-            <span>
-              Use as filler while encounters recover and continue building
-              Action Points.
-            </span>
-          </li>
 
-        </ol>
+          </div>
 
 
-        <h3>MULTI TARGET</h3>
+          <div class="paragon-power-card">
 
-        <ol class="build-rotation-list">
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">8</span>
+            </div>
 
-          <li>
-            <strong>GET INTO THE MIDDLE OF THE PACK</strong>
-            <span>
-              Yes, you're a Rogue. No, apparently personal space isn't part of
-              the build. 😂
-            </span>
-          </li>
+            <strong>REFRESH DISHEARTENING</strong>
 
-          <li>
+          </div>
+
+
+        </div>
+
+
+        <div class="paragon-chaos-tip">
+
+          <strong>DISHEARTENING STRIKE:</strong>
+          Refresh roughly every ten seconds.
+          It isn't the glamorous bit, but neither is doing fuck-all damage
+          because you forgot it. 😂
+
+        </div>
+
+
+
+        <div class="paragon-visual-section-header">
+
+          <h2>MULTI-TARGET ROTATION</h2>
+
+          <p>
+            Into the pack we go. Apparently self-preservation is for other classes.
+          </p>
+
+        </div>
+
+
+        <div class="paragon-power-row">
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">1</span>
+            </div>
+
+            <strong>GET INTO THE PACK</strong>
+
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">2</span>
+            </div>
+
             <strong>ENTER STEALTH</strong>
-            <span>
-              Prepare the opening AoE burst.
-            </span>
-          </li>
 
-          <li>
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">3</span>
+            </div>
+
             <strong>BLADE FLURRY ◆ ONCE</strong>
-            <span>
-              Use one Blade Flurry while Stealthed.
-            </span>
-          </li>
 
-          <li>
-            <strong>SMOKE BOMB + PATH OF THE BLADE</strong>
-            <span>
-              Layer the AoE effects over the enemy pack.
-            </span>
-          </li>
+          </div>
 
-          <li>
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">4</span>
+            </div>
+
+            <strong>SMOKE BOMB</strong>
+
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">5</span>
+            </div>
+
+            <strong>PATH OF THE BLADE</strong>
+
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">6</span>
+            </div>
+
             <strong>WAIT FOR STEALTH</strong>
-            <span>
-              When Stealth returns, use it with Blade Flurry again.
-            </span>
-          </li>
 
-        </ol>
+          </div>
 
-        <div class="build-callout">
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">7</span>
+            </div>
+
+            <strong>STEALTH → BLADE FLURRY</strong>
+
+          </div>
+
+
+        </div>
+
+
+        <div class="paragon-chaos-tip">
 
           <strong>DON'T SPAM BOTH BLADE FLURRIES:</strong>
-          Keeping one available lets you pair the next use with Stealth instead
-          of wasting the stronger interaction.
+          Keep one charge available so the next use can be paired
+          with Stealth instead of wasting the stronger interaction.
 
         </div>
 
 
-        <h3>ARTIFACT CALL</h3>
 
-        <p>
-          Enter the call with encounters ready, maintain Combat Advantage and
-          stack your strongest attacks inside the party's roughly ten-second
-          support window.
-        </p>
+        <div class="paragon-visual-section-header">
 
-        <p>
-          Cavalry's Haste and Tactician's Precision are important to the full
-          cooldown sequence. Without them, perform the opening burst through
-          Hateful Knives, then use Cloud of Steel until your encounters return
-          rather than forcing a rotation your cooldowns cannot support.
-        </p>
+          <h2>ARTIFACT CALL</h2>
 
-      </article>
-
-
-
-      <!-- ALTERNATIVES -->
-
-      <article class="build-guide-panel">
-
-        <p class="build-panel-eyebrow">
-          OTHER OPTIONS
-        </p>
-
-        <h2>
-          ALTERNATIVES & SWAPS
-        </h2>
-
-        <div class="build-info-grid">
-
-          <div class="build-info-card">
-            <h3>SMOKE BOMB ◆ ST</h3>
-            <p>
-              Replace Impact Shot when a boss fight regularly spawns adds or
-              when crowd control is valuable.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>ADVANTAGEOUS POSITION</h3>
-            <p>
-              Replace Dagger Threat when normal flanking is unreliable or when
-              dealing with mobs during boss encounters.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>VOIDTOUCHED / XARYXIAN</h3>
-            <p>
-              Strong weapon alternatives if you don't yet want to invest in
-              the newest artifact set.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>SAFER BOOTS</h3>
-            <p>
-              Skip the high-damage Celestial boots while learning content if
-              losing 20% maximum health is turning every mechanic into a
-              near-death experience.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>SCALED CONTENT</h3>
-            <p>
-              Keep Astral Raider's Gloves available. Their damage bonus can be
-              extremely valuable once the queue scales your item level.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>STAT FLEXIBILITY</h3>
-            <p>
-              Don't panic over a few missing percentage points. Real groups
-              aren't always perfectly optimised and leaving a little spare room
-              can actually make the build more consistent.
-            </p>
-          </div>
+          <p>
+            This is where Whisperknife stops fucking about.
+          </p>
 
         </div>
 
-      </article>
+
+        <div class="paragon-power-row">
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">1</span>
+            </div>
+
+            <strong>GET COMBAT ADVANTAGE</strong>
+
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">2</span>
+            </div>
+
+            <strong>ENCOUNTERS READY</strong>
+
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">3</span>
+            </div>
+
+            <strong>MOUNT + ARTIFACT</strong>
+
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">4</span>
+            </div>
+
+            <strong>STEALTH BURST</strong>
+
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">5</span>
+            </div>
+
+            <strong>HATEFUL KNIVES</strong>
+
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">6</span>
+            </div>
+
+            <strong>KEEP ATTACKING</strong>
+
+          </div>
+
+
+        </div>
+
+
+        <div class="paragon-chaos-tip">
+
+          <strong>COOLDOWN NOTE:</strong>
+          Cavalry's Haste and Tactician's Precision are important
+          to the full cooldown sequence. Without them, perform the
+          opening burst through Hateful Knives, then use Cloud of Steel
+          until the encounters return.
+
+        </div>
+
+      </section>
 
 
 
-      <!-- CHAOS NOTES -->
+      <!-- ======================================================
+           FULL BUILD NOTES
+           ====================================================== -->
 
-      <article class="build-guide-panel chaos-notes-panel">
+      <details class="full-mechanics-dropdown">
 
-        <p class="build-panel-eyebrow">
-          FROM THE GUILD
-        </p>
+        <summary class="full-mechanics-summary">
 
-        <h2>
-          CHAOS NOTES
-        </h2>
+          <span>
+            ☠ WANT THE NERDY SHIT? OPEN FULL BUILD NOTES
+          </span>
 
-        <p>
-          Whisperknife has a wonderfully Rogue approach to AoE:
-          <strong>walk directly into the middle of everybody, disappear, then
-          start throwing sharp objects around.</strong> 🤣
-        </p>
+          <span class="full-mechanics-chevron">
+            ▼
+          </span>
 
-        <p>
-          On bosses, don't underestimate Disheartening Strike. Refreshing it
-          every ten seconds and maintaining Combat Advantage aren't glamorous,
-          but they're part of what makes the flashy burst actually work.
-        </p>
-
-        <p>
-          And the artifact call matters massively. This isn't the toon where
-          you can miss the call, throw a few knives afterwards and go
-          <em>"eh, close enough."</em> Your ten-second murder window is where a
-          ridiculous chunk of your damage lives. 😂
-        </p>
-
-      </article>
+        </summary>
 
 
+        <div class="full-mechanics-content">
 
-      <!-- UPDATED -->
+
+          <!-- EXPLAINED -->
+
+          <article class="build-guide-panel">
+
+            <p class="build-panel-eyebrow">
+              HOW IT WORKS
+            </p>
+
+            <h2>
+              WHISPERKNIFE EXPLAINED
+            </h2>
+
+            <p>
+              Whisperknife is a fast Rogue DPS path built around
+              Stealth, positional damage, damage-over-time effects
+              and explosive burst during coordinated artifact calls.
+            </p>
+
+            <p>
+              Single target revolves around maintaining
+              Disheartening Strike, keeping Combat Advantage active
+              and combining Stealth with Shadow Strike, Lashing Blade
+              and Impact Shot.
+            </p>
+
+            <p>
+              Multi target changes the rhythm completely.
+              Blade Flurry, Smoke Bomb and Path of the Blade take
+              you directly into the enemy pack for close-range AoE.
+            </p>
+
+          </article>
+
+
+
+          <!-- DISHEARTENING -->
+
+          <article class="build-guide-panel">
+
+            <p class="build-panel-eyebrow">
+              SINGLE TARGET
+            </p>
+
+            <h2>
+              DISHEARTENING STRIKE
+            </h2>
+
+            <p>
+              Maintain Disheartening Strike's damage-over-time effect
+              and damage buff by refreshing it roughly every ten seconds.
+            </p>
+
+            <p>
+              It is easy to focus on the larger encounter hits and
+              forget the maintenance power, but the rest of the burst
+              performs better when this effect is already established.
+            </p>
+
+          </article>
+
+
+
+          <!-- POSITIONING -->
+
+          <article class="build-guide-panel">
+
+            <p class="build-panel-eyebrow">
+              POSITIONING
+            </p>
+
+            <h2>
+              COMBAT ADVANTAGE
+            </h2>
+
+            <p>
+              Flank the boss whenever possible so Combat Advantage
+              remains active.
+            </p>
+
+            <p>
+              Dagger Threat is useful when normal boss flanking can
+              be maintained. Swap to Advantageous Position when
+              mechanics or spawned enemies make reliable flanking difficult.
+            </p>
+
+            <p>
+              Get into position before entering Stealth rather than
+              spending part of the burst window running around the boss.
+            </p>
+
+          </article>
+
+
+
+          <!-- STEALTH -->
+
+          <article class="build-guide-panel">
+
+            <p class="build-panel-eyebrow">
+              STEALTH
+            </p>
+
+            <h2>
+              SINGLE-TARGET BURST
+            </h2>
+
+            <p>
+              Enter Stealth and immediately use Shadow Strike.
+              Follow with Lashing Blade and then Impact Shot.
+            </p>
+
+            <p>
+              Cloud of Steel fills the downtime while encounters
+              recover and continues generating Action Points.
+            </p>
+
+            <p>
+              Smoke Bomb can replace Impact Shot when the boss
+              encounter contains adds or additional crowd control
+              and multi-target damage are useful.
+            </p>
+
+          </article>
+
+
+
+          <!-- AOE -->
+
+          <article class="build-guide-panel">
+
+            <p class="build-panel-eyebrow">
+              MULTI TARGET
+            </p>
+
+            <h2>
+              BLADE FLURRY
+            </h2>
+
+            <p>
+              Enter the enemy pack, activate Stealth and use
+              Blade Flurry once.
+            </p>
+
+            <p>
+              Follow with Smoke Bomb and Path of the Blade,
+              then keep the second Blade Flurry available until
+              Stealth returns.
+            </p>
+
+            <p>
+              Spending both Blade Flurry charges immediately loses
+              the stronger interaction available when the second
+              charge is paired with Stealth.
+            </p>
+
+          </article>
+
+
+
+          <!-- ARTIFACT -->
+
+          <article class="build-guide-panel">
+
+            <p class="build-panel-eyebrow">
+              BURST
+            </p>
+
+            <h2>
+              THE ARTIFACT WINDOW
+            </h2>
+
+            <p>
+              Whisperknife's damage increases dramatically during
+              the party's coordinated artifact window.
+            </p>
+
+            <p>
+              Enter the call with encounters ready and Combat Advantage
+              active, then stack the strongest attacks inside the
+              roughly ten-second support window.
+            </p>
+
+            <p>
+              Cavalry's Haste and Tactician's Precision are important
+              to the full cooldown sequence. Without them, perform the
+              opening burst through Hateful Knives and use Cloud of Steel
+              until the encounters recover.
+            </p>
+
+          </article>
+
+
+
+          <!-- GEAR -->
+
+          <article class="build-guide-panel">
+
+            <p class="build-panel-eyebrow">
+              GEAR
+            </p>
+
+            <h2>
+              SCALED CONTENT & SWAPS
+            </h2>
+
+            <p>
+              Don't assume the newest or highest-item-level piece
+              automatically wins, particularly in scaled content.
+            </p>
+
+            <p>
+              Astral Raider's Gloves remain extremely strong when
+              item level is scaled down and can outperform newer
+              higher-item-level arms.
+            </p>
+
+            <p>
+              Bindings of the Death Pact from Master Shackles of
+              Divinity are the preferred multi-target arms.
+            </p>
+
+            <p>
+              Voidtouched and Xaryxian weapons remain strong
+              alternatives and can perform extremely well in
+              scaled single-target fights.
+            </p>
+
+          </article>
+
+
+
+          <!-- BOOTS -->
+
+          <article class="build-guide-panel">
+
+            <p class="build-panel-eyebrow">
+              SURVIVAL
+            </p>
+
+            <h2>
+              CELESTIAL BOOTS
+            </h2>
+
+            <p>
+              Celestial boots can provide a large damage bonus,
+              but the tradeoff is 20% maximum health.
+            </p>
+
+            <p>
+              While learning difficult content, a safer option can
+              be more useful than turning every mechanic into an
+              unexpected meeting with the floor.
+            </p>
+
+          </article>
+
+
+
+          <!-- CHAOS NOTES -->
+
+          <article class="build-guide-panel chaos-notes-panel">
+
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
+
+            <h2>
+              CHAOS NOTES
+            </h2>
+
+            <p>
+              Whisperknife has a wonderfully Rogue approach to AoE:
+              <strong>
+                walk directly into the middle of everybody,
+                disappear, then start throwing sharp objects around.
+              </strong>
+              🤣
+            </p>
+
+            <p>
+              On bosses, don't underestimate Disheartening Strike.
+              Refreshing it every ten seconds and maintaining Combat
+              Advantage aren't the glamorous bits, but they're part
+              of what makes the flashy burst actually work.
+            </p>
+
+            <p>
+              And the artifact call matters massively.
+              This isn't the toon where you can miss the call,
+              throw a few knives afterwards and go
+              <em>"eh, close enough."</em>
+            </p>
+
+            <p>
+              Your ten-second murder window is where a ridiculous
+              chunk of the damage lives. 😂
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </details>
+
+
+
+      <!-- ======================================================
+           UPDATED
+           ====================================================== -->
 
       <div class="build-last-updated">
 
         <p>
-          MODULE 32.5 ◆ UPDATED FOR SEPTEMBER 2026 GUIDE SET
+          CURRENT BUILD FRAMEWORK ◆ SEPTEMBER 2026
         </p>
 
       </div>
 
-
-      <!-- BACK TO GUIDES -->
 
       <div class="build-back-link">
 

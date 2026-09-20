@@ -26,7 +26,9 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
 
   <header class="site-header">
 
@@ -98,40 +100,15 @@
   <main>
 
 
-    <!-- HERO -->
+    <!-- ======================================================
+         DUNGEON HERO
+         ====================================================== -->
 
-    <section class="magic-page-hero guides-hero">
+    <section class="magic-page-hero build-detail-hero">
 
-      <div class="guides-hero-content">
+      <div class="build-detail-hero-content">
 
-        <p class="section-eyebrow">
-          DUNGEON MECHANICS
-        </p>
-
-        <h1>
-          PIRATE KING'S RETREAT
-        </h1>
-
-        <p class="guides-intro">
-          Clear the adds. Follow the route. Murder the pirate hierarchy.
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- GUIDE -->
-
-    <section class="build-detail-page">
-
-      <div class="build-detail-card">
-
-
-        <!-- IMAGE -->
-
-        <div class="build-detail-image">
+        <div class="build-detail-hero-image">
 
           <img
             src="images/pirate.jpeg"
@@ -141,318 +118,718 @@
         </div>
 
 
+        <div class="build-detail-hero-text">
 
-        <!-- OVERVIEW -->
-
-        <div class="build-guide-panel">
-
-          <p class="build-panel-eyebrow">
-            OVERVIEW
+          <p class="section-eyebrow">
+            DUNGEON ◆ MECHANICS
           </p>
 
-          <h2>
+          <h1>
             PIRATE KING'S RETREAT
-          </h2>
+          </h1>
 
           <p>
-            Pirate King's Retreat is a straightforward dungeon
-            focused primarily on clearing enemy groups and defeating
-            three bosses.
-          </p>
-
-          <p>
-            The first two bosses spawn large numbers of adds,
-            while the final Pirate King encounter is a direct boss fight.
+            Rotating Chaos Neverwinter Dungeon Guide
           </p>
 
         </div>
 
+      </div>
+
+    </section>
 
 
-        <!-- ROUTE -->
 
-        <div class="build-guide-panel">
+    <!-- ======================================================
+         SIMPLE NAVIGATION
+         ====================================================== -->
 
-          <p class="build-panel-eyebrow">
-            DUNGEON ROUTE
-          </p>
+    <nav class="build-section-nav">
 
-          <h2>
-            PIRATE HIDEOUT
-          </h2>
+      <a href="#quick-guide">
+        Quick Mechanics
+      </a>
 
-          <ul>
+      <a href="#full-guide">
+        Full Mechanics
+      </a>
 
-            <li>
+    </nav>
+
+
+
+    <!-- ======================================================
+         DUNGEON CONTENT
+         ====================================================== -->
+
+    <section class="build-detail-page dungeon-guide-page">
+
+
+      <!-- ====================================================
+           CHAOS WARNING
+           ==================================================== -->
+
+      <aside class="dungeon-chaos-warning">
+
+        <p class="chaos-warning-label">
+          ⚠ CHAOS WARNING
+        </p>
+
+        <p class="chaos-warning-message">
+          This dungeon's main mechanic is pirates.
+          There are lots of them.
+          Apply violence until there are considerably fewer pirates.
+        </p>
+
+      </aside>
+
+
+
+      <!-- ====================================================
+           QUICK & DIRTY MECHANICS
+           ==================================================== -->
+
+      <article
+        class="build-guide-panel quick-mechanics-panel"
+        id="quick-guide"
+      >
+
+        <p class="build-panel-eyebrow">
+          THE QUICK & DIRTY VERSION
+        </p>
+
+        <h2>
+          ALL YOU REALLY NEED TO KNOW
+        </h2>
+
+        <p class="quick-mechanics-intro">
+          Follow the route. Pull the levers. Murder the adds.
+          Murder the bosses. Very piratey.
+        </p>
+
+
+        <div class="quick-mechanics-grid">
+
+
+          <!-- ROUTE -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🧭
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                THE ROUTE
+              </h3>
+
+              <p>
+                Can't go forward?
+              </p>
+
+              <strong>
+                FIND LEVER OR SECRET DOOR.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- ADDS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              ⚔️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                ADDS
+              </h3>
+
+              <p>
+                Lots of pirates?
+              </p>
+
+              <strong>
+                GROUP THEM ◆ AOE THEM.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- FIRST TWO BOSSES -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              💀
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                FIRST TWO BOSSES
+              </h3>
+
+              <p>
+                Boss dead?
+              </p>
+
+              <strong>
+                CLEAR THE EXTRA ADDS.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- PIRATE KING -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🏴‍☠️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                PIRATE KING
+              </h3>
+
+              <p>
+                Final boss?
+              </p>
+
+              <strong>
+                TANK HIM ◆ BURN HIM.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ====================================================
+           FULL MECHANICS DROPDOWN
+           ==================================================== -->
+
+      <details
+        class="full-mechanics-dropdown"
+        id="full-guide"
+      >
+
+        <summary class="full-mechanics-summary">
+
+          <span class="full-mechanics-summary-main">
+            WANT THE FULL MECHANICS?
+          </span>
+
+          <span class="full-mechanics-summary-sub">
+            Open the full Pirate King's Retreat guide
+          </span>
+
+          <span
+            class="full-mechanics-chevron"
+            aria-hidden="true"
+          >
+            ▼
+          </span>
+
+        </summary>
+
+
+        <div class="full-mechanics-content">
+
+
+          <!-- ==================================================
+               OVERVIEW
+               ================================================== -->
+
+          <article
+            class="build-guide-panel build-overview"
+            id="overview"
+          >
+
+            <p class="build-panel-eyebrow">
+              THE DUNGEON
+            </p>
+
+            <h2>
+              OVERVIEW
+            </h2>
+
+            <p>
+              Pirate King's Retreat is a straightforward dungeon
+              focused primarily on clearing enemy groups and defeating
+              three bosses.
+            </p>
+
+            <p>
+              The first two bosses spawn large numbers of adds,
+              while the final Pirate King encounter is a direct boss fight.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               PIRATE HIDEOUT
+               ================================================== -->
+
+          <article
+            class="build-guide-panel"
+            id="pirate-hideout"
+          >
+
+            <p class="build-panel-eyebrow">
+              DUNGEON ROUTE
+            </p>
+
+            <h2>
+              PIRATE HIDEOUT
+            </h2>
+
+            <p>
               Follow the route through the hideout
               while clearing enemy groups.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Pull the required wall levers
               to open the route forward.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Continue clearing enemies until reaching
               the first boss area.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- FIRST BOSS -->
+          <!-- ==================================================
+               REDOLENT SURGEON
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="redolent-surgeon"
+          >
 
-          <p class="build-panel-eyebrow">
-            BOSS ONE
-          </p>
+            <p class="build-panel-eyebrow">
+              BOSS ONE
+            </p>
 
-          <h2>
-            REDOLENT SURGEON
-          </h2>
+            <h2>
+              REDOLENT SURGEON
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               The encounter begins with the boss
               surrounded by multiple adds.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Use AoE damage to control the large number
               of enemies in the arena.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Focus damage on the boss
               while keeping the adds under control.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Additional adds spawn after the boss is defeated.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Clear the remaining enemies
               before continuing through the dungeon.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- SECOND ROUTE -->
+          <!-- ==================================================
+               ROPE BRIDGES
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="rope-bridges"
+          >
 
-          <p class="build-panel-eyebrow">
-            DUNGEON ROUTE
-          </p>
+            <p class="build-panel-eyebrow">
+              DUNGEON ROUTE
+            </p>
 
-          <h2>
-            ROPE BRIDGES
-          </h2>
+            <h2>
+              ROPE BRIDGES
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               Continue across the rope bridges
               while clearing pirate groups.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Follow the route until reaching
               the hidden doorway.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Activate the secret door
               to reach the second boss.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- SECOND BOSS -->
+          <!-- ==================================================
+               THICK GRISTLE
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="thick-gristle"
+          >
 
-          <p class="build-panel-eyebrow">
-            BOSS TWO
-          </p>
+            <p class="build-panel-eyebrow">
+              BOSS TWO
+            </p>
 
-          <h2>
-            THICK GRISTLE
-          </h2>
+            <h2>
+              THICK GRISTLE
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               Thick Gristle is another add-heavy encounter.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Large numbers of enemies fight alongside the boss.
-            </li>
+            </p>
 
-            <li>
+            <p>
               AoE damage is useful for keeping the arena controlled.
-            </li>
+            </p>
 
-            <li>
+            <p>
               More adds spawn when the boss is defeated.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Clear the remaining enemies
               before moving toward the final encounter.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- FINAL ROUTE -->
+          <!-- ==================================================
+               FINAL ROUTE
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="pirate-ship"
+          >
 
-          <p class="build-panel-eyebrow">
-            FINAL ROUTE
-          </p>
+            <p class="build-panel-eyebrow">
+              FINAL ROUTE
+            </p>
 
-          <h2>
-            THE PIRATE KING'S SHIP
-          </h2>
+            <h2>
+              THE PIRATE KING'S SHIP
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               Continue following the route
               and clearing enemy groups.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Make your way onto the Pirate King's ship.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Gather the full party before beginning
               the final encounter.
-            </li>
+            </p>
 
-          </ul>
-
-        </div>
+          </article>
 
 
 
-        <!-- FINAL BOSS -->
+          <!-- ==================================================
+               PIRATE KING
+               ================================================== -->
 
-        <div class="build-guide-panel">
+          <article
+            class="build-guide-panel"
+            id="pirate-king"
+          >
 
-          <p class="build-panel-eyebrow">
-            FINAL BOSS
-          </p>
+            <p class="build-panel-eyebrow">
+              FINAL BOSS
+            </p>
 
-          <h2>
-            THE PIRATE KING
-          </h2>
+            <h2>
+              THE PIRATE KING
+            </h2>
 
-          <ul>
-
-            <li>
+            <p>
               Unlike the previous two bosses,
               the Pirate King does not spawn additional adds.
-            </li>
+            </p>
 
-            <li>
+            <p>
               The encounter is a straightforward single-target fight.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Let the tank establish aggro
               and focus damage directly on the boss.
-            </li>
+            </p>
 
-            <li>
+            <p>
               Burn the Pirate King down
               to complete the dungeon.
-            </li>
+            </p>
 
-          </ul>
+          </article>
+
+
+
+          <!-- ==================================================
+               ROLE JOBS
+               ================================================== -->
+
+          <article
+            class="build-guide-panel"
+            id="roles"
+          >
+
+            <p class="build-panel-eyebrow">
+              KNOW YOUR JOB
+            </p>
+
+            <h2>
+              TANK ◆ HEALER ◆ DPS
+            </h2>
+
+
+            <h3>
+              TANK
+            </h3>
+
+            <p>
+              Gather the large add packs
+              and keep enemies grouped for AoE damage.
+            </p>
+
+            <p>
+              Establish aggro on each boss
+              before the group begins burning them.
+            </p>
+
+            <p>
+              During the final encounter,
+              keep the Pirate King focused on you
+              while the group attacks.
+            </p>
+
+
+            <h3>
+              HEALER
+            </h3>
+
+            <p>
+              Watch for players taking damage
+              while large enemy groups are active.
+            </p>
+
+            <p>
+              Stay with the group while moving
+              through the hideout and across the bridges.
+            </p>
+
+            <p>
+              Keep the tank healthy
+              while they control the larger packs.
+            </p>
+
+
+            <h3>
+              DPS
+            </h3>
+
+            <p>
+              Use AoE damage on the large pirate groups
+              and boss adds.
+            </p>
+
+            <p>
+              Clear the additional enemies
+              that remain after the first two bosses die.
+            </p>
+
+            <p>
+              At the Pirate King,
+              focus damage directly on the boss.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               COMMON WIPES
+               ================================================== -->
+
+          <article
+            class="build-guide-panel"
+            id="wipes"
+          >
+
+            <p class="build-panel-eyebrow">
+              WHAT USUALLY GOES WRONG
+            </p>
+
+            <h2>
+              COMMON WIPES
+            </h2>
+
+            <p>
+              Pulling too many enemy groups
+              without allowing the tank to control them.
+            </p>
+
+            <p>
+              Ignoring the large number of adds
+              during the first two boss encounters.
+            </p>
+
+            <p>
+              Running ahead of the group
+              and creating multiple separate fights.
+            </p>
+
+            <p>
+              Leaving enemies alive
+              after the first or second boss dies.
+            </p>
+
+            <p>
+              Starting the Pirate King encounter
+              before the full group reaches the ship.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               CHAOS NOTES
+               ================================================== -->
+
+          <article
+            class="build-guide-panel chaos-notes-panel"
+            id="chaos-notes"
+          >
+
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
+
+            <h2>
+              CHAOS NOTES
+            </h2>
+
+            <p>
+              This is not one of those dungeons
+              where you need a doctoral thesis
+              to understand the first boss.
+            </p>
+
+            <p>
+              There are pirates.
+              Kill the pirates.
+              Occasionally pull a lever.
+              Continue killing pirates.
+            </p>
+
+            <p>
+              First boss has adds.
+              Second boss has even more bloody adds.
+              AoE is your friend.
+            </p>
+
+            <p>
+              Also, boss dying does not mean
+              the surviving pirates have suddenly
+              reconsidered their career choices.
+              Kill those too.
+            </p>
+
+            <p>
+              Pirate King has no adds.
+              Tank gets his attention.
+              Everyone else introduces him
+              to the consequences of piracy.
+            </p>
+
+          </article>
+
 
         </div>
 
+      </details>
 
 
-        <!-- QUICK REFERENCE -->
 
-        <div class="build-guide-panel">
+      <!-- ====================================================
+           UPDATED
+           ==================================================== -->
 
-          <p class="build-panel-eyebrow">
-            QUICK REFERENCE
-          </p>
+      <div class="build-last-updated">
 
-          <h2>
-            PIRATE KING'S RETREAT SURVIVAL NOTES
-          </h2>
-
-          <ul>
-
-            <li>
-              Follow the route and activate required levers.
-            </li>
-
-            <li>
-              First boss → expect lots of adds.
-            </li>
-
-            <li>
-              Kill boss → clear the additional add wave.
-            </li>
-
-            <li>
-              Cross the rope bridges and activate the secret door.
-            </li>
-
-            <li>
-              Second boss → more bloody adds.
-            </li>
-
-            <li>
-              Kill boss → clear the remaining adds.
-            </li>
-
-            <li>
-              Final boss → no adds.
-            </li>
-
-            <li>
-              Pirate King → tank him and burn him.
-            </li>
-
-          </ul>
-
-        </div>
-
+        <p>
+          LAST UPDATED ◆ SEPTEMBER 2026
+        </p>
 
       </div>
 
 
 
-      <!-- BACK LINK -->
+      <!-- ====================================================
+           BACK TO MECHANICS
+           ==================================================== -->
 
       <div class="build-back-link">
 
@@ -462,11 +839,14 @@
 
       </div>
 
+
     </section>
 
 
 
-    <!-- FOOTER -->
+    <!-- ======================================================
+         FOOTER
+         ====================================================== -->
 
     <footer id="contact">
 

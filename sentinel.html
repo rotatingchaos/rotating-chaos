@@ -7,10 +7,10 @@
 
   <meta
     name="description"
-    content="Rotating Chaos Neverwinter Sentinel Barbarian Build Guide"
+    content="Rotating Chaos Neverwinter Sentinel Tank Build Guide"
   >
 
-  <title>Sentinel Barbarian | Rotating Chaos</title>
+  <title>Sentinel | Rotating Chaos</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,6 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
@@ -57,29 +56,12 @@
 
     <nav class="desktop-nav">
 
-      <a href="index.html">
-        HOME
-      </a>
-
-      <a href="index.html#about">
-        THE CHAOS CREW
-      </a>
-
-      <a href="build-guides.html">
-        CHAOS GUIDES
-      </a>
-
-      <a href="index.html#events">
-        EVENTS
-      </a>
-
-      <a href="index.html#merch">
-        MERCH
-      </a>
-
-      <a href="index.html#contact">
-        CONTACT
-      </a>
+      <a href="index.html">HOME</a>
+      <a href="index.html#about">THE CHAOS CREW</a>
+      <a href="build-guides.html">CHAOS GUIDES</a>
+      <a href="index.html#events">EVENTS</a>
+      <a href="index.html#merch">MERCH</a>
+      <a href="index.html#contact">CONTACT</a>
 
     </nav>
 
@@ -101,7 +83,7 @@
 
 
     <!-- ======================================================
-         BUILD HERO
+         HERO
          ====================================================== -->
 
     <section class="magic-page-hero build-detail-hero">
@@ -112,7 +94,7 @@
 
           <img
             src="images/barbarian.png"
-            alt="Barbarian Sentinel"
+            alt="Sentinel"
           >
 
         </div>
@@ -141,19 +123,17 @@
 
 
     <!-- ======================================================
-         BUILD NAVIGATION
+         QUICK NAV
          ====================================================== -->
 
     <nav class="build-section-nav">
 
-      <a href="#overview">Overview</a>
-      <a href="#stats">Stats</a>
-      <a href="#gear">Gear</a>
+      <a href="#character">Character</a>
       <a href="#enchantments">Enchantments</a>
       <a href="#artifacts">Artifacts</a>
       <a href="#companions">Companions</a>
       <a href="#mounts">Mounts</a>
-      <a href="#powers">Powers & Feats</a>
+      <a href="#powers">Powers</a>
       <a href="#boons">Boons</a>
       <a href="#rotation">Rotation</a>
 
@@ -161,794 +141,1411 @@
 
 
 
-    <!-- ======================================================
-         BUILD CONTENT
-         ====================================================== -->
-
     <section class="build-detail-page">
 
 
-      <!-- OVERVIEW -->
+      <!-- ======================================================
+           CHARACTER SHEET
+           ====================================================== -->
 
-      <article
-        class="build-guide-panel build-overview"
-        id="overview"
+      <section
+        class="paragon-loadout-sheet"
+        id="character"
       >
 
-        <p class="build-panel-eyebrow">
-          THE BUILD
-        </p>
+        <div class="paragon-sheet-header">
 
-        <h2>
-          OVERVIEW
-        </h2>
+          <p class="paragon-sheet-eyebrow">
+            ◆ TANK LOADOUT ◆
+          </p>
 
-        <p>
-          Sentinel turns the Barbarian into a highly mobile tank built around
-          threat generation, Rage, blocking and aggressive group support.
-          Rather than standing still and simply absorbing damage, Sentinel
-          actively attacks to maintain control of the fight.
-        </p>
+          <h2>
+            SENTINEL CHARACTER SHEET
+          </h2>
 
-        <p>
-          This setup is built for current Module 33.5 endgame play, where the
-          tank isn't only expected to survive. You're also helping the party
-          deal more damage through support artifacts, mount powers, companion
-          debuffs and properly timed artifact calls.
-        </p>
+          <p class="paragon-sheet-subtitle">
+            Make everything hate you. Survive the consequences.
+            Debuff the boss while you're at it.
+          </p>
 
-        <p>
-          The introduction of Strike and Guard enchantment slots has made
-          Sentinel threat generation considerably easier, allowing experienced
-          tanks to trade some additional threat support for movement and
-          defensive utility.
-        </p>
+        </div>
 
-        <div class="build-callout">
+
+
+        <div class="paragon-character-layout">
+
+
+          <!-- LEFT GEAR -->
+
+          <div class="paragon-gear-column paragon-gear-column-left">
+
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">HEAD</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">HEAD</span>
+                <h3 class="paragon-gear-name">Tank / Support Helm</h3>
+                <span class="paragon-gear-il">Current M33.5 Setup</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>HEAD SLOT</h4>
+                <p>
+                  Use a current tank or support helm providing useful
+                  defensive percentages or a reliable party benefit.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">ARMOR</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">ARMOR</span>
+                <h3 class="paragon-gear-name">Defensive / Support Armor</h3>
+                <span class="paragon-gear-il">Survival First</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>ARMOR SLOT</h4>
+                <p>
+                  Choose between a strong defensive bonus and
+                  group support according to what the content requires.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">ARMS</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">ARMS</span>
+                <h3 class="paragon-gear-name">Tank / Debuff Arms</h3>
+                <span class="paragon-gear-il">Flexible Slot</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>ARMS SLOT</h4>
+                <p>
+                  Defensive arms are perfectly valid while progressing.
+                  Strong groups can move toward enemy-debuff or
+                  team-support effects.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">MAIN</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">MAIN HAND</span>
+                <h3 class="paragon-gear-name">Support Weapon</h3>
+                <span class="paragon-gear-il">Group Utility</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>MAIN HAND</h4>
+                <p>
+                  Support-oriented weapons are ideal once your
+                  defensive requirements are comfortably covered.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">OFF</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">OFF-HAND</span>
+                <h3 class="paragon-gear-name">Support Weapon</h3>
+                <span class="paragon-gear-il">Group Utility</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>OFF-HAND</h4>
+                <p>
+                  Complete the weapon set and use modifications
+                  around the final defensive and threat setup.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">FEET</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">FEET</span>
+                <h3 class="paragon-gear-name">Tank / Utility Boots</h3>
+                <span class="paragon-gear-il">Defence / Movement</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>FEET SLOT</h4>
+                <p>
+                  Complete missing defensive percentages, movement
+                  or another useful support effect.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- CHARACTER CENTRE -->
+
+          <div class="paragon-character-centre">
+
+            <div class="paragon-character-frame">
+
+              <div class="paragon-character-placeholder">
+                SENTINEL TOON
+              </div>
+
+            </div>
+
+
+            <div class="paragon-build-snapshot">
+
+              <div class="paragon-snapshot-stat">
+                <strong>ROLE</strong>
+                <span>Tank</span>
+              </div>
+
+              <div class="paragon-snapshot-stat">
+                <strong>MODULE</strong>
+                <span>33.5</span>
+              </div>
+
+              <div class="paragon-snapshot-stat">
+                <strong>FOCUS</strong>
+                <span>Threat</span>
+              </div>
+
+              <div class="paragon-snapshot-stat">
+                <strong>DEFENCE</strong>
+                <span>High</span>
+              </div>
+
+              <div class="paragon-snapshot-stat">
+                <strong>SUPPORT</strong>
+                <span>High</span>
+              </div>
+
+              <div class="paragon-snapshot-stat">
+                <strong>STYLE</strong>
+                <span>Aggressive</span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- RIGHT GEAR -->
+
+          <div class="paragon-gear-column paragon-gear-column-right">
+
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">NECK</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">NECK</span>
+                <h3 class="paragon-gear-name">Tank / Support Set</h3>
+                <span class="paragon-gear-il">Current Setup</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>NECK SLOT</h4>
+                <p>
+                  Balance survival with group support. Exact verified
+                  current item will be added to the visual loadout.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">RING</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">RIGHT RING</span>
+                <h3 class="paragon-gear-name">Defensive Ring</h3>
+                <span class="paragon-gear-il">Stat Balance</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>RIGHT RING</h4>
+                <p>
+                  Balance Defense, Awareness, Critical Avoidance,
+                  Deflect and survivability.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">RING</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">LEFT RING</span>
+                <h3 class="paragon-gear-name">Tank / Support Ring</h3>
+                <span class="paragon-gear-il">Flexible Slot</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>LEFT RING</h4>
+                <p>
+                  Use for missing defensive percentages or introduce
+                  a support effect once survival is comfortable.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">WAIST</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">WAIST</span>
+                <h3 class="paragon-gear-name">Tank / Support Set</h3>
+                <span class="paragon-gear-il">Current Setup</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>WAIST SLOT</h4>
+                <p>
+                  Complete the chosen set and balance remaining
+                  defensive percentages around it.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">SHIRT</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">SHIRT</span>
+                <h3 class="paragon-gear-name">Defensive Clothing</h3>
+                <span class="paragon-gear-il">Current Setup</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>SHIRT SLOT</h4>
+                <p>
+                  Use this slot to help complete the final tank
+                  percentages and survivability.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <div class="paragon-gear-slot">
+
+              <div class="paragon-gear-icon">
+                <span class="paragon-gear-placeholder">LEGS</span>
+              </div>
+
+              <div class="paragon-gear-info">
+                <span class="paragon-gear-type">TROUSERS</span>
+                <h3 class="paragon-gear-name">Defensive Clothing</h3>
+                <span class="paragon-gear-il">Current Setup</span>
+              </div>
+
+              <div class="paragon-gear-details">
+                <h4>TROUSERS SLOT</h4>
+                <p>
+                  Complete whatever defensive requirement remains
+                  after the rest of the loadout.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="paragon-chaos-tip">
 
           <strong>THE SENTINEL JOB:</strong>
-          Make everything hate you, survive the consequences and somehow still
-          find time to debuff the boss for everybody else. 😂
-        </div>
-
-      </article>
-
-
-
-      <!-- STATS -->
-
-      <article
-        class="build-guide-panel"
-        id="stats"
-      >
-
-        <p class="build-panel-eyebrow">
-          PRIORITIES
-        </p>
-
-        <h2>
-          STAT PRIORITIES
-        </h2>
-
-        <p>
-          Sentinel needs enough defensive strength to comfortably survive the
-          content first. Once that baseline is secure, the remaining build can
-          be pushed toward group support and reliable threat generation.
-        </p>
-
-        <div class="build-stat-row">
-
-          <strong>1 ◆ DEFENSE</strong>
-          <span>
-            Core mitigation against incoming damage and one of the first
-            defensive percentages to establish.
-          </span>
+          Make everything hate you, survive the consequences and
+          somehow still find time to debuff the boss for everybody else. 😂
 
         </div>
 
-        <div class="build-stat-row">
+      </section>
 
-          <strong>2 ◆ AWARENESS</strong>
-          <span>
-            Extremely important for reducing the impact of Combat Advantage
-            damage, particularly in difficult group content.
-          </span>
 
-        </div>
 
-        <div class="build-stat-row">
+      <!-- ======================================================
+           STATS
+           ====================================================== -->
 
-          <strong>3 ◆ CRITICAL AVOIDANCE</strong>
-          <span>
-            Reduces the danger from enemy critical hits and strengthens your
-            overall defensive profile.
-          </span>
+      <section class="paragon-visual-section">
 
-        </div>
+        <div class="paragon-visual-section-header">
 
-        <div class="build-stat-row">
+          <h2>DEFENSIVE PRIORITIES</h2>
 
-          <strong>4 ◆ DEFLECT</strong>
-          <span>
-            Adds another layer of mitigation and works particularly well with
-            the Sentinel's defensive toolkit.
-          </span>
+          <p>
+            Survive first. Fancy support shit comes after you're no longer dying.
+          </p>
 
         </div>
 
-        <div class="build-stat-row">
 
-          <strong>5 ◆ MAXIMUM HIT POINTS</strong>
-          <span>
-            Your defensive percentages reduce the incoming hit; your health pool
-            determines whether the bit that gets through actually kills you.
-          </span>
+        <div class="paragon-item-grid">
+
+          <div class="paragon-item-card">
+            <h3>1 ◆ DEFENSE</h3>
+            <p>Core mitigation against incoming damage.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>2 ◆ AWARENESS</h3>
+            <p>Reduces dangerous Combat Advantage damage.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>3 ◆ CRITICAL AVOIDANCE</h3>
+            <p>Reduces the danger from enemy critical hits.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>4 ◆ DEFLECT</h3>
+            <p>Adds another useful layer of mitigation.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>5 ◆ MAX HP</h3>
+            <p>The bit that stops whatever gets through from killing you.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>STAMINA</h3>
+            <p>Useful once the main defensive requirements are covered.</p>
+          </div>
 
         </div>
 
-        <div class="build-callout">
+
+        <div class="paragon-chaos-tip">
 
           <strong>TANK RULE:</strong>
-          Don't sacrifice the ability to survive purely to make a spreadsheet
-          prettier. Dead tanks generate approximately fuck-all threat. 😂
-        </div>
-
-      </article>
-
-
-
-      <!-- GEAR -->
-
-      <article
-        class="build-guide-panel"
-        id="gear"
-      >
-
-        <p class="build-panel-eyebrow">
-          LOADOUT
-        </p>
-
-        <h2>
-          GEAR
-        </h2>
-
-        <p>
-          The current Sentinel setup combines defensive equipment with pieces
-          that improve group damage. Build enough survivability for the content
-          you're running, then introduce support gear wherever it doesn't make
-          the toon unnecessarily fragile.
-        </p>
-
-        <div class="build-info-grid">
-
-          <div class="build-info-card">
-            <h3>HEAD</h3>
-            <p>
-              Use a current tank or support helm that contributes useful
-              defensive percentages or a reliable party benefit.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>ARMOUR</h3>
-            <p>
-              Prioritise a strong defensive or group-support bonus. The best
-              choice depends on whether survival or party damage is currently
-              the limiting factor.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>ARMS</h3>
-            <p>
-              Defensive arms are perfectly valid while progressing. Stronger
-              groups can move toward enemy-debuff or team-support effects.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>FEET</h3>
-            <p>
-              Use this slot to complete missing defensive percentages,
-              movement or another useful support effect.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>WEAPONS</h3>
-            <p>
-              Current support-oriented weapons are ideal when your defenses are
-              established, particularly where their bonuses benefit the whole
-              party.
-            </p>
-          </div>
-
-          <div class="build-info-card">
-            <h3>RINGS & CLOTHING</h3>
-            <p>
-              Balance Defense, Awareness, Critical Avoidance, Deflect and
-              survivability. Don't keep stacking rating into a percentage
-              that's already comfortably covered.
-            </p>
-          </div>
+          Dead tanks generate approximately fuck-all threat.
+          Don't gut your survival just to make a spreadsheet prettier. 😂
 
         </div>
 
-      </article>
+      </section>
 
 
 
-      <!-- ENCHANTMENTS -->
+      <!-- ======================================================
+           ENCHANTMENTS
+           ====================================================== -->
 
-      <article
-        class="build-guide-panel"
+      <section
+        class="paragon-visual-section"
         id="enchantments"
       >
 
-        <p class="build-panel-eyebrow">
-          ENHANCEMENTS
-        </p>
+        <div class="paragon-visual-section-header">
 
-        <h2>
-          ENCHANTMENTS & REINFORCEMENTS
-        </h2>
+          <h2>ENCHANTMENTS</h2>
 
-        <p>
-          Module 33.5's Strike and Guard enchantment slots are particularly
-          useful to Sentinel because they make maintaining threat easier than
-          before.
-        </p>
+          <p>
+            Module 33.5 made threat considerably less of a bastard.
+          </p>
 
-        <ul class="build-list">
-
-          <li>Guard support for stronger tanking and threat control</li>
-          <li>Strike support to improve reliable aggro generation</li>
-          <li>Defense where your mitigation needs help</li>
-          <li>Awareness against heavy Combat Advantage damage</li>
-          <li>Critical Avoidance and Deflect to complete the defensive spread</li>
-          <li>Hit Points and stamina-related utility where required</li>
-        </ul>
-
-        <p>
-          Reinforcements should fill the gaps left by the rest of your
-          equipment rather than automatically copying somebody else's exact
-          combination.
-        </p>
-
-      </article>
+        </div>
 
 
+        <div class="paragon-item-grid">
 
-      <!-- ARTIFACTS -->
+          <div class="paragon-item-card">
 
-      <article
-        class="build-guide-panel"
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">GUARD</span>
+            </div>
+
+            <h3>GUARD</h3>
+
+            <p>
+              Strong tanking and threat support.
+            </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">STRIKE</span>
+            </div>
+
+            <h3>STRIKE</h3>
+
+            <p>
+              Helps provide reliable aggro generation.
+            </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">DEF</span>
+            </div>
+
+            <h3>DEFENSE</h3>
+
+            <p>
+              Add where your mitigation percentage needs help.
+            </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">AWR</span>
+            </div>
+
+            <h3>AWARENESS</h3>
+
+            <p>
+              Important against heavy Combat Advantage damage.
+            </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">CA</span>
+            </div>
+
+            <h3>CRITICAL AVOIDANCE</h3>
+
+            <p>
+              Complete the defensive spread as required.
+            </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">HP</span>
+            </div>
+
+            <h3>HP / STAMINA</h3>
+
+            <p>
+              Add health and stamina utility where the finished build needs it.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ======================================================
+           ARTIFACTS
+           ====================================================== -->
+
+      <section
+        class="paragon-visual-section"
         id="artifacts"
       >
 
-        <p class="build-panel-eyebrow">
-          POWER
-        </p>
+        <div class="paragon-visual-section-header">
 
-        <h2>
-          ARTIFACTS
-        </h2>
+          <h2>ARTIFACTS</h2>
 
-        <p>
-          Sentinel is a support role, so the primary artifact should contribute
-          to the group's burst rather than simply giving the tank another
-          personal toy.
-        </p>
+          <p>
+            You're a support role. Help everybody murder the boss.
+          </p>
 
-        <div class="build-info-grid">
+        </div>
 
-          <div class="build-info-card">
-            <h3>PRIMARY ARTIFACT</h3>
+
+        <div class="paragon-item-grid">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">ACTIVE</span>
+            </div>
+
+            <h3>GROUP SUPPORT ARTIFACT</h3>
+
             <p>
-              Use a current enemy-debuff or group-support artifact and
-              coordinate it with the party's artifact call.
+              Use a current enemy-debuff or group-support artifact.
             </p>
+
           </div>
 
-          <div class="build-info-card">
-            <h3>SECONDARIES</h3>
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">DEF</span>
+            </div>
+
+            <h3>DEFENSIVE SECONDARY</h3>
+
             <p>
-              Use secondary artifacts to complete defensive percentages,
-              maximum health and useful set bonuses.
+              Complete missing defensive percentages.
             </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">HP</span>
+            </div>
+
+            <h3>MAX HP SECONDARY</h3>
+
+            <p>
+              Use where additional health improves the final setup.
+            </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">SET</span>
+            </div>
+
+            <h3>SET BONUS</h3>
+
+            <p>
+              Secondary slots can also complete useful artifact set bonuses.
+            </p>
+
           </div>
 
         </div>
 
-        <div class="build-callout">
 
-          <strong>SUPPORT TIMING:</strong>
-          Mount first, artifact second. Some mount effects need time to activate,
-          so firing the artifact first can leave the DPS halfway through their
-          burst before your mount debuff even arrives.
+        <div class="paragon-chaos-tip">
+
+          <strong>ORDER MATTERS:</strong>
+          MOUNT FIRST ◆ ARTIFACT SECOND.
+          Give the mount effect time to arrive before the DPS
+          have already unloaded half their bloody rotation.
+
         </div>
 
-      </article>
+      </section>
 
 
 
-      <!-- COMPANIONS -->
+      <!-- ======================================================
+           COMPANIONS
+           ====================================================== -->
 
-      <article
-        class="build-guide-panel"
+      <section
+        class="paragon-visual-section"
         id="companions"
       >
 
-        <p class="build-panel-eyebrow">
-          YOUR CREW
-        </p>
+        <div class="paragon-visual-section-header">
 
-        <h2>
-          COMPANIONS
-        </h2>
+          <h2>COMPANIONS</h2>
 
-        <p>
-          The current Sentinel setup leans heavily into group-support
-          companions rather than purely personal defensive bonuses once the
-          tank is capable of surviving the content.
-        </p>
+          <p>
+            Once you can survive, start making everybody else's numbers prettier.
+          </p>
 
-        <div class="build-info-grid">
+        </div>
 
-          <div class="build-info-card">
-            <h3>SUMMONED COMPANION</h3>
-            <p>
-              Prefer a current companion that improves total party damage while
-              still allowing you to maintain the defensive stats required for
-              the encounter.
-            </p>
-          </div>
 
-          <div class="build-info-card">
+        <div class="paragon-item-grid">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">DEVIL</span>
+            </div>
+
             <h3>SPINED DEVIL</h3>
+
             <p>
-              Strong group-damage option in the current setup and preferred
-              when the party isn't relying on another companion to supply
-              missing offensive percentages.
+              Strong group-damage option when the party isn't relying
+              on another companion for missing offensive percentages.
             </p>
+
           </div>
 
-          <div class="build-info-card">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">BDS</span>
+            </div>
+
             <h3>BLACK DEATH SCORPION</h3>
+
             <p>
-              Valuable group-support option where its positioning requirements
-              can be maintained reliably.
+              Valuable group-support option where its positioning
+              requirements can be maintained.
             </p>
+
           </div>
 
-          <div class="build-info-card">
-            <h3>ENHANCEMENTS</h3>
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">PORTO</span>
+            </div>
+
+            <h3>PORTOBELLO</h3>
+
             <p>
-              Armor Break, Dulled Senses and Vulnerability are excellent
-              dungeon support options. Coordinate them across the party rather
-              than duplicating effects that don't need duplicating.
+              Useful alternative where the party needs the offensive
+              percentages it provides.
             </p>
+
+          </div>
+
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">ENH</span>
+            </div>
+
+            <h3>SUPPORT ENHANCEMENT</h3>
+
+            <p>
+              Armor Break, Dulled Senses or Vulnerability depending
+              on what the group already has.
+            </p>
+
           </div>
 
         </div>
 
-      </article>
+
+        <div class="paragon-chaos-tip">
+
+          <strong>DON'T DUPLICATE SHIT:</strong>
+          Coordinate support enhancements across the party instead
+          of everybody bringing the same effect because nobody spoke. 😂
+
+        </div>
+
+      </section>
 
 
 
-      <!-- MOUNTS -->
+      <!-- ======================================================
+           MOUNTS
+           ====================================================== -->
 
-      <article
-        class="build-guide-panel"
+      <section
+        class="paragon-visual-section"
         id="mounts"
       >
 
-        <p class="build-panel-eyebrow">
-          RIDE INTO CHAOS
-        </p>
+        <div class="paragon-visual-section-header">
 
-        <h2>
-          MOUNTS
-        </h2>
+          <h2>MOUNTS</h2>
 
-        <p>
-          The mount setup should support both survival and the party's burst
-          windows. Your combat power is part of the group's debuff rotation,
-          not simply something to press whenever it lights up.
-        </p>
+          <p>
+            Survival outside burst. Group debuff inside burst.
+          </p>
 
-        <div class="build-info-grid">
+        </div>
 
-          <div class="build-info-card">
-            <h3>COMBAT POWER</h3>
+
+        <div class="paragon-item-grid">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">COMBAT</span>
+            </div>
+
+            <h3>SUPPORT COMBAT POWER</h3>
+
             <p>
-              Use a strong current group-support or enemy-debuff mount power
-              appropriate to the rest of the party.
+              Use a strong current group-support or enemy-debuff mount power.
             </p>
+
           </div>
 
-          <div class="build-info-card">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">EQUIP</span>
+            </div>
+
             <h3>EQUIP POWER</h3>
+
             <p>
-              Choose defensive percentages, health or whatever stat is needed
-              to finish the tank setup.
+              Finish defensive percentages, health or another missing tank stat.
             </p>
+
           </div>
 
-          <div class="build-info-card">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">INSIG</span>
+            </div>
+
             <h3>INSIGNIA BONUSES</h3>
+
             <p>
-              Prioritise useful defensive, stamina and cooldown-support bonuses
-              rather than chasing item level alone.
+              Prioritise defensive, stamina and cooldown-support bonuses.
             </p>
+
           </div>
 
-          <div class="build-info-card">
+
+          <div class="paragon-item-card">
+
+            <div class="paragon-item-image">
+              <span class="paragon-gear-placeholder">COLLAR</span>
+            </div>
+
             <h3>COLLARS</h3>
+
             <p>
-              Defensive utility, stamina, movement and encounter support can all
-              be useful depending on the final stat balance.
+              Defensive utility, stamina, movement and encounter support
+              can all be useful.
             </p>
+
           </div>
 
         </div>
 
-      </article>
+
+        <div class="paragon-chaos-tip">
+
+          <strong>AGAIN BECAUSE IT MATTERS:</strong>
+          Mount first. Artifact second.
+        </div>
+
+      </section>
 
 
 
-      <!-- POWERS -->
+      <!-- ======================================================
+           POWERS
+           ====================================================== -->
 
-      <article
-        class="build-guide-panel"
+      <section
+        class="paragon-visual-section"
         id="powers"
       >
 
-        <p class="build-panel-eyebrow">
-          COMBAT
-        </p>
+        <div class="paragon-visual-section-header">
 
-        <h2>
-          POWERS & FEATS
-        </h2>
+          <h2>CORE POWERS</h2>
 
-        <p>
-          Sentinel's combat loop revolves around maintaining threat while using
-          Rage and encounters aggressively. The current setup uses Sentinel's
-          Slash as an important threat-generation tool around encounter and
-          Daily usage.
-        </p>
+          <p>
+            Threat, Rage and hitting things aggressively because apparently even Barbarian tanking can't be calm.
+          </p>
+
+        </div>
 
 
-        <h3>CORE AT-WILLS</h3>
+        <div class="paragon-power-row">
 
-        <div class="build-info-grid">
+          <div class="paragon-power-card">
 
-          <div class="build-info-card">
-            <h3>SENTINEL'S SLASH</h3>
-            <p>
-              Central threat-generation tool. Use it to strengthen the threat
-              generated by the attacks that follow, particularly during burst
-              windows.
-            </p>
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">SLASH</span>
+            </div>
+
+            <strong>SENTINEL'S SLASH</strong>
+
           </div>
 
-          <div class="build-info-card">
-            <h3>SURE STRIKE</h3>
-            <p>
-              Useful filler between encounter cooldowns and part of sustained
-              threat generation on a single target.
-            </p>
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">SURE</span>
+            </div>
+
+            <strong>SURE STRIKE</strong>
+
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">TAKE</span>
+            </div>
+
+            <strong>TAKEDOWN</strong>
+
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">RAGE</span>
+            </div>
+
+            <strong>RAGE</strong>
+
+          </div>
+
+
+          <div class="paragon-power-card">
+
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">SPIN</span>
+            </div>
+
+            <strong>SPINNING STRIKE</strong>
+
           </div>
 
         </div>
 
 
-        <h3>ENCOUNTERS</h3>
+        <div class="paragon-chaos-tip">
 
-        <div class="build-info-grid">
+          <strong>SENTINEL'S SLASH:</strong>
+          Use it before the important threat-generating attacks.
+          That's the habit this build wants burned into your brain.
+        </div>
 
-          <div class="build-info-card">
-            <h3>TAKEDOWN</h3>
-            <p>
-              Important burst-window encounter. Where possible, have Takedown
-              ready at the beginning of an artifact call rather than wasting it
-              immediately beforehand.
-            </p>
-          </div>
 
-          <div class="build-info-card">
-            <h3>SINGLE TARGET</h3>
-            <p>
-              Build the encounter bar around strong threat generation and
-              reliable boss control, using Sentinel's Slash before the major
-              threat-producing attacks.
-            </p>
-          </div>
 
-          <div class="build-info-card">
-            <h3>MULTI-TARGET</h3>
-            <p>
-              Switch toward powers capable of controlling several enemies and
-              distributing threat quickly across the pack.
-            </p>
-          </div>
+        <div class="paragon-visual-section-header">
 
-          <div class="build-info-card">
-            <h3>RAGE</h3>
-            <p>
-              Use Rage for sustained aggro whenever it's available. Only hold
-              it when an artifact call is about to begin and saving it will
-              improve your burst threat.
-            </p>
-          </div>
+          <h2>CLASS FEATURES</h2>
+
+          <p>
+            Pick according to whether the boss actually stays attached to you.
+          </p>
 
         </div>
 
 
-        <h3>DAILY ◆ SPINNING STRIKE</h3>
+        <div class="paragon-item-grid">
 
-        <p>
-          Spinning Strike is particularly useful in multi-target situations.
-          It distributes substantial threat across multiple enemies and also
-          provides control immunity during its animation.
-        </p>
+          <div class="paragon-item-card">
 
-
-        <h3>CLASS FEATURES</h3>
-
-        <div class="build-info-grid">
-
-          <div class="build-info-card">
             <h3>THREATENING PRESENCE</h3>
+
             <p>
-              Recommended while learning Sentinel or whenever maintaining aggro
-              is difficult. The additional threat makes the whole rotation more
-              forgiving.
+              Use while learning or whenever aggro isn't completely reliable.
+              The additional threat makes the rotation much more forgiving.
             </p>
+
           </div>
 
-          <div class="build-info-card">
+
+          <div class="paragon-item-card">
+
             <h3>BRAVERY</h3>
+
             <p>
-              Experienced Sentinels who no longer require the extra threat can
-              switch to Bravery for additional movement speed and Deflect.
+              Once threat is comfortable, switch for additional
+              movement speed and Deflect.
             </p>
+
           </div>
 
         </div>
 
-        <div class="build-callout">
 
-          <strong>DON'T GET COCKY TOO EARLY:</strong>
-          Threatening Presence isn't training wheels if you still need it.
-          Losing the boss because Dave's DPS toon sneezed particularly hard is
-          considerably less impressive than keeping the extra threat feature. 😂
+        <div class="paragon-chaos-tip">
+
+          <strong>DON'T GET COCKY:</strong>
+          Threatening Presence isn't "training wheels" if you still need it.
+          Dave's DPS toon stealing the boss because he sneezed too hard
+          is a pretty good indication you still fucking need it. 😂
+
         </div>
 
-      </article>
+      </section>
 
 
 
-      <!-- BOONS -->
+      <!-- ======================================================
+           BOONS
+           ====================================================== -->
 
-      <article
-        class="build-guide-panel"
+      <section
+        class="paragon-visual-section"
         id="boons"
       >
 
-        <p class="build-panel-eyebrow">
-          PROGRESSION
-        </p>
+        <div class="paragon-visual-section-header">
 
-        <h2>
-          BOONS
-        </h2>
+          <h2>BOONS</h2>
 
-        <p>
-          Build boons around the defensive percentages required for the content,
-          then use remaining choices for stamina, movement and useful support.
-        </p>
+          <p>
+            Defensive requirements first. Utility once you're not made of paper.
+          </p>
 
-        <ul class="build-list">
-
-          <li>Defense</li>
-          <li>Awareness</li>
-          <li>Critical Avoidance</li>
-          <li>Deflect</li>
-          <li>Maximum Hit Points</li>
-          <li>Stamina regeneration</li>
-          <li>Movement and cooldown utility where appropriate</li>
-        </ul>
-
-      </article>
+        </div>
 
 
+        <div class="paragon-item-grid">
 
-      <!-- ROTATION -->
-
-      <article
-        class="build-guide-panel build-rotation-panel"
-        id="rotation"
-      >
-
-        <p class="build-panel-eyebrow">
-          PUTTING IT TOGETHER
-        </p>
-
-        <h2>
-          ARTIFACT CALL & AGGRO FLOW
-        </h2>
-
-        <ol class="build-rotation-list">
-
-          <li>
-            <strong>HOLD TAKEDOWN</strong>
-            <span>
-              Where possible, keep Takedown ready as the group approaches the
-              next artifact call.
-            </span>
-          </li>
-
-          <li>
-            <strong>MOUNT POWER</strong>
-            <span>
-              Fire the support mount first so its activation lines up properly
-              with the DPS burst.
-            </span>
-          </li>
-
-          <li>
-            <strong>ARTIFACT</strong>
-            <span>
-              Apply the group's artifact debuff immediately after the mount.
-            </span>
-          </li>
-
-          <li>
-            <strong>SENTINEL'S SLASH</strong>
-            <span>
-              Establish the increased threat generation before dumping your
-              major attacks.
-            </span>
-          </li>
-
-          <li>
-            <strong>ENCOUNTERS</strong>
-            <span>
-              Get at least one complete encounter pass into the artifact window,
-              beginning with Takedown where possible.
-            </span>
-          </li>
-
-          <li>
-            <strong>DAILY</strong>
-            <span>
-              Use the appropriate Daily inside the burst window while
-              Sentinel's Slash threat generation is active.
-            </span>
-          </li>
-
-          <li>
-            <strong>SECOND ENCOUNTER PASS</strong>
-            <span>
-              If cooldown support returns encounters during the call, use them
-              again while the group debuffs are still active.
-            </span>
-          </li>
-
-          <li>
-            <strong>SURE STRIKE / SENTINEL'S SLASH</strong>
-            <span>
-              Use your at-wills while waiting for encounters to return between
-              burst windows.
-            </span>
-          </li>
-
-          <li>
-            <strong>RAGE</strong>
-            <span>
-              Spend Rage for sustained threat rather than hoarding it forever.
-              Save it only when the next artifact call is seconds away.
-            </span>
-          </li>
-
-        </ol>
-
-      </article>
-
-
-
-      <!-- ALTERNATIVES -->
-
-      <article class="build-guide-panel">
-
-        <p class="build-panel-eyebrow">
-          OTHER OPTIONS
-        </p>
-
-        <h2>
-          ALTERNATIVES & SWAPS
-        </h2>
-
-        <div class="build-info-grid">
-
-          <div class="build-info-card">
-            <h3>THREATENING PRESENCE</h3>
-            <p>
-              Use this whenever aggro isn't completely reliable. It's the safer
-              option while learning the current rotation.
-            </p>
+          <div class="paragon-item-card">
+            <h3>DEFENSE</h3>
+            <p>Core mitigation.</p>
           </div>
 
-          <div class="build-info-card">
-            <h3>BRAVERY</h3>
-            <p>
-              Once threat is comfortable, switch for movement speed and Deflect
-              to gain more utility from the class-feature slot.
-            </p>
+          <div class="paragon-item-card">
+            <h3>AWARENESS</h3>
+            <p>Important against Combat Advantage damage.</p>
           </div>
 
-          <div class="build-info-card">
-            <h3>SPINNING STRIKE</h3>
-            <p>
-              Particularly strong for multi-target encounters where several
-              enemies need to remain glued to you simultaneously.
-            </p>
+          <div class="paragon-item-card">
+            <h3>CRITICAL AVOIDANCE</h3>
+            <p>Reduce dangerous critical hits.</p>
           </div>
 
-          <div class="build-info-card">
-            <h3>MORE DEFENSE</h3>
-            <p>
-              If you're progressing new content, sacrifice support before
-              sacrificing survival. Add the aggressive debuff pieces back once
-              the encounter becomes comfortable.
-            </p>
+          <div class="paragon-item-card">
+            <h3>DEFLECT</h3>
+            <p>Add another layer of mitigation.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>MAXIMUM HP</h3>
+            <p>More room to survive whatever gets through.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>STAMINA</h3>
+            <p>Useful regeneration and defensive utility.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>MOVEMENT</h3>
+            <p>Useful once core defensive requirements are handled.</p>
+          </div>
+
+          <div class="paragon-item-card">
+            <h3>COOLDOWN UTILITY</h3>
+            <p>Useful where appropriate to the final setup.</p>
           </div>
 
         </div>
 
-      </article>
+      </section>
 
 
 
-      <!-- CHAOS NOTES -->
+      <!-- ======================================================
+           ROTATION
+           ====================================================== -->
 
-      <article class="build-guide-panel chaos-notes-panel">
+      <section
+        class="paragon-visual-section"
+        id="rotation"
+      >
 
-        <p class="build-panel-eyebrow">
-          FROM THE GUILD
-        </p>
+        <div class="paragon-visual-section-header">
 
-        <h2>
-          CHAOS NOTES
-        </h2>
+          <h2>ARTIFACT CALL & AGGRO FLOW</h2>
 
-        <p>
-          Sentinel is not supposed to spend the entire fight hiding behind the
-          block button. You're a Barbarian. Apparently even tanking has to be
-          done aggressively. 😂
-        </p>
+          <p>
+            This is the important bit. Mount first or we're sending you back to tank school.
+          </p>
 
-        <p>
-          The big habit to learn is Sentinel's Slash before the important
-          threat-generating attacks. Inside an artifact call, even one proper
-          round of encounters plus your Daily with that increased threat is
-          enough to hold against the majority of DPS players.
-        </p>
-
-        <p>
-          And remember the support order: <strong>mount before artifact</strong>.
-          If your mount finally applies its effect after the DPS have already
-          unloaded half their rotation, congratulations — you've successfully
-          debuffed the boss for the quiet bit. 🤣
-        </p>
-
-      </article>
+        </div>
 
 
+        <div class="paragon-power-row">
 
-      <!-- UPDATED -->
+          <div class="paragon-power-card">
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">1</span>
+            </div>
+            <strong>HOLD TAKEDOWN</strong>
+          </div>
+
+          <div class="paragon-power-card">
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">2</span>
+            </div>
+            <strong>MOUNT POWER</strong>
+          </div>
+
+          <div class="paragon-power-card">
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">3</span>
+            </div>
+            <strong>ARTIFACT</strong>
+          </div>
+
+          <div class="paragon-power-card">
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">4</span>
+            </div>
+            <strong>SENTINEL'S SLASH</strong>
+          </div>
+
+          <div class="paragon-power-card">
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">5</span>
+            </div>
+            <strong>ENCOUNTERS</strong>
+          </div>
+
+          <div class="paragon-power-card">
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">6</span>
+            </div>
+            <strong>DAILY</strong>
+          </div>
+
+          <div class="paragon-power-card">
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">7</span>
+            </div>
+            <strong>SECOND ENCOUNTER PASS</strong>
+          </div>
+
+          <div class="paragon-power-card">
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">8</span>
+            </div>
+            <strong>AT-WILLS</strong>
+          </div>
+
+          <div class="paragon-power-card">
+            <div class="paragon-power-icon">
+              <span class="paragon-gear-placeholder">9</span>
+            </div>
+            <strong>SPEND RAGE</strong>
+          </div>
+
+        </div>
+
+
+        <div class="paragon-chaos-tip">
+
+          <strong>BURST WINDOW:</strong>
+          MOUNT → ARTIFACT → SENTINEL'S SLASH → TAKEDOWN /
+          ENCOUNTERS → DAILY → SECOND ENCOUNTER PASS IF AVAILABLE.
+        </div>
+
+      </section>
+
+
+
+      <!-- ======================================================
+           FULL NOTES
+           ====================================================== -->
+
+      <details class="full-mechanics-dropdown">
+
+        <summary class="full-mechanics-summary">
+
+          <span>
+            ☠ WANT THE NERDY SHIT? OPEN FULL BUILD NOTES
+          </span>
+
+          <span class="full-mechanics-chevron">
+            ▼
+          </span>
+
+        </summary>
+
+
+        <div class="full-mechanics-content">
+
+
+          <article class="build-guide-panel">
+
+            <p class="build-panel-eyebrow">
+              HOW IT WORKS
+            </p>
+
+            <h2>
+              SENTINEL EXPLAINED
+            </h2>
+
+            <p>
+              Sentinel is an aggressive tank. Threat generation,
+              Rage, blocking and group support all happen alongside
+              actively attacking the target.
+            </p>
+
+            <p>
+              Establish enough Defense, Awareness, Critical Avoidance,
+              Deflect and Maximum Hit Points to survive the content.
+              Once that baseline is secure, additional slots can move
+              toward support and group damage.
+            </p>
+
+            <p>
+              Strike and Guard enchantment slots make threat generation
+              considerably easier in Module 33.5, giving experienced
+              Sentinels more freedom to use movement and defensive utility.
+            </p>
+
+          </article>
+
+
+
+          <article class="build-guide-panel">
+
+            <p class="build-panel-eyebrow">
+              THREAT
+            </p>
+
+            <h2>
+              SENTINEL'S SLASH
+            </h2>
+
+            <p>
+              Sentinel's Slash is central to the threat loop.
+              Use it before the major threat-generating attacks,
+              particularly during artifact calls.
+            </p>
+
+            <p>
+              Sure Strike fills the gaps between encounters and helps
+              maintain sustained single-target threat.
+            </p>
+
+            <p>
+              Rage should normally be spent for sustained aggro rather
+              than hoarded indefinitely. Hold it when the next artifact
+              call is only seconds away and doing so improves burst threat.
+            </p>
+
+          </article>
+
+
+
+          <article class="build-guide-panel">
+
+            <p class="build-panel-eyebrow">
+              BURST
+            </p>
+
+            <h2>
+              TAKEDOWN & ARTIFACT CALLS
+            </h2>
+
+            <p>
+              Where possible, keep Takedown available as the party
+              approaches the next artifact call.
+            </p>
+
+            <p>
+              Fire the mount first, then the artifact. Follow with
+              Sentinel's Slash before dumping the important encounters
+              and Daily into the burst window.
+            </p>
+
+            <p>
+              If cooldown support returns the encounters while the
+              group debuffs remain active, use another encounter pass
+              before returning to the normal sustained threat loop.
+            </p>
+
+          </article>
+
+
+
+          <article class="build-guide-panel">
+
+            <p class="build-panel-eyebrow">
+              CLASS FEATURES
+            </p>
+
+            <h2>
+              THREATENING PRESENCE VS BRAVERY
+            </h2>
+
+            <p>
+              Threatening Presence is the safer option while learning
+              Sentinel or whenever maintaining aggro is inconsistent.
+            </p>
+
+            <p>
+              Once threat is genuinely comfortable, Bravery can replace
+              it for additional movement speed and Deflect.
+            </p>
+
+            <p>
+              Don't switch merely because Threatening Presence feels
+              like the beginner option. If you still need the threat,
+              it is doing its bloody job.
+            </p>
+
+          </article>
+
+
+
+          <article class="build-guide-panel">
+
+            <p class="build-panel-eyebrow">
+              COMPANION SUPPORT
+            </p>
+
+            <h2>
+              SPINED DEVIL & ALTERNATIVES
+            </h2>
+
+            <p>
+              Spined Devil is the preferred group-damage option where
+              the party already has the offensive percentages it needs.
+            </p>
+
+            <p>
+              A companion such as Portobello becomes more attractive
+              where the group relies on those additional offensive stats.
+              Black Death Scorpion is another support option where its
+              positioning requirements can be maintained.
+            </p>
+
+            <p>
+              Armor Break, Dulled Senses and Vulnerability are useful
+              dungeon enhancement choices, but coordinate them across
+              the party rather than needlessly duplicating effects.
+            </p>
+
+          </article>
+
+
+
+          <article class="build-guide-panel chaos-notes-panel">
+
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
+
+            <h2>
+              CHAOS NOTES
+            </h2>
+
+            <p>
+              Sentinel isn't supposed to spend the entire fight hiding
+              behind the block button. You're a Barbarian. Apparently
+              even tanking has to be done aggressively. 😂
+            </p>
+
+            <p>
+              The big habit is Sentinel's Slash before the important
+              threat-generating attacks. Get that right and the rest
+              of the rotation becomes considerably easier to control.
+            </p>
+
+            <p>
+              And remember the support order:
+              <strong>MOUNT BEFORE ARTIFACT.</strong>
+            </p>
+
+            <p>
+              If your mount finally applies its effect after the DPS
+              have already unloaded half their rotation, congratulations —
+              you've successfully debuffed the boss for the quiet bit. 🤣
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </details>
+
+
+
+      <!-- ======================================================
+           UPDATED
+           ====================================================== -->
 
       <div class="build-last-updated">
 
@@ -958,8 +1555,6 @@
 
       </div>
 
-
-      <!-- BACK TO GUIDES -->
 
       <div class="build-back-link">
 

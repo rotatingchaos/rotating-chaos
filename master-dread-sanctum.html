@@ -141,20 +141,18 @@
 
 
     <!-- ======================================================
-         DUNGEON NAVIGATION
+         SIMPLE NAVIGATION
          ====================================================== -->
 
     <nav class="build-section-nav">
 
-      <a href="#overview">Overview</a>
-      <a href="#graf-harrow">Graf Harrow</a>
-      <a href="#mind-flayer">Mind Flayer</a>
-      <a href="#dragon">Dragon</a>
-      <a href="#demogorgons">Demogorgons</a>
-      <a href="#final-burn">Final Burn</a>
-      <a href="#roles">Role Jobs</a>
-      <a href="#wipes">Common Wipes</a>
-      <a href="#chaos-notes">Chaos Notes</a>
+      <a href="#quick-guide">
+        Quick Mechanics
+      </a>
+
+      <a href="#full-guide">
+        Full Mechanics
+      </a>
 
     </nav>
 
@@ -164,756 +162,1124 @@
          DUNGEON CONTENT
          ====================================================== -->
 
-    <section class="build-detail-page">
+    <section class="build-detail-page dungeon-guide-page">
 
 
-      <!-- ======================================================
-           OVERVIEW
-           ====================================================== -->
+      <!-- ====================================================
+           CHAOS WARNING
+           ==================================================== -->
+
+      <aside class="dungeon-chaos-warning">
+
+        <p class="chaos-warning-label">
+          ⚠ CHAOS WARNING
+        </p>
+
+        <p class="chaos-warning-message">
+          Demogorgons are ONE AT A FUCKING TIME.
+          Kill one, let the glowing idiot get through the portal,
+          THEN kill the next one. Your magnificent AoE can wait.
+        </p>
+
+      </aside>
+
+
+
+      <!-- ====================================================
+           QUICK & DIRTY MECHANICS
+           ==================================================== -->
 
       <article
-        class="build-guide-panel build-overview"
-        id="overview"
+        class="build-guide-panel quick-mechanics-panel"
+        id="quick-guide"
       >
 
         <p class="build-panel-eyebrow">
-          THE DUNGEON
+          THE QUICK & DIRTY VERSION
         </p>
 
         <h2>
-          OVERVIEW
+          ALL YOU REALLY NEED TO KNOW
         </h2>
 
-        <p>
-          Master Dread Sanctum contains three major boss encounters.
+        <p class="quick-mechanics-intro">
+          Get the crystal buff. Don't attack immune shit.
+          Kill Demogorgons one at a time. Remember the safe corner.
         </p>
 
-        <p>
-          Crystals are a recurring mechanic throughout the dungeon.
-          They provide the buff needed to damage enemies protected by
-          otherwise impenetrable barriers.
-        </p>
 
-        <p>
-          The final encounter adds coordinated Demogorgon kills,
-          individual portal transfers, safe-corner identification
-          and a final timed damage check.
-        </p>
+        <div class="quick-mechanics-grid">
+
+
+          <!-- CRYSTAL BUFF -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              💎
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                CRYSTAL BUFF
+              </h3>
+
+              <p>
+                Boss immune?
+              </p>
+
+              <strong>
+                GET NEXT TO CRYSTAL ◆ WAIT FOR BURST.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- IMMUNE -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🛡️
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                IMMUNE
+              </h3>
+
+              <p>
+                Damage says immune?
+              </p>
+
+              <strong>
+                STOP HITTING ◆ REFRESH CRYSTAL BUFF.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- PLATFORMS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🟢
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                PLATFORM PHASE
+              </h3>
+
+              <p>
+                Teleported away?
+              </p>
+
+              <strong>
+                GET TO CENTRE ◆ DON'T FALL IN GOO.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- DRAGON -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🐉
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                DRAGON
+              </h3>
+
+              <p>
+                Not the tank?
+              </p>
+
+              <strong>
+                DON'T STAND IN FRONT.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- DEMOGORGONS -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              👹
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                DEMOGORGONS
+              </h3>
+
+              <p>
+                Portal phase?
+              </p>
+
+              <strong>
+                KILL ONE ◆ THEN STOP.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- PORTAL -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🌀
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                GLOWING PLAYER
+              </h3>
+
+              <p>
+                Got the buff?
+              </p>
+
+              <strong>
+                GO THROUGH CENTRE PORTAL.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- WAIT -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              ✋
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                WAIT
+              </h3>
+
+              <p>
+                Someone going through portal?
+              </p>
+
+              <strong>
+                DON'T KILL NEXT DEMOGORGON YET.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- SAFE CORNER -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              💚
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                SAFE CORNER
+              </h3>
+
+              <p>
+                Which corner?
+              </p>
+
+              <strong>
+                MULTIPLE GREEN WATERFALLS.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- CHECK AGAIN -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              👀
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                SECOND PORTAL PHASE
+              </h3>
+
+              <p>
+                Same corner?
+              </p>
+
+              <strong>
+                CHECK AGAIN ◆ IT CAN CHANGE.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- FINAL BURN -->
+
+          <div class="quick-mechanic-card">
+
+            <span class="quick-mechanic-icon" aria-hidden="true">
+              🧠
+            </span>
+
+            <div class="quick-mechanic-text">
+
+              <h3>
+                FINAL BRAIN
+              </h3>
+
+              <p>
+                Aspect dead?
+              </p>
+
+              <strong>
+                CRYSTAL BUFF ◆ BURN BRAIN FAST.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+        </div>
 
       </article>
 
 
 
-      <!-- ======================================================
-           FIRST BOSS
-           ====================================================== -->
+      <!-- ====================================================
+           FULL MECHANICS DROPDOWN
+           ==================================================== -->
 
-      <article
-        class="build-guide-panel"
-        id="graf-harrow"
+      <details
+        class="full-mechanics-dropdown"
+        id="full-guide"
       >
 
-        <p class="build-panel-eyebrow">
-          FIRST BOSS
-        </p>
+        <summary class="full-mechanics-summary">
 
-        <h2>
-          GRAF HARROW
-        </h2>
+          <span class="full-mechanics-summary-main">
+            WANT THE FULL MECHANICS?
+          </span>
 
-        <p>
-          Graf Harrow deals heavy melee damage.
-        </p>
+          <span class="full-mechanics-summary-sub">
+            Open the full Master Dread Sanctum guide
+          </span>
 
-        <p>
-          The tank should maintain control of the boss while the group
-          attacks from safer positions.
-        </p>
+          <span
+            class="full-mechanics-chevron"
+            aria-hidden="true"
+          >
+            ▼
+          </span>
 
+        </summary>
 
-        <h3>
-          BARRIER
-        </h3>
 
-        <p>
-          During the encounter, Graf Harrow becomes protected by a barrier
-          and incoming damage becomes immune.
-        </p>
+        <div class="full-mechanics-content">
 
 
-        <h3>
-          CRYSTALS
-        </h3>
+          <!-- ==================================================
+               OVERVIEW
+               ================================================== -->
 
-        <p>
-          When the barrier activates, move next to one of the crystals
-          around the arena.
-        </p>
+          <article
+            class="build-guide-panel build-overview"
+            id="overview"
+          >
 
-        <p>
-          Wait for the crystal to burst.
-        </p>
+            <p class="build-panel-eyebrow">
+              THE DUNGEON
+            </p>
 
-        <p>
-          The burst grants a buff that allows the player to damage
-          Graf Harrow through his barrier.
-        </p>
+            <h2>
+              OVERVIEW
+            </h2>
 
-        <p>
-          If your attacks begin showing as immune again,
-          return to a crystal and refresh the buff.
-        </p>
+            <p>
+              Master Dread Sanctum contains three major boss encounters.
+            </p>
 
-      </article>
+            <p>
+              Crystals are a recurring mechanic throughout the dungeon.
+              They provide the buff needed to damage enemies protected by
+              otherwise impenetrable barriers.
+            </p>
 
+            <p>
+              The final encounter adds coordinated Demogorgon kills,
+              individual portal transfers, safe-corner identification
+              and a final timed damage check.
+            </p>
 
+          </article>
 
-      <!-- ======================================================
-           SECOND BOSS
-           ====================================================== -->
 
-      <article
-        class="build-guide-panel"
-        id="mind-flayer"
-      >
 
-        <p class="build-panel-eyebrow">
-          SECOND BOSS
-        </p>
+          <!-- ==================================================
+               FIRST BOSS
+               ================================================== -->
 
-        <h2>
-          MIND FLAYER
-        </h2>
+          <article
+            class="build-guide-panel"
+            id="graf-harrow"
+          >
 
-        <p>
-          The Mind Flayer uses the same crystal-and-barrier mechanic
-          introduced during Graf Harrow.
-        </p>
+            <p class="build-panel-eyebrow">
+              FIRST BOSS
+            </p>
 
+            <h2>
+              GRAF HARROW
+            </h2>
 
-        <h3>
-          STARTING SHIELD
-        </h3>
+            <p>
+              Graf Harrow deals heavy melee damage.
+            </p>
 
-        <p>
-          The boss begins protected by a shield.
-        </p>
+            <p>
+              The tank should maintain control of the boss while the group
+              attacks from safer positions.
+            </p>
 
-        <p>
-          Use a crystal immediately to gain the buff required
-          to damage through the barrier.
-        </p>
 
+            <h3>
+              BARRIER
+            </h3>
 
-        <h3>
-          REFLECTED DAMAGE
-        </h3>
+            <p>
+              During the encounter, Graf Harrow becomes protected by a barrier
+              and incoming damage becomes immune.
+            </p>
 
-        <p>
-          Do not continue attacking while the boss is immune.
-        </p>
 
-        <p>
-          Damage dealt while the immunity is active is reflected
-          back onto the attacker.
-        </p>
+            <h3>
+              CRYSTALS
+            </h3>
 
+            <p>
+              When the barrier activates, move next to one of the crystals
+              around the arena.
+            </p>
 
-        <h3>
-          PLATFORM PHASE
-        </h3>
+            <p>
+              Wait for the crystal to burst.
+            </p>
 
-        <p>
-          At certain health thresholds, players are transported
-          onto a series of platforms.
-        </p>
+            <p>
+              The burst grants a buff that allows the player to damage
+              Graf Harrow through his barrier.
+            </p>
 
-        <p>
-          Move across the platforms toward the centre.
-        </p>
+            <p>
+              If your attacks begin showing as immune again,
+              return to a crystal and refresh the buff.
+            </p>
 
+          </article>
 
-        <h3>
-          GREEN GOO
-        </h3>
 
-        <p>
-          Avoid falling into the green liquid surrounding the platforms.
-        </p>
 
-        <p>
-          It deals heavy damage.
-        </p>
+          <!-- ==================================================
+               SECOND BOSS
+               ================================================== -->
 
+          <article
+            class="build-guide-panel"
+            id="mind-flayer"
+          >
 
-        <h3>
-          RED PUSH AREAS
-        </h3>
+            <p class="build-panel-eyebrow">
+              SECOND BOSS
+            </p>
 
-        <p>
-          Red areas appear on the platforms.
-        </p>
+            <h2>
+              MIND FLAYER
+            </h2>
 
-        <p>
-          Move out of them before they activate or they can push you
-          from the platform.
-        </p>
+            <p>
+              The Mind Flayer uses the same crystal-and-barrier mechanic
+              introduced during Graf Harrow.
+            </p>
 
 
-        <h3>
-          RETURN PORTAL
-        </h3>
+            <h3>
+              STARTING SHIELD
+            </h3>
 
-        <p>
-          Reach the central platform and enter the portal
-          to return to the boss arena.
-        </p>
+            <p>
+              The boss begins protected by a shield.
+            </p>
 
-        <p>
-          The boss remains immune briefly after players return.
-        </p>
+            <p>
+              Use a crystal immediately to gain the buff required
+              to damage through the barrier.
+            </p>
 
-        <p>
-          Refresh your crystal buff and wait until the immunity ends
-          before attacking.
-        </p>
 
-        <p>
-          The platform phase repeats later in the fight.
-        </p>
+            <h3>
+              REFLECTED DAMAGE
+            </h3>
 
+            <p>
+              Do not continue attacking while the boss is immune.
+            </p>
 
-        <h3>
-          PARANOID DELUSIONS
-        </h3>
+            <p>
+              Damage dealt while the immunity is active is reflected
+              back onto the attacker.
+            </p>
 
-        <p>
-          Paranoid Delusions can spawn during the encounter.
-        </p>
 
-        <p>
-          Deal with them while continuing to manage the boss's
-          barrier and platform phases.
-        </p>
+            <h3>
+              PLATFORM PHASE
+            </h3>
 
-      </article>
+            <p>
+              At certain health thresholds, players are transported
+              onto a series of platforms.
+            </p>
 
+            <p>
+              Move across the platforms toward the centre.
+            </p>
 
 
-      <!-- ======================================================
-           FINAL BOSS
-           ====================================================== -->
+            <h3>
+              GREEN GOO
+            </h3>
 
-      <article
-        class="build-guide-panel"
-        id="dragon"
-      >
+            <p>
+              Avoid falling into the green liquid surrounding the platforms.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          FINAL BOSS
-        </p>
+            <p>
+              It deals heavy damage.
+            </p>
 
-        <h2>
-          MIND FLAYER DRAGON
-        </h2>
 
-        <p>
-          The final boss has several phases and requires considerably
-          more coordination than the previous encounters.
-        </p>
+            <h3>
+              RED PUSH AREAS
+            </h3>
 
+            <p>
+              Red areas appear on the platforms.
+            </p>
 
-        <h3>
-          OPENING PHASE
-        </h3>
+            <p>
+              Move out of them before they activate or they can push you
+              from the platform.
+            </p>
 
-        <p>
-          Damage the dragon while managing the additional enemies
-          appearing around the arena.
-        </p>
 
-        <p>
-          Tentacles and Paranoid Delusions can spawn during this phase.
-        </p>
+            <h3>
+              RETURN PORTAL
+            </h3>
 
-        <p>
-          Move away from dangerous tentacle attacks rather than
-          remaining beside them unnecessarily.
-        </p>
+            <p>
+              Reach the central platform and enter the portal
+              to return to the boss arena.
+            </p>
 
+            <p>
+              The boss remains immune briefly after players return.
+            </p>
 
-        <h3>
-          DRAGON BITE
-        </h3>
+            <p>
+              Refresh your crystal buff and wait until the immunity ends
+              before attacking.
+            </p>
 
-        <p>
-          The dragon's bite can deal heavy damage,
-          particularly to DPS.
-        </p>
+            <p>
+              The platform phase repeats later in the fight.
+            </p>
 
-        <p>
-          It can also apply a strong damage-over-time effect.
-        </p>
 
-        <p>
-          DPS should avoid standing directly in front of the dragon.
-        </p>
+            <h3>
+              PARANOID DELUSIONS
+            </h3>
 
+            <p>
+              Paranoid Delusions can spawn during the encounter.
+            </p>
 
-        <h3>
-          INTERMISSION
-        </h3>
+            <p>
+              Deal with them while continuing to manage the boss's
+              barrier and platform phases.
+            </p>
 
-        <p>
-          Once the dragon reaches the required health threshold,
-          it flies away and the encounter moves into the
-          Demogorgon portal phase.
-        </p>
+          </article>
 
-      </article>
 
 
+          <!-- ==================================================
+               FINAL BOSS
+               ================================================== -->
 
-      <!-- ======================================================
-           DEMOGORGON PHASE
-           ====================================================== -->
+          <article
+            class="build-guide-panel"
+            id="dragon"
+          >
 
-      <article
-        class="build-guide-panel"
-        id="demogorgons"
-      >
+            <p class="build-panel-eyebrow">
+              FINAL BOSS
+            </p>
 
-        <p class="build-panel-eyebrow">
-          COORDINATION CHECK
-        </p>
+            <h2>
+              MIND FLAYER DRAGON
+            </h2>
 
-        <h2>
-          DEMOGORGONS & PORTALS
-        </h2>
+            <p>
+              The final boss has several phases and requires considerably
+              more coordination than the previous encounters.
+            </p>
 
-        <p>
-          This phase requires the group to kill the Demogorgons
-          one at a time.
-        </p>
 
+            <h3>
+              OPENING PHASE
+            </h3>
 
-        <h3>
-          KILL ONE AT A TIME
-        </h3>
+            <p>
+              Damage the dragon while managing the additional enemies
+              appearing around the arena.
+            </p>
 
-        <p>
-          Do not kill multiple Demogorgons simultaneously.
-        </p>
+            <p>
+              Tentacles and Paranoid Delusions can spawn during this phase.
+            </p>
 
-        <p>
-          When a Demogorgon dies,
-          the player closest to it receives a special buff.
-        </p>
+            <p>
+              Move away from dangerous tentacle attacks rather than
+              remaining beside them unnecessarily.
+            </p>
 
 
-        <h3>
-          BUFFED PLAYER
-        </h3>
+            <h3>
+              DRAGON BITE
+            </h3>
 
-        <p>
-          The player who receives the buff must immediately move
-          to the portal in the centre.
-        </p>
+            <p>
+              The dragon's bite can deal heavy damage,
+              particularly to DPS.
+            </p>
 
-        <p>
-          Only the player carrying the buff can use the portal.
-        </p>
+            <p>
+              It can also apply a strong damage-over-time effect.
+            </p>
 
+            <p>
+              DPS should avoid standing directly in front of the dragon.
+            </p>
 
-        <h3>
-          WAIT BEFORE THE NEXT KILL
-        </h3>
 
-        <p>
-          Wait until the buffed player has completely entered the portal
-          before killing the next Demogorgon.
-        </p>
+            <h3>
+              INTERMISSION
+            </h3>
 
-        <p>
-          Then kill the next one,
-          allow the next buffed player through,
-          and repeat.
-        </p>
+            <p>
+              Once the dragon reaches the required health threshold,
+              it flies away and the encounter moves into the
+              Demogorgon portal phase.
+            </p>
 
+          </article>
 
-        <h3>
-          DO NOT DOUBLE KILL
-        </h3>
 
-        <p>
-          If two Demogorgons are killed too quickly,
-          only one player can use the portal.
-        </p>
 
-        <p>
-          The other player can become trapped and die.
-        </p>
+          <!-- ==================================================
+               DEMOGORGON PHASE
+               ================================================== -->
 
+          <article
+            class="build-guide-panel"
+            id="demogorgons"
+          >
 
-        <h3>
-          FIND THE SAFE CORNER
-        </h3>
+            <p class="build-panel-eyebrow">
+              COORDINATION CHECK
+            </p>
 
-        <p>
-          Before leaving the main arena,
-          identify which corner contains multiple green waterfalls.
-        </p>
+            <h2>
+              DEMOGORGONS & PORTALS
+            </h2>
 
-        <p>
-          That is the safe corner for the incoming wipe mechanic.
-        </p>
+            <p>
+              This phase requires the group to kill the Demogorgons
+              one at a time.
+            </p>
 
-        <p>
-          The other corners only have a single green waterfall
-          and are not safe.
-        </p>
 
+            <h3>
+              KILL ONE AT A TIME
+            </h3>
 
-        <h3>
-          AFTER USING THE PORTAL
-        </h3>
+            <p>
+              Do not kill multiple Demogorgons simultaneously.
+            </p>
 
-        <p>
-          Once you enter the central portal,
-          move immediately toward the safe corner identified earlier.
-        </p>
+            <p>
+              When a Demogorgon dies,
+              the player closest to it receives a special buff.
+            </p>
 
-        <p>
-          The entire group must reach the correct safe area
-          before the phase resolves.
-        </p>
 
-        <p>
-          Failing to reach the safe corner results in death.
-        </p>
+            <h3>
+              BUFFED PLAYER
+            </h3>
 
+            <p>
+              The player who receives the buff must immediately move
+              to the portal in the centre.
+            </p>
 
-        <h3>
-          PHASE END
-        </h3>
+            <p>
+              Only the player carrying the buff can use the portal.
+            </p>
 
-        <p>
-          Remain in the safe corner until the arena-wide damage occurs.
-        </p>
 
-        <p>
-          Once that hit has resolved,
-          it is safe to leave and continue damaging the dragon.
-        </p>
+            <h3>
+              WAIT BEFORE THE NEXT KILL
+            </h3>
 
+            <p>
+              Wait until the buffed player has completely entered the portal
+              before killing the next Demogorgon.
+            </p>
 
-        <h3>
-          SECOND DEMOGORGON PHASE
-        </h3>
+            <p>
+              Then kill the next one,
+              allow the next buffed player through,
+              and repeat.
+            </p>
 
-        <p>
-          The entire Demogorgon sequence repeats later in the fight.
-        </p>
 
-        <p>
-          The safe corner can change,
-          so identify the group of green waterfalls again.
-        </p>
+            <h3>
+              DO NOT DOUBLE KILL
+            </h3>
 
-        <p>
-          Do not assume the previous safe corner remains correct.
-        </p>
+            <p>
+              If two Demogorgons are killed too quickly,
+              only one player can use the portal.
+            </p>
 
+            <p>
+              The other player can become trapped and die.
+            </p>
 
-        <h3>
-          DEMOGORGON ADDS
-        </h3>
 
-        <p>
-          Demogorgons can also spawn in the main dragon arena
-          between intermissions.
-        </p>
+            <h3>
+              FIND THE SAFE CORNER
+            </h3>
 
-        <p>
-          These enemies deal very heavy damage and should be killed quickly.
-        </p>
+            <p>
+              Before leaving the main arena,
+              identify which corner contains multiple green waterfalls.
+            </p>
 
-        <p>
-          Tentacles and Paranoid Delusions can also continue appearing,
-          making later phases increasingly chaotic.
-        </p>
+            <p>
+              That is the safe corner for the incoming wipe mechanic.
+            </p>
 
-      </article>
+            <p>
+              The other corners only have a single green waterfall
+              and are not safe.
+            </p>
 
 
+            <h3>
+              AFTER USING THE PORTAL
+            </h3>
 
-      <!-- ======================================================
-           FINAL BURN
-           ====================================================== -->
+            <p>
+              Once you enter the central portal,
+              move immediately toward the safe corner identified earlier.
+            </p>
 
-      <article
-        class="build-guide-panel"
-        id="final-burn"
-      >
+            <p>
+              The entire group must reach the correct safe area
+              before the phase resolves.
+            </p>
 
-        <p class="build-panel-eyebrow">
-          LAST DAMAGE CHECK
-        </p>
+            <p>
+              Failing to reach the safe corner results in death.
+            </p>
 
-        <h2>
-          DRAGON ASPECT & BRAIN
-        </h2>
 
-        <p>
-          Once the dragon reaches approximately its final health threshold,
-          the group is transported to the last section.
-        </p>
+            <h3>
+              PHASE END
+            </h3>
 
+            <p>
+              Remain in the safe corner until the arena-wide damage occurs.
+            </p>
 
-        <h3>
-          DRAGON ASPECT
-        </h3>
+            <p>
+              Once that hit has resolved,
+              it is safe to leave and continue damaging the dragon.
+            </p>
 
-        <p>
-          Kill the illusion or aspect of the dragon.
-        </p>
 
+            <h3>
+              SECOND DEMOGORGON PHASE
+            </h3>
 
-        <h3>
-          CRYSTAL
-        </h3>
+            <p>
+              The entire Demogorgon sequence repeats later in the fight.
+            </p>
 
-        <p>
-          After the aspect dies,
-          move to a crystal and allow it to burst.
-        </p>
+            <p>
+              The safe corner can change,
+              so identify the group of green waterfalls again.
+            </p>
 
-        <p>
-          This grants the buff needed for the final target.
-        </p>
+            <p>
+              Do not assume the previous safe corner remains correct.
+            </p>
 
 
-        <h3>
-          THE BRAIN
-        </h3>
+            <h3>
+              DEMOGORGON ADDS
+            </h3>
 
-        <p>
-          Use the crystal buff to attack the brain.
-        </p>
+            <p>
+              Demogorgons can also spawn in the main dragon arena
+              between intermissions.
+            </p>
 
-        <p>
-          This is a timed damage check.
-        </p>
+            <p>
+              These enemies deal very heavy damage and should be killed quickly.
+            </p>
 
-        <p>
-          If the group fails to destroy the brain quickly enough,
-          the entire party wipes.
-        </p>
+            <p>
+              Tentacles and Paranoid Delusions can also continue appearing,
+              making later phases increasingly chaotic.
+            </p>
 
-      </article>
+          </article>
 
 
 
-      <!-- ======================================================
-           ROLE JOBS
-           ====================================================== -->
+          <!-- ==================================================
+               FINAL BURN
+               ================================================== -->
 
-      <article
-        class="build-guide-panel"
-        id="roles"
-      >
+          <article
+            class="build-guide-panel"
+            id="final-burn"
+          >
 
-        <p class="build-panel-eyebrow">
-          KNOW YOUR JOB
-        </p>
+            <p class="build-panel-eyebrow">
+              LAST DAMAGE CHECK
+            </p>
 
-        <h2>
-          TANK ◆ HEALER ◆ DPS
-        </h2>
+            <h2>
+              DRAGON ASPECT & BRAIN
+            </h2>
 
+            <p>
+              Once the dragon reaches approximately its final health threshold,
+              the group is transported to the last section.
+            </p>
 
-        <h3>
-          TANK
-        </h3>
 
-        <p>
-          Maintain control of Graf Harrow and the Mind Flayer
-          during their damage phases.
-        </p>
+            <h3>
+              DRAGON ASPECT
+            </h3>
 
-        <p>
-          During the final boss,
-          keep the dragon facing away from DPS where possible
-          so its heavy bite attacks do not hit the group.
-        </p>
+            <p>
+              Kill the illusion or aspect of the dragon.
+            </p>
 
-        <p>
-          Be ready to control dangerous Demogorgon adds
-          between intermissions.
-        </p>
 
+            <h3>
+              CRYSTAL
+            </h3>
 
-        <h3>
-          HEALER
-        </h3>
+            <p>
+              After the aspect dies,
+              move to a crystal and allow it to burst.
+            </p>
 
-        <p>
-          Watch for heavy melee and dragon damage,
-          particularly damage-over-time effects from the dragon's bite.
-        </p>
+            <p>
+              This grants the buff needed for the final target.
+            </p>
 
-        <p>
-          During platform sections,
-          maintain awareness of players taking damage from the environment.
-        </p>
 
-        <p>
-          Keep the group healthy during the increasingly chaotic
-          later dragon phases.
-        </p>
+            <h3>
+              THE BRAIN
+            </h3>
 
+            <p>
+              Use the crystal buff to attack the brain.
+            </p>
 
-        <h3>
-          DPS
-        </h3>
+            <p>
+              This is a timed damage check.
+            </p>
 
-        <p>
-          Stop attacking whenever a boss becomes immune
-          and refresh the crystal buff.
-        </p>
+            <p>
+              If the group fails to destroy the brain quickly enough,
+              the entire party wipes.
+            </p>
 
-        <p>
-          During the Demogorgon phase,
-          control your damage and kill them one at a time.
-        </p>
+          </article>
 
-        <p>
-          Do not kill the next Demogorgon until the previous buffed player
-          has entered the portal.
-        </p>
 
-        <p>
-          Save enough damage for the final brain burn.
-        </p>
 
-      </article>
+          <!-- ==================================================
+               ROLE JOBS
+               ================================================== -->
 
+          <article
+            class="build-guide-panel"
+            id="roles"
+          >
 
+            <p class="build-panel-eyebrow">
+              KNOW YOUR JOB
+            </p>
 
-      <!-- ======================================================
-           COMMON WIPES
-           ====================================================== -->
+            <h2>
+              TANK ◆ HEALER ◆ DPS
+            </h2>
 
-      <article
-        class="build-guide-panel"
-        id="wipes"
-      >
 
-        <p class="build-panel-eyebrow">
-          WHAT USUALLY GOES WRONG
-        </p>
+            <h3>
+              TANK
+            </h3>
 
-        <h2>
-          COMMON WIPES
-        </h2>
+            <p>
+              Maintain control of Graf Harrow and the Mind Flayer
+              during their damage phases.
+            </p>
 
-        <p>
-          Continuing to attack an immune boss and taking reflected damage.
-        </p>
+            <p>
+              During the final boss,
+              keep the dragon facing away from DPS where possible
+              so its heavy bite attacks do not hit the group.
+            </p>
 
-        <p>
-          Forgetting to refresh the crystal buff.
-        </p>
+            <p>
+              Be ready to control dangerous Demogorgon adds
+              between intermissions.
+            </p>
 
-        <p>
-          Falling from the platforms during the Mind Flayer encounter.
-        </p>
 
-        <p>
-          Standing in the green liquid during the platform phase.
-        </p>
+            <h3>
+              HEALER
+            </h3>
 
-        <p>
-          DPS standing in front of the dragon and taking its bite.
-        </p>
+            <p>
+              Watch for heavy melee and dragon damage,
+              particularly damage-over-time effects from the dragon's bite.
+            </p>
 
-        <p>
-          Killing multiple Demogorgons before the previous player
-          has used the central portal.
-        </p>
+            <p>
+              During platform sections,
+              maintain awareness of players taking damage from the environment.
+            </p>
 
-        <p>
-          Forgetting which corner contains the multiple green waterfalls.
-        </p>
+            <p>
+              Keep the group healthy during the increasingly chaotic
+              later dragon phases.
+            </p>
 
-        <p>
-          Running to the previous safe corner without checking
-          whether it changed.
-        </p>
 
-        <p>
-          Allowing Demogorgon adds, Paranoid Delusions and tentacles
-          to overwhelm the group.
-        </p>
+            <h3>
+              DPS
+            </h3>
 
-        <p>
-          Failing the final brain damage check.
-        </p>
+            <p>
+              Stop attacking whenever a boss becomes immune
+              and refresh the crystal buff.
+            </p>
 
-      </article>
+            <p>
+              During the Demogorgon phase,
+              control your damage and kill them one at a time.
+            </p>
 
+            <p>
+              Do not kill the next Demogorgon until the previous buffed player
+              has entered the portal.
+            </p>
 
+            <p>
+              Save enough damage for the final brain burn.
+            </p>
 
-      <!-- ======================================================
-           CHAOS NOTES
-           ====================================================== -->
+          </article>
 
-      <article
-        class="build-guide-panel chaos-notes-panel"
-        id="chaos-notes"
-      >
 
-        <p class="build-panel-eyebrow">
-          FROM THE GUILD
-        </p>
 
-        <h2>
-          CHAOS NOTES
-        </h2>
+          <!-- ==================================================
+               COMMON WIPES
+               ================================================== -->
 
-        <p>
-          The first two bosses are basically teaching you one important lesson:
-          shiny crystal good, attacking immune things bad.
-        </p>
+          <article
+            class="build-guide-panel"
+            id="wipes"
+          >
 
-        <p>
-          The dragon is where everyone actually has to start communicating.
-        </p>
+            <p class="build-panel-eyebrow">
+              WHAT USUALLY GOES WRONG
+            </p>
 
-        <p>
-          Demogorgons:
-          ONE. AT. A. TIME.
-        </p>
+            <h2>
+              COMMON WIPES
+            </h2>
 
-        <p>
-          Kill one, let the glowing person disappear through the middle portal,
-          then murder the next one.
-          This is not the moment for someone to demonstrate their magnificent AoE.
-        </p>
+            <p>
+              Continuing to attack an immune boss and taking reflected damage.
+            </p>
 
-        <p>
-          And before going through the portal,
-          remember which corner has the ridiculous amount of green waterfalls.
-          That's your new favourite corner.
-        </p>
+            <p>
+              Forgetting to refresh the crystal buff.
+            </p>
 
-      </article>
+            <p>
+              Falling from the platforms during the Mind Flayer encounter.
+            </p>
 
+            <p>
+              Standing in the green liquid during the platform phase.
+            </p>
 
+            <p>
+              DPS standing in front of the dragon and taking its bite.
+            </p>
 
-      <!-- ======================================================
+            <p>
+              Killing multiple Demogorgons before the previous player
+              has used the central portal.
+            </p>
+
+            <p>
+              Forgetting which corner contains the multiple green waterfalls.
+            </p>
+
+            <p>
+              Running to the previous safe corner without checking
+              whether it changed.
+            </p>
+
+            <p>
+              Allowing Demogorgon adds, Paranoid Delusions and tentacles
+              to overwhelm the group.
+            </p>
+
+            <p>
+              Failing the final brain damage check.
+            </p>
+
+          </article>
+
+
+
+          <!-- ==================================================
+               CHAOS NOTES
+               ================================================== -->
+
+          <article
+            class="build-guide-panel chaos-notes-panel"
+            id="chaos-notes"
+          >
+
+            <p class="build-panel-eyebrow">
+              FROM THE GUILD
+            </p>
+
+            <h2>
+              CHAOS NOTES
+            </h2>
+
+            <p>
+              The first two bosses are basically teaching you one important lesson:
+              shiny crystal good, attacking immune things bad.
+            </p>
+
+            <p>
+              The dragon is where everyone actually has to start communicating.
+            </p>
+
+            <p>
+              Demogorgons:
+              ONE. AT. A. TIME.
+            </p>
+
+            <p>
+              Kill one, let the glowing person disappear through the middle portal,
+              then murder the next one.
+              This is not the moment for someone to demonstrate their magnificent AoE.
+            </p>
+
+            <p>
+              And before going through the portal,
+              remember which corner has the ridiculous amount of green waterfalls.
+              That's your new favourite corner.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </details>
+
+
+
+      <!-- ====================================================
            UPDATED
-           ====================================================== -->
+           ==================================================== -->
 
       <div class="build-last-updated">
 
@@ -925,9 +1291,9 @@
 
 
 
-      <!-- ======================================================
+      <!-- ====================================================
            BACK TO MECHANICS
-           ====================================================== -->
+           ==================================================== -->
 
       <div class="build-back-link">
 
